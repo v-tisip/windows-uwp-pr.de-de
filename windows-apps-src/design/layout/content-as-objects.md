@@ -4,11 +4,11 @@ title: Inhalte als Objekte
 template: detail.hbs
 ms.localizationpriority: medium
 ms.openlocfilehash: 37ba5093f2d7cfe268be40413b889801daf00967
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8898678"
+ms.locfileid: "8942401"
 ---
 # <a name="content-as-objects"></a><span data-ttu-id="ccf90-102">Inhalte als Objekte</span><span class="sxs-lookup"><span data-stu-id="ccf90-102">Content as objects</span></span>
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, 3dprinting, 3D-Druck
 ms.localizationpriority: medium
 ms.openlocfilehash: a51312cc9be466c6847ec7f2d98b29da1c8e5c9f
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8896056"
+ms.locfileid: "8918779"
 ---
 # <a name="3d-printing-from-your-app"></a><span data-ttu-id="11836-105">3D-Druck über Ihre App</span><span class="sxs-lookup"><span data-stu-id="11836-105">3D printing from your app</span></span>
 

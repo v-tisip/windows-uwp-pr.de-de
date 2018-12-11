@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Microsoft Store-Übermittlungs-API, Codebeispiele
 ms.localizationpriority: medium
 ms.openlocfilehash: f60668ba81bbaefe2c190f7212618684797366bf
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8879994"
+ms.locfileid: "8936870"
 ---
 # <a name="code-examples-for-the-submission-api"></a><span data-ttu-id="22fb8-104">Codebeispiele für die Übermittlungs-API</span><span class="sxs-lookup"><span data-stu-id="22fb8-104">Code examples for the submission API</span></span>
 

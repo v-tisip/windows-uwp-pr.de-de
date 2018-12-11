@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 53539c73137b40d154db00fa9e340d81412764da
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8880998"
+ms.locfileid: "8942179"
 ---
 # <a name="define-custom-recognition-constraints"></a><span data-ttu-id="29a64-103">Festlegen von benutzerdefinierten Erkennungseinschränkungen</span><span class="sxs-lookup"><span data-stu-id="29a64-103">Define custom recognition constraints</span></span>
 

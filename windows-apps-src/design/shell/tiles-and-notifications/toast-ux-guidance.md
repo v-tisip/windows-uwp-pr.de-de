@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Benachrichtigung, Sammlung, gruppieren, Ux, Ux-Richtlinien, Richtlinien, Aktion, Popup, Info-Center, Noninterruptive, effektive Benachrichtigungen, nicht zudringliche Benachrichtigungen, umsetzbare, verwalten, zu organisieren
 ms.localizationpriority: medium
 ms.openlocfilehash: 878df85db9ab0e33db06a86ddb726f07dc28f013
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8891572"
+ms.locfileid: "8918849"
 ---
 # <a name="toast-notification-ux-guidance"></a><span data-ttu-id="6ea2d-103">Popup-Benachrichtigung-UX-Richtlinien</span><span class="sxs-lookup"><span data-stu-id="6ea2d-103">Toast Notification UX Guidance</span></span>
 <span data-ttu-id="6ea2d-104">Benachrichtigungen sind notwendig, des modernen Lebenszyklus; Sie können Benutzer produktiver und erzwungenen mit apps und Websites sowie bleiben Sie auf dem aktuellen Updates werden.</span><span class="sxs-lookup"><span data-stu-id="6ea2d-104">Notifications are a necessary part of modern life; they help users be more productive and engaged with apps and websites, as well as stay current with any updates.</span></span> <span data-ttu-id="6ea2d-105">Benachrichtigungen können jedoch schnell Aktivieren von hilfreich sein, overbearing und aufdringlich, wenn sie nicht auf eine Weise benutzerorientiert ausgelegt sind.</span><span class="sxs-lookup"><span data-stu-id="6ea2d-105">However, notifications can quickly turn from useful to overbearing and intrusive if they are not designed in a user-centric way.</span></span> <span data-ttu-id="6ea2d-106">Die Benachrichtigungen sind eine mit der rechten Maustaste Weg wird deaktiviert, und es ist unwahrscheinlich, sobald sie deaktiviert sind, sie werden aktiviert, erneut.</span><span class="sxs-lookup"><span data-stu-id="6ea2d-106">Your notifications are one right-click away from being turned off, and it's unlikely once they are turned off, they will be turned on again.</span></span>  <span data-ttu-id="6ea2d-107">Stellen Sie daher sicher, dass Ihre Benachrichtigungen respektieren Bildschirmbereich des Benutzers und die Uhrzeit ist, damit Sie diesen Kanal Engagement geöffnet bleiben können.</span><span class="sxs-lookup"><span data-stu-id="6ea2d-107">So make sure your notifications are respectful of the user's screen space and time, so you can keep this engagement channel open.</span></span>

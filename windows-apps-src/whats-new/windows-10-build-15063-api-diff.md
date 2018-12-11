@@ -7,11 +7,11 @@ ms.topic: article
 ms.assetid: d1f6739d-eaea-4c5d-b79a-9f7214e42727
 ms.localizationpriority: medium
 ms.openlocfilehash: fb258c23e38fb2aee5f6f5194371bb72940e51b5
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8877118"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8942252"
 ---
 # <a name="new-apis-in-windows-10-build-15063"></a><span data-ttu-id="31c8b-104">Neue APIs in Windows10, Build 15063</span><span class="sxs-lookup"><span data-stu-id="31c8b-104">New APIs in Windows 10 build 15063</span></span>
 

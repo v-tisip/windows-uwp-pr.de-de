@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 96bc0c48865d862e5ac834c5828d4057a06242d5
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8886282"
+ms.locfileid: "8919286"
 ---
 # <a name="accessibility-practices-to-avoid"></a><span data-ttu-id="d38ca-103">Nicht empfehlenswerte Praktiken für die Barrierefreiheit</span><span class="sxs-lookup"><span data-stu-id="d38ca-103">Accessibility practices to avoid</span></span>
 
