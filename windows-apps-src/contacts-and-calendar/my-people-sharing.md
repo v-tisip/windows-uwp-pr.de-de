@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 91d88dc78fd02ae3f16e1d980aa207d1dd458417
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8791630"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8886766"
 ---
 # <a name="my-people-sharing"></a><span data-ttu-id="a3d2a-104">„Meine Kontakte” freigeben</span><span class="sxs-lookup"><span data-stu-id="a3d2a-104">My People sharing</span></span>
 

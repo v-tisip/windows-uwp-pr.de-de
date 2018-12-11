@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, geräteportal
 ms.localizationpriority: medium
 ms.openlocfilehash: 879f4b9fd8806565eedeabda95f0c24c5b7931d7
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8808395"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8881859"
 ---
 # <a name="device-portal-for-mobile"></a><span data-ttu-id="9cc12-104">Device Portal für Mobilgeräte</span><span class="sxs-lookup"><span data-stu-id="9cc12-104">Device Portal for Mobile</span></span>
 

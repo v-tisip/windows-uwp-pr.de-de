@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 4dec176206aacb946bfd65341c483d8ba61558ad
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8793341"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8887914"
 ---
 # <a name="hazard-tracking-versus-tile-pool-resources"></a><span data-ttu-id="4e1fd-104">Konfliktnachverfolgung und Tile-Pool-Ressourcen</span><span class="sxs-lookup"><span data-stu-id="4e1fd-104">Hazard tracking versus tile pool resources</span></span>
 

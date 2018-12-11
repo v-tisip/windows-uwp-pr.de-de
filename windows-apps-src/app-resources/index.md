@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, uwp, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: a5af904c099b92e399f169221cae3122f358be19
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8791033"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8883013"
 ---
 # <a name="app-resources-and-the-resource-management-system"></a><span data-ttu-id="02059-103">App-Ressourcen und das Ressourcenverwaltungssystem</span><span class="sxs-lookup"><span data-stu-id="02059-103">App resources and the Resource Management System</span></span>
 

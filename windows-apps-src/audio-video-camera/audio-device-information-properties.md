@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 443bcc3c0280aca85de31d8c9f3704302432cb76
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8795253"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8887279"
 ---
 # <a name="audio-device-information-properties"></a><span data-ttu-id="71693-104">Audiogeräte-Informationseigenschaften</span><span class="sxs-lookup"><span data-stu-id="71693-104">Audio device information properties</span></span>
 

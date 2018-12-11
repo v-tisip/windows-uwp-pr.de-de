@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Opengl, Direct3D 11, Portieren, Grafiken
 ms.localizationpriority: medium
 ms.openlocfilehash: 9af5e42a27e21b8a4300edc4b8171f7abc64bac7
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8782580"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8881091"
 ---
 # <a name="port-from-opengl-es-20-to-direct3d-11"></a><span data-ttu-id="9d24d-104">Portieren von OpenGL ES 2.0 zu Direct3D 11</span><span class="sxs-lookup"><span data-stu-id="9d24d-104">Port from OpenGL ES 2.0 to Direct3D 11</span></span>
 

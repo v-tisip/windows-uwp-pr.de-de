@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, education
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f308e42e1dbb1d3654d3fc557a9d5e29ef6f6b0
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8795339"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8886931"
 ---
 # <a name="take-a-test-javascript-api"></a><span data-ttu-id="18b75-103">JavaScript-API „Prüfung”</span><span class="sxs-lookup"><span data-stu-id="18b75-103">Take a Test JavaScript API</span></span>
 

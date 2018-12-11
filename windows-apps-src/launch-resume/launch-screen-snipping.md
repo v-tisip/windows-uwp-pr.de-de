@@ -7,11 +7,11 @@ keywords: Windows 10, Uwp, Uri, Ausschneiden, Skizze
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 7aa0b70aee50c79088a68378fa75664711c3d564
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8792252"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8883838"
 ---
 # <a name="launch-screen-snipping"></a><span data-ttu-id="c0da2-105">Ausschnitt & Skizze starten</span><span class="sxs-lookup"><span data-stu-id="c0da2-105">Launch screen snipping</span></span>
 

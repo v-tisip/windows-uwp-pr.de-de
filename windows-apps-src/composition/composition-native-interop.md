@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 2f5eabfaf8e526899c17b2d0da688a5135133f65
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8788238"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8887056"
 ---
 # <a name="composition-native-interoperation-with-directx-and-direct2d"></a><span data-ttu-id="438f3-104">Systemeigene Interoperabilität mit „DirectX“ und „Direct2D“</span><span class="sxs-lookup"><span data-stu-id="438f3-104">Composition native interoperation with DirectX and Direct2D</span></span>
 

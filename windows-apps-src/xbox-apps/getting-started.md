@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 4a8f217322d6d10b91ebc82c3434c88e9d11128f
-ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8826581"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8884256"
 ---
 # <a name="getting-started-with-uwp-app-development-on-xbox-one"></a><span data-ttu-id="ab80c-104">Erste Schritte bei der Entwicklung von UWP-Apps auf Xbox One</span><span class="sxs-lookup"><span data-stu-id="ab80c-104">Getting started with UWP app development on Xbox One</span></span>
 

@@ -7,11 +7,11 @@ keywords: Windows 10, UWP, Xbox One, Tools
 ms.assetid: 6eaf376f-0d7c-49de-ad78-38e689b43658
 ms.localizationpriority: medium
 ms.openlocfilehash: ed106095d83ed0c6e055d22a1a0cf229380cff71
-ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8828163"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8883023"
 ---
 # <a name="introduction-to-xbox-one-tools"></a><span data-ttu-id="6a741-104">Einführung in Xbox One-Tools</span><span class="sxs-lookup"><span data-stu-id="6a741-104">Introduction to Xbox One tools</span></span>
 
