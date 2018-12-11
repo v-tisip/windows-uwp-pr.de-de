@@ -12,11 +12,11 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: 6079ea8ca844efc912b970c00c6907d98378dd07
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8748897"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8896006"
 ---
 # <a name="create-write-and-read-a-file"></a>Erstellen, Schreiben und Lesen einer Datei
 
@@ -150,7 +150,7 @@ Await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow")
 
 **Schreiben von Bytes in eine Datei mithilfe eines Puffers (2 Schritte)**
 
-1.  Rufen Sie zuerst [**CryptographicBuffer.ConvertStringToBinary**](/uwp/api/windows.security.cryptography.cryptographicbuffer.convertstringtobinary) einen Puffer von Bytes (basierend auf einer Zeichenfolge) abrufen, die Sie in Ihrer Datei zu schreiben möchten.
+1.  Rufen Sie zuerst [**CryptographicBuffer.ConvertStringToBinary**](/uwp/api/windows.security.cryptography.cryptographicbuffer.convertstringtobinary) , um ein Puffer von Bytes (basierend auf eine Zeichenfolge) zu erhalten, die Sie in Ihrer Datei zu schreiben möchten.
 
 ```csharp
 var buffer = Windows.Security.Cryptography.CryptographicBuffer.ConvertStringToBinary(
@@ -254,7 +254,7 @@ create_task(storageFolder->GetFileAsync("sample.txt")).then([](StorageFile^ samp
 Dim stream = Await sampleFile.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite)
 ```
 
-2.  Als Nächstes rufen Sie einen Ausgabedatenstrom durch Aufrufen der Methode [**IRandomAccessStream.GetOutputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) aus der `stream`. Wenn Sie c# verwenden, setzen Sie dies in einer **using** -Anweisung, um den Ausgabestream Lebensdauer zu verwalten. Wenn Sie verwenden [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), können Sie Lebensdauer steuern, indem Sie es in einem Block einzuschließen, oder auf `nullptr` Wenn Sie damit fertig sind.
+2.  Als Nächstes rufen Sie einen Ausgabedatenstrom durch Aufrufen der Methode [**IRandomAccessStream.GetOutputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) aus der `stream`. Wenn Sie c# verwenden, schließen Sie diese dann in einer **using** -Anweisung, um den Ausgabestream Lebensdauer zu verwalten. Wenn Sie verwenden [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), können Sie ihrer gesamten Lebensdauer steuern, indem Sie es in einem Block einzuschließen, oder auf `nullptr` Wenn Sie damit fertig sind.
 
 ```csharp
 using (var outputStream = stream.GetOutputStreamAt(0))
@@ -280,7 +280,7 @@ Using outputStream = stream.GetOutputStreamAt(0)
 End Using
 ```
 
-3.  Fügen Sie dies jetzt code (Wenn Sie c#, innerhalb der vorhandenen **using** -Anweisung verwenden) um in den Ausgabedatenstrom zu schreiben, indem Sie ein neues [**DataWriter**](/uwp/api/windows.storage.streams.datawriter) -Objekt erstellt und die [**DataWriter.WriteString**](/uwp/api/windows.storage.streams.datawriter.writestring) -Methode aufrufen.
+3.  Jetzt fügen Sie code (Wenn Sie c#, in der vorhandenen **using** -Anweisung verwenden), um in den Ausgabedatenstrom zu schreiben, erstellen ein neues [**DataWriter**](/uwp/api/windows.storage.streams.datawriter) -Objekt, und die [**DataWriter.WriteString**](/uwp/api/windows.storage.streams.datawriter.writestring) -Methode aufrufen.
 
 ```csharp
 using (var dataWriter = new Windows.Storage.Streams.DataWriter(outputStream))
@@ -306,7 +306,7 @@ Dim dataWriter As New DataWriter(outputStream)
 dataWriter.WriteString("DataWriter has methods to write to various types, such as DataTimeOffset.")
 ```
 
-4.  Abschließend fügen Sie den Text in die Datei mit [**DataWriter.StoreAsync**](/uwp/api/windows.storage.streams.datawriter.storeasync) speichern und schließen Sie den Datenstrom mit [**IOutputStream.FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.flushasync)code (Wenn Sie c#, innerhalb der inneren **mithilfe von** -Anweisung verwenden).
+4.  Abschließend fügen Sie code (Wenn Sie c#, innerhalb der inneren **mithilfe von** -Anweisung verwenden), um den Text in die Datei mit [**DataWriter.StoreAsync**](/uwp/api/windows.storage.streams.datawriter.storeasync) speichern und schließen Sie den Datenstrom mit [**IOutputStream.FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.flushasync).
 
 ```csharp
 await dataWriter.StoreAsync();

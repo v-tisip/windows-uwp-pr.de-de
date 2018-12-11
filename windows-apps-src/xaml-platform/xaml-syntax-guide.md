@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e988582877a6aa4ca3cf88ba0a5d98aceb56939e
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8741562"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8896696"
 ---
 # <a name="xaml-syntax-guide"></a>Anleitung zur XAML-Syntax
 
@@ -238,7 +238,7 @@ Zunächst gibt das Vorhandensein des Objektelements an, dass ein neues *objectNa
 
 Eine weitere XAML-Regel ist, dass es möglich sein muss, Attribute eines Elements in beliebiger Reihenfolge festzulegen. Zwischen `<Rectangle Height="50" Width="100" />` und `<Rectangle Width="100"  Height="50" />` besteht z. B. kein Unterschied. Welche Reihenfolge Sie verwenden, ist eine Frage des Programmierstils.
 
-**Hinweis:** XAML-Designer oft Schreibreihenfolge Konventionen bewerben, wenn Sie andere Entwurfsoberflächen als den XML-Editor verwenden, Sie können jedoch beliebig, XAML-Code später, bearbeiten um die Attribute neu anordnen oder neue einzuführen.
+**Hinweis:** XAML-Designer oft Sortierung Konventionen bewerben, wenn Sie andere Entwurfsoberflächen als den XML-Editor verwenden, Sie können jedoch beliebig dieser XAML-Code später, bearbeiten um neu anzuordnen die Attribute, oder führen Sie neue.
 
 ## <a name="attached-properties"></a>Angefügte Eigenschaften
 
@@ -267,7 +267,7 @@ Weitere Informationen finden Sie unter [Übersicht über angefügte Eigenschafte
 
 Da die öffnende geschweifte Klammer „\{“ der Anfang der Markuperweiterungssequenz ist, können Sie mithilfe einer Escapesequenz einen Literalzeichenfolgenwert angeben, der mit „\{“ beginnt. Die Escapesequenz ist „\{\}“. Geben Sie beispielsweise zum Angeben eines Zeichenfolgenwerts, der eine einzelne öffnende geschweifte Klammer ist, den Attributwert als „\{\}\{“ an. Sie können auch die alternativen Anführungszeichen (z.B. **'** innerhalb eines durch **""** getrennten Attributwerts) verwenden, um einen „\{“-Wert als Zeichenfolge anzugeben.
 
-**Hinweis:**"\}" funktioniert auch, wenn es in einem Attribut in Anführungszeichen ist.
+**Hinweis:**"\}" funktioniert auch, wenn es in einem Attribut in ist.
  
 ## <a name="enumeration-values"></a>Enumerationswerte
 
