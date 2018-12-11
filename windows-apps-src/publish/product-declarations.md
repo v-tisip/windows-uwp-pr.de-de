@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e17fbd81c84ca4ce72d36dbabf9991fe8c6d75d
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8787264"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8885870"
 ---
 # <a name="product-declarations"></a><span data-ttu-id="3cb68-103">Produktdeklarationen</span><span class="sxs-lookup"><span data-stu-id="3cb68-103">Product declarations</span></span>
 

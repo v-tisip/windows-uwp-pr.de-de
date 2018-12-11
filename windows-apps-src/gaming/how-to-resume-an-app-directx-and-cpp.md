@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, fortsetzen, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: f0aa60061ae9fc14392bfe4beb0693ba50fda0df
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8800974"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8890728"
 ---
 # <a name="how-to-resume-an-app-directx-and-c"></a><span data-ttu-id="5426f-104">So wird's gemacht - Fortsetzen einer App (DirectX und C++)</span><span class="sxs-lookup"><span data-stu-id="5426f-104">How to resume an app (DirectX and C++)</span></span>
 

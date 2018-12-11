@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, Uwp, animation
 ms.localizationpriority: medium
 ms.openlocfilehash: 7fde0cbf5335b4f5c3da2f21f692fc2c23455776
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8758580"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8889439"
 ---
 # <a name="natural-motion-animations"></a><span data-ttu-id="e1e05-104">Natürliche Bewegungsanimationen</span><span class="sxs-lookup"><span data-stu-id="e1e05-104">Natural motion animations</span></span>
 

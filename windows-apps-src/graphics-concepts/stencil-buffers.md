@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 285e4a70062c57c957530aa1e548c22c4cf7711e
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8801293"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8890932"
 ---
 # <a name="stencil-buffers"></a><span data-ttu-id="dc27a-104">Schablonenpuffer</span><span class="sxs-lookup"><span data-stu-id="dc27a-104">Stencil buffers</span></span>
 

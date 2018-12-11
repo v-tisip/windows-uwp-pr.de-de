@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, Uwp, animation
 ms.localizationpriority: medium
 ms.openlocfilehash: 118b3f6e306e60d1d8d569f0d58f2d77ea30d9a8
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8792078"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8886839"
 ---
 # <a name="enhance-existing-scrollviewer-experiences"></a><span data-ttu-id="ad477-104">Erweitern vorhandener ScrollViewer-Erfahrungen</span><span class="sxs-lookup"><span data-stu-id="ad477-104">Enhance existing ScrollViewer experiences</span></span>
 

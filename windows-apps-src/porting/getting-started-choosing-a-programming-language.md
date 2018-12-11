@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a9544c1eecc4c1a86552d053694872743a17142c
-ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8828259"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8887575"
 ---
 # <a name="getting-started-choosing-a-programming-language"></a><span data-ttu-id="4084c-104">Erste Schritte: Auswählen einer Programmiersprache</span><span class="sxs-lookup"><span data-stu-id="4084c-104">Getting started: Choosing a programming language</span></span>
 
