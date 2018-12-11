@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 76e4b60e1cd25a205d6a304f12a0b04f5db693b5
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8730221"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8883134"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>Erweitern Sie Ihre Desktopanwendung mit modernen Windows-UWP-Komponenten
 
 Einige Windows 10-Funktionen (z. B. eine touchfähige UI-Seite) müssen innerhalb eines Modern-App-Containers ausgeführt werden. Wenn Sie diese Funktionen hinzufügen möchten, erweitern Sie Ihre Desktopanwendung um UWP-Projekte und die Komponente für Windows-Runtime.
 
-In vielen Fällen können Sie Windows-Runtime-APIs direkt aus Ihrer Desktopanwendung aufrufen, also bevor Sie dieses Handbuch lesen, finden Sie unter [für Windows 10 verbessern](desktop-to-uwp-enhance.md).
+In vielen Fällen können Sie Windows-Runtime-APIs direkt aus Ihrer Desktopanwendung aufrufen, daher vor diesem Leitfaden finden Sie unter [für Windows 10 verbessern](desktop-to-uwp-enhance.md).
 
 >[!NOTE]
 >Dieses Handbuch wird davon ausgegangen, dass Sie ein Windows-app-Paket für Ihre desktop-Anwendung erstellt haben. Wenn Sie dies noch nicht geschehen, finden Sie unter [Paket-desktopanwendungen](desktop-to-uwp-root.md).
@@ -36,13 +36,13 @@ Diese Abbildung zeigt ein Beispiel für eine Projektmappe.
 
 ![Erweitern des Startprojekts](images/desktop-to-uwp/extend-start-project.png)
 
-Wenn Ihre Lösung nicht paketprojekt enthält, finden Sie unter [Package Ihre desktop-Anwendung mit Visual Studio](desktop-to-uwp-packaging-dot-net.md).
+Wenn Ihre Lösung nicht paketprojekt enthält, finden Sie unter [Paket Ihrer desktop-Anwendung mit Visual Studio](desktop-to-uwp-packaging-dot-net.md).
 
-### <a name="configure-the-desktop-application"></a>Konfigurieren der desktop-Anwendungs
+### <a name="configure-the-desktop-application"></a>Konfigurieren Sie die desktop-Anwendung
 
-Stellen Sie sicher, dass Ihre desktop-Anwendung Verweise auf die Dateien, die Sie benötigen, Windows-Runtime-APIs aufzurufen.
+Stellen Sie sicher, dass Ihre desktop-Anwendung Verweise auf die Dateien, die Sie benötigen verfügt, Windows-Runtime-APIs aufzurufen.
 
-Zu diesem Zweck finden Sie im Abschnitt [Ihr Projekt einrichten](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance#first-set-up-your-project) des Themas [Erweitern Ihrer Desktopanwendung für Windows 10](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance#first-set-up-your-project).
+Zu diesem Zweck finden Sie im Abschnitt [Ihr Projekt einrichten](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance#first-set-up-your-project) des Themas [Erweitern Ihrer desktop-Anwendung für Windows 10](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance#first-set-up-your-project).
 
 ### <a name="add-a-uwp-project"></a>Hinzufügen eines UWP-Projekts
 
@@ -76,7 +76,7 @@ Fügen Sie dann in Ihrem UWP-Projekt einen Verweis auf die Laufzeitkomponente hi
 
 ### <a name="build-your-solution"></a>Erstellen Sie die Projektmappe
 
-Erstellen Sie die Projektmappe, um sicherzustellen, dass keine Fehler angezeigt werden. Wenn Sie Fehlermeldungen, **Konfigurations-Manager** öffnen, und stellen, dass sicher Plattform Ihre Projekte dieselbe.
+Erstellen Sie die Projektmappe, um sicherzustellen, dass keine Fehler angezeigt werden. Wenn Sie Fehler zu erhalten, öffnen Sie den **Konfigurations-Manager** und stellen, dass sicher Plattform Ihre Projekte dieselbe.
 
 ![Konfigurations-manager](images/desktop-to-uwp/config-manager.png)
 
@@ -93,7 +93,7 @@ Diese Abbildungzeigt eine Windows Forms-Anwendung, die eine XAML-basierte, moder
 ![adaptives Design](images/desktop-to-uwp/extend-xaml-ui.png)
 
 >[!NOTE]
->Dieses Beispiel zeigt eine XAML-UI durch ein UWP-Projekt der Projektmappe hinzufügen. Dies ist der stabil unterstützten Ansatz zum Anzeigen von XAML-Benutzeroberflächen in einer desktop-Anwendung. Die Alternative dieses Ansatzes ist mithilfe einer XAML-Insel UWP-XAML-Steuerelemente direkt an Ihre desktop-Anwendung hinzufügen. XAML-Inseln sind als Entwicklervorschau verfügbar. Obwohl wir Sie Sie diese in Ihrem eigenen Code Prototyp ausprobieren können, jetzt dazu ermutigen, empfohlen nicht, dass Sie in Produktionscode zu diesem Zeitpunkt verwendet werden. Diese APIs und Steuerelemente werden weiterhin breiter und Stabilisierung in zukünftigen Windows-Versionen. Weitere Informationen zu XAML-Inseln, finden Sie in [UWP-Steuerelemente in desktop-Apps](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
+>Dieses Beispiel zeigt eine XAML-UI durch ein UWP-Projekt der Projektmappe hinzufügen. Das ist der stabil unterstützten Ansatz zum Anzeigen von XAML-Benutzeroberflächen in einer desktop-Anwendung. Der Alternative dieses Ansatzes ist mithilfe von einer XAML-Insel UWP-XAML-Steuerelemente direkt an Ihre desktop-Anwendung hinzufügen. XAML-Inseln sind als Entwicklervorschau verfügbar. Obwohl wir Sie Sie diese in Ihrem eigenen Code Prototyp ausprobieren können, jetzt dazu ermutigen, wird nicht empfohlen, dass Sie sie zu diesem Zeitpunkt in Produktionscode verwenden. Diese APIs und Steuerelemente erhalten auch weiterhin breiter und Stabilisierung in zukünftigen Windows-Versionen. Weitere Informationen zu XAML-Inseln, finden Sie in [UWP-Steuerelemente in desktop-Apps](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
 
 ### <a name="the-design-pattern"></a>Das Entwurfsmuster
 
@@ -151,7 +151,7 @@ Fügen Sie Ihrem UWP-Projekt eine XAML-Benutzeroberfläche hinzu. Hier sehen Sie
 
 ### <a name="add-a-protocol-extension"></a>Hinzufügen einer Protokollerweiterung
 
-Öffnen Sie im **Projektmappen-Explorer**die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Projektmappe und fügen Sie diese Erweiterung hinzu.
+Klicken Sie im **Projektmappen-Explorer**öffnen Sie die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Projektmappe, und fügen Sie diese Erweiterung.
 
 ```xml
 <Extensions>
@@ -250,7 +250,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 Sie können Ihre Desktopanwendung als Freigabeziel einrichten, damit Benutzer einfach Daten wie Bilder aus anderen Apps freigeben können, die Freigaben unterstützen.
 
-Beispielsweise können Benutzer Ihre Anwendung zum Teilen von Bildern in Microsoft Edge, der Fotos-app auswählen. Hier ist eine WPF-beispielanwendung, die diese Funktion verfügt.
+Beispielsweise können Benutzer Ihre Anwendung zum Teilen von Bildern in Microsoft Edge, der Fotos-app auswählen. Hier ist eine WPF-Beispiel-Anwendung, die diese Funktion verfügt.
 
 ![Freigabeziel](images/desktop-to-uwp/share-target.png).
 
@@ -262,13 +262,13 @@ Damit einer Anwendung als Freigabeziel arbeitet, führen Sie folgende Aktionen a
 
 :one: [Hinzufügen der Freigabezielerweiterung](#share-extension)
 
-: two: [Überschreiben des OnShareTargetActivated-Ereignisses](#override)
+: two: [Überschreiben des Ereignisses OnShareTargetActivated](#override)
 
-: three: [desktop Extensions zum UWP-Projekt hinzufügen](#desktop-extensions)
+: three: [Hinzufügen von desktoperweiterungen zum UWP-Projekt](#desktop-extensions)
 
 : four: [Hinzufügen der vollständig vertrauenswürdigen Prozess-Erweiterung](#full-trust)
 
-: five: [Ändern der desktop-Anwendung zum Abrufen der freigegebenen Datei](#modify-desktop)
+: five: [Ändern Sie die desktop-Anwendung zum Abrufen der freigegebenen Datei](#modify-desktop)
 
 <a id="share-extension" />
 
@@ -276,7 +276,7 @@ Die folgenden Schritte
 
 ### <a name="add-a-share-target-extension"></a>Hinzufügen der Freigabezielerweiterung
 
-Öffnen Sie im **Projektmappen-Explorer**die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Projektmappe und fügen Sie der Freigabe Ziel-Erweiterung hinzu.
+Öffnen Sie im **Projektmappen-Explorer**die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Projektmappe und fügen Sie die Bereitstellungsfreigabe Ziel-Erweiterung.
 
 ```xml
 <Extensions>
@@ -296,11 +296,11 @@ Die folgenden Schritte
 
 Geben Sie den Namen der ausführbaren Datei des UWP-Projekts an und den Namen der Einstiegspunkt-Klasse. Dieses Markup wird davon ausgegangen, dass der Name der ausführbaren Datei für Ihre UWP-app ist `ShareTarget.exe`.
 
-Sie müssen außerdem angeben, welche Arten von Dateien mit Ihrer App freigegeben können. In diesem Beispiel Wir stellen der [PhotoStoreDemo WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) -Desktopanwendung als Freigabeziel für Bitmap images, damit wir angeben `Bitmap` für den unterstützten Dateityp.
+Sie müssen außerdem angeben, welche Arten von Dateien mit Ihrer App freigegeben können. In diesem Beispiel Wir stellen der [PhotoStoreDemo WPF-](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) Desktopanwendung als Freigabeziel für Bitmap images, damit wir angeben `Bitmap` für den unterstützten Dateityp.
 
 <a id="override" />
 
-### <a name="override-the-onsharetargetactivated-event-handler"></a>Überschreiben des OnShareTargetActivated-Ereignisses
+### <a name="override-the-onsharetargetactivated-event-handler"></a>Überschreiben des Ereignisses OnShareTargetActivated
 
 Überschreiben Sie den **OnShareTargetActivated** -Ereignishandler in der **App** -Klasse des UWP-Projekts.
 
@@ -329,13 +329,13 @@ private async void shareWithDesktopApplication(ShareOperation shareOperation)
 }
 ```
 
-In diesem Code speichern wir das Bild, das vom Benutzer in einem lokalen Speicher-Ordner apps freigegeben ist. Ändern Sie später die desktop-Anwendung Pull-Images aus diesem Ordner. Die desktop-Anwendung kann das tun, da es im gleichen Paket als UWP-app enthalten ist.
+In diesem Code speichern wir das Bild, das vom Benutzer in einem Ordner für apps lokalen Speicher freigegeben wird. Ändern Sie später die desktop-Anwendung Pull-Images aus diesem Ordner. Die desktop-Anwendung kann das tun, da es im gleichen Paket als UWP-app enthalten ist.
 
 <a id="desktop-extensions" />
 
 ### <a name="add-desktop-extensions-to-the-uwp-project"></a>Hinzufügen von desktop Extensions zum UWP-Projekt
 
-Fügen Sie die **Windows-Desktop-Erweiterungen für die UWP** -Erweiterung zum UWP-app-Projekt hinzu.
+Fügen Sie die **Windows-Desktop-Erweiterungen für die UWP** -Erweiterung für die UWP-app-Projekt hinzu.
 
 ![Desktop-Erweiterung](images/desktop-to-uwp/desktop-extensions.png)
 
@@ -343,7 +343,7 @@ Fügen Sie die **Windows-Desktop-Erweiterungen für die UWP** -Erweiterung zum U
 
 ### <a name="add-the-full-trust-process-extension"></a>Hinzufügen der Erweiterung für vollständig vertrauenswürdigen Prozess
 
-Öffnen Sie im **Projektmappen-Explorer**die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Projektmappe, und dann fügen Sie die voller Vertrauenswürdigkeit Prozess Erweiterung neben der Freigabe Ziel-Erweiterung, dass Sie diese Datei zuvor hinzufügen hinzu.
+Öffnen Sie im **Projektmappen-Explorer**die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Projektmappe, und dann fügen Sie die vertrauenswürdige Prozess Erweiterung neben der Bereitstellungsfreigabe Ziel-Erweiterung, dass Sie diese Datei zuvor hinzufügen hinzu.
 
 ```xml
 <Extensions>
@@ -353,7 +353,7 @@ Fügen Sie die **Windows-Desktop-Erweiterungen für die UWP** -Erweiterung zum U
 </Extensions>  
 ```
 
-Diese Erweiterung ermöglicht die UWP-app, um die desktop-Anwendung zu starten, die Sie die Bereitstellungsfreigabe eine Datei möchten. Im Beispiel verweisen wir an die ausführbare Datei von [WPF-PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) -desktop-Anwendung.
+Diese Erweiterung aktivieren Sie die UWP-app zum Starten der desktop-Anwendung, mit der Sie die Bereitstellungsfreigabe eine Datei möchten. Im Beispiel verweisen wir auf die ausführbare Datei von [WPF-PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) -desktop-Anwendung.
 
 <a id="modify-desktop" />
 
@@ -365,7 +365,7 @@ Diese Erweiterung ermöglicht die UWP-app, um die desktop-Anwendung zu starten, 
 Photos.Path = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
 ```
 
-Für Instanzen der desktop-Anwendung, die bereits durch den Benutzer öffnen, können wir auch behandeln Sie das Ereignis [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher?view=netframework-4.7.2) und übergeben Sie den Pfad zum Speicherort Datei. Auf diese Weise werden alle Instanzen von desktop-Anwendung freigegebenen Fotos angezeigt.
+Für Instanzen der desktop-Anwendung, die bereits durch den Benutzer öffnen, können wir auch behandeln Sie das Ereignis [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher?view=netframework-4.7.2) und übergeben Sie den Pfad zum Speicherort Datei. Auf diese Weise werden alle Instanzen von desktop-Anwendung mit freigegebenen Fotos angezeigt.
 
 ```csharp
 ...
@@ -395,7 +395,7 @@ private void Watcher_Created(object sender, FileSystemEventArgs e)
 
 Sie fügen eine Hintergrundaufgaben hinzu, um selbst dann App-Code auszuführen, wenn die App angehalten wurde. Hintergrundaufgaben sind ideal für kleine Aufgaben, die keine Benutzerinteraktion erfordern. Beispielsweise kann Ihre Aufgabe E-Mails herunterladen, eine Popupbenachrichtigung über eine eingehende Chatnachricht zeigen oder auf eine Änderung in einer Systembedingung reagieren.
 
-Hier ist eine WPF-beispielanwendung, die eine Hintergrundaufgabe registriert.
+Hier ist eine WPF-Beispiel-Anwendung, die eine Hintergrundaufgabe registriert.
 
 ![hintergrundaufgabe](images/desktop-to-uwp/sample-background-task.png)
 
@@ -458,7 +458,7 @@ public sealed class SiteVerifier : IBackgroundTask
 
 ### <a name="configure-the-background-task"></a>Konfigurieren der Hintergrundaufgabe
 
-Öffnen Sie im manifest-Designer die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Projektmappe.
+Öffnen Sie im manifest-Designer die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Lösung.
 
 Fügen Sie auf der Registerkarte **Deklarationen** eine **Hintergrundaufgaben**-Deklaration hinzu.
 

@@ -2,21 +2,23 @@
 title: Device Portal Netzwerk Anmeldeinformationen API-Referenz
 description: Enthält Informationen zum Hinzufügen, entfernen oder Aktualisieren der Netzwerkanmeldeinformationen programmgesteuert.
 ms.localizationpriority: medium
-ms.openlocfilehash: 2da8dae554a0dcbb84d3d3fc3873e2fb035175dc
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.topic: article
+ms.date: 02/08/2017
+ms.openlocfilehash: ac30d8db830c51ee40653feb49b443ed44502617
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8730971"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8883049"
 ---
 # <a name="network-credentials-api-reference"></a>Netzwerk-Anmeldeinformationen-API-Referenz
-Sie können hinzufügen, entfernen Sie oder aktualisieren Sie gespeicherte Netzwerkanmeldeinformationen auf Ihr dev Kit mittels dieser REST-API.
+Sie können hinzufügen, entfernen Sie oder aktualisieren Sie gespeicherten Netzwerkanmeldeinformationen auf Ihr dev Kit mittels dieser REST-API.
 
 ## <a name="get-existing-credentials"></a>Abrufen von vorhandenen Anmeldeinformationen
 
 **Anforderung**
 
-Sie können eine Liste der gespeicherten Freigaben zusammen mit den Benutzernamen des Benutzers abrufen, die Anmeldeinformationen für diesen Netzwerkfreigabe verfügt.
+Sie können eine Liste der gespeicherten Freigaben zusammen mit den Benutzernamen des Benutzers abrufen, die Anmeldeinformationen für diese Netzwerkfreigabe verfügt.
 
 Methode      | Anforderungs-URI
 :------     | :-----
@@ -39,7 +41,7 @@ GET | /ext/networkcredential
 - JSON-Array im folgenden Format:
 * Anmeldeinformationen
   * NetworkPath - den Pfad zu der Netzwerkfreigabe.
-  * UserName: der Benutzername die Anmeldeinformationen gespeichert wurde.
+  * UserName: der Benutzername die Anmeldeinformationen gespeichert hat.
 
 **Statuscode**
 
@@ -65,7 +67,7 @@ Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
 
 | URI-Parameter      | Beschreibung     | 
 | ------------------ |-----------------|
-| NetworkPath        | Die Netzwerkpfad für die Freigabe sind Sie Anmeldeinformationen für den Zugriff auf Hinzufügen. |
+| NetworkPath        | Die Netzwerkpfad für die Freigabe Sie Anmeldeinformationen für den Zugriff auf Hinzufügen. |
 <br>
 
 **Anforderungsheader**
@@ -93,7 +95,7 @@ HTTP-Statuscode      | Beschreibung
 4XX | Fehlercodes
 5XX | Fehlercodes
 
-## <a name="remove-stored-credentials-for-a-share"></a>Gespeicherte Anmeldeinformationen für eine Bereitstellungsfreigabe zu entfernen.
+## <a name="remove-stored-credentials-for-a-share"></a>Entfernen Sie die gespeicherte Anmeldeinformationen für eine Bereitstellungsfreigabe.
 
 **Anforderung**
 
@@ -128,7 +130,7 @@ Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
-204 | Die Anforderung für die Anmeldeinformationen war erfolgreich.
+204 | Die Anforderung von Anmeldeinformationen war erfolgreich.
 4XX | Fehlercodes
 5XX | Fehlercodes
 

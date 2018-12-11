@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projektion, agil, objekt, agilität, IAgileObject
 ms.localizationpriority: medium
 ms.openlocfilehash: 2711779f2f5fc13be19a4a10224b110564716477
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8700993"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8887235"
 ---
 # <a name="agile-objects-in-cwinrt"></a>Agile Objekte in C++/WinRT
 
@@ -85,7 +85,7 @@ struct MyRuntimeClass: MyRuntimeClassT<MyRuntimeClass, winrt::non_agile>
 
 Dabei spielt es keine Rolle, wo im Variadic-Parameterpaket die Markerstruktur erscheint.
 
-Unabhängig davon, ob Sie die Agilität, können Sie **IMarshal** selbst implementieren. Angenommen, Sie verwenden Sie den Marker **WinRT:: non_agile** , um die Standard-agilitäts-Implementierung zu vermeiden und **IMarshal** selbst implementieren können&mdash;um die Marshal-by-Value-Semantik zu unterstützen.
+Unabhängig davon, ob Sie die Agilität, können Sie **IMarshal** selbst implementieren. Beispielsweise Sie können den Marker **WinRT:: non_agile** verwenden, um die Standard-agilitäts-Implementierung zu vermeiden, und **IMarshal** selbst implementieren&mdash;um Marshal-by-Value-Semantik zu unterstützen.
 
 ## <a name="agile-references-winrtagileref"></a>Agile Referenzen (winrt::agile_ref)
 

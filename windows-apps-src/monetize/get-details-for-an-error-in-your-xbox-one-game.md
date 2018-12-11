@@ -5,12 +5,12 @@ ms.date: 11/06/2018
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Fehler, Details
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b713e3c6c2f7b82e5779e4785cc6b2e320b24f0
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: da3252c42a0c2e2bd02465985737125cc053a616
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8741165"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8880879"
 ---
 # <a name="get-details-for-an-error-in-your-xbox-one-game"></a>Abrufen von Details zu einem Fehler in Ihrer Xbox One-Spiele
 
@@ -48,7 +48,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 | Parameter        | Typ   |  Beschreibung      |  Erforderlich  
 |---------------|--------|---------------|------|
-| applicationId | string | Die Produkt-ID des Xbox One Spiels, für die Fehlerdetails abgerufen werden. Um die Produkt-ID Ihres Spiels zu erhalten, wechseln Sie zu Ihrem Spiel in der Xbox-Entwickler-Portal (XDP) und rufen Sie die Produkt-ID von der URL ab. Wenn Sie Ihre integritätsdaten aus dem Windows Partner Center Analytics-Bericht herunterladen, ist die Produkt-ID auch in der TSV-Datei enthalten. |  Ja  |
+| applicationId | string | Die **Store-ID** des Xbox One Spiels, für die Fehlerdetails abgerufen werden. Die **Store-ID** ist auf der Seite der App-Identität im Partner Center verfügbar. Beispiel für eine **Store-ID** : 9wzdncrfj3q8. |  Ja  |
 | failureHash | string | Die eindeutige ID des Fehlers, zu dem Sie detaillierte Informationen erhalten möchten. Um diesen Wert für den Fehler zu erhalten, die Sie von Interesse sind, verwenden Sie die Methode zum [Abrufen von Fehlerberichtsdaten für Ihre Xbox One Spiel](get-error-reporting-data-for-your-xbox-one-game.md) , und verwenden Sie den Wert **FailureHash** im Antworttext dieser Methode. |  Ja  |
 | startDate | date | Das Startdatum im Datumsbereich der detaillierten Fehlerdaten, die abgerufen werden sollen. Der Standardwert ist 30Tage vor dem aktuellen Datum. |  Nein  |
 | endDate | date | Das Enddatum im Datumsbereich der detaillierten Fehlerdaten, die abgerufen werden sollen. Der Standardwert ist das aktuelle Datum. |  Nein  |
@@ -60,7 +60,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 ### <a name="request-example"></a>Anforderungsbeispiel
 
-Die folgenden Beispiele zeigen verschiedene Anforderungen für das Abrufen detaillierter Fehlerdaten für ein Xbox One-Spiele. Ersetzen Sie den *ApplicationId* -Wert durch die Produkt-ID für Ihr Spiel an.
+Die folgenden Beispiele zeigen verschiedene Anforderungen für das Abrufen detaillierter Fehlerdaten für ein Xbox One-Spiele. Ersetzen Sie den Wert *ApplicationId* , mit der **Store-ID** für Ihr Spiel.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/xbox/failuredetails?applicationId=BRRT4NJ9B3D1&failureHash=012e33e3-dbc9-b12f-c124-9d9810f05d8b&startDate=2016-11-05&endDate=2016-11-06&top=10&skip=0 HTTP/1.1
@@ -90,7 +90,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 
 | Wert           | Typ    | Beschreibung     |
 |-----------------|---------|----------------------------|
-| applicationId   | string  | Die Produkt-ID des Xbox One Spiels, für die detaillierte Fehlerdaten abgerufen wurden.      |
+| applicationId   | string  | Die **Store-ID** des Xbox One Spiels, für die detaillierte Fehlerdaten abgerufen wurden.      |
 | failureHash     | string  | Der eindeutige Bezeichner des Fehlers.     |
 | failureName     | string  | Der Name des Fehlers, der aus vier Teilen besteht: eine oder mehrere Problemklassen, ein Ausnahme/Fehlerprüfcode, der Name des Image, in dem der Fehler aufgetreten ist, und der zugehörige Funktionsname.           |
 | date            | string  | Das erste Datum im Datumsbereich für die Fehlerdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich. |
@@ -99,8 +99,8 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | market          | string  | Der ISO3166-Ländercode des Gerätemarkts.     |
 | osBuild         | string  | Die Buildnummer des Betriebssystems, auf dem der Fehler aufgetreten ist.       |
 | packageVersion  | string  | Die Version des Spiels, das mit diesem Fehler verknüpft ist.    |
-| deviceModel           | string  | Eine der folgenden Zeichenfolgen, die Xbox One-Konsole gibt an, auf der das Spiel ausgeführt wurde, als der Fehler aufgetreten ist.<p/><ul><li><strong>Microsoft-Xbox eine</strong></li><li><strong>Microsoft-Xbox One S</strong></li><li><strong>Microsoft-Xbox One X</strong></li></ul>  |
-| osVersion       | string  | Die Version des Betriebssystems, auf dem der Fehler aufgetreten ist. Dies ist immer den Wert **Windows 10**.    |
+| deviceModel           | string  | Eine der folgenden Zeichenfolgen, die Xbox One-Konsole angibt, auf der das Spiel ausgeführt wurde, als der Fehler aufgetreten ist.<p/><ul><li><strong>Microsoft-Xbox eine</strong></li><li><strong>Microsoft-Xbox One S</strong></li><li><strong>Microsoft-Xbox One X</strong></li></ul>  |
+| osVersion       | string  | Die Version des Betriebssystems, auf dem der Fehler aufgetreten ist. Dies ist immer den Wert von **Windows 10**.    |
 | osRelease       | string  |  Eine der folgenden Zeichenfolgen, die die Windows 10-Betriebssystemversion oder verteilungsring (als ein Subpopulation innerhalb der Betriebssystemversion) angibt, auf dem der Fehler aufgetreten ist.<p/><ul><li><strong>Version1507</strong></li><li><strong>Version1511</strong></li><li><strong>Version1607</strong></li><li><strong>Version1703</strong></li><li><strong>Version1709</strong></li><li><strong>Version1803</strong></li><li><strong>Release Preview</strong></li><li><strong>Insider Fast</strong></li><li><strong>Insider Slow</strong></li></ul><p>Wenn die Betriebssystemversion oder Verteilungsring unbekannt ist, hat dieses Feld den Wert <strong>Unknown</strong>.</p>    |
 | deviceType      | string  | Der Typ des Geräts, auf dem der Fehler aufgetreten ist. Dies ist immer den Wert **Konsole**.     |
 | cabDownloadable           | Boolean  | Gibt an, ob die CAB-Datei durch den Benutzer heruntergeladen werden kann.   |
