@@ -12,11 +12,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: abe77526a7ac12bc905839065913dd59d70fdf62
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8896839"
+ms.locfileid: "8925897"
 ---
 # <a name="handle-file-activation"></a><span data-ttu-id="c2f53-104">Behandeln der Dateiaktivierung</span><span class="sxs-lookup"><span data-stu-id="c2f53-104">Handle file activation</span></span>
 

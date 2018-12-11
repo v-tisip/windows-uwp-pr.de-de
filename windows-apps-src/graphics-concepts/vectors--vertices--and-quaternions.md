@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8942e53b7372e2e8b3cf4ed05f89b4187bdfc4be
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8898758"
+ms.locfileid: "8926409"
 ---
 # <a name="vectors-vertices-and-quaternions"></a><span data-ttu-id="06742-105">Vektoren, Scheitelpunkte und Quaternionen</span><span class="sxs-lookup"><span data-stu-id="06742-105">Vectors, vertices, and quaternions</span></span>
 

@@ -9,11 +9,11 @@ keywords: Windows10, UWP
 ms.assetid: c3e73f9b-4839-4804-b379-c95b0ca4fbe8
 ms.localizationpriority: medium
 ms.openlocfilehash: bd2174c6bbfb84a3ea6c6956e1d0b02ed5c9be33
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8898342"
+ms.locfileid: "8928577"
 ---
 # <a name="guidelines-for-app-help"></a><span data-ttu-id="39416-103">Anleitungen für die App-Hilfe</span><span class="sxs-lookup"><span data-stu-id="39416-103">Guidelines for App Help</span></span>
 

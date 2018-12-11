@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6d95ffc14e9ae6d4ea59a4b3bdc33fd215cb61be
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8879567"
+ms.locfileid: "8925907"
 ---
 # <a name="pipeline-access-to-streaming-resources"></a><span data-ttu-id="e1ae0-104">Pipelinezugriff auf Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="e1ae0-104">Pipeline access to streaming resources</span></span>
 
