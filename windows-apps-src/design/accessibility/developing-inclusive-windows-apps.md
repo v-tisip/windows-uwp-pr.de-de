@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e38b57deb7101dcf0476bd3d952fc01ffd605db
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8730507"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8886362"
 ---
 # <a name="developing-inclusive-windows-apps"></a><span data-ttu-id="b0d35-103">Entwickeln von inklusiven Windows-Apps</span><span class="sxs-lookup"><span data-stu-id="b0d35-103">Developing inclusive Windows apps</span></span>  
 

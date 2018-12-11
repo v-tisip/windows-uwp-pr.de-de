@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 142ee642806ebba41d6ddb4d49fe55217e7a0e2e
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8785928"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8886541"
 ---
 # <a name="display-a-splash-screen-for-more-time"></a><span data-ttu-id="19507-105">Längere Anzeige des Begrüßungsbildschirms</span><span class="sxs-lookup"><span data-stu-id="19507-105">Display a splash screen for more time</span></span>
 

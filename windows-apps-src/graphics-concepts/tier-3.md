@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 019899df18831167f0744d5274aa120cc7dd2096
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8798519"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8876936"
 ---
 # <a name="tier-3"></a><span data-ttu-id="c6122-104">Ebene3</span><span class="sxs-lookup"><span data-stu-id="c6122-104">Tier 3</span></span>
 
