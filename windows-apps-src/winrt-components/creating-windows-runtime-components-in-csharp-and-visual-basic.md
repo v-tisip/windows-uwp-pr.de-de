@@ -10,11 +10,11 @@ dev_langs:
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b4f5a2de5c3fa5564b4e4389cfc0806fd5d2844f
-ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "8827135"
+ms.locfileid: "8878261"
 ---
 # <a name="creating-windows-runtime-components-in-c-and-visual-basic"></a>Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic
 Ab .NET Framework 4.5, können Sie verwalteten Code verwenden, um Ihre eigenen Windows-Runtime-Typen zu erstellen und diese in einer Komponente für Windows-Runtime-verpacken. Sie können Ihre Komponente in universelle Windows-Plattform (UWP)-apps verwenden, die in C++, JavaScript, Visual Basic oder c# geschrieben werden. In diesem Thema wird beschrieben, die Regeln zum Erstellen einer Komponente, und beschreibt einige Aspekte der .NET Framework-Unterstützung für die Windows-Runtime. Im Allgemeinen ist diese Unterstützung allen .NET Framework-Programmierern klar. Wenn Sie aber eine Komponente erstellen, die mit JavaScript oder C++ verwendet werden soll, müssen Sie auf die Unterschiede bei der Unterstützung der Windows-Runtime durch diese Sprachen achten.

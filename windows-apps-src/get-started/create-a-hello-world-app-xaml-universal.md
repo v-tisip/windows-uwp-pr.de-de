@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows10, UWP, erste App, Hallo Welt
 ms.localizationpriority: medium
 ms.openlocfilehash: 433536673efb9d2f17d822599051030b219ed02f
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8735306"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8877307"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Erstellen der App „Hello, world“ (XAML)
 
-In diesem Lernprogramm erfahren Sie, wie Sie XAML und c# zum Erstellen einer einfachen "Hello, World" app für die universelle Windows-Plattform (UWP) auf Windows 10. Mit einem einzigen Projekt in Microsoft Visual Studio können Sie eine app erstellen, die auf jedem Windows 10-Gerät ausgeführt wird.
+In diesem Lernprogramm erfahren Sie, wie Sie XAML und c# zum Erstellen einer einfachen "Hello, World" app für die universelle Windows-Plattform (UWP) auf Windows 10. Ein einzelnes Projekt in Microsoft Visual Studio können Sie eine app erstellen, die auf jedem Windows 10-Gerät ausgeführt wird.
 
 Hier erfahren Sie Folgendes:
 
@@ -96,8 +96,8 @@ Doppelklicken Sie zum Anzeigen und Bearbeiten einer Datei im Projekt im **Projek
 -   Enthält eine Liste von Abhängigkeiten, Ressourcen und Dateien, die Ihre app enthält.
 
 *Ein Satz mit Logobildern*
--   Assets/Square150x150Logo.scale-200.png und Wide310x150Logo.scale 200.png Darstellung Ihrer app (entweder "Mittel" oder "Wide-Größe) im Menü" Start ".
--   Assets/Square44x44Logo.png stellt Ihre app in der app-Liste der Startmenü, Taskleiste und Task-Manager dar.
+-   Assets/Square150x150Logo.scale-200.png und Wide310x150Logo.scale 200.png stellen Sie Ihre app (entweder "Mittel" oder "Wide-Größe) im Startmenü dar.
+-   Assets/Square44x44Logo.png stellt Ihre app in der app-Liste im Startmenü, Taskleiste und Task-Manager dar.
 -   „Assets/StoreLogo.png“ stellt Ihre App im Microsoft Store dar.
 -   „Assets/SplashScreen.scale-200.png“ ist der Begrüßungsbildschirm, der beim Start der App angezeigt wird.
 -   Assets/LockScreenLogo.scale-200.png kann verwendet werden, um die app auf dem Sperrbildschirm darzustellen, wenn das System gesperrt ist.
@@ -222,7 +222,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Stellen Sie sicher, dass die Methodensignatur enthält nun u. a. das **Async** -Schlüsselwort, oder Sie erhalten einen Fehler auf, wenn Sie versuchen, die app ausgeführt werden.
+Stellen Sie sicher, dass die Methodensignatur enthält nun u. a. die **Async** -Schlüsselwort, oder Sie erhalten eine Fehlermeldung, wenn Sie versuchen, die app ausgeführt werden.
 
 ### <a name="what-did-we-just-do"></a>Was haben wir gerade gemacht?
 

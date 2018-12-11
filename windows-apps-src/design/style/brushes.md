@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e46ef0e459ede5fd1185d78186968735d886e63
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8708792"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8877939"
 ---
 # <a name="using-brushes-to-paint-backgrounds-foregrounds-and-outlines"></a>Verwenden von Pinseln zum Zeichnen von Vor- und Hintergründen und Skizzen
 
@@ -37,7 +37,7 @@ Ein [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR2429
 
 ### <a name="predefined-color-names"></a>Vordefinierte Farbnamen
 
-Sie können einen vordefinierten Farbnamen wie [**Yellow**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.yellow.aspx) oder [**Magenta**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.magenta.aspx) verwenden. Es stehen 256benannte Farben zur Verfügung. Der XAML-Parser wandelt den Farbnamen in eine [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723)-Struktur mit den richtigen Farbkanälen um. Die 256 benannten Farben basieren auf die *X11* Farbnamen Cascading Style Sheets, Level3 (CSS3)-Spezifikation, sodass Sie bereits vertraut, können diese Liste benannter Farben sein, wenn Sie über Vorkenntnisse in Webentwicklung oder-Design verfügen.
+Sie können einen vordefinierten Farbnamen wie [**Yellow**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.yellow.aspx) oder [**Magenta**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.magenta.aspx) verwenden. Es stehen 256benannte Farben zur Verfügung. Der XAML-Parser wandelt den Farbnamen in eine [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723)-Struktur mit den richtigen Farbkanälen um. Die 256 benannten Farben basieren auf die *X11* Farbnamen Cascading Style Sheets, Level3 (CSS3)-Spezifikation, sodass Sie möglicherweise bereits kennen Sie diese Liste benannte Farben, wenn Sie über Vorkenntnisse in Webentwicklung oder-Design verfügen.
 
 In diesem Beispiel wird die [**Fill**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.shape.fill.aspx)-Eigenschaft eines [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) auf die vordefinierte Farbe [**Red**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.red.aspx) festgelegt.
 
