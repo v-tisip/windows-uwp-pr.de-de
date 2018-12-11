@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e8c995c5a9513bea44664bcb395cd604ba2668c3
-ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8829983"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8896633"
 ---
 # <a name="composition-brushes"></a><span data-ttu-id="f9742-105">Kompositionspinsel</span><span class="sxs-lookup"><span data-stu-id="f9742-105">Composition brushes</span></span>
 <span data-ttu-id="f9742-106">Alles, was von einer UWP-Anwendung auf dem Bildschirm sichtbar wird angezeigt, da es mit einem Pinsel gezeichnet wurde.</span><span class="sxs-lookup"><span data-stu-id="f9742-106">Everything visible on your screen from a UWP application is visible because it was painted by a Brush.</span></span> <span data-ttu-id="f9742-107">Pinsel können Sie Benutzer Objekte der Benutzeroberfläche (UI) mit Inhalt, angefangen bei einfachen, einfarbige Farben zu Bildern oder Zeichnungen für komplexe Effekte Kette zeichnen.</span><span class="sxs-lookup"><span data-stu-id="f9742-107">Brushes enable you to paint user interface (UI) objects with content ranging from simple, solid colors to images or drawings to complex effects chain.</span></span> <span data-ttu-id="f9742-108">In diesem Thema werden die Begriffe zum Zeichnen mit CompositionBrush.</span><span class="sxs-lookup"><span data-stu-id="f9742-108">This topic introduces the concepts of painting with CompositionBrush.</span></span>
