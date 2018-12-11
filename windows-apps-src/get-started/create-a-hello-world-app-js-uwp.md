@@ -1,21 +1,21 @@
 ---
 ms.assetid: 3a17e682-40be-41b4-8bd3-fbf0b15259d6
 title: Erstellen der App Hello, world (JS)
-description: In diesem Lernprogramm erfahren Sie, wie Sie JavaScript und HTML zum Erstellen einer einfachen & \#0034; Hello, World & \#0034; App, die die universelle Windows-Plattform (UWP) auf Windows 10 ausgerichtet ist.
+description: In diesem Lernprogramm erfahren Sie, wie mit JavaScript und HTML zum Erstellen einer einfachen & \#0034; Hello, World & \#0034; App, die die universelle Windows-Plattform (UWP) auf Windows 10 ausgerichtet ist.
 ms.date: 03/06/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: c5b99c95167940c1ae51dbe96a3e43dc6fb0af34
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8731352"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8872198"
 ---
 # <a name="create-a-hello-world-app-js"></a>Erstellen der App Hello, world (JS)
 
-In diesem Lernprogramm erfahren Sie, wie Sie JavaScript und HTML zum Erstellen einer einfachen "Hello, World"-App für die universelle Windows-Plattform (UWP) auf Windows 10 verwenden. Mit einem einzigen Projekt in Microsoft Visual Studio können Sie eine app erstellen, die auf jedem Windows 10-Gerät ausgeführt wird.
+In diesem Lernprogramm erfahren Sie, wie Sie JavaScript und HTML zum Erstellen einer einfachen "Hello, World"-App für die universelle Windows-Plattform (UWP) auf Windows 10 verwenden. Ein einzelnes Projekt in Microsoft Visual Studio können Sie eine app erstellen, die auf jedem Windows 10-Gerät ausgeführt wird.
 
 > [!NOTE]
 > In diesem Lernprogramm wird Visual Studio Community 2017 verwendet. Wenn Sie eine andere Version von Visual Studio verwenden, kann das Programm für Sie etwas anders aussehen.
@@ -30,7 +30,7 @@ Hier erfahren Sie Folgendes:
 ## <a name="before-you-start"></a>Vorbereitung
 
 -   [Was ist eine UWP-App?](universal-application-platform-guide.md).
--   Zum Durcharbeiten dieses Lernprogramms benötigen Sie Windows 10 und Visual Studio2017. [Vorbereiten](get-set-up.md).
+-   Um dieses Lernprogramms benötigen Sie Windows 10 und Visual Studio2017. [Vorbereiten](get-set-up.md).
 -   Außerdem wird davon ausgegangen, dass Sie das Standardfensterlayout in Visual Studio verwenden. Wenn Sie das Standardlayout ändern, können Sie es im Menü **Fenster** mit dem Befehl **Fensterlayout zurücksetzen** wiederherstellen.
 
 ## <a name="step-1-create-a-new-project-in-visual-studio"></a>Schritt 1: Erstellen eines neuen Projekts in Visual Studio

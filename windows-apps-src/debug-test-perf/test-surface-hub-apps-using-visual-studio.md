@@ -7,16 +7,16 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b40fd56a85be6dce441324a427790cda28f9d7ac
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8738818"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8828921"
 ---
 # <a name="test-surface-hub-apps-using-visual-studio"></a>Testen von Surface Hub-Apps mit Visual Studio
-Der Visual Studio-Simulator bietet eine Umgebung, in der Sie Universelle Windows-Plattform (UWP)-Apps entwerfen, entwickeln, debuggen und testen können, einschließlich Apps, die Sie für Microsoft Surface Hub entwickelt haben. Der Simulator verwendet nicht dieselbe Benutzeroberfläche wie ein Surface Hub, aber es empfiehlt sich Ihre app aussieht und verhält sich mit den Surface Hub Bildschirmgröße und-Auflösung zu testen.
+Der Visual Studio-Simulator bietet eine Umgebung, in der Sie Universelle Windows-Plattform (UWP)-Apps entwerfen, entwickeln, debuggen und testen können, einschließlich Apps, die Sie für Microsoft Surface Hub entwickelt haben. Der Simulator verwendet nicht dieselbe Benutzeroberfläche wie ein Surface Hub, aber es ist hilfreich, wie Ihre app aussieht, und mit dem Surface Hub-Bildschirmgröße und-Auflösung Verhalten zu testen.
 
-Weitere Informationen zu den Simulator-Tool im Allgemeinen finden Sie unter [Ausführen von UWP-apps im Simulator](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-in-the-simulator).
+Weitere Informationen zum Simulator im Allgemeinen finden Sie unter [Ausführen von UWP-apps im Simulator](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-in-the-simulator).
 
 ## <a name="add-surface-hub-resolutions-to-the-simulator"></a>Hinzufügen von Surface Hub-Auflösungen zum Simulator
 So fügen Sie Surface Hub-Auflösungen zum Simulator hinzu:
@@ -69,7 +69,7 @@ So fügen Sie Surface Hub-Auflösungen zum Simulator hinzu:
     ![Auflösungen des Visual Studio-Simulators](images/vs-simulator-resolutions.png)
 
    > [!TIP]
-   > [Tablet-Modus aktivieren](http://windows.microsoft.com/windows-10/getstarted-like-a-tablet) , um eine bessere simulieren die Erfahrung von Surface Hub.
+   > [Tablet-Modus aktivieren](http://windows.microsoft.com/windows-10/getstarted-like-a-tablet) , können Sie sich die Erfahrung von Surface Hub zu simulieren.
 
 ## <a name="deploy-apps-to-a-surface-hub-device-from-visual-studio"></a>Bereitstellen von apps auf einem Surface Hub-Gerät aus Visual Studio
 Manuelle Bereitstellen einer app auf einem Surface Hub ist ein einfacher Vorgang.
@@ -83,17 +83,17 @@ Standardmäßig installiert Surface Hub nur apps aus dem Microsoft Store. Um App
 1. Öffnen Sie im **Startmenü** des Surface Hub die Einstellungs-App.
 
    > [!NOTE]
-   > Greifen Sie auf die Einstellungs-app auf Surface Hub sind Administratorrechte erforderlich.
+   > Greifen Sie auf die Einstellungs-app auf Surface Hub werden Administratorrechte benötigt.
 
 2. Navigieren Sie zu **Update und Sicherheit \ > für Entwickler**.
 
 3. Wählen Sie **Entwicklermodus** aus, und akzeptieren Sie die Warnung.
 
 ### <a name="deploy-your-app-from-visual-studio"></a>Bereitstellen Ihrer App aus Visual Studio
-Weitere Informationen zu den Bereitstellungsprozess im Allgemeinen finden Sie unter [Bereitstellen und Debuggen von UWP-apps](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).
+Weitere Informationen zu den Bereitstellungsprozess finden Sie in der Regel [Bereitstellen und Debuggen von UWP-apps](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).
 
    > [!NOTE]
-   > Dieses Feature erfordert Visual Studio 2015 Update 1 oder höher, aber es wird empfohlen, dass Sie die neueste aktuelle Version von Visual Studio verwenden. Eine auf dem neuesten Stand Visual Studio-Instanz können Sie die neueste Entwicklung und Sicherheitsupdates gibe.
+   > Dieses Feature erfordert Visual Studio 2015 Update 1 oder höher, aber es wird empfohlen, dass Sie die neueste aktuelle Version von Visual Studio verwenden. Eine auf dem neuesten Stand Visual Studio-Instanz wird Sie alle neuesten Entwicklungen und Sicherheitsupdates gibe.
 
 1. Zur Auswahl eines Ziels navigieren Sie zur Dropdownliste mit Debugzielen neben der Schaltfläche **Debugging starten** und wählen **Remotecomputer** aus.
 
@@ -106,7 +106,7 @@ Weitere Informationen zu den Bereitstellungsprozess im Allgemeinen finden Sie un
    > [!TIP] 
    > Nachdem Sie den Entwicklermodus aktiviert haben, finden Sie den Surface Hub IP-Adresse auf der Willkommensseite angezeigt.
 
-3. Wählen Sie zum Bereitstellen und Debuggen Sie Ihre app auf dem Surface Hub **Debugging starten (F5)** , oder drücken Sie STRG + F5, um nur die Bereitstellung Ihrer app auszuführen.
+3. Wählen Sie zum Bereitstellen und Debuggen Sie Ihre app auf dem Surface Hub **Debugging starten (F5)** , oder drücken Sie STRG + F5, um nur die app bereitzustellen.
 
    > [!TIP]
-   > Wenn Surface Hub die Willkommensseite angezeigt wird, können schließen Sie diesen durch Drücken einer beliebigen Schaltfläche.
+   > Wenn Surface Hub auf die Willkommensseite angezeigt wird, können schließen Sie diesen durch Drücken einer beliebigen Schaltfläche.

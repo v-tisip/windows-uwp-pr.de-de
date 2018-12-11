@@ -7,11 +7,11 @@ keywords: Erste Schritte, UWP, Windows10, Lernpfad, Datenbindung, Liste
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: bd4a1f6747ea68623039b7eac22ac08aaa15d9ea
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8692744"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8827856"
 ---
 # <a name="display-customers-in-a-list"></a>Anzeigen von Kunden in einer Liste
 

@@ -11,12 +11,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0f881c470d92ea1eafb08f24e6cf1fd06f4fc75e
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: fb97f69ccdffcec86dfdaf5fa6c5f817644ebd61
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8746961"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8873493"
 ---
 # <a name="icons-for-uwp-apps"></a>Symbole für UWP-Apps
 
@@ -81,7 +81,7 @@ Symbole können Platz sparen, aber wann ist eine Verwendung sinnvoll?
 
 ## <a name="using-the-right-type-of-icon"></a>Verwendung der richtigen Art von Symbol
 
-Es gibt viele Möglichkeiten, ein Symbol zu erstellen. Sie können eine Symbolschriftart wie Segoe MDL2 Assets verwenden. Sie können ein eigenes vektorbasiertes Bild erstellen. Sie können sogar ein Bitmap-Bild verwenden, auch wenn das nicht empfohlen wird. Hier ist eine Übersicht über die verschiedenen Möglichkeiten zum Hinzufügen eines Symbols zu Ihrer App. 
+Es gibt viele Möglichkeiten, ein Symbol zu erstellen. Sie können eine Symbolschriftart wie Segoe MDL2 Assets verwenden. Sie können Ihr eigenes vektorbasiertes Bild erstellen. Sie können sogar ein Bitmap-Bild verwenden, auch wenn das nicht empfohlen wird. Hier ist eine Übersicht über die verschiedenen Möglichkeiten zum Hinzufügen eines Symbols zu Ihrer App. 
 
 ### <a name="use-a-predefined-icon"></a>Verwenden eines vordefinierten Symbols
 :::row:::
@@ -136,7 +136,7 @@ Es gibt viele Möglichkeiten, ein Symbol zu erstellen. Sie können eine Symbolsc
 
 ## <a name="make-the-icon-do-something"></a>Festlegen einer Aktion für das Symbol
 
-Wenn Sie ein Symbol haben, besteht der nächste Schritt zu vereinfachen eine Aktion ausführen, indem Sie Befehl oder eine Navigationsaktion zuordnen. Die beste Möglichkeit hierzu ist das Symbol zu einer Schaltfläche oder Befehlsleiste hinzufügen. 
+Wenn Sie ein Symbol haben, besteht der nächste Schritt wird eine Aktion ausführen, indem Sie Befehl oder eine Navigationsaktion zuordnen. Die beste Möglichkeit hierzu ist das Symbol für eine Schaltfläche oder Befehlsleiste hinzufügen. 
 
 ![Befehlsleistenbild](images/icons/app-bar-desktop.svg)
 

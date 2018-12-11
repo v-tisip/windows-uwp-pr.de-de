@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d40e921f999381421a5a6ce422e019e7db58bbd
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8742699"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8871386"
 ---
 # <a name="feedback-report"></a>Feedbackbericht
 
-Der **Feedback-Bericht** im Partner Center gibt Aufschluss über die Probleme, Vorschläge und zustimmungen, die Windows 10-Kunden über den Feedback-Hub übermittelt haben. Sie können diese Daten im Partner Center oder exportieren Sie die Daten um ihn offline anzuzeigen.
+Der **Feedback-Bericht** im Partner Center können Sie sehen, die Probleme, Vorschläge und zustimmungen, die Windows 10-Kunden über den Feedback-Hub übermittelt haben. Sie können diese Daten im Partner Center anzeigen oder exportieren Sie die Daten, um ihn offline anzuzeigen.
 
 > [!NOTE]
 > Sie können über diesen Bericht auch [direkt auf Feedback reagieren](respond-to-customer-feedback.md), um Kunden zu signalisieren, dass Sie ihr Feedback ernst nehmen.
@@ -24,7 +24,7 @@ Ermuntern Sie Ihre Kunden, Ihnen Feedback zu Ihrer App zu geben. Dies ist eine h
 
 Verwenden Sie die Feedback-API im [Microsoft Store Services SDK](http://aka.ms/store-em-sdk), um es Ihren Kunden zu ermöglichen, den [Feedback-Hub direkt aus Ihrer App heraus zu starten](../monetize/launch-feedback-hub-from-your-app.md). Bedenken Sie, dass jeder Kunde, der Ihre App auf einem Windows 10-Gerät heruntergeladen hat, das den Feedback-Hub unterstützt, mithilfe der Feedback-Hub-App ein Feedback abgeben kann. Aus diesem Grund können Sie Feedback von Kunden in diesem Bericht angezeigt, auch wenn in Ihrer app nicht explizit um Feedback gebeten haben.
 
-Feedback kann auch hilfreich sein, wenn Sie [Flight-Paketen](package-flights.md), verwenden, da **die feedbackbericht** das spezifische Paket aufgeführt, das auf ihrem Gerät jeweiligen Kunden installiert war wird, als er das Feedback abgegeben hat.
+Feedback kann auch hilfreich sein, wenn Sie mithilfe des [Flight-Pakete](package-flights.md), **die feedbackbericht** das spezifische Paket aufgeführt wird, das auf dem Gerät jeweiligen Kunden installiert war, als er das Feedback abgegeben hat.
 
 > [!TIP]
 > Für einen kurzen Überblick über die Rezensionen, Bewertungen und Benutzerfeedback für alle Ihre apps in den letzten 30 Tagen, erweitern Sie im linken Navigationsmenü **einbeziehen** , und wählen Sie **Kritiken und Feedback.** 
@@ -54,7 +54,7 @@ Im Bericht finden Sie das jeweilige Feedback von Ihren Kunden. Links neben dem F
 - **Populär**: Zeigt Feedback, das von anderen Kunden in den letzten sieben Tagen bewertet wurde, beginnend mit dem Feedback, das die letzte Aktivität aufweist.
 - **Aktuellste**: Zeigt sämtliches Feedback, beginnend mit dem zuletzt abgegebenen Feedback an.
 
-Neben jedem Kommentar werden der Typ des Feedbacks sowie das Datum angezeigt, an dem das Feedback abgegeben wurde. Auch den Markt des Kunden, das spezifische Paket wird angezeigt, die auf dem Gerät installiert wurde, die sie verwendet haben, als er das Feedback, den Typ dieses Gerät, und **Windows-Insider-** links, wenn der Kunde das Feedback übermittelt hat ein Mitglied der Windows-Insider-ist Programm.
+Neben jedem Kommentar werden der Typ des Feedbacks sowie das Datum angezeigt, an dem das Feedback abgegeben wurde. Sie werden auch den Markt des Kunden, das spezifische Paket angezeigt werden, die auf dem Gerät installiert wurde, die sie verwendet haben, wenn sie das Feedback, den Typ dieses Gerät, und **Windows-Insider-** links, wenn der Kunde das Feedback übermittelt hat ein Mitglied der Windows-Insider-ist Programm.
 
 Hier sehen Sie auch eine Option, um auf das [Feedback zu antworten](respond-to-customer-feedback.md).
 

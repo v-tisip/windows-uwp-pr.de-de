@@ -7,11 +7,11 @@ keywords: Windows10, UWP, Segment, Segmente, Zielgruppe, Kunden
 ms.assetid: 58185f6c-d61f-478b-ab24-753d8986cd5a
 ms.localizationpriority: medium
 ms.openlocfilehash: d0df23f0da4efe01877c45e5b2b6b5f4e2142a92
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755206"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8829843"
 ---
 # <a name="create-customer-segments"></a>Erstellen von Kundensegmenten
 
@@ -33,7 +33,7 @@ Wichtige Punkte zu Kundensegmenten:
 
 ## <a name="to-create-a-customer-segment"></a>So erstellen Sie ein Kundensegment
 
-1.  Erweitern Sie im linken Navigationsmenü **einbeziehen** , und wählen Sie dann **Kundengruppen**, im [Partner Center](https://partner.microsoft.com/dashboard).
+1.  Erweitern Sie im linken Navigationsmenü **einbeziehen** , und wählen Sie **Kundengruppen**, im [Partner Center](https://partner.microsoft.com/dashboard).
 2.  Führen Sie auf der Seite **Kundengruppen** eine der folgenden Aktionen aus:
  - Wählen Sie im Abschnitt **Meine Kundengruppen** die Option **Neue Gruppe erstellen**, um ein neues Segment zu definieren. Wählen Sie auf der nächsten Seite das Optionsfeld **Segment**.
  - Wählen Sie im Abschnitt **Segmentvorlagen** die Option **Kopieren** neben dem vordefinierten Segment aus (um ein vordefiniertes Segment unverändert zu verwenden oder an Ihre Anforderungen anzupassen).
@@ -41,7 +41,7 @@ Wichtige Punkte zu Kundensegmenten:
 4.  Wählen Sie in der Liste **Kunden von dieser App einschließen** eine Ihrer Apps als Ziel aus.
 5.  Wählen Sie im Abschnitt **Einschlusskriterien festlegen** die Filterkriterien für das Segment.
 
-    Sie können aus einer Vielzahl von Filterkriterien wählen, einschließlich der **Käufe**, **kaufquelle**, **Demografie**, **Bewertung**, **Änderungsumfang-Vorhersage**, **Store-Käufe**, **Store-Käufe**und **Store auswählen. ausgeben**.
+    Sie können aus einer Vielzahl von Filterkriterien wählen, einschließlich der **Käufe**, **kaufquelle**, **Demografie**, **Bewertung**, **Änderungsumfang-Vorhersage**, **Store-Käufe**, **Store-Käufe**und **Store auswählen. Ausgaben**.
 
     Wenn Sie zum Beispiel ein Segment erstellen möchten, das nur Ihre App-Kunden zwischen 18 und 24Jahren enthält, wählen Sie in den Dropdownlisten die Filterkriterien [**Demografie**] [**Altersgruppe**] [**ist**] [**18 bis 24**] aus.
 

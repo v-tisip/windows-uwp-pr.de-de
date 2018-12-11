@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f7a5054fde1a1a24945b193f578b8389519dc2d5
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8730047"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8871820"
 ---
 # <a name="periodic-notification-overview"></a>Übersicht über regelmäßige Benachrichtigungen
  
@@ -25,7 +25,7 @@ Regelmäßige Benachrichtigungen – auch als abgerufene Benachrichtigungen beze
 
 Regelmäßige Benachrichtigungen bieten Ihnen Live-Kachelaktualisierungen mit minimaler Investition in Clouddienst und Client. Sie stellen auch eine gute Methode zum Verteilen desselben Inhalts an eine große Zielgruppe dar.
 
-**Hinweis:**  Weitere durch [Pushbenachrichtigungen und regelmäßige benachrichtigungsbeispiel](http://go.microsoft.com/fwlink/p/?linkid=231476) für Windows8.1 heruntergeladen und dessen Quellcode in Ihrer Windows 10-app wiederverwenden.
+**Hinweis:**  Weitere Informationen finden Sie durch [Pushbenachrichtigungen und regelmäßige Benachrichtigungen-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=231476) für Windows8.1 herunterladen und dessen Quellcode in Ihrer Windows 10-app wiederverwenden.
 
  
 
