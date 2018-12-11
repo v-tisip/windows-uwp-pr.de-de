@@ -5,11 +5,11 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
 ms.openlocfilehash: 882e84c5126e4f67e246dd479008133c979c06b1
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8793072"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8825303"
 ---
 # <a name="remote-input-api-reference"></a><span data-ttu-id="d061f-103">API-Referenz für die Remoteeingabe</span><span class="sxs-lookup"><span data-stu-id="d061f-103">Remote Input API reference</span></span>   
 <span data-ttu-id="d061f-104">Über diese API können Sie in Echtzeit per Fernzugriff Controller-, Tastatur- und Mauseingaben senden.</span><span class="sxs-lookup"><span data-stu-id="d061f-104">You can send controller, keyboard, and mouse input in real time remotely via this API.</span></span>

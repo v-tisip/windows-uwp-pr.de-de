@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Dev Center, Kontoeinstellungen, Profil, Konto-Profil, Entwicklerkonto, Entwicklerkontoeinstellungen
 ms.localizationpriority: medium
 ms.openlocfilehash: b3a95e4e9eddbe47feb513f66856949baecdab8b
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8790743"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8825419"
 ---
 # <a name="manage-account-settings-and-profile-info"></a><span data-ttu-id="7ce5f-104">Verwalten Ihrer Kontoeinstellungen und Profilinformationen</span><span class="sxs-lookup"><span data-stu-id="7ce5f-104">Manage account settings and profile info</span></span>
 

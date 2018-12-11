@@ -7,11 +7,11 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a203ef79fc6ebb45107cd9ac9d79cadf330f7a5d
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8784888"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8825316"
 ---
 # <a name="enable-in-app-product-purchases"></a><span data-ttu-id="a7ec0-103">Unterstützen von In-App-Produktkäufen</span><span class="sxs-lookup"><span data-stu-id="a7ec0-103">Enable in-app product purchases</span></span>
 

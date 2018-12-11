@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b5d245247d33f3c04839620615f2778ef7dfb59
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8784375"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8828629"
 ---
 # <a name="light-mapping-with-textures"></a><span data-ttu-id="e4316-104">Lichtzuordnung mit Texturen</span><span class="sxs-lookup"><span data-stu-id="e4316-104">Light mapping with textures</span></span>
 

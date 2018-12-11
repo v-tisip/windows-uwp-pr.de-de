@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: aae797db890c6bee141c3b4a79a6a85a55a6b512
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8785839"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8871625"
 ---
 # <a name="triangle-lists"></a><span data-ttu-id="4cdf5-106">Dreieckslisten</span><span class="sxs-lookup"><span data-stu-id="4cdf5-106">Triangle lists</span></span>
 

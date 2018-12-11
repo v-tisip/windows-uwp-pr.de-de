@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: cacd915530bb599936730ec404a6e524fef0105d
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8783124"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8825439"
 ---
 # <a name="optimize-file-access"></a><span data-ttu-id="a12fa-104">Optimieren des Dateizugriffs</span><span class="sxs-lookup"><span data-stu-id="a12fa-104">Optimize file access</span></span>
 

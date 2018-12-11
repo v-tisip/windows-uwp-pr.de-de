@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: b7ac2a625b3769377ed6c8dddce3ca25177dee5f
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8780229"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8872086"
 ---
 # <a name="credential-locker"></a><span data-ttu-id="42a2c-104">Schließfach für Anmeldeinformationen</span><span class="sxs-lookup"><span data-stu-id="42a2c-104">Credential locker</span></span>
 

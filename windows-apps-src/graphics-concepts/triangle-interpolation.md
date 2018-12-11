@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: e8017cd75ed3dfd4129d6c15d668648792cc8d0a
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8788979"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8825027"
 ---
 # <a name="triangle-interpolation"></a><span data-ttu-id="8f870-104">Dreiecksinterpolation</span><span class="sxs-lookup"><span data-stu-id="8f870-104">Triangle interpolation</span></span>
 

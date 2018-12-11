@@ -13,11 +13,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d520f811c9929721bfcb9d1c83fbff6a4891091
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8747638"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8826239"
 ---
 # <a name="contextual-commanding-for-collections-and-lists"></a><span data-ttu-id="801b2-104">Kontextbefehle für Sammlungen und Listen</span><span class="sxs-lookup"><span data-stu-id="801b2-104">Contextual commanding for collections and lists</span></span>
 

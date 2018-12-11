@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 866a3b02d67409d03fccf427663de65cc94919b2
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8795931"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8826401"
 ---
 # <a name="handle-device-orientation-with-mediacapture"></a><span data-ttu-id="aec90-104">Handhaben der Geräte- und Bildschirmausrichtung mit „MediaCapture“</span><span class="sxs-lookup"><span data-stu-id="aec90-104">Handle device orientation with MediaCapture</span></span>
 <span data-ttu-id="aec90-105">Wenn Ihre App ein Foto oder Video aufnimmt, das außerhalb der App angezeigt werden soll, z.B. in eine Datei auf dem Gerät des Benutzers gespeichert oder online freigegeben werden soll, ist es wichtig, dass das Bild mit den richtigen Ausrichtungsmetadaten codiert wird. Dadurch wird bei der Anzeige durch eine andere App oder ein anderes Gerät das Bild korrekt ausgerichtet.</span><span class="sxs-lookup"><span data-stu-id="aec90-105">When your app captures a photo or video that is intended to be viewed outside of your app, such as saving to a file on the user's device or sharing online, it's important that you encode the image with the proper orientation metadata so that when another app or device displays the image, it is oriented correctly.</span></span> <span data-ttu-id="aec90-106">Die Bestimmung der korrekten Ausrichtungsdaten für eine Mediendatei kann eine komplexe Aufgabe sein, da verschiedene Variablen berücksichtigt werden müssen. Dazu zählen die Ausrichtung des Geräte-Chassis, die Ausrichtung der Anzeige und die Platzierung der Kamera (nach vorne oder nach hinten gerichtete Kamera).</span><span class="sxs-lookup"><span data-stu-id="aec90-106">Determining the correct orientation data to include in a media file can be a complex task because there are several variables to consider, including the orientation of the device chassis, the orientation of the display, and the placement of the camera on the chassis (whether it is a front or back-facing camera).</span></span> 

@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 4138fd7275f7e1f9addb7685ff0846e756701003
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8792134"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8825346"
 ---
 # <a name="resource-types"></a><span data-ttu-id="99470-104">Ressourcentypen</span><span class="sxs-lookup"><span data-stu-id="99470-104">Resource types</span></span>
 
