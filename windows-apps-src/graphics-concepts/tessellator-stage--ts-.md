@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7768d63405281d3155affc6c9f09c62568761718
-ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "8830947"
+ms.locfileid: "8879789"
 ---
 # <a name="tessellator-ts-stage"></a><span data-ttu-id="84ac3-104">Tessellatorphase (TS)</span><span class="sxs-lookup"><span data-stu-id="84ac3-104">Tessellator (TS) stage</span></span>
 

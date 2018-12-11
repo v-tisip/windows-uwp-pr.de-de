@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, Uwp, Spiele, Eingabe, unformatierter Gamecontroller
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b5f4d49ad49cf9f9065fe17788456e9dd2a4a4e
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8793887"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8879228"
 ---
 # <a name="raw-game-controller"></a><span data-ttu-id="b9506-104">Unformatierter Gamecontroller</span><span class="sxs-lookup"><span data-stu-id="b9506-104">Raw game controller</span></span>
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Audio, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: fd106e07e6359e9289074cb62cec6bf7458ac5bc
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8806590"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8879872"
 ---
 # <a name="audio-for-games"></a><span data-ttu-id="77fec-104">Audio für Spiele</span><span class="sxs-lookup"><span data-stu-id="77fec-104">Audio for games</span></span>
 

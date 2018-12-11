@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, glsl, hlsl, opengl, directx, Shader
 ms.localizationpriority: medium
 ms.openlocfilehash: 8f468584d995de40ff14df1527ab1df8275c36a8
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8786007"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8879756"
 ---
 # <a name="glsl-to-hlsl-reference"></a><span data-ttu-id="426a9-104">GLSL-zu-HLSL-Referenz</span><span class="sxs-lookup"><span data-stu-id="426a9-104">GLSL-to-HLSL reference</span></span>
 

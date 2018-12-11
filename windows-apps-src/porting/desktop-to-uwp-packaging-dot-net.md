@@ -8,11 +8,11 @@ keywords: windows10, UWP
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
 ms.openlocfilehash: e867377c5961277d140173ab0de86d9f89197086
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8794977"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8877696"
 ---
 # <a name="package-a-desktop-application-by-using-visual-studio"></a><span data-ttu-id="d4bbb-103">Verpacken Sie eine desktop-Anwendung mit Visual Studio</span><span class="sxs-lookup"><span data-stu-id="d4bbb-103">Package a desktop application by using Visual Studio</span></span>
 
