@@ -7,17 +7,17 @@ ms.topic: article
 ms.assetid: 4853e55b-2232-4589-903a-ccb60e07aeb8
 ms.localizationpriority: medium
 ms.openlocfilehash: 75c5c34f3dec48bbee2feccde5b60cde45a241f9
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8729922"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8827205"
 ---
 # <a name="whats-new-in-windows10-for-developers-build-10240"></a>Neuigkeiten in Windows 10 für Entwickler, build 10240
 
 Windows10, Build10240, und das aktualisierte SDK stellen Tools, Features und Umgebungen zur Verfügung, mit denen bemerkenswerte Apps für die Universelle Windows-Plattform ermöglicht werden. Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/create-uwp-apps.md) oder lesen, wie Sie Ihren [vorhandenen App-Code unter Windows verwenden](../porting/index.md) können.
 
-Hier ist ein Feature für Feature geordneten Überblick über was neuen in Windows 10 Build 10240 (auch bekannt als Windows 10, Version 1507).
+Hier ist ein Feature für Feature einzeln erläutert neuen in Windows 10, Build 10240 (auch bekannt als Windows 10, Version 1507).
 
 ## <a name="adaptive-layouts"></a>Adaptive Layouts
 

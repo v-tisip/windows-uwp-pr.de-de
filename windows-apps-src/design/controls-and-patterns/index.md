@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
 ms.openlocfilehash: c2f1a2b5ae514222ed6ef06cc7099a0261747dbc
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755583"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8854741"
 ---
 # <a name="controls-and-patterns-for-uwp-apps"></a>Steuerelemente und Muster für UWP-Apps
  
@@ -40,7 +40,7 @@ Das XAML-Framework bietet zahlreiche Anpassungsmöglichkeiten für die App-Darst
 :::row-end:::
 
 ## <a name="get-the-windows-ui-library"></a>Abrufen der Windows-UI-Bibliothek
-Einige Steuerelemente sind nur verfügbar, in der Windows-UI-Bibliothek. Um es zu erhalten, finden Sie in der [UI-Bibliothek für Windows-Übersicht und Installation Anweisungen](/uwp/toolkits/winui/).
+Einige Steuerelemente sind nur verfügbar, in der Windows-UI-Bibliothek. Um es zu erhalten, finden Sie in der [UI-Bibliothek für Windows-Übersicht und Installation-Anweisungen](/uwp/toolkits/winui/).
 
 ## <a name="alphabetical-index"></a>Alphabetischer Index 
 

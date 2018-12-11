@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a42a59f76da99461b2e2428f5732ca0c433b6540
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8731392"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8871334"
 ---
 # <a name="launch-an-app-with-a-uri"></a>Starten einer App mit einem URI
 
@@ -27,7 +27,7 @@ In diesem Abschnitt wird beschrieben, wie Sie einen Uniform Resource Identifier 
 | [Starten der UWP-app](launch-store-app.md) | In diesem Thema wird das URI-Schema „ms-windows-store“ beschrieben. Ihre App kann mit diesem URI-Schema die UWP-App mit bestimmten Seiten des Store starten. |
 | [Starten der Windows-Karten-App](launch-maps-app.md) | Erfahren Sie, wie Sie die Windows-Karten-App aus Ihrer App starten können. |
 | [Starten der Kontakte-App](launch-people-apps.md) | In diesem Thema wird das URI-Schema „ms-people“ beschrieben. Ihre App kann dieses URI-Schema verwenden, um die Kontakte-App für bestimmte Aktionen zu starten. |
-| [Ausschnitt & Skizze starten](launch-screen-snipping.md) | Erfahren Sie mehr über das URI-Schemas verwenden, um einen neuen Ausschnitt öffnen oder zum Öffnen der app Ausschnitt & Skizze. |
+| [Ausschnitt & Skizze starten](launch-screen-snipping.md) | Erfahren Sie, wie Sie die URI-Schemas verwenden, um einen neuen Ausschnitt öffnen oder zum Öffnen der app Ausschnitt & Skizze. |
 | [Aktivieren von apps für Websites mit app-URI-Handlern](web-to-app-linking.md) | Fördern Sie Nutzer an Ihrer app durch die Unterstützung von Apps für Websites Feature. |
 
 ## <a name="related-topics"></a>Verwandte Themen

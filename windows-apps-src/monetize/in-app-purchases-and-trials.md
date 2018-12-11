@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows10, uwp, In-app-käufe, IAPs-add-ons, Testversionen, verbrauchbar, dauerhaft, abonnement
 ms.localizationpriority: medium
 ms.openlocfilehash: 9891205d4fdc8110cb727fb5caabbff6c5f4f948
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8789210"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8873002"
 ---
 # <a name="in-app-purchases-and-trials"></a>In-App-Käufe und Testversionen
 

@@ -1,28 +1,28 @@
 ---
 title: PointOfService gemeinsame Nutzung von Geräten
-description: PointOfService-Peripheriegeräte freigeben für andere Personen
+description: PointOfService-Peripheriegeräte Teilen mit anderen
 ms.date: 06/14/2018
 ms.topic: article
 keywords: Windows 10, UWP, Point of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 53dc22b2aa35b5e69854f6fb489ff6a454c73bf6
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8731789"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8827215"
 ---
 # <a name="pointofservice-device-sharing"></a>PointOfService gemeinsame Nutzung von Geräten
 
-Erfahren Sie mehr über das Netzwerk oder verbundenen Bluetooth-Peripheriegeräte mit anderen Computern in einer Umgebung freigeben, in denen mehrere PCs auf Peripheriegeräte anstatt dedizierten auf jeden Computer angeschlossenen Peripheriegeräte angewiesen sind.
+Erfahren Sie mehr über das Netzwerk oder verbundenen Bluetooth-Peripheriegeräte mit anderen Computern in einer Umgebung Teilen, in denen mehrere PCs auf Peripheriegeräte anstatt dedizierten auf jeden Computer angeschlossenen Peripheriegeräte verlassen.
 
 ## <a name="device-sharing"></a>Gemeinsame Nutzung von Geräten
 
-Netzwerk- und Bluetooth verbundenen PointOfService-Peripheriegeräte normalerweise verwendet werden, in einer Umgebung Wheere teilen sich mehrere Clientgeräte dieselben Peripheriegeräte ganzen Tag.  In einer ausgelastet Einzelhandel oder Essen Services-Umgebung wirkt sich Verzögerung in die Möglichkeit für ein Clientgerät an ein Peripheriegerät Anfügen auf die Effizienz, in der ein zuordnen kann eine Transaktion mit dem Kunden zu schließen und auf die weiter. In einem schnellen Service Restaurant-Szenario, in denen eine Belegdrucker als Küche Drucker verwendet wird, um die Details der Bestellung des Kunden in die Küche ist immer zur Vorbereitung übertragen, werden mehrere Client-Geräte, die Kunden Aufträge verliert.  Nach Abschluss die Reihenfolge sollte jedes Client-Gerät in der Lage beansprucht den freigegebenen Drucker und die Reihenfolge für die Küche ist immer sofort zu drucken.
+Netzwerk- und Bluetooth verbundenen PointOfService-Peripheriegeräte normalerweise verwendet werden, in einer Umgebung Wheere teilen sich mehrere Client-Geräte die gleichen Peripheriegeräte ganzen Tag.  In einer beschäftigt Einzelhandel oder Essen Services-Umgebung wirkt sich Verzögerung in die Möglichkeit für ein Clientgerät an ein Peripheriegerät Anfügen auf die Effizienz, in der ein zuordnen kann schließen eine Transaktion mit dem Kunden und auf die weiter. In einem schnellen Service Restaurant-Szenario, in denen eine Belegdrucker als Küche Drucker verwendet wird, um die Details der Bestellung des Kunden in die Küche ist immer zur Vorbereitung übertragen, werden mehrere Client-Geräte, die Kunden Aufträge verliert.  Nach Abschluss die Reihenfolge sollte jedes Client-Gerät beanspruchen, den freigegebenen Drucker und die Reihenfolge für die Küche ist immer sofort drucken können.
 
-In diesen Umgebungen ist es wichtig für die Anwendung von vollständig **dispose** das Geräteobjekt, sodass ein anderes dasselbe Gerät geltend machen kann.
+In diesen Umgebungen ist es wichtig, für die Anwendung von vollständig **Löschen** das Geräteobjekt, damit eine andere dasselbe Gerät geltend machen kann.
 
-Freigeben von einen PosPrinter am Ende des eine "using" blockieren
+Löschen des einen PosPrinter am Ende einer "mit" blockieren
 
 ```Csharp 
 using Windows.Devices.PointOfService;
@@ -39,7 +39,7 @@ using(PosPrinter printer = await PosPrinter.FromIdAsync("Device ID"))
 ```
 
 
-Freigeben von einen PosPrinter durch Aufrufen von Dispose() explizit
+Löschen des einen PosPrinter durch Aufrufen von Dispose() explizit
 
 ```Csharp 
 using Windows.Devices.PointOfService;

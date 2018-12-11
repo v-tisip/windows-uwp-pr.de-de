@@ -6,11 +6,11 @@ ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f46c566712f7f0c2bca45db5a107738c4104e037
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755823"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8854488"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>Aktivieren von Abonnements für Add-Ons für Ihre App
 
@@ -124,7 +124,7 @@ Wir gewähren keine Karenzzeit für die Abonnementabrechnung. Wenn wir die Kredi
 Die folgenden Szenarien werden für die Abonnement-Add-Ons derzeit nicht unterstützt.
 
 * Das Verkaufen von Abonnements direkt an Kunden über den Store wird zu diesem Zeitpunkt nicht unterstützt. Abonnements sind nur für In-App-Käufe von digitalen Produkten verfügbar.
-* Kunden können die Abonnementperioden nicht über die Seite [http://account.microsoft.com/services](http://account.microsoft.com/services) ihres Microsoft-Kontos ändern. Um zu einem anderen abonnementszeitraum zu wechseln, müssen Kunden das aktuelle Abonnement kündigen und dann ein Abonnement mit einem anderen Abonnementzeitraum in Ihrer app erwerben.
+* Kunden können die Abonnementperioden nicht über die Seite [http://account.microsoft.com/services](http://account.microsoft.com/services) ihres Microsoft-Kontos ändern. Um zu einem anderen abonnementszeitraum zu wechseln, müssen Kunden das aktuelle Abonnement kündigen und ein Abonnement mit einer anderen Abonnementzeitraum in Ihrer app erwerben.
 * Das Wechseln von Ebenen wird aktuell nicht für Abonnement-Add-Ons unterstützt (z.B., wenn ein Kunde aus einem einfachen Abonnement in ein Premium-Abonnement mit mehr Features wechseln will).
 * [Verkäufe](../publish/put-apps-and-add-ons-on-sale.md) und [Werbecodes](../publish/generate-promotional-codes.md) für die Abonnement-Add-Ons werden derzeit nicht unterstützt.
 

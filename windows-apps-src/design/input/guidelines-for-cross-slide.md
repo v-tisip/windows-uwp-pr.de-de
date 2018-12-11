@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f6a37af19c9e3e9beaebbadfcc71f3ad01e3087c
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8734463"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8872850"
 ---
 # <a name="guidelines-for-cross-slide"></a>Richtlinien für Querziehen
 
@@ -56,7 +56,7 @@ Beachten Sie die folgenden Richtlinien, wenn Sie eine Querziehfunktion in Ihrer 
 
 Verwenden Sie das Querziehen für Listen oder Auflistungen, bei denen ein Bildlauf nur in eine Richtung möglich ist. Weitere Informationen finden Sie unter [Hinzufügen von ListView-Steuerelementen](https://msdn.microsoft.com/library/windows/apps/hh465382).
 
-**Hinweis:** In Fällen, in denen der Inhaltsbereich in zwei Richtungen, z. B. Webbrowser oder e-Reader verschoben werden kann, die zeitlich festgelegte Interaktion des drücken und halten verwendet werden, um das Kontextmenü für Objekte wie Bilder und Links aufzurufen.
+**Hinweis:** In Fällen, in denen der Inhaltsbereich in zwei Richtungen, z. B. in einem Webbrowser oder e-Reader verschoben werden kann, die zeitlich festgelegte Interaktion des drücken und halten verwendet werden, um das Kontextmenü für Objekte wie Bilder und Links aufzurufen.
 
  
 

@@ -8,31 +8,31 @@ keywords: Windows10, UWP
 permalink: en-us/docs/xdk/dev-home.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 4113df37446d93883cf395e7c1e86b1de6c1b328
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8751975"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8825127"
 ---
 # <a name="developer-home-on-the-console-dev-home"></a>Entwickler-Startbildschirm auf der Konsole (Dev Home)
    
   
-Dev Home ist ein Tool im Xbox One Development Kit von Produktivität von Entwicklern unterstützen soll. Dev Home bietet Funktionen zum Verwalten und Konfigurieren Ihres Development Kit, Verwalten von Benutzern, starten installierten Titel und durchführen erfasst und erfasst. In zukünftigen Versionen, die wir erweitern Sie die Funktionalität weiterhin, um zusätzliche Funktionen, die basierend auf Ihr Feedback zu aktivieren und auch Erweiterbarkeit und das Hinzufügen von eigene Tools zu ermöglichen.   
+Dev Home ist ein Tool im Xbox One Development Kit von Produktivität von Entwicklern unterstützen soll. Dev Home bietet Funktionen zum Verwalten und Konfigurieren Ihres Development Kit, Verwalten von Benutzern, installierte Titel starten und Ausführen erfasst und erfasst. In zukünftigen Versionen, die wir erweitern Sie die Funktionalität weiterhin, um zusätzliche Funktionen, die basierend auf Ihr Feedback zu aktivieren und auch Erweiterbarkeit und das Hinzufügen der eigene Tools zu ermöglichen.   
    
   
-Wir sind sehr in Ihr Feedback zu Dev Home und die Szenarien, die Sie am besten sehen sie unterstützen möchten. Geben Sie Ihre Kommentare über das Menü der app unter **Feedback senden** beschriebenen Methoden oder über Ihre Entwickler Account Manager (Mutter).   
+Wir sind sehr in Ihr Feedback zu Dev Home und die Szenarien, die Sie am besten sehen sie unterstützen möchten. Geben Sie Ihre Kommentare, über die Methoden in der app im Hauptmenü unter **Feedback senden** beschriebenen oder über Ihre Entwickler-Konto-Manager (Mutter).   
    
   
 So starten Sie Dev Home auf der November 2015 oder höher Wiederherstellung  
  
-   1. Öffnen Sie die Anleitung durch Verschieben nach links auf der Startseite oder klicken auf die Schaltfläche Nexus double  
+   1. Öffnen Sie die Anleitung durch Verschieben nach links auf der Startseite, oder klicken auf die Schaltfläche Nexus double  
    1. Nach unten, um **Einstellungen** (das Zahnradsymbol)   
    1. Wählen Sie **Alle Einstellungen**  
    1. Wählen Sie auf **der Standard-Entwicklerseite** **Entwickler-Startbildschirm** (Symbol für die Startseite)   
 
  ![](images/dev_home_icons.png)   
   
-Zeigen Sie auf früheren Recovery wählen Sie die Dev Home-Kachel auf der rechten Seite im Startbildschirm im **Inhalt wichtige** oder die Liste der Anwendung im Xbox One-Manager und starten Sie **Dev Home**.   
+Zeigen Sie auf früheren benötigt wählen Sie die Dev Home-Kachel auf der rechten Seite des der Startseite im **Inhalt angeboten** oder die Liste der Anwendung im Xbox One-Manager und starten Sie **Dev Home**.   
  ![](images/dev_home_1.png) 
 <a id="ID4EBC"></a>
 
@@ -46,7 +46,7 @@ Der Header der Dev Home-Benutzeroberfläche enthält die folgenden "auf einen Bl
    *  **Konsolen-IP:** Die aktuelle IP-Adresse der Konsole.   
    *  **Konsolenname:** Die aktuelle Hostnamen der Konsole.  
    *  **Sandbox:** Der Name der Sandbox, der in die Konsole ist.  
-   *  **Betriebssystemversion:** Die aktuelle Recovery-Version, die auf der Konsole ausgeführt wird.
+   *  **Version des Betriebssystems:** Die aktuelle Recovery-Version, die auf der Konsole ausgeführt wird.
    *  Aktuelle Systemzeit.   
 
    
@@ -68,7 +68,7 @@ Der Rest der Dev Home-Benutzeroberfläche ist in den folgenden Seiten unterteilt
 ## <a name="main-menu"></a>Hauptmenü  
    
   
-Drücken Sie **die Menütaste** auf Ihrem Controller, können Sie das Hauptmenü zugreifen, das Konfiguration von den app-Workspace, die Verwaltung von Anmeldeinformationen für den Zugriff auf Netzwerkressourcen und Informationen zum Übermitteln von Feedback an die app ermöglicht.   
+Drücken Sie **die Menütaste** auf Ihrem Controller, können Sie das Hauptmenü zugreifen, das Konfiguration von den app-Workspace, die Verwaltung von Anmeldeinformationen für den Zugriff auf Netzwerkressourcen und Informationen zum Bereitstellen von Feedback für die app ermöglicht.   
   
 <a id="ID4EUE"></a>
 
@@ -77,10 +77,10 @@ Drücken Sie **die Menütaste** auf Ihrem Controller, können Sie das Hauptmenü
 ## <a name="snap-mode-ux"></a>Andockmodus UX  
    
   
-Mehrere vorhandene und zukünftige Tools in Dev Home, z. B. Netzwerk- und Multiplayer-Spiele, dienen zur verwendet werden, angedockt auf der Seite, während Sie Ihre Titel ausgeführt werden, damit Sie haben können einen einfachen Zugriff auf Tools beim Testen.   
+Verschiedene vorhandene und zukünftige Tools in Dev Home, z. B. Netzwerk- und Multiplayer-Spiele, dienen zur verwendet werden, angedockt auf der Seite, während Sie den Titel ausführen, damit Sie einfachen Zugriff auf Tools beim Testen haben.   
    
   
-Um Snap Zugriffsmodus, markieren Sie den Titel des entsprechenden Tools, drücken die **Ansicht** -Taste auf dem Controller und wählen im Kontextmenü **Ausrichten** :  
+Snap Modus den Zugriff auf Markieren Sie den Titel des entsprechenden Tools, drücken Sie die **Ansicht** -Taste auf dem Controller, und wählen Sie im Kontextmenü **Ausrichten** :  
  ![](images/dev_home_4.png)   
   
 Dev Home wird rechts angedockt. Sie können den Kontext umschalten, indem Sie wie gewohnt auf die Schaltfläche Nexus doppeltippen.  
@@ -92,7 +92,7 @@ Dev Home wird rechts angedockt. Sie können den Kontext umschalten, indem Sie wi
 ## <a name="customizing-dev-home"></a>Anpassen von Dev Home  
    
   
-Dev Home kann angepasst und personalisiert werden. Sie können konfigurieren die app, um Ihre Workflow geeignet, und speichern, die dann als Arbeitsbereich. Diesem Arbeitsbereich kann exportiert und importiert, sodass Sie das Layout auf andere Konsolen als kopieren erforderlich. Diese Optionen finden Sie im Hauptmenü unter **Arbeitsbereich**. Die Exportdatei befinden sich auf das Systemlaufwerk neu in der `Dev Home\Workspaces` Verzeichnis.   
+Dev Home kann angepasst und personalisiert werden. Sie können die app Ihrem Workflow entsprechend konfigurieren, und speichern, die als Arbeitsbereich. Diesen Arbeitsbereich kann exportiert und importiert, sodass Sie das Layout auf andere Konsolen als kopieren erforderlich. Diese Optionen finden Sie im Hauptmenü unter **Arbeitsbereich**. Auf dem Systemlaufwerk neu in die exportierte Datei befinden sich die `Dev Home\Workspaces` Verzeichnis.   
  
 <a id="ID4EVF"></a>
 
@@ -101,7 +101,7 @@ Dev Home kann angepasst und personalisiert werden. Sie können konfigurieren die
 ### <a name="resizing-and-reordering-tools"></a>Ändern der Größe und Neuanordnen von Tools  
    
   
-Ändern der Größe oder Position eines Tools, verwenden Sie die Kontextmenüschaltfläche (Schaltfläche "auf dem Controller) während des Titels hat den Fokus. Wählen Sie im Kontextmenü **Verschieben** oder **Größe ändern**.   
+Ändern der Größe oder Position eines Tools, verwenden die Kontextmenüschaltfläche (Ansichtsschaltfläche auf dem Controller), während des Titels hat den Fokus. Wählen Sie im Kontextmenü **Verschieben** oder **Größe ändern**.   
  ![](images/dev_home_6.png)  
 <a id="ID4EEG"></a>
 
@@ -110,7 +110,7 @@ Dev Home kann angepasst und personalisiert werden. Sie können konfigurieren die
 ### <a name="changing-theme-color-and-background-image"></a>Ändern der Designfarbe und des Hintergrundbilds  
    
   
-Im Hauptmenü können Sie **im Arbeitsbereich "** und dann **Designfarbe ändern**auswählen. Wählen Sie eine neue Farbe, und wählen Sie **Speichern** , um die Designfarbe zum Hervorheben des Fokus zu aktualisieren.   
+Im Hauptmenü können Sie den **Arbeitsbereich** , und klicken Sie dann **Designfarbe ändern**auswählen. Wählen Sie eine neue Farbe, und wählen Sie die **zu speichern** , um die Designfarbe zum Hervorheben des Fokus zu aktualisieren.   
  ![](images/dev_home_7.png)  
 <a id="ID4EVG"></a>
 
@@ -119,7 +119,7 @@ Im Hauptmenü können Sie **im Arbeitsbereich "** und dann **Designfarbe ändern
 ### <a name="setting-the-default-application-for-a-package"></a>Festlegen der Standard-Anwendungs für ein Paket  
    
   
-Enthält ein Paket mehrere Anwendungen, können Dev Home Sie festlegen, die standardanwendung gestartet werden. Markieren Sie das Paket in das Startprogramm, und drücken Sie die **A** -Taste, um die Liste der verfügbaren Anwendungen zu öffnen. Markieren Sie das Konto, die, das Sie als Standard festlegen und drücken die **Ansicht** -Taste, und wählen Sie dann im Kontextmenü die Option **als Standard festlegen** möchten.   
+Wenn ein Paket mehrere Anwendungen enthält, können Dev Home Sie festlegen, die standardanwendung. Markieren Sie das Paket in-Start, und drücken Sie die **A** -Taste, um die Liste der verfügbaren Anwendungen zu öffnen. Markieren Sie das Konto ein, die, das Sie als Standardeinstellung festlegen und drücken die **Ansicht** -Taste, und wählen Sie dann im Kontextmenü die Option **als Standard festlegen** möchten.   
  ![](images/dev_home_setdefault.png)  
 <a id="ID4EGH"></a>
 
@@ -131,13 +131,13 @@ Enthält ein Paket mehrere Anwendungen, können Dev Home Sie festlegen, die stan
 Aus dem Launcher, am unteren Rand der installierten apps und Spieleliste können Sie die Option **Registrieren Sie ein Spiel von einer Netzwerkfreigabe** für die Remoteausführung einer registrieren loser Dateiversion eines Titels auswählen.   
  ![](images/dev_home_8.png)   
   
-Sie können den Netzwerkpfad dann in die Datei "appxmanifest.xml" für den Titel eingeben, die Sie registrieren möchten. Dev Home wird versucht, den Titel mit anderen vorhandenen Anmeldeinformationen für diese Freigabe registrieren und, wenn für neue Netzwerkanmeldeinformationen fordert erforderlich. Wenn Sie zusätzliche Freigaben (z. B. auf Ressourcen zugreifen, die symbolisch verknüpft auf einem anderen Server) zugreifen müssen, müssen Sie diese über die Option unterhalb hinzufügen.   
+Sie können auf die Datei "appxmanifest.xml" für den Titel den Netzwerkpfad geben, die Sie registrieren möchten. Dev Home versucht, den Titel mit anderen vorhandenen Anmeldeinformationen für diese Freigabe registrieren und, wenn erforderlich für neue Netzwerkanmeldeinformationen fordert. Wenn Sie zusätzliche Freigaben (z. B. um auf einem anderen Server auf Ressourcen zuzugreifen, die symbolisch verknüpft) zugreifen müssen, müssen Sie diese über die folgenden Option hinzufügen.   
    
   
-Sie können diese gespeicherten Anmeldeinformationen verwalten (und zusätzliche hinzufügen) auf der Konsole über das Hauptmenü **Verwalten der Netzwerkanmeldeinformationen** Option.   
+Sie können diese gespeicherten Anmeldeinformationen verwalten (und Hinzufügen von weiteren) auf der Konsole über das Hauptmenü **Verwalten der Netzwerkanmeldeinformationen** Option.   
  ![](images/dev_home_9.png)   
   
-Die Anmeldeinformationen derzeit auf der Konsole anzeigen können, Anmeldeinformationen bearbeiten, indem Sie den Pfad der Anmeldeinformationen auswählen und **eine** Schaltfläche und Entfernen von Anmeldeinformationen den Link entfernen und auf **eine** Schaltfläche klicken.   
+Die Anmeldeinformationen derzeit auf der Konsole anzeigen, bearbeiten Anmeldeinformationen, indem Sie den Pfad der Anmeldeinformationen auswählen und auf **eine** Schaltfläche klicken, und Entfernen von Anmeldeinformationen den Link entfernen und durch Klicken auf **eine** Schaltfläche.   
    
 <a id="ID4EGAAC"></a>
 
@@ -166,7 +166,7 @@ Die Anmeldeinformationen derzeit auf der Konsole anzeigen können, Anmeldeinform
 [Aufzeichnen von Medien Seite (Dev Home)](devhome-capture.md)  
 
 
-&nbsp;&nbsp;Der Seite " **medienerfassung** " der Dev Home nimmt Video des Titels, die derzeit auf der Konsole ausgeführt wird. 
+&nbsp;&nbsp;Die Seite **für die medienaufnahme** von Dev Home erfasst Video des Titels, die derzeit auf der Konsole ausgeführt wird. 
   
   
 [Netzwerkseite (Dev Home)](devhome-networking.md)  
@@ -178,5 +178,5 @@ Die Anmeldeinformationen derzeit auf der Konsole anzeigen können, Anmeldeinform
 [Seite "Performance" (Dev Home)](devhome-performance.md)  
 
 
-&nbsp;&nbsp;Verschiedene Festplatten-Aktivität und CPU-Auslastung Bedingungen für die Problembehandlung simuliert. 
+&nbsp;&nbsp;Verschiedene Festplatten-Aktivität und CPU-Nutzung Bedingungen für die Problembehandlung simuliert. 
  

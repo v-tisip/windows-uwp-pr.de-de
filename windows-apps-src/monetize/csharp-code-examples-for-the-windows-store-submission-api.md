@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Codebeispiele, C#
 ms.localizationpriority: medium
 ms.openlocfilehash: 27325938ef159dfcb29de174064314ee21d3a3f5
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8731442"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8872063"
 ---
 # <a name="c-sample-submissions-for-apps-add-ons-and-flights"></a>C\#-Beispiel: Übermittlungen für Apps, Add-Ons und Flights
 
@@ -36,7 +36,7 @@ Für diese Beispiele werden die folgenden Bibliotheken verwendet:
 Mit dem folgenden Beispiel wird ein Befehlszeilenprogramm implementiert, das die anderen Beispielmethoden in diesem Artikel aufruft, um die verschiedenen Verwendungsmethoden der Microsoft Store-Übermittlungs-API aufzuzeigen. So passen Sie dieses Programm für eigene Zwecke an:
 
 * Weisen Sie die Eigenschaften ```ApplicationId```, ```InAppProductId``` und ```FlightId``` der ID der App, des Add-Ons und des Flight-Pakets zu, die bzw. das Sie verwalten möchten.
-* Weisen Sie die Eigenschaften ```ClientId``` und ```ClientSecret``` der Client-ID und dem Schlüssel für Ihre App zu, und ersetzen Sie die *tenantid*-Zeichenfolge in der ```TokenEndpoint```-URL durch die Mandanten-ID für Ihre App. Weitere Informationen finden Sie unter [Zuordnen einer Azure AD-Anwendung mit Ihrem Partner Center-Konto](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
+* Weisen Sie die Eigenschaften ```ClientId``` und ```ClientSecret``` der Client-ID und dem Schlüssel für Ihre App zu, und ersetzen Sie die *tenantid*-Zeichenfolge in der ```TokenEndpoint```-URL durch die Mandanten-ID für Ihre App. Weitere Informationen finden Sie [eine Azure AD-Anwendung mit Ihrem Partner Center-Konto zuordnen](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/Program.cs#Main)]
@@ -60,7 +60,7 @@ Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der Mic
 2. Als Nächstes [löscht sie die ausstehende Übermittlung für die App](delete-an-app-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für die App erstellt](create-an-app-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
 4. Es werden einige Details für die neue Übermittlung geändert und ein neues Paket für die Übermittlung zu Azure Blob Storage hochgeladen.
-5. Als Nächstes wird es [Updates](update-an-app-submission.md) und anschließend auf die neue Übermittlung für das Partner Center [committet](commit-an-app-submission.md) .
+5. Als Nächstes wird es [Updates](update-an-app-submission.md) und [sendet](commit-an-app-submission.md) die neue Übermittlung für das Partner Center.
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-an-app-submission.md), bis die Übermittlung erfolgreich gesendet wurde.
 
 > [!div class="tabbedCodeSnippets"]
@@ -90,7 +90,7 @@ Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der Mic
 1. Zunächst [ruft die Methode Daten für das angegebene Add-On ab](get-an-add-on.md).
 2. Als Nächstes [wird eine ausstehende Übermittlung für das Add-On gelöscht](delete-an-add-on-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für das Add-On erstellt](create-an-add-on-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
-5. Als Nächstes wird es [Updates](update-an-add-on-submission.md) und anschließend auf die neue Übermittlung für das Partner Center [committet](commit-an-add-on-submission.md) .
+5. Als Nächstes wird es [Updates](update-an-add-on-submission.md) und [sendet](commit-an-add-on-submission.md) die neue Übermittlung für das Partner Center.
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-an-add-on-submission.md), bis die Übermittlung erfolgreich gesendet wurde.
 
 > [!div class="tabbedCodeSnippets"]
@@ -106,7 +106,7 @@ Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der Mic
 2. Als Nächstes [wird eine ausstehende Übermittlung für das Flight-Paket gelöscht](delete-a-flight-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für das Flight-Paket erstellt](create-a-flight-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
 4. Es wird ein neues Paket für die Übermittlung an Azure Blob Storage hochgeladen.
-5. Als Nächstes wird es [Updates](update-a-flight-submission.md) und anschließend auf die neue Übermittlung für das Partner Center [committet](commit-a-flight-submission.md) .
+5. Als Nächstes wird es [Updates](update-a-flight-submission.md) und [sendet](commit-a-flight-submission.md) die neue Übermittlung für das Partner Center.
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-a-flight-submission.md), bis die Übermittlung erfolgreich committet wurde.
 
 > [!div class="tabbedCodeSnippets"]

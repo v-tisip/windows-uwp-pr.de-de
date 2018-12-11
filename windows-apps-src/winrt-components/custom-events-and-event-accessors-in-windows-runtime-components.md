@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b8c4777e1c34bca36200bf6e8a96c35d6a0b1079
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8751495"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8826864"
 ---
 # <a name="custom-events-and-event-accessors-in-windows-runtime-components"></a>Benutzerdefinierte Ereignisse und Ereignisaccessoren in Komponenten für Windows-Runtime
 
@@ -99,7 +99,7 @@ Der folgende Code für das Ereignis „NumberChanged” zeigt das grundlegende M
 
 Die statische („Shared” in Visual Basic) Methode „GetOrCreateEventRegistrationTokenTable” erstellt die Instanz des Ereignisses des EventRegistrationTokenTable&lt;T&gt;-Objekts verzögert. Übergeben Sie das Feld auf Klassenebene, das die Tokentabelleninstanz enthalten soll, an diese Methode. Wenn das Feld leer ist, erstellt die Methode die Tabelle, speichert einen Verweis auf die Tabelle in dem Feld und gibt einen Verweis auf die Tabelle zurück. Wenn das Feld bereits einen Verweis auf die Tokentabelle enthält, gibt die Methode einfach diesen Verweis zurück.
 
-> **Wichtige**Threadsicherheit Feld sichergestellt werden, die das Ereignis Instanz des EventRegistrationTokenTable enthält&lt;T&gt; muss ein Feld auf Klassenebene sein. Wenn dies ein Feld auf Klassenebene ist, stellt die Methode „GetOrCreateEventRegistrationTokenTable” sicher, dass alle Threads dieselbe Instanz der Tabelle abrufen, wenn mehrere Threads versuchen, die Tokentabelle zu erstellen. Für ein bestimmtes Ereignis müssen alle Aufrufe der Methode „GetOrCreateEventRegistrationTokenTable” dasselbe Feld auf Klassenebene verwenden.
+> **Wichtige**um sicherzustellen, dass Threadsicherheit, das Feld, das das Ereignis Instanz des EventRegistrationTokenTable enthält&lt;T&gt; muss ein Feld auf Klassenebene sein. Wenn dies ein Feld auf Klassenebene ist, stellt die Methode „GetOrCreateEventRegistrationTokenTable” sicher, dass alle Threads dieselbe Instanz der Tabelle abrufen, wenn mehrere Threads versuchen, die Tokentabelle zu erstellen. Für ein bestimmtes Ereignis müssen alle Aufrufe der Methode „GetOrCreateEventRegistrationTokenTable” dasselbe Feld auf Klassenebene verwenden.
 
 Durch Aufrufen der Methode „GetOrCreateEventRegistrationTokenTable” im Remove-Accessor und in der Methode [RaiseEvent](https://msdn.microsoft.com/library/fwd3bwed.aspx) („OnRaiseEvent”-Methode in C#) wird sichergestellt, dass keine Ausnahmen ausgelöst werden, wenn diese Methoden aufgerufen werden, bevor Ereignishandlerdelegaten hinzugefügt wurden.
 
@@ -112,7 +112,7 @@ Zu den anderen Membern der EventRegistrationTokenTable&lt;T&gt;-Klasse, die im U
 
 -   Die [InvocationList](https://msdn.microsoft.com/library/hh138465.aspx)-Eigenschaft gibt einen Delegaten zurück, der alle Ereignishandler enthält, die derzeit zum Behandeln des Ereignisses registriert sind. Verwenden Sie diesen Delegaten zum Auslösen des Ereignisses, oder verwenden Sie die Methoden der Delegate-Klasse, um die Handler einzeln aufzurufen.
 
-    >**Hinweis:** es wird empfohlen, dass Sie dem Muster folgen, in dem Beispiel oben in diesem Artikel gezeigt, und den Delegaten in eine temporäre Variable kopieren, bevor Sie ihn aufrufen. Dadurch wird eine Racebedingung verhindert, in der ein Thread den letzten Ereignishandler entfernt, indem der Delegat auf null festlegt wird, kurz bevor ein anderer Thread versucht, den Delegaten aufzurufen. Delegaten sind unveränderlich, sodass die Kopie weiterhin gültig ist.
+    >**Hinweis:** es wird empfohlen, dass Sie dem Muster folgen, in dem Beispiel oben in diesem Artikel angezeigt, und den Delegaten in eine temporäre Variable kopieren, bevor Sie ihn aufrufen. Dadurch wird eine Racebedingung verhindert, in der ein Thread den letzten Ereignishandler entfernt, indem der Delegat auf null festlegt wird, kurz bevor ein anderer Thread versucht, den Delegaten aufzurufen. Delegaten sind unveränderlich, sodass die Kopie weiterhin gültig ist.
 
 Nehmen Sie eigenen Code nach Bedarf in die Accessoren auf. Wenn Threadsicherheit wichtig ist, müssen Sie eigene Sperren für Ihren Code vorsehen.
 

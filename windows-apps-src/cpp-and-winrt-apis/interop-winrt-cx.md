@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, portieren, migrieren, interoperabilität, C++/CX
 ms.localizationpriority: medium
 ms.openlocfilehash: 71cc7a24be7afd7a6221e8e474161b453b5ee19a
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8791558"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8827585"
 ---
 # <a name="interop-between-cwinrt-and-ccx"></a>Interoperabilität zwischen C++/WinRT und C++/CX
 

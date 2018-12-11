@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Touch, Steuerelemente, Directx, Eingabe
 ms.localizationpriority: medium
 ms.openlocfilehash: e8892219b485d320bb77f90ac0d172e8e2403392
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8738421"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8825230"
 ---
 # <a name="touch-controls-for-games"></a>Toucheingabesteuerelemente für Spiele
 
@@ -21,7 +21,7 @@ Hier erfahren Sie, wie Sie Ihrem C++-Spiel für die universelle Windows-Plattfor
 
 Sie können diese Steuerungen in Spiele integrieren, bei denen der Spieler in einer 3D-Umgebung (z.B. einer Karte oder einem Spielfeld) einen Bildlauf ausführen oder die Ansicht schwenken soll. Bei einem Strategie- oder Puzzlespiel kann der Spieler mit diesen Steuerungen z.B. durch Schwenken nach links oder rechts eine Spielumgebung anzeigen, die größer als der Bildschirm ist.
 
-> **Hinweis:** unser Code eignet sich auch schwenksteuerungen mausbasierte. Die zeigerbezogenen Ereignisse werden von den Windows-Runtime-APIs abstrahiert, sodass sie toucheingabe- oder mausbasierte Zeigerereignisse behandeln können.
+> **Hinweis:** unser Code kann auch mit der Maus-basierte Steuerelemente von verschieben. Die zeigerbezogenen Ereignisse werden von den Windows-Runtime-APIs abstrahiert, sodass sie toucheingabe- oder mausbasierte Zeigerereignisse behandeln können.
 
  
 
