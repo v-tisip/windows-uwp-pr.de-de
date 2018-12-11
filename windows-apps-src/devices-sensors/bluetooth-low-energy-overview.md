@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Bluetooth, Bluetooth LE, low Energy, Gatt, Lücke, zentralen, Peripheriegerät, Client, Server, Überwachung, publisher
 ms.localizationpriority: medium
 ms.openlocfilehash: ecc78bd4bb079adbaaa58c981ce55457c522764b
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8798147"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8892567"
 ---
 # <a name="bluetooth-low-energy"></a>Bluetooth Low Energy
 Bluetooth Low Energy (LE) ist eine Spezifikation, die Protokolle zur Ermittlung und die Kommunikation zwischen energieeffizienten Geräten definiert. Erkennung von Geräten erfolgt über das generische Zugriff Profil (Abstand)-Protokoll. Nach der Erkennung erfolgt Gerät-Kommunikation über das Generic Attribut (GATT)-Protokoll. Dieses Thema enthält eine kurze Übersicht über Bluetooth LE in UWP-apps. Weitere Details zu Bluetooth LE finden Sie unter den [Bluetooth-Core-Spezifikation](https://www.bluetooth.com/specifications/bluetooth-core-specification) Version 4.0, bei dem Bluetooth LE eingeführt wurde. 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Videos, GDC, build
 ms.localizationpriority: medium
 ms.openlocfilehash: de04b0b272bbc6889c5fb9b13e5487902a77e98c
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8750168"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8892727"
 ---
 # <a name="game-development-videos"></a>Videos zur Spieleentwicklung
 
@@ -23,18 +23,18 @@ Dies ist eine Liste von Videos zur Spieleentwicklung von wichtigen Konferenzen w
 
 Was ist LiveOps? Hier erfahren Sie, warum Entwickler live-Spiele erstellen: [Ihr Spiel für alle Benutzer mit PlayFab (Interview)](https://channel9.msdn.com/Shows/Level-Up/Your-Game-For-Everyone-with-PlayFab) - James Gwertzman, David Holladay
 
-* [Kleine Fee Lean Ansatz für die Entwicklung von Spielen - wie eine von Indie Studio Treffer Spiel nach nur 8 Wochen vergrößert wurde](https://channel9.msdn.com/Shows/Level-Up/Fluffy-Fairys-Lean-Approach-to-Game-Development-How-an-Indie-Studio-Grew-a-Hit-Game-After-Only-8-W) - Oliver Löffler aus kleine Fee
+* [Kleine Fee Lean Ansatz für die Entwicklung von Spielen - wie eine von Indie Studio Treffer Spiel nach nur 8 Wochen vergrößert wurde](https://channel9.msdn.com/Shows/Level-Up/Fluffy-Fairys-Lean-Approach-to-Game-Development-How-an-Indie-Studio-Grew-a-Hit-Game-After-Only-8-W) - Oliver Löffler von kleine Fee
 * [Tag 1: Ihr Spiel überall](https://channel9.msdn.com/Shows/Level-Up/Your-game-everywhere-PlayFab) -Brendan Vanous
 * [Tag 2: Ihr Spiel für alle Benutzer mit PlayFab (Präsentation)](https://channel9.msdn.com/Shows/Level-Up/Your-Game-For-Everyone-With-PlayFab-Theater-Presentation) -Brendan Vanous
 * [Tag 3: Ihr Spiel, es wiedergegeben wird, genau](https://channel9.msdn.com/Shows/Level-Up/Your-game-every-way-its-played-PlayFab-Theater-Presentation) -Brendan Vanous
 
-### <a name="azure-cloud-services"></a>Azure Cloud services
+### <a name="azure-cloud-services"></a>Azure-Cloud-Dienste
 
-* [Wie The Walking Dead No Man's Land Spiel erstellt wurde, Skalierung auf Azure](https://channel9.msdn.com/Shows/Level-Up/How-The-Walking-Dead-No-Mans-Land-was-built-to-scale-on-Azure-Theater-Presentation) -Kalle Hiitola von Next Games
-* [Azure Cosmos DB: umfassenden Überblick über](https://channel9.msdn.com/Shows/Level-Up/Azure-Cosmos-DB-Comprehensive-Overview) -Aleksey Savateyev
+* [Wie die Walking Dead No Man's Land Spiel erstellt wurde, Skalierung auf Azure](https://channel9.msdn.com/Shows/Level-Up/How-The-Walking-Dead-No-Mans-Land-was-built-to-scale-on-Azure-Theater-Presentation) -Kalle Hiitola von Next Games
+* [Azure Cosmos DB: umfassende Übersicht über die](https://channel9.msdn.com/Shows/Level-Up/Azure-Cosmos-DB-Comprehensive-Overview) -Aleksey Savateyev
 * [Container, Cluster und der Cloud für Spiele](https://channel9.msdn.com/Shows/Level-Up/Containers-Clusters-and-the-Cloud-for-Gaming-Theater-Presentation-1) - Hans Trott
 * [Rendern in Azure](https://channel9.msdn.com/Shows/Level-Up/Rendering-in-Azure-Theater-Presentation) - John Thuotte
-* [Ausführen in einem Hyper-V](https://channel9.msdn.com/Shows/Level-Up/Running-on-a-Hypervisor-Theater-Presentation) - Andrew Farrier
+* [Ausführen in Hyper-V](https://channel9.msdn.com/Shows/Level-Up/Running-on-a-Hypervisor-Theater-Presentation) - Andrew Farrier
 
 ### <a name="xbox-live-creators-program"></a>Xbox Live Creators-Programm
 
@@ -46,13 +46,13 @@ Was ist LiveOps? Hier erfahren Sie, warum Entwickler live-Spiele erstellen: [Ihr
 
 ### <a name="visual-studio-team-services-vsts-and-app-center"></a>Visual Studio Team Services (VSTS) und App-Center
 
-Was ist VSTS? Hier erfahren Sie, wie in der Buildprozess DevOps implementiert: [Einführung in Visual Studio Team Services](https://channel9.msdn.com/Shows/Level-Up/Introduction-to-Visual-Studio-Team-Services) - Dmitry Lyalin, James Montemagno
+Was ist VSTS? Erfahren Sie, wie DevOps in den Build-Prozess zu implementieren: [Einführung in Visual Studio Team Services](https://channel9.msdn.com/Shows/Level-Up/Introduction-to-Visual-Studio-Team-Services) - Dmitry Lyalin, James Montemagno
 
-* [Planung und Erstellen von Spielen über die Leistungsfähigkeit von VSTS: agil, CI & CD-End-to-End-Demo](https://channel9.msdn.com/Shows/Level-Up/Planning-and-building-games-using-the-full-power-of-VSTS-Agile-CI--CD-end-to-end-demo) -Rogan Ferguson
+* [Planung und Erstellen von Spielen mit leistungsfähige VSTS: agil, CI & CD-End-to-End-Demo](https://channel9.msdn.com/Shows/Level-Up/Planning-and-building-games-using-the-full-power-of-VSTS-Agile-CI--CD-end-to-end-demo) -Rogan Ferguson
 * [Erstellen von Ihrem nächsten Spiel von Visual Studio Team Services und Unity-Teams Cloud-Build unterstützt](https://channel9.msdn.com/Shows/Level-Up/Build-your-next-game-powered-by-Visual-Studio-Team-Services-and-Unity-Teams-cloud-build-Theater) - Dmitry Lyalin
 * [Kontinuierlich testen, verteilen und überwachen Sie Ihr Spiel mit dem App-Sicherheitscenter](https://channel9.msdn.com/Shows/Level-Up/Continuously-Test-distribute-and-monitor-your-game-with-App-Center-Theater-Presentation) - Whitepaper James
 * [Setup der CI-CD-pipeline für Node.js, Python, .NET, Go, Ruby, oder Java - Minuten](https://channel9.msdn.com/Shows/Level-Up/Setup-your-CICD-pipeline-for-Nodejs-Python-NET-Go-Ruby-or-Java-in-Minutes) - Abel Wang
-* [Agile Tools mit VSTS](https://channel9.msdn.com/Shows/Level-Up/Agile-tooling-set-with-VSTS) - Rogan Ferguson, James Montemagno
+* [Agile Tools Satz mit VSTS](https://channel9.msdn.com/Shows/Level-Up/Agile-tooling-set-with-VSTS) - Rogan Ferguson, James Montemagno
 
 ### <a name="git"></a>Git
 
@@ -67,47 +67,47 @@ Neu bei Verwaltungssysteme Version? Einführung in Git und Git virtuellen Dateis
 
 ### <a name="game-development-experiences"></a>Entwicklung von Spielen Umgebungen
 
-* [Photogrammetry und Scannen in Forza Motorsport 7 Laser](https://channel9.msdn.com/Shows/Level-Up/Photogrammetry-and-Laser-Scanning-in-Forza-Motorsport-7-Theater-Presentation-1) - Travis Gosnell
-* [Gebäude Astroneer: neue Diagramm und schwierige Kurse](https://channel9.msdn.com/Shows/Level-Up/Building-Astroneer-Charting-new-and-challenging-courses) -Brendan Wilson
+* [Photogrammetry und Überprüfung in Forza Motorsport 7 Laser](https://channel9.msdn.com/Shows/Level-Up/Photogrammetry-and-Laser-Scanning-in-Forza-Motorsport-7-Theater-Presentation-1) - Travis Gosnell
+* [Erstellen Astroneer: neue Diagramm und eine Herausforderung Kurse](https://channel9.msdn.com/Shows/Level-Up/Building-Astroneer-Charting-new-and-challenging-courses) -Brendan Wilson
 
 ### <a name="microsoft-store"></a>Microsoft Store
 
 * [Microsoft Store: wie Xbox One und Windows 10-Benutzer erreichen](https://channel9.msdn.com/Shows/Level-Up/Microsoft-Store-How-You-Can-Reach-Xbox-One-and-Windows-10-users) -anderem Zamora
-* [Warum Candy Crush unter Windows 10 und im Microsoft Store](https://channel9.msdn.com/Shows/Level-Up/Why-Candy-Crush-on-Windows-10-and-in-Microsoft-Store) - Alex von Roth von King
+* [Warum Candy Crush, unter Windows 10 und im Microsoft Store](https://channel9.msdn.com/Shows/Level-Up/Why-Candy-Crush-on-Windows-10-and-in-Microsoft-Store) - Alex von Roth von King
 
 ### <a name="mixed-reality"></a>Mixed Reality
 
-* [Erstellen von Windows MR-Apps mit Unity](https://channel9.msdn.com/Shows/Level-Up/Building-Windows-MR-Apps-with-Unity) - Jaime Lino
-* [Die AR-Cloud: Warum die Zukunft von MR kein Gerät ist, ist es alle](https://channel9.msdn.com/Shows/Level-Up/The-AR-Cloud-Why-the-future-of-MR-is-not-a-device-itsall-of-them) -Jesse McCulloch
+* [Erstellen von Windows-MR-Apps mit Unity](https://channel9.msdn.com/Shows/Level-Up/Building-Windows-MR-Apps-with-Unity) - Jaime Lino
+* [Die AR-Cloud: Warum die Zukunft von MR kein Gerät ist, wird Sie alle](https://channel9.msdn.com/Shows/Level-Up/The-AR-Cloud-Why-the-future-of-MR-is-not-a-device-itsall-of-them) -Jesse McCulloch
 
 ## <a name="game-accessibility-conference-2018"></a>Barrierefreiheit von Spielen Konferenz 2018
 
-* [Suchen hell. 2017 des Spiels Eingabehilfen setzt](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Looking-Bright-2017s-Game-Accessibility-Advances) - Ian Hamilton Eingabehilfen Branche Experten
+* [Suchen hell. 2017 des Spiels Eingabehilfen setzt](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Looking-Bright-2017s-Game-Accessibility-Advances) - Ian Hamilton, Eingabehilfen Industry Experten
 * [Die CVAA und welche Bedeutung für Spiele Zugriff](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-The-CVAA-and-What-it-Means-for-Gaming-Access) -Karen Petlz Strauss aus der Federal Communications Commission
-* [Ich habe mein Spiel Blind zugegriffen werden kann Sie nicht glauben, was als Nächstes passiert ist …](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-I-Made-My-Game-Blind-Accessible--You-Wont-Believe-What-Happened-Next) -Michelle Martin von MetalPop spielen
-* [Kognitive Eingabehilfen Designmöglichkeiten und Musik Bildungseinrichtungen für Autism](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Cognitive-Accessibility-Design-Choices-and-Music-Education-for-Autism) - Lori Landay aus der Berklee Ausbildung von Musik
+* [Ich habe meine Spiels Blind zugegriffen werden kann Sie nicht als Nächstes geschehen glauben …](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-I-Made-My-Game-Blind-Accessible--You-Wont-Believe-What-Happened-Next) -Michelle Martin von MetalPop spielen
+* [Kognitive Eingabehilfen Design Auswahlmöglichkeiten und Musik Education für Autism](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Cognitive-Accessibility-Design-Choices-and-Music-Education-for-Autism) - Lori Landay aus der Berklee Ausbildung Musik
 * [Ramping Eingabehilfen](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Ramping-Up-Accessibility) - Karen Stevens von EA Sport
-* [Moderne Barrierefreiheit von Spielen. Ändern Unterstützung zur Projektmappe](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Modern-Game-Accessibility-Changing-Sympathy-to-Solution) -Kevin Keeker aus Playstation und Sam Thompson von Sony World Wide Studios
-* [Wiedergabe Mainstream Videospiele ohne erster](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Playing-Mainstream-Video-Games-Without-Sight) - SightlessKombat, Eingabehilfen tun
+* [Moderne Barrierefreiheit von Spielen. Ändern Unterstützung Projektmappe](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Modern-Game-Accessibility-Changing-Sympathy-to-Solution) -Kevin Keeker von Playstation und Sam Thompson von Sony World Wide Studios
+* [Standard-Videospiele ohne Anzeige wiedergegeben](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Playing-Mainstream-Video-Games-Without-Sight) - SightlessKombat, Eingabehilfen tun
 * [Wie verbessert Community Zusammenarbeit Development](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-How-Community-Collaboration-Improves-Development) - Jason Canam von Haushalten spielen
-* [Wie Live Streaming sorgt dafür, nächste Ebene Aufnahme dass](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Beyond-Gaming-How-Live-Streaming-Brings-Next-Level-Inclusion) -Tara Voelker von Mixer
-* [Alle Gehörlose Spieler möchten, führen Sie haben einige Spaß macht](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-All-Deaf-Gamers-Wanna-Do-is-Have-Some-Fun) - Lautsprecher: Chris Robinson und Kristen Piersa, Eingabehilfen ist. Michael Anthony von Microsoft
+* [Wie Live-Streaming sorgt dafür, weiter Ebene Aufnahme dass](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Beyond-Gaming-How-Live-Streaming-Brings-Next-Level-Inclusion) -Tara Voelker von Mixer
+* [Alle Gehörlose Spieler möchten haben einige Spaß macht](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-All-Deaf-Gamers-Wanna-Do-is-Have-Some-Fun) - Lautsprecher: Chris Robinson und Kristen Piersa, Eingabehilfen ist. Michael Anthony von Microsoft
 * [Ein starken Liebe Buchstaben der Branche Spiele](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-A-Fraught-Love-Letter-to-the-Games-Industry) - Kirsche Thompson Eingabehilfen tun
-* [Barrierefreie Spiele Verlauf](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Accessible-Gaming-History) - Barrie Ellis von OneSwitch und Special Effect
+* [Verlauf für barrierefreie Spiele](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Accessible-Gaming-History) - Barrie Ellis von OneSwitch und Special Effect
 
-## <a name="build-2017-videos"></a>Build 2017 videos
+## <a name="build-2017-videos"></a>Build 2017-videos
 
-* [Verbessern von HDR und erweiterte Farbe in DirectX](https://channel9.msdn.com/Events/Build/2017/P4061) – Simon Tao
+* [Verbessern von HDR und erweiterte Farbe in DirectX](https://channel9.msdn.com/Events/Build/2017/P4061) - Simon Tao
 
 ## <a name="gdc-2017-game-dev-session-videos"></a>Videos zu GDC2017-Spieleentwicklersitzungen
 
 * [Vorstellung neuer Möglichkeiten für Spieleentwickler mit Xbox und Windows](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-001) – Chris Charla
 * [Einführung in die räumliche Audiowiedergabe Funktionen für Xbox oder Windows](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-002) - Scott Selfon
 * [D3D12-Leistung Leistungsoptimierung und-Debuggen mit PIX und GPUValidation](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-003) – Shawn Hargreaves, Max McMullen
-* [Spielmodus und der Entwicklung der plattformübergreifenden UWP GameDevelopment](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-004) – Erik Walston
-* [Xbox Live für AllGame](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-005) - Brian Tyler
-* [Erfüllen der zusammengeführten Microsoft Store für Windows-AndXbox](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-006) - Krupa Poobala-Chandran
-* [Windows Holographic Rendering: One SDK to Target VR and AREcosystems](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-008) - Alex Pfaffe, Alex Turner
+* [Spielmodus und die Weiterentwicklung der plattformübergreifenden UWP GameDevelopment](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-004) – Erik Walston
+* [Xbox Live für AllGame](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-005) – Brian Tyler
+* [Erfüllen Sie die zusammengeführten Microsoft Store für Windows-AndXbox](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-006) - Krupa Poobala-Chandran
+* [Hologrammen: ein SDK für VR- und AREcosystems](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-008) – Alex Pfaffe, Alex Tuner
 * [Erreichen mehr Spielern über Xbox-Eingabehilfen auf Xbox One AndPC](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-009) – Evelyn Thomas
 
 ## <a name="gdc-2015-game-dev-session-videos"></a>Videos zu GDC2015-Spieleentwicklersitzungen
