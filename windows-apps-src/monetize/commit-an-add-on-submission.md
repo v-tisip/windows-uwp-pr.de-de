@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Übernehmen einer Add-On-Übermittlung, In-App-Produkt, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: efab4412486566ae817eb66e78f5407533a30d5b
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8806692"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8872381"
 ---
 # <a name="commit-an-add-on-submission"></a><span data-ttu-id="46685-104">Ausführen eines Commit für eine Add-On-Übermittlung</span><span class="sxs-lookup"><span data-stu-id="46685-104">Commit an add-on submission</span></span>
 

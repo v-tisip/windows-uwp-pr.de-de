@@ -7,11 +7,11 @@ keywords: Windows10, UWP
 ms.assetid: ff10bbc0-03a7-492c-b5fe-c5b9ce8ca32e
 ms.localizationpriority: medium
 ms.openlocfilehash: e9eafde0596ad3156f52a7a2f0a1566444a9836a
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8785567"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8873513"
 ---
 # <a name="bluetooth-le-advertisements"></a><span data-ttu-id="32f74-104">Bluetooth LE-Ankündigungen</span><span class="sxs-lookup"><span data-stu-id="32f74-104">Bluetooth LE Advertisements</span></span>
 

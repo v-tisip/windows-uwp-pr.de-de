@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6178e2072721ad8514ba7ddfc0ae8f99ab59d34c
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8808805"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8872499"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping"></a><span data-ttu-id="6e930-105">XAML-Namespaces und Namespacezuordnung</span><span class="sxs-lookup"><span data-stu-id="6e930-105">XAML namespaces and namespace mapping</span></span>
 

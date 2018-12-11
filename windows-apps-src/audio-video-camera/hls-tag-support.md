@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 7c6664d13e76a5774172094d632de9db25109fdc
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8799844"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8874932"
 ---
 # <a name="http-live-streaming-hls-tag-support"></a><span data-ttu-id="766a7-104">Unterstützung von HLS-Tags (HTTP Live Streaming)</span><span class="sxs-lookup"><span data-stu-id="766a7-104">HTTP Live Streaming (HLS) tag support</span></span>
 <span data-ttu-id="766a7-105">In der folgenden Tabelle sind die HLS-Tags aufgeführt, die für UWP-Apps unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="766a7-105">The following table lists the HLS tags that are supported for UWP apps.</span></span>

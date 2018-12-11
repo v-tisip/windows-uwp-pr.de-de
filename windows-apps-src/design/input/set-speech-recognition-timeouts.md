@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 73c7e889b4633dae9e416cf7ccde13eb3f58e8ee
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8788919"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8873215"
 ---
 # <a name="set-speech-recognition-timeouts"></a><span data-ttu-id="4d594-103">Festlegen von Timeouts für die Spracherkennung</span><span class="sxs-lookup"><span data-stu-id="4d594-103">Set speech recognition timeouts</span></span>
 

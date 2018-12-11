@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a87fe2bbff1768da43d6cb366b173077555270f
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8789624"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8854621"
 ---
 # <a name="tiles-badges-and-notifications-for-uwp-apps"></a><span data-ttu-id="77563-103">Kacheln, Signale und Benachrichtigungen für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="77563-103">Tiles, badges, and notifications for UWP apps</span></span>
  
