@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 87afe086ca28e27a39f5508a2bea5ea9fcb1c6a5
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8757577"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8888856"
 ---
 # <a name="control-patterns-and-interfaces"></a>Steuerelementmuster und Schnittstellen  
 
@@ -59,7 +59,7 @@ Beim Implementieren eines Steuerelementmusters sollten Sie auch die Dokumentatio
 | **Transform** | [**ITransformProvider**](https://msdn.microsoft.com/library/windows/apps/BR242656) | Wird für Steuerelemente verwendet, deren Größe geändert werden kann und die verschoben und gedreht werden können. Gewöhnlich wird das Steuerelementmuster für Transformation in Designern, Formen, Grafikeditoren und Zeichenanwendungen verwendet. |
 | **Value** | [**IValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242663) | Ermöglicht es Clients, einen Wert von Steuerelementen abzurufen, die keinen Wertebereich unterstützen, oder einen Wert dafür festzulegen. |
 | **VirtualizedItem** | [**IVirtualizedItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242668) | Macht Elemente in Containern verfügbar, die virtualisiert sind und vollständig als Benutzeroberflächenautomatisierungs-Elemente zur Verfügung stehen müssen. |
-| **Window** | [**IWindowProvider**](https://msdn.microsoft.com/library/windows/apps/BR242670) | Macht bestimmte Fenster spezifische Informationen ein grundlegendes Konzept des Microsoft Windows-Betriebssystems verfügbar. Beispiele für Steuerelemente als Fenster: untergeordnete Fenster und Dialogfelder. |
+| **Window** | [**IWindowProvider**](https://msdn.microsoft.com/library/windows/apps/BR242670) | Zeigt Informationen für Windows, es ein grundlegendes Konzept des Microsoft Windows-Betriebssystems. Beispiele für Steuerelemente als Fenster: untergeordnete Fenster und Dialogfelder. |
 
 > [!NOTE]
 > Implementierungen all dieser Muster sind in vorhandenen XAML-Steuerelementen nicht immer enthalten. Einige Muster verfügen nur über Schnittstellen, um die Parität mit der allgemeinen Benutzeroberflächenautomatierungs-Frameworkdefinition für Muster sowie Automatisierungspeerszenarien zu unterstützen, die für die Unterstützung dieses Musters eine rein benutzerdefinierte Implementierung benötigen.
