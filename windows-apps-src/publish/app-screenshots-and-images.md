@@ -7,21 +7,21 @@ ms.topic: article
 keywords: Windows10, UWP, Trailer, Video, Screenshot, Bild, Symbol, Store-Eintrag, Store-Eintragsbilder
 ms.localizationpriority: medium
 ms.openlocfilehash: 0019ded3b409acf0e6530bffa4ad73f85bfa8855
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8714080"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8878951"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>App-Screenshots, -Bilder und -Trailer
 
 Durch aussagekräftige Bilder kann die Aufmerksamkeit potentieller Kunden im Store auf Ihre App gelenkt werden.
 
-Sie können die [Bildschirmfotos](#screenshots), [Logos](#store-logos), [Trailer](#trailers)und andere Grafikobjekte hinzufügen in Store-Eintrag Ihrer app bereitstellen. Einige dieser Elemente sind erforderlich, während andere optional sind, (auch wenn einige der optionalen Bilder wichtig für die beste Anzeige im Store sind).
+Sie können die [Bildschirmfotos](#screenshots), [Logos](#store-logos), [Trailer](#trailers)und andere Grafikobjekte im Store-Eintrag Ihrer app enthalten sein bereitstellen. Einige dieser Elemente sind erforderlich, während andere optional sind, (auch wenn einige der optionalen Bilder wichtig für die beste Anzeige im Store sind).
 
 Während der [App-Übermittlung](app-submissions.md) geben Sie diese Grafikobjekte im Schritt [Store-Einträge](create-app-store-listings.md) an. Beachten Sie, dass es vom Betriebssystem des Kunden und weiteren Faktoren abhängt, wie Bilder im Store angezeigt werden.
 
-Der Store kann auch verwenden, dem Symbol Ihrer app und andere Bilder, die Sie in Ihrem app Paket einschließen. Führen Sie das [Zertifizierungskit für Windows-Apps](../debug-test-perf/windows-app-certification-kit.md) aus, um zu ermitteln, ob erforderliche Bilder fehlen, bevor Sie Ihre App übermitteln. Richtlinien und Empfehlungen zu diesen Bildern finden Sie in [App-Symbole und Logos](../design/style/app-icons-and-logos.md).
+Im Store können auch dem Symbol Ihrer app und andere Bilder, die Sie in Ihrem app Paket einschließen. Führen Sie das [Zertifizierungskit für Windows-Apps](../debug-test-perf/windows-app-certification-kit.md) aus, um zu ermitteln, ob erforderliche Bilder fehlen, bevor Sie Ihre App übermitteln. Anleitungen und Empfehlungen zu diesen Bildern finden Sie in der [App-Symbole und Logos](../design/style/app-icons-and-logos.md).
 
 ## <a name="screenshots"></a>Screenshots
 
@@ -52,7 +52,7 @@ Sie können auch eine Kurzbeschreibung von maximal 200Zeichen für die einzelnen
 > [!TIP]
 > Bildschirmfotos werden in Ihrem Eintrag der Reihenfolge nach angezeigt. Nachdem Sie Ihre Bildschirmfotos hochgeladen haben, können Sie sie ziehen und ablegen, um sie neu anzuordnen. 
 
-Hinweis: Wenn Sie Store-Einträge für [mehrere Sprachen](supported-languages.md) erstellen, erhalten Sie für jede Sprache eine Seite vom Typ **Store-Eintrag**. Sie müssen Bilder für jede Sprache separat hochladen (auch wenn Sie dieselben Bilder verwenden), einschließlich Beschriftungen, die für die einzelnen Sprachen verwendet werden. (Wenn Sie Store-Einträge in vielen Sprachen verfügen, können Sie diese aktualisieren, indem [Daten des Eintrags exportieren und offline arbeiten](import-and-export-store-listings.md)einfacher.)
+Hinweis: Wenn Sie Store-Einträge für [mehrere Sprachen](supported-languages.md) erstellen, erhalten Sie für jede Sprache eine Seite vom Typ **Store-Eintrag**. Sie müssen Bilder für jede Sprache separat hochladen (auch wenn Sie dieselben Bilder verwenden), einschließlich Beschriftungen, die für die einzelnen Sprachen verwendet werden. (Wenn Sie Store-Einträge in vielen Sprachen verfügen, können Sie diese aktualisieren, indem die [Daten des Eintrags exportieren und offline-](import-and-export-store-listings.md)einfacher.)
 
 
 ## <a name="store-logos"></a>Store-Logos
@@ -63,7 +63,7 @@ Sie können diese Bilder als PNG-Dateien (maximal 50MB) in drei Größen bereits
 
 ### <a name="916-poster-art-720-x-1080-or-1440-x-2160-pixels"></a>9:16 – Plakate (720x1080 oder 1440x2160 Pixel)
 
-Diese Größe wird als Logo in Store-Einträgen für Kunden unter Windows10 und auf Xbox-Geräten verwendet, daher wird **dringend empfohlen**, dieses Bild für die ordnungsgemäße Anzeige bereitzustellen. Ihr Angebot sieht möglicherweise nicht gut, wenn Sie nicht werden eingeschlossen, und nicht mit anderen angeboten, die Kunden beim Browsen im Store sehen übereinstimmen. Dieses Bild kann ebenfalls in den Suchergebnissen oder in speziell zusammengestellten Sammlungen verwendet werden.
+Diese Größe wird als Logo in Store-Einträgen für Kunden unter Windows10 und auf Xbox-Geräten verwendet, daher wird **dringend empfohlen**, dieses Bild für die ordnungsgemäße Anzeige bereitzustellen. Ihr Angebot sieht möglicherweise nicht gut, wenn Sie nicht werden eingeschlossen, und nicht mit anderen angeboten, die Kunden beim Browsen im Store angezeigt werden. Dieses Bild kann ebenfalls in den Suchergebnissen oder in speziell zusammengestellten Sammlungen verwendet werden.
 
 Dieses Bild sollte den Namen Ihrer App enthalten, und Text auf dem Bild sollte die Lesbarkeitsanforderungen (Kontrastverhältnis von 4,5:1) erfüllen. Beachten Sie, dass auf dem unteren Viertel des Bilds Textüberlagerungen angezeigt werden. Stellen Sie sicher, dass Sie dort keinen Text oder das Hauptbild einfügen.
 
@@ -79,15 +79,15 @@ Dieses Bild kann auf verschiedenen Store-Seiten für Windows10 angezeigt werden 
 
 ### <a name="11-app-tile-icon-300-x-300-pixels"></a>1:1 Symbol für App-Kachel (300 x 300 Pixel)
 
-Dieses Bild ist für die ordnungsgemäße Anzeige auf Windows Phone8.1 und früheren Versionen erforderlich. Wenn Ihre app zuvor veröffentlichten Windows Phone 8.1 oder frühere Versionen unterstützt und Sie dieses Bild nicht bereitstellen, sehen Kunden für den Eintrag Ihrer app ein leeres Symbol. (Dies gilt auch für Kunden unter Windows 10 hat Ihre app nur Pakete für Windows Phone 8.1 oder früher.)
+Dieses Bild ist für die ordnungsgemäße Anzeige auf Windows Phone8.1 und früheren Versionen erforderlich. Wenn Ihre app zuvor veröffentlichten unterstützt Windows Phone 8.1 oder früher, dieses Bild nicht bereitstellen, sehen Kunden für den Eintrag Ihrer app ein leeres Symbol. (Dies gilt auch für Kunden unter Windows 10, wenn Ihre app nur Pakete für Windows Phone 8.1 oder frühere Versionen verfügt.)
 
-Wenn Ihre Übermittlung *nur* UWP-Pakete enthält, müssen Sie dieses Bild bereitstellen (es sei denn, Sie das für das **Anzeigen von für Kunden unter Windows 10 und Xbox, uploaded Logo Images INSTEAD das Bild aus der meine Pakete**, aktivieren, wie in den nächsten beschrieben Abschnitt).
+Wenn Ihre Übermittlung *nur* UWP-Pakete enthält, müssen Sie dieses Bild bereitstellen (es sei denn, Sie das Kontrollkästchen für das **Anzeigen von uploaded Logo Images INSTEAD das Bild aus der meine Pakete für Kunden unter Windows 10 und Xbox**überprüfen, wie im nächsten Abschnitt Abschnitt).
 
-### <a name="display-only-uploaded-logo-images-in-the-store"></a>Anzeige hochgeladen nur Bilder im Store Logos
+### <a name="display-only-uploaded-logo-images-in-the-store"></a>Anzeige nur hochgeladen Logo Bilder im Store.
 
-Sie haben die Möglichkeit, verhindern, dass den Store die Logos in den Paketen Ihrer app zu verwenden, wenn Ihr Angebot für Kunden unter Windows 10 (einschließlich Xbox) angezeigt, und stattdessen der Store muss nur Bilder verwenden, die Sie hochladen. Dies bietet Ihnen mehr Kontrolle über die Darstellung Ihrer App in verschiedenen Anzeigen im Store für Kunden auf Windows 10 (einschließlich Xbox). (Wenn Ihre app zuvor veröffentlichten frühere Betriebssystemversionen unterstützt, können diese Kunden weiterhin Bilder aus Ihrer Pakete angezeigt.)
+Sie haben die Möglichkeit zum verhindern, dass der Store die Logos in den Paketen Ihrer app zu verwenden, wenn Ihr Angebot für Kunden unter Windows 10 (einschließlich Xbox) angezeigt, und stattdessen der Store muss nur Bilder verwenden, die Sie hochladen. Dies bietet Ihnen mehr Kontrolle über die Darstellung Ihrer App in verschiedenen Anzeigen im Store für Kunden auf Windows 10 (einschließlich Xbox). (Wenn Ihre zuvor veröffentlichten app frühere Betriebssystemversionen unterstützt, können diese Kunden weiterhin Bilder aus Ihren angezeigt.)
 
-In der Store nur die Bilder verwenden, die Sie hochladen, (für Kunden unter Windows 10, einschließlich Xbox), und keine Bilder von Ihren Paketen verwenden, aktivieren Sie das Kontrollkästchen mit der Bezeichnung **für Kunden unter Windows 10 und Xbox muss, zeigen Sie hochgeladen Logo Images INSTEAD das Bild aus der meine Pakete **.
+In den Store nur die Bilder verwenden, die Sie hochladen, (für Kunden unter Windows 10, einschließlich Xbox), und keine Bilder von Ihren Paketen verwenden, aktivieren Sie das Kontrollkästchen mit der Bezeichnung **für Kunden unter Windows 10 und Xbox haben, anzeigen hochgeladen Logo Images INSTEAD das Bild aus der meine Pakete **.
 
 Wenn Sie dieses Kontrollkästchen aktivieren, wird ein neuer Abschnitt namens **Store Bilder anzuzeigen** . Hier können Sie 3 Bilder, u. a. die **1:1-app-Kachel Symbol (300 x 300 Pixel)** (Wenn Sie das Kontrollkästchen, das Feld zum Bereitstellen, dass das Bild in diesem Abschnitt verschoben) hochladen. Es wird empfohlen, alle drei Bildgrößen bereitzustellen, wenn Sie diese Option verwenden: 300 x 300, 150 x 150 und 71 x 71 Pixel. Es ist jedoch nur die Größe 300 x 300 erforderlich.
 
@@ -104,7 +104,7 @@ In diesem Abschnitt können Sie Grafiken bereitstellen, damit Sie Ihr Produkt im
 
 ### <a name="trailers"></a>Trailer
 
-Trailer sind kurzen Videos, die Kunden die Anzeige Ihres Produkts in Aktion ermöglichen, damit sie seine Funktionen besser nachvollziehen können. Sie werden am oberen Rand der app Store-Eintrag (solange Sie ein [16:9 besonderes Favoritenbild](#windows-10-and-xbox-image-169-super-hero-art) Bild enthalten) angezeigt. 
+Trailer sind kurzen Videos, die Kunden die Anzeige Ihres Produkts in Aktion ermöglichen, damit sie seine Funktionen besser nachvollziehen können. Sie werden angezeigt, am oberen Rand der app Store-Eintrag (solange Sie ein Image [16:9 besonderes Favoritenbild](#windows-10-and-xbox-image-169-super-hero-art) enthalten). 
 
 Trailer sind mit [Smooth Streaming](http://www.iis.net/downloads/microsoft/smooth-streaming) codiert. Dabei wird die Qualität eines für Kunden angezeigten Videostreams in Echtzeit basierend auf der verfügbaren Bandbreite und CPU-Ressourcen angepasst.
 
@@ -118,7 +118,7 @@ Sie können bis zu 15 Trailer zu Ihrem Store-Eintrag hinzufügen. Achten Sie dar
 Sie müssen eine Videodatei (MP4 oder MOV), eine Miniaturansicht und einen Titel für jeden bereitgestellten Trailer hochladen.
 
 > [!IMPORTANT]
-> Wenn Sie Trailer verwenden zu können, müssen Sie auch einen Abschnitt [16:9 besonderes Favoritenbild](#windows-10-and-xbox-image-169-super-hero-art) Image, damit Ihre Trailer am Anfang der Store-Eintrag angezeigt werden bereitstellen. Dieses Bild wird angezeigt, wenn Ihre Trailer beendet sind.
+> Wenn Sie Trailer verwenden, müssen Sie auch einen Abschnitt [16:9 besonderes Favoritenbild](#windows-10-and-xbox-image-169-super-hero-art) Image, damit Ihre Trailer am Anfang der Store-Eintrag angezeigt werden bereitstellen. Dieses Bild wird angezeigt, wenn Ihre Trailer beendet sind.
 
 Befolgen Sie folgende Empfehlungen, damit Ihre Trailer effektiv sind:
 - Trailer sollten eine gute Qualität und eine minimale Länge aufweisen (60 Sekunden oder weniger als 2GB wird empfohlen). 
@@ -137,7 +137,7 @@ Sie müssen auch die unten genannten Anforderungen erfüllen.
 > [!TIP]
 > Wenn Sie Store-Einträge in mehreren Sprachen erstellt haben, können Sie **Aus vorhandenem Trailer auswählen** auswählen, um den Trailer wiederzuverwenden, den Sie bereits hochgeladen haben. Sie müssen diese nicht einzeln für jede Sprache hochladen.
 
-Um einen Trailer aus einem Eintrag zu entfernen, klicken Sie auf das **X** neben dem Dateinamen. Sie können auswählen, ob Sie sie aus nur den aktuellen Store-Eintrag entfernen in dem Sie arbeiten oder es aus allen Store-Einträge für Ihr Produkt (in jeder Sprache) zu entfernen.
+Um einen Trailer aus einem Eintrag zu entfernen, klicken Sie auf das **X** neben dem Dateinamen. Sie können auswählen, ob Sie es von nur den aktuellen Store-Eintrag entfernen, in dem Sie arbeiten, oder aus allen Store-Einträge für Ihr Produkt (in jeder Sprache) zu entfernen.
 
 
 ### <a name="trailer-requirements"></a>Traileranforderungen

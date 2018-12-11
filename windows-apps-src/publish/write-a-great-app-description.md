@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Beschreibung, beschreiben, Store-Eintrag, Marketing
 ms.localizationpriority: medium
 ms.openlocfilehash: a6cea0103d484cc84f9c253a08f07ed3d69b67f3
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8691093"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8879261"
 ---
 # <a name="write-a-great-app-description"></a>Erstellen einer interessanten App-Beschreibung
 
@@ -25,7 +25,7 @@ Hier einige Tipps für eine optimale App-Beschreibung.
 -   **Verwenden Sie Listen und kurze Absätze.** Potenzielle Kunden werfen u.U. nur einen kurzen Blick auf die Beschreibung Ihrer App. Erleichtern Sie das Überfliegen, indem Sie den Inhalt in kurzen Absätzen und Listen zusammenfassen.
 
     > [!NOTE]
-    > Hinzufügen einer Liste der [Produktfeatures](create-app-store-listings.md#product-features) hilft auch schnell anzeigen Verwendungszweck der app. Diese Liste wird direkt unter der App-Beschreibung angezeigt.
+    > Eine Liste der [Produktfeatures](create-app-store-listings.md#product-features) hinzufügen kann Ihnen auch schnell anzeigen zu Funktionsweise Ihrer app. Diese Liste wird direkt unter der App-Beschreibung angezeigt.
 
 -   **Vermeiden Sie trockene Formulierungen.** Verwenden Sie bei der Beschreibung lebendige Sprache. Achten Sie darauf, dass der Zweck Ihrer App eindeutig beschrieben ist, die Beschreibung jedoch nicht langweilig klingt. Für viele Apps eignet sich ein ungezwungener, freundlicher Tonfall.
 -   **Verwenden Sie die richtige Länge.** Eine gute Beschreibung lässt sich schnell lesen und enthält genügend Infos, um das Interesse des Lesers zu wecken und den Zweck der App zu erläutern. Eine komplexe App erfordert eine etwas längere Beschreibung; bei einer einfachen App reichen u.U. wenige Sätze aus. In den meisten Fällen beträgt die ideale Länge über 200, jedoch weit unter 3000Wörtern.

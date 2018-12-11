@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0194ccba43e2ba5270b9ff8eacf045ca140af6cb
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8737001"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8879172"
 ---
 # <a name="process-media-files-in-the-background"></a>Verarbeiten von Mediendateien im Hintergrund
 
@@ -124,13 +124,13 @@ Registrieren Sie die Hintergrundaufgabe durch Aufrufen von [**Register**](https:
 
 [!code-cs[RegisterBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetRegisterBackgroundTask)]
 
-Eine typische app wird ihre Hintergrundaufgabe registriert, wenn die app anfänglich gestartete, z. B. das **OnNavigatedTo** -Ereignis wird.
+Eine typische app wird die Hintergrundaufgabe registriert, wenn die app anfänglich gestartete, z. B. das **OnNavigatedTo** -Ereignis wird.
 
 Starten Sie die Hintergrundaufgabe durch Aufrufen der [**RequestAsync**](https://msdn.microsoft.com/library/windows/apps/dn765071)-Methode des **MediaProcessingTrigger**-Objekts. Das von dieser Methode zurückgegebene [**MediaProcessingTriggerResult**](https://msdn.microsoft.com/library/windows/apps/dn806007)-Objekt informiert Sie darüber, ob die Hintergrundaufgabe erfolgreich gestartet wurde. Zudem teilt es Ihnen bei einem Fehler mit, warum die Hintergrundaufgabe nicht gestartet wurde. 
 
 [!code-cs[LaunchBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetLaunchBackgroundTask)]
 
-Eine typische app startet die Hintergrundaufgabe in Reaktion auf Benutzerinteraktionen, z. B. im Ereignis **Klicken Sie auf** ein UI-Steuerelement.
+Eine typische app wird die Hintergrundaufgabe in Reaktion auf Benutzerinteraktionen, z. B. in das Ereignis **Klicken Sie auf** ein UI-Steuerelement gestartet werden.
 
 Der **OnProgress**-Ereignishandler wird aufgerufen, wenn die Hintergrundaufgabe den Vorgangsstatus aktualisiert. Sie können diese Möglichkeit nutzen, um die Benutzeroberfläche mit Statusinformationen zu aktualisieren.
 

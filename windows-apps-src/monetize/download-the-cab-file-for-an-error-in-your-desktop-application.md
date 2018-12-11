@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Analyse-API, CAB herunterladen, Desktopanwendung
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e3535f18b8127ea18bca234cdcc9b695e89ebfd
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8737857"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8879251"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-desktop-application"></a>Herunterladen der CAB-Datei bei einem Fehler in Ihrer Desktopanwendung
 
@@ -48,7 +48,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 | Parameter        | Typ   |  Beschreibung      |  Erforderlich  |
 |---------------|--------|---------------|------|
-| applicationId | string | Die Produkt-ID der Desktopanwendung, für die Sie eine CAB-Datei herunterladen möchten. Um die Produkt-ID einer desktop-Anwendung zu erhalten, öffnen Sie alle [Partner Center-Analysebericht für Ihre desktop-Anwendung](https://msdn.microsoft.com/library/windows/desktop/mt826504) (z. B. den **Bericht "Integrität"**), und rufen Sie die Produkt-ID aus der URL. |  Ja  |
+| applicationId | string | Die Produkt-ID der Desktopanwendung, für die Sie eine CAB-Datei herunterladen möchten. Um die Produkt-ID einer desktop-Anwendung zu erhalten, öffnen Sie eine [Partner Center-Analysebericht für Ihre desktop-Anwendung](https://msdn.microsoft.com/library/windows/desktop/mt826504) (z. B. den **Bericht "Integrität"**), und rufen Sie die Produkt-ID aus der URL. |  Ja  |
 | cabIdHash | string | Der eindeutige ID-Hash der CAB-Datei ab, die Sie herunterladen möchten. Verwenden Sie zum Abrufen dieses Wertes die Methode zum [Abrufen von Details zu einem Fehler in Ihrer Desktopanwendung](get-details-for-an-error-in-your-desktop-application.md), um Details zu einem bestimmten Fehler in Ihrer Anwendung abzurufen, und verwenden Sie den **cabIdHash**-Wert im Antworttext dieser Methode. |  Ja  |
 
 
