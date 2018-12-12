@@ -14,11 +14,11 @@ dev-contact: ''
 doc-status: ''
 ms.localizationpriority: medium
 ms.openlocfilehash: e6aebac45dc32933f55d917c0b1153cba952d819
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8874349"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8932563"
 ---
 # <a name="designing-for-mixed-reality"></a><span data-ttu-id="c292d-103">Design für Mixed Reality</span><span class="sxs-lookup"><span data-stu-id="c292d-103">Designing for Mixed Reality</span></span>
 
