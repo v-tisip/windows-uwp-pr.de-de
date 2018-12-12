@@ -6,11 +6,11 @@ ms.date: 11/02/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 25707dfbf6753c51b4cf47bcbe95dc66802ee781
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8880789"
+ms.locfileid: "8946511"
 ---
 # <a name="new-apis-in-windows-10-build-16299"></a>Neue APIs in Windows10, Build 16299
 
