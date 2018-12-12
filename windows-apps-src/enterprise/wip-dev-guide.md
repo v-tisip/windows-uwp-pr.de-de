@@ -9,11 +9,11 @@ keywords: Windows10, UWP, WIP, Windows Information Protection, Unternehmensdaten
 ms.assetid: 913ac957-ea49-43b0-91b3-e0f6ca01ef2c
 ms.localizationpriority: medium
 ms.openlocfilehash: 229d97c137344de26be0168be437825bea8e9700
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8895946"
+ms.locfileid: "8932543"
 ---
 # <a name="windows-information-protection-wip-developer-guide"></a><span data-ttu-id="21565-103">Entwicklerhandbuch für Windows Information Protection (WIP)</span><span class="sxs-lookup"><span data-stu-id="21565-103">Windows Information Protection (WIP) developer guide</span></span>
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 26f4153b59c618a4559549ba7fa9ca0f99c4ab64
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8871936"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8933848"
 ---
 # <a name="xaml-intrinsic-data-types"></a><span data-ttu-id="ba3df-104">Systeminterne XAML-Datentypen</span><span class="sxs-lookup"><span data-stu-id="ba3df-104">XAML intrinsic data types</span></span>
 

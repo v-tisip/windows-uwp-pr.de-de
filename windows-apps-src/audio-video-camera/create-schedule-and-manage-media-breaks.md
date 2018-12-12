@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 93bcadad38e3d070e8a6b541db4d68bf547bc0b4
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8879192"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8933470"
 ---
 # <a name="create-schedule-and-manage-media-breaks"></a><span data-ttu-id="ef82d-104">Erstellen, Planen und Verwalten von Medienunterbrechungen</span><span class="sxs-lookup"><span data-stu-id="ef82d-104">Create, schedule, and manage media breaks</span></span>
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 107c904dc4b89941c0f453efd830504d2d032534
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8893600"
+ms.locfileid: "8929123"
 ---
 # <a name="show-multiple-views-for-an-app"></a><span data-ttu-id="5c056-103">Anzeigen mehrerer Ansichten für eine App</span><span class="sxs-lookup"><span data-stu-id="5c056-103">Show multiple views for an app</span></span>
 

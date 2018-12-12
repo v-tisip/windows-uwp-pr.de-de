@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b8b0c6f4fa578e4ec483492b320dc9bc346ab66
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8896926"
+ms.locfileid: "8929736"
 ---
 # <a name="operations-available-on-tile-pools"></a><span data-ttu-id="e5adb-104">Vorgänge für Kachelpools</span><span class="sxs-lookup"><span data-stu-id="e5adb-104">Operations available on tile pools</span></span>
 
