@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 145912f08075678c98dfb34ac491e123577c69e3
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8872616"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8946665"
 ---
 # <a name="key-frame-animations-and-easing-function-animations"></a><span data-ttu-id="d1b4e-104">Keyframe-Animationen und Animationen für Beschleunigungsfunktionen</span><span class="sxs-lookup"><span data-stu-id="d1b4e-104">Key-frame animations and easing function animations</span></span>
 
