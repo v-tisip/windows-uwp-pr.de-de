@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f85570d5c66db1641ec6352526d4db6213e199b4
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8883227"
+ms.locfileid: "8944895"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a><span data-ttu-id="10b06-104">Verarbeiten von Audioframes mit „MediaFrameReader“</span><span class="sxs-lookup"><span data-stu-id="10b06-104">Process audio frames with MediaFrameReader</span></span>
 
