@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows10, uwp, debuggen, testen, leistung
 ms.localizationpriority: medium
 ms.openlocfilehash: 8f58485b6f6829b9eec0495cce088304b181a2b1
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8878401"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8940672"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a><span data-ttu-id="bbe76-104">Bereitstellen und Debuggen von UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="bbe76-104">Deploying and debugging UWP apps</span></span>
 

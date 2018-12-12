@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Azure Ad-Anwendung, Aad, Benutzer, Gruppen, mehrere Benutzer, mehrere Benutzer
 ms.localizationpriority: medium
 ms.openlocfilehash: 0ecdcf2b148f53fefb5edc7e1f2df0d6bab58475
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8884336"
+ms.locfileid: "8942066"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-partner-center-account"></a><span data-ttu-id="86936-103">Hinzufügen von Benutzern, Gruppen und Azure AD-Anwendungen zu Ihrem Partner Center-Konto</span><span class="sxs-lookup"><span data-stu-id="86936-103">Add users, groups, and Azure AD applications to your Partner Center account</span></span>
 
