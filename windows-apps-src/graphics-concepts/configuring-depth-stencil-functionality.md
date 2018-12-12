@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 98cb6c62248fbf273a9d7ca1ef0d1d82293122eb
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8881902"
+ms.locfileid: "8936444"
 ---
 # <a name="span-iddirect3dconceptsconfiguringdepth-stencilfunctionalityspanconfiguring-depth-stencil-functionality"></a><span data-ttu-id="b6d4c-104"><span id="direct3dconcepts.configuring_depth-stencil_functionality"></span>Konfigurieren der Tiefenschablonenfunktionalität</span><span class="sxs-lookup"><span data-stu-id="b6d4c-104"><span id="direct3dconcepts.configuring_depth-stencil_functionality"></span>Configuring depth-stencil functionality</span></span>
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Directx, Paket
 ms.localizationpriority: medium
 ms.openlocfilehash: 631ba2c278c72f406a0fdd8a6d6d8d8a14c9eb05
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8890972"
+ms.locfileid: "8938030"
 ---
 #  <a name="package-your-universal-windows-platform-uwp-directx-game"></a><span data-ttu-id="45523-104">Packen Ihres UWP-DirectX-Spiels (DirectX-Spiels für die Universelle Windows-Plattform)</span><span class="sxs-lookup"><span data-stu-id="45523-104">Package your Universal Windows Platform (UWP) DirectX game</span></span>
 

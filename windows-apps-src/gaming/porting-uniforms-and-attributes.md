@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, OpenGL, Direct3D, Puffer, uniform-Variablen, Vertexattribute
 ms.localizationpriority: medium
 ms.openlocfilehash: 9a1db1890e47257412a7e2ee8e08c40164d0d927
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8893182"
+ms.locfileid: "8932326"
 ---
 # <a name="compare-opengl-es-20-buffers-uniforms-and-vertex-attributes-to-direct3d"></a><span data-ttu-id="c3c99-104">Vergleichen von OpenGLES2.0-Puffern, uniform-Variablen und Vertexattributen mit Direct3D</span><span class="sxs-lookup"><span data-stu-id="c3c99-104">Compare OpenGL ES 2.0 buffers, uniforms, and vertex attributes to Direct3D</span></span>
 
