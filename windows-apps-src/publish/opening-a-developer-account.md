@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e1c2567393e6d6bfab75b2db068f0b61f7fb6893
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9b65dd07a89b1617f805c17bf43a3ce3f5f3282f
+ms.sourcegitcommit: dcff44885956094e0a7661b69d54a8983921ce62
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946783"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "8968594"
 ---
 # <a name="opening-a-developer-account"></a>Eröffnen eines Entwicklerkontos
 
@@ -61,7 +61,7 @@ Das Unternehmenskonto durch Signieren mit Microsoft-Konto, das es geöffnet (und
 
 -   Erstellen Sie das Microsoft-Konto mit einer e-Mail-Adresse, die bereits Ihnen oder einer anderen Person wie z. B. gehört MyCompany_PartnerCenter@outlook.com. Verwenden Sie eine e-Mail-Adresse nicht zur Domäne Ihrer Firma, insbesondere dann, wenn Ihr Unternehmen bereits Azure AD verwendet. (Wie bereits erwähnt, können Sie weitere Benutzer hinzufügen, von Ihrem Unternehmen Azure AD weiter unten.)
 -   Beschränken Sie den Zugriff auf dieses Microsoft-Konto auf so wenige Benutzer wie möglich.
--   Richten Sie eine firmeninterne e-Mail-Verteilerliste, die alle Benutzer enthält, die Zugriff auf das Entwicklerkonto benötigen, und fügen Sie diese e-Mail-Adresse für den [Sicherheitsinformationen, die mit dem Microsoft-Konto verknüpften [(https://account.microsoft.com/security). Dadurch können alle Mitarbeiter auf die Liste an diesen Aliasnamen gesendet erhalten. Wenn die Einrichtung eine Verteilerliste nicht realisierbar ist, Sie können Ihre Sicherheitsinformationen e-Mail-Adresse eines einzelnen Benutzers hinzufügen, der Besitzer der e-Mail-Adresse werden jedoch einzige Person zugreifen kann, und teilen den Sicherheitscode bei entsprechender Aufforderung (z. B. wenn t neue Sicherheitsinformationen hinzugefügt werden er für das Konto, oder wenn sie von einem neuen Gerät zugegriffen wird).
+-   Richten Sie eine firmeninterne e-Mail-Verteilerliste, die alle Benutzer enthält, die Zugriff auf das Entwicklerkonto benötigen, und fügen Sie diese e-Mail-Adresse hinzu, um die [Sicherheitsinformationen, die mit dem Microsoft-Konto verknüpft ist](https://account.microsoft.com/security). Dadurch können alle Mitarbeiter auf die Liste an diesen Aliasnamen gesendet erhalten. Wenn die Einrichtung eine Verteilerliste nicht realisierbar ist, Sie können Ihre Sicherheitsinformationen e-Mail-Adresse eines einzelnen Benutzers hinzufügen, der Besitzer der e-Mail-Adresse werden jedoch einzige Person zugreifen kann, und teilen den Sicherheitscode bei entsprechender Aufforderung (z. B. wenn t neue Sicherheitsinformationen hinzugefügt werden er für das Konto, oder wenn sie von einem neuen Gerät zugegriffen wird).
 -   Fügen Sie eine geschäftliche Telefonnummer des Microsoft-Kontos Sicherheitsinformationen hinzu. Verwenden Sie eine Zahl, die eine Erweiterung ist nicht erforderlich und wird auf wichtige Teammitglieder zugreifen.
 -   Im Entwickler sollten generell [Vertrauenswürdige Geräte](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) verwenden, um Entwicklerkonto Ihres Unternehmens anmelden. Alle wichtigen Teammitglieder müssen auf diese vertrauenswürdigen Geräte zugreifen können. So müssen beim Zugriff auf das Konto weniger Sicherheitscodes gesendet werden. Die Anzahl von Codes ist begrenzt, die pro Konto und Woche generiert werden können.
 -   Falls Sie den Zugriff auf das Konto über einen nicht vertrauenswürdigen PC zulassen müssen, sollten Sie den Zugriff auf maximal fünf Entwickler beschränken. Im Idealfall sollten diese Entwickler für den Zugriff auf das Konto Computer verwenden, die denselben geografischen Standort und dieselbe Netzwerkadresse nutzen.

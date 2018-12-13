@@ -6,16 +6,16 @@ ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
 ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b00ace982bb39b99816013a8491b5b75be765833
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 122be597bbf772d891b7e9839dfc4d9039754b00
+ms.sourcegitcommit: dcff44885956094e0a7661b69d54a8983921ce62
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933584"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "8968584"
 ---
 # <a name="create-your-app-by-reserving-a-name"></a>Erstellen einer App durch Reservieren eines Namens
 
-Der erste Schritt beim Erstellen einer neuen app in Ihrem [Partner Center](https://partner.microsoft.com/dashboard) ist einen app-Namen zu reservieren. Jeder reservierte Name (wird auch als App *Titel* bezeichnet) muss im Microsoft Store eindeutig sein.
+Der erste Schritt beim Erstellen einer neuen app im [Partner Center](https://partner.microsoft.com/dashboard) ist einen app-Namen zu reservieren. Jeder reservierte Name (wird auch als App *Titel* bezeichnet) muss im Microsoft Store eindeutig sein.
 
 Die Reservierung eines Namens für Ihre App ist möglich, auch wenn Sie noch nicht mit der App-Erstellung begonnen haben. Wir empfehlen dies so schnell wie möglich, so dass jemand anderem den Namen verwendet. Beachten Sie, dass Sie die App innerhalb von drei Monaten übermitteln müssen, damit der Namen für Ihre Verwendung reserviert bleibt.
 

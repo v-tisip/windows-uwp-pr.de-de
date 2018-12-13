@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c909e707d25e4add534ce89319abe71c2557b59
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 267e1d4de3917ae332cdfe15309f3871ef7b6647
+ms.sourcegitcommit: dcff44885956094e0a7661b69d54a8983921ce62
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919080"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "8968564"
 ---
 # <a name="get-all-apps"></a>Abrufen aller Apps
 
 
-Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Abrufen von Daten für alle apps, die für Ihr Partner Center-Konto registriert wurden.
+Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Abrufen von Daten für apps, die für Ihr Partner Center-Konto registriert wurden.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -31,7 +31,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 | Methode | Anforderungs-URI                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications``` |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications` |
 
 
 ### <a name="request-header"></a>Anforderungsheader
@@ -43,7 +43,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 ### <a name="request-parameters"></a>Anforderungsparameter
 
-Alle Anforderungsparameter sind optional für diese Methode. Wenn Sie diese Methode ohne Parameter aufrufen, enthält die Antwort Daten für alle Apps, die für Ihr Konto registriert wurden.
+Alle Anforderungsparameter sind optional für diese Methode. Wenn Sie diese Methode ohne Parameter aufrufen, enthält die Antwort Daten für die ersten 10 apps, die für Ihr Konto registriert wurden.
 
 |  Parameter  |  Typ  |  Beschreibung  |  Erforderlich  |
 |------|------|------|------|
@@ -57,19 +57,44 @@ Stellen Sie keinen Anforderungstext für diese Methode bereit.
 
 ### <a name="request-examples"></a>Anforderungsbeispiele
 
-Im folgenden Beispiel wird veranschaulicht, wie Informationen über alle Apps abgerufen werden können, die für Ihr Konto registriert wurden.
+Im folgenden Beispiel wird veranschaulicht, wie die ersten 10 Apps abgerufen werden können, die für Ihr Konto registriert sind.
 
-```
+```http
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-Im folgenden Beispiel wird veranschaulicht, wie die ersten 10 Apps abgerufen werden können, die für Ihr Konto registriert sind.
+Im folgenden Beispiel wird veranschaulicht, wie Informationen über alle Apps abgerufen werden können, die für Ihr Konto registriert wurden. Rufen Sie zunächst die ersten 10 apps:
 
-```
+```http
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications?top=10 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
+
+Anschließend rekursiv Aufruf `GET https://manage.devcenter.microsoft.com/v1.0/my/{@nextLink}` bis `{@nextlink}` ist null oder nicht vorhanden ist, in der Antwort. Beispiel:
+
+```http
+GET https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=10&top=10 HTTP/1.1
+Authorization: Bearer <your access token>
+```
+  
+```http
+GET https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=20&top=10 HTTP/1.1
+Authorization: Bearer <your access token>
+```
+
+```http
+GET https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=30&top=10 HTTP/1.1
+Authorization: Bearer <your access token>
+```
+
+Wenn Sie die Gesamtanzahl von apps, die Sie in Ihrem Konto haben bereits kennen, können Sie einfach die Anzahl in der **oberen** Parameter zum Abrufen von Informationen über alle Ihre apps übergeben.
+
+```http
+GET https://manage.devcenter.microsoft.com/v1.0/my/applications?top=23 HTTP/1.1
+Authorization: Bearer <your access token>
+```
+
 
 ## <a name="response"></a>Antwort
 
@@ -114,7 +139,7 @@ Im folgenden Beispiel wird der JSON-Antworttext veranschaulicht, der von einer e
 | Wert      | Typ   | Beschreibung                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | value      | Array  | Ein Array von Objekten, die Informationen zu jeder App enthalten, die für Ihr Konto registriert wurde. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unter [Anwendungsressource](get-app-data.md#application_object).                                                                                                                           |
-| @nextLink  | String | Wenn weitere Datenseiten vorhanden sind, enthält diese Zeichenfolge einen relativen Pfad, den Sie an den Basisanforderungs-URI ```https://manage.devcenter.microsoft.com/v1.0/my/``` zum Anfordern der nächsten Datenseite anfügen können. Wenn beispielsweise der Parameter *top* des anfänglichen Anforderungstexts auf 10 festgelegt ist, für Ihr Konto jedoch 20Apps registriert wurden, enthält der Antworttext den @nextLink-Wert ```applications?skip=10&top=10```, der angibt, dass Sie ```https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=10&top=10``` aufrufen können, um die nächsten 10 Apps anzufordern. |
+| @nextLink  | String | Wenn weitere Datenseiten vorhanden sind, enthält diese Zeichenfolge einen relativen Pfad, den Sie an den Basisanforderungs-URI `https://manage.devcenter.microsoft.com/v1.0/my/` zum Anfordern der nächsten Datenseite anfügen können. Wenn beispielsweise der Parameter *top* des anfänglichen Anforderungstexts auf 10 festgelegt ist, für Ihr Konto jedoch 20Apps registriert wurden, enthält der Antworttext den @nextLink-Wert `applications?skip=10&top=10`, der angibt, dass Sie `https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=10&top=10` aufrufen können, um die nächsten 10 Apps anzufordern. |
 | totalCount | int    | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage (d.h. die Gesamtanzahl von Apps, die für Ihr Konto registriert wurden).                                                |
 
 
