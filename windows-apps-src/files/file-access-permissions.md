@@ -6,12 +6,12 @@ ms.date: 06/28/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: d960235e73ea9172fb966f227af9440923f3553e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 05ff8dd78f58910512291b819d59d68f682cc93c
+ms.sourcegitcommit: 23748871459931fc838c5e259e4822bffcf3cdea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940021"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "8970935"
 ---
 # <a name="file-access-permissions"></a>Berechtigungen für den Dateizugriff
 
@@ -254,7 +254,7 @@ In der folgenden Tabelle sind weitere Speicherorte aufgeführt, auf die Sie durc
 
 | Ort | Funktion | Windows.Storage-API |
 |----------|------------|---------------------|
-| Alle Dateien, auf die der Benutzer Zugriff hat. Beispiel: Dokumente, Bilder, Fotos, Downloads, Desktop, OneDrive usw. | broadFileSystemAccess<br><br>Dies ist eine eingeschränkte Funktion. Bei der ersten Verwendung fordert das System den Benutzer auf, den Zugriff zuzulassen. Der Zugriff kann unter Einstellungen > Datenschutz > Dateisystem konfiguriert werden. Wenn Sie eine App an den Store übermitteln, die diese Funktion deklariert, müssen Sie zusätzliche Beschreibungen dazu bereitstellen, warum die App diese Funktion benötigt und wie sie diese verwenden wird.<br>Diese Funktion funktioniert für APIs im [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346)-Namespace. | n.a. |
+| Alle Dateien, auf die der Benutzer Zugriff hat. Beispiel: Dokumente, Bilder, Fotos, Downloads, Desktop, OneDrive usw. | broadFileSystemAccess<br><br>Dies ist eine eingeschränkte Funktion. Zugriff kann unter " **Einstellungen"** konfiguriert > **Datenschutz** > **Dateisystem**. Da Benutzer gewähren oder verweigern jederzeit in den **Einstellungen**können, sollten Sie sicherstellen, dass Ihre app diese Änderungen flexibel. Wenn Sie feststellen, dass Ihre app nicht zugreifen kann, können Sie den Benutzer auffordern, die Einstellung zu ändern, indem Sie einen Link zum Artikel [Zugriff auf das Dateisystem Windows 10 und Datenschutz](https://privacy.microsoft.com/en-US/windows-10-file-system-access-and-privacy) . Beachten Sie, dass der Benutzer die app zu schließen, Sie schalten und starten Sie die app muss. Wenn sie die Einstellung aktivieren, während die app ausgeführt wird, wird die Plattform Ihre app angehalten, damit können Sie den Zustand speichern, und dann die app erzwungener zu beenden, um die neue Einstellung zu übernehmen. Im April 2018-Update ist die Standardeinstellung für die Berechtigung. In den Oktober 2018-Update ist standardmäßig deaktiviert.<br /><br />Wenn Sie eine App an den Store übermitteln, die diese Funktion deklariert, müssen Sie zusätzliche Beschreibungen dazu bereitstellen, warum die App diese Funktion benötigt und wie sie diese verwenden wird.<br>Diese Funktion funktioniert für APIs im [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) -Namespace. Finden Sie im Abschnitt " **Beispiel** " am Ende dieses Artikels finden Sie ein Beispiel für diese Funktion in Ihrer app zu aktivieren. | n.a. |
 | Dokumente | DocumentsLibrary <br><br>Hinweis: Sie müssen Ihrem App-Manifest Dateitypzuordnungen hinzufügen, die bestimmte Dateitypen deklarieren, auf die Ihre App an diesem Speicherort Zugriff hat. <br><br>Verwenden Sie diese Funktion, wenn Ihre App:<br>- Den plattformübergreifenden Offlinezugriff auf bestimmte OneDrive-Inhalte mit gültigen OneDrive-URLs oder Ressourcen-IDs ermöglicht.<br>-Speichert geöffneten Dateien des Benutzers automatisch im OneDrive offline | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
 | Musik     | MusicLibrary <br>Weitere Informationen finden Sie unter [Dateien und Ordner in den Musik-, Bild- und Videobibliotheken](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.MusicLibrary](https://msdn.microsoft.com/library/windows/apps/br227155) |    
 | Bilder  | PicturesLibrary<br> Weitere Informationen finden Sie unter [Dateien und Ordner in den Musik-, Bild- und Videobibliotheken](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.PicturesLibrary](https://msdn.microsoft.com/library/windows/apps/br227156) |  
