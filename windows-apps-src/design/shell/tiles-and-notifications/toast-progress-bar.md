@@ -7,12 +7,12 @@ ms.date: 12/7/2017
 ms.topic: article
 keywords: Windows10, UWP, Popup, Statusanzeige, Popup-Statusanzeige, Benachrichtigungen, Datenbindung der Popups
 ms.localizationpriority: medium
-ms.openlocfilehash: 853e9c1672f1933789c961838734a67b3e816b6a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f955f2a71fed6444c65f9550e1f4fa3baeabe092
+ms.sourcegitcommit: 88265a8c9f6a77a0508a0c9d89b6ab0a6238a1da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921315"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "8969057"
 ---
 # <a name="toast-progress-bar-and-data-binding"></a>Popup-Statusanzeige und Datenbindungen
 
@@ -21,7 +21,7 @@ Durch die Verwendung einer Statusanzeige innerhalb Ihrer Popupbenachrichtigung k
 > [!IMPORTANT]
 > **Erfordert Creators Update und 1.4.0 der Benachrichtigungsbibliothek**: Sie müssen als Ziel SDK 15063 und Build 15063 oder höher ausführen, um Statusanzeigen auf Popups zu verwenden. Sie müssen Version 1.4.0 oder höher der [UWP Community Toolkit Benachrichtigungen NuGet-Bibliothek](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) verwenden, um die Statusanzeige der Popup-Inhalte zu erstellen.
 
-Eine Statusanzeige in einem Popup kann entweder "unbestimmt" (ohne spezifischen Wert, ein Vorgang erfolgt durch das Anzeigen animierter Punkte) oder "exakt" (ein bestimmtes Prozentsatz der Leiste wird gefüllt, z.B. 60%) sein.
+Eine Statusanzeige in einem Popup kann entweder "unbestimmt" (ohne spezifischen Wert, ein Vorgang erfolgt animierter Punkte angibt) oder "exakt" (ein bestimmtes Prozentsatz der Leiste wird gefüllt, z. B. 60 %).
 
 > **Wichtige APIs**: [NotificationData-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notificationdata), [ToastNotifier.Update Methode](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotifier.Update), [ToastNotification-Klasse](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification)
 
