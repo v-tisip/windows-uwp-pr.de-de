@@ -7,12 +7,12 @@ ms.date: 11/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 1443730e343bc00563142e937d534282b9b34524
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 43aeccecee5b4b2d7a2d5fa1082fb619e87e7268
+ms.sourcegitcommit: 51ea7eae59684400e7813a9dd3376d5e7bfb3635
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924068"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "8972044"
 ---
 # <a name="understand-user-profile-languages-and-app-manifest-languages"></a>Benutzerprofilsprachen und App-Manifest-Sprachen verstehen
 Ein Windows-Benutzer kann mit **Einstellungen** > **Zeit und Sprache** > **und Region und Sprache** eine geordnete Liste der bevorzugten Anzeigesprachen oder nur eine bevorzugte Anzeigesprache konfigurieren. Zu einer Sprache kann es eine regionale Variante geben. Zum Beispiel können Sie u. a. ein Spanisch wählen, das entweder in Spanien, in Mexiko oder in den USA gesprochen wird.
@@ -93,21 +93,23 @@ Die Liste der App-Laufzeitsprachen bestimmt die Ressourcen, die Windows für Ihr
 **Hinweis:** Sind die Benutzerprofilsprache und die App-Manifestsprache regionale Varianten voneinander, wird die regionale Variante des Benutzers als App-Laufzeitsprache verwendet. Wenn der Benutzer beispielsweise „en-GB” bevorzugt, die App jedoch „en-US” unterstützt, ist „en-GB ”die App-Laufzeitsprache. Dadurch wird sichergestellt, dass Datumsangaben, Uhrzeiten und Zahlen den Erwartungen des Benutzers entsprechend formatiert werden („en-GB“), die lokalisierten Ressourcen aber dank des Sprachabgleichs trotzdem in der von der App unterstützten Sprache („en-US“) geladen werden.
 
 ## <a name="qualify-resource-files-with-their-language"></a>Ressourcendateien mit Sprachqualifizierern benennen
-Benennen Sie die Ressourcendateien oder ihre Ordner mit Qualifizierern für Sprachressourcen. Weitere Informationen über Ressourcenqualifizierer finden Sie unter [Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung, hohen Kontrast und andere Eigenschaften](../../app-resources/tailor-resources-lang-scale-contrast.md)). Eine Ressourcendatei kann ein einzelnes Bild oder eine andere Bestandsdatei sein, oder es kann sich um eine Container-Ressourcendatei handeln, beispielsweise um eine Ressourcendatei (.resw), die Zeichenfolgenressourcen enthält.
+Benennen Sie die Ressourcendateien oder ihre Ordner mit Qualifizierern für Sprachressourcen. Weitere Informationen über Ressourcenqualifizierer finden Sie unter [Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung, hohen Kontrast und andere Eigenschaften](../../app-resources/tailor-resources-lang-scale-contrast.md)). Eine Ressourcendatei kann ein Bild (oder eine Ressource), oder es kann ein Container-Ressourcendatei, z. B. eine *.resw* , die Textzeichenfolgen enthält.
 
-**Hinweis:** Auch Ressourcen in der standardmäßigen Sprache der App müssen mit ihrer Sprache qualifiziert sein. Ist beispielsweise Englisch (USA) die standardmäßige Sprache Ihrer App, müssen Sie auch Ihre en-US-Ressourcen in der Form `\Assets\Images\en-US\logo.png` qualifizieren. 
+**Hinweis:** Auch Ressourcen in der Standardsprache Ihrer app müssen sprachqualifizierer angeben. Beispielsweise, wenn Ihre app-Standardsprache Englisch (USA) ist, qualifizieren Ressourcen als `\Assets\Images\en-US\logo.png`.
 
-- Windows führt komplexe Vergleiche durch, beispielsweise über regionale Varianten wie en-US und en-GB. Fügen Sie das Regionssubtag also bei Bedarf entsprechend ein. Siehe [Wie das Ressourcenverwaltungssystem Sprachtags zuordnet](../../app-resources/how-rms-matches-lang-tags.md).
-- Binden Sie ein Skript ein, falls für die Sprache kein Wert definiert ist, der besagt, dass Skripte unterdrückt werden sollen. Einzelheiten zu Sprachtags finden Sie unter [IANA Language Subtag Registry](http://go.microsoft.com/fwlink/p/?linkid=227303). Verwenden Sie z.B. „zh-Hant”, „zh-Hant-TW” oder „zh-Hans”, aber nicht „zh-CN” oder „zh-TW”.
-- Bei Sprachen mit nur einem Standarddialekt muss keine Region hinzugefügt werden. Eine Verwendung von allgemeinen Tags ist in einigen Situationen vernünftig, so z. B. das Markieren von Ressourcen mit „ja” anstelle von „ja-JP”.
+- Windows führt komplexe Vergleiche, über regionale Varianten wie En-US und En-GB. Und fügen Sie der untergeordneten Regionstag nach Bedarf. Siehe [Wie das Ressourcenverwaltungssystem Sprachtags zuordnet](../../app-resources/how-rms-matches-lang-tags.md).
+- Geben Sie untergeordnete Sprachtag für das Skript in den Qualifizierer, wenn es keine Unterdrücken von Skripts Wert für die Sprache definiert. Verwenden zum Beispiel statt Zh-CN "oder" Zh-TW "," Zh-Hant "," Zh-Hant-TW "oder" Zh-Hans "(Weitere Informationen finden Sie unter der [IANA Language Subtag Registry](http://go.microsoft.com/fwlink/p/?linkid=227303)).
+- Für Sprachen, die einem Standarddialekt, besteht nicht erforderlich, den Region Qualifizierer enthalten. Verwenden Sie z. B. ja anstelle ja-JP.
 - Für einige Tools und Komponenten wie Übersetzungsprogramme können spezielle Sprachtags, beispielsweise Informationen zu regionalen Dialekten, für das Verständnis der Daten hilfreich sein.
 
-In manchen Fällen müssen nicht alle Ressourcen lokalisiert werden.
+### <a name="not-all-resources-need-to-be-localized"></a>Nicht alle Ressourcen lokalisiert werden müssen
 
-- Markieren Sie Ressourcen wie UI-Zeichenfolgen, die in allen Sprachen enthalten sind, mit ihrer Sprache. Stellen Sie sicher, dass alle diese Zeichenfolgen in der Standardsprache vorhanden sind.
-- Geben Sie für Ressourcen, die in einer Teilmenge der App-Sprachen enthalten sind (teilweise Lokalisierung), die vorkommenden Sprachen an, und stellen Sie sicher, dass alle diese Ressourcen in der Standardsprache enthalten sind. Beispielsweise muss nicht die gesamte Benutzeroberfläche einer App ins Katalanische lokalisiert werden, wenn die App über einen vollständigen Satz von Ressourcen auf Spanisch verfügt. Wenn ein Benutzer Katalanisch und dann Spanisch spricht, werden die nicht auf Katalanisch verfügbaren Ressourcen auf Spanisch angezeigt.
-- Bei Ressourcen mit spezifischen Ausnahmen für bestimmte Sprachen, bei denen alle anderen Sprachen einer gemeinsamen Ressource zugeordnet werden, muss die für alle Sprachen zu verwendende Ressource mit dem Tag „und” für eine unbestimmte Sprache markiert werden. Windows interpretiert das Sprachtag „und“ ähnlich wie den Platzhalter „\*“, d. h., spezifische Entsprechungen haben Vorrang vor der Hauptsprache der Anwendung. Wenn beispielsweise einige Ressourcen für Finnisch verschieden sind, der Rest der Ressourcen aber für alle Sprachen übereinstimmt, sollte die Ressource für Finnisch mit dem Sprachtag für Finnisch und die übrigen mit „und” markiert werden.
-- Verwenden Sie für Ressourcen, die auf dem Skript für eine Sprache anstatt auf der Sprache basieren, z.B. eine Schriftart oder eine Texthöhe, das Tag für eine unbestimmte Sprache mit einem angegebenen Skript an: 'und-&lt;script&gt;'. Verwenden Sie beispielsweise `und-Latn\\fonts.css` für lateinische Schriften und `und-Cryl\\fonts.css` für kyrillische Schriften.
+Lokalisierung möglicherweise nicht für alle Ressourcen erforderlich.
+
+- Mindestens stellen Sie sicher, dass alle Ressourcen in der Standardsprache vorhanden sind.
+- Eine Teilmenge der Ressourcen unter Umständen für eine eng verwandt Sprache (teilweise Lokalisierung) werden. Beispielsweise muss nicht die gesamte Benutzeroberfläche einer App ins Katalanische lokalisiert werden, wenn die App über einen vollständigen Satz von Ressourcen auf Spanisch verfügt. Ein Benutzer Katalanisch und dann Spanisch spricht, werden die, die nicht auf Katalanisch verfügbaren Ressourcen auf Spanisch angezeigt.
+- Einige Ressourcen möglicherweise Ausnahmen für bestimmte Sprachen, während die meisten der anderen Ressourcen einer gemeinsamen Ressource zugeordnet. In diesem Fall markieren Sie die Ressource, die für alle Sprachen mit dem unbestimmte Sprachtag "Und" verwendet werden soll. Windows interpretiert das Sprachtag „und“ ähnlich wie den Platzhalter „\*“, d. h., spezifische Entsprechungen haben Vorrang vor der Hauptsprache der Anwendung. Wenn beispielsweise einige Ressourcen für Finnisch verschieden sind, der Rest der Ressourcen aber für alle Sprachen übereinstimmt, sollte die Ressource für Finnisch mit dem Sprachtag für Finnisch und die übrigen mit „und” markiert werden.
+- Verwenden Sie für Ressourcen, die auf ein Language-Skript, z. B. eine Schriftart oder eine Texthöhe, das Tag unbestimmte Sprache mit einem angegebenen Skript: ' und-&lt;Skript&gt;". Verwenden Sie beispielsweise `und-Latn\\fonts.css` für lateinische Schriften und `und-Cryl\\fonts.css` für kyrillische Schriften.
 
 ## <a name="set-the-http-accept-language-request-header"></a>Festlegen des HTTP-Headers „Accept-Language“.
 Bedenken Sie, ob die von Ihnen aufgerufenen Webdienste im selben Umfang lokalisiert sind wie Ihre App. HTTP-Anforderungen in UWP- und Desktop-Apps sowie XMLHttpRequest (XHR) verwenden den HTTP-Standardheader „Accept-Language“. Dieser HTTP-Header wird der Liste der Benutzersprofilsprachen standardmäßig hinzugefügt. Jede Sprache in der Liste wird zudem um die regionsneutralen Varianten der Sprache sowie um eine Gewichtung (q) erweitert. Beispielsweise ergibt eine Benutzersprachenliste, die aus „fr-FR“ und „en-US“ besteht, einen„Accept-Language“-Anforderungsheader (HTTP) mit „fr-FR“, „fr“, „en-US“, „en“ („fr-FR,fr;q=0.8,en-US;q=0.5,en;q=0.3“). Aber wenn Ihre App eine Benutzeroberfläche in Französisch (Frankreich) anzeigt, die erste Sprache des Benutzers in dessen Präferenzenliste jedoch Deutsch ist, müssen Sie Französisch (Frankreich) explizit vom Dienst anfordern, um in der App konsistent zu bleiben.
