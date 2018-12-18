@@ -11,12 +11,12 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2e436e45e70980e9f75749b3a9377f61b636f890
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c86ddee3558da23cd8bea5e0f16c6a8695babf84
+ms.sourcegitcommit: 3433d0c7e70e00df0418887f71c2d094e9c30476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928547"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "8973951"
 ---
 # <a name="navigation-view"></a>Navigationsansicht
 
@@ -620,6 +620,25 @@ private void On_Navigated(object sender, NavigationEventArgs e)
 
         NavView.Header =
             ((muxc.NavigationViewItem)NavView.SelectedItem)?.Content?.ToString();
+    }
+}
+```
+
+Im folgenden wird ein [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/index) Version des Handlers **NavView_ItemInvoked** aus dem C#-Codebeispiel oben. Die Technik in C++ / WinRT-Handler müssen Sie zunächst speichern (in der [**NavigationViewItem**](/uwp/api/windows.ui.xaml.controls.navigationviewitem)-Tag) der vollständige Name der Seite, die Sie wechseln möchten. Im Ereignishandler Unboxing diesen Wert, schalten Sie es in ein Objekt [**Windows::UI::Xaml::Interop::TypeName**](/uwp/api/windows.ui.xaml.interop.typename) und verwenden diese, um zur Seite "Ziel" zu navigieren. Es ist nicht erforderlich für die Zuordnung-Variable, die mit dem Namen `_pages` , die Sie in der C#-Beispiel; finden Sie unter und zu bestätigen, dass die Werte in die Tags eines gültigen Typs sind Komponententests erstellen können. Weitere Informationen finden Sie [Boxing und unboxing von Einzelwerten für IInspectable mit C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/boxing).
+
+```cppwinrt
+void MainPage::NavView_ItemInvoked(Windows::Foundation::IInspectable const & /* sender */, Windows::UI::Xaml::Controls::NavigationViewItemInvokedEventArgs const & args)
+{
+    if (args.IsSettingsInvoked())
+    {
+        // Navigate to Settings.
+    }
+    else if (args.InvokedItemContainer())
+    {
+        Windows::UI::Xaml::Interop::TypeName pageTypeName;
+        pageTypeName.Name = unbox_value<hstring>(args.InvokedItemContainer().Tag());
+        pageTypeName.Kind = Windows::UI::Xaml::Interop::TypeKind::Primitive;
+        ContentFrame().Navigate(pageTypeName, nullptr);
     }
 }
 ```

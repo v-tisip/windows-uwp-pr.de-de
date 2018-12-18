@@ -9,12 +9,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 7083152efb4cf871f8abebf6d2970d2da4ba06e9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b755e8d165d58ce4303d9fefe6d051abce6c9765
+ms.sourcegitcommit: 3433d0c7e70e00df0418887f71c2d094e9c30476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926092"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "8973941"
 ---
 # <a name="app-icons-and-logos"></a>App-Symbole und Logos 
 
@@ -71,7 +71,7 @@ Der Skalierungsfaktor bestimmt die Größe von UI-Elemente, z. B. Text. Skalieru
 :::row-end:::  
 
 
-Da Ressourcen für app-Symbole, Bitmaps sind und Bitmaps nicht gut skalieren, es wird empfohlen, einer Version alle Ressourcen Symbol für jedes Skalierungsfaktor: 100 %, 125 %, 150 %, 200 % und 400 %. Viele der Symbole ist! Fortunatly, Visual Studio bietet ein Tool, das zum Erstellen und aktualisieren diese Symbole erleichtert. 
+Da Ressourcen für app-Symbole, Bitmaps sind und Bitmaps nicht gut skalieren, es wird empfohlen, einer Version alle Ressourcen Symbol für jedes Skalierungsfaktor: 100 %, 125 %, 150 %, 200 % und 400 %. Viele der Symbole ist! Glücklicherweise stellt Visual Studio ein Tool, das zum Erstellen und aktualisieren diese Symbole erleichtert. 
 
 ## <a name="microsoft-store-listing-image"></a>Abbildung der Microsoft Store-Eintrag
 
