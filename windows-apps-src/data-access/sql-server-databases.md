@@ -5,64 +5,69 @@ ms.date: 11/13/2017
 ms.topic: article
 keywords: windows 10, uwp, SQL Server, datenbank
 ms.localizationpriority: medium
-ms.openlocfilehash: 5cb4b16cea3368660ffcb1bc4b252391a73ab13e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4fe215a593293ff91afb7f71a830512ac365093f
+ms.sourcegitcommit: 8ac3818db796a144b44f848b6211bc46a62ab544
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940811"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "8976927"
 ---
-# <a name="use-a-sql-server-database-in-a-uwp-app"></a><span data-ttu-id="23918-104">Verwenden einer SQL Server-Datenbank in einer UWP-App</span><span class="sxs-lookup"><span data-stu-id="23918-104">Use a SQL Server database in a UWP app</span></span>
-<span data-ttu-id="23918-105">Ihre App kann sich direkt mit einer SQL Server-Datenbank verbinden und dann Daten über Klassen im Namespace [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) speichern und abrufen.</span><span class="sxs-lookup"><span data-stu-id="23918-105">Your app can connect directly to a SQL Server database and then store and retrieve data by using classes in the [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) namespace.</span></span>
+# <a name="use-a-sql-server-database-in-a-uwp-app"></a><span data-ttu-id="713bf-104">Verwenden einer SQL Server-Datenbank in einer UWP-App</span><span class="sxs-lookup"><span data-stu-id="713bf-104">Use a SQL Server database in a UWP app</span></span>
+<span data-ttu-id="713bf-105">Ihre App kann sich direkt mit einer SQL Server-Datenbank verbinden und dann Daten über Klassen im Namespace [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) speichern und abrufen.</span><span class="sxs-lookup"><span data-stu-id="713bf-105">Your app can connect directly to a SQL Server database and then store and retrieve data by using classes in the [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) namespace.</span></span>
 
-<span data-ttu-id="23918-106">In diesem Leitfaden zeigen wir Ihnen, wie Sie das tun können.</span><span class="sxs-lookup"><span data-stu-id="23918-106">In this guide, we'll show you one way to do that.</span></span> <span data-ttu-id="23918-107">Wenn Sie die [Northwind](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases)-Beispieldatenbank auf Ihrer SQL Server-Instanz installieren und dann diese Snippets verwenden, erhalten Sie eine grundlegende Benutzeroberfläche, die Produkte aus der Northwind-Beispieldatenbank anzeigt.</span><span class="sxs-lookup"><span data-stu-id="23918-107">If you install the [Northwind](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases) sample database onto your SQL Server instance, and then use these snippets, you'll end up with a basic UI that shows products from the Northwind sample database.</span></span>
+<span data-ttu-id="713bf-106">In diesem Leitfaden zeigen wir Ihnen, wie Sie das tun können.</span><span class="sxs-lookup"><span data-stu-id="713bf-106">In this guide, we'll show you one way to do that.</span></span> <span data-ttu-id="713bf-107">Wenn Sie die [Northwind](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases)-Beispieldatenbank auf Ihrer SQL Server-Instanz installieren und dann diese Snippets verwenden, erhalten Sie eine grundlegende Benutzeroberfläche, die Produkte aus der Northwind-Beispieldatenbank anzeigt.</span><span class="sxs-lookup"><span data-stu-id="713bf-107">If you install the [Northwind](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases) sample database onto your SQL Server instance, and then use these snippets, you'll end up with a basic UI that shows products from the Northwind sample database.</span></span>
 
 ![Northwind-Produkte](images/products-northwind.png)
 
-<span data-ttu-id="23918-109">Die in diesem Leitfaden gezeigten Snippets basieren auf diesem [vollständigeren Beispiel](https://github.com/StefanWickDev/IgniteDemos/tree/master/NorthwindDemo).</span><span class="sxs-lookup"><span data-stu-id="23918-109">The snippets that appear in this guide are based on this more [complete sample](https://github.com/StefanWickDev/IgniteDemos/tree/master/NorthwindDemo).</span></span>
+<span data-ttu-id="713bf-109">Die in diesem Leitfaden gezeigten Snippets basieren auf diesem [vollständigeren Beispiel](https://github.com/StefanWickDev/IgniteDemos/tree/master/NorthwindDemo).</span><span class="sxs-lookup"><span data-stu-id="713bf-109">The snippets that appear in this guide are based on this more [complete sample](https://github.com/StefanWickDev/IgniteDemos/tree/master/NorthwindDemo).</span></span>
 
-## <a name="first-set-up-your-solution"></a><span data-ttu-id="23918-110">Richten Sie zunächst Ihre Lösung ein</span><span class="sxs-lookup"><span data-stu-id="23918-110">First, set up your solution</span></span>
+## <a name="first-set-up-your-solution"></a><span data-ttu-id="713bf-110">Richten Sie zunächst Ihre Lösung ein</span><span class="sxs-lookup"><span data-stu-id="713bf-110">First, set up your solution</span></span>
 
-<span data-ttu-id="23918-111">Um Ihre App direkt mit einer SQL Server-Datenbank zu verbinden, stellen Sie sicher, dass die Mindestversion Ihres Projekts auf das Fall Creators Update zielt.</span><span class="sxs-lookup"><span data-stu-id="23918-111">To connect your app directly to a SQL Server database, make sure that the minimum version of your project targets the Fall Creators update.</span></span>  <span data-ttu-id="23918-112">Sie finden diese Informationen auf der Eigenschaftsseite Ihres UWP-Projekts.</span><span class="sxs-lookup"><span data-stu-id="23918-112">You can find that information in the properties page of your UWP project.</span></span>
+<span data-ttu-id="713bf-111">Um Ihre App direkt mit einer SQL Server-Datenbank zu verbinden, stellen Sie sicher, dass die Mindestversion Ihres Projekts auf das Fall Creators Update zielt.</span><span class="sxs-lookup"><span data-stu-id="713bf-111">To connect your app directly to a SQL Server database, make sure that the minimum version of your project targets the Fall Creators update.</span></span>  <span data-ttu-id="713bf-112">Sie finden diese Informationen auf der Eigenschaftsseite Ihres UWP-Projekts.</span><span class="sxs-lookup"><span data-stu-id="713bf-112">You can find that information in the properties page of your UWP project.</span></span>
 
 ![Mindestversion des Windows SDKs](images/min-version-fall-creators.png)
 
-<span data-ttu-id="23918-114">Öffnen Sie die Datei **Package.appxmanifest** Ihres UWP-Projekts im Manifest-Designer.</span><span class="sxs-lookup"><span data-stu-id="23918-114">Open the **Package.appxmanifest** file of your UWP project in the manifest designer.</span></span>
+<span data-ttu-id="713bf-114">Öffnen Sie die Datei **Package.appxmanifest** Ihres UWP-Projekts im Manifest-Designer.</span><span class="sxs-lookup"><span data-stu-id="713bf-114">Open the **Package.appxmanifest** file of your UWP project in the manifest designer.</span></span>
 
-<span data-ttu-id="23918-115">Aktivieren Sie auf der Registerkarte **Funktionen** das Kontrollkästchen **Unternehmensauthentifizierung**.</span><span class="sxs-lookup"><span data-stu-id="23918-115">In the **Capabilities** tab, select the **Enterprise Authentication** checkbox.</span></span>
+<span data-ttu-id="713bf-115">Aktivieren Sie in der Registerkarte " **Funktionen** " das **Unternehmensauthentifizierung** Kontrollkästchen, wenn Sie Windows-Authentifizierung für die Authentifizierung von SQL Server verwenden.</span><span class="sxs-lookup"><span data-stu-id="713bf-115">In the **Capabilities** tab, select the **Enterprise Authentication** checkbox if you are using Windows Authentication for authenticating your SQL Server.</span></span>
 
 ![Funktion Unternehmensauthentifizierung](images/enterprise-authentication.png)
 
 <a id="use-data" />
 
-## <a name="add-and-retrieve-data-in-a-sql-server-database"></a><span data-ttu-id="23918-117">Hinzufügen und Abrufen von Daten in einer SQL Server-Datenbank</span><span class="sxs-lookup"><span data-stu-id="23918-117">Add and retrieve data in a SQL Server database</span></span>
+## <a name="add-and-retrieve-data-in-a-sql-server-database"></a><span data-ttu-id="713bf-117">Hinzufügen und Abrufen von Daten in einer SQL Server-Datenbank</span><span class="sxs-lookup"><span data-stu-id="713bf-117">Add and retrieve data in a SQL Server database</span></span>
 
-<span data-ttu-id="23918-118">In diesem Abschnitt werden wir diese Dinge tun:</span><span class="sxs-lookup"><span data-stu-id="23918-118">In this section,  we'll do these things:</span></span>
+<span data-ttu-id="713bf-118">In diesem Abschnitt werden wir diese Dinge tun:</span><span class="sxs-lookup"><span data-stu-id="713bf-118">In this section,  we'll do these things:</span></span>
 
-<span data-ttu-id="23918-119">:one: Fügen Sie eine Verbindungszeichenfolge hinzu.</span><span class="sxs-lookup"><span data-stu-id="23918-119">:one: Add a connection string.</span></span>
+<span data-ttu-id="713bf-119">:one: Fügen Sie eine Verbindungszeichenfolge hinzu.</span><span class="sxs-lookup"><span data-stu-id="713bf-119">:one: Add a connection string.</span></span>
 
-<span data-ttu-id="23918-120">:two: Legen Sie eine Klasse für Produktdaten an.</span><span class="sxs-lookup"><span data-stu-id="23918-120">:two: Create a class to hold product data.</span></span>
+<span data-ttu-id="713bf-120">:two: Legen Sie eine Klasse für Produktdaten an.</span><span class="sxs-lookup"><span data-stu-id="713bf-120">:two: Create a class to hold product data.</span></span>
 
-<span data-ttu-id="23918-121">:three: Rufen Sie Produkte aus der SQL Server-Datenbank ab.</span><span class="sxs-lookup"><span data-stu-id="23918-121">:three: Retrieve products from the SQL Server database.</span></span>
+<span data-ttu-id="713bf-121">:three: Rufen Sie Produkte aus der SQL Server-Datenbank ab.</span><span class="sxs-lookup"><span data-stu-id="713bf-121">:three: Retrieve products from the SQL Server database.</span></span>
 
-<span data-ttu-id="23918-122">:four: Fügen Sie eine einfache Benutzeroberfläche hinzu.</span><span class="sxs-lookup"><span data-stu-id="23918-122">:four: Add a basic user interface.</span></span>
+<span data-ttu-id="713bf-122">:four: Fügen Sie eine einfache Benutzeroberfläche hinzu.</span><span class="sxs-lookup"><span data-stu-id="713bf-122">:four: Add a basic user interface.</span></span>
 
-<span data-ttu-id="23918-123">:five: Füllen Sie das UI mit Produkten.</span><span class="sxs-lookup"><span data-stu-id="23918-123">:five: Populate the UI with Products.</span></span>
+<span data-ttu-id="713bf-123">:five: Füllen Sie das UI mit Produkten.</span><span class="sxs-lookup"><span data-stu-id="713bf-123">:five: Populate the UI with Products.</span></span>
 
 >[!NOTE]
-> <span data-ttu-id="23918-124">Dieser Abschnitt zeigt eine Möglichkeit, Ihren Datenzugriffscode zu organisieren.</span><span class="sxs-lookup"><span data-stu-id="23918-124">This section illustrates one way to organize your data access code.</span></span> <span data-ttu-id="23918-125">Es ist nur als Beispiel gedacht, wie Sie [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) zum Speichern und Abrufen von Daten aus einer SQL Server-Datenbank verwenden können.</span><span class="sxs-lookup"><span data-stu-id="23918-125">It's meant only to provide an example of how you can use  [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) to store and retrieve data from a SQL Server database.</span></span> <span data-ttu-id="23918-126">Sie können Ihren Code auf jede Art und Weise organisieren, die für das Design Ihrer App am sinnvollsten ist.</span><span class="sxs-lookup"><span data-stu-id="23918-126">You can organize your code in any way that makes the most sense to your application's design.</span></span>
+> <span data-ttu-id="713bf-124">Dieser Abschnitt zeigt eine Möglichkeit, Ihren Datenzugriffscode zu organisieren.</span><span class="sxs-lookup"><span data-stu-id="713bf-124">This section illustrates one way to organize your data access code.</span></span> <span data-ttu-id="713bf-125">Es ist nur als Beispiel gedacht, wie Sie [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) zum Speichern und Abrufen von Daten aus einer SQL Server-Datenbank verwenden können.</span><span class="sxs-lookup"><span data-stu-id="713bf-125">It's meant only to provide an example of how you can use  [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) to store and retrieve data from a SQL Server database.</span></span> <span data-ttu-id="713bf-126">Sie können Ihren Code auf jede Art und Weise organisieren, die für das Design Ihrer App am sinnvollsten ist.</span><span class="sxs-lookup"><span data-stu-id="713bf-126">You can organize your code in any way that makes the most sense to your application's design.</span></span>
 
-### <a name="add-a-connection-string"></a><span data-ttu-id="23918-127">Hinzufügen einer Verbindungszeichenfolge</span><span class="sxs-lookup"><span data-stu-id="23918-127">Add a connection string</span></span>
+### <a name="add-a-connection-string"></a><span data-ttu-id="713bf-127">Hinzufügen einer Verbindungszeichenfolge</span><span class="sxs-lookup"><span data-stu-id="713bf-127">Add a connection string</span></span>
 
-<span data-ttu-id="23918-128">Fügen Sie in der Datei **App.xaml.cs** eine Eigenschaft zur Klasse ``App`` hinzu, die anderen Klassen in Ihrer Lösung Zugriff auf die Verbindungszeichenfolge gibt.</span><span class="sxs-lookup"><span data-stu-id="23918-128">In the **App.xaml.cs** file, add a property to the ``App`` class, that gives other classes in your solution access to the connection string.</span></span>
+<span data-ttu-id="713bf-128">Fügen Sie in der Datei **App.xaml.cs** eine Eigenschaft zur Klasse ``App`` hinzu, die anderen Klassen in Ihrer Lösung Zugriff auf die Verbindungszeichenfolge gibt.</span><span class="sxs-lookup"><span data-stu-id="713bf-128">In the **App.xaml.cs** file, add a property to the ``App`` class, that gives other classes in your solution access to the connection string.</span></span>
 
-<span data-ttu-id="23918-129">Unsere Verbindungszeichenfolge zeigt auf die Northwind-Datenbank in einer SQL Server Express-Instanz.</span><span class="sxs-lookup"><span data-stu-id="23918-129">Our connection string points to the Northwind database in a SQL Server Express instance.</span></span>
+<span data-ttu-id="713bf-129">Unsere Verbindungszeichenfolge zeigt auf die Northwind-Datenbank in einer SQL Server Express-Instanz.</span><span class="sxs-lookup"><span data-stu-id="713bf-129">Our connection string points to the Northwind database in a SQL Server Express instance.</span></span>
 
 ```csharp
 sealed partial class App : Application
 {
+    // Connection string for using Windows Authentication.
     private string connectionString =
         @"Data Source=YourServerName\SQLEXPRESS;Initial Catalog=NORTHWIND;Integrated Security=SSPI";
+
+    // This is an example connection string for using SQL Server Authentication.
+    // private string connectionString =
+    //     @"Data Source=YourServerName\YourInstanceName;Initial Catalog=DatabaseName; User Id=XXXXX; Password=XXXXX";
 
     public string ConnectionString { get => connectionString; set => connectionString = value; }
 
@@ -70,9 +75,9 @@ sealed partial class App : Application
 }
 ```
 
-### <a name="create-a-class-to-hold-product-data"></a><span data-ttu-id="23918-130">Legen Sie eine Klasse für Produktdaten an</span><span class="sxs-lookup"><span data-stu-id="23918-130">Create a class to hold product data</span></span>
+### <a name="create-a-class-to-hold-product-data"></a><span data-ttu-id="713bf-130">Legen Sie eine Klasse für Produktdaten an</span><span class="sxs-lookup"><span data-stu-id="713bf-130">Create a class to hold product data</span></span>
 
-<span data-ttu-id="23918-131">Wir erstellen eine Klasse, die das Ereignis [INotifyPropertyChanged](https://msdn.microsoft.com/library/system.componentmodel.inotifypropertychanged.aspx) implementiert, so dass wir Attribute in unserer XAML-Benutzeroberfläche an die Eigenschaften in dieser Klasse binden können.</span><span class="sxs-lookup"><span data-stu-id="23918-131">We'll create a class that implements the [INotifyPropertyChanged](https://msdn.microsoft.com/library/system.componentmodel.inotifypropertychanged.aspx) event so that we can bind attributes in our XAML UI to the properties in this class.</span></span>
+<span data-ttu-id="713bf-131">Wir erstellen eine Klasse, die das Ereignis [INotifyPropertyChanged](https://msdn.microsoft.com/library/system.componentmodel.inotifypropertychanged.aspx) implementiert, so dass wir Attribute in unserer XAML-Benutzeroberfläche an die Eigenschaften in dieser Klasse binden können.</span><span class="sxs-lookup"><span data-stu-id="713bf-131">We'll create a class that implements the [INotifyPropertyChanged](https://msdn.microsoft.com/library/system.componentmodel.inotifypropertychanged.aspx) event so that we can bind attributes in our XAML UI to the properties in this class.</span></span>
 
 ```csharp
 public class Product : INotifyPropertyChanged
@@ -99,9 +104,9 @@ public class Product : INotifyPropertyChanged
 }
 ```
 
-### <a name="retrieve-products-from-the-sql-server-database"></a><span data-ttu-id="23918-132">Produkte aus der SQL Server-Datenbank abrufen</span><span class="sxs-lookup"><span data-stu-id="23918-132">Retrieve products from the SQL Server database</span></span>
+### <a name="retrieve-products-from-the-sql-server-database"></a><span data-ttu-id="713bf-132">Produkte aus der SQL Server-Datenbank abrufen</span><span class="sxs-lookup"><span data-stu-id="713bf-132">Retrieve products from the SQL Server database</span></span>
 
-<span data-ttu-id="23918-133">Erstellen Sie eine Methode, die Produkte aus der Northwind-Beispieldatenbank abruft und diese dann als [ObservableCollection](https://msdn.microsoft.com/library/windows/apps/ms668604.aspx)-Collection von ``Product``-Instanzen zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="23918-133">Create a method that gets products from the Northwind sample database, and then returns them as an [ObservableCollection](https://msdn.microsoft.com/library/windows/apps/ms668604.aspx) collection of ``Product`` instances.</span></span>
+<span data-ttu-id="713bf-133">Erstellen Sie eine Methode, die Produkte aus der Northwind-Beispieldatenbank abruft und diese dann als [ObservableCollection](https://msdn.microsoft.com/library/windows/apps/ms668604.aspx)-Collection von ``Product``-Instanzen zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="713bf-133">Create a method that gets products from the Northwind sample database, and then returns them as an [ObservableCollection](https://msdn.microsoft.com/library/windows/apps/ms668604.aspx) collection of ``Product`` instances.</span></span>
 
 ```csharp
 public ObservableCollection<Product> GetProducts(string connectionString)
@@ -149,11 +154,11 @@ public ObservableCollection<Product> GetProducts(string connectionString)
 }
 ```
 
-### <a name="add-a-basic-user-interface"></a><span data-ttu-id="23918-134">Hinzufügen einer einfachen Benutzeroberfläche</span><span class="sxs-lookup"><span data-stu-id="23918-134">Add a basic user interface</span></span>
+### <a name="add-a-basic-user-interface"></a><span data-ttu-id="713bf-134">Hinzufügen einer einfachen Benutzeroberfläche</span><span class="sxs-lookup"><span data-stu-id="713bf-134">Add a basic user interface</span></span>
 
- <span data-ttu-id="23918-135">Fügen Sie den folgenden XAML-Code zur Datei **MainPage.xaml** des UWP-Projekts hinzu.</span><span class="sxs-lookup"><span data-stu-id="23918-135">Add the following XAML to the **MainPage.xaml** file of the UWP project.</span></span>
+ <span data-ttu-id="713bf-135">Fügen Sie den folgenden XAML-Code zur Datei **MainPage.xaml** des UWP-Projekts hinzu.</span><span class="sxs-lookup"><span data-stu-id="713bf-135">Add the following XAML to the **MainPage.xaml** file of the UWP project.</span></span>
 
- <span data-ttu-id="23918-136">Dieser XAML-Code erstellt ein [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), um jedes Produkt anzuzeigen, das Sie im vorherigen Snippet zurückgegeben haben. Es bindet die Attribute jeder Zeile im [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) an die Eigenschaften, die wir in der Klasse ``Product`` definiert haben.</span><span class="sxs-lookup"><span data-stu-id="23918-136">This XAML creates a [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) to show each product that you returned in the previous snippet, and binds the attributes of each row in the [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) to the properties that we defined in the ``Product`` class.</span></span>
+ <span data-ttu-id="713bf-136">Dieser XAML-Code erstellt ein [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), um jedes Produkt anzuzeigen, das Sie im vorherigen Snippet zurückgegeben haben. Es bindet die Attribute jeder Zeile im [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) an die Eigenschaften, die wir in der Klasse ``Product`` definiert haben.</span><span class="sxs-lookup"><span data-stu-id="713bf-136">This XAML creates a [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) to show each product that you returned in the previous snippet, and binds the attributes of each row in the [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) to the properties that we defined in the ``Product`` class.</span></span>
 
 ```xml
 <Grid Background="{ThemeResource SystemControlAcrylicWindowBrush}">
@@ -201,9 +206,9 @@ public ObservableCollection<Product> GetProducts(string connectionString)
 </Grid>
 ```
 
-### <a name="show-products-in-the-listview"></a><span data-ttu-id="23918-137">Produkte im ListView anzeigen</span><span class="sxs-lookup"><span data-stu-id="23918-137">Show products in the ListView</span></span>
+### <a name="show-products-in-the-listview"></a><span data-ttu-id="713bf-137">Produkte im ListView anzeigen</span><span class="sxs-lookup"><span data-stu-id="713bf-137">Show products in the ListView</span></span>
 
-<span data-ttu-id="23918-138">Öffnen Sie die Datei **MainPage.xaml.cs** und fügen Sie Code zum Konstruktor der ``MainPage``-Klasse hinzu, die die **ItemSource**-Eigenschaft des [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) auf die [ObservableCollection](https://msdn.microsoft.com/library/windows/apps/ms668604.aspx) der ``Product``-Instanzen setzt.</span><span class="sxs-lookup"><span data-stu-id="23918-138">Open the **MainPage.xaml.cs** file, and add code to the constructor of the ``MainPage`` class that sets the **ItemSource** property of the [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) to the [ObservableCollection](https://msdn.microsoft.com/library/windows/apps/ms668604.aspx) of ``Product`` instances.</span></span>
+<span data-ttu-id="713bf-138">Öffnen Sie die Datei **MainPage.xaml.cs** und fügen Sie Code zum Konstruktor der ``MainPage``-Klasse hinzu, die die **ItemSource**-Eigenschaft des [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) auf die [ObservableCollection](https://msdn.microsoft.com/library/windows/apps/ms668604.aspx) der ``Product``-Instanzen setzt.</span><span class="sxs-lookup"><span data-stu-id="713bf-138">Open the **MainPage.xaml.cs** file, and add code to the constructor of the ``MainPage`` class that sets the **ItemSource** property of the [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) to the [ObservableCollection](https://msdn.microsoft.com/library/windows/apps/ms668604.aspx) of ``Product`` instances.</span></span>
 
 ```csharp
 public MainPage()
@@ -213,32 +218,32 @@ public MainPage()
 }
 ```
 
-<span data-ttu-id="23918-139">Starten Sie das Projekt und sehen Sie sich die Produkte aus der Northwind-Beispieldatenbank in der Benutzeroberfläche an.</span><span class="sxs-lookup"><span data-stu-id="23918-139">Start the project and see products from the Northwind sample database appear in the UI.</span></span>
+<span data-ttu-id="713bf-139">Starten Sie das Projekt und sehen Sie sich die Produkte aus der Northwind-Beispieldatenbank in der Benutzeroberfläche an.</span><span class="sxs-lookup"><span data-stu-id="713bf-139">Start the project and see products from the Northwind sample database appear in the UI.</span></span>
 
 ![Northwind-Produkte](images/products-northwind.png)
 
-<span data-ttu-id="23918-141">Erkunden Sie den [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)-Namespace, um zu sehen, was Sie mit Daten in Ihrer SQL Server-Datenbank noch alles machen können.</span><span class="sxs-lookup"><span data-stu-id="23918-141">Explore the [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) namespace to see what other things you can do with data in your SQL Server database.</span></span>
+<span data-ttu-id="713bf-141">Erkunden Sie den [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)-Namespace, um zu sehen, was Sie mit Daten in Ihrer SQL Server-Datenbank noch alles machen können.</span><span class="sxs-lookup"><span data-stu-id="713bf-141">Explore the [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) namespace to see what other things you can do with data in your SQL Server database.</span></span>
 
-## <a name="trouble-connecting-to-your-database"></a><span data-ttu-id="23918-142">Probleme beim Herstellen einer Verbindung mit der Datenbank?</span><span class="sxs-lookup"><span data-stu-id="23918-142">Trouble connecting to your database?</span></span>
+## <a name="trouble-connecting-to-your-database"></a><span data-ttu-id="713bf-142">Probleme beim Herstellen einer Verbindung mit der Datenbank?</span><span class="sxs-lookup"><span data-stu-id="713bf-142">Trouble connecting to your database?</span></span>
 
-<span data-ttu-id="23918-143">In den meisten Fällen muss ein Aspekt der SQL Server-Konfiguration geändert werden.</span><span class="sxs-lookup"><span data-stu-id="23918-143">In most cases, some aspect of the SQL Server configuration needs to be changed.</span></span> <span data-ttu-id="23918-144">Wenn Sie mit einem anderen Typ von Desktopanwendung wie einer Windows Forms- oder WPF-Anwendung eine Verbindung mit der Datenbank herstellen können, stellen Sie sicher, dass Sie TCP/IP für SQL Server aktiviert haben.</span><span class="sxs-lookup"><span data-stu-id="23918-144">If you're able to connect to your database from another type of desktop application such as a Windows Forms or WPF application, ensure that you've enabled TCP/IP for SQL Server.</span></span> <span data-ttu-id="23918-145">Dies können über die Konsole **Computerverwaltung** durchführen.</span><span class="sxs-lookup"><span data-stu-id="23918-145">You can do that in the **Computer Management** console.</span></span>
+<span data-ttu-id="713bf-143">In den meisten Fällen muss ein Aspekt der SQL Server-Konfiguration geändert werden.</span><span class="sxs-lookup"><span data-stu-id="713bf-143">In most cases, some aspect of the SQL Server configuration needs to be changed.</span></span> <span data-ttu-id="713bf-144">Wenn Sie mit einem anderen Typ von Desktopanwendung wie einer Windows Forms- oder WPF-Anwendung eine Verbindung mit der Datenbank herstellen können, stellen Sie sicher, dass Sie TCP/IP für SQL Server aktiviert haben.</span><span class="sxs-lookup"><span data-stu-id="713bf-144">If you're able to connect to your database from another type of desktop application such as a Windows Forms or WPF application, ensure that you've enabled TCP/IP for SQL Server.</span></span> <span data-ttu-id="713bf-145">Dies können über die Konsole **Computerverwaltung** durchführen.</span><span class="sxs-lookup"><span data-stu-id="713bf-145">You can do that in the **Computer Management** console.</span></span>
 
 ![Computerverwaltung](images/computer-management.png)
 
-<span data-ttu-id="23918-147">Stellen Sie dann sicher, dass Ihr SQL Server-Browser-Dienst ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="23918-147">Then, make sure that your SQL Server Browser service is running.</span></span>
+<span data-ttu-id="713bf-147">Stellen Sie dann sicher, dass Ihr SQL Server-Browser-Dienst ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="713bf-147">Then, make sure that your SQL Server Browser service is running.</span></span>
 
 ![SQL Server-Browser-Dienst](images/sql-browser-service.png)
 
-## <a name="next-steps"></a><span data-ttu-id="23918-149">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="23918-149">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="713bf-149">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="713bf-149">Next steps</span></span>
 
-**<span data-ttu-id="23918-150">Verwenden einer einfachen Datenbank, um Daten auf dem Gerät des Benutzers zu speichern</span><span class="sxs-lookup"><span data-stu-id="23918-150">Use a light-weight database to store data on the users device</span></span>**
+**<span data-ttu-id="713bf-150">Verwenden einer einfachen Datenbank, um Daten auf dem Gerät des Benutzers zu speichern</span><span class="sxs-lookup"><span data-stu-id="713bf-150">Use a light-weight database to store data on the users device</span></span>**
 
-<span data-ttu-id="23918-151">Weitere Infos finden Sie unter [Verwenden Sie eine SQLite-Datenbank in einer UWP-App](sqlite-databases.md).</span><span class="sxs-lookup"><span data-stu-id="23918-151">See [Use a SQLite database in a UWP app](sqlite-databases.md).</span></span>
+<span data-ttu-id="713bf-151">Weitere Infos finden Sie unter [Verwenden Sie eine SQLite-Datenbank in einer UWP-App](sqlite-databases.md).</span><span class="sxs-lookup"><span data-stu-id="713bf-151">See [Use a SQLite database in a UWP app](sqlite-databases.md).</span></span>
 
-**<span data-ttu-id="23918-152">Nutzen Sie Code zwischen verschiedenen Apps auf verschiedenen Plattformen</span><span class="sxs-lookup"><span data-stu-id="23918-152">Share code between different apps across different platforms</span></span>**
+**<span data-ttu-id="713bf-152">Nutzen Sie Code zwischen verschiedenen Apps auf verschiedenen Plattformen</span><span class="sxs-lookup"><span data-stu-id="713bf-152">Share code between different apps across different platforms</span></span>**
 
-<span data-ttu-id="23918-153">Weitere Informationen finden Sie unter [Teilen von Code zwischen einer Desktop-App und einer UWP-App](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-migrate)</span><span class="sxs-lookup"><span data-stu-id="23918-153">See [Share code between desktop and UWP](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-migrate).</span></span>
+<span data-ttu-id="713bf-153">Weitere Informationen finden Sie unter [Teilen von Code zwischen einer Desktop-App und einer UWP-App](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-migrate)</span><span class="sxs-lookup"><span data-stu-id="713bf-153">See [Share code between desktop and UWP](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-migrate).</span></span>
 
-**<span data-ttu-id="23918-154">Hinzufügen von Master-Detailseiten mit Azure SQL-Backends</span><span class="sxs-lookup"><span data-stu-id="23918-154">Add master detail pages with Azure SQL back ends</span></span>**
+**<span data-ttu-id="713bf-154">Hinzufügen von Master-Detailseiten mit Azure SQL-Backends</span><span class="sxs-lookup"><span data-stu-id="713bf-154">Add master detail pages with Azure SQL back ends</span></span>**
 
-<span data-ttu-id="23918-155">Mehr unter [Beispiel einer Kundenauftragsdatenbank.](https://github.com/Microsoft/Windows-appsample-customers-orders-database)</span><span class="sxs-lookup"><span data-stu-id="23918-155">See [Customer Orders Database sample](https://github.com/Microsoft/Windows-appsample-customers-orders-database).</span></span>
+<span data-ttu-id="713bf-155">Mehr unter [Beispiel einer Kundenauftragsdatenbank.](https://github.com/Microsoft/Windows-appsample-customers-orders-database)</span><span class="sxs-lookup"><span data-stu-id="713bf-155">See [Customer Orders Database sample](https://github.com/Microsoft/Windows-appsample-customers-orders-database).</span></span>

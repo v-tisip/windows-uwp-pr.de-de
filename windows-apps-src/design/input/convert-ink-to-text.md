@@ -8,34 +8,34 @@ keywords: Windows Ink, Windows-Freihandeingabe, DirectInk, InkPresenter, InkCanv
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b25a37fb06688e7841490e00d1c83640d3155d50
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 581f91099a09cff9307a2b4119f9db938f1b83f9
+ms.sourcegitcommit: 8ac3818db796a144b44f848b6211bc46a62ab544
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924493"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "8976917"
 ---
-# <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a><span data-ttu-id="3bdfa-103">Erkennen von Windows Ink-Strichen als Text und Formen</span><span class="sxs-lookup"><span data-stu-id="3bdfa-103">Recognize Windows Ink strokes as text and shapes</span></span>
+# <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a><span data-ttu-id="6e04e-103">Erkennen von Windows Ink-Strichen als Text und Formen</span><span class="sxs-lookup"><span data-stu-id="6e04e-103">Recognize Windows Ink strokes as text and shapes</span></span>
 
-<span data-ttu-id="3bdfa-104">Konvertieren Sie mithilfe der integrierten Erkennungsfunktionen in Windows Ink Freihandstriche in Text und Form.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-104">Convert ink strokes to text and shapes using the recognition capabilities built into Windows Ink.</span></span>
+<span data-ttu-id="6e04e-104">Konvertieren Sie mithilfe der integrierten Erkennungsfunktionen in Windows Ink Freihandstriche in Text und Form.</span><span class="sxs-lookup"><span data-stu-id="6e04e-104">Convert ink strokes to text and shapes using the recognition capabilities built into Windows Ink.</span></span>
 
-> <span data-ttu-id="3bdfa-105">**Wichtige APIs**: [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)</span><span class="sxs-lookup"><span data-stu-id="3bdfa-105">**Important APIs**: [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)</span></span>
+> <span data-ttu-id="6e04e-105">**Wichtige APIs**: [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)</span><span class="sxs-lookup"><span data-stu-id="6e04e-105">**Important APIs**: [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)</span></span>
 
 
-## <a name="free-form-recognition-with-ink-analysis"></a><span data-ttu-id="3bdfa-106">Freiformerkennung mit der Freihandeingabenanalyse</span><span class="sxs-lookup"><span data-stu-id="3bdfa-106">Free-form recognition with ink analysis</span></span>
+## <a name="free-form-recognition-with-ink-analysis"></a><span data-ttu-id="6e04e-106">Freiformerkennung mit der Freihandeingabenanalyse</span><span class="sxs-lookup"><span data-stu-id="6e04e-106">Free-form recognition with ink analysis</span></span>
 
-<span data-ttu-id="3bdfa-107">Hier wird veranschaulicht, wie Sie das Windows Ink-Analysemodul ([Windows.UI.Input.Inking.Analysis](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.analysis)) zur Klassifizierung, Analyse und Erkennung von Freiformstrichen in einer [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Klasse als Text oder Formen verwenden können.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-107">Here, we demonstrate how to use the Windows Ink analysis engine ([Windows.UI.Input.Inking.Analysis](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.analysis)) to classify, analyze, and recognize a set of free-form strokes on an [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) as either text or shapes.</span></span> <span data-ttu-id="3bdfa-108">(Zusätzlich zur Text- und Formenerkennung können Sie mithilfe der Freihandeingabenanalyse die Dokumentstruktur, Aufzählungen und generische Zeichnungen erkennen.)</span><span class="sxs-lookup"><span data-stu-id="3bdfa-108">(In addition to text and shape recognition, ink analysis can also be used to recognize document structure, bullet lists, and generic drawings.)</span></span>
+<span data-ttu-id="6e04e-107">Hier wird veranschaulicht, wie Sie das Windows Ink-Analysemodul ([Windows.UI.Input.Inking.Analysis](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.analysis)) zur Klassifizierung, Analyse und Erkennung von Freiformstrichen in einer [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Klasse als Text oder Formen verwenden können.</span><span class="sxs-lookup"><span data-stu-id="6e04e-107">Here, we demonstrate how to use the Windows Ink analysis engine ([Windows.UI.Input.Inking.Analysis](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.analysis)) to classify, analyze, and recognize a set of free-form strokes on an [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) as either text or shapes.</span></span> <span data-ttu-id="6e04e-108">(Zusätzlich zur Text- und Formenerkennung können Sie mithilfe der Freihandeingabenanalyse die Dokumentstruktur, Aufzählungen und generische Zeichnungen erkennen.)</span><span class="sxs-lookup"><span data-stu-id="6e04e-108">(In addition to text and shape recognition, ink analysis can also be used to recognize document structure, bullet lists, and generic drawings.)</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="3bdfa-109">Informationen zu einfachen, einzeilige, Nur-Text-Szenarien wie der Formulareingabe finden Sie später unter [Eingeschränkte Schrifterkennung](#constrained-handwriting-recognition).</span><span class="sxs-lookup"><span data-stu-id="3bdfa-109">For basic, single-line, plain text scenarios such as form input, see [Constrained handwriting recognition](#constrained-handwriting-recognition) later in this topic.</span></span>
+> <span data-ttu-id="6e04e-109">Informationen zu einfachen, einzeilige, Nur-Text-Szenarien wie der Formulareingabe finden Sie später unter [Eingeschränkte Schrifterkennung](#constrained-handwriting-recognition).</span><span class="sxs-lookup"><span data-stu-id="6e04e-109">For basic, single-line, plain text scenarios such as form input, see [Constrained handwriting recognition](#constrained-handwriting-recognition) later in this topic.</span></span>
 
-<span data-ttu-id="3bdfa-110">In diesem Beispiel wird die Erkennung durch den Benutzer initiiert, wenn er nach Abschluss des Zeichnens auf eine Schaltfläche klickt.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-110">In this example, recognition is initiated when the user clicks a button to indicate they are finished drawing.</span></span>
+<span data-ttu-id="6e04e-110">In diesem Beispiel wird die Erkennung durch den Benutzer initiiert, wenn er nach Abschluss des Zeichnens auf eine Schaltfläche klickt.</span><span class="sxs-lookup"><span data-stu-id="6e04e-110">In this example, recognition is initiated when the user clicks a button to indicate they are finished drawing.</span></span>
 
-**<span data-ttu-id="3bdfa-111">Laden Sie dieses Beispiel aus [Beispiel für die Freihandeingabeanalyse (einfach)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip) herunter.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-111">Download this sample from [Ink analysis sample (basic)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)</span></span>**
+**<span data-ttu-id="6e04e-111">Laden Sie dieses Beispiel aus [Beispiel für die Freihandeingabeanalyse (einfach)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip) herunter.</span><span class="sxs-lookup"><span data-stu-id="6e04e-111">Download this sample from [Ink analysis sample (basic)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)</span></span>**
 
-1.  <span data-ttu-id="3bdfa-112">Zunächst richten wir die Benutzeroberfläche ein (MainPage.xaml).</span><span class="sxs-lookup"><span data-stu-id="3bdfa-112">First, we set up the UI (MainPage.xaml).</span></span> 
+1.  <span data-ttu-id="6e04e-112">Zunächst richten wir die Benutzeroberfläche ein (MainPage.xaml).</span><span class="sxs-lookup"><span data-stu-id="6e04e-112">First, we set up the UI (MainPage.xaml).</span></span> 
 
-    <span data-ttu-id="3bdfa-113">Die Benutzeroberfläche bietet die Schaltfläche „Erkennen“, eine [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas)- und eine [**Canvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.canvas)-Standardkomponente.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-113">The UI includes a "Recognize" button, an [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas), and a standard [**Canvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.canvas).</span></span> <span data-ttu-id="3bdfa-114">Bei Betätigen der Schaltfläche „Erkennen“ werden alle Freihandstriche im Freihandeingabe-Zeichenbereich analysiert. Wenn Formen und Texte erkannt werden, werden sie im Standardzeichenbereich gezeichnet.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-114">When the "Recognize" button is pressed, all ink strokes on the ink canvas are analyzed and (if recognized) corresponding shapes and text are drawn on the standard canvas.</span></span> <span data-ttu-id="3bdfa-115">Die ursprünglichen Freihandstriche werden anschließend aus dem Freihandeingabe-Zeichenbereich gelöscht.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-115">The original ink strokes are then deleted from the ink canvas.</span></span>
+    <span data-ttu-id="6e04e-113">Die Benutzeroberfläche bietet die Schaltfläche „Erkennen“, eine [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas)- und eine [**Canvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.canvas)-Standardkomponente.</span><span class="sxs-lookup"><span data-stu-id="6e04e-113">The UI includes a "Recognize" button, an [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas), and a standard [**Canvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.canvas).</span></span> <span data-ttu-id="6e04e-114">Bei Betätigen der Schaltfläche „Erkennen“ werden alle Freihandstriche im Freihandeingabe-Zeichenbereich analysiert. Wenn Formen und Texte erkannt werden, werden sie im Standardzeichenbereich gezeichnet.</span><span class="sxs-lookup"><span data-stu-id="6e04e-114">When the "Recognize" button is pressed, all ink strokes on the ink canvas are analyzed and (if recognized) corresponding shapes and text are drawn on the standard canvas.</span></span> <span data-ttu-id="6e04e-115">Die ursprünglichen Freihandstriche werden anschließend aus dem Freihandeingabe-Zeichenbereich gelöscht.</span><span class="sxs-lookup"><span data-stu-id="6e04e-115">The original ink strokes are then deleted from the ink canvas.</span></span>
 ```xaml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -63,21 +63,21 @@ ms.locfileid: "8924493"
         </Grid>
     </Grid>
 ```
-2. <span data-ttu-id="3bdfa-116">Fügen Sie in der CodeBehind-Datei der Benutzeroberfläche (MainPage.xaml.cs) die für die Freihandfunktion und die Freihandeingabenanalyse benötigten Namespaceverweistypen hinzu:</span><span class="sxs-lookup"><span data-stu-id="3bdfa-116">In the UI code-behind file (MainPage.xaml.cs), add the namespace type references required for our ink and ink analysis functionality:</span></span>
-    - [<span data-ttu-id="3bdfa-117">Windows.UI.Input.Inking</span><span class="sxs-lookup"><span data-stu-id="3bdfa-117">Windows.UI.Input.Inking</span></span>](https://docs.microsoft.com/uwp/api/windows.ui.input.inking)
-    - [<span data-ttu-id="3bdfa-118">Windows.UI.Input.Inking.Analysis</span><span class="sxs-lookup"><span data-stu-id="3bdfa-118">Windows.UI.Input.Inking.Analysis</span></span>](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.analysis)
-    - [<span data-ttu-id="3bdfa-119">Windows.UI.Xaml.Shapes</span><span class="sxs-lookup"><span data-stu-id="3bdfa-119">Windows.UI.Xaml.Shapes</span></span>](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes)
+2. <span data-ttu-id="6e04e-116">Fügen Sie in der CodeBehind-Datei der Benutzeroberfläche (MainPage.xaml.cs) die für die Freihandfunktion und die Freihandeingabenanalyse benötigten Namespaceverweistypen hinzu:</span><span class="sxs-lookup"><span data-stu-id="6e04e-116">In the UI code-behind file (MainPage.xaml.cs), add the namespace type references required for our ink and ink analysis functionality:</span></span>
+    - [<span data-ttu-id="6e04e-117">Windows.UI.Input.Inking</span><span class="sxs-lookup"><span data-stu-id="6e04e-117">Windows.UI.Input.Inking</span></span>](https://docs.microsoft.com/uwp/api/windows.ui.input.inking)
+    - [<span data-ttu-id="6e04e-118">Windows.UI.Input.Inking.Analysis</span><span class="sxs-lookup"><span data-stu-id="6e04e-118">Windows.UI.Input.Inking.Analysis</span></span>](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.analysis)
+    - [<span data-ttu-id="6e04e-119">Windows.UI.Xaml.Shapes</span><span class="sxs-lookup"><span data-stu-id="6e04e-119">Windows.UI.Xaml.Shapes</span></span>](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes)
 
-3. <span data-ttu-id="3bdfa-120">Anschließend geben wir die globalen Variablen an:</span><span class="sxs-lookup"><span data-stu-id="3bdfa-120">We then specify our global variables:</span></span>
+3. <span data-ttu-id="6e04e-120">Anschließend geben wir die globalen Variablen an:</span><span class="sxs-lookup"><span data-stu-id="6e04e-120">We then specify our global variables:</span></span>
 ```csharp
     InkAnalyzer inkAnalyzer = new InkAnalyzer();
     IReadOnlyList<InkStroke> inkStrokes = null;
     InkAnalysisResult inkAnalysisResults = null;
 ```
-4.  <span data-ttu-id="3bdfa-121">Dann werden einige grundlegende Verhaltensweisen für Freihandeingaben festgelegt:</span><span class="sxs-lookup"><span data-stu-id="3bdfa-121">Next, we set some basic ink input behaviors:</span></span>
-    - <span data-ttu-id="3bdfa-122">Die [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Eigenschaft wird für die Interpretation von Eingabedaten von Stift, Maus und Toucheingabe als Freihandstriche ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)) konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-122">The [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) is configured to interpret input data from pen, mouse, and touch as ink strokes ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)).</span></span> 
-    - <span data-ttu-id="3bdfa-123">Freihandstriche werden in der [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Klasse mit der angegebenen [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050)-Klasse gerendert.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-123">Ink strokes are rendered on the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) using the specified [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050).</span></span> 
-    - <span data-ttu-id="3bdfa-124">Außerdem wird ein Listener für das Click-Ereignis der Schaltfläche „Erkennen“ deklariert.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-124">A listener for the click event on the "Recognize" button is also declared.</span></span>
+4.  <span data-ttu-id="6e04e-121">Dann werden einige grundlegende Verhaltensweisen für Freihandeingaben festgelegt:</span><span class="sxs-lookup"><span data-stu-id="6e04e-121">Next, we set some basic ink input behaviors:</span></span>
+    - <span data-ttu-id="6e04e-122">Die [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Eigenschaft wird für die Interpretation von Eingabedaten von Stift, Maus und Toucheingabe als Freihandstriche ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)) konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="6e04e-122">The [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) is configured to interpret input data from pen, mouse, and touch as ink strokes ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)).</span></span> 
+    - <span data-ttu-id="6e04e-123">Freihandstriche werden in der [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Klasse mit der angegebenen [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050)-Klasse gerendert.</span><span class="sxs-lookup"><span data-stu-id="6e04e-123">Ink strokes are rendered on the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) using the specified [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050).</span></span> 
+    - <span data-ttu-id="6e04e-124">Außerdem wird ein Listener für das Click-Ereignis der Schaltfläche „Erkennen“ deklariert.</span><span class="sxs-lookup"><span data-stu-id="6e04e-124">A listener for the click event on the "Recognize" button is also declared.</span></span>
 ```csharp
 /// <summary>
 /// Initialize the UI page.
@@ -103,14 +103,14 @@ public MainPage()
         recognize.Click += RecognizeStrokes_Click;
     }
 ```
-5.  <span data-ttu-id="3bdfa-125">In diesem Beispiel wird die Freihandeingabenanalyse mit dem Click-Ereignishandler der Schaltfläche „Erkennen“ ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-125">For this example, we perform the ink analysis in the click event handler of the "Recognize" button.</span></span>
-    - <span data-ttu-id="3bdfa-126">Rufen Sie zuerst [**GetStrokes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.inkstrokecontainer.GetStrokes) im [**StrokeContainer**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.inkpresenter.StrokeContainer) von [**InkCanvas.InkPresenter**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter) auf, um alle aktuell erfassten Freihandstriche abzurufen.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-126">First, call [**GetStrokes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.inkstrokecontainer.GetStrokes) on the [**StrokeContainer**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.inkpresenter.StrokeContainer) of the [**InkCanvas.InkPresenter**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter) to get the collection of all current ink strokes.</span></span>
-    - <span data-ttu-id="3bdfa-127">Wenn Freihandstriche vorhanden sind, übergeben Sie sie in einem Aufruf an [**AddDataForStrokes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer#Windows_UI_Input_Inking_Analysis_InkAnalyzer_AddDataForStrokes_Windows_Foundation_Collections_IIterable_Windows_UI_Input_Inking_InkStroke__) von InkAnalyzer.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-127">If ink strokes are present, pass them in a call to [**AddDataForStrokes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer#Windows_UI_Input_Inking_Analysis_InkAnalyzer_AddDataForStrokes_Windows_Foundation_Collections_IIterable_Windows_UI_Input_Inking_InkStroke__) of the InkAnalyzer.</span></span>
-    - <span data-ttu-id="3bdfa-128">Wir versuchen, Zeichnungen und Text zu erkennen, Sie können allerdings auch die Methode [**SetStrokeDataKind**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.setstrokedatakind) verwenden, um anzugeben, ob Sie nur am Text (einschließlich der Dokumentstruktur und Aufzählungen) oder nur an den Zeichnungen (einschließlich der Formenerkennung) interessiert sind.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-128">We're trying to recognize both drawings and text, but you can use the [**SetStrokeDataKind**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.setstrokedatakind) method to specify whether you're interested only in text (including document structure and bullet lists) or only in drawings (including shape recognition).</span></span>
-    - <span data-ttu-id="3bdfa-129">Rufen Sie [**AnalyzeAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.AnalyzeAsync) auf, um die Freihandeingabenanalyse zu initiieren und [**InkAnalysisResult**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult) abzurufen.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-129">Call [**AnalyzeAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.AnalyzeAsync) to initiate ink analysis and get the [**InkAnalysisResult**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult).</span></span>
-    - <span data-ttu-id="3bdfa-130">Wenn unter [**Status**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult.Status) die Option **Aktualisiert** zurückgegeben wird, rufen Sie [**FindNodes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisroot.findnodes) für [**InkAnalysisNodeKind.InkWord**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind) und [**InkAnalysisNodeKind.InkDrawing**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind) auf.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-130">If [**Status**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult.Status) returns a state of **Updated**, call [**FindNodes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisroot.findnodes) for both [**InkAnalysisNodeKind.InkWord**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind) and [**InkAnalysisNodeKind.InkDrawing**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind).</span></span>
-    - <span data-ttu-id="3bdfa-131">Durchlaufen Sie beide Sätze der Knotentypen und zeichnen Sie den entsprechenden Text oder die Form in den Erkennungszeichenbereich (unter dem Freihandeingabe-Zeichenbereich).</span><span class="sxs-lookup"><span data-stu-id="3bdfa-131">Iterate through both sets of node types and draw the respective text or shape on the recognition canvas (below the ink canvas).</span></span>
-    - <span data-ttu-id="3bdfa-132">Löschen Sie dann die erkannten Knoten aus dem InkAnalyzer und die entsprechenden Freihandstriche aus dem Freihandeingabe-Zeichenbereich.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-132">Finally, delete the recognized nodes from the InkAnalyzer and the corresponding ink strokes from the ink canvas.</span></span>
+5.  <span data-ttu-id="6e04e-125">In diesem Beispiel wird die Freihandeingabenanalyse mit dem Click-Ereignishandler der Schaltfläche „Erkennen“ ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="6e04e-125">For this example, we perform the ink analysis in the click event handler of the "Recognize" button.</span></span>
+    - <span data-ttu-id="6e04e-126">Rufen Sie zuerst [**GetStrokes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.inkstrokecontainer.GetStrokes) im [**StrokeContainer**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.inkpresenter.StrokeContainer) von [**InkCanvas.InkPresenter**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter) auf, um alle aktuell erfassten Freihandstriche abzurufen.</span><span class="sxs-lookup"><span data-stu-id="6e04e-126">First, call [**GetStrokes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.inkstrokecontainer.GetStrokes) on the [**StrokeContainer**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.inkpresenter.StrokeContainer) of the [**InkCanvas.InkPresenter**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter) to get the collection of all current ink strokes.</span></span>
+    - <span data-ttu-id="6e04e-127">Wenn Freihandstriche vorhanden sind, übergeben Sie sie in einem Aufruf an [**AddDataForStrokes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer#Windows_UI_Input_Inking_Analysis_InkAnalyzer_AddDataForStrokes_Windows_Foundation_Collections_IIterable_Windows_UI_Input_Inking_InkStroke__) von InkAnalyzer.</span><span class="sxs-lookup"><span data-stu-id="6e04e-127">If ink strokes are present, pass them in a call to [**AddDataForStrokes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer#Windows_UI_Input_Inking_Analysis_InkAnalyzer_AddDataForStrokes_Windows_Foundation_Collections_IIterable_Windows_UI_Input_Inking_InkStroke__) of the InkAnalyzer.</span></span>
+    - <span data-ttu-id="6e04e-128">Wir versuchen, Zeichnungen und Text zu erkennen, Sie können allerdings auch die Methode [**SetStrokeDataKind**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.setstrokedatakind) verwenden, um anzugeben, ob Sie nur am Text (einschließlich der Dokumentstruktur und Aufzählungen) oder nur an den Zeichnungen (einschließlich der Formenerkennung) interessiert sind.</span><span class="sxs-lookup"><span data-stu-id="6e04e-128">We're trying to recognize both drawings and text, but you can use the [**SetStrokeDataKind**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.setstrokedatakind) method to specify whether you're interested only in text (including document structure and bullet lists) or only in drawings (including shape recognition).</span></span>
+    - <span data-ttu-id="6e04e-129">Rufen Sie [**AnalyzeAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.AnalyzeAsync) auf, um die Freihandeingabenanalyse zu initiieren und [**InkAnalysisResult**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult) abzurufen.</span><span class="sxs-lookup"><span data-stu-id="6e04e-129">Call [**AnalyzeAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.AnalyzeAsync) to initiate ink analysis and get the [**InkAnalysisResult**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult).</span></span>
+    - <span data-ttu-id="6e04e-130">Wenn unter [**Status**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult.Status) die Option **Aktualisiert** zurückgegeben wird, rufen Sie [**FindNodes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisroot.findnodes) für [**InkAnalysisNodeKind.InkWord**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind) und [**InkAnalysisNodeKind.InkDrawing**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind) auf.</span><span class="sxs-lookup"><span data-stu-id="6e04e-130">If [**Status**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult.Status) returns a state of **Updated**, call [**FindNodes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisroot.findnodes) for both [**InkAnalysisNodeKind.InkWord**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind) and [**InkAnalysisNodeKind.InkDrawing**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind).</span></span>
+    - <span data-ttu-id="6e04e-131">Durchlaufen Sie beide Sätze der Knotentypen und zeichnen Sie den entsprechenden Text oder die Form in den Erkennungszeichenbereich (unter dem Freihandeingabe-Zeichenbereich).</span><span class="sxs-lookup"><span data-stu-id="6e04e-131">Iterate through both sets of node types and draw the respective text or shape on the recognition canvas (below the ink canvas).</span></span>
+    - <span data-ttu-id="6e04e-132">Löschen Sie dann die erkannten Knoten aus dem InkAnalyzer und die entsprechenden Freihandstriche aus dem Freihandeingabe-Zeichenbereich.</span><span class="sxs-lookup"><span data-stu-id="6e04e-132">Finally, delete the recognized nodes from the InkAnalyzer and the corresponding ink strokes from the ink canvas.</span></span>
 ```csharp
 /// <summary>
 /// The "Analyze" button click handler.
@@ -208,7 +208,7 @@ private async void RecognizeStrokes_Click(object sender, RoutedEventArgs e)
         }
     }
 ```
-6. <span data-ttu-id="3bdfa-133">Im Folgenden wird die Funktion zum Zeichnen eines TextBlock-Elements im Erkennungszeichenbereich beschrieben.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-133">Here's the function for drawing a TextBlock on our recognition canvas.</span></span> <span data-ttu-id="3bdfa-134">Wir verwenden das umgebende Rechteck der zugehörigen Freihandstriche auf dem Freihandeingabe-Zeichenbereich an, um die Position und den Schriftgrad des TextBlock-Elements festlegen.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-134">We use the bounding rectangle of the associated ink stroke on the ink canvas to set the position and font size of the TextBlock.</span></span>
+6. <span data-ttu-id="6e04e-133">Im Folgenden wird die Funktion zum Zeichnen eines TextBlock-Elements im Erkennungszeichenbereich beschrieben.</span><span class="sxs-lookup"><span data-stu-id="6e04e-133">Here's the function for drawing a TextBlock on our recognition canvas.</span></span> <span data-ttu-id="6e04e-134">Wir verwenden das umgebende Rechteck der zugehörigen Freihandstriche auf dem Freihandeingabe-Zeichenbereich an, um die Position und den Schriftgrad des TextBlock-Elements festlegen.</span><span class="sxs-lookup"><span data-stu-id="6e04e-134">We use the bounding rectangle of the associated ink stroke on the ink canvas to set the position and font size of the TextBlock.</span></span>
 ```csharp
 /// <summary>
 /// Draw ink recognition text string on the recognitionCanvas.
@@ -227,7 +227,7 @@ private void DrawText(string recognizedText, Rect boundingRect)
     recognitionCanvas.Children.Add(text);
 }
 ```
-7. <span data-ttu-id="3bdfa-135">Im Folgenden werden die Funktionen zum Zeichnen von Ellipsen und Polygonen im Erkennungszeichenbereich beschrieben.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-135">Here are the functions for drawing ellipses and polygons on our recognition canvas.</span></span> <span data-ttu-id="3bdfa-136">Wir verwenden das umgebende Rechteck der zugehörigen Freihandstriche auf dem Freihandeingabe-Zeichenbereich, um die Position und den Schriftgrad der Formen festzulegen.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-136">We use the bounding rectangle of the associated ink stroke on the ink canvas to set the position and font size of the shapes.</span></span>
+7. <span data-ttu-id="6e04e-135">Im Folgenden werden die Funktionen zum Zeichnen von Ellipsen und Polygonen im Erkennungszeichenbereich beschrieben.</span><span class="sxs-lookup"><span data-stu-id="6e04e-135">Here are the functions for drawing ellipses and polygons on our recognition canvas.</span></span> <span data-ttu-id="6e04e-136">Wir verwenden das umgebende Rechteck der zugehörigen Freihandstriche auf dem Freihandeingabe-Zeichenbereich, um die Position und den Schriftgrad der Formen festzulegen.</span><span class="sxs-lookup"><span data-stu-id="6e04e-136">We use the bounding rectangle of the associated ink stroke on the ink canvas to set the position and font size of the shapes.</span></span>
 ```csharp
     // Draw an ellipse on the recognitionCanvas.
     private void DrawEllipse(InkAnalysisInkDrawing shape)
@@ -265,110 +265,113 @@ private void DrawText(string recognizedText, Rect boundingRect)
     }
 ```
 
-<span data-ttu-id="3bdfa-137">Nachfolgend finden Sie das Beispiel in Aktion:</span><span class="sxs-lookup"><span data-stu-id="3bdfa-137">Here's this sample in action:</span></span>
+<span data-ttu-id="6e04e-137">Nachfolgend finden Sie das Beispiel in Aktion:</span><span class="sxs-lookup"><span data-stu-id="6e04e-137">Here's this sample in action:</span></span>
 
-| <span data-ttu-id="3bdfa-138">Vor der Analyse</span><span class="sxs-lookup"><span data-stu-id="3bdfa-138">Before analysis</span></span> | <span data-ttu-id="3bdfa-139">Nach der Analyse</span><span class="sxs-lookup"><span data-stu-id="3bdfa-139">After analysis</span></span> |
+| <span data-ttu-id="6e04e-138">Vor der Analyse</span><span class="sxs-lookup"><span data-stu-id="6e04e-138">Before analysis</span></span> | <span data-ttu-id="6e04e-139">Nach der Analyse</span><span class="sxs-lookup"><span data-stu-id="6e04e-139">After analysis</span></span> |
 | --- | --- |
 | ![Vor der Analyse](images/ink/ink-analysis-raw2-small.png) | ![Nach der Analyse](images/ink/ink-analysis-analyzed2-small.png) |
 
 ---
-## <a name="constrained-handwriting-recognition"></a><span data-ttu-id="3bdfa-142">Eingeschränkte Schrifterkennung</span><span class="sxs-lookup"><span data-stu-id="3bdfa-142">Constrained handwriting recognition</span></span>
+## <a name="constrained-handwriting-recognition"></a><span data-ttu-id="6e04e-142">Eingeschränkte Schrifterkennung</span><span class="sxs-lookup"><span data-stu-id="6e04e-142">Constrained handwriting recognition</span></span>
 
-<span data-ttu-id="3bdfa-143">Im vorherigen Abschnitt ([Freiformerkennung mit der Freihandeingabenanalyse](#free-form-recognition-with-ink-analysis)) haben wir erklärt, wie Sie [Ink-Analyse-APIs](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis) verwenden, um beliebige Freihandstriche in einem InkCanvas-Bereich zu analysieren und zu erkennen.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-143">In the preceding section ([Free-form recognition with ink analysis](#free-form-recognition-with-ink-analysis)), we demonstrated how to use the [ink analysis APIs](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis) to analyze and recognize arbitrary ink strokes within an InkCanvas area.</span></span>
+<span data-ttu-id="6e04e-143">Im vorherigen Abschnitt ([Freiformerkennung mit der Freihandeingabenanalyse](#free-form-recognition-with-ink-analysis)) haben wir erklärt, wie Sie [Ink-Analyse-APIs](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis) verwenden, um beliebige Freihandstriche in einem InkCanvas-Bereich zu analysieren und zu erkennen.</span><span class="sxs-lookup"><span data-stu-id="6e04e-143">In the preceding section ([Free-form recognition with ink analysis](#free-form-recognition-with-ink-analysis)), we demonstrated how to use the [ink analysis APIs](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis) to analyze and recognize arbitrary ink strokes within an InkCanvas area.</span></span>
 
-<span data-ttu-id="3bdfa-144">In diesem Abschnitt wird veranschaulicht, wie mit dem Windows Ink-Schrifterkennungsmodul (nicht der Freihandeingabenanalyse) ein Satz von Freihandstrichen in einer [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Klasse in Text interpretiert wird (je nach standardmäßig installiertem Sprachpaket).</span><span class="sxs-lookup"><span data-stu-id="3bdfa-144">In this section, we demonstrate how to use the Windows Ink handwriting recognition engine (not ink analysis) to convert a set of strokes on an [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) to text (based on the installed default language pack).</span></span>
+<span data-ttu-id="6e04e-144">In diesem Abschnitt wird veranschaulicht, wie mit dem Windows Ink-Schrifterkennungsmodul (nicht der Freihandeingabenanalyse) ein Satz von Freihandstrichen in einer [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Klasse in Text interpretiert wird (je nach standardmäßig installiertem Sprachpaket).</span><span class="sxs-lookup"><span data-stu-id="6e04e-144">In this section, we demonstrate how to use the Windows Ink handwriting recognition engine (not ink analysis) to convert a set of strokes on an [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) to text (based on the installed default language pack).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="3bdfa-145">Die grundlegende Schrifterkennung, so wie in diesem Abschnitt beschrieben, eignet sich insbesondere für einfache einzeilige Nur-Text-Eingabeszenarien wie Formulareingaben.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-145">The basic handwriting recognition shown in this section is best suited for single-line, text input scenarios such as form input.</span></span> <span data-ttu-id="3bdfa-146">Informationen zu umfangreicheren Erkennungsszenarien, die eine Analyse und Interpretation der Dokumentstruktur, Listenelemente, Formen und Zeichnungen (zusätzlich zur Texterkennung) umfassen, finden Sie im vorherigen Abschnitt: [Freiformerkennung mit der Freihandeingabenanalyse](#free-form-recognition-with-ink-analysis).</span><span class="sxs-lookup"><span data-stu-id="3bdfa-146">For richer recognition scenarios that include analysis and interpretation of document structure, list items, shapes, and drawings (in addition to text recognition), see the previous section: [Free-form recognition with ink analysis](#free-form-recognition-with-ink-analysis).</span></span>
+> <span data-ttu-id="6e04e-145">Die grundlegende Schrifterkennung, so wie in diesem Abschnitt beschrieben, eignet sich insbesondere für einfache einzeilige Nur-Text-Eingabeszenarien wie Formulareingaben.</span><span class="sxs-lookup"><span data-stu-id="6e04e-145">The basic handwriting recognition shown in this section is best suited for single-line, text input scenarios such as form input.</span></span> <span data-ttu-id="6e04e-146">Informationen zu umfangreicheren Erkennungsszenarien, die eine Analyse und Interpretation der Dokumentstruktur, Listenelemente, Formen und Zeichnungen (zusätzlich zur Texterkennung) umfassen, finden Sie im vorherigen Abschnitt: [Freiformerkennung mit der Freihandeingabenanalyse](#free-form-recognition-with-ink-analysis).</span><span class="sxs-lookup"><span data-stu-id="6e04e-146">For richer recognition scenarios that include analysis and interpretation of document structure, list items, shapes, and drawings (in addition to text recognition), see the previous section: [Free-form recognition with ink analysis](#free-form-recognition-with-ink-analysis).</span></span>
 
-<span data-ttu-id="3bdfa-147">In diesem Beispiel wird die Erkennung durch den Benutzer initiiert, wenn er nach Abschluss des Schreibens auf eine Schaltfläche klickt.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-147">In this example, recognition is initiated when the user clicks a button to indicate they are finished writing.</span></span>
+<span data-ttu-id="6e04e-147">In diesem Beispiel wird die Erkennung durch den Benutzer initiiert, wenn er nach Abschluss des Schreibens auf eine Schaltfläche klickt.</span><span class="sxs-lookup"><span data-stu-id="6e04e-147">In this example, recognition is initiated when the user clicks a button to indicate they are finished writing.</span></span>
 
-**<span data-ttu-id="3bdfa-148">Laden Sie dieses Beispiel aus [Beispiel für die Freihandschrifterkennung](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip) herunter.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-148">Download this sample from [Ink handwriting recognition sample](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)</span></span>**
+**<span data-ttu-id="6e04e-148">Laden Sie dieses Beispiel aus [Beispiel für die Freihandschrifterkennung](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip) herunter.</span><span class="sxs-lookup"><span data-stu-id="6e04e-148">Download this sample from [Ink handwriting recognition sample](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)</span></span>**
 
-1.  <span data-ttu-id="3bdfa-149">Zuerst wird die Benutzeroberfläche eingerichtet.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-149">First, we set up the UI.</span></span>
+1.  <span data-ttu-id="6e04e-149">Zuerst wird die Benutzeroberfläche eingerichtet.</span><span class="sxs-lookup"><span data-stu-id="6e04e-149">First, we set up the UI.</span></span>
 
-    <span data-ttu-id="3bdfa-150">Die Benutzeroberfläche umfasst die Schaltfläche „Erkennen“, die [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Klasse und einen Bereich zum Anzeigen der Ergebnisse der Erkennung.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-150">The UI includes a "Recognize" button, the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), and an area to display recognition results.</span></span>    
-```    XAML
-<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <StackPanel x:Name="HeaderPanel"
-                    Orientation="Horizontal"
-                    Grid.Row="0">
-            <TextBlock x:Name="Header"
-                       Text="Basic ink recognition sample"
-                       Style="{ThemeResource HeaderTextBlockStyle}"
-                       Margin="10,0,0,0" />
-            <Button x:Name="recognize"
-                    Content="Recognize"
-                    Margin="50,0,10,0"/>
-        </StackPanel>
-        <Grid Grid.Row="1">
+    <span data-ttu-id="6e04e-150">Die Benutzeroberfläche umfasst die Schaltfläche „Erkennen“, die [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Klasse und einen Bereich zum Anzeigen der Ergebnisse der Erkennung.</span><span class="sxs-lookup"><span data-stu-id="6e04e-150">The UI includes a "Recognize" button, the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), and an area to display recognition results.</span></span>    
+
+    ```    XAML
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <InkCanvas x:Name="inkCanvas"
-                       Grid.Row="0"/>
-            <TextBlock x:Name="recognitionResult"
-                       Grid.Row="1"
-                       Margin="50,0,10,0"/>
+            <StackPanel x:Name="HeaderPanel"
+                        Orientation="Horizontal"
+                        Grid.Row="0">
+                <TextBlock x:Name="Header"
+                        Text="Basic ink recognition sample"
+                        Style="{ThemeResource HeaderTextBlockStyle}"
+                        Margin="10,0,0,0" />
+                <Button x:Name="recognize"
+                        Content="Recognize"
+                        Margin="50,0,10,0"/>
+            </StackPanel>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <InkCanvas x:Name="inkCanvas"
+                        Grid.Row="0"/>
+                <TextBlock x:Name="recognitionResult"
+                        Grid.Row="1"
+                        Margin="50,0,10,0"/>
+            </Grid>
         </Grid>
-    </Grid>
-```
+    ```
 
-2. <span data-ttu-id="3bdfa-151">In diesem Beispiel müssen Sie zunächst die für die Freihandfunktion benötigten Namespaceverweistypen hinzufügen:</span><span class="sxs-lookup"><span data-stu-id="3bdfa-151">For this example, you need to first add the namespace type references required for our ink functionality:</span></span>
-    - [<span data-ttu-id="3bdfa-152">Windows.UI.Input</span><span class="sxs-lookup"><span data-stu-id="3bdfa-152">Windows.UI.Input</span></span>](https://docs.microsoft.com/uwp/api/windows.ui.input)
-    - [<span data-ttu-id="3bdfa-153">Windows.UI.Input.Inking</span><span class="sxs-lookup"><span data-stu-id="3bdfa-153">Windows.UI.Input.Inking</span></span>](https://docs.microsoft.com/uwp/api/windows.ui.input.inking)
+2. <span data-ttu-id="6e04e-151">In diesem Beispiel müssen Sie zunächst die für die Freihandfunktion benötigten Namespaceverweistypen hinzufügen:</span><span class="sxs-lookup"><span data-stu-id="6e04e-151">For this example, you need to first add the namespace type references required for our ink functionality:</span></span>
+    - [<span data-ttu-id="6e04e-152">Windows.UI.Input</span><span class="sxs-lookup"><span data-stu-id="6e04e-152">Windows.UI.Input</span></span>](https://docs.microsoft.com/uwp/api/windows.ui.input)
+    - [<span data-ttu-id="6e04e-153">Windows.UI.Input.Inking</span><span class="sxs-lookup"><span data-stu-id="6e04e-153">Windows.UI.Input.Inking</span></span>](https://docs.microsoft.com/uwp/api/windows.ui.input.inking)
 
 
-3.  <span data-ttu-id="3bdfa-154">Dann werden einige grundlegende Verhaltensweisen für Freihandeingaben festgelegt.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-154">We then set some basic ink input behaviors.</span></span>
+3.  <span data-ttu-id="6e04e-154">Dann werden einige grundlegende Verhaltensweisen für Freihandeingaben festgelegt.</span><span class="sxs-lookup"><span data-stu-id="6e04e-154">We then set some basic ink input behaviors.</span></span>
 
-    <span data-ttu-id="3bdfa-155">Die [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Eigenschaft wird für die Interpretation von Eingabedaten von Stift oder Maus als Freihandstriche ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)) konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-155">The [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) is configured to interpret input data from both pen and mouse as ink strokes ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)).</span></span> <span data-ttu-id="3bdfa-156">Freihandstriche werden in der [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Klasse mit der angegebenen [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050)-Klasse gerendert.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-156">Ink strokes are rendered on the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) using the specified [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050).</span></span> <span data-ttu-id="3bdfa-157">Außerdem wird ein Listener für das Click-Ereignis der Schaltfläche „Erkennen“ deklariert.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-157">A listener for the click event on the "Recognize" button is also declared.</span></span>
-```csharp
-public MainPage()
-    {
-        this.InitializeComponent();
+    <span data-ttu-id="6e04e-155">Die [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Eigenschaft wird für die Interpretation von Eingabedaten von Stift oder Maus als Freihandstriche ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)) konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="6e04e-155">The [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) is configured to interpret input data from both pen and mouse as ink strokes ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)).</span></span> <span data-ttu-id="6e04e-156">Freihandstriche werden in der [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Klasse mit der angegebenen [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050)-Klasse gerendert.</span><span class="sxs-lookup"><span data-stu-id="6e04e-156">Ink strokes are rendered on the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) using the specified [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050).</span></span> <span data-ttu-id="6e04e-157">Außerdem wird ein Listener für das Click-Ereignis der Schaltfläche „Erkennen“ deklariert.</span><span class="sxs-lookup"><span data-stu-id="6e04e-157">A listener for the click event on the "Recognize" button is also declared.</span></span>
 
-        // Set supported inking device types.
-        inkCanvas.InkPresenter.InputDeviceTypes =
-            Windows.UI.Core.CoreInputDeviceTypes.Mouse |
-            Windows.UI.Core.CoreInputDeviceTypes.Pen;
+    ```csharp
+    public MainPage()
+        {
+            this.InitializeComponent();
 
-        // Set initial ink stroke attributes.
-        InkDrawingAttributes drawingAttributes = new InkDrawingAttributes();
-        drawingAttributes.Color = Windows.UI.Colors.Black;
-        drawingAttributes.IgnorePressure = false;
-        drawingAttributes.FitToCurve = true;
-        inkCanvas.InkPresenter.UpdateDefaultDrawingAttributes(drawingAttributes);
+            // Set supported inking device types.
+            inkCanvas.InkPresenter.InputDeviceTypes =
+                Windows.UI.Core.CoreInputDeviceTypes.Mouse |
+                Windows.UI.Core.CoreInputDeviceTypes.Pen;
 
-        // Listen for button click to initiate recognition.
-        recognize.Click += Recognize_Click;
-    }
-```
+            // Set initial ink stroke attributes.
+            InkDrawingAttributes drawingAttributes = new InkDrawingAttributes();
+            drawingAttributes.Color = Windows.UI.Colors.Black;
+            drawingAttributes.IgnorePressure = false;
+            drawingAttributes.FitToCurve = true;
+            inkCanvas.InkPresenter.UpdateDefaultDrawingAttributes(drawingAttributes);
 
-4.  <span data-ttu-id="3bdfa-158">Zum Schluss wird die grundlegende Schrifterkennung durchgeführt.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-158">Finally, we perform the basic handwriting recognition.</span></span> <span data-ttu-id="3bdfa-159">In diesem Beispiel wird die Schrifterkennung mit dem Click-Ereignishandler der Schaltfläche „Erkennen“ ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-159">For this example, we use the click event handler of the "Recognize" button to perform the handwriting recognition.</span></span>
+            // Listen for button click to initiate recognition.
+            recognize.Click += Recognize_Click;
+        }
+    ```
 
-    <span data-ttu-id="3bdfa-160">Ein [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) speichert alle Freihandstriche in einem [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492)-Objekt.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-160">An [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) stores all ink strokes in an [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) object.</span></span> <span data-ttu-id="3bdfa-161">Die Freihandstriche werden durch die [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766)-Eigenschaft von **InkPresenter** verfügbar gemacht und mit der [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499)-Methode abgerufen.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-161">The strokes are exposed through the [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766) property of the **InkPresenter** and retrieved using the [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499) method.</span></span>
-```csharp
-// Get all strokes on the InkCanvas.
-    IReadOnlyList<InkStroke> currentStrokes = inkCanvas.InkPresenter.StrokeContainer.GetStrokes();
-```
+4.  <span data-ttu-id="6e04e-158">Zum Schluss wird die grundlegende Schrifterkennung durchgeführt.</span><span class="sxs-lookup"><span data-stu-id="6e04e-158">Finally, we perform the basic handwriting recognition.</span></span> <span data-ttu-id="6e04e-159">In diesem Beispiel wird die Schrifterkennung mit dem Click-Ereignishandler der Schaltfläche „Erkennen“ ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="6e04e-159">For this example, we use the click event handler of the "Recognize" button to perform the handwriting recognition.</span></span>
 
-    An [**InkRecognizerContainer**](https://msdn.microsoft.com/library/windows/apps/br208479) is created to manage the handwriting recognition process.
+    <span data-ttu-id="6e04e-160">Ein [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) speichert alle Freihandstriche in einem [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492)-Objekt.</span><span class="sxs-lookup"><span data-stu-id="6e04e-160">An [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) stores all ink strokes in an [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) object.</span></span> <span data-ttu-id="6e04e-161">Die Freihandstriche werden durch die [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766)-Eigenschaft von **InkPresenter** verfügbar gemacht und mit der [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499)-Methode abgerufen.</span><span class="sxs-lookup"><span data-stu-id="6e04e-161">The strokes are exposed through the [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766) property of the **InkPresenter** and retrieved using the [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499) method.</span></span>
 
-```csharp
-// Create a manager for the InkRecognizer object
-    // used in handwriting recognition.
-    InkRecognizerContainer inkRecognizerContainer =
-        new InkRecognizerContainer();
-```
+    ```csharp
+    // Get all strokes on the InkCanvas.
+        IReadOnlyList<InkStroke> currentStrokes = inkCanvas.InkPresenter.StrokeContainer.GetStrokes();
+    ```
 
-    [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/br208446) is called to retrieve a set of [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) objects.
+    <span data-ttu-id="6e04e-162">Eine [**InkRecognizerContainer**](https://msdn.microsoft.com/library/windows/apps/br208479)-Klasse wird erstellt, um den Schrifterkennungsprozess zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="6e04e-162">An [**InkRecognizerContainer**](https://msdn.microsoft.com/library/windows/apps/br208479) is created to manage the handwriting recognition process.</span></span>
 
-    Recognition results are produced for each word that is detected by an [**InkRecognizer**](https://msdn.microsoft.com/library/windows/apps/br208478).
+    ```csharp
+    // Create a manager for the InkRecognizer object
+        // used in handwriting recognition.
+        InkRecognizerContainer inkRecognizerContainer =
+            new InkRecognizerContainer();
+    ```
+
+    <span data-ttu-id="6e04e-163">[**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/br208446) wird aufgerufen, um eine Reihe von [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) Objekte abzurufen.</span><span class="sxs-lookup"><span data-stu-id="6e04e-163">[**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/br208446) is called to retrieve a set of [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) objects.</span></span>
+
+    <span data-ttu-id="6e04e-164">Der Ergebnisse der Erkennung werden für jedes Wort erzeugt, die durch eine [**InkRecognizer**](https://msdn.microsoft.com/library/windows/apps/br208478)erkannt wird.</span><span class="sxs-lookup"><span data-stu-id="6e04e-164">Recognition results are produced for each word that is detected by an [**InkRecognizer**](https://msdn.microsoft.com/library/windows/apps/br208478).</span></span>
 
 ```csharp
 // Recognize all ink strokes on the ink canvas.
@@ -382,115 +385,115 @@ public MainPage()
 
     We iterate through each [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) and compile the list of candidates. The candidates are then displayed and the [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) is cleared (which also clears the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)).
 
-```csharp
-string str = "Recognition result\n";
-    // Iterate through the recognition results.
-    foreach (var result in recognitionResults)
-    {
-        // Get all recognition candidates from each recognition result.
-        IReadOnlyList<string> candidates = result.GetTextCandidates();
-        str += "Candidates: " + candidates.Count.ToString() + "\n";
-        foreach (string candidate in candidates)
+    ```csharp
+    string str = "Recognition result\n";
+        // Iterate through the recognition results.
+        foreach (var result in recognitionResults)
         {
-            str += candidate + " ";
+            // Get all recognition candidates from each recognition result.
+            IReadOnlyList<string> candidates = result.GetTextCandidates();
+            str += "Candidates: " + candidates.Count.ToString() + "\n";
+            foreach (string candidate in candidates)
+            {
+                str += candidate + " ";
+            }
         }
-    }
-    // Display the recognition candidates.
-    recognitionResult.Text = str;
-    // Clear the ink canvas once recognition is complete.
-    inkCanvas.InkPresenter.StrokeContainer.Clear();
-```
+        // Display the recognition candidates.
+        recognitionResult.Text = str;
+        // Clear the ink canvas once recognition is complete.
+        inkCanvas.InkPresenter.StrokeContainer.Clear();
+    ```
 
     Here's the click handler example, in full.
 
-```csharp
-// Handle button click to initiate recognition.
-    private async void Recognize_Click(object sender, RoutedEventArgs e)
-    {
-        // Get all strokes on the InkCanvas.
-        IReadOnlyList<InkStroke> currentStrokes = inkCanvas.InkPresenter.StrokeContainer.GetStrokes();
-
-        // Ensure an ink stroke is present.
-        if (currentStrokes.Count > 0)
+    ```csharp
+    // Handle button click to initiate recognition.
+        private async void Recognize_Click(object sender, RoutedEventArgs e)
         {
-            // Create a manager for the InkRecognizer object
-            // used in handwriting recognition.
-            InkRecognizerContainer inkRecognizerContainer =
-                new InkRecognizerContainer();
+            // Get all strokes on the InkCanvas.
+            IReadOnlyList<InkStroke> currentStrokes = inkCanvas.InkPresenter.StrokeContainer.GetStrokes();
 
-            // inkRecognizerContainer is null if a recognition engine is not available.
-            if (!(inkRecognizerContainer == null))
+            // Ensure an ink stroke is present.
+            if (currentStrokes.Count > 0)
             {
-                // Recognize all ink strokes on the ink canvas.
-                IReadOnlyList<InkRecognitionResult> recognitionResults =
-                    await inkRecognizerContainer.RecognizeAsync(
-                        inkCanvas.InkPresenter.StrokeContainer,
-                        InkRecognitionTarget.All);
-                // Process and display the recognition results.
-                if (recognitionResults.Count > 0)
+                // Create a manager for the InkRecognizer object
+                // used in handwriting recognition.
+                InkRecognizerContainer inkRecognizerContainer =
+                    new InkRecognizerContainer();
+
+                // inkRecognizerContainer is null if a recognition engine is not available.
+                if (!(inkRecognizerContainer == null))
                 {
-                    string str = "Recognition result\n";
-                    // Iterate through the recognition results.
-                    foreach (var result in recognitionResults)
+                    // Recognize all ink strokes on the ink canvas.
+                    IReadOnlyList<InkRecognitionResult> recognitionResults =
+                        await inkRecognizerContainer.RecognizeAsync(
+                            inkCanvas.InkPresenter.StrokeContainer,
+                            InkRecognitionTarget.All);
+                    // Process and display the recognition results.
+                    if (recognitionResults.Count > 0)
                     {
-                        // Get all recognition candidates from each recognition result.
-                        IReadOnlyList<string> candidates = result.GetTextCandidates();
-                        str += "Candidates: " + candidates.Count.ToString() + "\n";
-                        foreach (string candidate in candidates)
+                        string str = "Recognition result\n";
+                        // Iterate through the recognition results.
+                        foreach (var result in recognitionResults)
                         {
-                            str += candidate + " ";
+                            // Get all recognition candidates from each recognition result.
+                            IReadOnlyList<string> candidates = result.GetTextCandidates();
+                            str += "Candidates: " + candidates.Count.ToString() + "\n";
+                            foreach (string candidate in candidates)
+                            {
+                                str += candidate + " ";
+                            }
                         }
+                        // Display the recognition candidates.
+                        recognitionResult.Text = str;
+                        // Clear the ink canvas once recognition is complete.
+                        inkCanvas.InkPresenter.StrokeContainer.Clear();
                     }
-                    // Display the recognition candidates.
-                    recognitionResult.Text = str;
-                    // Clear the ink canvas once recognition is complete.
-                    inkCanvas.InkPresenter.StrokeContainer.Clear();
+                    else
+                    {
+                        recognitionResult.Text = "No recognition results.";
+                    }
                 }
                 else
                 {
-                    recognitionResult.Text = "No recognition results.";
+                    Windows.UI.Popups.MessageDialog messageDialog = new Windows.UI.Popups.MessageDialog("You must install handwriting recognition engine.");
+                    await messageDialog.ShowAsync();
                 }
             }
             else
             {
-                Windows.UI.Popups.MessageDialog messageDialog = new Windows.UI.Popups.MessageDialog("You must install handwriting recognition engine.");
-                await messageDialog.ShowAsync();
+                recognitionResult.Text = "No ink strokes to recognize.";
             }
         }
-        else
-        {
-            recognitionResult.Text = "No ink strokes to recognize.";
-        }
-    }
-```
+    ```
 
-## <a name="international-recognition"></a><span data-ttu-id="3bdfa-162">Internationale Erkennung</span><span class="sxs-lookup"><span data-stu-id="3bdfa-162">International recognition</span></span>
+## <a name="international-recognition"></a><span data-ttu-id="6e04e-165">Internationale Erkennung</span><span class="sxs-lookup"><span data-stu-id="6e04e-165">International recognition</span></span>
 
-<span data-ttu-id="3bdfa-163">Das Handschrifterkennungstool ist in die Windows-Freihandplattform integriert und umfasst einen Satz von Gebietsschemas und Sprachen, die von Windows unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-163">The handwriting recognition built into the Windows ink platform includes an extensive subset of locales and languages supported by Windows.</span></span>
+<span data-ttu-id="6e04e-166">Das Handschrifterkennungstool ist in die Windows-Freihandplattform integriert und umfasst einen Satz von Gebietsschemas und Sprachen, die von Windows unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="6e04e-166">The handwriting recognition built into the Windows ink platform includes an extensive subset of locales and languages supported by Windows.</span></span>
 
-<span data-ttu-id="3bdfa-164">Im Abschnitt der Eigenschaften [**InkRecognizer.Name**](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkrecognizer.name.aspx) finden Sie eine Liste der von [**InkRecognizer**](https://msdn.microsoft.com/library/windows/apps/br208478) unterstützten Sprachen.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-164">See the [**InkRecognizer.Name**](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkrecognizer.name.aspx) property topic for a list of languages supported by the [**InkRecognizer**](https://msdn.microsoft.com/library/windows/apps/br208478) .</span></span>
+<span data-ttu-id="6e04e-167">Im Abschnitt der Eigenschaften [**InkRecognizer.Name**](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkrecognizer.name.aspx) finden Sie eine Liste der von [**InkRecognizer**](https://msdn.microsoft.com/library/windows/apps/br208478) unterstützten Sprachen.</span><span class="sxs-lookup"><span data-stu-id="6e04e-167">See the [**InkRecognizer.Name**](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkrecognizer.name.aspx) property topic for a list of languages supported by the [**InkRecognizer**](https://msdn.microsoft.com/library/windows/apps/br208478) .</span></span>
 
-<span data-ttu-id="3bdfa-165">Ihre App kann den Satz der installierten Schrifterkennungsmodule abfragen und eines davon verwenden, oder der Benutzer wählt die bevorzugte Sprache aus.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-165">Your app can query the set of installed handwriting recognition engines and use one of those, or let a user select their preferred language.</span></span>
+<span data-ttu-id="6e04e-168">Ihre App kann den Satz der installierten Schrifterkennungsmodule abfragen und eines davon verwenden, oder der Benutzer wählt die bevorzugte Sprache aus.</span><span class="sxs-lookup"><span data-stu-id="6e04e-168">Your app can query the set of installed handwriting recognition engines and use one of those, or let a user select their preferred language.</span></span>
 
-<span data-ttu-id="3bdfa-166">**Hinweis:**  Benutzer können eine Liste der installierten Sprachen anzeigen, indem Sie auf **Einstellungen –&gt; Zeit & Sprache**.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-166">**Note** Users can see a list of installed languages by going to **Settings -&gt; Time & Language**.</span></span> <span data-ttu-id="3bdfa-167">Die installierten Sprachen werden unter **Sprachen** aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-167">Installed languages are listed under **Languages**.</span></span>
+<span data-ttu-id="6e04e-169">**Hinweis:**  Benutzer können eine Liste der installierten Sprachen anzeigen, indem Sie auf **Einstellungen –&gt; Zeit & Sprache**.</span><span class="sxs-lookup"><span data-stu-id="6e04e-169">**Note** Users can see a list of installed languages by going to **Settings -&gt; Time & Language**.</span></span> <span data-ttu-id="6e04e-170">Die installierten Sprachen werden unter **Sprachen** aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="6e04e-170">Installed languages are listed under **Languages**.</span></span>
 
-<span data-ttu-id="3bdfa-168">So installieren Sie ein neues Sprachpaket und aktivieren die Schrifterkennung für die Sprache</span><span class="sxs-lookup"><span data-stu-id="3bdfa-168">To install new language packs and enable handwriting recognition for that language:</span></span>
+<span data-ttu-id="6e04e-171">So installieren Sie ein neues Sprachpaket und aktivieren die Schrifterkennung für die Sprache</span><span class="sxs-lookup"><span data-stu-id="6e04e-171">To install new language packs and enable handwriting recognition for that language:</span></span>
 
-1.  <span data-ttu-id="3bdfa-169">Öffnen Sie **Einstellungen &gt; Zeit & Sprache &gt; Region & Sprache**.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-169">Go to **Settings &gt; Time & language &gt; Region & language**.</span></span>
-2.  <span data-ttu-id="3bdfa-170">Wählen Sie **Sprache hinzufügen** aus.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-170">Select **Add a language**.</span></span>
-3.  <span data-ttu-id="3bdfa-171">Wählen Sie eine Sprache aus der Liste und dann die Regionsversion aus.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-171">Select a language from the list, then choose the region version.</span></span> <span data-ttu-id="3bdfa-172">Die Sprache wird jetzt auf der Seite **Region & Sprache** aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-172">The language is now listed on the **Region & language** page.</span></span>
-4.  <span data-ttu-id="3bdfa-173">Klicken Sie auf die Sprache, und wählen Sie **Optionen** aus.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-173">Click the language and select **Options**.</span></span>
-5.  <span data-ttu-id="3bdfa-174">Laden Sie auf der Seite **Sprachoptionen** das **Schrifterkennungsmodul** herunter. (Sie können auch das vollständige Sprachpaket, das Spracherkennungsmodul und das Tastaturlayout hier herunterladen.)</span><span class="sxs-lookup"><span data-stu-id="3bdfa-174">On the **Language options** page, download the **Handwriting recognition engine** (they can also download the full language pack, speech recognition engine, and keyboard layout here).</span></span>
+1.  <span data-ttu-id="6e04e-172">Öffnen Sie **Einstellungen &gt; Zeit & Sprache &gt; Region & Sprache**.</span><span class="sxs-lookup"><span data-stu-id="6e04e-172">Go to **Settings &gt; Time & language &gt; Region & language**.</span></span>
+2.  <span data-ttu-id="6e04e-173">Wählen Sie **Sprache hinzufügen** aus.</span><span class="sxs-lookup"><span data-stu-id="6e04e-173">Select **Add a language**.</span></span>
+3.  <span data-ttu-id="6e04e-174">Wählen Sie eine Sprache aus der Liste und dann die Regionsversion aus.</span><span class="sxs-lookup"><span data-stu-id="6e04e-174">Select a language from the list, then choose the region version.</span></span> <span data-ttu-id="6e04e-175">Die Sprache wird jetzt auf der Seite **Region & Sprache** aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="6e04e-175">The language is now listed on the **Region & language** page.</span></span>
+4.  <span data-ttu-id="6e04e-176">Klicken Sie auf die Sprache, und wählen Sie **Optionen** aus.</span><span class="sxs-lookup"><span data-stu-id="6e04e-176">Click the language and select **Options**.</span></span>
+5.  <span data-ttu-id="6e04e-177">Laden Sie auf der Seite **Sprachoptionen** das **Schrifterkennungsmodul** herunter. (Sie können auch das vollständige Sprachpaket, das Spracherkennungsmodul und das Tastaturlayout hier herunterladen.)</span><span class="sxs-lookup"><span data-stu-id="6e04e-177">On the **Language options** page, download the **Handwriting recognition engine** (they can also download the full language pack, speech recognition engine, and keyboard layout here).</span></span>
 
  
 
-<span data-ttu-id="3bdfa-175">Hier wird gezeigt, wie auf Grundlage der ausgewählten Erkennung mit dem Schrifterkennungsmodul eine Reihe von Freihandstrichen in einer [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Klasse interpretiert werden.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-175">Here, we demonstrate how to use the handwriting recognition engine to interpret a set of strokes on an [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) based on the selected recognizer.</span></span>
+<span data-ttu-id="6e04e-178">Hier wird gezeigt, wie auf Grundlage der ausgewählten Erkennung mit dem Schrifterkennungsmodul eine Reihe von Freihandstrichen in einer [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Klasse interpretiert werden.</span><span class="sxs-lookup"><span data-stu-id="6e04e-178">Here, we demonstrate how to use the handwriting recognition engine to interpret a set of strokes on an [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) based on the selected recognizer.</span></span>
 
-<span data-ttu-id="3bdfa-176">Die Erkennung wird durch den Benutzer initiiert, indem er nach Abschluss des Schreibvorgangs auf eine Schaltfläche klickt.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-176">The recognition is initiated by the user clicking a button when they are finished writing.</span></span>
+<span data-ttu-id="6e04e-179">Die Erkennung wird durch den Benutzer initiiert, indem er nach Abschluss des Schreibvorgangs auf eine Schaltfläche klickt.</span><span class="sxs-lookup"><span data-stu-id="6e04e-179">The recognition is initiated by the user clicking a button when they are finished writing.</span></span>
 
-1.  <span data-ttu-id="3bdfa-177">Zuerst wird die Benutzeroberfläche eingerichtet.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-177">First, we set up the UI.</span></span>
+1.  <span data-ttu-id="6e04e-180">Zuerst wird die Benutzeroberfläche eingerichtet.</span><span class="sxs-lookup"><span data-stu-id="6e04e-180">First, we set up the UI.</span></span>
 
-    <span data-ttu-id="3bdfa-178">Die Benutzeroberfläche umfasst die Schaltfläche „Erkennen“, ein Kombinationsfeld mit allen installierten Schrifterkennungen, den [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) und einen Bereich zum Anzeigen der Ergebnisse der Erkennung.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-178">The UI includes a "Recognize" button, a combo box that lists all installed handwriting recognizers, the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), and an area to display recognition results.</span></span>
+    <span data-ttu-id="6e04e-181">Die Benutzeroberfläche umfasst die Schaltfläche „Erkennen“, ein Kombinationsfeld mit allen installierten Schrifterkennungen, den [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) und einen Bereich zum Anzeigen der Ergebnisse der Erkennung.</span><span class="sxs-lookup"><span data-stu-id="6e04e-181">The UI includes a "Recognize" button, a combo box that lists all installed handwriting recognizers, the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), and an area to display recognition results.</span></span>
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -533,13 +536,13 @@ string str = "Recognition result\n";
     </Grid>
 ```
 
-2.  <span data-ttu-id="3bdfa-179">Dann werden einige grundlegende Verhalten für Freihandeingaben festgelegt.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-179">We then set some basic ink input behaviors.</span></span>
+2.  <span data-ttu-id="6e04e-182">Dann werden einige grundlegende Verhalten für Freihandeingaben festgelegt.</span><span class="sxs-lookup"><span data-stu-id="6e04e-182">We then set some basic ink input behaviors.</span></span>
 
-    <span data-ttu-id="3bdfa-180">Die [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Eigenschaft wird für die Interpretation von Eingabedaten von Stift oder Maus als Freihandstriche ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)) konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-180">The [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) is configured to interpret input data from both pen and mouse as ink strokes ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)).</span></span> <span data-ttu-id="3bdfa-181">Freihandstriche werden in der [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Klasse mit der angegebenen [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050)-Klasse gerendert.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-181">Ink strokes are rendered on the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) using the specified [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050).</span></span>
+    <span data-ttu-id="6e04e-183">Die [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Eigenschaft wird für die Interpretation von Eingabedaten von Stift oder Maus als Freihandstriche ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)) konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="6e04e-183">The [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) is configured to interpret input data from both pen and mouse as ink strokes ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)).</span></span> <span data-ttu-id="6e04e-184">Freihandstriche werden in der [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Klasse mit der angegebenen [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050)-Klasse gerendert.</span><span class="sxs-lookup"><span data-stu-id="6e04e-184">Ink strokes are rendered on the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) using the specified [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050).</span></span>
 
-    <span data-ttu-id="3bdfa-182">Zum Ausfüllen des Kombinationsfelds für die Erkennung mit einer Liste der installierten Schrifterkennungen wird eine `InitializeRecognizerList`-Funktion aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-182">We call an `InitializeRecognizerList` function to populate the recognizer combo box with a list of installed handwriting recognizers.</span></span>
+    <span data-ttu-id="6e04e-185">Zum Ausfüllen des Kombinationsfelds für die Erkennung mit einer Liste der installierten Schrifterkennungen wird eine `InitializeRecognizerList`-Funktion aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="6e04e-185">We call an `InitializeRecognizerList` function to populate the recognizer combo box with a list of installed handwriting recognizers.</span></span>
 
-    <span data-ttu-id="3bdfa-183">Außerdem werden Listener für das Click-Ereignis auf die Schaltfläche „Erkennen“ und das Ereignis der geänderten Auswahl im Kombinationsfeld für die Erkennung deklariert.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-183">We also declare listeners for the click event on the "Recognize" button and the selection changed event on the recognizer combo box.</span></span>
+    <span data-ttu-id="6e04e-186">Außerdem werden Listener für das Click-Ereignis auf die Schaltfläche „Erkennen“ und das Ereignis der geänderten Auswahl im Kombinationsfeld für die Erkennung deklariert.</span><span class="sxs-lookup"><span data-stu-id="6e04e-186">We also declare listeners for the click event on the "Recognize" button and the selection changed event on the recognizer combo box.</span></span>
 ```csharp
  public MainPage()
      {
@@ -569,9 +572,9 @@ string str = "Recognition result\n";
      }
 ```
 
-3.  <span data-ttu-id="3bdfa-184">Das Kombinationsfeld für die Erkennung wird mit einer Liste der installierten Schrifterkennungen aufgefüllt.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-184">We populate the recognizer combo box with a list of installed handwriting recognizers.</span></span>
+3.  <span data-ttu-id="6e04e-187">Das Kombinationsfeld für die Erkennung wird mit einer Liste der installierten Schrifterkennungen aufgefüllt.</span><span class="sxs-lookup"><span data-stu-id="6e04e-187">We populate the recognizer combo box with a list of installed handwriting recognizers.</span></span>
 
-    <span data-ttu-id="3bdfa-185">Eine [**InkRecognizerContainer**](https://msdn.microsoft.com/library/windows/apps/br208479)-Klasse wird erstellt, um den Schrifterkennungsprozess zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-185">An [**InkRecognizerContainer**](https://msdn.microsoft.com/library/windows/apps/br208479) is created to manage the handwriting recognition process.</span></span> <span data-ttu-id="3bdfa-186">Rufen Sie mit diesem Objekt [**GetRecognizers**](https://msdn.microsoft.com/library/windows/apps/br208480). Rufen Sie dann die Liste der installierten Erkennungen ab, um das Kombinationsfeld für die Erkennung aufzufüllen.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-186">Use this object to call [**GetRecognizers**](https://msdn.microsoft.com/library/windows/apps/br208480) and retrieve the list of installed recognizers to populate the recognizer combo box.</span></span>
+    <span data-ttu-id="6e04e-188">Eine [**InkRecognizerContainer**](https://msdn.microsoft.com/library/windows/apps/br208479)-Klasse wird erstellt, um den Schrifterkennungsprozess zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="6e04e-188">An [**InkRecognizerContainer**](https://msdn.microsoft.com/library/windows/apps/br208479) is created to manage the handwriting recognition process.</span></span> <span data-ttu-id="6e04e-189">Rufen Sie mit diesem Objekt [**GetRecognizers**](https://msdn.microsoft.com/library/windows/apps/br208480). Rufen Sie dann die Liste der installierten Erkennungen ab, um das Kombinationsfeld für die Erkennung aufzufüllen.</span><span class="sxs-lookup"><span data-stu-id="6e04e-189">Use this object to call [**GetRecognizers**](https://msdn.microsoft.com/library/windows/apps/br208480) and retrieve the list of installed recognizers to populate the recognizer combo box.</span></span>
 ```csharp
 // Populate the recognizer combo box with installed recognizers.
     private void InitializeRecognizerList()
@@ -590,9 +593,9 @@ string str = "Recognition result\n";
     }
 ```
 
-4.  <span data-ttu-id="3bdfa-187">Aktualisieren Sie die Handschrifterkennung, wenn die Auswahl im Kombinationsfeld für die Erkennung geändert wird.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-187">Update the handwriting recognizer if the recognizer combo box selection changes.</span></span>
+4.  <span data-ttu-id="6e04e-190">Aktualisieren Sie die Handschrifterkennung, wenn die Auswahl im Kombinationsfeld für die Erkennung geändert wird.</span><span class="sxs-lookup"><span data-stu-id="6e04e-190">Update the handwriting recognizer if the recognizer combo box selection changes.</span></span>
 
-    <span data-ttu-id="3bdfa-188">Rufen Sie mit [**InkRecognizerContainer**](https://msdn.microsoft.com/library/windows/apps/br208479) die [**SetDefaultRecognizer**](https://msdn.microsoft.com/library/windows/apps/hh920328)-Methode auf Grundlage der ausgewählten Erkennung im Kombinationsfeld für die Erkennung auf.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-188">Use the [**InkRecognizerContainer**](https://msdn.microsoft.com/library/windows/apps/br208479) to call [**SetDefaultRecognizer**](https://msdn.microsoft.com/library/windows/apps/hh920328) based on the selected recognizer from the recognizer combo box.</span></span>
+    <span data-ttu-id="6e04e-191">Rufen Sie mit [**InkRecognizerContainer**](https://msdn.microsoft.com/library/windows/apps/br208479) die [**SetDefaultRecognizer**](https://msdn.microsoft.com/library/windows/apps/hh920328)-Methode auf Grundlage der ausgewählten Erkennung im Kombinationsfeld für die Erkennung auf.</span><span class="sxs-lookup"><span data-stu-id="6e04e-191">Use the [**InkRecognizerContainer**](https://msdn.microsoft.com/library/windows/apps/br208479) to call [**SetDefaultRecognizer**](https://msdn.microsoft.com/library/windows/apps/hh920328) based on the selected recognizer from the recognizer combo box.</span></span>
 ```csharp
 // Handle recognizer change.
     private void comboInstalledRecognizers_SelectionChanged(
@@ -603,9 +606,9 @@ string str = "Recognition result\n";
     }
 ```
 
-5.  <span data-ttu-id="3bdfa-189">Abschließend wird die Schrifterkennung auf Grundlage der ausgewählten Erkennung für die Handschrift ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-189">Finally, we perform the handwriting recognition based on the selected handwriting recognizer.</span></span> <span data-ttu-id="3bdfa-190">In diesem Beispiel wird die Schrifterkennung mit dem Click-Ereignishandler der Schaltfläche „Erkennen“ ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-190">For this example, we use the click event handler of the "Recognize" button to perform the handwriting recognition.</span></span>
+5.  <span data-ttu-id="6e04e-192">Abschließend wird die Schrifterkennung auf Grundlage der ausgewählten Erkennung für die Handschrift ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="6e04e-192">Finally, we perform the handwriting recognition based on the selected handwriting recognizer.</span></span> <span data-ttu-id="6e04e-193">In diesem Beispiel wird die Schrifterkennung mit dem Click-Ereignishandler der Schaltfläche „Erkennen“ ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="6e04e-193">For this example, we use the click event handler of the "Recognize" button to perform the handwriting recognition.</span></span>
 
-    <span data-ttu-id="3bdfa-191">Ein [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) speichert alle Freihandstriche in einem [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492)-Objekt.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-191">An [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) stores all ink strokes in an [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) object.</span></span> <span data-ttu-id="3bdfa-192">Die Freihandstriche werden durch die [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766)-Eigenschaft von **InkPresenter** verfügbar gemacht und mit der [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499)-Methode abgerufen.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-192">The strokes are exposed through the [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766) property of the **InkPresenter** and retrieved using the [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499) method.</span></span>
+    <span data-ttu-id="6e04e-194">Ein [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) speichert alle Freihandstriche in einem [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492)-Objekt.</span><span class="sxs-lookup"><span data-stu-id="6e04e-194">An [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) stores all ink strokes in an [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) object.</span></span> <span data-ttu-id="6e04e-195">Die Freihandstriche werden durch die [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766)-Eigenschaft von **InkPresenter** verfügbar gemacht und mit der [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499)-Methode abgerufen.</span><span class="sxs-lookup"><span data-stu-id="6e04e-195">The strokes are exposed through the [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766) property of the **InkPresenter** and retrieved using the [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499) method.</span></span>
 ```csharp
 // Get all strokes on the InkCanvas.
     IReadOnlyList<InkStroke> currentStrokes =
@@ -710,20 +713,20 @@ string str = "Recognition result\n";
     }
 ```
 
-## <a name="dynamic-recognition"></a><span data-ttu-id="3bdfa-193">Dynamische Erkennung</span><span class="sxs-lookup"><span data-stu-id="3bdfa-193">Dynamic recognition</span></span>
+## <a name="dynamic-recognition"></a><span data-ttu-id="6e04e-196">Dynamische Erkennung</span><span class="sxs-lookup"><span data-stu-id="6e04e-196">Dynamic recognition</span></span>
 
-<span data-ttu-id="3bdfa-194">Während der Benutzer bei den beiden obigen Beispielen auf eine Schaltfläche zum Starten der Spracherkennung drücken müssen, können Sie die dynamische Erkennung mithilfe der Freihandstricheingabe mit einer einfachen Timing-Funktion ausführen.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-194">While, the previous two examples require the user to press a button to start recognition, you can also perform dynamic recognition using stroke input paired with a basic timing function.</span></span>
+<span data-ttu-id="6e04e-197">Während der Benutzer bei den beiden obigen Beispielen auf eine Schaltfläche zum Starten der Spracherkennung drücken müssen, können Sie die dynamische Erkennung mithilfe der Freihandstricheingabe mit einer einfachen Timing-Funktion ausführen.</span><span class="sxs-lookup"><span data-stu-id="6e04e-197">While, the previous two examples require the user to press a button to start recognition, you can also perform dynamic recognition using stroke input paired with a basic timing function.</span></span>
 
-<span data-ttu-id="3bdfa-195">In diesem Beispiel werden die gleichen Einstellungen für Benutzeroberfläche und Freihandstriche verwendet wie im Beispiel für internationale Erkennung oben.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-195">For this example, we'll use the same UI and stroke settings as the previous international recognition example.</span></span>
+<span data-ttu-id="6e04e-198">In diesem Beispiel werden die gleichen Einstellungen für Benutzeroberfläche und Freihandstriche verwendet wie im Beispiel für internationale Erkennung oben.</span><span class="sxs-lookup"><span data-stu-id="6e04e-198">For this example, we'll use the same UI and stroke settings as the previous international recognition example.</span></span>
 
-1. <span data-ttu-id="3bdfa-196">Diese globalen Objekte ([InkAnalyzer](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.analysis.inkanalyzer), [InkStroke](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstroke), [InkAnalysisResult](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult), [DispatcherTimer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dispatchertimer)) werden in der gesamten App verwendet.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-196">These global objects ([InkAnalyzer](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.analysis.inkanalyzer), [InkStroke](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstroke), [InkAnalysisResult](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult), [DispatcherTimer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dispatchertimer)) are used throughout our app.</span></span>    
+1. <span data-ttu-id="6e04e-199">Diese globalen Objekte ([InkAnalyzer](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.analysis.inkanalyzer), [InkStroke](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstroke), [InkAnalysisResult](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult), [DispatcherTimer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dispatchertimer)) werden in der gesamten App verwendet.</span><span class="sxs-lookup"><span data-stu-id="6e04e-199">These global objects ([InkAnalyzer](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.analysis.inkanalyzer), [InkStroke](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstroke), [InkAnalysisResult](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult), [DispatcherTimer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dispatchertimer)) are used throughout our app.</span></span>    
 ```csharp
     // Stroke recognition globals.
     InkAnalyzer inkAnalyzer;
     DispatcherTimer recoTimer;
 ```
 
-2.  <span data-ttu-id="3bdfa-197">Anstelle einer Schaltfläche zum Initiieren der Erkennung werden Listener für zwei [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Freihandstrichereignisse ([**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024) und [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702)) hinzugefügt. Zudem wird ein einfacher Timer ([**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250)) mit einem [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256)-Intervall von einer Sekunde eingerichtet.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-197">Instead of a button to initiate recognition, we add listeners for two [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) stroke events ([**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024) and [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702)), and set up a basic timer ([**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250)) with a one second [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256) interval.</span></span>    
+2.  <span data-ttu-id="6e04e-200">Anstelle einer Schaltfläche zum Initiieren der Erkennung werden Listener für zwei [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Freihandstrichereignisse ([**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024) und [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702)) hinzugefügt. Zudem wird ein einfacher Timer ([**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250)) mit einem [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256)-Intervall von einer Sekunde eingerichtet.</span><span class="sxs-lookup"><span data-stu-id="6e04e-200">Instead of a button to initiate recognition, we add listeners for two [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) stroke events ([**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024) and [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702)), and set up a basic timer ([**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250)) with a one second [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256) interval.</span></span>    
 ```csharp
     public MainPage()
     {
@@ -752,15 +755,15 @@ string str = "Recognition result\n";
     }
 ```
 
-3.  <span data-ttu-id="3bdfa-198">Anschließend definieren wir die Handler für die InkPresenter-Ereignisse, die wir im ersten Schritt deklariert haben (wir überschreiben ebenfalls das [**OnNavigatingFrom**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.page.onnavigatingfrom)-Ereignis der Seite, um den Timer zu verwalten).</span><span class="sxs-lookup"><span data-stu-id="3bdfa-198">We then define the handlers for the InkPresenter events we declared in the first step (we also override the [**OnNavigatingFrom**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.page.onnavigatingfrom) page event to manage our timer).</span></span>
+3.  <span data-ttu-id="6e04e-201">Anschließend definieren wir die Handler für die InkPresenter-Ereignisse, die wir im ersten Schritt deklariert haben (wir überschreiben ebenfalls das [**OnNavigatingFrom**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.page.onnavigatingfrom)-Ereignis der Seite, um den Timer zu verwalten).</span><span class="sxs-lookup"><span data-stu-id="6e04e-201">We then define the handlers for the InkPresenter events we declared in the first step (we also override the [**OnNavigatingFrom**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.page.onnavigatingfrom) page event to manage our timer).</span></span>
 
-    - [**<span data-ttu-id="3bdfa-199">StrokesCollected</span><span class="sxs-lookup"><span data-stu-id="3bdfa-199">StrokesCollected</span></span>**](https://msdn.microsoft.com/library/windows/apps/dn922024)  
-    <span data-ttu-id="3bdfa-200">Fügen Sie dem InkAnalyzer Freihandstriche hinzu ([**AddDataForStrokes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.adddataforstrokes)) und starten Sie den Timer für die Erkennung, wenn der Benutzer die Freihandeingabe beendet, indem er den Stift oder Finger anhebt oder die Maustaste loslässt.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-200">Add ink strokes ([**AddDataForStrokes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.adddataforstrokes)) to the InkAnalyzer and start the recognition timer when the user stops inking (by lifting their pen or finger, or releasing the mouse button).</span></span> <span data-ttu-id="3bdfa-201">Nach einer Sekunde ohne Freihandeingabe wird die Spracherkennung initiiert.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-201">After one second of no ink input, recognition is initiated.</span></span>  
+    - [**<span data-ttu-id="6e04e-202">StrokesCollected</span><span class="sxs-lookup"><span data-stu-id="6e04e-202">StrokesCollected</span></span>**](https://msdn.microsoft.com/library/windows/apps/dn922024)  
+    <span data-ttu-id="6e04e-203">Fügen Sie dem InkAnalyzer Freihandstriche hinzu ([**AddDataForStrokes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.adddataforstrokes)) und starten Sie den Timer für die Erkennung, wenn der Benutzer die Freihandeingabe beendet, indem er den Stift oder Finger anhebt oder die Maustaste loslässt.</span><span class="sxs-lookup"><span data-stu-id="6e04e-203">Add ink strokes ([**AddDataForStrokes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.adddataforstrokes)) to the InkAnalyzer and start the recognition timer when the user stops inking (by lifting their pen or finger, or releasing the mouse button).</span></span> <span data-ttu-id="6e04e-204">Nach einer Sekunde ohne Freihandeingabe wird die Spracherkennung initiiert.</span><span class="sxs-lookup"><span data-stu-id="6e04e-204">After one second of no ink input, recognition is initiated.</span></span>  
 
-        <span data-ttu-id="3bdfa-202">Verwenden Sie die Methode [**SetStrokeDataKind**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.setstrokedatakind), um anzugeben, ob Sie nur am Text (einschließlich der Dokumentstruktur und Aufzählungen) oder nur an den Zeichnungen (einschließlich der Formenerkennung) interessiert sind.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-202">Use the [**SetStrokeDataKind**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.setstrokedatakind) method to specify whether you're interested only in text (including document structure amd bullet lists) or only in drawings (inlcuding shape recognition).</span></span>
+        <span data-ttu-id="6e04e-205">Verwenden Sie die Methode [**SetStrokeDataKind**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.setstrokedatakind), um anzugeben, ob Sie nur am Text (einschließlich der Dokumentstruktur und Aufzählungen) oder nur an den Zeichnungen (einschließlich der Formenerkennung) interessiert sind.</span><span class="sxs-lookup"><span data-stu-id="6e04e-205">Use the [**SetStrokeDataKind**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.setstrokedatakind) method to specify whether you're interested only in text (including document structure amd bullet lists) or only in drawings (inlcuding shape recognition).</span></span>
 
-    - [**<span data-ttu-id="3bdfa-203">StrokeStarted</span><span class="sxs-lookup"><span data-stu-id="3bdfa-203">StrokeStarted</span></span>**](https://msdn.microsoft.com/library/windows/apps/dn914702)  
-    <span data-ttu-id="3bdfa-204">Wenn ein neuer Freihandstrich vor dem nächsten Tick-Ereignis des Timers beginnt, wird der Timer beendet, da es sich bei dem neuen Freihandstrich wahrscheinlich um die Fortsetzung der vorherigen Handschrifteingabe handelt.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-204">If a new stroke starts before the next timer tick event, stop the timer as the new stroke is likely the continuation of a single handwriting entry.</span></span>
+    - [**<span data-ttu-id="6e04e-206">StrokeStarted</span><span class="sxs-lookup"><span data-stu-id="6e04e-206">StrokeStarted</span></span>**](https://msdn.microsoft.com/library/windows/apps/dn914702)  
+    <span data-ttu-id="6e04e-207">Wenn ein neuer Freihandstrich vor dem nächsten Tick-Ereignis des Timers beginnt, wird der Timer beendet, da es sich bei dem neuen Freihandstrich wahrscheinlich um die Fortsetzung der vorherigen Handschrifteingabe handelt.</span><span class="sxs-lookup"><span data-stu-id="6e04e-207">If a new stroke starts before the next timer tick event, stop the timer as the new stroke is likely the continuation of a single handwriting entry.</span></span>
 ```csharp
     // Handler for the InkPresenter StrokeStarted event.
     // Don't perform analysis while a stroke is in progress.
@@ -799,11 +802,11 @@ string str = "Recognition result\n";
     } 
 ```
 
-4.  <span data-ttu-id="3bdfa-205">Zum Schluss wird die Schrifterkennung durchgeführt.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-205">Finally, we perform the handwriting recognition.</span></span> <span data-ttu-id="3bdfa-206">In diesem Beispiel wird zum Initiieren der Schrifterkennung der [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256)-Ereignishandler einer [**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250)-Klasse verwendet.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-206">For this example, we use the [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256) event handler of a [**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250) to initiate the handwriting recognition.</span></span>
-    - <span data-ttu-id="3bdfa-207">Rufen Sie [**AnalyzeAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.AnalyzeAsync) auf, um die Freihandeingabenanalyse zu initiieren und [**InkAnalysisResult**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult) abzurufen.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-207">Call [**AnalyzeAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.AnalyzeAsync) to initiate ink analysis and get the [**InkAnalysisResult**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult).</span></span>
-    - <span data-ttu-id="3bdfa-208">Wenn der [**Status**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult.Status) den Zustand **Aktualisiert** zurückgibt, rufen Sie [**FindNodes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisroot.findnodes) für Knotentypen von [**InkAnalysisNodeKind.InkWord**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind) auf.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-208">If [**Status**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult.Status) returns a state of **Updated**, call [**FindNodes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisroot.findnodes) for node types of  [**InkAnalysisNodeKind.InkWord**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind).</span></span>
-    - <span data-ttu-id="3bdfa-209">Durchlaufen Sie alle Knoten und zeigen Sie den erkannten Text an.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-209">Iterate through the nodes and display the recognized text.</span></span>
-    - <span data-ttu-id="3bdfa-210">Löschen Sie dann die erkannten Knoten aus dem InkAnalyzer und die entsprechenden Freihandstriche aus dem Freihandeingabe-Zeichenbereich.</span><span class="sxs-lookup"><span data-stu-id="3bdfa-210">Finally, delete the recognized nodes from the InkAnalyzer and the corresponding ink strokes from the ink canvas.</span></span>
+4.  <span data-ttu-id="6e04e-208">Zum Schluss wird die Schrifterkennung durchgeführt.</span><span class="sxs-lookup"><span data-stu-id="6e04e-208">Finally, we perform the handwriting recognition.</span></span> <span data-ttu-id="6e04e-209">In diesem Beispiel wird zum Initiieren der Schrifterkennung der [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256)-Ereignishandler einer [**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250)-Klasse verwendet.</span><span class="sxs-lookup"><span data-stu-id="6e04e-209">For this example, we use the [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256) event handler of a [**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250) to initiate the handwriting recognition.</span></span>
+    - <span data-ttu-id="6e04e-210">Rufen Sie [**AnalyzeAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.AnalyzeAsync) auf, um die Freihandeingabenanalyse zu initiieren und [**InkAnalysisResult**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult) abzurufen.</span><span class="sxs-lookup"><span data-stu-id="6e04e-210">Call [**AnalyzeAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.AnalyzeAsync) to initiate ink analysis and get the [**InkAnalysisResult**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult).</span></span>
+    - <span data-ttu-id="6e04e-211">Wenn der [**Status**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult.Status) den Zustand **Aktualisiert** zurückgibt, rufen Sie [**FindNodes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisroot.findnodes) für Knotentypen von [**InkAnalysisNodeKind.InkWord**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind) auf.</span><span class="sxs-lookup"><span data-stu-id="6e04e-211">If [**Status**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult.Status) returns a state of **Updated**, call [**FindNodes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisroot.findnodes) for node types of  [**InkAnalysisNodeKind.InkWord**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind).</span></span>
+    - <span data-ttu-id="6e04e-212">Durchlaufen Sie alle Knoten und zeigen Sie den erkannten Text an.</span><span class="sxs-lookup"><span data-stu-id="6e04e-212">Iterate through the nodes and display the recognized text.</span></span>
+    - <span data-ttu-id="6e04e-213">Löschen Sie dann die erkannten Knoten aus dem InkAnalyzer und die entsprechenden Freihandstriche aus dem Freihandeingabe-Zeichenbereich.</span><span class="sxs-lookup"><span data-stu-id="6e04e-213">Finally, delete the recognized nodes from the InkAnalyzer and the corresponding ink strokes from the ink canvas.</span></span>
 ```csharp
     private async void recoTimer_TickAsync(object sender, object e)
     {
@@ -850,21 +853,21 @@ string str = "Recognition result\n";
     }
 ```
 
-## <a name="related-articles"></a><span data-ttu-id="3bdfa-211">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="3bdfa-211">Related articles</span></span>
+## <a name="related-articles"></a><span data-ttu-id="6e04e-214">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="6e04e-214">Related articles</span></span>
 
-* [<span data-ttu-id="3bdfa-212">Zeichen- und Eingabestiftinteraktionen</span><span class="sxs-lookup"><span data-stu-id="3bdfa-212">Pen and stylus interactions</span></span>](pen-and-stylus-interactions.md)
+* [<span data-ttu-id="6e04e-215">Zeichen- und Eingabestiftinteraktionen</span><span class="sxs-lookup"><span data-stu-id="6e04e-215">Pen and stylus interactions</span></span>](pen-and-stylus-interactions.md)
 
-**<span data-ttu-id="3bdfa-213">Themenbeispiele</span><span class="sxs-lookup"><span data-stu-id="3bdfa-213">Topic samples</span></span>**
-* [<span data-ttu-id="3bdfa-214">Freihandeingabenanalyse (einfach) (C#)</span><span class="sxs-lookup"><span data-stu-id="3bdfa-214">Ink analysis sample (basic) (C#)</span></span>](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)
-* [<span data-ttu-id="3bdfa-215">Beispiel für Freihandschrifterkennung (C#)</span><span class="sxs-lookup"><span data-stu-id="3bdfa-215">Ink handwriting recognition sample (C#)</span></span>](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)
+**<span data-ttu-id="6e04e-216">Themenbeispiele</span><span class="sxs-lookup"><span data-stu-id="6e04e-216">Topic samples</span></span>**
+* [<span data-ttu-id="6e04e-217">Freihandeingabenanalyse (einfach) (C#)</span><span class="sxs-lookup"><span data-stu-id="6e04e-217">Ink analysis sample (basic) (C#)</span></span>](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)
+* [<span data-ttu-id="6e04e-218">Beispiel für Freihandschrifterkennung (C#)</span><span class="sxs-lookup"><span data-stu-id="6e04e-218">Ink handwriting recognition sample (C#)</span></span>](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)
 
-**<span data-ttu-id="3bdfa-216">Andere Beispiele</span><span class="sxs-lookup"><span data-stu-id="3bdfa-216">Other samples</span></span>**
-* [<span data-ttu-id="3bdfa-217">Einfaches Freihandbeispiel (C#/C++)</span><span class="sxs-lookup"><span data-stu-id="3bdfa-217">Simple ink sample (C#/C++)</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [<span data-ttu-id="3bdfa-218">Komplexes Freihandbeispiel (C++)</span><span class="sxs-lookup"><span data-stu-id="3bdfa-218">Complex ink sample (C++)</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=620314)
-* [<span data-ttu-id="3bdfa-219">Freihandbeispiel (JavaScript)</span><span class="sxs-lookup"><span data-stu-id="3bdfa-219">Ink sample (JavaScript)</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [<span data-ttu-id="3bdfa-220">Lernprogramm „Erste Schritte:” Unterstützen von Freihandeingaben in Ihrer UWP-App</span><span class="sxs-lookup"><span data-stu-id="3bdfa-220">Get Started Tutorial: Support ink in your UWP app</span></span>](https://aka.ms/appsample-ink)
-* [<span data-ttu-id="3bdfa-221">Malbuchbeispiel</span><span class="sxs-lookup"><span data-stu-id="3bdfa-221">Coloring book sample</span></span>](https://aka.ms/cpubsample-coloringbook)
-* [<span data-ttu-id="3bdfa-222">Familiennotizbeispiel</span><span class="sxs-lookup"><span data-stu-id="3bdfa-222">Family notes sample</span></span>](https://aka.ms/cpubsample-familynotessample)
+**<span data-ttu-id="6e04e-219">Andere Beispiele</span><span class="sxs-lookup"><span data-stu-id="6e04e-219">Other samples</span></span>**
+* [<span data-ttu-id="6e04e-220">Einfaches Freihandbeispiel (C#/C++)</span><span class="sxs-lookup"><span data-stu-id="6e04e-220">Simple ink sample (C#/C++)</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [<span data-ttu-id="6e04e-221">Komplexes Freihandbeispiel (C++)</span><span class="sxs-lookup"><span data-stu-id="6e04e-221">Complex ink sample (C++)</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [<span data-ttu-id="6e04e-222">Freihandbeispiel (JavaScript)</span><span class="sxs-lookup"><span data-stu-id="6e04e-222">Ink sample (JavaScript)</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [<span data-ttu-id="6e04e-223">Lernprogramm „Erste Schritte:” Unterstützen von Freihandeingaben in Ihrer UWP-App</span><span class="sxs-lookup"><span data-stu-id="6e04e-223">Get Started Tutorial: Support ink in your UWP app</span></span>](https://aka.ms/appsample-ink)
+* [<span data-ttu-id="6e04e-224">Malbuchbeispiel</span><span class="sxs-lookup"><span data-stu-id="6e04e-224">Coloring book sample</span></span>](https://aka.ms/cpubsample-coloringbook)
+* [<span data-ttu-id="6e04e-225">Familiennotizbeispiel</span><span class="sxs-lookup"><span data-stu-id="6e04e-225">Family notes sample</span></span>](https://aka.ms/cpubsample-familynotessample)
 
 
  
