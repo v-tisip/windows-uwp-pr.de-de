@@ -5,12 +5,12 @@ ms.date: 11/13/2017
 ms.topic: article
 keywords: windows 10, uwp, SQL Server, datenbank
 ms.localizationpriority: medium
-ms.openlocfilehash: 5cb4b16cea3368660ffcb1bc4b252391a73ab13e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4fe215a593293ff91afb7f71a830512ac365093f
+ms.sourcegitcommit: 8ac3818db796a144b44f848b6211bc46a62ab544
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940811"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "8976927"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>Verwenden einer SQL Server-Datenbank in einer UWP-App
 Ihre App kann sich direkt mit einer SQL Server-Datenbank verbinden und dann Daten über Klassen im Namespace [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) speichern und abrufen.
@@ -29,7 +29,7 @@ Um Ihre App direkt mit einer SQL Server-Datenbank zu verbinden, stellen Sie sich
 
 Öffnen Sie die Datei **Package.appxmanifest** Ihres UWP-Projekts im Manifest-Designer.
 
-Aktivieren Sie auf der Registerkarte **Funktionen** das Kontrollkästchen **Unternehmensauthentifizierung**.
+Aktivieren Sie in der Registerkarte " **Funktionen** " das **Unternehmensauthentifizierung** Kontrollkästchen, wenn Sie Windows-Authentifizierung für die Authentifizierung von SQL Server verwenden.
 
 ![Funktion Unternehmensauthentifizierung](images/enterprise-authentication.png)
 
@@ -61,8 +61,13 @@ Unsere Verbindungszeichenfolge zeigt auf die Northwind-Datenbank in einer SQL Se
 ```csharp
 sealed partial class App : Application
 {
+    // Connection string for using Windows Authentication.
     private string connectionString =
         @"Data Source=YourServerName\SQLEXPRESS;Initial Catalog=NORTHWIND;Integrated Security=SSPI";
+
+    // This is an example connection string for using SQL Server Authentication.
+    // private string connectionString =
+    //     @"Data Source=YourServerName\YourInstanceName;Initial Catalog=DatabaseName; User Id=XXXXX; Password=XXXXX";
 
     public string ConnectionString { get => connectionString; set => connectionString = value; }
 

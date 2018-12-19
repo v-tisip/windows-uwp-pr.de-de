@@ -5,12 +5,12 @@ ms.date: 10/26/2018
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projektion, häufig, gestellte, fragen, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: b162fbaaeda8e1ded1f0d3e1d75c840dfa543f4c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5a0018047b74ffa385cdd758578f3bdad9078c03
+ms.sourcegitcommit: 8ac3818db796a144b44f848b6211bc46a62ab544
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934805"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "8976907"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Häufig gestellte Fragen zu C++/WinRT
 Antworten auf Fragen zur Erstellung und Nutzung von Windows-Runtime-APIs mit [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -149,6 +149,10 @@ a.f();
 ```
 
 Die empfohlene oben gezeigte Muster gilt nicht nur für C++ / WinRT jedoch auf alle Windows-Runtime-sprachprojektionen.
+
+## <a name="how-do-i-turn-a-string-into-a-typemdashfor-navigation-for-example"></a>Wie aktiviere ich eine Zeichenfolge in einen Typ&mdash;für die Navigation, z. B.?
+
+Am Ende der [Navigation Ansicht Codebeispiel wird](/windows/uwp/design/controls-and-patterns/navigationview#code-example) (dies meist in c#) ist ein C++ / WinRT-Codeausschnitt zeigt, wie Sie dies tun.
 
 > [!NOTE]
 > Wenn Ihre Frage in diesem Thema nicht beantwortet, und klicken Sie dann unter Hilfe Umständen finden Sie auf der [Visual Studio C++-Entwicklercommunity](https://developercommunity.visualstudio.com/spaces/62/index.html)oder mithilfe der [ `c++-winrt` -Tag auf Stack Overflow](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt).
