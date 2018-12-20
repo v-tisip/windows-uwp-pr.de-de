@@ -2,20 +2,18 @@
 ms.assetid: AC96F645-1BDE-4316-85E0-2FBDE0A0A62A
 title: Abrufen von Dateieigenschaften
 description: Es werden Eigenschaften&\#8212;oberster Ebene, grundlegend und erweitert&\#8212;für eine Datei abgerufen, die durch ein StorageFile-Objekt dargestellt wird.
-ms.date: 02/08/2017
+ms.date: 12/19/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b0747dd3b8992ab456bdb00a4dc7157211eb8ba
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f69c86ac8f7d13970eca8d1bbb50d4859b95f6a6
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932982"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980358"
 ---
 # <a name="get-file-properties"></a>Abrufen von Dateieigenschaften
-
-
 
 **Wichtige APIs**
 
@@ -26,10 +24,7 @@ ms.locfileid: "8932982"
 Es werden Eigenschaften – oberste Ebene, grundlegend und erweitert – für eine Datei abgerufen, die durch ein [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Objekt dargestellt wird.
 
 > [!NOTE]
-> Siehe auch das [Dateizugriff-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619995).
-
- 
-
+> Ein vollständiges Beispiel finden Sie unter den [Dateizugriff-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -45,9 +40,8 @@ Es werden Eigenschaften – oberste Ebene, grundlegend und erweitert – für ei
 
 Auf viele Dateieigenschaften der obersten Ebene kann in Form von Membern der [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Klasse zugegriffen werden. Diese Eigenschaften enthalten für eine Datei Attribute, Inhaltstyp, Erstellungsdatum, Anzeigename, Dateityp usw.
 
-**Hinweis:** Denken Sie daran, die **PicturesLibrary** -Funktion zu deklarieren.
-
- 
+> [!NOTE]
+> Denken Sie daran, die **picturesLibrary**-Funktion zu deklarieren.
 
 In diesem Beispiel werden alle Dateien der Bildbibliothek aufgezählt, wobei für jede Datei auf einige Eigenschaften der obersten Ebene zugegriffen wird.
 

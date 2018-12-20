@@ -2,16 +2,16 @@
 ms.assetid: BF929A68-9C82-4866-BC13-A32B3A550005
 title: Nachverfolgen kürzlich verwendeter Dateien und Ordner
 description: Sie können Dateien nachverfolgen, auf die häufig zugegriffen wird, indem Sie diese der Liste mit den zuletzt verwendeten Elementen (MRU) der App hinzufügen.
-ms.date: 02/08/2017
+ms.date: 12/19/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a810c097b4f162395106e74b68d5e9cdb2f8538
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 21e0516e3de4085e9ad2f3b67cb5ed497d907f5c
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930052"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980368"
 ---
 # <a name="track-recently-used-files-and-folders"></a>Nachverfolgen kürzlich verwendeter Dateien und Ordner
 
@@ -25,9 +25,7 @@ Sie können Dateien nachverfolgen, auf die häufig zugegriffen wird, indem Sie s
 Ihre App-MRU-Liste wird durch die [**StorageItemMostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207475)-Klasse repräsentiert, die Sie aus der statischen [**StorageApplicationPermissions.MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458)-Eigenschaft abrufen können. MRU-Elemente werden als [**IStorageItem**](https://msdn.microsoft.com/library/windows/apps/br227129)-Objekte gespeichert. Das bedeutet, dass sowohl [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Objekte (die Dateien darstellen) als auch [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)-Objekte (die Ordner darstellen) der MRU-Liste hinzugefügt werden können.
 
 > [!NOTE]
-> Weitere Informationen finden Sie im [Dateiauswahl-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619994) und im [Dateizugriff-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619995).
-
- 
+> Vollständigen Beispiele finden Sie im [Beispiel zur Dateiauswahl](http://go.microsoft.com/fwlink/p/?linkid=619994) , und das [Dateizugriff-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

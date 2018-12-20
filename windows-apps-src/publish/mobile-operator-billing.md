@@ -2,16 +2,16 @@
 Description: The Microsoft Store offers Mobile Operator Billing as a payment method for mobile operators who support this capability.
 title: Abrechnung über den Mobilfunkanbieter
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
-ms.date: 10/02/2018
+ms.date: 12/19/2018
 ms.topic: article
 keywords: Windows10, UWP, Mobilfunkanbieter, mobile Abrechnung, Abrechnung über den Mobilfunkanbieter
 ms.localizationpriority: medium
-ms.openlocfilehash: ca3d362267aabc6120173a029db2b48c65b7d249
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f9f751735c2387ab5009e2e6f19f68db304916ec
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922833"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980388"
 ---
 # <a name="mobile-operator-billing"></a>Abrechnung über den Mobilfunkanbieter
 
@@ -39,8 +39,8 @@ Die Abrechnung über den Mobilfunkanbieter wird aktuell von den folgenden Mobilf
 | Ungarn         | Telenor                          |
 | Italien           | Wind, Tre                        |
 | Malaysia        | Digi                             |
-| Niederlande     | KPN                              |
-| Norwegen          | Telenor, Telia                   |
+| Niederlande     | KPN / Telfort                    |
+| Norwegen          | Telenor / Talkmore, Telia / OneCall   |
 | Polen          | Orange, Play                     |
 | Singapur       | M1 Limited, StarHub              |
 | Slowakei        | Slovak Telekom                   |
