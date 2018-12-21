@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d8ea08cd02314fb566680d8f5b249eaf735b977a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a86c3f2662c036dea5dcebf4726a0463d623a3ac
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938206"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981514"
 ---
 # <a name="lists"></a>Listen
 
@@ -37,7 +37,7 @@ Für jedes Listenmuster sind Entwurfsrichtlinien, Features und Beispiele aufgef�
 > <strong>Windows10 Fall Creators Update – Änderung des Verhaltens</strong>
 > </div>
 > Beim Schwenken/Bildlauf in der Liste der UWP-Apps wird jetzt standardmäßig anstelle des Ausführens der Auswahl ein aktiver Stift verwendet (z.B. Toucheingabe, Touchpad und passiver Stift).
-> Wenn Ihre App vom vorherigen Verhalten abhängig ist, können Sie die Stift-Bildlaufaktionen außer Kraft setzen und auf das vorherige Verhalten zurückzusetzen. Finden Sie unter das [ScrollViewer-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) der API-Referenzthema für Details.
+> Wenn Ihre App vom vorherigen Verhalten abhängig ist, können Sie die Stift-Bildlaufaktionen außer Kraft setzen und auf das vorherige Verhalten zurückzusetzen. Weitere Informationen finden Sie unter der API-Referenzthema für die <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">ScrollViewer-Klasse</a>.
 
 ## <a name="list-views"></a>Listenansichten
 

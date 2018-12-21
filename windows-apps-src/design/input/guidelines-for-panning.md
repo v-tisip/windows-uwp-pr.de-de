@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 340289c16cfd9c63f578c63827b1c0b35162cdfd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 363ea5728b94d6b42f29299e8d240bcfc6242b4c
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920830"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981564"
 ---
 # <a name="guidelines-for-panning"></a>Anleitungen für das Verschieben
 
@@ -82,7 +82,7 @@ Das Verschieben per Toucheingabe mittels Streif- oder Ziehbewegung mit einem ode
 > <strong>Windows10 Fall Creators Update – Abweichende Funktionsweise</strong>
 > </div>
 > Beim Schwenken/Bildlauf in UWP-App wird jetzt standardmäßig anstelle der Textauswahl ein aktiver Stifts verwendet (z.B. Toucheingabe, Touchpad und passiver Stift).  
-> Wenn Ihre App vom vorherigen Verhalten abhängig ist, können Sie die Stift-Bildlaufaktionen außer Kraft setzen und auf das vorherige Verhalten zurückzusetzen. Finden Sie unter das [ScrollViewer-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) der API-Referenzthema für Details.
+> Wenn Ihre App vom vorherigen Verhalten abhängig ist, können Sie die Stift-Bildlaufaktionen außer Kraft setzen und auf das vorherige Verhalten zurückzusetzen. Weitere Informationen finden Sie unter der API-Referenzthema für die <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">ScrollViewer-Klasse</a>.
 
 Je nach Eingabegerät verwendet der Benutzer eine der folgenden Methoden, um die Anzeige in einem verschiebbaren Bereich zu verschieben:
 

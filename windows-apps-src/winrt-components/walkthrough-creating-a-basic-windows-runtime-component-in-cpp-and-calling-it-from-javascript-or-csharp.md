@@ -6,12 +6,12 @@ ms.date: 05/14/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 50c9e80296510d327e60f8c7dba5e38f19b95b7f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fce4ed3f32c0207e55b37a765b4d48d234343e38
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919096"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981434"
 ---
 # <a name="walkthrough-creating-a-windows-runtime-component-in-ccx-and-calling-it-from-javascript-or-c"></a>Exemplarische Vorgehensweise: Erstellen einer Komponente für Windows-Runtime in C++/CX und Aufrufen der Komponente über JavaScript oder C#
 > [!NOTE]
@@ -24,14 +24,14 @@ In diesem Beispiel erstellen wir zunächst das Komponentenprojekt. Sie können a
 
 Beachten Sie, dass die Hauptklasse der Komponente Beispiele für Eigenschafts- und Methodendefinitionen sowie eine Ereignisdeklaration enthält. Diese werden nur aus Gründen der Anschaulichkeit bereitgestellt. Sie sind nicht erforderlich, und in diesem Beispiel ersetzen wir den gesamten generierten Code durch unseren eigenen Code.
 
-## **<a name="to-create-the-c-component-project"></a>So erstellen Sie das C++-Komponentenprojekt**
-Klicken Sie in der Visual Studio-Menüleiste auf **Datei, Neu, Projekt**.
+### **<a name="to-create-the-c-component-project"></a>So erstellen Sie das C++-Komponentenprojekt**
+1. Klicken Sie in der Visual Studio-Menüleiste auf **Datei, Neu, Projekt**.
 
-Erweitern Sie im Dialogfeld **Neues Projekt** im linken Bereich **Visual C++**, und wählen Sie dann den Knoten für universelle Windows-Apps aus.
+2. Erweitern Sie im Dialogfeld **Neues Projekt** im linken Bereich **Visual C++**, und wählen Sie dann den Knoten für universelle Windows-Apps aus.
 
-Wählen Sie im mittleren Bereich **Komponente für Windows-Runtime** aus, und geben Sie dem Projekt den Namen „WinRT\_CPP“.
+3. Wählen Sie im mittleren Bereich **Komponente für Windows-Runtime** aus, und geben Sie dem Projekt den Namen „WinRT\_CPP“.
 
-Klicken Sie auf die Schaltfläche **OK**.
+4. Klicken Sie auf die Schaltfläche **OK**.
 
 ## **<a name="to-add-an-activatable-class-to-the-component"></a>So fügen Sie der Komponente eine aktivierbare Klasse hinzu**
 Eine aktivierbare Klasse kann vom Clientcode mithilfe eines **new**-Ausdrucks (**New** in Visual Basic oder **ref new** in C++) erstellt werden. In der Komponente können Sie sie als **public ref class sealed** deklarieren. Die Class1.h- und CPP-Dateien verfügen bereits über eine Verweisklasse. Sie können den Namen ändern, aber in diesem Beispiel verwenden wir den Standardnamen – Class1. Sie können zusätzliche Verweisklassen oder Standardklassen in der Komponente definieren, falls sie benötigt werden. Weitere Informationen zu Verweisklassen finden Sie unter [Typsystem (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx).
@@ -85,15 +85,15 @@ private:
         Windows::UI::Core::CoreDispatcher^ m_dispatcher;
 ```
 
-## <a name="to-add-the-header-and-namespace-directives"></a>So fügen Sie die Header- und Namespacedirektiven hinzu
-Fügen Sie in „Class1.cpp“ die folgenden #include-Direktiven hinzu:
+### <a name="to-add-the-header-and-namespace-directives"></a>So fügen Sie die Header- und Namespacedirektiven hinzu
+1. Fügen Sie in „Class1.cpp“ die folgenden #include-Direktiven hinzu:
 
 ```cpp
 #include <ppltasks.h>
 #include <concurrent_vector.h>
 ```
 
-Fügen Sie jetzt diese using-Anweisungen hinzu, um die erforderlichen Namespaces abzurufen:
+2. Fügen Sie jetzt diese using-Anweisungen hinzu, um die erforderlichen Namespaces abzurufen:
 
 ```cpp
 using namespace concurrency;
@@ -269,22 +269,22 @@ IAsyncActionWithProgress<double>^ Class1::GetPrimesUnordered(int first, int last
 ## <a name="creating-a-javascript-client-app"></a>Erstellen einer JavaScript-Client-App
 Wenn Sie nur einen C#-Client erstellen möchten, können Sie diesen Abschnitt überspringen.
 
-## <a name="to-create-a-javascript-project"></a>So erstellen Sie ein JavaScript-Projekt
-Öffnen Sie im Projektmappen-Explorer das Kontextmenü des Lösungsknotens, und wählen Sie **Hinzufügen, Neues Projekt** aus.
+### <a name="to-create-a-javascript-project"></a>So erstellen Sie ein JavaScript-Projekt
+1. Öffnen Sie im Projektmappen-Explorer das Kontextmenü des Lösungsknotens, und wählen Sie **Hinzufügen, Neues Projekt** aus.
 
-Erweitern Sie „JavaScript“ (kann unter **Andere Sprachen** verschachtelt sein), und wählen Sie **Leere App (universelle Windows-App)** aus.
+2. Erweitern Sie „JavaScript“ (kann unter **Andere Sprachen** verschachtelt sein), und wählen Sie **Leere App (universelle Windows-App)** aus.
 
-Übernehmen Sie den Standardnamen – App1 – durch Auswählen der Schaltfläche **OK**.
+3. Übernehmen Sie den Standardnamen – App1 – durch Auswählen der Schaltfläche **OK**.
 
-Öffnen Sie das Kontextmenü für den Projektknoten „App1“, und wählen Sie **Als Startprojekt festlegen** aus.
+4. Öffnen Sie das Kontextmenü für den Projektknoten „App1“, und wählen Sie **Als Startprojekt festlegen** aus.
 
-Fügen Sie einen Projektverweis zu WinRT_CPP hinzu:
+5. Fügen Sie einen Projektverweis zu WinRT_CPP hinzu:
 
-Öffnen Sie dann das Kontextmenü für den Knoten „Verweise“, und wählen Sie **Verweis hinzufügen** aus.
+6. Öffnen Sie dann das Kontextmenü für den Knoten „Verweise“, und wählen Sie **Verweis hinzufügen** aus.
 
-Wählen Sie im linken Bereich des Dialogfelds „Verweis-Manager“ die Option **Projekte** aus, und wählen Sie dann **Lösung** aus.
+7. Wählen Sie im linken Bereich des Dialogfelds „Verweis-Manager“ die Option **Projekte** aus, und wählen Sie dann **Lösung** aus.
 
-Wählen Sie im mittleren Bereich „WinRT_CPP“ und dann die Schaltfläche **OK** aus.
+8. Wählen Sie im mittleren Bereich „WinRT_CPP“ und dann die Schaltfläche **OK** aus.
 
 ## <a name="to-add-the-html-that-invokes-the-javascript-event-handlers"></a>So fügen Sie den HTML-Code hinzu, der die JavaScript-Ereignishandler aufruft
 Fügen Sie diesen HTML-Code in den <body>-Knoten der Seite „default.HTML“ ein:
@@ -440,22 +440,22 @@ Drücken Sie F5, um die App auszuführen.
 
 ## <a name="creating-a-c-client-app"></a>Erstellen einer C#-Client-App
 
-## <a name="to-create-a-c-project"></a>So erstellen Sie ein C#-Projekt
-Öffnen Sie im Projektmappen-Explorer das Kontextmenü für den Lösungsknoten, und wählen Sie dann **Hinzufügen, Neues Projekt** aus.
+### <a name="to-create-a-c-project"></a>So erstellen Sie ein C#-Projekt
+1. Öffnen Sie im Projektmappen-Explorer das Kontextmenü für den Lösungsknoten, und wählen Sie dann **Hinzufügen, Neues Projekt** aus.
 
-Erweitern Sie Visual C# (kann unter **Andere Sprachen** verschachtelt sein), wählen Sie **Windows** und dann **universelle** im linken Bereich, und schließlich **Leere App** im mittleren Bereich aus.
+2. Erweitern Sie Visual C# (kann unter **Andere Sprachen** verschachtelt sein), wählen Sie **Windows** und dann **universelle** im linken Bereich, und schließlich **Leere App** im mittleren Bereich aus.
 
-Nennen Sie diese App „CS_Client“, und wählen Sie dann die Schaltfläche **OK** aus.
+3. Nennen Sie diese App „CS_Client“, und wählen Sie dann die Schaltfläche **OK** aus.
 
-Öffnen Sie das Kontextmenü für den Projektknoten „CS_Client“, und wählen Sie **Als Startprojekt festlegen** aus.
+4. Öffnen Sie das Kontextmenü für den Projektknoten „CS_Client“, und wählen Sie **Als Startprojekt festlegen** aus.
 
-Fügen Sie einen Projektverweis zu WinRT_CPP hinzu:
+5. Fügen Sie einen Projektverweis zu WinRT_CPP hinzu:
 
-Öffnen Sie dann das Kontextmenü für den Knoten **Verweise**, und wählen Sie **Verweis hinzufügen** aus.
+   - Öffnen Sie dann das Kontextmenü für den Knoten **Verweise**, und wählen Sie **Verweis hinzufügen** aus.
 
-Wählen Sie im linken Bereich des Dialogfelds **Verweis-Manager** die Option **Projekte** aus, und wählen Sie dann **Lösung** aus.
+   - Wählen Sie im linken Bereich des Dialogfelds **Verweis-Manager** die Option **Projekte** aus, und wählen Sie dann **Lösung** aus.
 
-Wählen Sie im mittleren Bereich „WinRT_CPP“ und dann die Schaltfläche **OK** aus.
+   - Wählen Sie im mittleren Bereich „WinRT_CPP“ und dann die Schaltfläche **OK** aus.
 
 ## <a name="to-add-the-xaml-that-defines-the-user-interface"></a>So fügen Sie den XAML-Code hinzu, der die Benutzeroberfläche definiert
 Kopieren Sie den folgenden Code in das Grid-Element in „MainPage.xaml“.
@@ -584,20 +584,20 @@ Wählen Sie das C#-Projekt oder das JavaScript-Projekt als Startprojekt aus, ind
 ## <a name="inspecting-your-component-in-object-browser-optional"></a>Untersuchen der Komponente im Objektkatalog (optional)
 Im Objektkatalog können Sie alle Windows-Runtime-Typen untersuchen, die in WINMD-Dateien definiert werden. Dazu zählen die Typen im Plattformnamespace und Standardnamespace. Da die Typen im „Platform::Collections“-Namespace aber in der Headerdatei „collections.h“ und nicht in einer WINMD-Datei definiert werden, werden sie nicht im Objektkatalog angezeigt.
 
-## **<a name="to-inspect-a-component"></a>So untersuchen Sie eine Komponente**
-Wählen Sie auf der Menüleiste **Ansicht, Objektkatalog** (STRG+ALT+J) aus.
+### **<a name="to-inspect-a-component"></a>So untersuchen Sie eine Komponente**
+1. Wählen Sie auf der Menüleiste **Ansicht, Objektkatalog** (STRG+ALT+J) aus.
 
-Erweitern Sie im linken Bereich des Objektkatalogs den Knoten „WinRT\_CPP“ zum Anzeigen von Typen und Methoden, die in der Komponente definiert werden.
+2. Erweitern Sie im linken Bereich des Objektkatalogs den Knoten „WinRT\_CPP“ zum Anzeigen von Typen und Methoden, die in der Komponente definiert werden.
 
 ## <a name="debugging-tips"></a>Tipps zum Debuggen
 Laden Sie für einen besseren Debugvorgang die Debuggingsymbole von den öffentlichen Microsoft-Symbolservern herunter:
 
-## **<a name="to-download-debugging-symbols"></a>So laden Sie Debuggingsymbole herunter**
-Wählen Sie auf der Menüleiste **Extras, Optionen** aus.
+### **<a name="to-download-debugging-symbols"></a>So laden Sie Debuggingsymbole herunter**
+1. Wählen Sie auf der Menüleiste **Extras, Optionen** aus.
 
-Erweitern Sie im Dialogfeld **Optionen** die Option **Debuggen** , und wählen Sie **Symbole** aus.
+2. Erweitern Sie im Dialogfeld **Optionen** die Option **Debuggen** , und wählen Sie **Symbole** aus.
 
-Wählen Sie **Microsoft-Symbolserver** und dann die Schaltfläche **OK** aus.
+3. Wählen Sie **Microsoft-Symbolserver** und dann die Schaltfläche **OK** aus.
 
 Beim ersten Mal kann das Herunterladen der Symbole einige Zeit dauern. Geben Sie für eine bessere Leistung beim nächsten Drücken von F5 ein lokales Verzeichnis an, in dem Sie die Symbole zwischenspeichern.
 

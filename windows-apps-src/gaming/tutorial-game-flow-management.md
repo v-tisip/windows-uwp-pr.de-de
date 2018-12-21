@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: Windows 10, UWP, Spiele, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: c6d13b848a9e5d2dfc145431f732187c35c46ab6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 37deaabe2586391b0f0c93359133f10830558539
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939160"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981494"
 ---
 # <a name="game-flow-management"></a>Spielablaufverwaltung
 
@@ -289,7 +289,7 @@ Dies sind die in diesem Beispiel verwendeten Ereignishandler sowie die jeweils b
 <td align="left">OnDpiChanged</td>
 <td align="left">Behandelt <a href="https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation#Windows_Graphics_Display_DisplayInformation_DpiChanged"><strong>Graphics::Display::DisplayInformation::DpiChanged</strong></a>. Der DPI-Wert der Anzeige hat sich geändert, und das Spiel passt seine Ressourcen entsprechend an.
 <div class="alert">
-<strong>Hinweis:</strong>[<strong>CoreWindow</strong>] (https://msdn.microsoft.com/library/windows/desktop/hh404559) Koordinaten werden in DIPs (Device Independent Pixels) für [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987). Daher müssen Sie Direct2D über die DPI-Änderung informieren, damit die 2D-Ressourcen oder -Grundtypen korrekt angezeigt werden.
+<strong>Hinweis:</strong> <a href="https://msdn.microsoft.com/library/windows/desktop/hh404559"><strong>CoreWindow</strong></a> -Koordinaten sind in DIPs (Device Independent Pixels) für <a href="https://msdn.microsoft.com/library/windows/desktop/dd370987">Direct2D</a>. Daher müssen Sie Direct2D über die DPI-Änderung informieren, damit die 2D-Ressourcen oder -Grundtypen korrekt angezeigt werden.
 </div>
 <div>
 </div></td>

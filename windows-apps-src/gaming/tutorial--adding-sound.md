@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Sound
 ms.localizationpriority: medium
-ms.openlocfilehash: 94044e3d10df15cb1cb256d86ced798395e6af6f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7ceef2da582f5d825949afdf2e116862c990165c
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923771"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981384"
 ---
 # <a name="add-sound"></a>Hinzufügen von Sound
 
@@ -337,7 +337,7 @@ Trigger Soundeffekte sind [Simple3DGame::UpdateDynamics](#simple3dgameupdatedyna
 
 Da die Interaktion zwischen Objekten erheblich, je nachdem, das Spiel unterscheidet sich fügen wir sind nicht die Dynamik der die Spielobjekte zu erläutern. Wenn Sie die Implementierung verstehen interessiert sind, wechseln Sie zu [Simple3DGame::UpdateDynamics](#simple3dgameupdatedynamics-method) -Methode.
 
-In der Regel Wenn eine Kollision auftritt, löst die den Soundeffekt zum Wiedergeben von durch Aufrufen von [SoundEffect::PlaySound]((soundeffectplaysound-method). Diese Methode werden keine Soundeffekte, die gerade wiedergegeben und den Puffer im Arbeitsspeicher mit der gewünschten Sounddaten in die Warteschlange beendet. Quellstimme verwendet, um das Volume festlegen, übermitteln Sounddaten und starten Sie die Wiedergabe.
+Im Prinzip Wenn eine Kollision auftritt, löst die Wiedergabe durch einen Aufruf **SoundEffect::** Soundeffekt. Diese Methode werden keine Soundeffekte, die gerade wiedergegeben und den Puffer im Arbeitsspeicher mit der gewünschten Sounddaten in die Warteschlange beendet. Quellstimme verwendet, um das Volume festlegen, übermitteln Sounddaten und starten Sie die Wiedergabe.
 
 ### <a name="soundeffectplaysound-method"></a>SoundEffect::-Methode
 

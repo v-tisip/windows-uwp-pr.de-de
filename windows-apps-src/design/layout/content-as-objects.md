@@ -3,12 +3,12 @@ description: ''
 title: Inhalte als Objekte
 template: detail.hbs
 ms.localizationpriority: medium
-ms.openlocfilehash: 37ba5093f2d7cfe268be40413b889801daf00967
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ed2ac8530d69929cc0e0e921cfb1cc5368058cd2
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942401"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981444"
 ---
 # <a name="content-as-objects"></a>Inhalte als Objekte
 
@@ -35,7 +35,7 @@ Eine klare visuelle Hierarchie sagt dem Benutzer, welche Elemente am wichtigsten
   <p>Wie schafft man also eine klare visuelle Hierarchie? In früheren Versionen von Windows 10 konnten Sie Leerraum, Position und Typografie verwenden, um eine visuelle Hierarchie zu definieren. </p>
   </div>
   <div class="side-by-side-content-right">
-    ![Ein flaches Layout](images/content-as-objects/flat-layout.png)
+    <a href="images/content-as-objects/flat-layout.png">Ein flaches Layout</a>
     
   </div>
 </div>
@@ -43,7 +43,7 @@ Eine klare visuelle Hierarchie sagt dem Benutzer, welche Elemente am wichtigsten
 
 Mit Windows 10 RS2 haben wir buchstäblich eine weitere Dimension hinzugefügt: die Tiefe. 
 
-![Tiefe im Layout](images/content-as-objects/depth-in-layout2.png)
+<a href="images/content-as-objects/depth-in-layout2.png">Tiefe im Layout</a>
 
 
 ## <a name="use-depth-to-establish-a-hierarchy"></a>Aufbau einer Hierarchie über Tiefe 
@@ -59,7 +59,7 @@ Mit Windows 10 RS2 haben wir buchstäblich eine weitere Dimension hinzugefügt: 
     </p>
   </div>
   <div class="side-by-side-content-right">
-    ![Tiefe im Layout](images/content-as-objects/elements-forward-backward.png) 
+    <a href="images/content-as-objects/elements-forward-backward.png">Tiefe im Layout</a> 
     
   </div>
 </div>
@@ -76,13 +76,12 @@ Mit Windows 10 RS2 haben wir buchstäblich eine weitere Dimension hinzugefügt: 
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-  **Hinter dem Hintergrund** <br/>
-Diese Ebene liegt hinter der App.  Wenn Elemente auf diese Ebene verschoben werden, empfehlen wir, sie nicht interaktiv zu gestalten. Elemente auf dieser Ebene haben den langsamsten Parallax-Effekt und werden auf das App-Fenster beschnitten. TODO: Ist diese Ebene skalierbar? 
+<b>Hinter dem Hintergrund</b> Diese Ebene liegt hinter der app.  Wenn Elemente auf diese Ebene verschoben werden, empfehlen wir, sie nicht interaktiv zu gestalten. Elemente auf dieser Ebene haben den langsamsten Parallax-Effekt und werden auf das App-Fenster beschnitten. TODO: Ist diese Ebene skalierbar? 
 
 <p>Beispiele für Hintergrundelemente sind das Bild hinter dem Inhalt, TODO: Beispiel, TODO: Beispiel.</p>
   </div>
   <div class="side-by-side-content-right">
-    ![Die Hintergrundebene einer App](images/content-as-objects/elements-forward-backward.png)
+    <a href="images/content-as-objects/elements-forward-backward.png">Die Hintergrundebene einer App</a>
     
   </div>
 </div>
@@ -93,13 +92,12 @@ Diese Ebene liegt hinter der App.  Wenn Elemente auf diese Ebene verschoben werd
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-  **Passive Ebene** <br/>
-Dies ist die Basisebene der App, in der sich standardmäßig die UI-Elemente befinden.  Elemente bewegen sich auf dieser Ebene in Echtzeit (keine Parallax-Effekt). Sie werden auf das App-Fenster beschnitten und auf 100 % skaliert. 
+<b>Passive Ebene</b> Dies ist die Basisebene der app, in denen UI-Elemente in der Standardeinstellung.  Elemente bewegen sich auf dieser Ebene in Echtzeit (keine Parallax-Effekt). Sie werden auf das App-Fenster beschnitten und auf 100 % skaliert. 
 
 <p>Beispielelemente: Der App-Hintergrund, der Text, das sekundäre UI, wie z. B. das App-Navigations-UI.</p>
   </div>
   <div class="side-by-side-content-right">
-    ![Die passive Ebene einer App](images/content-as-objects/elements-forward-backward.png)
+    <a href="images/content-as-objects/elements-forward-backward.png">Die passive Ebene einer App</a>
     
   </div>
 </div>
@@ -110,13 +108,12 @@ Dies ist die Basisebene der App, in der sich standardmäßig die UI-Elemente bef
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-  **Handlungsaufforderungen** <br/>
-Diese Ebene ist für interaktive Elemente bestimmt, die Sie über Elemente auf der passiven Ebene priorisieren. Elemente auf dieser Ebene haben einen mittleren Parallax-Effekt und werden auf das App-Fenster beschnitten. TODO: Skalieren Elemente auf dieser Ebene oder haben sie einen Schlagschatten?
+<b>Handlungsaufforderungen</b> Diese Ebene ist für interaktive Elemente, die Sie über Elemente auf der passiven Ebene priorisieren. Elemente auf dieser Ebene haben einen mittleren Parallax-Effekt und werden auf das App-Fenster beschnitten. TODO: Skalieren Elemente auf dieser Ebene oder haben sie einen Schlagschatten?
 
 <p>Beispielelemente: Listen, Raster, primäre Befehle (TODO: z.B.....).</p> 
   </div>
   <div class="side-by-side-content-right">
-    ![Die Call-to-Action-Schicht einer App](images/content-as-objects/elements-forward-backward.png)
+    <a href="images/content-as-objects/elements-forward-backward.png">Die Call-to-Action-Schicht einer App</a>
     
   </div>
 </div>
@@ -126,13 +123,12 @@ Diese Ebene ist für interaktive Elemente bestimmt, die Sie über Elemente auf d
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-  **Hero-Ebene** <br/>
-Diese Ebene ist für das Element mit der höchsten Priorität auf dem Bildschirm.  Elemente auf dieser Ebene können die Grenzen des App-Fensters sprengen, sie können skalieren, und sie erhalten automatisch einen Schlagschatten.
+<b>Hero-Ebene</b> Diese Ebene ist für das Element mit der höchsten Priorität auf dem Bildschirm zum Zeitpunkt.  Elemente auf dieser Ebene können die Grenzen des App-Fensters sprengen, sie können skalieren, und sie erhalten automatisch einen Schlagschatten.
 
 <p>Beispielelemente: fotografische Elemente, das aktuell ausgewählte Element.</p>  
   </div>
   <div class="side-by-side-content-right">
-    ![Die Hero-Ebene einer App](images/content-as-objects/elements-forward-backward.png)
+    <a href="images/content-as-objects/elements-forward-backward.png">Die Hero-Ebene einer App</a>
     
   </div>
 </div>

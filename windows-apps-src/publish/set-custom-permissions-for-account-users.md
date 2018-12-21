@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Benutzerrollen, Benutzerberechtigung, benutzerdefinierte Rollen, Zugriff für Benutzer, Berechtigungen anpassen, Standardrollen
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a76dd85343ddf81baceb4946515c869083b839e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d1581757cb16cf2ed5d0082a6a0e4a4e09299361
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947982"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981504"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Legen Sie Rollen oder benutzerdefinierte Berechtigungen für Kontenbenutzer fest
 
@@ -170,7 +170,7 @@ Beachten Sie, dass einige Berechtigungen nicht für Add-Ons festgelegt werden k�
     <tr><td align="left">    <b>Nutzung</b> </td><td>    Kann den <a href="usage-report.md">Bericht „Nutzung“</a> für das Produkt anzeigen.     </td><td>    Nicht verfügbar       </td><td>    n.a.     </td><td>    Nicht verfügbar         </td></tr>
     <tr><td align="left">    <b>Integrität</b> </td><td>    Kann den <a href="health-report.md">Bericht „Integrität“</a> für das Produkt anzeigen.    </td><td>    Nicht verfügbar     </td><td>    n.a.     </td><td>    Nicht verfügbar         </td></tr>
     <tr><td align="left">    <b>Kundenfeedback</b>    </td><td>    Kann die Berichte <a href="reviews-report.md">Rezensionen</a> und <a href="feedback-report.md">Feedback</a> für das Produkt anzeigen.       </td><td>    Nicht verfügbar (Um auf Feedback oder Rezensionen reagieren zu können, muss die Berechtigung <b>Kunden kontaktieren</b> erteilt werden)   </td><td>    Nicht verfügbar     </td><td>    Nicht verfügbar         </td></tr>
-    <tr><td align="left">    <b>Xbox-Analyse</b> </td><td>    Können die [Xbox-Analysebericht](xbox-analytics-report.md) für das Produkt anzeigen.    </td><td>    n.a.   </td><td>    n.a.       </td><td>    Nicht verfügbar          </td></tr>
+    <tr><td align="left">    <b>Xbox-Analyse</b> </td><td>    Können die <a href="xbox-analytics-report.md">Xbox-Analysebericht</a> für das Produkt anzeigen.    </td><td>    n.a.   </td><td>    n.a.       </td><td>    Nicht verfügbar          </td></tr>
     </tbody>
     </table>
 

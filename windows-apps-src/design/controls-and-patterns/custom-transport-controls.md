@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 4878ce99d449674243c8a3f7360a9e9b0dd6db19
-ms.sourcegitcommit: 1cf04b0b1bd7623cd7f6067b8392dce4372f2c69
+ms.openlocfilehash: 26f47f3175802191a866bcd77e4cc7a95ffdbbe4
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "8970993"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981474"
 ---
 # <a name="create-custom-transport-controls"></a>Erstellen benutzerdefinierter Transportsteuerelemente
 
@@ -215,9 +215,10 @@ Das Anpassen von MediaTransportControls kann beispielsweise erforderlich sein, w
               VerticalAlignment="Center" />
 ```
 
-    You must add it to the CommandBar in the appropriate location. (For more info, see the Working with the overflow menu section.) How it's positioned in the UI is determined by where the button is in the markup. For example, if you want this button to appear as the last element in the primary commands, add it at the very end of the primary commands list.
+Sie müssen es dem CommandBar-Element an der entsprechenden Stelle hinzufügen. (Weitere Informationen finden Sie im arbeiten mit dem Überlauf Menüabschnitt.) Wie in der Benutzeroberfläche befindet, wird durch steht für die Schaltfläche im Markup festgelegt. Wenn die Schaltfläche also beispielsweise als letztes Element der primären Befehle angezeigt werden soll, fügen Sie sie ganz am Ende der Liste der primären Befehle hinzu.
 
-    You can also customize the icon for the button. For more info, see the [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx) reference.
+Sie können auch das Symbol für die Schaltfläche anpassen. Weitere Informationen finden Sie unter der <a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx"><b>AppBarButton</b></a> -Referenz.
+    
 
 2. Rufen Sie in der [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.onapplytemplate.aspx)-Überschreibung die Schaltfläche aus der Vorlage ab, und registrieren Sie einen Handler für das dazugehörige [**Click**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)-Ereignis. Dieser Code wird in die `CustomMediaTransportControls`-Klasse eingefügt.
 

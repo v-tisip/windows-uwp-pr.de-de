@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: Windows10, UWP, mrt, pri. Ressourcen, Spiele, Centennial, Desktop App Converter, mui, Satellitenassembly
 ms.localizationpriority: medium
-ms.openlocfilehash: 620efc73502c741e415d210170ea53deefd4e974
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 287c22cbd50f1b69f505bbddd445740fe9422c31
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927953"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981454"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>Verwenden des Ressourcenverwaltungssystem für Windows 10 in älteren Apps oder Spielen
 
@@ -158,7 +158,7 @@ Weitere Informationen zur Datei `AppXManifest.xml` und dem Paketlayout finden Si
 
 Wenn Sie zum Erstellen eines neuen Projekts und zum Migrieren des vorhandenen Codes Visual Studio verwenden, können Sie weitere Informationen in der [MSDN-Dokumentation für die Erstellung eines neuen UWP-Projekts](https://msdn.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal) finden. Sie können den vorhandenen Code in das neue Projekt einfügen, Sie müssen aber wahrscheinlich noch erhebliche Änderungen am Code vornehmen (insbesondere in der Benutzeroberfläche), damit die App als „reine” UWP-App ausgeführt wird. Diese Änderungen werden in diesem Dokument nicht behandelt.
 
-***
+---
 
 ## <a name="phase-1-localize-the-application-manifest"></a>Phase 1: Lokalisieren des Anwendungsmanifests
 
@@ -178,7 +178,7 @@ Wenn Sie die Ressourcen manuell erstellen möchten:
  * Verwenden Sie den entsprechenden Code BCP-47, wenn die Standardsprache nicht Englisch (USA) ist. 
 0. Fügen Sie in der XML-Datei den folgenden Inhalt hinzu. Ersetzten Sie dabei den <span style="background-color: yellow">hervorgehobenen Text</span> durch den entsprechenden Text in der Standardsprache Ihrer App.
 
-**Hinweis:** Es gibt Einschränkungen bezüglich der Länge einiger dieser Strings. Weitere Informationen finden Sie unter [VisualElements](/uwp/schemas/appxpackage/appxmanifestschema/element-visualelements?branch=live).
+[!Note] Es gibt Einschränkungen in Bezug auf die Länge einiger dieser Strings. Weitere Informationen finden Sie unter [VisualElements](/uwp/schemas/appxpackage/appxmanifestschema/element-visualelements?branch=live).
 
 <blockquote>
 <pre>
@@ -303,7 +303,7 @@ Nachdem die PRI-Datei jetzt erstellt wurde, können Sie das Paket erstellen und 
  * `/f` legt die zu verwendende Zuordnungsdatei fest (die im vorherigen Schritt erstellt wurde) 
  * `/p` legt den Namen des Ausgabepakets fest
  * `/o` legt ein Überschreiben der Ausgabedatei fest, wenn vorhanden
-0. Wenn das Paket erstellt wurde, muss es signiert werden. Die einfachste Methode zum Abrufen eines Signaturzertifikats ist, erstellen ein leeres universelles Windows-Projekt in Visual Studio, und Kopieren der `.pfx` -Datei erstellt, aber Sie können manuell mit Erstellen der `MakeCert` und `Pvk2Pfx` gemäß der Verwaltungsdienstprogramme für [der **So erstellen Sie ein app-Paket, das Signaturzertifikat** Thema auf MSDN] (https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx). 
+0. Wenn das Paket erstellt wurde, muss es signiert werden. Die einfachste Methode zum Abrufen eines Signaturzertifikats ist, erstellen ein leeres universelles Windows-Projekt in Visual Studio, und Kopieren der `.pfx` -Datei erstellt, aber Sie können manuell mit Erstellen der `MakeCert` und `Pvk2Pfx` Dienstprogramme gemäß <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832.aspx">So erstellen Sie eine App-Paket Signaturzertifikat</a>, ein Thema auf MSDN. 
  * **Wichtig:** Wenn Sie ein Signaturzertifikat manuell erstellen, stellen Sie sicher, dass Sie die Dateien in einem anderen Verzeichnis als Ihr Quellprojekt oder die Paketquelle ablegen, andernfalls wird es möglicherweise in das Paket eingefügt, einschließlich des privaten Schlüssels!
 0. Verwenden Sie zum Signieren des Pakets den folgenden Befehl. Beachten Sie, dass der im Element `Identity` der Datei `AppxManifest.xml` angegebene `Publisher` mit dem `Subject` des Zertifikats übereinstimmen muss (hierbei handelt es sich **nicht** um das Element `<PublisherDisplayName>`; dieses ist der lokalisierte Anzeigename, der den Benutzern angezeigt wird). Ersetzen Sie wie gewohnt die `contoso_demo...`-Dateinamen mit den Namen für Ihr Projekt, und (**sehr wichtig**) stellen Sie sicher, dass die `.pfx`-Datei sich nicht im aktuellen Verzeichnis befindet (andernfalls wäre sie als Teil Ihres Pakets erstellt worden, einschließlich des privaten Signaturschlüssels!):
 
