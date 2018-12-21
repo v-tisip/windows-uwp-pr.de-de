@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Audio, Eingabe, Netzwerke
 ms.localizationpriority: medium
-ms.openlocfilehash: c3e2a03b1302fcf5690e653cbf07efad8ef14fe8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a7cbe5cfbc2146feaefb40cee8ca96ddfa11705c
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924592"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981404"
 ---
 # <a name="uwp-programming"></a><span data-ttu-id="b6b76-104">UWP-Programmierung</span><span class="sxs-lookup"><span data-stu-id="b6b76-104">UWP programming</span></span>
 
@@ -40,7 +40,7 @@ ms.locfileid: "8924592"
 </tr>
 <tr class="odd">
     <td align="left">
-        <p>[<span data-ttu-id="b6b76-113">Fehlende .NET-APIs in Unity und UWP</span><span class="sxs-lookup"><span data-stu-id="b6b76-113">Missing .NET APIs in Unity and UWP</span></span>](missing-dot-net-apis-in-unity-and-uwp.md)</p>
+        <p><a href="missing-dot-net-apis-in-unity-and-uwp.md"><span data-ttu-id="b6b76-113">Fehlende .NET-APIs in Unity und UWP</span><span class="sxs-lookup"><span data-stu-id="b6b76-113">Missing .NET APIs in Unity and UWP</span></span></a></p>
     </td>
     <td align="left">
         <p><span data-ttu-id="b6b76-114">Informieren Sie sich über die fehlenden .NET-APIs beim Erstellen von UWP-Spielen in Unity sowie über Lösungen für häufig auftretende Probleme.</span><span class="sxs-lookup"><span data-stu-id="b6b76-114">Learn about the missing .NET APIs when building UWP games in Unity, and workarounds for common issues.</span></span></p>

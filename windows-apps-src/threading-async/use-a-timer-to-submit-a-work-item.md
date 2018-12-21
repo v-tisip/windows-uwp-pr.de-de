@@ -6,30 +6,30 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Timer, Threads
 ms.localizationpriority: medium
-ms.openlocfilehash: 2537bad82fc4a17b964f5871ab6ae1434c417f66
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9cad23f5f82ce70b3a9920726d054b59446925b8
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940086"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981524"
 ---
-# <a name="use-a-timer-to-submit-a-work-item"></a><span data-ttu-id="83959-104">Timergesteuertes Übermitteln einer Arbeitsaufgabe</span><span class="sxs-lookup"><span data-stu-id="83959-104">Use a timer to submit a work item</span></span>
+# <a name="use-a-timer-to-submit-a-work-item"></a><span data-ttu-id="56da2-104">Timergesteuertes Übermitteln einer Arbeitsaufgabe</span><span class="sxs-lookup"><span data-stu-id="56da2-104">Use a timer to submit a work item</span></span>
 
 
-<span data-ttu-id="83959-105">\*\* Wichtige APIs \*\*</span><span class="sxs-lookup"><span data-stu-id="83959-105">\*\* Important APIs \*\*</span></span>
+<b><span data-ttu-id="56da2-105">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="56da2-105">Important APIs</span></span></b>
 
--   [**<span data-ttu-id="83959-106">Windows.UI.Core-Namespace</span><span class="sxs-lookup"><span data-stu-id="83959-106">Windows.UI.Core namespace</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR208383)
--   [**<span data-ttu-id="83959-107">Windows.System.Threading-Namespace</span><span class="sxs-lookup"><span data-stu-id="83959-107">Windows.System.Threading namespace</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR229642)
+-   [**<span data-ttu-id="56da2-106">Windows.UI.Core-Namespace</span><span class="sxs-lookup"><span data-stu-id="56da2-106">Windows.UI.Core namespace</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR208383)
+-   [**<span data-ttu-id="56da2-107">Windows.System.Threading-Namespace</span><span class="sxs-lookup"><span data-stu-id="56da2-107">Windows.System.Threading namespace</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR229642)
 
-<span data-ttu-id="83959-108">Hier erfahren Sie, wie Sie eine Arbeitsaufgabe erstellen, die nach dem Ablaufen eines Timers ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="83959-108">Learn how to create a work item that runs after a timer elapses.</span></span>
+<span data-ttu-id="56da2-108">Hier erfahren Sie, wie Sie eine Arbeitsaufgabe erstellen, die nach dem Ablaufen eines Timers ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="56da2-108">Learn how to create a work item that runs after a timer elapses.</span></span>
 
-## <a name="create-a-single-shot-timer"></a><span data-ttu-id="83959-109">Erstellen eines einmaligen Timers</span><span class="sxs-lookup"><span data-stu-id="83959-109">Create a single-shot timer</span></span>
+## <a name="create-a-single-shot-timer"></a><span data-ttu-id="56da2-109">Erstellen eines einmaligen Timers</span><span class="sxs-lookup"><span data-stu-id="56da2-109">Create a single-shot timer</span></span>
 
-<span data-ttu-id="83959-110">Verwenden Sie die [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921)-Methode, um einen Timer für die Arbeitsaufgabe zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="83959-110">Use the [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) method to create a timer for the work item.</span></span> <span data-ttu-id="83959-111">Stellen Sie eine Lambda-Funktion zum Ausführen der Arbeit bereit, und geben Sie mit dem *delay*-Parameter an, wie lange der Threadpool warten soll, bevor er die Arbeitsaufgabe einem verfügbaren Thread zuweist.</span><span class="sxs-lookup"><span data-stu-id="83959-111">Supply a lambda that accomplishes the work, and use the *delay* parameter to specify how long the thread pool waits before it can assign the work item to an available thread.</span></span> <span data-ttu-id="83959-112">Die Verzögerung wird mithilfe einer [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996)-Struktur angegeben.</span><span class="sxs-lookup"><span data-stu-id="83959-112">The delay is specified using a [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996) structure.</span></span>
+<span data-ttu-id="56da2-110">Verwenden Sie die [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921)-Methode, um einen Timer für die Arbeitsaufgabe zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="56da2-110">Use the [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) method to create a timer for the work item.</span></span> <span data-ttu-id="56da2-111">Stellen Sie eine Lambda-Funktion zum Ausführen der Arbeit bereit, und geben Sie mit dem *delay*-Parameter an, wie lange der Threadpool warten soll, bevor er die Arbeitsaufgabe einem verfügbaren Thread zuweist.</span><span class="sxs-lookup"><span data-stu-id="56da2-111">Supply a lambda that accomplishes the work, and use the *delay* parameter to specify how long the thread pool waits before it can assign the work item to an available thread.</span></span> <span data-ttu-id="56da2-112">Die Verzögerung wird mithilfe einer [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996)-Struktur angegeben.</span><span class="sxs-lookup"><span data-stu-id="56da2-112">The delay is specified using a [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996) structure.</span></span>
 
-> <span data-ttu-id="83959-113">**Hinweis:** Sie können [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) verwenden, um auf die Benutzeroberfläche zuzugreifen und den Status der Arbeitsaufgabe anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="83959-113">**Note**You can use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) to access the UI and show progress from the work item.</span></span>
+> <span data-ttu-id="56da2-113">**Hinweis:** Sie können [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) verwenden, um auf die Benutzeroberfläche zuzugreifen und den Status der Arbeitsaufgabe anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="56da2-113">**Note**You can use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) to access the UI and show progress from the work item.</span></span>
 
-<span data-ttu-id="83959-114">Im folgenden Beispiel wird eine Arbeitsaufgabe erstellt, die in drei Minuten ausgeführt wird:</span><span class="sxs-lookup"><span data-stu-id="83959-114">The following example creates a work item that runs in three minutes:</span></span>
+<span data-ttu-id="56da2-114">Im folgenden Beispiel wird eine Arbeitsaufgabe erstellt, die in drei Minuten ausgeführt wird:</span><span class="sxs-lookup"><span data-stu-id="56da2-114">The following example creates a work item that runs in three minutes:</span></span>
 
 > [!div class="tabbedCodeSnippets"]
 > ``` csharp
@@ -85,11 +85,11 @@ ms.locfileid: "8940086"
 >         }), delay);
 > ```
 
-## <a name="provide-a-completion-handler"></a><span data-ttu-id="83959-115">Bereitstellen eines Abschlusshandlers</span><span class="sxs-lookup"><span data-stu-id="83959-115">Provide a completion handler</span></span>
+## <a name="provide-a-completion-handler"></a><span data-ttu-id="56da2-115">Bereitstellen eines Abschlusshandlers</span><span class="sxs-lookup"><span data-stu-id="56da2-115">Provide a completion handler</span></span>
 
-<span data-ttu-id="83959-116">Behandeln Sie den Abbruch und Abschluss der Arbeitsaufgabe ggf. mit einem [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926)-Element.</span><span class="sxs-lookup"><span data-stu-id="83959-116">If needed, handle cancellation and completion of the work item with a [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926).</span></span> <span data-ttu-id="83959-117">Stellen Sie mithilfe der [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921)-Überladung eine zusätzliche Lambda-Funktion bereit.</span><span class="sxs-lookup"><span data-stu-id="83959-117">Use the [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) overload to supply an additional lambda.</span></span> <span data-ttu-id="83959-118">Diese Funktion wird ausgeführt, wenn der Timer abgebrochen oder die Arbeitsaufgabe abgeschlossen wird.</span><span class="sxs-lookup"><span data-stu-id="83959-118">This runs when the timer is cancelled or when the work item completes.</span></span>
+<span data-ttu-id="56da2-116">Behandeln Sie den Abbruch und Abschluss der Arbeitsaufgabe ggf. mit einem [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926)-Element.</span><span class="sxs-lookup"><span data-stu-id="56da2-116">If needed, handle cancellation and completion of the work item with a [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926).</span></span> <span data-ttu-id="56da2-117">Stellen Sie mithilfe der [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921)-Überladung eine zusätzliche Lambda-Funktion bereit.</span><span class="sxs-lookup"><span data-stu-id="56da2-117">Use the [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) overload to supply an additional lambda.</span></span> <span data-ttu-id="56da2-118">Diese Funktion wird ausgeführt, wenn der Timer abgebrochen oder die Arbeitsaufgabe abgeschlossen wird.</span><span class="sxs-lookup"><span data-stu-id="56da2-118">This runs when the timer is cancelled or when the work item completes.</span></span>
 
-<span data-ttu-id="83959-119">Das folgende Beispiel erstellt einen Zeitgeber, der die Arbeitsaufgabe sendet, und ruft eine Methode auf, wenn die Arbeitsaufgabe abgeschlossen oder der Zeitgeber abgebrochen wird:</span><span class="sxs-lookup"><span data-stu-id="83959-119">The following example creates a timer that submits the work item, and calls a method when the work item finishes or the timer is cancelled:</span></span>
+<span data-ttu-id="56da2-119">Das folgende Beispiel erstellt einen Zeitgeber, der die Arbeitsaufgabe sendet, und ruft eine Methode auf, wenn die Arbeitsaufgabe abgeschlossen oder der Zeitgeber abgebrochen wird:</span><span class="sxs-lookup"><span data-stu-id="56da2-119">The following example creates a timer that submits the work item, and calls a method when the work item finishes or the timer is cancelled:</span></span>
 
 > [!div class="tabbedCodeSnippets"]
 > ``` csharp
@@ -205,9 +205,9 @@ ms.locfileid: "8940086"
 >         }));
 > ```
 
-## <a name="cancel-the-timer"></a><span data-ttu-id="83959-120">Abbrechen des Zeitgebers</span><span class="sxs-lookup"><span data-stu-id="83959-120">Cancel the timer</span></span>
+## <a name="cancel-the-timer"></a><span data-ttu-id="56da2-120">Abbrechen des Zeitgebers</span><span class="sxs-lookup"><span data-stu-id="56da2-120">Cancel the timer</span></span>
 
-<span data-ttu-id="83959-121">Wenn der Timer weiter läuft, die Arbeitsaufgabe aber nicht mehr benötigt wird, rufen Sie [**Cancel**](https://msdn.microsoft.com/library/windows/apps/BR230588) auf.</span><span class="sxs-lookup"><span data-stu-id="83959-121">If the timer is still counting down, but the work item is no longer needed, call [**Cancel**](https://msdn.microsoft.com/library/windows/apps/BR230588).</span></span> <span data-ttu-id="83959-122">Der Timer wird abgebrochen, und die Arbeitsaufgabe wird nicht an den Threadpool übermittelt.</span><span class="sxs-lookup"><span data-stu-id="83959-122">The timer is cancelled and the work item won't be submitted to the thread pool.</span></span>
+<span data-ttu-id="56da2-121">Wenn der Timer weiter läuft, die Arbeitsaufgabe aber nicht mehr benötigt wird, rufen Sie [**Cancel**](https://msdn.microsoft.com/library/windows/apps/BR230588) auf.</span><span class="sxs-lookup"><span data-stu-id="56da2-121">If the timer is still counting down, but the work item is no longer needed, call [**Cancel**](https://msdn.microsoft.com/library/windows/apps/BR230588).</span></span> <span data-ttu-id="56da2-122">Der Timer wird abgebrochen, und die Arbeitsaufgabe wird nicht an den Threadpool übermittelt.</span><span class="sxs-lookup"><span data-stu-id="56da2-122">The timer is cancelled and the work item won't be submitted to the thread pool.</span></span>
 
 > [!div class="tabbedCodeSnippets"]
 > ``` csharp
@@ -217,19 +217,19 @@ ms.locfileid: "8940086"
 > DelayTimer->Cancel();
 > ```
 
-## <a name="remarks"></a><span data-ttu-id="83959-123">Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="83959-123">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="56da2-123">Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="56da2-123">Remarks</span></span>
 
-<span data-ttu-id="83959-124">UWP (Universelle Windows-Plattform)-Apps können **Thread.Sleep** nicht verwenden, da dies den UI-Thread blockieren kann.</span><span class="sxs-lookup"><span data-stu-id="83959-124">Universal Windows Platform (UWP) apps can't use **Thread.Sleep** because it can block the UI thread.</span></span> <span data-ttu-id="83959-125">Verwenden Sie zum Erstellen einer Arbeitsaufgabe stattdessen einen [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587). Dieser Timer verzögert die von der Arbeitsaufgabe ausgeführte Aufgabe, ohne den UI-Thread zu blockieren.</span><span class="sxs-lookup"><span data-stu-id="83959-125">You can use a [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587) to create a work item instead, and this will delay the task accomplished by the work item without blocking the UI thread.</span></span>
+<span data-ttu-id="56da2-124">UWP (Universelle Windows-Plattform)-Apps können **Thread.Sleep** nicht verwenden, da dies den UI-Thread blockieren kann.</span><span class="sxs-lookup"><span data-stu-id="56da2-124">Universal Windows Platform (UWP) apps can't use **Thread.Sleep** because it can block the UI thread.</span></span> <span data-ttu-id="56da2-125">Verwenden Sie zum Erstellen einer Arbeitsaufgabe stattdessen einen [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587). Dieser Timer verzögert die von der Arbeitsaufgabe ausgeführte Aufgabe, ohne den UI-Thread zu blockieren.</span><span class="sxs-lookup"><span data-stu-id="56da2-125">You can use a [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587) to create a work item instead, and this will delay the task accomplished by the work item without blocking the UI thread.</span></span>
 
-<span data-ttu-id="83959-126">Ein vollständiges Codebeispiel für Arbeitsaufgaben, Arbeitsaufgaben mit Zeitgeber und regelmäßige Arbeitsaufgaben finden Sie im [Beispiel für den Threadpool](http://go.microsoft.com/fwlink/p/?linkid=255387).</span><span class="sxs-lookup"><span data-stu-id="83959-126">See the [thread pool sample](http://go.microsoft.com/fwlink/p/?linkid=255387) for a complete code sample that demonstrates work items, timer work items, and periodic work items.</span></span> <span data-ttu-id="83959-127">Das Codebeispiel wurde ursprünglich für Windows8.1 geschrieben, aber der Code kann in Windows 10 wiederverwendet werden.</span><span class="sxs-lookup"><span data-stu-id="83959-127">The code sample was originally written for Windows8.1 but the code can be re-used in Windows10.</span></span>
+<span data-ttu-id="56da2-126">Ein vollständiges Codebeispiel für Arbeitsaufgaben, Arbeitsaufgaben mit Zeitgeber und regelmäßige Arbeitsaufgaben finden Sie im [Beispiel für den Threadpool](http://go.microsoft.com/fwlink/p/?linkid=255387).</span><span class="sxs-lookup"><span data-stu-id="56da2-126">See the [thread pool sample](http://go.microsoft.com/fwlink/p/?linkid=255387) for a complete code sample that demonstrates work items, timer work items, and periodic work items.</span></span> <span data-ttu-id="56da2-127">Das Codebeispiel wurde ursprünglich für Windows8.1 geschrieben, aber der Code kann in Windows 10 wiederverwendet werden.</span><span class="sxs-lookup"><span data-stu-id="56da2-127">The code sample was originally written for Windows8.1 but the code can be re-used in Windows10.</span></span>
 
-<span data-ttu-id="83959-128">Informationen zu Wiederholungstimern finden Sie unter [Erstellen einer regelmäßigen Arbeitsaufgabe](create-a-periodic-work-item.md).</span><span class="sxs-lookup"><span data-stu-id="83959-128">For information about repeating timers, see [Create a periodic work item](create-a-periodic-work-item.md).</span></span>
+<span data-ttu-id="56da2-128">Informationen zu Wiederholungstimern finden Sie unter [Erstellen einer regelmäßigen Arbeitsaufgabe](create-a-periodic-work-item.md).</span><span class="sxs-lookup"><span data-stu-id="56da2-128">For information about repeating timers, see [Create a periodic work item](create-a-periodic-work-item.md).</span></span>
 
-## <a name="related-topics"></a><span data-ttu-id="83959-129">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="83959-129">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="56da2-129">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="56da2-129">Related topics</span></span>
 
-* [<span data-ttu-id="83959-130">Senden einer Arbeitsaufgabe an den Threadpool</span><span class="sxs-lookup"><span data-stu-id="83959-130">Submit a work item to the thread pool</span></span>](submit-a-work-item-to-the-thread-pool.md)
-* [<span data-ttu-id="83959-131">Bewährte Methoden zum Verwenden des Threadpools</span><span class="sxs-lookup"><span data-stu-id="83959-131">Best practices for using the thread pool</span></span>](best-practices-for-using-the-thread-pool.md)
-* [<span data-ttu-id="83959-132">Senden einer Arbeitsaufgabe mithilfe eines Timers</span><span class="sxs-lookup"><span data-stu-id="83959-132">Use a timer to submit a work item</span></span>](use-a-timer-to-submit-a-work-item.md)
+* [<span data-ttu-id="56da2-130">Senden einer Arbeitsaufgabe an den Threadpool</span><span class="sxs-lookup"><span data-stu-id="56da2-130">Submit a work item to the thread pool</span></span>](submit-a-work-item-to-the-thread-pool.md)
+* [<span data-ttu-id="56da2-131">Bewährte Methoden zum Verwenden des Threadpools</span><span class="sxs-lookup"><span data-stu-id="56da2-131">Best practices for using the thread pool</span></span>](best-practices-for-using-the-thread-pool.md)
+* [<span data-ttu-id="56da2-132">Senden einer Arbeitsaufgabe mithilfe eines Timers</span><span class="sxs-lookup"><span data-stu-id="56da2-132">Use a timer to submit a work item</span></span>](use-a-timer-to-submit-a-work-item.md)
  
 
  

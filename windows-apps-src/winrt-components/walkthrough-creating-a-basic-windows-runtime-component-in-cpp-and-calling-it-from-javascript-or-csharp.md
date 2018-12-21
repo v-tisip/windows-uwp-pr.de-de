@@ -6,12 +6,12 @@ ms.date: 05/14/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 50c9e80296510d327e60f8c7dba5e38f19b95b7f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fce4ed3f32c0207e55b37a765b4d48d234343e38
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919096"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981434"
 ---
 # <a name="walkthrough-creating-a-windows-runtime-component-in-ccx-and-calling-it-from-javascript-or-c"></a><span data-ttu-id="38077-104">Exemplarische Vorgehensweise: Erstellen einer Komponente für Windows-Runtime in C++/CX und Aufrufen der Komponente über JavaScript oder C#</span><span class="sxs-lookup"><span data-stu-id="38077-104">Walkthrough: Creating a Windows Runtime component in C++/CX, and calling it from JavaScript or C#</span></span>
 > [!NOTE]
@@ -24,14 +24,14 @@ ms.locfileid: "8919096"
 
 <span data-ttu-id="38077-115">Beachten Sie, dass die Hauptklasse der Komponente Beispiele für Eigenschafts- und Methodendefinitionen sowie eine Ereignisdeklaration enthält.</span><span class="sxs-lookup"><span data-stu-id="38077-115">Notice that the main class of the component contains examples of property and method definitions, and an event declaration.</span></span> <span data-ttu-id="38077-116">Diese werden nur aus Gründen der Anschaulichkeit bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="38077-116">These are provided just to show you how it's done.</span></span> <span data-ttu-id="38077-117">Sie sind nicht erforderlich, und in diesem Beispiel ersetzen wir den gesamten generierten Code durch unseren eigenen Code.</span><span class="sxs-lookup"><span data-stu-id="38077-117">They are not required, and in this example, we'll replace all of the generated code with our own code.</span></span>
 
-## **<a name="to-create-the-c-component-project"></a><span data-ttu-id="38077-118">So erstellen Sie das C++-Komponentenprojekt</span><span class="sxs-lookup"><span data-stu-id="38077-118">To create the C++ component project</span></span>**
-<span data-ttu-id="38077-119">Klicken Sie in der Visual Studio-Menüleiste auf **Datei, Neu, Projekt**.</span><span class="sxs-lookup"><span data-stu-id="38077-119">On the Visual Studio menu bar, choose **File, New, Project**.</span></span>
+### **<a name="to-create-the-c-component-project"></a><span data-ttu-id="38077-118">So erstellen Sie das C++-Komponentenprojekt</span><span class="sxs-lookup"><span data-stu-id="38077-118">To create the C++ component project</span></span>**
+1. <span data-ttu-id="38077-119">Klicken Sie in der Visual Studio-Menüleiste auf **Datei, Neu, Projekt**.</span><span class="sxs-lookup"><span data-stu-id="38077-119">On the Visual Studio menu bar, choose **File, New, Project**.</span></span>
 
-<span data-ttu-id="38077-120">Erweitern Sie im Dialogfeld **Neues Projekt** im linken Bereich **Visual C++**, und wählen Sie dann den Knoten für universelle Windows-Apps aus.</span><span class="sxs-lookup"><span data-stu-id="38077-120">In the **New Project** dialog box, in the left pane, expand **Visual C++** and then select the node for Universal Windows apps.</span></span>
+2. <span data-ttu-id="38077-120">Erweitern Sie im Dialogfeld **Neues Projekt** im linken Bereich **Visual C++**, und wählen Sie dann den Knoten für universelle Windows-Apps aus.</span><span class="sxs-lookup"><span data-stu-id="38077-120">In the **New Project** dialog box, in the left pane, expand **Visual C++** and then select the node for Universal Windows apps.</span></span>
 
-<span data-ttu-id="38077-121">Wählen Sie im mittleren Bereich **Komponente für Windows-Runtime** aus, und geben Sie dem Projekt den Namen „WinRT\_CPP“.</span><span class="sxs-lookup"><span data-stu-id="38077-121">In the center pane, select **Windows Runtime Component** and then name the project WinRT\_CPP.</span></span>
+3. <span data-ttu-id="38077-121">Wählen Sie im mittleren Bereich **Komponente für Windows-Runtime** aus, und geben Sie dem Projekt den Namen „WinRT\_CPP“.</span><span class="sxs-lookup"><span data-stu-id="38077-121">In the center pane, select **Windows Runtime Component** and then name the project WinRT\_CPP.</span></span>
 
-<span data-ttu-id="38077-122">Klicken Sie auf die Schaltfläche **OK**.</span><span class="sxs-lookup"><span data-stu-id="38077-122">Choose the **OK** button.</span></span>
+4. <span data-ttu-id="38077-122">Klicken Sie auf die Schaltfläche **OK**.</span><span class="sxs-lookup"><span data-stu-id="38077-122">Choose the **OK** button.</span></span>
 
 ## **<a name="to-add-an-activatable-class-to-the-component"></a><span data-ttu-id="38077-123">So fügen Sie der Komponente eine aktivierbare Klasse hinzu</span><span class="sxs-lookup"><span data-stu-id="38077-123">To add an activatable class to the component</span></span>**
 <span data-ttu-id="38077-124">Eine aktivierbare Klasse kann vom Clientcode mithilfe eines **new**-Ausdrucks (**New** in Visual Basic oder **ref new** in C++) erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="38077-124">An activatable class is one that client code can create by using a **new** expression (**New** in Visual Basic, or **ref new** in C++).</span></span> <span data-ttu-id="38077-125">In der Komponente können Sie sie als **public ref class sealed** deklarieren.</span><span class="sxs-lookup"><span data-stu-id="38077-125">In your component, you declare it as **public ref class sealed**.</span></span> <span data-ttu-id="38077-126">Die Class1.h- und CPP-Dateien verfügen bereits über eine Verweisklasse.</span><span class="sxs-lookup"><span data-stu-id="38077-126">In fact, the Class1.h and .cpp files already have a ref class.</span></span> <span data-ttu-id="38077-127">Sie können den Namen ändern, aber in diesem Beispiel verwenden wir den Standardnamen – Class1.</span><span class="sxs-lookup"><span data-stu-id="38077-127">You can change the name, but in this example we’ll use the default name—Class1.</span></span> <span data-ttu-id="38077-128">Sie können zusätzliche Verweisklassen oder Standardklassen in der Komponente definieren, falls sie benötigt werden.</span><span class="sxs-lookup"><span data-stu-id="38077-128">You can define additional ref classes or regular classes in your component if they are required.</span></span> <span data-ttu-id="38077-129">Weitere Informationen zu Verweisklassen finden Sie unter [Typsystem (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx).</span><span class="sxs-lookup"><span data-stu-id="38077-129">For more information about ref classes, see [Type System (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx).</span></span>
@@ -85,15 +85,15 @@ private:
         Windows::UI::Core::CoreDispatcher^ m_dispatcher;
 ```
 
-## <a name="to-add-the-header-and-namespace-directives"></a><span data-ttu-id="38077-151">So fügen Sie die Header- und Namespacedirektiven hinzu</span><span class="sxs-lookup"><span data-stu-id="38077-151">To add the header and namespace directives</span></span>
-<span data-ttu-id="38077-152">Fügen Sie in „Class1.cpp“ die folgenden #include-Direktiven hinzu:</span><span class="sxs-lookup"><span data-stu-id="38077-152">In Class1.cpp, add these #include directives:</span></span>
+### <a name="to-add-the-header-and-namespace-directives"></a><span data-ttu-id="38077-151">So fügen Sie die Header- und Namespacedirektiven hinzu</span><span class="sxs-lookup"><span data-stu-id="38077-151">To add the header and namespace directives</span></span>
+1. <span data-ttu-id="38077-152">Fügen Sie in „Class1.cpp“ die folgenden #include-Direktiven hinzu:</span><span class="sxs-lookup"><span data-stu-id="38077-152">In Class1.cpp, add these #include directives:</span></span>
 
 ```cpp
 #include <ppltasks.h>
 #include <concurrent_vector.h>
 ```
 
-<span data-ttu-id="38077-153">Fügen Sie jetzt diese using-Anweisungen hinzu, um die erforderlichen Namespaces abzurufen:</span><span class="sxs-lookup"><span data-stu-id="38077-153">Now add these using statements to pull in the required namespaces:</span></span>
+2. <span data-ttu-id="38077-153">Fügen Sie jetzt diese using-Anweisungen hinzu, um die erforderlichen Namespaces abzurufen:</span><span class="sxs-lookup"><span data-stu-id="38077-153">Now add these using statements to pull in the required namespaces:</span></span>
 
 ```cpp
 using namespace concurrency;
@@ -269,22 +269,22 @@ IAsyncActionWithProgress<double>^ Class1::GetPrimesUnordered(int first, int last
 ## <a name="creating-a-javascript-client-app"></a><span data-ttu-id="38077-174">Erstellen einer JavaScript-Client-App</span><span class="sxs-lookup"><span data-stu-id="38077-174">Creating a JavaScript client app</span></span>
 <span data-ttu-id="38077-175">Wenn Sie nur einen C#-Client erstellen möchten, können Sie diesen Abschnitt überspringen.</span><span class="sxs-lookup"><span data-stu-id="38077-175">If you just want to create a C# client, you can skip this section.</span></span>
 
-## <a name="to-create-a-javascript-project"></a><span data-ttu-id="38077-176">So erstellen Sie ein JavaScript-Projekt</span><span class="sxs-lookup"><span data-stu-id="38077-176">To create a JavaScript project</span></span>
-<span data-ttu-id="38077-177">Öffnen Sie im Projektmappen-Explorer das Kontextmenü des Lösungsknotens, und wählen Sie **Hinzufügen, Neues Projekt** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-177">In Solution Explorer, open the shortcut menu for the Solution node and choose **Add, New Project**.</span></span>
+### <a name="to-create-a-javascript-project"></a><span data-ttu-id="38077-176">So erstellen Sie ein JavaScript-Projekt</span><span class="sxs-lookup"><span data-stu-id="38077-176">To create a JavaScript project</span></span>
+1. <span data-ttu-id="38077-177">Öffnen Sie im Projektmappen-Explorer das Kontextmenü des Lösungsknotens, und wählen Sie **Hinzufügen, Neues Projekt** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-177">In Solution Explorer, open the shortcut menu for the Solution node and choose **Add, New Project**.</span></span>
 
-<span data-ttu-id="38077-178">Erweitern Sie „JavaScript“ (kann unter **Andere Sprachen** verschachtelt sein), und wählen Sie **Leere App (universelle Windows-App)** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-178">Expand JavaScript (it might be nested under **Other Languages**) and choose **Blank App (Universal Windows)**.</span></span>
+2. <span data-ttu-id="38077-178">Erweitern Sie „JavaScript“ (kann unter **Andere Sprachen** verschachtelt sein), und wählen Sie **Leere App (universelle Windows-App)** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-178">Expand JavaScript (it might be nested under **Other Languages**) and choose **Blank App (Universal Windows)**.</span></span>
 
-<span data-ttu-id="38077-179">Übernehmen Sie den Standardnamen – App1 – durch Auswählen der Schaltfläche **OK**.</span><span class="sxs-lookup"><span data-stu-id="38077-179">Accept the default name—App1—by choosing the **OK** button.</span></span>
+3. <span data-ttu-id="38077-179">Übernehmen Sie den Standardnamen – App1 – durch Auswählen der Schaltfläche **OK**.</span><span class="sxs-lookup"><span data-stu-id="38077-179">Accept the default name—App1—by choosing the **OK** button.</span></span>
 
-<span data-ttu-id="38077-180">Öffnen Sie das Kontextmenü für den Projektknoten „App1“, und wählen Sie **Als Startprojekt festlegen** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-180">Open the shortcut menu for the App1 project node and choose **Set as Startup Project**.</span></span>
+4. <span data-ttu-id="38077-180">Öffnen Sie das Kontextmenü für den Projektknoten „App1“, und wählen Sie **Als Startprojekt festlegen** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-180">Open the shortcut menu for the App1 project node and choose **Set as Startup Project**.</span></span>
 
-<span data-ttu-id="38077-181">Fügen Sie einen Projektverweis zu WinRT_CPP hinzu:</span><span class="sxs-lookup"><span data-stu-id="38077-181">Add a project reference to WinRT_CPP:</span></span>
+5. <span data-ttu-id="38077-181">Fügen Sie einen Projektverweis zu WinRT_CPP hinzu:</span><span class="sxs-lookup"><span data-stu-id="38077-181">Add a project reference to WinRT_CPP:</span></span>
 
-<span data-ttu-id="38077-182">Öffnen Sie dann das Kontextmenü für den Knoten „Verweise“, und wählen Sie **Verweis hinzufügen** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-182">Open the shortcut menu for the References node and choose **Add Reference**.</span></span>
+6. <span data-ttu-id="38077-182">Öffnen Sie dann das Kontextmenü für den Knoten „Verweise“, und wählen Sie **Verweis hinzufügen** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-182">Open the shortcut menu for the References node and choose **Add Reference**.</span></span>
 
-<span data-ttu-id="38077-183">Wählen Sie im linken Bereich des Dialogfelds „Verweis-Manager“ die Option **Projekte** aus, und wählen Sie dann **Lösung** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-183">In the left pane of the References Manager dialog box, select **Projects** and then select **Solution**.</span></span>
+7. <span data-ttu-id="38077-183">Wählen Sie im linken Bereich des Dialogfelds „Verweis-Manager“ die Option **Projekte** aus, und wählen Sie dann **Lösung** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-183">In the left pane of the References Manager dialog box, select **Projects** and then select **Solution**.</span></span>
 
-<span data-ttu-id="38077-184">Wählen Sie im mittleren Bereich „WinRT_CPP“ und dann die Schaltfläche **OK** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-184">In the center pane, select WinRT_CPP and then choose the **OK** button</span></span>
+8. <span data-ttu-id="38077-184">Wählen Sie im mittleren Bereich „WinRT_CPP“ und dann die Schaltfläche **OK** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-184">In the center pane, select WinRT_CPP and then choose the **OK** button</span></span>
 
 ## <a name="to-add-the-html-that-invokes-the-javascript-event-handlers"></a><span data-ttu-id="38077-185">So fügen Sie den HTML-Code hinzu, der die JavaScript-Ereignishandler aufruft</span><span class="sxs-lookup"><span data-stu-id="38077-185">To add the HTML that invokes the JavaScript event handlers</span></span>
 <span data-ttu-id="38077-186">Fügen Sie diesen HTML-Code in den <body>-Knoten der Seite „default.HTML“ ein:</span><span class="sxs-lookup"><span data-stu-id="38077-186">Paste this HTML into the <body> node of the default.html page:</span></span>
@@ -440,22 +440,22 @@ args.setPromise(WinJS.UI.processAll().then( function completed() {
 
 ## <a name="creating-a-c-client-app"></a><span data-ttu-id="38077-196">Erstellen einer C#-Client-App</span><span class="sxs-lookup"><span data-stu-id="38077-196">Creating a C# client app</span></span>
 
-## <a name="to-create-a-c-project"></a><span data-ttu-id="38077-197">So erstellen Sie ein C#-Projekt</span><span class="sxs-lookup"><span data-stu-id="38077-197">To create a C# project</span></span>
-<span data-ttu-id="38077-198">Öffnen Sie im Projektmappen-Explorer das Kontextmenü für den Lösungsknoten, und wählen Sie dann **Hinzufügen, Neues Projekt** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-198">In Solution Explorer, open the shortcut menu for the Solution node and then choose **Add, New Project**.</span></span>
+### <a name="to-create-a-c-project"></a><span data-ttu-id="38077-197">So erstellen Sie ein C#-Projekt</span><span class="sxs-lookup"><span data-stu-id="38077-197">To create a C# project</span></span>
+1. <span data-ttu-id="38077-198">Öffnen Sie im Projektmappen-Explorer das Kontextmenü für den Lösungsknoten, und wählen Sie dann **Hinzufügen, Neues Projekt** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-198">In Solution Explorer, open the shortcut menu for the Solution node and then choose **Add, New Project**.</span></span>
 
-<span data-ttu-id="38077-199">Erweitern Sie Visual C# (kann unter **Andere Sprachen** verschachtelt sein), wählen Sie **Windows** und dann **universelle** im linken Bereich, und schließlich **Leere App** im mittleren Bereich aus.</span><span class="sxs-lookup"><span data-stu-id="38077-199">Expand Visual C# (it might be nested under **Other Languages**), select **Windows** and then **Universal** in the left pane, and then select **Blank App** in the middle pane.</span></span>
+2. <span data-ttu-id="38077-199">Erweitern Sie Visual C# (kann unter **Andere Sprachen** verschachtelt sein), wählen Sie **Windows** und dann **universelle** im linken Bereich, und schließlich **Leere App** im mittleren Bereich aus.</span><span class="sxs-lookup"><span data-stu-id="38077-199">Expand Visual C# (it might be nested under **Other Languages**), select **Windows** and then **Universal** in the left pane, and then select **Blank App** in the middle pane.</span></span>
 
-<span data-ttu-id="38077-200">Nennen Sie diese App „CS_Client“, und wählen Sie dann die Schaltfläche **OK** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-200">Name this app CS_Client and then choose the **OK** button.</span></span>
+3. <span data-ttu-id="38077-200">Nennen Sie diese App „CS_Client“, und wählen Sie dann die Schaltfläche **OK** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-200">Name this app CS_Client and then choose the **OK** button.</span></span>
 
-<span data-ttu-id="38077-201">Öffnen Sie das Kontextmenü für den Projektknoten „CS_Client“, und wählen Sie **Als Startprojekt festlegen** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-201">Open the shortcut menu for the CS_Client project node and choose **Set as Startup Project**.</span></span>
+4. <span data-ttu-id="38077-201">Öffnen Sie das Kontextmenü für den Projektknoten „CS_Client“, und wählen Sie **Als Startprojekt festlegen** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-201">Open the shortcut menu for the CS_Client project node and choose **Set as Startup Project**.</span></span>
 
-<span data-ttu-id="38077-202">Fügen Sie einen Projektverweis zu WinRT_CPP hinzu:</span><span class="sxs-lookup"><span data-stu-id="38077-202">Add a project reference to WinRT_CPP:</span></span>
+5. <span data-ttu-id="38077-202">Fügen Sie einen Projektverweis zu WinRT_CPP hinzu:</span><span class="sxs-lookup"><span data-stu-id="38077-202">Add a project reference to WinRT_CPP:</span></span>
 
-<span data-ttu-id="38077-203">Öffnen Sie dann das Kontextmenü für den Knoten **Verweise**, und wählen Sie **Verweis hinzufügen** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-203">Open the shortcut menu for the **References** node and choose **Add Reference**.</span></span>
+   - <span data-ttu-id="38077-203">Öffnen Sie dann das Kontextmenü für den Knoten **Verweise**, und wählen Sie **Verweis hinzufügen** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-203">Open the shortcut menu for the **References** node and choose **Add Reference**.</span></span>
 
-<span data-ttu-id="38077-204">Wählen Sie im linken Bereich des Dialogfelds **Verweis-Manager** die Option **Projekte** aus, und wählen Sie dann **Lösung** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-204">In the left pane of the **References Manager** dialog box, select **Projects** and then select **Solution**.</span></span>
+   - <span data-ttu-id="38077-204">Wählen Sie im linken Bereich des Dialogfelds **Verweis-Manager** die Option **Projekte** aus, und wählen Sie dann **Lösung** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-204">In the left pane of the **References Manager** dialog box, select **Projects** and then select **Solution**.</span></span>
 
-<span data-ttu-id="38077-205">Wählen Sie im mittleren Bereich „WinRT_CPP“ und dann die Schaltfläche **OK** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-205">In the center pane, select WinRT_CPP and then choose the **OK** button.</span></span>
+   - <span data-ttu-id="38077-205">Wählen Sie im mittleren Bereich „WinRT_CPP“ und dann die Schaltfläche **OK** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-205">In the center pane, select WinRT_CPP and then choose the **OK** button.</span></span>
 
 ## <a name="to-add-the-xaml-that-defines-the-user-interface"></a><span data-ttu-id="38077-206">So fügen Sie den XAML-Code hinzu, der die Benutzeroberfläche definiert</span><span class="sxs-lookup"><span data-stu-id="38077-206">To add the XAML that defines the user interface</span></span>
 <span data-ttu-id="38077-207">Kopieren Sie den folgenden Code in das Grid-Element in „MainPage.xaml“.</span><span class="sxs-lookup"><span data-stu-id="38077-207">Copy the following code into the Grid element in MainPage.xaml.</span></span>
@@ -584,20 +584,20 @@ private void Clear_Button_Click(object sender, RoutedEventArgs e)
 ## <a name="inspecting-your-component-in-object-browser-optional"></a><span data-ttu-id="38077-216">Untersuchen der Komponente im Objektkatalog (optional)</span><span class="sxs-lookup"><span data-stu-id="38077-216">Inspecting your component in Object Browser (optional)</span></span>
 <span data-ttu-id="38077-217">Im Objektkatalog können Sie alle Windows-Runtime-Typen untersuchen, die in WINMD-Dateien definiert werden.</span><span class="sxs-lookup"><span data-stu-id="38077-217">In Object Browser, you can inspect all Windows Runtime types that are defined in .winmd files.</span></span> <span data-ttu-id="38077-218">Dazu zählen die Typen im Plattformnamespace und Standardnamespace.</span><span class="sxs-lookup"><span data-stu-id="38077-218">This includes the types in the Platform namespace and the default namespace.</span></span> <span data-ttu-id="38077-219">Da die Typen im „Platform::Collections“-Namespace aber in der Headerdatei „collections.h“ und nicht in einer WINMD-Datei definiert werden, werden sie nicht im Objektkatalog angezeigt.</span><span class="sxs-lookup"><span data-stu-id="38077-219">However, because the types in the Platform::Collections namespace are defined in the header file collections.h, not in a winmd file, they don’t appear in Object Browser.</span></span>
 
-## **<a name="to-inspect-a-component"></a><span data-ttu-id="38077-220">So untersuchen Sie eine Komponente</span><span class="sxs-lookup"><span data-stu-id="38077-220">To inspect a component</span></span>**
-<span data-ttu-id="38077-221">Wählen Sie auf der Menüleiste **Ansicht, Objektkatalog** (STRG+ALT+J) aus.</span><span class="sxs-lookup"><span data-stu-id="38077-221">On the menu bar, choose **View, Object Browser** (Ctrl+Alt+J).</span></span>
+### **<a name="to-inspect-a-component"></a><span data-ttu-id="38077-220">So untersuchen Sie eine Komponente</span><span class="sxs-lookup"><span data-stu-id="38077-220">To inspect a component</span></span>**
+1. <span data-ttu-id="38077-221">Wählen Sie auf der Menüleiste **Ansicht, Objektkatalog** (STRG+ALT+J) aus.</span><span class="sxs-lookup"><span data-stu-id="38077-221">On the menu bar, choose **View, Object Browser** (Ctrl+Alt+J).</span></span>
 
-<span data-ttu-id="38077-222">Erweitern Sie im linken Bereich des Objektkatalogs den Knoten „WinRT\_CPP“ zum Anzeigen von Typen und Methoden, die in der Komponente definiert werden.</span><span class="sxs-lookup"><span data-stu-id="38077-222">In the left pane of the Object Browser, expand the WinRT\_CPP node to show the types and methods that are defined on your component.</span></span>
+2. <span data-ttu-id="38077-222">Erweitern Sie im linken Bereich des Objektkatalogs den Knoten „WinRT\_CPP“ zum Anzeigen von Typen und Methoden, die in der Komponente definiert werden.</span><span class="sxs-lookup"><span data-stu-id="38077-222">In the left pane of the Object Browser, expand the WinRT\_CPP node to show the types and methods that are defined on your component.</span></span>
 
 ## <a name="debugging-tips"></a><span data-ttu-id="38077-223">Tipps zum Debuggen</span><span class="sxs-lookup"><span data-stu-id="38077-223">Debugging tips</span></span>
 <span data-ttu-id="38077-224">Laden Sie für einen besseren Debugvorgang die Debuggingsymbole von den öffentlichen Microsoft-Symbolservern herunter:</span><span class="sxs-lookup"><span data-stu-id="38077-224">For a better debugging experience, download the debugging symbols from the public Microsoft symbol servers:</span></span>
 
-## **<a name="to-download-debugging-symbols"></a><span data-ttu-id="38077-225">So laden Sie Debuggingsymbole herunter</span><span class="sxs-lookup"><span data-stu-id="38077-225">To download debugging symbols</span></span>**
-<span data-ttu-id="38077-226">Wählen Sie auf der Menüleiste **Extras, Optionen** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-226">On the menu bar, choose **Tools, Options**.</span></span>
+### **<a name="to-download-debugging-symbols"></a><span data-ttu-id="38077-225">So laden Sie Debuggingsymbole herunter</span><span class="sxs-lookup"><span data-stu-id="38077-225">To download debugging symbols</span></span>**
+1. <span data-ttu-id="38077-226">Wählen Sie auf der Menüleiste **Extras, Optionen** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-226">On the menu bar, choose **Tools, Options**.</span></span>
 
-<span data-ttu-id="38077-227">Erweitern Sie im Dialogfeld **Optionen** die Option **Debuggen** , und wählen Sie **Symbole** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-227">In the **Options** dialog box, expand **Debugging** and select **Symbols**.</span></span>
+2. <span data-ttu-id="38077-227">Erweitern Sie im Dialogfeld **Optionen** die Option **Debuggen** , und wählen Sie **Symbole** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-227">In the **Options** dialog box, expand **Debugging** and select **Symbols**.</span></span>
 
-<span data-ttu-id="38077-228">Wählen Sie **Microsoft-Symbolserver** und dann die Schaltfläche **OK** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-228">Select **Microsoft Symbol Servers** and the choose the **OK** button.</span></span>
+3. <span data-ttu-id="38077-228">Wählen Sie **Microsoft-Symbolserver** und dann die Schaltfläche **OK** aus.</span><span class="sxs-lookup"><span data-stu-id="38077-228">Select **Microsoft Symbol Servers** and the choose the **OK** button.</span></span>
 
 <span data-ttu-id="38077-229">Beim ersten Mal kann das Herunterladen der Symbole einige Zeit dauern.</span><span class="sxs-lookup"><span data-stu-id="38077-229">It might take some time to download the symbols the first time.</span></span> <span data-ttu-id="38077-230">Geben Sie für eine bessere Leistung beim nächsten Drücken von F5 ein lokales Verzeichnis an, in dem Sie die Symbole zwischenspeichern.</span><span class="sxs-lookup"><span data-stu-id="38077-230">For faster performance the next time you press F5, specify a local directory in which to cache the symbols.</span></span>
 
