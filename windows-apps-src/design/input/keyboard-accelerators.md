@@ -10,12 +10,12 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f764d15c1bf5a52a6a48a45856daf9031bbd346
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7e898b0552a9485cd15079a37940a2151e4bc9f9
+ms.sourcegitcommit: 2ef3d22a30afe853de891280e11d96e5e1ab62d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921594"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "8981879"
 ---
 # <a name="keyboard-accelerators"></a>Zugriffstasten
 
@@ -193,9 +193,9 @@ Das ScopeOwner-Attribut des Elements MenuFlyoutItem.KeyboardAccelerators kennzei
 
 ## <a name="invoke-a-keyboard-accelerator"></a>Aufrufen einer Zugriffstaste 
 
-Das [KeyboardAccelerator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardaccelerator)-Objekt verwendet das [Steuerungsmuster der Benutzeroberflächenautomatisierung (UIA)](https://msdn.microsoft.com/library/windows/desktop/ee671194(v=vs.85).aspx), um Maßnahmen zu ergreifen, wenn eine Zugriffstaste aufgerufen wird.
+Das [KeyboardAccelerator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardaccelerator)-Objekt verwendet das [Steuerungsmuster der Benutzeroberflächenautomatisierung (UIA)](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-controlpatternsoverview), um Maßnahmen zu ergreifen, wenn eine Zugriffstaste aufgerufen wird.
 
-Die UIA-Steuerungsmuster machen die häufig verwendeten Steuerelement-Funktionen verfügbar. Das „Button“-Steuerelement implementiert beispielsweise das [Invoke](https://msdn.microsoft.com/library/windows/desktop/ee671279(v=vs.85).aspx)-Steuerungsmuster, um den Klickvorgang zu unterstützen (generell wird ein Steuerelement durch klicken, doppelklicken oder drücken der Eingabetaste, einer vordefinierte Tastenkombination oder einer alternative Tastenkombination aufgerufen). Wenn eine Zugriffstaste verwendet wird, um ein Steuerelement aufzurufen, sucht das XAML-Framework danach, ob das Steuerelement das Invoke-Steuerungsmuster implementiert und wenn dies der Fall ist, wird es aktiviert (es ist nicht erforderlich, das KeyboardAcceleratorInvoked-Ereignis durchzuführen).
+Die UIA-Steuerungsmuster machen die häufig verwendeten Steuerelement-Funktionen verfügbar. Das Schaltflächen-Steuerelement implementiert z. B. das [Invoke](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-implementinginvoke) -Steuerungsmuster zur Unterstützung der des Click-Ereignis (in der Regel wird ein Steuerelement durch Klicken, doppelklicken oder Drücken der EINGABETASTE, einer vordefinierte Tastenkombination oder einige andere Tastenkombination aufgerufen). Wenn eine Zugriffstaste verwendet wird, um ein Steuerelement aufzurufen, sucht das XAML-Framework danach, ob das Steuerelement das Invoke-Steuerungsmuster implementiert und wenn dies der Fall ist, wird es aktiviert (es ist nicht erforderlich, das KeyboardAcceleratorInvoked-Ereignis durchzuführen).
 
 Im folgenden Beispiel löst STRG+S das Click-Ereignis aus, da die Schaltfläche das Invoke-Muster implementiert.
 
@@ -218,10 +218,12 @@ Wenn keine Übereinstimmung identifiziert wird, wird die Zugriffstaste ungültig
 ## <a name="custom-keyboard-accelerator-behavior"></a>Benutzerdefiniertes Verhalten der Zugriffstasten
 
 Das Invoke-Ereignis des [KeyboardAccelerator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardaccelerator)-Objekts wird ausgelöst, wenn die Zugriffstaste ausgeführt wird. Das [KeyboardAcceleratorInvokedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs)-Ereignisobjekt enthält die folgenden Eigenschaften:
-- **Handled** (Boolesch): Bei Festlegen dieser Einstellung auf "true" wird verhindert, dass das Ereignis das Steuerungsmuster auslöst und das Eventbubbling der Zugriffstaste unterbricht. Der Standard ist "False".
-- **Element** (DependencyObject): Das Objekt, das die Zugriffstaste enthält.
 
-Im Folgenden wird das Definieren einer Sammlung an Zugriffstasten und das Behandeln des aufgerufenen Ereignisses veranschaulicht.
+- [**Behandelt**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs.handled) (Boolesch): verhindert, dass das Ereignis das Steuerungsmuster auslöst und Eventbubbling der Zugriffstaste Festlegen dieser Einstellung auf "true" fest. Der Standard ist "False".
+- [**Element**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs.element) (DependencyObject): das Objekt, das die Zugriffstaste zugeordnet.
+- [**KeyboardAccelerator**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs.keyboardaccelerator): die Zugriffstaste zum Auslösen des Ereignisses aufgerufen.
+
+Hier gezeigt, wie Sie eine Sammlung von Zugriffstasten für Elemente in einer ListView definieren und zum Behandeln des aufgerufenen Ereignisses für jede Zugriffstaste.
 
 ``` xaml
 <ListView x:Name="MyListView">
@@ -229,19 +231,20 @@ Im Folgenden wird das Definieren einer Sammlung an Zugriffstasten und das Behand
     <KeyboardAccelerator Key="A" Modifiers="Control,Shift" Invoked="SelectAllInvoked" />
     <KeyboardAccelerator Key="F5" Invoked="RefreshInvoked"  />
   </ListView.KeyboardAccelerators>
-</ListView>   
+</ListView>
 ```
 
 ``` csharp
-void SelectAllInvoked (KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs args)
+void SelectAllInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs args)
 {
-  CustomSelectAll(MyListView);
+  MyListView.SelectAll();
   args.Handled = true;
 }
 
 void RefreshInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs args)
 {
-  Refresh(MyListView);
+  MyListView.SelectionMode = ListViewSelectionMode.None;
+  MyListView.SelectionMode = ListViewSelectionMode.Multiple;
   args.Handled = true;
 }
 ```
@@ -257,7 +260,7 @@ Wenn ein Steuerelement deaktiviert ist, wird die zugehörige Zugriffstaste ebenf
 ``` xaml
 <ListView >
   <ListView.KeyboardAccelerators>
-    <KeyboardAccelerator Key="A" 
+    <KeyboardAccelerator Key="A"
       Modifiers="Control"
       Invoked="CustomListViewSelecAllInvoked" />
   </ListView.KeyboardAccelerators>
@@ -487,7 +490,7 @@ In diesem Abschnitt erläutern wir einige einfache Aspekte der Zugriffstasten.
 
 ### <a name="when-an-accelerator-is-invoked"></a>Wenn eine Zugriffstaste aufgerufen wird
 
-Zugriffstasten bestehen aus zwei Arten von Tasten: Modifizierer und Nicht-Modifizierer. Zu den Zusatztasten gehören die Umschalttaste, Menü, STRG und die Windows-Taste, die über [VirtualKeyModifiers](http://msdn.microsoft.com/library/windows/apps/xaml/Windows.System.VirtualKeyModifiers) verfügbar gemacht werden. Nichtzusatztasten sind alle virtuellen Schlüssel wie z.B. Löschen, F3, die Leertaste, Esc und alle alphanumerischen und Satzzeichen-Tasten. Eine Zugriffstaste wird aufgerufen, wenn Benutzer eine andere Taste drücken, während sie eine oder mehrere Zusatztasten gedrückt halten. Wenn der Benutzer beispielsweise STRG+UMSCHALT+M drückt und dann M drückt, überprüft das Framework die Modifizierer (STRG und UMSCHALTTASTE) und die Zugriffstaste wird ausgelöst, wenn sie vorhanden ist.
+Zugriffstasten bestehen aus zwei Arten von Tasten: Modifizierer und Nicht-Modifizierer. Zu den Zusatztasten gehören die Umschalttaste, Menü, STRG und die Windows-Taste, die über [VirtualKeyModifiers](https://docs.microsoft.com/uwp/api/Windows.System.VirtualKeyModifiers) verfügbar gemacht werden. Nichtzusatztasten sind alle virtuellen Schlüssel wie z.B. Löschen, F3, die Leertaste, Esc und alle alphanumerischen und Satzzeichen-Tasten. Eine Zugriffstaste wird aufgerufen, wenn Benutzer eine andere Taste drücken, während sie eine oder mehrere Zusatztasten gedrückt halten. Wenn der Benutzer beispielsweise STRG+UMSCHALT+M drückt und dann M drückt, überprüft das Framework die Modifizierer (STRG und UMSCHALTTASTE) und die Zugriffstaste wird ausgelöst, wenn sie vorhanden ist.
 
 > [!NOTE]
 > Standardmäßig wird die Zugriffstaste automatisch wiederholt (z.B., wenn der Benutzer STRG+UMSCHALT drückt und dann M gedrückt hält, wird die Zugriffstaste wiederholt aufgerufen, bis M losgelassen wird). Dieses Verhalten kann nicht geändert werden.
@@ -499,7 +502,7 @@ Eingabeereignisse treten in einer bestimmten Reihenfolge auf, die Sie je nach An
 
 Im XAML wird ein Tastendruck so behandelt, als ob es nur eine Eingabe-Bubblingpipeline gibt. Diese Eingabepipeline wird vom KeyDown/KeyUp-Ereignis und der Zeicheneingabe verwendet. Wenn ein Element den Fokus hat, und der Benutzer eine NACH-UNTEN-TASTE drückt, wird ein KeyDown-Ereignis für das Element ausgelöst, gefolgt vom übergeordneten Element des Elements, und so weiter bis ganz nach oben in der Struktur, bis die args.Handle-Eigenschaft auf "true" gelangt.
 
-Das KeyDown-Ereignis wird auch von einigen Steuerelementen verwendet, um die integrierten Steuerungszugriffstasten zu implementieren. Wenn eine Steuerung über eine Zugriffstaste verfügt, verarbeitet sie das KeyDown-Ereignis, das bedeutet, dass kein KeyDown-Eventbubbling auftritt. Beispielsweise unterstützt die RichEditBox das Kopieren mit STRG+C. Wenn STRG gedrückt wird, wird das KeyDown-Ereignis ausgelöst, und durchläuft ein Bubbling. Wenn der Benutzer allerdings gleichzeitig C drückt, wird das KeyDown-Ereignis als „Handled” gekennzeichnet und nicht mehr ausgelöst (es sei denn, der handledEventsToo-Parameter des [UIElement.AddHandler](http://msdn.microsoft.com/library/windows/apps/xaml/Windows.UI.Xaml.UIElement.AddHandler) ist auf "true" festgelegt).
+Das KeyDown-Ereignis wird auch von einigen Steuerelementen verwendet, um die integrierten Steuerungszugriffstasten zu implementieren. Wenn eine Steuerung über eine Zugriffstaste verfügt, verarbeitet sie das KeyDown-Ereignis, das bedeutet, dass kein KeyDown-Eventbubbling auftritt. Beispielsweise unterstützt die RichEditBox das Kopieren mit STRG+C. Wenn STRG gedrückt wird, wird das KeyDown-Ereignis ausgelöst, und durchläuft ein Bubbling. Wenn der Benutzer allerdings gleichzeitig C drückt, wird das KeyDown-Ereignis als „Handled” gekennzeichnet und nicht mehr ausgelöst (es sei denn, der handledEventsToo-Parameter des [UIElement.AddHandler](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler) ist auf "true" festgelegt).
 
 #### <a name="the-characterreceived-event"></a>CharacterReceived-Ereignis
 
