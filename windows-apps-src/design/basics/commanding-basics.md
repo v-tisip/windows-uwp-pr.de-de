@@ -10,12 +10,12 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 7ef7927af7acc8f437a323f374ae7dbf8a36d452
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0f78ffb01bf29076733af40b365e91592c71e9c8
+ms.sourcegitcommit: 17896441726714fa66b5ca4f9df2cdb2259f360e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939028"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "8988249"
 ---
 # <a name="command-design-basics-for-uwp-apps"></a>Befehlsdesigngrundlagen für UWP-Apps
 
@@ -23,7 +23,7 @@ In einer app (universelle Windows Plattform) sind *Befehl* interaktive UI-Elemen
 
 ## <a name="provide-the-best-command-experience"></a>Geben Sie die beste Erfahrung für den Befehl
 
-Der wichtigste Aspekt der Befehlsschnittstelle ist, welche die versuchen, die Benutzer ausführen können. Wie Sie die Funktionen Ihrer app möchten, sollten Sie die erforderlichen Schritte zum Ausführen dieser Aufgaben und die Benutzeroberflächen, die Sie aktivieren möchten. Nachdem Sie einen ersten Entwurf für diese Funktionen abgeschlossen haben, können Sie Entscheidungen über die Tools und Interaktionen zu deren Implementierung vornehmen.
+Der wichtigste Aspekt der Befehlsschnittstelle ist, was Sie Benutzer erreichen möchten. Wie Sie die Funktionen Ihrer app möchten, sollten Sie die erforderlichen Schritte zum Ausführen dieser Aufgaben und die Benutzeroberflächen, die Sie aktivieren möchten. Nachdem Sie einen ersten Entwurf für diese Funktionen abgeschlossen haben, können Sie Entscheidungen über die Tools und Interaktionen zu deren Implementierung vornehmen.
 
 Hier sind einige allgemeine Anwendung auftritt:
 

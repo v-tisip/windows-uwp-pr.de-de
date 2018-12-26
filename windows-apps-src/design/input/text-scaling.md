@@ -8,12 +8,12 @@ ms.date: 08/02/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f81c435690c7bf17066be5f49de4994f146fc5c9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 22ad7a1ac6160fd8b1cfb70c69f299c5d89192d3
+ms.sourcegitcommit: 17896441726714fa66b5ca4f9df2cdb2259f360e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945179"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "8988239"
 ---
 # <a name="text-scaling"></a>Textskalierung
 
@@ -128,7 +128,7 @@ Hier verwenden wir die `AcceptsReturn` und `TextWrapping` TextBox-Eigenschaften,
 
 ### <a name="specify-text-trimming-behavior"></a>Geben Sie Text Zuschneiden Verhalten
 
-Wenn Textumbruch nicht das gewünschte Verhalten ist, können die meisten Textsteuerelemente entweder Ihr Text zuschneiden, oder geben Sie Ellipsen für den Text Zuschneiden Verhalten. Zuschneiden wird bevorzugt, Ellipsen, als Ellipsen selbst Speicherplatz belegen.
+Wenn Textumbruch nicht das gewünschte Verhalten ist, können die meisten Textsteuerelemente Sie Ihre Text Zuschneiden oder Ellipsen für das Verhalten der Text Zuschneiden angeben. Zuschneiden wird bevorzugt, Ellipsen, als Ellipsen selbst Speicherplatz belegen.
 
 > [!NOTE]
 > Wenn Sie Sie den Text zu beschneiden müssen, abgeschnitten Sie, das Ende der Zeichenfolge, die nicht am Anfang.
