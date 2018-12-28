@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: ab894a9ba9c51b091e593503be2db57ba3b1a913
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c00b406f77758266c68a16b078192517caaa14bf
+ms.sourcegitcommit: 616adaaf15ae1b41e867181326c094f42ba6ec07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936484"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "8990216"
 ---
 # <a name="optimize-your-xaml-layout"></a><span data-ttu-id="02dc9-105">Optimieren des XAML-Layouts</span><span class="sxs-lookup"><span data-stu-id="02dc9-105">Optimize your XAML layout</span></span>
 
@@ -75,7 +75,7 @@ ms.locfileid: "8936484"
 <span data-ttu-id="02dc9-132">Das [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)-Element erhöht die Komplexität, jedoch wird nur ein einzelnes Bereichselement verwendet.</span><span class="sxs-lookup"><span data-stu-id="02dc9-132">The [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) adds some complexity, but uses only a single panel element.</span></span>
 
 ```xml
-  <Grid>
+<Grid>
   <Grid.RowDefinitions>
       <RowDefinition Height="Auto" />
       <RowDefinition Height="Auto" />
