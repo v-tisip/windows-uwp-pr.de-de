@@ -5,12 +5,12 @@ keywords: UWP mit mehreren Instanzen
 ms.date: 09/21/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6cceac0cf4b9cc4c13c0e99ce5beffad70787256
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 89ffa2f3480664131af6664988bd9fb31687fe32
+ms.sourcegitcommit: 616adaaf15ae1b41e867181326c094f42ba6ec07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940881"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "8990206"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>Erstellen einer universellen Windows-App mit mehreren Instanzen
 
@@ -25,7 +25,7 @@ Von Windows 10, Version 1803 (10.0; Build 17134) ideenreicher, Ihre UWP-app kann
 
 Wenn Sie eine neue Multiinstanz-Anwendung erstellen, können Sie die **Mehrfachinstanz-App-Projekt Templates.VSIX** installieren, die im [Visual Studio Marketplace ](https://aka.ms/E2nzbv) erhältlich sind. Nachdem Sie die Vorlagen installieren, sind sie im Dialogfeld **Neues Projekt** Dialogfeld unter **Visual C#-> Windows Universal** (oder **Andere Sprachen > Visual C++ > Windows Universal**) verfügbar.
 
-Es werden zwei Vorlagen installiert: **UWP-Apps mit mehreren Instanzen**, die die Vorlage für die Erstellung einer Mulitiinstanz-App bereitstellt sowie **Multi-Instance Redirection UWP app** (UWP-App mit Umleitung für mehrere Instanzen), die zusätzlich die Möglichkeit bietet, eine neue Instanz zu starten oder selektiv eine Instanz zu aktivieren, die bereits gestartet wurde. Wenn beispielsweise ein Dokument in nur einer einzelnen Instanz bearbeitet werden soll, verschieben Sie die Instanz, in der die Datei geöffnet ist, in den Vordergrund, statt eine neue Instanz zu erstellen.
+Es werden zwei Vorlagen installiert: **UWP-Apps mit mehreren Instanzen**, die die Vorlage für die Erstellung einer Mulitiinstanz-App bereitstellt sowie **Multi-Instance Redirection UWP app** (UWP-App mit Umleitung für mehrere Instanzen), die zusätzlich die Möglichkeit bietet, eine neue Instanz zu starten oder selektiv eine Instanz zu aktivieren, die bereits gestartet wurde. Beispielsweise vielleicht möchten Sie nur eine Instanz gleichzeitig das gleiche Dokument bearbeiten, damit Sie schalten, öffnen Sie die Instanz, die die Datei hat in den Vordergrund, statt eine neue Instanz.
 
 Beide Vorlagen fügen `SupportsMultipleInstances` für die `package.appxmanifest` Datei. Beachten Sie das Namespacepräfix `desktop4` und `iot2`: nur Projekte, die auf dem Desktop oder Internet der Dinge (IoT)-Projekte, Unterstützung für die multiinstanzerstellung.
 
