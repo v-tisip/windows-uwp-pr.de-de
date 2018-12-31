@@ -2,16 +2,16 @@
 Description: To understand your tax considerations for price selection, payout implications, and tax responsibility, see your countries/regions of distribution in the tables below.
 title: Steuerinformationen zu kostenpflichtigen Apps
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
-ms.date: 11/20/2018
+ms.date: 01/02/2019
 ms.topic: article
 keywords: Windows10, UWP, Steuern, App-Steuern, Steuergesetze, E-Commerce-Erweiterung, Steuersatz
 ms.localizationpriority: medium
-ms.openlocfilehash: 2065fb2a1cfeb2a895757e1aedc86cd421ff826c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 896a92e009b7d9c33554f77d8da56730625f1f85
+ms.sourcegitcommit: ffad7cfb5d5c099f9f559e966fd93b705b47d2bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924120"
+ms.lasthandoff: 12/31/2018
+ms.locfileid: "8990338"
 ---
 # <a name="tax-details-for-paid-apps"></a>Steuerinformationen zu kostenpflichtigen Apps
 
@@ -46,7 +46,7 @@ Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen 
 | Österreich                          | Der festgelegte Preis ist der endgültige Verkaufspreis und beinhaltet alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.       | 70% des festgelegten Preises abzgl. 20% Steuer     | Microsoft          |
 | Aserbeidschan                       | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Bahamas                      | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
-| Bahrain                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
+| Bahrain                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises abzgl. 5% Steuer                 | Microsoft          |
 | Bangladesch                       | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Barbados                         | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Belarus                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                  | 70% des festgelegten Preises abzgl. 20% Steuer         | Microsoft          |
