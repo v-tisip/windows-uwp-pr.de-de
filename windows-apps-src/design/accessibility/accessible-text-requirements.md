@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: bdfcdc0782515928740a9c01b409b5170540cb27
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 888de987d507f0a1a21458c299605ebcc7b1bc70
+ms.sourcegitcommit: 393180e82e1f6b95b034e99c25053d400e987551
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934505"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "8990473"
 ---
 # <a name="accessible-text-requirements"></a>Anforderungen für barrierefreien Text  
 
@@ -114,25 +114,31 @@ Wenn Sie die systemeigenen Steuerelemente in HTML verwenden, wurde die UIA-Imple
 <span id="text_in_graphics"/>
 <span id="TEXT_IN_GRAPHICS"/>
 
-## <a name="text-in-graphics"></a>Text in Grafiken  
+## <a name="text-in-graphics"></a>Text in Grafiken
+
 Verwenden Sie nach Möglichkeit keinen Text in Grafiken. Text, den Sie der in der App als [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752)-Element angezeigten Bildquelldatei hinzufügen, ist z. B. nicht automatisch barrierefrei oder für Hilfstechnologien lesbar. Falls Sie Text in Grafiken verwenden müssen, müssen Sie sicherstellen, dass der [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)-Wert, den Sie als Entsprechung für „alternativen Text“ angeben, diesen Text oder eine Zusammenfassung seiner Bedeutung enthält. Ähnliches gilt auch, wenn Sie Textzeichen anhand von Vektoren als Teil einer [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path)-Klasse oder mit [**Glyphs**](https://msdn.microsoft.com/library/windows/apps/BR209921) erstellen.
 
 <span id="Text_font_size"/>
 <span id="text_font_size"/>
 <span id="TEXT_FONT_SIZE"/>
 
-## <a name="text-font-size"></a>Schriftgrad des Texts  
-Viele Benutzer haben Probleme beim Lesen eines Texts in einer App, wenn ein zu kleiner Schriftgrad verwendet wird. Sie können dieses Problem verhindern, indem Sie von vornherein den Text auf der Benutzeroberfläche der App groß genug machen. Unter Windows sind auch Hilfstechnologien verfügbar, mit denen Benutzer die Anzeigegröße von Apps oder die allgemeine Anzeige ändern können.
+## <a name="text-font-size-and-scale"></a>Schriftgrad des Texts und Skalierung
 
-* Manche Benutzer verwenden die Barrierefreiheitsfunktion zum Ändern der DPI (Dots per Inch)-Werte für die Hauptanzeige. Diese Option steht unter **Erleichterte Bedienung** als **Elementgröße ändern** zur Verfügung. Sie führt in der **Systemsteuerung** zum Punkt **Darstellung und Anpassung**/ / **Anzeige**. Die Optionen für die Größenanpassung können variieren, da sich dies nach den Funktionen des Anzeigegeräts richtet.
-* Mit der Bildschirmlupe kann ein ausgewählter Bereich der UI vergrößert werden. Es ist aber nicht einfach, die Bildschirmlupe zum Lesen von Text zu verwenden.
+Benutzer haben Probleme beim Lesen von Text in einer app, wenn die Schriftarten verwendet, einfach werden zu klein, stellen Sie daher sicher, dass Text in Ihrer Anwendung ist eine angemessene Größe in erster Linie.
 
-<span id="Text_scale_factor"/>
-<span id="text_scale_factor"/>
-<span id="TEXT_SCALE_FACTOR"/>
+Nachdem Sie die offensichtlich getan haben, enthält Windows verschiedene Bedienungshilfen und Einstellungen, die Benutzer auf ihre eigenen Anforderungen und Einstellungen für das Lesen von Text anpassen und nutzen können. Dazu zählen:
 
-## <a name="text-scale-factor"></a>Textskalierungsfaktor  
-Verschiedene Textelemente und Steuerelemente verfügen über eine [**IsTextScaleFactorEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.istextscalefactorenabled)-Eigenschaft. Diese Eigenschaft weist standardmäßig den Wert **true** auf. Wenn sie den Wert **true** besitzt, bewirkt die Einstellung **Textskalierung** auf dem Smartphone (**Einstellungen &gt; Erleichterte Bedienung**) die Skalierung der Textgröße in diesem Element. Die Skalierung wirkt sich auf Text mit kleiner **FontSize** deutlicher aus als auf Text mit großer **FontSize**. Sie können diese automatische Vergrößerung jedoch deaktivieren, indem Sie die **IsTextScaleFactorEnabled**-Eigenschaft eines Elements auf **false** festlegen. Probieren Sie dieses Markup aus. Passen Sie auf dem Smartphone die Einstellung für die **Textgröße** an, und verfolgen Sie, was mit den **TextBlock**-Elementen geschieht:
+* Die Bildschirmlupe, die einen ausgewählten Bereich der UI vergrößert. Sie sollten sicherstellen, dass das Layout der Text in Ihrer app zum Verwenden der Bildschirmlupe zum Lesen erschweren nicht.
+* Globale Einstellungen für Skalierung und Auflösung in **-Einstellungen -> System Anzeige -> ->, Skalierung und Layout**. Genau können Optionen für die größenanpassung variieren, da dies nach den Funktionen des Anzeigegeräts richtet.
+* Text Größe Einstellungen in **-Einstellungen -> erleichterte Bedienung Anzeige ->**. Passen Sie die **Formatieren von Text, die größer als** Einstellung, um nur die Größe von Text in die Steuerelemente für alle Anwendungen und Bildschirme (alle UWP-Textsteuerelemente unterstützen die Skalierung Umgebung ohne Anpassung oder Vorlagen Text) unterstützt. 
+> [!NOTE]
+> Die Einstellung **Alles größer machen** kann Benutzer ihre bevorzugte Größe für Text und apps in der Regel nur auf ihre angeben.
+
+Verschiedene Textelemente und Steuerelemente verfügen über eine [**IsTextScaleFactorEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.istextscalefactorenabled)-Eigenschaft. Diese Eigenschaft weist standardmäßig den Wert **true** auf. Wenn kann **"true"**, die Größe von Text im Element skaliert werden. Die Skalierung wirkt sich aus Text, der eine kleine **FontSize** deutlicher aus als sie Text wirkt sich auf, die eine große **FontSize**hat. Sie können die automatische Ändern der Größe durch Festlegen des Elements **IsTextScaleFactorEnabled** -Eigenschaft auf **"false"** deaktivieren. 
+
+Weitere Informationen finden Sie in der [Text zu skalieren](https://docs.microsoft.com/windows/uwp/design/input/text-scaling) .
+
+Fügen Sie das folgende Markup für eine app, und führen Sie es aus. Passen Sie die Einstellung **des Texts** , und sehen Sie, was auf jeder **TextBlock**geschieht.
 
 XAML
 ```xml
@@ -143,9 +149,9 @@ XAML
     Style="{StaticResource BodyTextBlockStyle}" IsTextScaleFactorEnabled="False"/>
 ```  
 
-Es ist jedoch nicht ratsam, die automatische Vergrößerung routinemäßig zu deaktivieren, da das Skalieren von UI-Text für alle Apps eine wichtige Barrierefreiheitsfunktion ist. Benutzer erwarten, dass sie auch in Ihrer App funktioniert.
+Es wird nicht empfohlen, dass Sie Text zu skalieren, wie Skalierung UI-Text universell in allen apps eine wichtige Erfahrung für Benutzer deaktivieren.
 
-Sie können auch das [**TextScaleFactorChanged**](https://msdn.microsoft.com/library/windows/apps/Dn633867)-Ereignis und die [**TextScaleFactor**](https://msdn.microsoft.com/library/windows/apps/Dn633866)-Eigenschaft verwenden, um Informationen zu Änderungen der Einstellung **Textgröße** auf dem Smartphone zu erhalten. Gehen Sie wie folgt vor:
+Sie können auch das [**TextScaleFactorChanged**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged)-Ereignis und die [**TextScaleFactor**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactor)-Eigenschaft verwenden, um Informationen zu Änderungen der Einstellung **Textgröße** auf dem Smartphone zu erhalten. Gehen Sie wie folgt vor:
 
 C#
 ```csharp
@@ -163,7 +169,7 @@ private async void UISettings_TextScaleFactorChanged(Windows.UI.ViewManagement.U
 }
 ```
 
-Der Wert von **TextScaleFactor** ist ein Double im Bereich \[1,2\]. Der kleinste Text wird um diesen Wert vergrößert. Unter Umständen können Sie den Wert verwenden, um beispielsweise Grafiken passend zum Text zu skalieren. Denken Sie jedoch daran, dass nicht der gesamte Text um denselben Faktor skaliert wird. Allgemein gilt: Je größer der Text, desto geringer sind die Auswirkungen der Skalierung.
+Der Wert des **TextScaleFactor** ist ein Double in den Bereich \[1,2.25\]. Der kleinste Text wird um diesen Wert vergrößert. Unter Umständen können Sie den Wert verwenden, um beispielsweise Grafiken passend zum Text zu skalieren. Denken Sie jedoch daran, dass nicht der gesamte Text um denselben Faktor skaliert wird. Allgemein gilt: Je größer der Text, desto geringer sind die Auswirkungen der Skalierung.
 
 Diese Typen verfügen über eine **IsTextScaleFactorEnabled**-Eigenschaft:  
 * [**ContentPresenter**](https://msdn.microsoft.com/library/windows/apps/BR209378)
@@ -176,6 +182,8 @@ Diese Typen verfügen über eine **IsTextScaleFactorEnabled**-Eigenschaft:
 <span id="related_topics"/>
 
 ## <a name="related-topics"></a>Verwandte Themen  
+
+* [Textskalierung](https://docs.microsoft.com/windows/uwp/design/input/text-scaling)
 * [Barrierefreiheit](accessibility.md)
 * [Grundlegende Barrierefreiheitsinformationen](basic-accessibility-information.md)
 * [Beispiel für die XAML-Textanzeige](http://go.microsoft.com/fwlink/p/?linkid=238579)
