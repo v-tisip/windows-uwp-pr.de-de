@@ -3,7 +3,7 @@ description: Sie können eine erweiterbare Strukturansicht erstellen, indem Sie 
 title: Strukturansicht
 label: Tree view
 template: detail.hbs
-ms.date: 10/02/2018
+ms.date: 01/03/2019
 ms.localizationpriority: medium
 pm-contact: predavid
 design-contact: ksulliv
@@ -13,12 +13,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: RS5
-ms.openlocfilehash: 753d0cd808daef96aa16c34c3962201ca73e5be9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 479df01808d32a26eaa6775bb9047adc86979f3f
+ms.sourcegitcommit: 67cc4153dac48a2633d93c954eaad61be8600fa8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932649"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "8991768"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -28,10 +28,10 @@ Die TreeView-APIs unterstützen die folgenden Features:
 
 - Schachtelung von N Ebenen
 - Auswahl einzelner oder mehreren Knoten
-- (Vorschau) Binden von Daten an die ItemsSource-Eigenschaft auf TreeView- und Objekte in der Strukturansicht
-- (Vorschau) Objekte in der Strukturansicht als Stamm der Elementvorlage Strukturansicht
-- (Vorschau) Beliebige Arten von Inhalten in einem Objekte in der Strukturansicht
-- (Vorschau) Drag & Drop zwischen Strukturansichten
+- Binden von Daten an die ItemsSource-Eigenschaft auf TreeView- und Objekte in der Strukturansicht
+- Objekte in der Strukturansicht als Stamm der Elementvorlage Strukturansicht
+- Beliebige Arten von Inhalten in einem Objekte in der Strukturansicht
+- Drag & Drop zwischen Strukturansichten
 
 | **Abrufen der Windows-UI-Bibliothek** |
 | - |
@@ -65,11 +65,11 @@ Die TreeView-APIs unterstützen die folgenden Features:
 
 ## <a name="treeview-ui"></a>TreeView-UI
 
-Die Strukturansicht verwendet eine Kombination aus Einzügen und Symbolen, um die geschachtelte Beziehung zwischen Ordnern und übergeordneten Knoten bzw. Nicht-Ordnern und untergeordneten Knoten darzustellen. Ausgeblendete Knoten verwenden ein Chevron, welches nach rechts zeigt, während eingeblendete Knoten ein Chevron verwenden, das nach unten zeigt.
+Die Strukturansicht verwendet eine Kombination aus Einzügen und Symbolen, um die geschachtelte Beziehung zwischen übergeordneten Knoten und untergeordneten Knoten darzustellen. Ausgeblendete Knoten verwenden ein Chevron, welches nach rechts zeigt, während eingeblendete Knoten ein Chevron verwenden, das nach unten zeigt.
 
 ![Das Chevronsymbol in der Strukturansicht](images/treeview-simple.png)
 
-Sie können ein Symbol in die Datenvorlage für Strukturansichtselemente einschließen, um Knoten darzustellen. In diesem Fall sollten Sie ein Ordnersymbol nur für Knoten verwenden, die literale Ordner wie etwa die Ordnerstruktur auf einem Datenträger darstellen.
+Sie können ein Symbol in die Datenvorlage für Strukturansichtselemente einschließen, um Knoten darzustellen. Wenn Sie eine Datei System-Hierarchie angezeigt, können Sie z. B. Symbole für die übergeordneten Hinweise und Dateisymbole für die untergeordneten Knoten verwenden.
 
 ![Das Chevron- und Ordnersymbol zusammen in einer Strukturansicht](images/treeview-icons.png)
 
@@ -79,9 +79,11 @@ Sie können eine Strukturansicht erstellen, indem Sie die [ItemsSource](/uwp/api
 
 Um eine Strukturansicht zu erstellen, verwenden Sie ein [Strukturansicht](/uwp/api/windows.ui.xaml.controls.treeview)-Steuerelement und eine Hierarchie von [TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode)-Objekten. Sie erstellen die Kontenhierarchie, indem Sie eine oder mehrere Stammknoten [RootNodes](/uwp/api/windows.ui.xaml.controls.treeview.rootnodes) -Sammlung des Strukturansicht-Steuerelements hinzufügen. Der Sammlung der untergeordneten Elemente der einzelnen TreeViewNodes können dann weitere Knoten hinzugefügt haben. Sie können Knoten der Strukturansicht auf jede beliebigen Tiefe schachteln.
 
-Ab der Windows Insider Preview, können Sie eine hierarchische die [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) -Eigenschaft, um den Inhalt der Strukturansicht, bereitzustellen binden genauso wie mit ListView ItemsSource aus. Verwenden Sie auf ähnliche Weise [ItemTemplate](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate) (und die optionale ["ItemTemplateSelector"](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate)), um eine DataTemplate bereitzustellen, die das Element gerendert wird.
+Sie können eine hierarchische Datenquelle an die [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) -Eigenschaft, um den Inhalt der Strukturansicht, bereitzustellen binden, genau wie mit ListView ItemsSource. Verwenden Sie auf ähnliche Weise [ItemTemplate](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate) (und die optionale ["ItemTemplateSelector"](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate)), um eine DataTemplate bereitzustellen, die das Element gerendert wird.
 
 > [!IMPORTANT]
+> ItemsSource und verwandte APIs erfordern Windows 10, Version 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) oder höher, oder in der [Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/).
+>
 > ItemsSource ist eine alternative Mechanismus zum TreeView.RootNodes für das Ablegen von Inhalten in das TreeView-Steuerelement. Sie können nicht gleichzeitig ItemsSource und RootNodes festlegen. Bei der Verwendung von ItemsSource Knoten für Sie erstellt, und Sie können diese von TreeView.RootNodes-Eigenschaft zugreifen.
 
 Im Folgenden finden Sie ein Beispiel für eine einfache in XAML deklarierte Strukturansicht. Sie fügen die Knoten in der Regel im Code hinzu, aber hier wird die XAML-Hierarchie angezeigt, da sie beim Visualisieren der Erstellung der Knotenhierarchie hilfreich sein kann.
@@ -290,7 +292,7 @@ Sie müssen möglicherweise eine große Anzahl von Knoten in der Strukturansicht
 
 Behandeln Sie das [Erweitern](/uwp/api/windows.ui.xaml.controls.treeview.expand)-Ereignis und verwenden Sie die [HasUnrealizedChildren](/uwp/api/windows.ui.xaml.controls.treeviewnode.hasunrealizedchildren) -Eigenschaft, um einem Knoten untergeordnete Elemente hinzuzufügen, wenn er erweitert wird. Die HasUnrealizedChildren-Eigenschaft gibt an, ob der Knoten ausgefüllt werden muss oder ob dessen Sammlung der untergeordneten Elemente bereits aufgefüllt wurde. Es ist wichtig zu beachten, dass die TreeViewNode nicht diesen Wert festlegen, müssen Sie im app-Code verwaltet.
 
-Im Folgenden finden Sie ein Beispiel für diese verwendeten APIs. Der vollständige Beispielcode ist am Ende dieses Artikels aufgeführt, darunter die Implementierung des „FillTreeNode”.
+Im Folgenden finden Sie ein Beispiel für diese verwendeten APIs. Finden Sie unter den vollständigen Beispielcode am Ende dieses Artikels, einschließlich der Implementierung des "FillTreeNode".
 
 ```csharp
 private void SampleTreeView_Expanding(TreeView sender, TreeViewExpandingEventArgs args)
@@ -382,10 +384,6 @@ Das TreeView-Steuerelement unterstützt sowohl die Einzelauswahl als auch die Me
 #### <a name="multiple-selection"></a>Mehrfachauswahl
 
 Wenn mehrere Auswahl aktiviert ist, wird ein Kontrollkästchen neben jedem Strukturknoten angezeigt und ausgewählte Elemente werden hervorgehoben. Ein Benutzer kann ein Element mithilfe eines Kontrollkästchens aktivieren oder deaktivieren. Das Element kann weiterhin aufgerufen werden, indem darauf geklickt wird.
-
-Auswählen oder die Auswahl eines übergeordneter Knotens wird aktivieren oder deaktivieren alle untergeordneten Elemente unter diesem Knoten. Wenn einige, aber nicht alle, die untergeordneten Elemente unter einem übergeordneten Knoten ausgewählt werden, das Kontrollkästchen für den übergeordneten Knoten wird angezeigt wie unbestimmten (mit einer Blackbox ausgefüllt).
-
-![Mehrfachauswahl in einer Strukturansicht](images/treeview-selection.png)
 
 Auswählen oder die Auswahl eines übergeordneter Knotens wird aktivieren oder deaktivieren alle untergeordneten Elemente unter diesem Knoten. Wenn einige, aber nicht alle, die untergeordneten Elemente unter einem übergeordneten Knoten ausgewählt werden, das Kontrollkästchen für den übergeordneten Knoten wird angezeigt wie unbestimmten (mit einer Blackbox ausgefüllt).
 

@@ -6,12 +6,12 @@ keywords: Erste Schritte Entwicklerlizenz Visual Studio, Entwicklerlizenz Gerät
 ms.date: 05/30/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1338373226b30c3126782a62f3b5260a47e86d63
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 802555f6b1e6f928edf43806226ac497a437b4ff
+ms.sourcegitcommit: 67cc4153dac48a2633d93c954eaad61be8600fa8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943470"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "8991758"
 ---
 # <a name="enable-your-device-for-development"></a>Aktivieren Ihres Geräts für die Entwicklung
 
@@ -44,23 +44,19 @@ Hier sehen Sie die Einstellungsseite auf Desktopgeräten:
 
 ![Navigieren Sie zu „Einstellungen > Update und Sicherheit“, und wählen Sie „Für Entwickler“ aus, um Ihre Optionen anzuzeigen.](images/devmode-pc-options.png)
 
-Hier sehen Sie die Einstellungsseite auf Mobilgeräten:
-
-![Navigieren Sie auf Ihrem Smartphone unter „Einstellungen“ zu „Update und Sicherheit“.](images/devmode-mob.png)
-
 ## <a name="which-setting-should-i-choose-sideload-apps-or-developer-mode"></a>Welche Einstellung soll ich auswählen: Querladen von Apps oder Entwicklermodus?
 
  Sie können ein Gerät für die Entwicklung oder nur für das Querladen aktivieren.
 
 -   *Microsoft Store-apps* ist die Standardeinstellung. Wenn Sie keine Apps entwickeln oder spezielle interne Apps verwenden, die von Ihrem Unternehmen ausgestellt sind, sollten Sie diese Einstellung aktiviert lassen.
 -   *Querladen* dient zum Installieren und Ausführen oder Testen einer App, die nicht vom Microsoft Store zertifiziert wurde. Hierzu zählen beispielsweise interne Unternehmens-Apps.
--   Im *Entwicklermodus* können Sie Apps querladen und Apps aus Visual Studio im Debugmodus ausführen. 
+-   Im *Entwicklermodus* können Sie Apps querladen und Apps aus Visual Studio im Debugmodus ausführen.
 
 Standardmäßig können Sie nur UWP-Apps (Universelle Windows-Plattform) aus dem Microsoft Store installieren. Wenn Sie diese Einstellungen ändern, um die Entwicklerfeatures zu verwenden, kann hierdurch die Sicherheitsstufe Ihres Geräts geändert werden. Sie sollten keine Apps aus nicht überprüften Quellen installieren.
 
 ### <a name="sideload-apps"></a>Querladen von Apps
 
-Die Einstellung für das Querladen von Apps wird normalerweise von Unternehmen oder Bildungseinrichtungen verwendet, die benutzerdefinierte Apps auf verwalteten Geräten installieren müssen, ohne den Microsoft Store zu nutzen. In diesem Fall wird im Unternehmen häufig eine Richtlinie erzwungen, mit der die Einstellung *UWP-Apps* deaktiviert wird, wie oben in der Abbildung der Einstellungsseite dargestellt. Die Organisation stellt außerdem das erforderliche Zertifikat und den Installationsspeicherort zum Querladen von Apps bereit. Weitere Informationen finden Sie in den TechNet-Artikeln [Querladen von Branchen-Apps in Windows 10](https://technet.microsoft.com/library/mt269549.aspx) und [Erste Schritte mit der Bereitstellung von Apps in Microsoft Intune](https://technet.microsoft.com/library/dn646955.aspx).
+Das Festlegen von Querladen von apps wird normalerweise verwendet, von Unternehmen oder Bildungseinrichtungen, die benutzerdefinierte apps auf verwalteten Geräten installieren, ohne dass über den Microsoft Store müssen oder alle Personen, die apps aus nicht-Microsoft-Quellen ausgeführt werden muss. In diesem Fall wird im Unternehmen häufig eine Richtlinie erzwungen, mit der die Einstellung *UWP-Apps* deaktiviert wird, wie oben in der Abbildung der Einstellungsseite dargestellt. Die Organisation stellt außerdem das erforderliche Zertifikat und den Installationsspeicherort zum Querladen von Apps bereit. Weitere Informationen finden Sie in den TechNet-Artikeln [Querladen von Branchen-Apps in Windows 10](https://technet.microsoft.com/library/mt269549.aspx) und [Erste Schritte mit der Bereitstellung von Apps in Microsoft Intune](https://technet.microsoft.com/library/dn646955.aspx).
 
 Spezifische Informationen für Gerätefamilien
 
@@ -90,7 +86,7 @@ Für jede Gerätefamilie können zusätzliche Entwicklerfeatures verfügbar sein
 
 Diese Abbildung zeigt Entwicklerfeatures für Windows10:
 
-![Optionen des Entwicklermodus](images/devmode-mob-options.png) 
+![Optionen des Entwicklermodus](images/devmode-mob-options.png)
 
 ### <a name="span-iddevice-discovery-and-pairingspandevice-portal"></a><span id="device-discovery-and-pairing"></span>Geräteportal
 
@@ -103,7 +99,7 @@ Gerätespezifische Anweisungen zum Einrichten finden Sie in folgenden Artikeln:
 - [Device Portal für Mobilgeräte](../debug-test-perf/device-portal-mobile.md)
 - [Geräteportal für Xbox](../debug-test-perf/device-portal-xbox.md)
 
-Wenn Sie Probleme beim Aktivieren des Entwicklermodus oder des Geräteportals haben, finden Sie im Forum [Bekannte Probleme](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) Problemumgehungen für diese Probleme. Suchen Sie andernfalls unter [Fehler beim Installieren des Entwicklermoduspakets](#failure-to-install-developer-mode-package) nach zusätzlichen Detail und welche WSUS KBs zugelassen werden, um das Paket im Entwicklermodus zu erlauben oder zu entsperren. 
+Wenn Sie Probleme beim Aktivieren des Entwicklermodus oder des Geräteportals haben, finden Sie im Forum [Bekannte Probleme](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) Problemumgehungen für diese Probleme. Suchen Sie andernfalls unter [Fehler beim Installieren des Entwicklermoduspakets](#failure-to-install-developer-mode-package) nach zusätzlichen Detail und welche WSUS KBs zugelassen werden, um das Paket im Entwicklermodus zu erlauben oder zu entsperren.
 
 ### <a name="ssh"></a>SSH
 
@@ -114,7 +110,7 @@ Wenn Sie die Gerätesuche auf Ihrem Gerät aktivieren, sind SSH-Dienste aktivier
 
 Wenn Sie die SSH-Dienste nutzen möchten, können Sie die Gerätesuche aktivieren, um eine Pin-Kopplung zu ermöglichen. Wenn ein anderer SSH-Dienst ausgeführt werden soll, können Sie diesen auf einem anderen Anschluss einrichten oder die SSH-Dienste im Entwicklermodus deaktivieren. Um die SSH-Dienste zu deaktivieren, deaktivieren Sie die Gerätesuche.  
 
-Die SSH-Anmeldung erfolgt über das Konto "DevToolsUser", das ein Kennwort zur Authentifizierung akzeptiert.  Das Kennwort ist die PIN, die auf dem Gerät nach dem Drücken der Schaltfläche "Koppeln" unter Gerätesuche angezeigt wird und nur gültig ist, solange die PIN angezeigt wird.  Es wird ebenfalls ein SFTP-Subsystem für die manuelle Verwaltung des Ordners "developmentfiles" aktiviert, in dem die Bereitstellung loser Dateien von Visual Studio installiert sind. 
+Die SSH-Anmeldung erfolgt über das Konto "DevToolsUser", das ein Kennwort zur Authentifizierung akzeptiert.  Das Kennwort ist die PIN, die auf dem Gerät nach dem Drücken der Schaltfläche "Koppeln" unter Gerätesuche angezeigt wird und nur gültig ist, solange die PIN angezeigt wird.  Es wird ebenfalls ein SFTP-Subsystem für die manuelle Verwaltung des Ordners "developmentfiles" aktiviert, in dem die Bereitstellung loser Dateien von Visual Studio installiert sind.
 
 #### <a name="caveats-for-ssh-usage"></a>Tipps für die SSH-Verwendung
 Der vorhandene SSH-Server in Windows ist noch nicht mit dem Protokoll kompatibel, daher ist für die Verwendung eines SFTP- oder SSH-Clients möglicherweise eine spezielle Konfiguration erforderlich.  Das SFTP-Subsystem führt eine Version 3 oder älter aus, daher sollte jeder damit verbundene Client für einen älteren Server konfiguriert werden.  Der SSH-Server bei älteren Geräten verwendet `ssh-dss`für die Authentifizierung des öffentlichen Schlüssels, was unter OpenSSH veraltet ist.  Um eine Verbindung mit solchen Geräten herzustellen, muss der SSH-Client manuell konfiguriert werden, um `ssh-dss` zu akzeptieren.  
@@ -129,7 +125,7 @@ Die Gerätesuche sollte nur aktiviert werden, wenn das Gerät ein Bereitstellung
 
 ### <a name="optimizations-for-windows-explorer-remote-desktop-and-powershell-desktop-only"></a>Optimierungen für Windows-Explorer, Remotedesktop und PowerShell (nur Desktop)
 
- Auf der Desktopgerätefamilie finden Sie auf der Einstellungsseite **Für Entwickler** Verknüpfungen zu den Einstellungen, die Sie zum Optimieren Ihres PCs für Entwicklungsaufgaben verwenden können. Für jede Einstellung können Sie das Kontrollkästchen aktivieren und auf **Übernehmen** klicken, oder Sie können auf den Link **Einstellungen anzeigen** klicken, um die Einstellungsseite für diese Option zu öffnen. 
+ Auf der Desktopgerätefamilie finden Sie auf der Einstellungsseite **Für Entwickler** Verknüpfungen zu den Einstellungen, die Sie zum Optimieren Ihres PCs für Entwicklungsaufgaben verwenden können. Für jede Einstellung können Sie das Kontrollkästchen aktivieren und auf **Übernehmen** klicken, oder Sie können auf den Link **Einstellungen anzeigen** klicken, um die Einstellungsseite für diese Option zu öffnen.
 
 
 ## <a name="notes"></a>Anmerkungen
@@ -141,9 +137,9 @@ Es gibt verschiedene Tools, mit denen Sie eine App von einem Windows10-PC auf ei
 -   Im [Geräteportal](../debug-test-perf/device-portal.md) ist die Bereitstellung aus Ihrem Browser auf einem mobilen Gerät unter Windows10, Version 1511 oder höher, möglich. Im Geräteportal können Sie auf der Seite **[Apps](../debug-test-perf/device-portal.md#apps-manager)** ein App-Paket (APPX) hochladen und auf dem Gerät installieren.
 
 ## <a name="failure-to-install-developer-mode-package"></a>Fehler beim Installieren des Entwicklermoduspakets
-In manchen Fällen wird der Entwicklermodus aufgrund von Problemen mit dem Netzwerk oder dem Administrator nicht ordnungsgemäß installiert. Das Entwicklermoduspaket ist für die **dezentrale** Bereitstellungen auf diesem PC erforderlich – verwenden Sie Device Portal über einen Browser oder Device Discovery SSH – aber nicht für die lokale Entwicklung.  Selbst wenn diese Probleme auftreten, können Sie Ihre App weiterhin mithilfe von Visual Studio oder von diesem Gerät auf ein anderes Gerät bereitstellen. 
+In manchen Fällen wird der Entwicklermodus aufgrund von Problemen mit dem Netzwerk oder dem Administrator nicht ordnungsgemäß installiert. Das Entwicklermoduspaket ist für die **dezentrale** Bereitstellungen auf diesem PC erforderlich – verwenden Sie Device Portal über einen Browser oder Device Discovery SSH – aber nicht für die lokale Entwicklung.  Selbst wenn diese Probleme auftreten, können Sie Ihre App weiterhin mithilfe von Visual Studio oder von diesem Gerät auf ein anderes Gerät bereitstellen.
 
-Im Forum zu den [bekannten Problemen](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) finden Sie entsprechende Problemumgehungen und vieles mehr. 
+Im Forum zu den [bekannten Problemen](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) finden Sie entsprechende Problemumgehungen und vieles mehr.
 
 > [!NOTE]
 > Aktivieren des Entwicklermodus ordnungsgemäß installiert, empfehlen wir Ihnen, eine Anforderung Feedback-Datei. Klicken Sie in der **Feedback-Hub** -app wählen Sie **Hinzufügen neuer Feedback**, und wählen Sie die **Developer Platform** -Kategorie und Unterkategorie **Entwicklermodus** . Senden von Feedback hilft Microsoft, die das Problem aufgetreten ist.
@@ -152,23 +148,24 @@ Im Forum zu den [bekannten Problemen](https://social.msdn.microsoft.com/Forums/e
 
 "Developer Mode package couldn’t be located in Windows Update. Error Code 0x80004005 Learn more"   
 
-Dieser Fehler kann aufgrund eines Netzwerkverbindungsproblems, aufgrund von Enterprise-Einstellungen oder weil das Paket nicht vorhanden ist, auftreten. 
+Dieser Fehler kann aufgrund eines Netzwerkverbindungsproblems, aufgrund von Enterprise-Einstellungen oder weil das Paket nicht vorhanden ist, auftreten.
 
 So beheben Sie dieses Problem:
 
-1. Stellen Sie sicher, dass Ihr Computer mit dem Internet verbunden ist. 
-2. Wenn Sie einen in eine Domäne eingebundenen Computer verwenden, sprechen Sie mit dem Netzwerkadministrator. Das Entwicklermoduspaket ist genau wie alle anderen Features standardmäßig in WSUS blockiert. 2.1. Um das Entwicklermoduspaket in der aktuellen und vorherigen Versionen zu entsperren, sollte die folgenden KBs in WSUS zugelassen werden: 4016509, 3180030, 3197985  
+1. Stellen Sie sicher, dass Ihr Computer mit dem Internet verbunden ist.
+2. Wenn Sie einen in eine Domäne eingebundenen Computer verwenden, sprechen Sie mit dem Netzwerkadministrator. Das Entwicklermoduspaket ist genau wie alle anderen Features standardmäßig in WSUS blockiert.
+2.1. Um das Entwicklermoduspaket in der aktuellen und vorherigen Versionen zu entsperren, sollte die folgenden KBs in WSUS zugelassen werden: 4016509, 3180030, 3197985  
 3. Suchen nach Windows-Updates in den Einstellungen > Updates und Sicherheit > Windows-Updates.
-4. Stellen Sie sicher, dass das Windows-Entwicklermoduspaket in den Einstellungen > System > Apps und Features > Optionale Features verwalten > Feature hinzufügen vorhanden ist. Wenn es nicht vorhanden ist, kann Windows das richtige Paket für Ihren Computer nicht finden. 
+4. Stellen Sie sicher, dass das Windows-Entwicklermoduspaket in den Einstellungen > System > Apps und Features > Optionale Features verwalten > Feature hinzufügen vorhanden ist. Wenn es nicht vorhanden ist, kann Windows das richtige Paket für Ihren Computer nicht finden.
 
-Nachdem Sie einen der oben genannten Schritte durchgeführt haben, deaktivieren Sie den Entwicklermodus, und aktivieren Sie ihn dann erneut, um die Korrektur zu überprüfen. 
+Nachdem Sie einen der oben genannten Schritte durchgeführt haben, deaktivieren Sie den Entwicklermodus, und aktivieren Sie ihn dann erneut, um die Korrektur zu überprüfen.
 
 
 ### <a name="failed-to-install-the-package"></a>Fehler beim Installieren des Pakets
 
 "Developer Mode package failed to install. Error Code 0x80004005 Learn more"
 
-Dieser Fehler kann aufgrund von Inkompatibilitäten zwischen dem Build von Windows und dem Entwicklermoduspaket auftreten. 
+Dieser Fehler kann aufgrund von Inkompatibilitäten zwischen dem Build von Windows und dem Entwicklermoduspaket auftreten.
 
 So beheben Sie dieses Problem:
 
@@ -178,7 +175,7 @@ So beheben Sie dieses Problem:
 
 ## <a name="use-group-policies-or-registry-keys-to-enable-a-device"></a>Verwenden von Gruppenrichtlinien oder Registrierungsschlüsseln zum Aktivieren von Geräten
 
-Entwickler sollten meist die Einstellungs-Apps verwenden, um Geräte für das Debuggen zu aktivieren. In bestimmten Szenarien wie z.B. bei automatisierten Tests stehen weitere Möglichkeiten zum Aktivieren Ihres Windows10-Desktopgeräts für die Entwicklung zur Verfügung.  Beachten Sie, dass diese Schritte nicht den SSH-Server aktivieren oder ermöglichen, dass das Gerät Ziel einer Remote-Bereitstellung und Debugging ist. 
+Entwickler sollten meist die Einstellungs-Apps verwenden, um Geräte für das Debuggen zu aktivieren. In bestimmten Szenarien wie z.B. bei automatisierten Tests stehen weitere Möglichkeiten zum Aktivieren Ihres Windows10-Desktopgeräts für die Entwicklung zur Verfügung.  Beachten Sie, dass diese Schritte nicht den SSH-Server aktivieren oder ermöglichen, dass das Gerät Ziel einer Remote-Bereitstellung und Debugging ist.
 
 Sie können mithilfe von „gpedit.msc“ die Gruppenrichtlinien für die Geräteaktivierung festlegen (es sei denn, Sie verwenden Windows10 Home). In Windows10 Home müssen die Registrierungsschlüssel für die Geräteaktivierung direkt mithilfe von regedit oder von PowerShell-Befehlen festgelegt werden.
 
