@@ -5,12 +5,12 @@ ms.date: 07/18/2018
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projektion, erstellen, ereignis
 ms.localizationpriority: medium
-ms.openlocfilehash: 31f076ca259d10cc5bd49daea66741ead6e117c2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bbc9fcd2b29183352fd06a7d7403aad2d0f011d9
+ms.sourcegitcommit: 557257fb792f0b04b013d3507b3ebe5b0f6aa6c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945304"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "8992253"
 ---
 # <a name="author-events-in-cwinrt"></a>Erstellen von Ereignissen mit C++/WinRT
 
@@ -43,7 +43,7 @@ namespace BankAccountWRC
 
 Speichern Sie die Datei. Erstellen Sie das Projekt wird nicht bis zum Abschluss im Moment, aber jetzt erstellen ist hilfreich, etwas zu tun, da er die Quellcodedateien generiert, in denen Sie die **BankAccount** Laufzeitklasse implementieren. So einfach, und erstellen Sie jetzt (die Buildfehler zu erwarten, dass in dieser Phase finden Sie unter haben Sie mit `Class.h` und `Class.g.h` nicht gefunden wurde). Während des Buildprozesses die `midl.exe` -Tool ausgeführt, um Ihre Komponente Windows-Runtime-Metadaten-Datei erstellen (also `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd`). Dann wird das `cppwinrt.exe`-Tool ausgeführt (mit der Option `-component`), um Quelltextdateien zu erzeugen, die Sie bei der Erstellung Ihrer Komponente unterstützen. Diese Dateien enthalten Stubs, um die erste Schritte zum Implementieren der **BankAccount** -Runtime-Klasse, die Sie in Ihrer IDL deklariert haben. Diese Stubs sind `\BankAccountWRC\BankAccountWRC\Generated Files\sources\BankAccount.h` und `BankAccount.cpp`.
 
-Kopieren Sie die Stub-Dateien im Datei-Explorer `BankAccount.h` und `BankAccount.cpp` aus dem Ordner `\BankAccountWRC\BankAccountWRC\Generated Files\sources\` in den Ordner, die Ihre Projektdateien enthält, ist die `\BankAccountWRC\BankAccountWRC\`, und Ersetzen Sie die Dateien am Ziel. Nun öffnen wir `BankAccount.h` und `BankAccount.cpp` und implementieren unsere Laufzeitklasse. Fügen Sie in `BankAccount.h` zwei private Mitglieder zur Implementierung von BankAccount hinzu (*nicht* zur Factory-Implementierung).
+Mit der rechten Maustaste in des Projektknoten, und klicken Sie auf **Die Ordner im Datei-Explorer öffnen**. Im Datei-Explorer den Ordner des Projekts geöffnet. Kopieren Sie die Stub-Dateien, `BankAccount.h` und `BankAccount.cpp` aus dem Ordner `\BankAccountWRC\BankAccountWRC\Generated Files\sources\` und in den Ordner, die Ihre Projektdateien enthält, ist die `\BankAccountWRC\BankAccountWRC\`, und Ersetzen Sie die Dateien am Ziel. Nun öffnen wir `BankAccount.h` und `BankAccount.cpp` und implementieren unsere Laufzeitklasse. Fügen Sie in `BankAccount.h` zwei private Mitglieder zur Implementierung von BankAccount hinzu (*nicht* zur Factory-Implementierung).
 
 ```cppwinrt
 // BankAccount.h

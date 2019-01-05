@@ -11,12 +11,12 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: a92e1ad1c5bfb3960950b976da46ca16490d097e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 12aabe7a17a9bc62c5e6da27fe019e540db725df
+ms.sourcegitcommit: 557257fb792f0b04b013d3507b3ebe5b0f6aa6c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923008"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "8992233"
 ---
 # <a name="custom-attached-properties"></a>Benutzerdefinierte angefügte Eigenschaften
 
@@ -120,19 +120,21 @@ End Class
 // GameService.idl
 namespace UserAndCustomControls
 {
+    [default_interface]
     runtimeclass GameService : Windows.UI.Xaml.DependencyObject
     {
         GameService();
         static Windows.UI.Xaml.DependencyProperty IsMovableProperty{ get; };
-        Boolean IsMovable;
+        static Boolean GetIsMovable(Windows.UI.Xaml.DependencyObject target);
+        static void SetIsMovable(Windows.UI.Xaml.DependencyObject target, Boolean value);
     }
 }
 
 // GameService.h
 ...
-    bool IsMovable(){ return winrt::unbox_value<bool>(GetValue(m_IsMovableProperty)); }
-    void IsMovable(bool value){ SetValue(m_IsMovableProperty, winrt::box_value(value)); }
-    Windows::UI::Xaml::DependencyProperty IsMovableProperty(){ return m_IsMovableProperty; }
+    static Windows::UI::Xaml::DependencyProperty IsMovableProperty() { return m_IsMovableProperty; }
+    static bool GetIsMovable(Windows::UI::Xaml::DependencyObject const& target) { return winrt::unbox_value<bool>(target.GetValue(m_IsMovableProperty)); }
+    static void SetIsMovable(Windows::UI::Xaml::DependencyObject const& target, bool value) { target.SetValue(m_IsMovableProperty, winrt::box_value(value)); }
 
 private:
     static Windows::UI::Xaml::DependencyProperty m_IsMovableProperty;
@@ -204,7 +206,10 @@ GameService::RegisterDependencyProperties() {
 }
 ```
 
-## <a name="using-your-custom-attached-property-in-xaml"></a>Verwenden der angefügten Eigenschaft in XAML
+## <a name="setting-your-custom-attached-property-from-xaml-markup"></a>Festlegen der angefügten Eigenschaft im XAML-markup
+
+> [!NOTE]
+> Wenn Sie C++ verwenden / WinRT, fahren Sie mit den folgenden Abschnitt ([Festlegen der angefügten Eigenschaft explizit mit C++ / WinRT](#setting-your-custom-attached-property-imperatively-with-cwinrt)).
 
 Nachdem Sie die angefügte Eigenschaft definiert und ihre unterstützenden Elemente als Teil des benutzerdefinierten Typs eingefügt haben, müssen Sie die Definitionen anschließend für die Verwendung von XAML verfügbar machen. Dazu müssen Sie einen XAML-Namespace zuordnen, der auf den Codenamespace mit der relevanten Klasse verweist. In Fällen, in denen Sie die angefügte Eigenschaft als Teil einer Bibliothek definiert haben, müssen Sie diese Bibliothek als Teil des App-Pakets für die App einfügen.
 
@@ -230,7 +235,32 @@ Wenn Sie die Eigenschaft für ein Element festlegen, das sich auch im selben zug
 ```
 
 > [!NOTE]
-> Wenn Sie eine XAML-Benutzeroberfläche mit C++ schreiben, müssen Sie den Header für den benutzerdefinierten Typ, der die angefügte Eigenschaft definiert, jedes Mal einfügen, sobald eine XAML-Seite diesen Typ verwendet. Jede XAML-Seite hat einen zugeordneten .xaml.h-CodeBehind-Header. Dort sollten Sie (mithilfe von **\#include**) den Header für die Definition des Besitzertyps der angefügten Eigenschaft einfügen.
+> Beim Schreiben einer XAML-UI mit C++ / CX, und Sie müssen den Header einfügen für den benutzerdefinierten Typ, der die angefügte Eigenschaft, jedes Mal definiert, eine XAML-Seite diesen Typ verwendet. Jede XAML-Seite verfügt über eine zugehörige CodeBehind-Header (. xaml.h). Dort sollten Sie (mithilfe von **\#include**) den Header für die Definition des Besitzertyps der angefügten Eigenschaft einfügen.
+
+## <a name="setting-your-custom-attached-property-imperatively-with-cwinrt"></a>Festlegen der angefügten Eigenschaft explizit mit C++ / WinRT
+
+Wenn Sie C++ verwenden / WinRT, und Sie können Zugriff auf eine benutzerdefinierte angefügte Eigenschaft im imperativen Code, aber nicht im XAML-Markup. Der folgende Code zeigt wie.
+
+```xaml
+<Image x:Name="gameServiceImage"/>
+```
+
+```cppwinrt
+// MainPage.h
+...
+#include "GameService.h"
+...
+
+// MainPage.cpp
+...
+MainPage::MainPage()
+{
+    InitializeComponent();
+
+    GameService::SetIsMovable(gameServiceImage(), true);
+}
+...
+```
 
 ## <a name="value-type-of-a-custom-attached-property"></a>Werttyp einer benutzerdefinierten angefügten Eigenschaft
 
