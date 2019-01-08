@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Dev Center, Kontoeinstellungen, Profil, Konto-Profil, Entwicklerkonto, Entwicklerkontoeinstellungen
 ms.localizationpriority: medium
-ms.openlocfilehash: b3a95e4e9eddbe47feb513f66856949baecdab8b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c4f7bd6d7aa085c3d5066d3b486583c5b3f37182
+ms.sourcegitcommit: b66c5ccbf519b99a432c83c890436a044fc891df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931325"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "8992604"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Verwalten Ihrer Kontoeinstellungen und Profilinformationen
 
@@ -45,7 +45,6 @@ Wenn Sie Ihren Herausgeber-Anzeigenamen ändern, müssen wir Ihr Konto erneut ü
 Hier sind einige andere Elemente, die Sie im Abschnitt **Kontoeinstellungen** finden.
 
 - **Überprüfungsstatus**: Wenn Ihr Konto durchgeführt wird, die Überprüfung zu verarbeiten (z. B. beim ersten Anmelden oder nachdem Sie Ihre Kontaktinformationen erheblich aktualisieren), können Sie hier der Überprüfungsstatus überprüfen.
-- **Dev Center-Insider-Programm**: Sie können auswählen, in die oder aus dem [Dev Center-Insider-Programm](dev-center-insider-program.md) aus der primären **Konto** -Einstellungsseite.
 - **Auszahlungskonto** und **Steuerprofil**: Hier wird das [Einrichten Ihres Auszahlungskontos und Ihrer Steuerformulare](setting-up-your-payout-account-and-tax-forms.md) vorgenommen. Dieser Schritt muss ausgeführt werden, bevor Sie Zahlungen für Apps oder Add-Ons verlangen können.
 - **Enterprise-Zuordnungen**: Nehmen Sie Einladungen von Unternehmen an, die möchten, dass Sie Apps für die exklusive Nutzung veröffentlichen. Weitere Informationen dazu finden Sie unter [Verteilen von branchenspezifischen Apps an Unternehmen](distribute-lob-apps-to-enterprises.md).
 - **Benutzer**: Hinzufügen von Benutzern zu Ihrem Konto, und weisen Sie diesen Rollen und Berechtigungen. Weitere Informationen finden Sie unter [Verwalten von Kontobenutzern](manage-account-users.md).

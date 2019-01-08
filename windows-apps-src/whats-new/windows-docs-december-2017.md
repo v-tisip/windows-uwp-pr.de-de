@@ -5,12 +5,12 @@ keywords: Neuigkeiten, Update, Features, Anleitungen für Entwickler, Windows10,
 ms.date: 12/14/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c9b4c834c646aed7953dc2b0f992dea579d8b9fd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 52a60189d7fba39709aa679dbff79551b151e5a4
+ms.sourcegitcommit: b66c5ccbf519b99a432c83c890436a044fc891df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937219"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "8992614"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>Neuigkeiten in der Windows-Entwicklerdokumentation im Dezember 2017
 
@@ -58,7 +58,7 @@ Weitere Hinweise dazu, wie Sie Ihr Paket einem UWP-Projekt hinzufügen finden Si
 
 ### <a name="subscription-add-ons-are-now-available-to-developers-in-the-windows-dev-center-insider-program"></a>Abonnement-Add-Ons sind jetzt für Entwickler im Windows Dev Center-Insider-Programm verfügbar
 
-Alle Entwickler, die dem [Dev Center-Insider-Programm](../publish/dev-center-insider-program.md) beigetreten sind können nun Abonnement-Add-Ons in ihren Apps verwenden (z.B. App-Features oder digitale Inhalte), um digitale Produkte mit einer automatisierten wiederkehrenden Abrechnung zu verkaufen. Weitere Details finden Sie unter [Abonnement-Add-Ons für Ihre App aktivieren](../monetize/enable-subscription-add-ons-for-your-app.md).
+Alle Entwickler, die dem Dev Center-Insider-Programm beigetreten sind können nun Abonnement-Add-Ons in ihren Apps verwenden (z.B. App-Features oder digitale Inhalte), um digitale Produkte mit einer automatisierten wiederkehrenden Abrechnung zu verkaufen. Weitere Details finden Sie unter [Abonnement-Add-Ons für Ihre App aktivieren](../monetize/enable-subscription-add-ons-for-your-app.md).
 
 ## <a name="developer-guidance"></a>Erläuterungen für Entwickler
 
