@@ -3,7 +3,7 @@ Description: Menus and context menus display a list of commands or options when 
 title: Menüs und Kontextmenüs
 label: Menus and context menus
 template: detail.hbs
-ms.date: 10/02/2018
+ms.date: 01/08/2019
 ms.topic: article
 keywords: Windows 10, UWP
 ms.assetid: 0327d8c1-8329-4be2-84e3-66e1e9a0aa60
@@ -13,12 +13,12 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 038bb15029a3d9893c5b32558546ecf07066043b
-ms.sourcegitcommit: 43149cd43e8169edfbd241428ba49e56b64bfd0d
+ms.openlocfilehash: 3f585af5cff4b135760bf14b902b2783715392ed
+ms.sourcegitcommit: 404ec20d276adfd9e47f88a94efd4b9cf0725656
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/08/2019
-ms.locfileid: "8995051"
+ms.locfileid: "8995434"
 ---
 # <a name="menus-and-context-menus"></a>Menüs und Kontextmenüs
 
@@ -216,7 +216,8 @@ Einfach ausgeblendete Steuerelemente wie Menüs, Kontextmenüs und andere Flyout
 
 ## <a name="create-a-menu-bar"></a>Erstellen Sie eine Menüleiste
 
-> **Vorschau**: Menüleiste erfordert die [neuesten Windows 10 Insider Preview-Build und SDK](https://insider.windows.com/for-developers/) oder der [Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/).
+> [!IMPORTANT]
+> Menüleiste erfordert Windows 10, Version 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) oder höher, oder in der [Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 Sie verwenden die gleichen Elementen Menüs in der Menüleiste in einem Menü-Flyout zu erstellen. Allerdings gruppieren anstelle von Gruppierung von MenuFlyoutItem-Objekten in einer MenuFlyout, Sie können in einem MenuBarItem-Element. Jeder MenuBarItem wird als ein Menü der obersten Ebene der Menüleiste hinzugefügt.
 
