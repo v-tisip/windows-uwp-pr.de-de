@@ -6,12 +6,12 @@ ms.date: 10/03/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: dc18577015db5384c2a1f13e8a48758634a053a5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 75cde09068bcc310bcd5be2033227fa620b96f53
+ms.sourcegitcommit: 1322dd5478026176d7b3e635ea0046de3f744656
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937104"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "8996568"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>Was ist neu in Windows 10 für Entwickler, Build 17763
 
@@ -33,7 +33,7 @@ Bewegung in der Fluent Design | Die Verwendung von Bewegung in der Fluent Design
 Seitenübergänge | [Seitenübergänge](../design/motion/page-transitions.md) , wenn Benutzer zwischen Seiten in einer app navigieren. Sie können die Benutzer zu verstehen, wo sie in der Navigationshierarchie sind, und geben Sie Feedback über die Beziehung zwischen Seiten.
 Textskalierung | Der neue [Text Skalierung Richtlinien](../design/input/text-scaling.md) wird erläutert, wie aktualisieren Sie Ihre Anwendung, um den neuen Text-Skalierungen aufzunehmen, die bieten die Möglichkeit für Benutzer, die relative Schriftgröße für das Betriebssystem und die einzelnen Anwendungen zu ändern. Anstatt mithilfe einer Bildschirmlupe-app (die in der Regel nur alles in einem Bereich des Bildschirms vergrößert und führt eine eigene Probleme hinsichtlich der Verwendbarkeit), ändern die Auflösung oder verlassen sich DPI-Skalierung (die Größe alles basierend auf der Anzeige und die Standard-Anzeige Abstand), Benutzer können schnell eine Einstellung, um die Größe von nur-Text, angefangen bei 100 % (die Standardgröße) zugreifen, bis zu 225 %.
 Toolkits | [Adobe XD, Adobe Illustrator-Toolkits und](../design/downloads/index.md) wurde mit neuen Funktionen aktualisiert. Diese Design-Toolkits bieten Steuerelemente und Layoutvorlagen für das Design von UWP-apps.
-UI-Befehle | Updates für die [UWP-Infrastruktur-Steuerelemente](../design/basics/commanding-basics.md) enthalten eine bessere Kapselung eines Objekts Befehl (Verhalten, Bezeichnung, Symbol, Zugriffstasten, Zugriffstaste und Beschreibung) und eine Reihe von häufig verwendete Befehle, z. B. Ausschneiden, kopieren, einfügen, beenden, usw.., die entfällt diese Eigenschaften manuell festlegen. </br> Die neue [XamlUICommand](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.xamluicommand) -Klasse bietet eine Basisklasse für deveining das Verhalten des Befehls eine interaktive UI-Elements, die eine Aktion, die beim Aufruf ausführt. Dies ist der übergeordneten Klasse für [StandardUICommand](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.standarduicommand), das einen Satz von standard-Plattform-Befehle mit vordefinierten Eigenschaften verfügbar macht. 
+UI-Befehle | Updates für die [UWP-Infrastruktur-Steuerelemente](../design/basics/commanding-basics.md) enthalten eine bessere Kapselung eines Objekts Befehl (Verhalten, Bezeichnung, Symbol, Zugriffstasten, Zugriffstaste und Beschreibung) und eine Reihe von häufig verwendete Befehle, z. B. Ausschneiden, kopieren, einfügen, beenden, usw.., die entfällt diese Eigenschaften manuell festlegen. </br> Die neue [XamlUICommand](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.xamluicommand) -Klasse bietet eine Basisklasse zum Definieren des Verhaltens des Befehls eine interaktive UI-Elements, die eine Aktion, die beim Aufruf ausführt. Dies ist der übergeordneten Klasse für [StandardUICommand](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.standarduicommand), das einen Satz von standard-Plattform-Befehle mit vordefinierten Eigenschaften verfügbar macht. 
 Windows-UI-Bibliothek | Der [Windows-UI-Bibliothek](https://aka.ms/winui-docs) ist eine Reihe von NuGet-Pakete, die Steuerelemente und andere Elemente der Benutzeroberfläche für UWP-apps bereitstellen. Diese Pakete sind auch mit früheren Versionen von Windows 10 kompatibel, damit Ihre app funktioniert, auch wenn der Benutzer die aktuelle Version des Betriebssystems besitzen. </br> Weitere Informationen zu den Neuigkeiten in der Windows-UI-Bibliothek, finden Sie unter [Diese Liste mit API-Namespaces, die in das NuGet-Paket enthalten.](https://docs.microsoft.com/uwp/api/overview/winui/)
 
 ## <a name="develop-windows-apps"></a>Entwickeln von Windows-Apps
@@ -64,7 +64,7 @@ Standard-App-Übersicht | Die [Windows 10 IoT Core Standard-App](https://docs.mi
 Dashboard | [Windows 10 Iot Core-Dashboard](https://docs.microsoft.com/windows/iot-core/tutorials/quickstarter/devicesetup) können jetzt Entwickler eine Dragonboard 410 C oder NXP zum benutzerdefinierten FFUs auf ihrem Gerät flash verwenden.
 Bildschirmtastatur | Die [Bildschirmtastatur für IoT-Geräte](https://docs.microsoft.com/windows/iot-core/develop-your-app/onscreenkeyboard) wird jetzt die gleichen Touch-Tastatur-Komponenten als die Desktopversion von Windows verwendet. Dadurch können Features wie Modus, IME-Unterstützung und einen vollständigen Satz von eingabeumfängen.
 Titelleisten für Anmeldung Dialogfelder | Windows 10 IoT Core bietet nun die Möglichkeit zum Konfigurieren von [Titelleisten für System-Dialogfelder](https://docs.microsoft.com/windows/iot-core/develop-your-app/signindialogtitlebars).
-Aktivieren Sie auf Toucheingabe | [Wake-on auf Toucheingabe](https://docs.microsoft.com/windows/iot-core/learn-about-hardware/wakeontouch) ermöglicht des Geräts Bildschirm So deaktivieren sich nicht im verwenden, während Sie schnell einschalten, wenn ein Benutzer den Bildschirm berührt. 
+Aktivieren Sie auf Toucheingabe | [Wake-on auf Toucheingabe](https://docs.microsoft.com/windows/iot-core/learn-about-hardware/wakeontouch) ermöglicht des Geräts Bildschirm So deaktivieren sich nicht im verwenden, während Sie schnell einschalten, wenn ein Benutzer den Bildschirm berührt.
 Windows.System.Update | Der neue [Namespace Windows.System.Update](https://docs.microsoft.com/uwp/api/windows.system.update) können interaktive Steuerelemente von System-Updates. Dieser Namespace ist nur für Windows 10 IoT Core verfügbar.
 
 ## <a name="web-development"></a>Webentwicklung
