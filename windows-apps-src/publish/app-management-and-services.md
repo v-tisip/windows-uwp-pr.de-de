@@ -6,16 +6,16 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a8f75fae686763f3d79cea2f02c3208993cb723
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: cd6f6a6fb638069dba58c62eca91b74868816d2a
+ms.sourcegitcommit: 0373a2021c1b7144f28b08778d6a3b3dc64aa10c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937964"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "8997395"
 ---
 # <a name="app-management-and-services"></a>App-Verwaltung und -Dienste
 
-Sie können verwalten und Anzeigen von Details zu einzelnen apps in [Partner Center, und konfigurieren Sie Dienste wie Benachrichtigungen, A / B-Tests und Karten.
+Sie können verwalten und Anzeigen von Details zu einzelnen apps im [Partner Center](https://partner.microsoft.com/dashboard/)und konfigurieren Sie Dienste wie Benachrichtigungen, A / B-Tests und Karten.
 
 Bei der Arbeit mit einer app im Partner Center sehen Sie im linken Navigationsmenü Abschnitte für **Dienste** und **App-Verwaltung**. Sie können diese Abschnitte erweitern, um auf die unten beschriebenen Funktionen zuzugreifen.
 
@@ -49,7 +49,7 @@ Weitere Informationen finden Sie unter [Verwalten von Produktansprüchen aus ein
 
 ## <a name="administrator-consent"></a>Administrator-Zustimmung
 
-f Ihr Produkt in Azure AD integriert werden und APIs aufruft, die [Anwendung oder delegierte Berechtigungen verfügen](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) anfordern, die Zustimmung des Administrators, erfordern Geben Sie Ihre Azure AD-Client-ID ein. Auf diese Weise können Administratoren, die die app für ihre Organisation gewähren Zustimmung für das Produkt, die für alle Benutzer im Mandanten fungieren erwerben.
+Wenn Ihr Produkt mit Azure AD integriert und APIs aufruft, die [Anwendung oder delegierte Berechtigungen verfügen](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) anzufordern, für die Zustimmung des Administrators erforderlich, geben Sie Ihre Azure AD-Client-ID an. Auf diese Weise können Administratoren, die die app für ihre Organisation gewähren Zustimmung für das Produkt, die für alle Benutzer im Mandanten fungieren erwerben.
 
 Weitere Informationen finden Sie unter [anfordern, die für eine gesamte Mandanten zu erklären](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant).
 
