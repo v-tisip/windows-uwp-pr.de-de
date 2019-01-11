@@ -1,16 +1,16 @@
 ---
 description: Dieses Thema zeigt, wie man C++/WinRT-APIs mit Hilfe der **winrt::implements**-Basisstruktur direkt oder indirekt erstellt.
 title: Erstellen von APIs mit C++/WinRT
-ms.date: 10/03/2018
+ms.date: 01/10/2019
 ms.topic: article
 keywords: Windows 10, uwp, Standard, c++, cpp, winrt, projiziert, Projektion, Implementierung, implementieren, Laufzeitklasse, Aktivierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 7fd543d7c3ad9dec878cc02b14a79c254d91b4be
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5b0f2c5a9941e8f82e77cbaaf2d38badb41ce7c0
+ms.sourcegitcommit: 1294275b5044ef8878d54bf4fd7aa8e0203e6fac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943398"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "9001566"
 ---
 # <a name="author-apis-with-cwinrt"></a>Erstellen von APIs mit C++/WinRT
 
@@ -311,7 +311,28 @@ myimpl.Close();
 IClosable ic1 = myimpl.as<IClosable>(); // error
 ```
 
-Wenn Sie eine Instanz Ihres Implementierungstyps haben und diese an eine Funktion übergeben müssen, die den entsprechenden projizierten Typ erwartet, dann können Sie dies tun. Eine für Ihren Implementierungstyp existiert (vorausgesetzt, dass der Implementierungstyp vom generiert wurde der `cppwinrt.exe` Tool), die Dies ermöglicht.
+Wenn Sie eine Instanz Ihres Implementierungstyps haben und diese an eine Funktion übergeben müssen, die den entsprechenden projizierten Typ erwartet, dann können Sie dies tun. Eine für Ihren Implementierungstyp existiert (vorausgesetzt, dass der Implementierungstyp vom generiert wurde der `cppwinrt.exe` Tool), die Dies ermöglicht. Sie können einen Wert Implementierung direkt an eine Methode übergeben, die einen Wert, der den entsprechenden projizierten Typ erwartet. Sie können aus einer Implementierung Typ-Member-Funktion übergeben `*this` an eine Methode, die einen Wert, der den entsprechenden projizierten Typ erwartet.
+
+```cppwinrt
+// MyProject::MyType is the projected type; the implementation type would be MyProject::implementation::MyType.
+
+void MyOtherType::DoWork(MyProject::MyType const&){ ... }
+
+...
+
+void FreeFunction(MyProject::MyOtherType const& ot)
+{
+    MyType myimpl;
+    ot.DoWork(myimpl);
+}
+
+...
+
+void MyType::MemberFunction(MyProject::MyOtherType const& ot)
+{
+    ot.DoWork(*this);
+}
+```
 
 ## <a name="deriving-from-a-type-that-has-a-non-default-constructor"></a>Abgeleitet von einem Typ, der über einen Standardkonstruktor verfügt
 [**ToggleButtonAutomationPeer::ToggleButtonAutomationPeer(ToggleButton)**](/uwp/api/windows.ui.xaml.automation.peers.togglebuttonautomationpeer.-ctor#Windows_UI_Xaml_Automation_Peers_ToggleButtonAutomationPeer__ctor_Windows_UI_Xaml_Controls_Primitives_ToggleButton_) ist ein Beispiel für einen Standardkonstruktor. Es gibt keinen Standardkonstruktor. Um ein **ToggleButtonAutomationPeer** zu erstellen, müssen Sie also einen *Owner*übergeben. Wenn Sie von **ToggleButtonAutomationPeer** ableiten, dann müssen Sie also einen Konstruktor zur Verfügung stellen, der einen *Owner* entgegen nimmt und ihn an die Basisklasse übergibt. Mal sehen, wie das in der Praxis aussieht.
