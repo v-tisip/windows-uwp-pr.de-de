@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Azure Ad, Azure-Mandant, AAD-Mandant, Azure AD-Mandant, Mandantenverwaltung, Mandanten
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f807799740d7e832da2f6a6fa3ea63e00deaee4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: aacfdb0044fa9b9368ecbd032629ed5e572ece99
+ms.sourcegitcommit: 322e1ae259ba0480b816a004d7a52bb0d1618b90
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931487"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "9000265"
 ---
 # <a name="associate-azure-active-directory-with-your-partner-center-account"></a>Zuordnen von Azure Active Directory mit Ihrem Partner Center-Konto
 
@@ -31,7 +31,7 @@ Eine einzelne Azure AD-Mandanten kann mehrere Partner Center-Konten zugeordnet w
 
 Wenn Ihr Unternehmen bereits Azure AD verwendet, befolgen Sie diese Schritte, um Ihr Partner Center-Konto zu verknüpfen.
 
-1.  [Partner Center](https://partner.microsoft.com/dashboard) wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards) aus, und wählen Sie dann die **entwicklereinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Mandanten**.
+1.  [Partner Center](https://partner.microsoft.com/dashboard)wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards) aus, und wählen Sie dann die **entwicklereinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Mandanten**.
 2.  Wählen Sie **Zuordnen von Azure AD mit Ihrem Partner Center-Konto**.
 3.  Geben Sie Ihre Azure AD-Anmeldeinformationen für den Mandanten ein, den Sie zuordnen möchten.
 4.  Überprüfen Sie den Organisations- und den Domänennamen für den Azure AD-Mandant. Wählen Sie zum Abschließen der Zuordnung **Bestätigen** aus.
