@@ -1,23 +1,23 @@
 ---
 description: Dieser Artikel beschreibt, wie UWP-XAML-Benutzeroberfläche in Ihrer desktop-Anwendung gehostet wird.
 title: Unter Verwendung des UWP-XAML hosting-API in einer desktop-Anwendung
-ms.date: 11/27/2018
+ms.date: 01/11/2019
 ms.topic: article
 keywords: Windows 10, Uwp, Windows Forms, Wpf, win32
 ms.localizationpriority: medium
-ms.openlocfilehash: df6c47fd93c3f42721fd072d6406a2d32f7889db
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ff5df91c860ab0e063f9a4ff5ed8beb64409e876
+ms.sourcegitcommit: 9df81996628359ad6af4227339a2ce01c2d804e3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939015"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "9001794"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>Unter Verwendung des UWP-XAML hosting-API in einer desktop-Anwendung
 
 > [!NOTE]
 > Die UWP-XAML-hosting-API und XAML-Inseln sind als Entwicklervorschau verfügbar. Obwohl wir Sie Sie diese in Ihrem eigenen Code Prototyp ausprobieren können, jetzt dazu ermutigen, wird nicht empfohlen, dass Sie sie zu diesem Zeitpunkt in Produktionscode verwenden. Diese Features werden weiterhin breiter und Stabilisierung in zukünftigen Windows-Versionen. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.
 >
-> Wenn Sie Feedback über die XAML-API und XAML-Inseln hosten haben, senden Sie Ihr Feedback an XamlIslandsFeedback@microsoft.com. Ihre Einblicke und Szenarien sind uns sehr wichtig.
+> Wenn Sie Feedback zur XAML-Inseln haben, erstellen Sie ein neues Problem in das [WindowsCommunityToolkit Repository](https://github.com/windows-toolkit/WindowsCommunityToolkit/issues) , und geben Sie Ihren Kommentar es. Wenn Sie es vorziehen, Ihr Feedback privat zu übermitteln, können Sie es senden XamlIslandsFeedback@microsoft.com. Ihre Einblicke und Szenarien sind uns sehr wichtig.
 
 Ab Windows 10 Insider Preview SDK 17709 erstellen, die nicht-UWP-desktop-Apps (einschließlich WPF, Windows Forms und C++ Win32-Anwendungen) können Sie das *UWP-XAML hosting-API* zum Hosten von UWP-Steuerelementen in alle UI-Element, das ein Fenster-Handle (zugeordnet ist HWND). Mit dieser API können nicht-UWP-desktop-Apps mit den neuesten Windows 10-UI-Features, die nur über UWP-Steuerelemente verfügbar sind. Beispielsweise können nicht-UWP-desktop-Apps diese API zum Hosten von UWP-Steuerelementen, die das [Fluent Design-Systems](../design/fluent-design-system/index.md) und [Windows Ink](../design/input/pen-and-stylus-interactions.md)unterstützen.
 
@@ -293,7 +293,7 @@ Die folgenden Schritte veranschaulichen eine Möglichkeit zur Behandlung von die
 
 Der XAML-Code hosting-API verwenden dieselben Einschränkungen wie alle anderen Typen von XAML-Steuerelemente für Windows 10. Eine detaillierte Liste finden Sie in der [XAML-Host-Steuerelement Einschränkungen](xaml-host-controls.md#limitations).
 
-## <a name="troubleshooting"></a>Problembehandlung
+## <a name="troubleshooting"></a>Fehlerbehebung
 
 ### <a name="error-using-uwp-xaml-hosting-api-in-a-uwp-app"></a>Fehler bei der Verwendung von UWP-XAML hosting-API in einer UWP-app
 

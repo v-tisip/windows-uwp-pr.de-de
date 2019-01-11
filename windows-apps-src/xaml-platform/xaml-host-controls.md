@@ -1,24 +1,24 @@
 ---
 description: Diese Anleitung hilft Ihnen, Fluent-basierte UWP-UIs direkt in einer WPF- oder Windows Forms-Anwendung zu erstellen.
 title: UWP-Steuerelemente in Desktopanwendungen
-ms.date: 09/21/2018
+ms.date: 01/11/2019
 ms.topic: article
 keywords: Windows 10, UWP, Windows Forms, WPF
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 43cdb19e791726732f564ffea1b03af53a4a1ffe
-ms.sourcegitcommit: 1294275b5044ef8878d54bf4fd7aa8e0203e6fac
+ms.openlocfilehash: bf25fea6ca6e8809c12324ae57a42cc712ded2a5
+ms.sourcegitcommit: 9df81996628359ad6af4227339a2ce01c2d804e3
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/11/2019
-ms.locfileid: "9001556"
+ms.locfileid: "9001784"
 ---
 # <a name="uwp-controls-in-desktop-applications"></a>UWP-Steuerelemente in Desktopanwendungen
 
 > [!NOTE]
 > XAML-Inseln sind als Entwicklervorschau verfügbar. Obwohl wir Sie Sie diese in Ihrem eigenen Code Prototyp ausprobieren können, jetzt dazu ermutigen, wird nicht empfohlen, dass Sie sie zu diesem Zeitpunkt in Produktionscode verwenden. Diese APIs und Steuerelemente erhalten auch weiterhin breiter und Stabilisierung in zukünftigen Windows-Versionen. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.
 >
-> Wenn Sie Feedback zur XAML-Inseln haben, senden Sie Ihr Feedback an XamlIslandsFeedback@microsoft.com. Ihre Einblicke und Szenarien sind uns sehr wichtig.
+> Wenn Sie Feedback zur XAML-Inseln haben, erstellen Sie ein neues Problem in das [WindowsCommunityToolkit Repository](https://github.com/windows-toolkit/WindowsCommunityToolkit/issues) , und geben Sie Ihren Kommentar es. Wenn Sie es vorziehen, Ihr Feedback privat zu übermitteln, können Sie es senden XamlIslandsFeedback@microsoft.com. Ihre Einblicke und Szenarien sind uns sehr wichtig.
 
 Windows 10 können jetzt Sie UWP-Steuerelemente in nicht-UWP-desktop-Apps zu verwenden, damit Sie das Erscheinungsbild und Funktionalität Ihrer vorhandenen desktop-Anwendungen mit den neuesten Windows 10-UI-Funktionen, die nur über UWP-Steuerelemente sind verbessern können. Dies bedeutet, dass Sie verwenden können UWP-Features wie [Windows Ink](../design/input/pen-and-stylus-interactions.md) und Steuerelemente, die das [Fluent Design-Systems](../design/fluent-design-system/index.md) in Ihrer vorhandenen WPF-, Windows Forms und C++ Win32-Anwendungen zu unterstützen. In diesem Szenario Entwickler wird *XAML-Inseln*bezeichnet.
 
