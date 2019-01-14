@@ -7,12 +7,12 @@ ms.date: 06/21/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: d5ca79220bf2f5c93f7b8f04a787662470f87a06
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 192c5f4be7496b3fe47238c4965d6854f06d21b4
+ms.sourcegitcommit: 2e47a0d047e6ca8d3f473434a2b07b6216b55d17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945952"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "9004503"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Navigationsverlauf und Rückwärtsnavigation für UWP-Apps
 
@@ -284,15 +284,9 @@ Die oben aufgeführten Codebeispiele zeigen, wie man mit diesen Eingaben umgeht.
 
 Bisher nutzten UWP-Apps [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility) für die Rückwärtsnavigation. Die API wird weiterhin unterstützt werden, um Abwärtskompatibilität zu gewährleisten, aber wir empfehlen nicht mehr zu verlassen sich [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility). Stattdessen sollte Ihre App eine eigene Zurück-Schaltfläche in der App darstellen.
 
-Wenn Ihre app weiterhin mithilfe von [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility), klicken Sie dann das System die Benutzeroberfläche gerendert wird, das System zurück-Schaltfläche:
+Wenn Ihre app weiterhin mithilfe von [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility), klicken Sie dann das System die Benutzeroberfläche gerendert wird, das System zurück-Schaltfläche in der Titelleiste angezeigt. (Die Darstellung und den Benutzerinteraktionen für die zurück-Schaltfläche sind von vorherigen Builds unverändert.)
 
-- Wenn Ihre app **nicht mit Registerkarten**ist, wird die zurück-Schaltfläche in der Titelleiste gerendert. Die visuellen Erfahrung und den Benutzerinteraktionen für die zurück-Schaltfläche bleiben unverändert von vorherigen Builds.
-
-    ![Zurück-Schaltfläche in der Titelleiste](images/nav-back-pc.png)
-
-- Wenn eine app **mit Registerkarten**, wird die zurück-Schaltfläche in einer neuen System nach hinten gerendert wird angezeigt.
-
-    ![System gezeichnet zurück-Schaltfläche](images/back-nav/tabs.png)
+![Zurück-Schaltfläche in der Titelleiste](images/nav-back-pc.png)
 
 ### <a name="system-back-bar"></a>Systemeigene Leiste
 
