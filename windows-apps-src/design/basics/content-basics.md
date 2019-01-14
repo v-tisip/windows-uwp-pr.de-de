@@ -9,12 +9,12 @@ ms.date: 12/1/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: fc27a2c24128553b7c1449bd8e724e2097213b80
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: b2d85d97fa704b4fb79e93cf95fdd1bfcc41f8ca
+ms.sourcegitcommit: 59f874b6667c3f639d8b0c7eeca886e71bf95614
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981414"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "9004606"
 ---
 # <a name="content-design-basics-for-uwp-apps"></a>Grundlagen des Inhaltsdesigns für UWP-Apps
 
@@ -38,11 +38,6 @@ Angebotsseiten werden auch Hero-Screens genannt und werden häufig auf der obers
 
 Über Sammlungen können Benutzer Gruppen von Inhalten oder Daten suchen. Die [Rasteransicht](../controls-and-patterns/item-templates-gridview.md) ist eine gute Option für Fotos oder medienzentrierte Inhalte, und die [Listenansicht](../controls-and-patterns/item-templates-listview.md) ist eine gute Option für textlastige Inhalte oder Daten.
 
-### <a name="hub"></a>Hub
-
-![Hub](images/content-basics/hub.png)
-
-[Hubs](../controls-and-patterns/hub.md) wurden für den Einkauf entwickelt. Benutzer erhalten einen guten Einblick in die angebotenen Inhalte; es geht darum, eine große Vielfalt an Inhalten zu zeigen und gleichzeitig den Umfang gering zu halten. Zum Beispiel könnte Hub-Abschnitt 1 eine Hero-Screen sein, Hub-Abschnitt 2 könnte eine Sammlung enthalten, Hub-Abschnitt 3 könnte eine andere Sammlung enthalten, und so weiter.
 
 ### <a name="masterdetail"></a>Master/Detail
 
