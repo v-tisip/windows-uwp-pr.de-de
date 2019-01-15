@@ -8,12 +8,12 @@ ms.date: 11/14/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: a5e3a29a252b091b1e52dbea5fa7af5058488ed5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3c4f8de32be13f9de776a1c2d0ba0f6af2797329
+ms.sourcegitcommit: be52da74f0b3f24973286792afa4f5e80799161b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946596"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "9009517"
 ---
 # <a name="store-and-retrieve-settings-and-other-app-data"></a>Speichern und Abrufen von Einstellungen und anderen App-Daten
 
@@ -172,7 +172,7 @@ Roamingdaten für Apps sind in der Cloud verfügbar, solange der Benutzer innerh
 
 ### <a name="roaming-pre-requisites"></a>Voraussetzungen für Roaming
 
-Jeder Benutzer kann von Roaming-App-Daten profitieren, wenn ein Microsoft-Konto zur Anmeldung am Gerät verwendet wird. Benutzer und Gruppenrichtlinienadministratoren haben jedoch die Möglichkeit, das Roaming von App-Daten auf einem Gerät zu deaktivieren. Benutzer, die kein Microsoft-Konto verwenden oder die Datenroamingfunktion deaktivieren, können Ihre App auch weiterhin verwenden, die App-Daten sind dann jedoch auf jedem Gerät lokal vorhanden.
+Jeder Benutzer kann von Roaming-App-Daten profitieren, wenn ein Microsoft-Konto zur Anmeldung am Gerät verwendet wird. Benutzer und Gruppenrichtlinienadministratoren haben jedoch die Möglichkeit, das Roaming von App-Daten auf einem Gerät zu deaktivieren. Wenn ein Benutzer möchte nicht Microsoft-Konto verwenden oder datenroamingfunktion, er wird weiterhin in der Lage, Ihre app verwenden, app-Daten werden jedoch auf jedem Gerät lokal.
 
 Daten, die im [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) gespeichert sind, werden nur übertragen, wenn ein Benutzer ein Gerät als "vertrauenswürdig" eingestuft hat. Wird einem Gerät nicht vertraut, werden die in diesem Tresor gespeicherten Daten nicht für das Roaming verwendet.
 
