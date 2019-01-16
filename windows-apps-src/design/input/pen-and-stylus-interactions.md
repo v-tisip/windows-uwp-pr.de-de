@@ -8,12 +8,12 @@ keywords: Windows Ink, Windows-Freihandeingabe, DirectInk, InkPresenter, InkCanv
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 22477ab0facfcb67d44057a91c7c3a49df57f8b9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2451606ccb9dfb604dd9f8aaffe245016776c1e7
+ms.sourcegitcommit: 906b494aa190e6e5b46e7b73d4a900b2cc7d53ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937990"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "9010994"
 ---
 # <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>Stiftinteraktionen und Windows Ink in UWP-Apps
 
@@ -64,7 +64,7 @@ Das [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-St
 In diesem Beispiel überlagert ein [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement ein Hintergrundbild.
 
 > [!NOTE]
-> Ein InkCanvas verfügt standardmäßig über [**Höhe.**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) und [**Breite-**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width)-Eigenschaften von null, sofern es sich um ein untergeordnetes Element eines Elements handelt, das die Größe seiner untergeordneten Elemente automatisch festlegt. 
+> Ein InkCanvas verfügt Standardeigenschaften [**Höhe**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) und [**Breite**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width) 0 (null), es sei denn, es das untergeordnete Element eines Elements ist, die die untergeordneten Elemente wie z. B. [StackPanel](stackpanel.md) oder [Raster](grid.md) Steuerelemente automatisch die Größe.
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
