@@ -8,12 +8,12 @@ keywords: Windows Ink, Windows-Freihandeingabe, DirectInk, InkPresenter, InkCanv
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2451606ccb9dfb604dd9f8aaffe245016776c1e7
-ms.sourcegitcommit: 906b494aa190e6e5b46e7b73d4a900b2cc7d53ef
+ms.openlocfilehash: 0a548c7311042be52d90cad8594c3085614a8cda
+ms.sourcegitcommit: 575fb85387ade0e1ddfc50efdf613938f37f4037
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "9010994"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "9014549"
 ---
 # <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>Stiftinteraktionen und Windows Ink in UWP-Apps
 
@@ -64,7 +64,8 @@ Das [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-St
 In diesem Beispiel überlagert ein [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement ein Hintergrundbild.
 
 > [!NOTE]
-> Ein InkCanvas verfügt Standardeigenschaften [**Höhe**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) und [**Breite**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width) 0 (null), es sei denn, es das untergeordnete Element eines Elements ist, die die untergeordneten Elemente wie z. B. [StackPanel](stackpanel.md) oder [Raster](grid.md) Steuerelemente automatisch die Größe.
+> Ein InkCanvas verfügt Standardeigenschaften [**Höhe**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) und [**Breite**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width) 0 (null), es sei denn, es das untergeordnete Element eines Elements ist, die die untergeordneten Elemente wie z. B. [StackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel
+) oder [Raster](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid) Steuerelemente automatisch die Größe.
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
