@@ -6,12 +6,12 @@ keywords: App-zu-app-Kommunikation, prozessübergreifende Kommunikation, IPC, Hi
 ms.date: 1/16/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9029c8ee3a930e66ebdbd0c4d0681d87486a8393
-ms.sourcegitcommit: 6e2027f8ebc1d891d27ea6b2e4676d592871bcc7
+ms.openlocfilehash: 5239bff53bb0e5383bce28b4d781a0ab6a41c3af
+ms.sourcegitcommit: cfdc854fede8e586202523cdb59d3d0a2f5b4b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "9011260"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "9013959"
 ---
 # <a name="create-and-consume-an-app-service"></a>Erstellen und Verwenden eines App-Diensts
 
@@ -214,17 +214,9 @@ Der Aufruf von [SendResponseAsync](https://msdn.microsoft.com/library/windows/ap
 
 ## <a name="deploy-the-service-app-and-get-the-package-family-name"></a>Bereitstellen der Dienstanbieter-App und Abrufen des Paketfamiliennamens
 
-Die app-Dienstanbieter muss bereitgestellt werden, bevor Sie sie von einem Client aus aufrufen können. Sie benötigen auch den paketfamiliennamen des app-Diensts, um sie aufrufen.
+Die app-Dienstanbieter muss bereitgestellt werden, bevor Sie sie von einem Client aus aufrufen können. Sie können durch die Auswahl **Erstellen > bereitstellen Lösung** in Visual Studio bereitstellen.
 
-Eine Möglichkeit zum Abrufen der paketfamilienname der app-Service-Anwendung ist [Windows.ApplicationModel.Package.Current.Id.FamilyName](https://msdn.microsoft.com/library/windows/apps/br224670) von innerhalb des Projekts **"AppServiceProvider"** (z. B. von der **App** -Konstruktor in **aufrufen "App.Xaml.cs"**) und das Ergebnis zu notieren. Zum Ausführen von **"AppServiceProvider"** in Visual Studio im **Projektmappen** -Explorer als Startprojekt festlegen Sie, und führen Sie das Projekt.
-
-Eine weitere Möglichkeit zum Abrufen des paketfamiliennamens ist die Lösung bereitstellen (**Erstellen &gt; Projektmappe bereitstellen**), und notieren Sie den vollständigen Paketnamens im **Ausgabefenster** (**Ansicht &gt; Ausgabe**). Sie müssen die Plattforminformationen aus der Zeichenfolge im **Ausgabefenster auf den Paketnamen abzuleiten** entfernen. Beispielsweise, wenn im **Ausgabefenster** der vollständige Paketname gemeldet wurden:
-
-`Microsoft.SDKSamples.AppServicesProvider.CPP_1.0.0.0_x86__8wekyb3d8bbwe`
-
-Und extrahieren Sie Sie würden `1.0.0.0\_x86\_\_`, verlassen die folgenden als den paketfamiliennamen:
-
-`Microsoft.SDKSamples.AppServicesProvider.CPP_8wekyb3d8bbwe`
+Sie benötigen auch den paketfamiliennamen des app-Dienstanbieters, um sie aufrufen. Sie erhalten sie durch Öffnen des Projekts **"AppServiceProvider"** **Datei "Package.appxmanifest** " in der Entwurfsansicht (Doppelklicken Sie im **Projektmappen-Explorer**). Wählen Sie die Registerkarte " **Verpacken** ", kopieren Sie den Wert neben **-paketfamiliennamen ein,** und fügen Sie sie an einer beliebigen Stelle wie beispielsweise Editor für den Moment.
 
 ## <a name="write-a-client-to-call-the-app-service"></a>Schreiben eines Clients zum Aufrufen des App-Diensts
 
