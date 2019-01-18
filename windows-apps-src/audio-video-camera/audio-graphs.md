@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0211e451c3e700da34d24e39a5045f9e046020a8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0b360425755a7dc2249a284d9f68761ce3c783ef
+ms.sourcegitcommit: 92ce837841ae8f16d203e919dbf5c4436bee56e5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933613"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "9015255"
 ---
 # <a name="audio-graphs"></a>Audiodiagramme
 
@@ -80,7 +80,7 @@ Eine Geräteingabeknoten liefert Audiodaten von einem an das System angeschlosse
 
 [!code-cs[CreateDeviceInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateDeviceInputNode)]
 
-Wenn Sie ein spezielles Audioaufnahmegerät für den Geräteeingabeknoten festlegen möchten, können Sie die [**Windows.Devices.Enumeration.DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393)-Klasse verwenden, um eine Liste der verfügbaren Audioaufnahmegeräte abzurufen, indem Sie [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) aufrufen und die von [**Windows.Media.Devices.MediaDevice.GetAudioRenderSelector**](https://msdn.microsoft.com/library/windows/apps/br226817) zurückgegebene Auswahl des Audioaufnahmegeräts übergeben. Sie können eines der zurückgegebenen **DeviceInformation**-Objekte programmgesteuert auswählen oder Benutzeroberfläche anzeigen, damit der Benutzer ein Gerät auswählen und dieses dann an die [**CreateDeviceInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914218)-Methode übergeben kann.
+Wenn Sie ein spezielles Audioaufnahmegerät für den geräteeingabeknoten festlegen möchten, können Sie die [**Windows.Devices.Enumeration.DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) -Klasse verwenden, um eine Liste mit dem System verfügbaren audioaufnahmegeräte abzurufen, durch Aufrufen von [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) und übergeben Sie die Audiowiedergabe Rendern von [**Windows.Media.Devices.MediaDevice.GetAudioCaptureSelector**](https://docs.microsoft.com/uwp/api/windows.media.devices.mediadevice.getaudiocaptureselector)zurückgegebene Geräteauswahl. Sie können eines der zurückgegebenen **DeviceInformation**-Objekte programmgesteuert auswählen oder Benutzeroberfläche anzeigen, damit der Benutzer ein Gerät auswählen und dieses dann an die [**CreateDeviceInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914218)-Methode übergeben kann.
 
 [!code-cs[EnumerateAudioCaptureDevices](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetEnumerateAudioCaptureDevices)]
 
