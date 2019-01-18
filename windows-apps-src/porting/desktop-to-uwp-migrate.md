@@ -6,12 +6,12 @@ ms.date: 10/03/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6727c22631a9536a0ed8d04e7c88602bba890284
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: abc2ba7287541d97208899b51e81110b464b6cdd
+ms.sourcegitcommit: 8db07db70d7630f322e274ab80dfa09980fc8d52
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932586"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "9014715"
 ---
 # <a name="share-code-between-a-desktop-application-and-a-uwp-app"></a><span data-ttu-id="4cfac-103">Teilen von Code zwischen einer desktop-Anwendung und eine UWP-app</span><span class="sxs-lookup"><span data-stu-id="4cfac-103">Share code between a desktop application and a UWP app</span></span>
 
@@ -23,7 +23,7 @@ ms.locfileid: "8932586"
 
 <span data-ttu-id="4cfac-111">In diesem großartigen Video finden Sie weitere Informationen.</span><span class="sxs-lookup"><span data-stu-id="4cfac-111">Here's a great video that tells you more about it.</span></span>
 <span data-ttu-id="4cfac-112">&nbsp;</span><span class="sxs-lookup"><span data-stu-id="4cfac-112">&nbsp;</span></span>
-> [!VIDEO https://www.youtube.com/embed/YI4MurjfMn8]
+> [!VIDEO https://www.youtube-nocookie.com/embed/YI4MurjfMn8?list=PLRAdsfhKI4OWx321A_pr-7HhRNk7wOLLY&amp;ecver=1]
 
 ### <a name="add-net-standard-libraries"></a><span data-ttu-id="4cfac-113">Hinzufügen von Bibliotheken für .NET Standard</span><span class="sxs-lookup"><span data-stu-id="4cfac-113">Add .NET Standard libraries</span></span>
 
@@ -53,7 +53,7 @@ ms.locfileid: "8932586"
 
 <span data-ttu-id="4cfac-128">Verwenden Sie die gleichen Tools, um Ihren Code zu analysieren.</span><span class="sxs-lookup"><span data-stu-id="4cfac-128">Use these same tools to analyze your code.</span></span> <span data-ttu-id="4cfac-129">Laden Sie die Tools hier herunter ([dotnet-apiport](https://github.com/Microsoft/dotnet-apiport/releases)). Schauen Sie sich dieses Video an, um zu erfahren, wie Sie diese verwenden können.</span><span class="sxs-lookup"><span data-stu-id="4cfac-129">Download the tools here ([dotnet-apiport](https://github.com/Microsoft/dotnet-apiport/releases)) and then watch this video to learn how to use them.</span></span>
 <span data-ttu-id="4cfac-130">&nbsp;</span><span class="sxs-lookup"><span data-stu-id="4cfac-130">&nbsp;</span></span>
-> [!VIDEO https://www.youtube.com/embed/rzs_FGPyAlY]
+> [!VIDEO https://www.youtube-nocookie.com/embed/rzs_FGPyAlY?list=PLRAdsfhKI4OWx321A_pr-7HhRNk7wOLLY&amp;ecver=2]
 
 <span data-ttu-id="4cfac-131">Wenn Ihr Code nicht mit dem Standard kompatibel ist, ziehen Sie weitere Möglichkeiten in Betracht, um diesen Code zu implementieren.</span><span class="sxs-lookup"><span data-stu-id="4cfac-131">If your code isn't compatible with the standard, consider other ways that you could implement that code.</span></span> <span data-ttu-id="4cfac-132">Öffnen Sie dazu den [.NET API-Browser](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0).</span><span class="sxs-lookup"><span data-stu-id="4cfac-132">Start by opening the [.NET API Browser](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0).</span></span> <span data-ttu-id="4cfac-133">Sie können diesen Browsers verwenden, um die APIs zu überprüfen, die in .NET Standard 2.0 verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="4cfac-133">You can use that browser to review the API's that are available in the .NET Standard 2.0.</span></span> <span data-ttu-id="4cfac-134">Beschränken Sie die Liste unbedingt auf den .NET Standard 2.0.</span><span class="sxs-lookup"><span data-stu-id="4cfac-134">Make sure to scope the list to the .NET Standard 2.0.</span></span>
 
