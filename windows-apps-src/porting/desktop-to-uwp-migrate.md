@@ -6,12 +6,12 @@ ms.date: 10/03/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6727c22631a9536a0ed8d04e7c88602bba890284
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: abc2ba7287541d97208899b51e81110b464b6cdd
+ms.sourcegitcommit: 8db07db70d7630f322e274ab80dfa09980fc8d52
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932586"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "9014715"
 ---
 # <a name="share-code-between-a-desktop-application-and-a-uwp-app"></a>Teilen von Code zwischen einer desktop-Anwendung und eine UWP-app
 
@@ -23,7 +23,7 @@ Platzieren Sie so viel Code wie möglich in die standardmäßigen Klassenbibliot
 
 In diesem großartigen Video finden Sie weitere Informationen.
 &nbsp;
-> [!VIDEO https://www.youtube.com/embed/YI4MurjfMn8]
+> [!VIDEO https://www.youtube-nocookie.com/embed/YI4MurjfMn8?list=PLRAdsfhKI4OWx321A_pr-7HhRNk7wOLLY&amp;ecver=1]
 
 ### <a name="add-net-standard-libraries"></a>Hinzufügen von Bibliotheken für .NET Standard
 
@@ -53,7 +53,7 @@ Wenn Ihre Anwendung diese verwendet, bestimmen Sie, ob sie mit .NET Standard 2.0
 
 Verwenden Sie die gleichen Tools, um Ihren Code zu analysieren. Laden Sie die Tools hier herunter ([dotnet-apiport](https://github.com/Microsoft/dotnet-apiport/releases)). Schauen Sie sich dieses Video an, um zu erfahren, wie Sie diese verwenden können.
 &nbsp;
-> [!VIDEO https://www.youtube.com/embed/rzs_FGPyAlY]
+> [!VIDEO https://www.youtube-nocookie.com/embed/rzs_FGPyAlY?list=PLRAdsfhKI4OWx321A_pr-7HhRNk7wOLLY&amp;ecver=2]
 
 Wenn Ihr Code nicht mit dem Standard kompatibel ist, ziehen Sie weitere Möglichkeiten in Betracht, um diesen Code zu implementieren. Öffnen Sie dazu den [.NET API-Browser](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0). Sie können diesen Browsers verwenden, um die APIs zu überprüfen, die in .NET Standard 2.0 verfügbar sind. Beschränken Sie die Liste unbedingt auf den .NET Standard 2.0.
 

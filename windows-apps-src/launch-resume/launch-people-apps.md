@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 46a297c3a611882724b18242d1c6272c3345ffc2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ab10acab42ab3f03121a7c5a462cb651b0f3f31b
+ms.sourcegitcommit: 8db07db70d7630f322e274ab80dfa09980fc8d52
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935615"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "9014705"
 ---
 # <a name="launch-the-people-app"></a>Starten der Kontakte-App
 
@@ -58,7 +58,7 @@ In diesem Thema wird das **ms-people:**-URI-Schema beschrieben. Ihre App kann di
 </div>
 <div> 
 </div></td>
-<td align="left">ms-people:viewcontact:?ContactId=&lt;contactid&gt;&amp;AggregatedId=&lt;aggid&gt;&amp;PhoneNumber= &lt;phonenum&gt;&amp;Email=&lt;email&gt;&amp;ContactName=&lt;name&gt;&amp;Contact=&lt;contactobj&gt;</td>
+<td align="left">MS-People: Viewcontact?ContactId =&lt;Contactid&gt;&amp;AggregatedId =&lt;Aggid&gt;&amp;PhoneNumber = &lt;Phonenum&gt;&amp;E-Mail =&lt;e-Mail&gt;&amp;ContactName =&lt;Name&gt;&amp;Contact =&lt;Contactobj&gt;</td>
 </tr>
 <tr class="odd">
 <td align="left">Startet mit einer „Kontakt speichern“-Seite innerhalb der Kontakte-App, um den angegeben Kontakt mit der angegebenen Telefonnummer oder E-Mail-Adresse zu speichern.

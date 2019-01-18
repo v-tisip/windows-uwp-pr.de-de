@@ -5,12 +5,12 @@ ms.date: 05/08/2018
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projiziert, projektion, implementierung, laufzeitklasse, aktivierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 59b056e160a1d7782e054ad4dbf1b63e91be42e9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: cd26bfe2643b7130227e758083d820ce6be7d24e
+ms.sourcegitcommit: 8db07db70d7630f322e274ab80dfa09980fc8d52
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919953"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "9014745"
 ---
 # <a name="consume-apis-with-cwinrt"></a>Verwenden von APIs mit C++/WinRT
 
@@ -122,6 +122,20 @@ private:
 ```
 
 Alle Konstruktoren des projizierten Typs, *ausgenommen* der Konstruktor `nullptr_t`, bewirken, dass ein zugrunde liegendes Windows-Runtime-Objekt erstellt wird. Dem Konstruktor `nullptr_t` ist im Wesentlichen keine Aktion zugeordnet. Er erwartet, dass das projizierte Objekt zu einem späteren Zeitpunkt initialisiert wird. Ob eine Laufzeitklasse also über einen Standardkonstruktor verfügt oder nicht, Sie können dieses Verfahren für eine effiziente verzögerte Initialisierung verwenden.
+
+Dieser Aspekt wirkt sich auf andere Stellen, in denen Sie den Standardkonstruktor, z. B. in Vektoren und Karten aufrufen. Berücksichtigen Sie in diesem Codebeispiel wird.
+
+```cppwinrt
+std::map<int, TextBlock> lookup;
+lookup[2] = value;
+```
+
+Die Zuordnung erstellt einen neuen **TextBlock**, und dann sofort überschreibt mit `value`. Hier sehen Sie die Lösung.
+
+```cppwinrt
+std::map<int, TextBlock> lookup;
+lookup.insert_or_assign(2, value);
+```
 
 ## <a name="if-the-api-is-implemented-in-a-windows-runtime-component"></a>Wenn die API in einer Komponente für Windows-Runtime implementiert ist
 Dieser Abschnitt gilt unabhängig davon, ob Sie die Komponente selbst erstellt haben oder ob sie von einem Anbieter stammt.
