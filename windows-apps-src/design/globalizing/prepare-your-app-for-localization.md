@@ -7,12 +7,12 @@ ms.date: 11/07/2017
 ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
-ms.openlocfilehash: c0df06458bf70599be657fe2812b2fb3e2b44ed6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 23343ea88b0347ac3e8cb5d41812a24d619be986
+ms.sourcegitcommit: 28fa37c2106ceb0ebe2c06ec74198b7ee97a9b88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938297"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "9015421"
 ---
 # <a name="make-your-app-localizable"></a>App lokalisierbar machen
 
@@ -79,6 +79,16 @@ Gegen informelle Angaben in Zeichenfolgen ist nichts einzuwenden. Sie können en
 ## <a name="pseudo-localization"></a>Pseudolokalisierung
 
 Nehmen Sie ein Pseudolokalisierung Ihrer App vor, um Lokalisierungsprobleme zu erkennen. Pseudolokalisierung ist eine Art von Lokalisierungstestlauf oder Offenlegungstest. Sie erstellen eine Reihe von Ressourcen, die nicht wirklich übersetzt werden, sondern nur übersetzt aussehen. Ihre Zeichenfolgen sind beispielsweise etwa 40 % länger als in der Standardsprache, und sie enthalten Trennzeichen, sodass Sie auf einen Blick erkennen können, ob sie in der Benutzeroberfläche abgeschnitten wurden.
+
+## <a name="deployment-considerations"></a>Überlegungen zur Bereitstellung
+
+Wenn Sie Ihre app installieren, die lokalisierte Sprache Daten enthält möglicherweise, dass nur die Standardsprache für die app verfügbar ist, auch wenn Sie anfänglich Ressourcen für mehrere Sprachen enthalten. Dies tritt aufgrund der Arbeitsweise des Installationsvorgangs optimiert ist, um nur die Sprachressourcen installieren, die die aktuelle Sprache und Kultur des Geräts entsprechen. Dies bedeutet, dass, wenn Ihr Gerät für "en" konfiguriert ist – uns bei der Installation der app nur die En-us Sprachressourcen installiert werden. Wenn Sie die Standardsprache des Betriebssystems zeigt die app nach wie vor nur En-us-Ressourcen, da es sich um die einzige Sprache, die für die app installiert ist. Zurzeit besteht keine Möglichkeit, Unterstützung für weitere Sprachen für Ihre app nach der ersten Installation zu installieren. 
+
+Wenn Sie möchten, um sicherzustellen, dass alle Sprachressourcen nach der Installation verfügbar sind, können Sie erstellt werden. eine Konfigurationsdatei für die app-Paket, das angibt, dass bestimmte Ressourcen während der Installation erforderlich sind. In dieser Konfigurationsdatei können Sie die Ressourcen wie die Sprachressourcen installiert werden muss. Für Weitere Informationen zu bürgenden Ressourcen installiert sind, finden Sie in diesem Dokument: [Stellen Sie sicher, dass Ressourcen auf einem Gerät unabhängig davon, ob Sie ein Gerät erfordert installiert sind](https://docs.microsoft.com/en-us/previous-versions/dn482043(v=vs.140))
+ 
+Dieses Feature optimierte Installation wird automatisch aktiviert, wenn Sie ein AppX-Bündel beim Packen für Ihre app generieren. Optional, um sicherzustellen, dass alle Ressourcen installiert sind Appxbundle-Generation, die beim Packen Sie Ihre app zu deaktivieren. Dies wird nicht empfohlen, aber da es die Installationszeit Ihrer App erhöhen kann. Stattdessen sollten Sie erstellen eine Konfigurationsdatei Verpacken gemäß den vorherigen Absatz und müssen nur die erforderlichen Ressourcen, sodass das Installationsprogramm weiterhin liegender nicht benötigten Ressourcen zu optimieren. 
+ 
+Können Sie Appxbundle Generation deaktivieren und alle verpackte Ressourcen enthalten, indem das Attribut "Generieren von App-Bundle", "never". 
 
 ## <a name="geopolitical-awareness"></a>Geopolitische Rücksichtnahme
 
