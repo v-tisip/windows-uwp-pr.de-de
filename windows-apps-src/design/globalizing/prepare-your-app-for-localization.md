@@ -7,12 +7,12 @@ ms.date: 11/07/2017
 ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 23343ea88b0347ac3e8cb5d41812a24d619be986
-ms.sourcegitcommit: 28fa37c2106ceb0ebe2c06ec74198b7ee97a9b88
+ms.openlocfilehash: 618b9d556d3c855c5aed888f0639393bdaaec52e
+ms.sourcegitcommit: 6b417970ee42b46d0a3a2307229376e41e70f8c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "9015421"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "9015665"
 ---
 # <a name="make-your-app-localizable"></a>App lokalisierbar machen
 
@@ -22,7 +22,7 @@ Wir empfehlen außerdem, dass Sie sich mit den [Richtlinien für Globalisierung]
 
 ## <a name="put-your-strings-into-resources-files-resw"></a>Zeichenfolgen nur in Ressourcendateien (.resw)
 
-Zeichenfolgenliterale sollten weder im imperativen Code, im XAML-Markup noch im App-Paketmanifest hartcodiert werden. Speichern Sie Ihre Zeichenfolgen stattdessen in Ressourcendateien (.resw), damit sie unabhängig von den Binärdateien Ihrer App-Builds an unterschiedliche lokale Märkte angepasst werden können. Details dazu finden Sie unter [Lokalisieren von Zeichenfolgen in der Benutzeroberfläche und im Paketmanifest der App](../../app-resources/localize-strings-ui-manifest.md).
+Verwenden Sie weder hartcodierte Zeichenfolgenliterale im imperativen Code, im XAML-Markup noch im app-Paketmanifest. Speichern Sie Ihre Zeichenfolgen stattdessen in Ressourcendateien (.resw), damit sie unabhängig von den Binärdateien Ihrer App-Builds an unterschiedliche lokale Märkte angepasst werden können. Details dazu finden Sie unter [Lokalisieren von Zeichenfolgen in der Benutzeroberfläche und im Paketmanifest der App](../../app-resources/localize-strings-ui-manifest.md).
 
 In diesem Thema erfahren Sie außerdem, wie Sie Kommentare zu Ihrer Standard-Ressourcendatei (.resw) hinzufügen. Zum Beispiel können Sie informelle Anmerkungen in Kommentaren angeben. Um die Kosten zu minimieren, sollten Sie außerdem sicherstellen, dass nur die Zeichenfolgen, die übersetzt werden müssen, an die Übersetzer weitergegeben werden.
 
@@ -64,9 +64,9 @@ Erwägen Sie als weiteres Beispiel den Satz "Remind me in {0} Minute(s).". " Wä
 
 Lokalisieren Sie den gesamten Satz, statt nur ein einzelnes Wort, um das Problem zu beheben. Auf den ersten Blick wirkt diese Lösung vielleicht nicht ganz so elegant und sieht nach überflüssiger Arbeit aus, die Gründe sprechen jedoch für sich:
 
--   Für alle Sprachen wird eine grammatikalisch korrekte Meldung angezeigt.
--   Übersetzer müssen nicht nachfragen, womit die Zeichenfolge ersetzt werden soll.
--   Sie müssen keine kostspielige Codefehlerbehebung implementieren, wenn ein solches Problem in der fertigen App auftaucht.
+- Für alle Sprachen wird eine grammatikalisch korrekte Meldung angezeigt.
+- Übersetzer müssen nicht nachfragen, womit die Zeichenfolge ersetzt werden soll.
+- Sie müssen keine kostspielige Codefehlerbehebung implementieren, wenn ein solches Problem in der fertigen App auftaucht.
 
 ## <a name="other-considerations-for-strings"></a>Andere Überlegungen für Zeichenfolgen
 
@@ -82,13 +82,22 @@ Nehmen Sie ein Pseudolokalisierung Ihrer App vor, um Lokalisierungsprobleme zu e
 
 ## <a name="deployment-considerations"></a>Überlegungen zur Bereitstellung
 
-Wenn Sie Ihre app installieren, die lokalisierte Sprache Daten enthält möglicherweise, dass nur die Standardsprache für die app verfügbar ist, auch wenn Sie anfänglich Ressourcen für mehrere Sprachen enthalten. Dies tritt aufgrund der Arbeitsweise des Installationsvorgangs optimiert ist, um nur die Sprachressourcen installieren, die die aktuelle Sprache und Kultur des Geräts entsprechen. Dies bedeutet, dass, wenn Ihr Gerät für "en" konfiguriert ist – uns bei der Installation der app nur die En-us Sprachressourcen installiert werden. Wenn Sie die Standardsprache des Betriebssystems zeigt die app nach wie vor nur En-us-Ressourcen, da es sich um die einzige Sprache, die für die app installiert ist. Zurzeit besteht keine Möglichkeit, Unterstützung für weitere Sprachen für Ihre app nach der ersten Installation zu installieren. 
+Wenn Sie eine app, die lokalisierte Sprache Daten enthält installieren, kann vorkommen, dass nur die Standardsprache für die app verfügbar ist, auch wenn Sie anfänglich Ressourcen für mehrere Sprachen enthalten. Dies liegt daran des Installationsvorgangs optimiert ist, um nur die Sprachressourcen installieren, die die aktuelle Sprache und Kultur des Geräts entsprechen. Wenn Ihr Gerät für "En-US" konfiguriert ist, werden daher nur die Sprachressourcen "En-US" mit Ihrer app installiert.
 
-Wenn Sie möchten, um sicherzustellen, dass alle Sprachressourcen nach der Installation verfügbar sind, können Sie erstellt werden. eine Konfigurationsdatei für die app-Paket, das angibt, dass bestimmte Ressourcen während der Installation erforderlich sind. In dieser Konfigurationsdatei können Sie die Ressourcen wie die Sprachressourcen installiert werden muss. Für Weitere Informationen zu bürgenden Ressourcen installiert sind, finden Sie in diesem Dokument: [Stellen Sie sicher, dass Ressourcen auf einem Gerät unabhängig davon, ob Sie ein Gerät erfordert installiert sind](https://docs.microsoft.com/en-us/previous-versions/dn482043(v=vs.140))
- 
-Dieses Feature optimierte Installation wird automatisch aktiviert, wenn Sie ein AppX-Bündel beim Packen für Ihre app generieren. Optional, um sicherzustellen, dass alle Ressourcen installiert sind Appxbundle-Generation, die beim Packen Sie Ihre app zu deaktivieren. Dies wird nicht empfohlen, aber da es die Installationszeit Ihrer App erhöhen kann. Stattdessen sollten Sie erstellen eine Konfigurationsdatei Verpacken gemäß den vorherigen Absatz und müssen nur die erforderlichen Ressourcen, sodass das Installationsprogramm weiterhin liegender nicht benötigten Ressourcen zu optimieren. 
- 
-Können Sie Appxbundle Generation deaktivieren und alle verpackte Ressourcen enthalten, indem das Attribut "Generieren von App-Bundle", "never". 
+> [!NOTE]
+> Es ist nicht möglich, Unterstützung für weitere Sprachen für Ihre app nach der ersten Installation zu installieren. Wenn Sie die Standardsprache nach der Installation einer app ändern, wird die app weiterhin nur die ursprüngliche Sprachressourcen verwendet.
+
+Wenn Sie möchten, um sicherzustellen, dass alle Sprachressourcen nach der Installation verfügbar sind, erstellen Sie eine Konfigurationsdatei für die app-Paket, das angibt, dass bestimmte Ressourcen während der Installation (einschließlich Ressourcen der Standardsprache) erforderlich sind. Dieses Feature optimierte Installation wird automatisch aktiviert, wenn Ihre Anwendung .appxbundle beim Packen generiert wird. Weitere Informationen finden Sie unter [Stellen Sie sicher, dass Ressourcen, auf einem Gerät unabhängig davon installiert sind, ob ein Gerät erforderlich sind](https://docs.microsoft.com/en-us/previous-versions/dn482043(v=vs.140)).
+
+Optional, um sicherzustellen, dass alle Ressourcen sind installiert (nicht nur eine Teilmenge) ist, können Sie .appxbundle-Generation, wenn Sie Ihre app zu verpacken, deaktivieren. Dies wird nicht empfohlen, jedoch, wie sie die Installation Ihrer App erhöhen kann.
+
+Deaktivieren Sie automatische Generierung der .appxbundle, indem Sie das Attribut "Generieren von App-Bundle", "nie":
+
+1. In Visual Studio mit der Maustaste des Namens des Projekts
+2. Wählen Sie **Store** -> **... erstellen app-Pakete**
+3. Wählen Sie im Dialogfeld " **Ihre Pakete erstellen** " **zum Erstellen von Paketen zum Hochladen in den Microsoft Store mit einem neuen app-Namen werden soll** , und klicken Sie auf **Weiter**.
+4. Benennen im Dialogfeld **Wählen Sie einen app-Namen** für Ihr Paket auszuwählen /, erstellen Sie eine app.
+5. Klicken Sie im Dialogfeld **auswählen und Konfigurieren von Paketen** **nie**als **app-Bundle erstellen** .
 
 ## <a name="geopolitical-awareness"></a>Geopolitische Rücksichtnahme
 
@@ -128,12 +137,13 @@ Berücksichtigen Sie diese Optionen.
 - **Die Ressourcendateien können zum Übersetzen direkt im Projekt geöffnet werden.** Dieser Ansatz funktioniert gut für ein Projekt mit wenigen Zeichenfolgen, die in zwei oder drei Sprachen übersetzt werden müssen. Er könnte sich für Szenarien eignen, in denen ein Entwickler mehrere Sprachen spricht und die Übersetzung übernehmen kann. Dieser Ansatz ist schnell, erfordert keine Tools und minimiert das Risiko von falschen Übersetzungen. Es ist jedoch nicht skalierbar. Insbesondere kann es passieren, das die Ressourcen in verschiedenen Sprachen nicht mehr synchron sind, was eine mangelnde Benutzerfreundlichkeit und Verwaltungsprobleme zur Folge haben kann.
 - **Die Zeichenfolgenressourcendateien werden im XML- oder ResJSON-Textformat erstellt und können somit zur Übersetzung mit einem Texteditor übergeben werden. Die übersetzten Dateien würde dann wieder in das Projekt kopiert werden.** Bei diesem Ansatz besteht die Gefahr, dass Übersetzer versehentlich die XML-Tags bearbeiten. Andererseits besteht die Möglichkeit, Übersetzungen außerhalb des Microsoft Visual Studio-Projekts durchzuführen. Dieser Ansatz eignet sich gut für Projekte, die nur in wenige Sprachen übersetzt werden. Das XLIFF-Format ist ein XML-Format, das speziell für die Lokalisierung vorgesehen ist. Es sollte zudem von einigen Lokalisierungsanbietern oder -tools unterstützt werden. Sie können mit dem [Multilingual App Toolkit](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx) XLIFF-Dateien aus anderen Ressourcendateien wie „.resw“ oder „.resjson“ generieren.
 
-Lokalisierern müssen möglicherweise noch andere Dateien übergeben werden, wie Bild- oder Audiodateien.
+> [!NOTE]
+> Lokalisierung kann auch für andere Ressourcen, z. B. Bilder und Audiodateien erforderlich sein.
 
-Berücksichtigen Sie auch die folgenden Vorschläge.
+Sie sollten auch Folgendes beachten:
 
-- **Verwenden Sie ein Lokalisierungstool.** Es gibt eine Reihe von Lokalisierungstools, mit denen Ressourcendateien analysiert werden können und die nur die Bearbeitung von übersetzbaren Zeichenfolgen für den Übersetzer zulassen. Das Risiko, dass ein Übersetzer versehentlich XML-Tags bearbeitet, ist somit geringer. Der Nachteil ist aber, dass neue Tools und Prozesse in den Lokalisierungsprozess eingebunden werden müssen. Ein Lokalisierungstool eignet sich für Projekte mit vielen Zeichenfolgen für wenige Sprachen. Weitere Informationen finden Sie unter [Verwenden des Multilingual App Toolkit](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx).
-- **Verwenden Sie einen Lokalisierungsanbieter.** Wenden Sie sich an einen Lokalisierungsanbieter, wenn des Projekt viele Zeichenfolgen enthält und in viele Sprachen übersetzt werden muss. Ein Lokalisierungsanbieter kann Sie hinsichtlich der Tools und Prozesse beraten sowie die Ressourcendateien übersetzen. Diese Lösung ist ideal, stellt allerdings auch die teuerste Option dar und kann die Bearbeitungszeit für den übersetzten Inhalt verlängern.
+- **Tools für die Lokalisierung** Eine Reihe von Tools für die Lokalisierung stehen Ressourcendateien können und nur die übersetzbaren Zeichenfolgen Übersetzer bearbeitet wird. Das Risiko, dass ein Übersetzer versehentlich XML-Tags bearbeitet, ist somit geringer. Der Nachteil ist aber, dass neue Tools und Prozesse in den Lokalisierungsprozess eingebunden werden müssen. Ein Lokalisierungstool eignet sich für Projekte mit vielen Zeichenfolgen für wenige Sprachen. Weitere Informationen finden Sie unter [Verwenden des Multilingual App Toolkit](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx).
+- **Lokalisierungsanbietern** Erwägen Sie einen Lokalisierungsanbieter, wenn die Anwendung umfassende Zeichenfolgen enthält, die eine große Anzahl von Sprachen übersetzt werden müssen. Ein Lokalisierungsanbieter kann Sie hinsichtlich der Tools und Prozesse beraten sowie die Ressourcendateien übersetzen. Diese Lösung ist ideal, stellt allerdings auch die teuerste Option dar und kann die Bearbeitungszeit für den übersetzten Inhalt verlängern.
 
 ## <a name="keep-access-keys-and-labels-consistent"></a>Zugriffstasten und Beschreibungen konsistent halten
 
@@ -145,8 +155,8 @@ Japanische Kanji-Zeichen weisen die Besonderheit auf, dass sie je nach Wort und 
 
 *Furigana* umgeht dieses Problem, da der Benutzer oder Ersteller die Phonetik für die verwendeten Zeichen angeben kann. Wenn Sie das folgende Verfahren verwenden, um Furigana Ihrem App-Namen hinzuzufügen, können Sie sicherstellen, dass es in der App-Liste an der richtigen Stelle einsortiert ist. Wenn Ihr App-Name Kanji-Zeichen enthält und Furigana nicht bereitgestellt wird, wenn die Benutzeroberflächensprache oder die Sortierreihenfolge auf Japanisch festgelegt ist, versucht Windows, die entsprechende Aussprache zu erstellen. Es ist jedoch möglich, App-Namen mit seltener oder spezieller Schreibweise stattdessen nach einer gebräuchlicheren Schreibweise zu sortieren. Deshalb empfiehlt es sich, bei einer japanischen Anwendung (insbesondere wenn sie Kanji-Zeichen im Namen enthält) im Rahmen der japanischen Lokalisierung eine Furigana-Version des App-Namens bereitzustellen.
 
-1.  Fügen Sie „ms-resource:Appname“ als Paketanzeigenamen und Anwendungsanzeigenamen hinzu.
-2.  Erstellen Sie unter „strings“ den Ordner „ja-JP“, und fügen Sie zwei Ressourcendateien wie folgt hinzu:
+1. Fügen Sie „ms-resource:Appname“ als Paketanzeigenamen und Anwendungsanzeigenamen hinzu.
+2. Erstellen Sie unter „strings“ den Ordner „ja-JP“, und fügen Sie zwei Ressourcendateien wie folgt hinzu:
 
     ``` syntax
     strings\
@@ -156,28 +166,28 @@ Japanische Kanji-Zeichen weisen die Besonderheit auf, dass sie je nach Wort und 
             Resources.resw
     ```
 
-3.  Unter „Resources.resw“ für „ja-JP“ allgemein: Fügen Sie eine Zeichenfolgenressource für den App-Namen „希蒼“ hinzu.
-4.  Unter „Resources.altform-msft-phonetic.resw“ für japanische Furigana-Ressourcen: Fügen Sie einen Furigana-Wert für den App-Namen „のあ“ hinzu.
+3. Unter „Resources.resw“ für „ja-JP“ allgemein: Fügen Sie eine Zeichenfolgenressource für den App-Namen „希蒼“ hinzu.
+4. Unter „Resources.altform-msft-phonetic.resw“ für japanische Furigana-Ressourcen: Fügen Sie einen Furigana-Wert für den App-Namen „のあ“ hinzu.
 
 Der Benutzer kann nach dem App-Namen „希 蒼” sowohl mit dem Furigana-Wert "の あ" (noa) als auch mit dem phonetischen Wert „ま れ あ お” (mare-ao) suchen (mit der Funktion **GetPhonetic** aus dem Eingabemethoden-Editor (IME)).
 
 Die Sortierung folgt dem **regionalen Format der Systemsteuerung**:
 
--   Wenn unter einem japanischen Benutzergebietsschema
-    -   Furigana aktiviert ist, wird „希蒼“ unter „の“ einsortiert.
-    -   Wenn Furigana fehlt, wird „希蒼“ unter „ま“ sortiert.
--   Wenn unter einem nicht japanischem Benutzergebietsschema
-    -   Furigana aktiviert ist, wird „希蒼“ unter „の“ einsortiert.
-    -   Wenn Furigana fehlt, wird „希蒼“ unter „漢字“ sortiert.
+- Wenn unter einem japanischen Benutzergebietsschema
+  - Furigana aktiviert ist, wird „希蒼“ unter „の“ einsortiert.
+  - Wenn Furigana fehlt, wird „希蒼“ unter „ま“ sortiert.
+- Wenn unter einem nicht japanischem Benutzergebietsschema
+  - Furigana aktiviert ist, wird „希蒼“ unter „の“ einsortiert.
+  - Wenn Furigana fehlt, wird „希蒼“ unter „漢字“ sortiert.
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Richtlinien für Globalisierung](guidelines-and-checklist-for-globalizing-your-app.md)
-* [Lokalisieren von Zeichenfolgen in der Benutzeroberfläche und im Paketmanifest der App](../../app-resources/localize-strings-ui-manifest.md)
-* [Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung, hohen Kontrast und andere Eigenschaften](../../app-resources/tailor-resources-lang-scale-contrast.md)
-* [Layout und Schriften anpassen und RTL unterstützen](adjust-layout-and-fonts--and-support-rtl.md)
-* [Aktualisieren von Bilder als Reaktion auf Ereignisse, die durch die Änderung von Qualifiziererwerten ausgelöst werden](../../app-resources/images-tailored-for-scale-theme-contrast.md#updating-images-in-response-to-qualifier-value-change-events)
+- [Richtlinien für Globalisierung](guidelines-and-checklist-for-globalizing-your-app.md)
+- [Lokalisieren von Zeichenfolgen in der Benutzeroberfläche und im Paketmanifest der App](../../app-resources/localize-strings-ui-manifest.md)
+- [Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung, hohen Kontrast und andere Eigenschaften](../../app-resources/tailor-resources-lang-scale-contrast.md)
+- [Layout und Schriften anpassen und RTL unterstützen](adjust-layout-and-fonts--and-support-rtl.md)
+- [Aktualisieren von Bilder als Reaktion auf Ereignisse, die durch die Änderung von Qualifiziererwerten ausgelöst werden](../../app-resources/images-tailored-for-scale-theme-contrast.md#updating-images-in-response-to-qualifier-value-change-events)
 
 ## <a name="samples"></a>Beispiele
 
-* [Anwendungsressourcen und Lokalisierung – Beispiel](http://go.microsoft.com/fwlink/p/?linkid=254478)
+- [Anwendungsressourcen und Lokalisierung – Beispiel](http://go.microsoft.com/fwlink/p/?linkid=254478)
