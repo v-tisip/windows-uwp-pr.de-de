@@ -5,16 +5,16 @@ ms.date: 5/2/2018
 ms.topic: article
 keywords: windows 10, uwp, app-installer, AppInstaller, querladen
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c7055748eb8905341d9f90c47e6141c9c9c599e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b547394657fc992474ac0ef9e79719e3ab8f31e1
+ms.sourcegitcommit: 58783d1ea22e632b9c50dcfbaa1cc57686bcdd8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929667"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "9024227"
 ---
 # <a name="create-an-app-installer-file-with-visual-studio"></a>Erstellen einer App-Installer-Datei mit Visual Studio
 
-Ab Windows10, Version 1804 und Visual Studio2017, Update 15.7, können quergeladene Apps so konfiguriert werden, dass sie mithilfe einer `.appinstaller`-Datei automatische Updates erhalten. Visual Studio unterstützt das Aktivieren dieser Updates.
+Ab Windows 10, Version 1803 und Visual Studio 2017, Update 15.7, quergeladenen apps können konfiguriert werden zum Empfangen von automatischen Updates, die mit einer `.appinstaller` Datei. Visual Studio unterstützt das Aktivieren dieser Updates.
 
 ## <a name="app-installer-file-location"></a>Speicherort der App-Installer-Datei
 Die `.appinstaller`-Datei in kann an einem freigegebenen Speicherort wie einem HTTP-Endpunkt oder einem freigegebenen UNC-Ordner gehostet werden, und enthält den Pfad zum Suchen der zu installierenden App-Pakete. Benutzer installieren die App vom freigegebenen Speicherort und aktivieren regelmäßige Überprüfungen auf neue Updates. 
@@ -25,7 +25,7 @@ Die `.appinstaller`-Datei in kann an einem freigegebenen Speicherort wie einem H
 Sie können die `TargetPlatformMinVersion`-Eigenschaft entweder beim Erstellen des Projekts konfigurieren, oder später in den Projekteigenschaften ändern. 
 
 >[!IMPORTANT]
-> Die App-Installer-Datei wird nur generiert, wenn die `TargetPlatformMinVersion` Windows10, Version 1804 oder höher ist.
+> Die app-Installer-Datei wird nur generiert, wenn die `TargetPlatformMinVersion` ist Windows 10, Version 1803 oder höher.
 
 
 ### <a name="create-packages"></a>Erstellen von Paketen
