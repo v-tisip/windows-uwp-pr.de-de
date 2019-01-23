@@ -6,12 +6,12 @@ ms.date: 06/22/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f5eabfaf8e526899c17b2d0da688a5135133f65
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 87f4e03c8f6a9fc17fe524cf60ce4bf33cecfaf8
+ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921822"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "9024589"
 ---
 # <a name="composition-native-interoperation-with-directx-and-direct2d"></a>Systemeigene Interoperabilität mit „DirectX“ und „Direct2D“
 
@@ -43,7 +43,7 @@ Im folgenden Codebeispiel wird veranschaulicht eine Interaktion Szenario. Im Bei
 
 Es gibt zwei Beispiele für Code unten. Zuerst wird ein [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Beispiel (die abgeschlossen ist), und klicken Sie dann eine C++ / CX-Codebeispiel (die die DirectWrite und Direct2D Teile des Beispiels nicht berücksichtigt).
 
-Verwenden von C++ / WinRT Codebeispiel unten wird zunächst erstellen Sie ein neues **Core App (C++ / WinRT)** Projekt in Visual Studio (Anforderungen finden Sie unter [Visual Studio-Unterstützung für C++ / WinRT und VSIX](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-and-the-vsix)). Wählen Sie beim Erstellen des Projekts, als die Zielversion **Windows 10, Version 1803 (10.0; Build 17134)**. Dies ist die Version, die mit der dieser Code erstellt und getestet wurde. Ersetzen Sie den Inhalt von Ihrer `App.cpp` Code Quelldatei mit den entsprechenden Code unten, und klicken Sie dann erstellen und ausführen. Die Anwendung rendert die Zeichenfolge "Hello, World!" in schwarzen Text auf einen transparenten Hintergrund.
+Verwenden von C++ / WinRT Codebeispiel unten wird zunächst erstellen Sie ein neues **Core App (C++ / WinRT)** Projekt in Visual Studio (Anforderungen finden Sie unter [Visual Studio-Unterstützung für C++ / WinRT und VSIX](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-and-the-vsix)). Wählen Sie beim Erstellen des Projekts, als die Zielversion **Windows 10, Version 1803 (10.0; Build 17134)**. Dies ist die Version, die mit der dieser Code erstellt und getestet wurde. Ersetzen Sie den Inhalt von Ihrer `App.cpp` Code Quelldatei mit den entsprechenden Code unten, und klicken Sie dann erstellen und ausführen. Die Anwendung rendert die Zeichenfolge "Hello, World!" in schwarzen Text auf einen transparenten Hintergrund.
 
 ```cppwinrt
 // App.cpp

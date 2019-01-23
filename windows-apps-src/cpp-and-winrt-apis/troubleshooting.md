@@ -5,17 +5,17 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, problembehandlung, HRESULT, fehler
 ms.localizationpriority: medium
-ms.openlocfilehash: 120d5c8014ce9ac3cab9b2dfb1d778173f2434c4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 8b82fa3e8c5aa222f18c67fa0679374ef3d58a67
+ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927019"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "9024529"
 ---
 # <a name="troubleshooting-cwinrt-issues"></a>Problembehandlung bei C++/WinRT-Problemen
 
 > [!NOTE]
-> Informationen zur Installation und Verwendung der [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Visual Studio Extension (VSIX) (bietet projektvorlagenunterstützung sowie C++ / WinRT MSBuild-Eigenschaften und-Ziele) finden Sie unter [Visual Studio-Unterstützung für C++ / WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
+> Informationen zur Installation und Verwendung der [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Visual Studio Extension (VSIX) (bietet projektvorlagenunterstützung sowie C++ / WinRT MSBuild-Eigenschaften und-Ziele) finden Sie unter [Visual Studio-Unterstützung für C++ / WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix).
 
 Dieses Thema stellt vorsorgliche Informationen bereit. Sie sollten diese kennen, auch wenn Sie sie noch nicht sofort brauchen. Die Tabelle mit den Symptomen und Problembehandlungen in unten kann für Sie hilfreich sein, egal ob Sie neuen Code schreiben oder eine bestehende App portieren. Wenn Sie beim Portieren vorankommen möchten, und zu einem Punkt gelangen, an dem Ihr Projekt erstellt und ausgeführt werden kann, dann können Sie temporäre Fortschritte machen, indem Sie jeden nicht essentiellen Code mit Problemen auskommentieren oder streichen. Später können Sie den korrigierten Code wieder einfügen.
 
@@ -37,7 +37,7 @@ Wenn Ihre App beendet wird und Sie nur wissen, dass beim XAML-Markup-Parsing ein
 | Der C++ Compiler erzeugt einen Fehler der Form „*'MyImplementationType_base&lt;MyImplementationType&gt;': kein passender Standardkonstruktor verfügbar*”.|Dies kann passieren, wenn Sie von einem Typ ableiten, der einen nicht-trivialen Konstruktor hat. Der Konstruktor Ihres abgeleiteten Typs muss die Parameter übergeben, die der Konstruktor des Basistyps benötigt. Ein funktionierendes Beispiel finden Sie unter [Abgeleitet von einem Typ, der einen nicht-trivialen Konstruktor hat.](author-apis.md#deriving-from-a-type-that-has-a-non-default-constructor)|
 | Der C++ Compiler erzeugt den Fehler „*Konvertierung von 'const std::vector&lt;std::wstring,std::allocator&lt;_Ty&gt;&gt;' zu 'const winrt::param::async_iterable&lt;winrt::hstring&gt; &'* nicht möglich”.|Dies kann passieren, wenn Sie eine Std:: Vector des Std::wstring an eine Windows-Runtime-API übergeben, die eine Collection erwartet. Weitere Informationen finden Sie unter [Standard C++ Datentypen und C++/WinRT](std-cpp-data-types.md).|
 | Der C++ Compiler erzeugt den Fehler „*Konvertierung von 'const std::vector&lt;winrt::hstring,std::allocator&lt;_Ty&gt;&gt;' zu 'const winrt::param::async_iterable&lt;winrt::hstring&gt; &'* nicht möglich”.|Dies kann passieren, wenn Sie ein std::vector von winrt::hstring an eine asynchrone Windows-Runtime-API übergeben, die eine Collection erwartet, und Sie den Vektor weder kopiert noch in den asynchronen Aufrufer verschoben haben. Weitere Informationen finden Sie unter [Standard C++ Datentypen und C++/WinRT](std-cpp-data-types.md).|
-| Beim Öffnen eines Projekts erzeugt Visual Studio den Fehler „*Die Anwendung für das Projekt ist nicht installiert.*”.|Falls noch nicht geschehen, müssen Sie **Windows Universal-Tools für die C++ Entwicklung** im Dialogfeld **Neues Projekt** von Visual Studio installieren. Wenn das Problem dadurch nicht behoben wird, hängt das Projekt möglicherweise von der C++/WinRT Visual Studio Extension (VSIX) ab (siehe [Visual Studio-Unterstützung für C++/WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)).|
+| Beim Öffnen eines Projekts erzeugt Visual Studio den Fehler „*Die Anwendung für das Projekt ist nicht installiert.*”.|Falls noch nicht geschehen, müssen Sie **Windows Universal-Tools für die C++ Entwicklung** im Dialogfeld **Neues Projekt** von Visual Studio installieren. Wenn das Problem dadurch nicht behoben wird, hängt das Projekt möglicherweise von der C++/WinRT Visual Studio Extension (VSIX) ab (siehe [Visual Studio-Unterstützung für C++/WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix)).|
 | Die Tests des Zertifizierungskit für Windows-Apps erzeugen einen Fehler wie „*Eine Ihrer Laufzeitklassen ist nicht von einer Windows-Basisklasse abgeleitet ist. Alle zusammensetzbaren Klassen müssen letztlich von einem Typ im Windows-Namespace abgeleitet werden”*.|Beliebigen Laufzeitklasse (, die Sie in Ihrer Anwendung deklarieren), die von einer Basisklasse abgeleitet wird, wird als bezeichnet ein *zusammensetzbaren* Klasse. Die letztendliche Basisklasse einer zusammensetzbaren Klasse muss ein Typ sein, in einem Windows-Namespace sein. Beispiel: [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject). Finden Sie unter [XAML-Steuerelemente; binden an eine C++ / WinRT-Eigenschaft](binding-property.md) für Weitere Informationen.|
 | Der C++ Compiler erzeugt einen „*WinRT-Typ erforderlich*”-Fehler für eine EventHandler- oder TypedEventHandler-Delegat-Spezialisierung.|Verwenden Sie stattdessen **winrt::delegate&lt;...T&gt;**. Siehe [Erstellen von Ereignissen mit C++/WinRT](author-events.md).|
 | Der C++ Compiler erzeugt einen „*WinRT-Typ erforderlich*”-Fehler für einen asynchron Windows-Runtime-Vorgang-Spezialisierung.|Erwägen Sie stattdessen, einen PPL-[**Task**](https://msdn.microsoft.com/library/hh750113) (Parallel Patterns Library) zurückzugeben. Siehe [Parallelität und asynchrone Vorgänge](concurrency.md).|
