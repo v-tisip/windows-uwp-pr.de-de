@@ -6,16 +6,18 @@ ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
 ms.localizationpriority: medium
-ms.openlocfilehash: b33cf07ef10d0891f2747a06caf098b7d37b62f3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fb1ff6431b3ccf609b7362db819569c2f6cebc48
+ms.sourcegitcommit: 9448348d7bc6590849db3a41e988dff9470ec111
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938820"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "9031386"
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a>Entsperren von Windows mit Windows Hello-Begleitgeräten (IoT)
 
 Ein Windows Hello-Begleitgerät ist ein Gerät, das in Verbindung mit dem Windows10-Desktopgerät zur Verbesserung der Benutzerauthentifizierung verwendet werden kann. Mit dem Windows Hello-Begleitgeräteframework kann ein Begleitgerät umfangreiche Funktionen für Windows Hello bereitstellen, auch wenn Biometrie nicht verfügbar ist (beispielsweise, wenn das Windows10-Desktopgerät über keine Kamera für die Gesichtsauthentifizierung oder kein Fingerabdrucklesegerät verfügt).
+
+> **Hinweis:** Microsoft wird werden deprecating das Windows Hello-begleitgeräteframework in der Zukunft und veröffentlicht das Datum früh sicherzustellen, dass Kunden angemessenen Vorlaufzeit alternative Lösungen bereitstellen.
 
 > **Hinweis** Das Windows Hello-Begleitgeräteframework ist ein spezielles Feature und nicht für alle App-Entwickler verfügbar. Damit dieses Framework verwendet werden kann, muss Ihre App speziell von Microsoft bereitgestellt werden und die eingeschränkte Funktion *SecondaryAuthenticatorFactor* muss im Manifest angegeben sein. Um eine Genehmigung zu erhalten, wenden Sie sich an [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com).
 
