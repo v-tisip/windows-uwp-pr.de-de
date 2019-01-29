@@ -9,12 +9,12 @@ ms.date: 12/7/2018
 ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
-ms.openlocfilehash: b7b4452bb242bb7679d37036ccda5e27912a2505
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6e9e0f6305a99b6e3ab83cb3b560754f2e4d310f
+ms.sourcegitcommit: 1901a43b9e40a05c28c7799e0f9b08ce92f8c8a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944341"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "9035421"
 ---
 # <a name="globalization-and-localization"></a>Globalisierung und Lokalisierung
 
@@ -36,6 +36,10 @@ Ihr Code muss in allen Kulturen, für die Sie Ihre App vorgesehen haben, gleich 
 - Datums- und Zeitformatierung
 - Konventionen über Zahlen, Währung, Gewicht und Maße
 - Sortierregeln
+
+>[!NOTE]
+> Eine Liste der standardmäßigen Länder-/Regionscodes von Microsoft verwendet finden Sie in der [Liste der offiziellen Land/Region](https://globalready.azurewebsites.net/marketreadiness/OfficialCountryregion).
+
 
 **Lokalisierbarkeit** ist das Ergebnis des Prozess der Vorbereitung der Lokalisierung einer globalisierten App und/oder der Überprüfung, ob die App für die Lokalisierung bereit ist. Die korrekte Herstellung der Lokalisierbarkeit einer App bedeutet, dass der spätere Lokalisierungsprozess keine funktionalen Mängel in der App aufdeckt. Die wichtigste Eigenschaft einer lokalisierbaren App ist, dass ihr ausführbarer Code sauber von den lokalisierbaren Ressourcen der App getrennt ist.
 
@@ -65,4 +69,4 @@ Die meisten Lokalisierungsteams verwenden spezielle Tools, um den Prozess zu unt
 | [App für bidirektionalen Text entwerfen](design-for-bidi-text.md) | Entwerfen Sie Ihre App so, dass bidirektionale Textunterstützung (BiDi) bereitgestellt wird, sodass Sie Texte aus links und rechtsbündigen Schreibsystemen kombinieren können. |
 | [Verwenden des Multilingual App Toolkit 4.0](use-mat.md) | Das Multilingual App Toolkit (MAT) 4.0 integriert sich in Microsoft Visual Studio 2017, um Übersetzungsunterstützung, Übersetzungsdateiverwaltung und Editortools für UWP-Apps bereitzustellen. |
 | [Multilingual App Toolkit 4.0 – Fragen und Antworten sowie Problembehandlung](mat-faq-troubleshooting.md) | Dieses Thema enthält Antworten auf häufig gestellte Fragen und Probleme in Bezug auf das Multilingual App Toolkit (MAT) 4.0. |
-| [Vorbereiten Sie Ihrer Anwendung für die japanischen Era-Änderung](japanese-era-change.md) | Hier erfahren Sie, über die Mai 2019 japanischen Era-Änderung und wie Sie Ihre Anwendung vorbereiten. |
+| [Machen Sie Ihre Anwendung startklar für den Wechsel der japanischen Ära](japanese-era-change.md) | Informationen Sie zu den Wechsel der japanischen Ära Mai 2019 und wie Sie Ihre Anwendung vorbereiten. |

@@ -6,15 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 706432123d8a778af558d0c3e426ad4f5120bdba
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+dev_langs:
+- csharp
+- cppwinrt
+ms.openlocfilehash: 9cd5d9d275241ab107a3b1b06044ba0109d4bb3d
+ms.sourcegitcommit: 1901a43b9e40a05c28c7799e0f9b08ce92f8c8a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935254"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "9035391"
 ---
 # <a name="httpclient"></a>HttpClient
-
 
 **Wichtige APIs**
 
@@ -58,7 +60,7 @@ Der [**Windows.Web.Http.Headers**](https://msdn.microsoft.com/library/windows/ap
 
 ## <a name="send-a-simple-get-request-over-http"></a>Senden einer einfachen GET-Anforderung über HTTP
 
-Wie weiter oben in diesem Artikel beschrieben wurde, können UWP-Apps mit dem [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692)-Namespace GET-Anforderungen senden. Der folgende Codeausschnitt veranschaulicht, wie eine GET-Anforderung zu senden http://www.contoso.com mit der [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) -Klasse und die [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) -Klasse, um die Antwort der GET-Anforderung zu lesen.
+Wie weiter oben in diesem Artikel beschrieben wurde, können UWP-Apps mit dem [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692)-Namespace GET-Anforderungen senden. Der folgende Codeausschnitt veranschaulicht, wie eine GET-Anforderung zu senden http://www.contoso.com mit, dass die [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) -Klasse und die [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) -Klasse um die Antwort der GET-Anforderung zu lesen.
 
 ```csharp
 //Create an HTTP client object
@@ -100,6 +102,65 @@ catch (Exception ex)
 }
 ```
 
+```cppwinrt
+// pch.h
+#pragma once
+
+#include "winrt/Windows.Foundation.h"
+#include <winrt/Windows.Web.Http.Headers.h>
+
+// main.cpp : Defines the entry point for the console application.
+#include "pch.h"
+#include <iostream>
+
+using namespace winrt;
+using namespace Windows::Foundation;
+
+int main()
+{
+    init_apartment();
+
+    // Create an HttpClient object.
+    Windows::Web::Http::HttpClient httpClient;
+
+    // Add a user-agent header to the GET request.
+    auto headers{ httpClient.DefaultRequestHeaders() };
+
+    // The safe way to add a header value is to use the TryParseAdd method, and verify the return value is true.
+    // This is especially important if the header value is coming from user input.
+    std::wstring header{ L"ie" };
+    if (!headers.UserAgent().TryParseAdd(header))
+    {
+        throw L"Invalid header value: " + header;
+    }
+
+    header = L"Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)";
+    if (!headers.UserAgent().TryParseAdd(header))
+    {
+        throw L"Invalid header value: " + header;
+    }
+
+    Uri requestUri{ L"http://www.contoso.com" };
+
+    // Send the GET request asynchronously, and retrieve the response as a string.
+    Windows::Web::Http::HttpResponseMessage httpResponseMessage;
+    std::wstring httpResponseBody;
+
+    try
+    {
+        // Send the GET request.
+        httpResponseMessage = httpClient.GetAsync(requestUri).get();
+        httpResponseMessage.EnsureSuccessStatusCode();
+        httpResponseBody = httpResponseMessage.Content().ReadAsStringAsync().get();
+    }
+    catch (winrt::hresult_error const& ex)
+    {
+        httpResponseBody = ex.message();
+    }
+    std::wcout << httpResponseBody;
+}
+```
+
 ## <a name="exceptions-in-windowswebhttp"></a>Ausnahmen in „Windows.Web.Http“
 
 Eine Ausnahme wird ausgelöst, wenn eine ungültige Zeichenfolge für einen Uniform Resource Identifier (URI) an den Konstruktor für das [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998)-Objekt übergeben wird.
@@ -112,7 +173,7 @@ In C++ gibt es keine Methode zum Analysieren einer Zeichenfolge für einen URI. 
 
 [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) bietet keine Funktion, die die Behandlung von Ausnahmen erleichtert. Eine App, die [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) und andere Klassen in diesem Namespace verwendet, muss daher den **HRESULT**-Wert verwenden.
 
-In apps unter Verwendung der .NET Framework4.5 in C#-, VB.NET-, der [System.Exception](http://msdn.microsoft.com/library/system.exception.aspx) einen Fehler darstellt während der Ausführung der app beim Auftreten einer Ausnahme. Die [System.Exception.HResult](http://msdn.microsoft.com/library/system.exception.hresult.aspx)-Eigenschaft gibt den **HRESULT**-Wert zurück, der der jeweiligen Ausnahme zugewiesen ist. Die [System.Exception.Message](http://msdn.microsoft.com/library/system.exception.message.aspx)-Eigenschaft gibt die Meldung zurück, die die Ausnahme beschreibt. Mögliche **HRESULT**-Werte sind in der Headerdatei *Winerror.h* aufgeführt. Eine App kann nach bestimmten **HRESULT**-Werten filtern, um das App-Verhalten je nach Ausnahmeursache zu ändern.
+In apps unter Verwendung der .NET Framework4.5 in c#, VB.NET, der [System.Exception](http://msdn.microsoft.com/library/system.exception.aspx) einen Fehler darstellt während der Ausführung der app beim Auftreten einer Ausnahme. Die [System.Exception.HResult](http://msdn.microsoft.com/library/system.exception.hresult.aspx)-Eigenschaft gibt den **HRESULT**-Wert zurück, der der jeweiligen Ausnahme zugewiesen ist. Die [System.Exception.Message](http://msdn.microsoft.com/library/system.exception.message.aspx)-Eigenschaft gibt die Meldung zurück, die die Ausnahme beschreibt. Mögliche **HRESULT**-Werte sind in der Headerdatei *Winerror.h* aufgeführt. Eine App kann nach bestimmten **HRESULT**-Werten filtern, um das App-Verhalten je nach Ausnahmeursache zu ändern.
 
 In Apps mit verwaltetem C++ stellt das [Platform::Exception](http://msdn.microsoft.com/library/windows/apps/hh755825.aspx)-Objekt einen Fehler während der App-Ausführung dar, wenn eine Ausnahme auftritt. Die [Platform::Exception::HResult](http://msdn.microsoft.com/library/windows/apps/hh763371.aspx)-Eigenschaft gibt den **HRESULT**-Wert zurück, der der jeweiligen Ausnahme zugewiesen ist. Die [Platform::Exception::Message](http://msdn.microsoft.com/library/windows/apps/hh763375.aspx)-Eigenschaft gibt die vom System bereitgestellte Zeichenfolge zurück, die dem **HRESULT**-Wert zugeordnet ist. Mögliche **HRESULT**-Werte sind in der Headerdatei *Winerror.h* aufgeführt. Eine App kann nach bestimmten **HRESULT**-Werten filtern, um das App-Verhalten je nach Ausnahmeursache zu ändern.
 
