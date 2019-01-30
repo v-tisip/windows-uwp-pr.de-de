@@ -12,16 +12,16 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 520f4bdd72c51cd1508c9e655107ae909f6e4243
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3f3fd2173296c433015fa30b81c0d90e32d2d4b0
+ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940268"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "9036942"
 ---
 ## <a name="dialog-controls"></a>Dialogfeld-Steuerelemente
 
-Dialogfelder sind modale benutzeroberflächenüberlagerungen, die kontextbezogene app-Informationen enthalten. Blockieren sie Interaktionen mit dem app-Fenster, bis Sie explizit geschlossen werden. Sie verlangen häufig eine Aktion vom Benutzer.
+Dialogfelder sind modale benutzeroberflächenüberlagerungen, die kontextbezogene app-Informationen enthalten. Sie blockieren Interaktionen mit dem app-Fenster, bis Sie explizit geschlossen werden. Sie verlangen häufig eine Aktion vom Benutzer.
 
 ![Beispiel für ein Dialogfeld](../images/dialogs/dialog_RS2_delete_file.png)
 
@@ -32,7 +32,7 @@ Dialogfelder sind modale benutzeroberflächenüberlagerungen, die kontextbezogen
 
 Verwenden Sie Dialogfelder und Flyouts, um Benutzern wichtige Informationen mitzuteilen oder deren Bestätigung bzw. zusätzliche Informationen anzufordern, bevor eine Aktion abgeschlossen werden kann.
 
-Empfehlungen zur Verwendung von einem Dialogfeld im Vergleich zu, wenn ein Flyout (ähnlich wie Steuerelement) verwenden, finden Sie unter [Dialogfelder und Flyouts](index.md). 
+Empfehlungen dazu, wann Sie ein Dialogfeld verwendet werden und wann ein Flyout (ein ähnliches Steuerelement), finden Sie unter [Dialogfelder und Flyouts](index.md). 
 
 ## <a name="examples"></a>Beispiele
 
@@ -44,7 +44,7 @@ Empfehlungen zur Verwendung von einem Dialogfeld im Vergleich zu, wenn ein Flyou
     <p>Wenn Sie die App <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> installiert haben, klicken Sie hier, um die App zu öffnen und <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> oder <a href="xamlcontrolsgallery:/item/Flyout">Flyout</a> in Aktion zu sehen.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Erwerben Sie die XAML-Steuerelementekatalog-App (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Erwerben Sie den Quellcode (GitHub)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Erwerben Sie den Quellcode (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -118,7 +118,7 @@ private async void DisplayDeleteFileDialog()
 }
 ```
 
-## <a name="provide-a-safe-action"></a>Geben Sie eine sichere Aktion
+## <a name="provide-a-safe-action"></a>Bieten Sie eine sichere Aktion
 Da Dialogfelder Benutzerinteraktion blockieren, und Schaltflächen für die Benutzer das primäre Mittel sind, ein Dialogfeld zu schließen, sollten Sie sicherstellen, dass Ihr Dialogfeld mindestens eine „sichere“, nicht-destruktive Schaltfläche wie z.B. „Schließen“ oder „Alles klar!“ enthält. **Alle Dialogfelder sollten mindestens eine sichere Aktionsschaltfläche enthalten, um das Dialogfeld zu schließen.** Dadurch wird sichergestellt, dass der Benutzer das Dialogfeld zuverlässig schließen kann, ohne eine Aktion auszuführen.<br>![Dialogfeld mit einer Schaltfläche](../images/dialogs/dialog_RS2_one_button.png)
 
 ```csharp
@@ -256,7 +256,7 @@ Ein typisches Bestätigungsdialogfeld verfügt über zwei Schaltflächen: eine S
 
 ## <a name="get-the-sample-code"></a>Beispielcode herunterladen
 
-- [Beispiel eines XAML-Steuerelementkatalogs](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) – Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.
+- [Beispiel eines XAML-Steuerelementkatalogs](https://github.com/Microsoft/Xaml-Controls-Gallery) – Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.
 
 ## <a name="related-articles"></a>Verwandte Artikel
 - [QuickInfos](../tooltips.md)

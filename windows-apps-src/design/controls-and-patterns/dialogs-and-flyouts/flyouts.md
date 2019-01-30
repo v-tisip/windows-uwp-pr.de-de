@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ce3222ed13cf82a9f235a592b5830ab96384664
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 52de0933bf51adaae6b0923868e12eb92ced4a1a
+ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926920"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "9037132"
 ---
 # <a name="flyouts"></a>Flyouts
 
@@ -30,7 +30,7 @@ Ein Flyout ist ein einfach ausblendbarer Container, der beliebige UI als Inhalt 
 
 * Verwenden Sie Flyouts nicht anstelle von [QuickInfos](../tooltips.md) oder [Kontextmenüs](../menus.md). Verwenden Sie QuickInfos, um kurze Beschreibungen anzuzeigen, die nach einer festgelegten Zeit ausgeblendet werden. Verwenden Sie ein Kontextmenü für kontextbezogene Aktionen im Zusammenhang mit UI-Elementen (beispielsweise Kopieren und Einfügen).
 
-Empfehlungen dazu, wann Sie ein Flyout verwendet werden und wann ein Dialogfeld (ähnlich wie Steuerelement), finden Sie unter [Dialogfelder und Flyouts](index.md). 
+Empfehlungen dazu, wann Sie ein Flyout verwendet werden und wann ein Dialogfeld (ein ähnliches Steuerelement), finden Sie unter [Dialogfelder und Flyouts](index.md). 
 
 ## <a name="examples"></a>Beispiele
 
@@ -42,7 +42,7 @@ Empfehlungen dazu, wann Sie ein Flyout verwendet werden und wann ein Dialogfeld 
     <p>Wenn Sie die App <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> installiert haben, klicken Sie hier, um die App zu öffnen und <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> oder <a href="xamlcontrolsgallery:/item/Flyout">Flyout</a> in Aktion zu sehen.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Erwerben Sie die XAML-Steuerelementekatalog-App (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Erwerben Sie den Quellcode (GitHub)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Erwerben Sie den Quellcode (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -145,7 +145,7 @@ Um ein Flyout zu formatieren, ändern Sie den [FlyoutPresenterStyle](https://doc
 </Flyout>
 ````
 
-## <a name="styling-flyouts-for-10-foot-experiences"></a>Formatieren von Flyouts für 10-Fuß-Umgebungen
+## <a name="styling-flyouts-for-10-foot-experiences"></a>Formatieren von Flyouts für 10 Fuß-Umgebungen
 
 Einfach ausblendbare Steuerelemente wie Flyouts erhalten den Tastatur- bzw. Gamepad-Fokus, bis sie nicht mehr angezeigt werden. Um dieses Verhalten optisch zu kennzeichnen, werden diese einfach ausblendbaren Steuerelemente auf der Xbox als Überlagerung gezeichnet, wobei der Kontrast und die Helligkeit bzw. Sichtbarkeit der umgebenden Benutzeroberfläche reduziert wird. Dieses Verhalten kann mit der Eigenschaft [`LightDismissOverlayMode`](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase.LightDismissOverlayMode) geändert werden. Standardmäßig erhalten Flyouts auf der Xbox (jedoch nicht auf anderen Gerätefamilien) die einfach ausblendbare Überlagerung. Apps können jedoch durchsetzen, dass die Überlagerung stets **An** oder stets **Aus** ist.
 
@@ -210,7 +210,7 @@ private void Folder2_Click(object sender, RoutedEventArgs e)
 
 ## <a name="get-the-sample-code"></a>Beispielcode herunterladen
 
-- [Beispiel eines XAML-Steuerelementkatalogs](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) – Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.
+- [Beispiel eines XAML-Steuerelementkatalogs](https://github.com/Microsoft/Xaml-Controls-Gallery) – Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.
 
 ## <a name="related-articles"></a>Verwandte Artikel
 - [QuickInfos](../tooltips.md)

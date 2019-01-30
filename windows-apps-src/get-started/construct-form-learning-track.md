@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Erste Schritte, UWP, Windows10, Lernpfad, Layout, Formular
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0cb42552139fd706dd9e87d61c24f8fe2c2d51f7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1c316ac97211e85b782bdbf8f5642889a7726a95
+ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941377"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "9037052"
 ---
 # <a name="create-and-customize-a-form"></a>Erstellen und Anpassen eines Formulars
 
@@ -133,7 +133,7 @@ Wenn Sie komplexere Layouts mit mehr visuellen Elementen erstellen, finden Sie w
 
 ## <a name="going-further"></a>Vertiefung
 
-Auch wenn Sie hier ein Formular erstellt haben, gelten die Konzepte von Layouts und Steuerelementen für alle XAML-Benutzeroberflächen, die Sie möglicherweise erstellen. Passen Sie die Dokumente durcharbeiten, wir haben Sie verknüpft und mit dem Formular, die Sie über neue Benutzeroberflächenfeatures hinzufügen und die benutzererfahrung weiter optimieren, das experimentieren. Wenn Sie die schrittweise Anleitung zu detaillierteren Layoutfeatures möchten, finden Sie unsere [Lernprogramm zu adaptiven Layouts](../design/basics/xaml-basics-adaptive-layout.md)
+Auch wenn Sie hier ein Formular erstellt haben, gelten die Konzepte von Layouts und Steuerelementen für alle XAML-Benutzeroberflächen, die Sie möglicherweise erstellen. Passen Sie die Dokumente durcharbeiten, wir haben Sie verknüpft und mit dem Formular haben Sie neue Benutzeroberflächenfeatures hinzufügen und die Benutzeroberfläche eingrenzen, das zu experimentieren. Wenn Sie die schrittweise Anleitung zu detaillierteren Layoutfeatures möchten, finden Sie unsere [Lernprogramm zu adaptiven Layouts](../design/basics/xaml-basics-adaptive-layout.md)
 
 Formulare existieren außerdem nicht in einem Vakuum – Sie können einen Schritt weiter gehen und Ihres in ein [Master-/Detailmuster](../design/controls-and-patterns/master-details.md) oder [Pivot-Steuerelement](../design/controls-and-patterns/tabs-pivot.md) einbetten. Oder wenn Sie an dem CodeBehind für Ihr Formular arbeiten möchten, finden Sie die ersten Schritte in unserer [Übersicht über Ereignisse](../xaml-platform/events-and-routed-events-overview.md).
 
@@ -172,5 +172,5 @@ Nachfolgend finden Sie eine kurze Zusammenfassung zu den APIs und weiterer nütz
 |-----------------|---------------|
 | [Lernprogramm zu adaptiven Layouts](../design/basics/xaml-basics-adaptive-layout.md) | Eine schrittweise geführte Anleitung zu adaptiven Layouts und zum dynamischen Design | 
 | [Datenbank für Kundenaufträge](https://github.com/Microsoft/Windows-appsample-customers-orders-database) | Layout und Formulare in Aktion in einem mehrseitigen Unternehmensbeispiel |
-| [XAML-Steuerelementekatalog](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) | Eine Auswahl von XAML-Steuerelementen und Informationen zu deren Implementierung |
+| [XAML-Steuerelementekatalog](https://github.com/Microsoft/Xaml-Controls-Gallery) | Eine Auswahl von XAML-Steuerelementen und Informationen zu deren Implementierung |
 | [Weitere Codebeispiele](https://developer.microsoft.com//windows/samples) | Wählen Sie **Steuerelemente, Layout und Text** in der Dropdownliste „Kategorie“ aus, um verwandte Codebeispiele anzuzeigen. |

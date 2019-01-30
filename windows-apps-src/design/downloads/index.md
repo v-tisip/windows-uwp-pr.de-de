@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 7089f4b6e28056f44a6ad5d37aa90f6cf84784df
-ms.sourcegitcommit: 05335f65dfe497ef4027b7249c0119fc59e355e2
+ms.openlocfilehash: 09fa50319defd90479ca93e4ba1b920948fbb9d3
+ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "8964673"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "9036922"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Design-Toolkits und Beispiele für UWP-Apps
  
@@ -40,7 +40,7 @@ Diese Toolkits bieten Steuerelemente und Layout-Vorlagen für das Design von UWP
     :::column:::
         ![hero image](images/adobe-xd.png)
         <b>Adobe XD toolkit</b><br>
-        v1806, June 2018<br>
+        v1901, January 2019<br>
         <a href="https://aka.ms/adobexdtoolkit">Download</a>
     :::column-end:::
 :::row-end:::
@@ -98,26 +98,26 @@ Diese Toolkits bieten Steuerelemente und Layout-Vorlagen für das Design von UWP
         <a href="http://go.microsoft.com/fwlink/p/?LinkId=760394"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator"/></a>
     :::column-end:::
     :::column span="2":::
-      **Kachel- und Symbolgenerator für Adobe Photoshop** Dieser Satz von Aktionen für Adobe Photoshop werden die 68 empfohlenen Kacheln und Symbole aus nur 7-Dateien. <br/><a href="http://go.microsoft.com/fwlink/p/?LinkId=760394">Kachel- und Symbolgenerator herunterladen</a></p>
+      **Kachel- und Symbolgenerator für Adobe Photoshop** Dieser Satz von Aktionen für Adobe Photoshop werden die 68 empfohlenen Kacheln und Symbole aus nur 7 Dateien. <br/><a href="http://go.microsoft.com/fwlink/p/?LinkId=760394">Kachel- und Symbolgenerator herunterladen</a></p>
     :::column-end:::
 :::row-end:::
 
     
 ## <a name="samples"></a>Beispiele
 
-![Fluent Design-Editor XAML-Image](images/XamlThemeEditor_screenshot.png)
+![Fluent Design-Editor XAML-Bild](images/XamlThemeEditor_screenshot.png)
 **Fluent XAML-Design-Editor**<br>
-Fluent Design XAML-Editor ist ein Tool, mit dem veranschaulichen der Flexibilität der Fluent Design-Systems sowie app-Entwicklungsprozess Generieren von XAML-Markup für unsere ResourceDictionary-Framework verwendet, in die universelle Windows-Plattform-Apps unterstützt (Bei UWPs).
+Fluent Design XAML-Editor ist ein Tool zur Veranschaulichung der Flexibilität der Fluent Design-Systems sowie app-Entwicklungsprozess durch Generieren von XAML-Markup für unsere ResourceDictionary-Framework verwendet in universelle Windows-Plattform-Apps unterstützt (Bei UWPs).
 <a href="https://github.com/Microsoft/fluent-xaml-theme-editor/archive/master.zip">Laden Sie das Tool-Beispiel</a> <br><a href="https://github.com/Microsoft/fluent-xaml-theme-editor">Sehen Sie sich das Tool auf GitHub</a>
 
-![Bild VanArsdel](images/VanArsdel_Screenshot.png)
+![VanArsdel Bild](images/VanArsdel_Screenshot.png)
 **VanArsdel**<br>
-Die Van Arsdel, Ltd. End-to-End-UWP-Beispiel-app wurde basiert auf der nächsten Generation Microsoft Fluent Design-Systems. Es wird ausgiebig Gebrauch von der verbesserten Dichte und neue Steuerelemente, in der <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Windows-UI-Bibliothek</a> sowie die leistungsstarke zugrunde liegenden Features der Ux-Framework und Komposition. Das Beispiel zeigt, wie Sie eine umfassende und produktive Erfahrung für die Verwaltung und den Erwerb IoT-Geräte (in diesem Fall Leuchten) erstellen können.<br>
+Die Van Arsdel, Ltd. End-to-End-UWP-Beispiel-app wurde basiert auf der nächsten Generation Microsoft Fluent Design-Systems. Es nutzt die verbesserte Dichte und neue Steuerelemente in der <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Windows-UI-Bibliothek</a> sowie die leistungsstarke zugrunde liegenden Features der Ux-Framework und Komposition. Das Beispiel zeigt, wie Sie eine umfassende und produktive Erfahrung für die Verwaltung und den Kauf IoT-Geräte (in diesem Fall Leuchten) erstellen können.<br>
 <a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">Laden Sie das VanArsdel-Beispiel</a> <br><a href="https://github.com/microsoft/vanarsdel">Sehen Sie sich das VanArsdel-Beispiel auf GitHub</a>
 
 ![Wandeln Image Erstellen](images/buildcast.png)
 **BuildCast**<br>
-BuildCast ist ein End-to-End-Beispiel und basiert auf dem Fluent Design-Systems und UWP. Die App ermöglicht, Video-Podcasts wie Channel 9 und andere beliebte Feeds für Windows-Fans zu durchsuchen. Videos können ausgewählt, heruntergeladen und wiedergegeben werden. Es bietet außerdem Ink-Notizen, Lesezeichen und die Remote-Wiedergabe. Dieses Beispiel wurde anfänglich auf der Build-Konferenz 2017 während der Präsentation <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Erstellen beeindruckender Apps mit Fluent Design</a> vorgestellt. <br>
+BuildCast ist ein End-to-End-Beispiel und basiert auf der Fluent Design-Systems und UWP. Die App ermöglicht, Video-Podcasts wie Channel 9 und andere beliebte Feeds für Windows-Fans zu durchsuchen. Videos können ausgewählt, heruntergeladen und wiedergegeben werden. Es bietet außerdem Ink-Notizen, Lesezeichen und die Remote-Wiedergabe. Dieses Beispiel wurde anfänglich auf der Build-Konferenz 2017 während der Präsentation <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Erstellen beeindruckender Apps mit Fluent Design</a> vorgestellt. <br>
 <a href="https://github.com/Microsoft/BuildCast/archive/master.zip">Beispiel-App BuildCast herunterladen</a> <br><a href="https://github.com/Microsoft/BuildCast">Beispiel-App BuildCast auf GitHub anzeigen</a>
 
 ![Mittagessen Scheduler](images/lunchscheduler.png)
@@ -126,7 +126,7 @@ Ein UWP-Beispiel für die Planung von Mittagessen mit Freunden und Kollegen. Sie
 
 ![XAML-Steuerelementekatalog](images/xaml-controls-gallery.png)
 **XAML-Steuerelementekatalog**<br>
-Dieses Beispiel enthält eine interaktive Demo für alle XAML-Steuerelemente. Es zeigt eine Vielzahl von Layouts von einfachen bis adaptiven Layouts und Markups an, die Sie in Ihr Projekt kopieren können. Hinweis: In der Download-Datei und dem GitHub-Repository wird diese Beispiel-App als "UI-Grundlagen (XAML)" bezeichnet. <br/><a href="https://github.com/Microsoft/Windows-universal-samples/archive/master.zip">Beispiel für XAML-Steuerelementekatalog herunterladen</a><br/><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Beispiel eines XAML-Steuerelementkatalogs auf GitHub anzeigen</a> <br/><a href="https://www.microsoft.com/store/apps/9msvh128x2zt">Die XAML-Steuerelementkatalog-App aus dem Store herunterladen</a></p>
+Dieses Beispiel enthält eine interaktive Demo für alle XAML-Steuerelemente. Es zeigt eine Vielzahl von Layouts von einfachen bis adaptiven Layouts und Markups an, die Sie in Ihr Projekt kopieren können. Hinweis: In der Download-Datei und dem GitHub-Repository wird diese Beispiel-App als "UI-Grundlagen (XAML)" bezeichnet. <br/><a href="https://github.com/Microsoft/Windows-universal-samples/archive/master.zip">Beispiel für XAML-Steuerelementekatalog herunterladen</a><br/><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Beispiel eines XAML-Steuerelementkatalogs auf GitHub anzeigen</a> <br/><a href="https://www.microsoft.com/store/apps/9msvh128x2zt">Die XAML-Steuerelementkatalog-App aus dem Store herunterladen</a></p>
 
 ## <a name="want-more-code"></a>Sie möchten mehr Code?
 

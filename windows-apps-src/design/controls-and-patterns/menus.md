@@ -13,22 +13,22 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3f585af5cff4b135760bf14b902b2783715392ed
-ms.sourcegitcommit: 404ec20d276adfd9e47f88a94efd4b9cf0725656
+ms.openlocfilehash: 93aee51ae558009827f755f759c4bb587564d1cd
+ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "8995434"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "9036882"
 ---
 # <a name="menus-and-context-menus"></a>Menüs und Kontextmenüs
 
-Menüs und Kontextmenüs zeigen auf Anforderung des Benutzers eine Liste von Befehlen oder Optionen an. Verwenden Sie ein Flyout "Menü", um ein einziges, Inline-Menü anzuzeigen. Verwenden Sie eine Menüleiste, um eine Reihe von Menüs in einer horizontalen Zeile in der Regel am oberen Rand eines app-Fensters anzuzeigen. Jedes Menü kann Menüelemente und Untermenüs haben.
+Menüs und Kontextmenüs zeigen auf Anforderung des Benutzers eine Liste von Befehlen oder Optionen an. Verwenden Sie ein Flyout "Menü", um ein einziges, Inline-Menü anzuzeigen. Verwenden Sie eine Menüleiste, um eine Reihe von Menüs in einer horizontalen Zeile in der Regel am oberen Rand eines app-Fensters anzuzeigen. Jedes Menü kann es sich um Menüelemente und Untermenüs aufweisen.
 
 ![Beispiel für ein typisches Kontextmenü](images/contextmenu_rs2_icons.png)
 
 | **Abrufen der Windows-UI-Bibliothek** |
 | - |
-| Dieses Steuerelement ist Bestandteil der Windows-UI-Bibliothek, NuGet-Paket, das neue Steuerelemente und UI-Features für UWP-apps enthält. Weitere Informationen einschließlich Anweisungen, finden Sie in der [Übersicht über die Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/). |
+| Dieses Steuerelement ist Bestandteil der Windows-UI-Bibliothek, NuGet-Paket, das neue Steuerelemente und UI-Features für UWP-apps enthält. Weitere Informationen, einschließlich installationsanweisungen finden Sie die [Übersicht über die Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
 | **Plattform-APIs** | **Windows-UI-Bibliothek APIs** |
 | - | - |
@@ -38,17 +38,17 @@ Menüs und Kontextmenüs zeigen auf Anforderung des Benutzers eine Liste von Bef
 
 Menüs und Kontextmenüs sparen Platz, indem Befehle angeordnet und ausgeblendet werden, bis der Benutzer sie benötigt. Wenn ein bestimmter Befehl häufig verwendet wird und Sie genügend Platz haben, sollten Sie ihn direkt als eigenes Element und nicht in einem Menü platzieren, damit Benutzer das Menü nicht durchlaufen müssen, um ihn aufzurufen.
 
-Menüs und Kontextmenüs sind für das Organisieren von Befehlen. Verwenden Sie ein [Dialogfeld oder Flyout](dialogs.md), um beliebige Inhalte, z. B. eine Benachrichtigung oder die Bestätigung Anforderung anzuzeigen.
+Menüs und Kontextmenüs sind für das Organisieren von Befehlen. Verwenden Sie ein [Dialogfeld oder Flyout](dialogs.md), um beliebige Inhalte, z. B. eine Benachrichtigung oder eine Bestätigung Anforderung anzuzeigen.
 
 ### <a name="menubar-vs-menuflyout"></a>Menüleiste im Vergleich zu MenuFlyout
 
-Um ein Menü in einem Flyout auf ein UI-Element auf der Canvas angefügte anzuzeigen, verwenden Sie das MenuFlyout-Steuerelement zum Hosten Ihrer Menüelemente. Sie können ein Menü-Flyout als reguläre Menü oder als Kontextmenü aufrufen. Ein Menü-Flyout hostet ein einziges auf oberster Ebene Menü (und optional Untermenüs).
+Um ein Menü in einem Flyout auf ein UI-Element auf der Canvas angefügte anzuzeigen, verwenden Sie das MenuFlyout-Steuerelement, um Ihre Menüelemente zu hosten. Sie können ein Flyout "Menü" entweder als reguläre Menü oder als ein Kontextmenü aufrufen. Ein Flyout "Menü" hostet ein einziges auf oberster Ebene Menü (und optional Untermenüs).
 
 Um eine Reihe von mehreren Menüs der obersten Ebene in einer horizontalen Zeile anzuzeigen, verwenden Sie eine Menüleiste. Sie positionieren in der Regel die Menüleiste am oberen Rand des app-Fensters.
 
 ### <a name="menubar-vs-commandbar"></a>Menüleiste im Vergleich zu CommandBar
 
-Menüleiste und CommandBar darstellen beide Oberflächen, die Sie verwenden können, um Befehle für Ihre Benutzer verfügbar zu machen. Der Menüleiste bietet eine schnelle und einfache Möglichkeit, eine Reihe von Befehlen für apps verfügbar zu machen, die u. u. weitere Organisation oder Gruppierung als eine CommandBar zulässt.
+Menüleiste und CommandBar darstellen beide Oberflächen, die Sie verwenden können, um Befehle für Ihre Benutzer verfügbar zu machen. Der Menüleiste bietet eine schnelle und einfache Möglichkeit, ein Satzes von Befehlen für apps verfügbar zu machen, die möglicherweise weitere Organisation oder Gruppierung als eine CommandBar zulässt.
 
 Sie können auch eine Menüleiste in Verbindung mit einer CommandBar verwenden. Verwenden Sie die Menüleiste, um den Großteil der Befehle und CommandBar markieren die am häufigsten verwendeten Befehle bereitzustellen.
 
@@ -62,7 +62,7 @@ Sie können auch eine Menüleiste in Verbindung mit einer CommandBar verwenden. 
     <p>Wenn Sie die App <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> installiert haben, klicken Sie hier, um <a href="xamlcontrolsgallery:/item/MenuFlyout">die App zu öffnen und MenuFlyout in Aktion zu sehen</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Erwerben Sie die XAML-Steuerelementekatalog-App (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Erwerben Sie den Quellcode (GitHub)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Erwerben Sie den Quellcode (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -70,14 +70,14 @@ Sie können auch eine Menüleiste in Verbindung mit einer CommandBar verwenden. 
 
 ## <a name="menus-vs-context-menus"></a>Vergleich zwischen Menüs und Kontextmenüs
 
-Menüs und Kontextmenüs sind ähnlich Erscheinungsbild und was sie enthalten können. In der Tat können Sie das gleiche Steuerelement, [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030), erstellt werden. Der Unterschied ist, wie Sie den Benutzer darauf zugreifen können.
+Menüs und Kontextmenüs sind ähnlich Erscheinungsbild und was sie enthalten können. In der Tat können Sie das gleiche Steuerelement, [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030), zu deren Erstellung verwenden. Der Unterschied ist, wie Sie den Benutzer darauf zugreifen können.
 
 Wann sollten Sie ein Menü und wann ein Kontextmenü verwenden?
 
 - Ist das übergeordnete Element eine Schaltfläche oder ein anderes Befehlselement, dessen primäre Funktion es ist, weitere Befehle zu präsentieren, verwenden Sie ein Menü.
 - Wenn das übergeordnete Element eine andere Art von Element ist, das hauptsächlich einem anderen Zweck dient (z. B. der Anzeige von Text oder einem Bild), verwenden Sie ein Kontextmenü.
 
-Verwenden Sie beispielsweise ein Menü auf eine Schaltfläche, um bereitzustellen, Filtern und sortieren die Optionen für eine Liste. Der Hauptzweck des Schaltflächen-Steuerelements ist in diesem Szenario, auf ein Menü zuzugreifen.
+Verwenden Sie z. B. ein Menü auf einer Schaltfläche, um bereitzustellen, Filtern und sortieren die Optionen für eine Liste. Der Hauptzweck des Schaltflächen-Steuerelements ist in diesem Szenario, auf ein Menü zuzugreifen.
 
 ![Beispiel des Menüs in Mail](images/Mail_Menu.png)
 
@@ -90,7 +90,7 @@ Wenn Sie Befehle (z. B. Ausschneiden, Kopieren und Einfügen) hinzufügen möcht
 - Haben Sie einen einzigen Einstiegspunkt (am oberen Bildschirmrand, z. B. über ein Menü „Datei“), der immer angezeigt wird
 - Werden in der Regel an eine Schaltfläche oder ein übergeordnetes Menüelement angehängt
 - Werden mit der linken Maustaste (oder einer entsprechenden Aktion, z. B. durch Tippen) aufgerufen
-- Ein Element über die [Flyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx) oder [FlyoutBase.AttachedFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx) -Eigenschaften zugeordnet, oder in einer Menüleiste am oberen Rand des app-Fensters gruppiert.
+- Ein Element über seine [Flyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx) oder [FlyoutBase.AttachedFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx) -Eigenschaften zugeordnet, oder in einer Menüleiste am oberen Rand des app-Fensters gruppiert.
 
 ### <a name="context-menus"></a>Kontextmenüs
 
@@ -128,7 +128,7 @@ Fühlen Sie sich nicht dazu verpflichtet, Befehle mit einem Symbol zu versehen, 
 > [!TIP]
 > Die Größe des Symbols in einem MenuFlyoutItem ist 16x16px. Wenn Sie SymbolIcon, FontIcon oder PathIcon verwenden, wird das Symbol automatisch auf die richtige Größe mit verlustfrei skaliert. Achten Sie bei der Verwendung von BitmapIcon darauf, dass Ihr Element 16x16px groß sein muss.  
 
-## <a name="create-a-menu-flyout-or-a-context-menu"></a>Erstellen Sie ein Menü-Flyout oder ein Kontextmenü
+## <a name="create-a-menu-flyout-or-a-context-menu"></a>Erstellen Sie ein Flyout "Menü" oder ein Kontextmenü
 
 Um ein Menü-Flyout oder ein Kontextmenü erstellen, verwenden Sie die [MenuFlyout-Klasse](https://msdn.microsoft.com/library/windows/apps/dn299030). Sie definieren den Inhalt des Menüs, indem Sie dem MenuFlyout die Objekte [MenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutitem.aspx), [ToggleMenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.togglemenuflyoutitem.aspx) und [MenuFlyoutSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutseparator.aspx) hinzufügen.
 
@@ -219,12 +219,12 @@ Einfach ausgeblendete Steuerelemente wie Menüs, Kontextmenüs und andere Flyout
 > [!IMPORTANT]
 > Menüleiste erfordert Windows 10, Version 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) oder höher, oder in der [Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-Sie verwenden die gleichen Elementen Menüs in der Menüleiste in einem Menü-Flyout zu erstellen. Allerdings gruppieren anstelle von Gruppierung von MenuFlyoutItem-Objekten in einer MenuFlyout, Sie können in einem MenuBarItem-Element. Jeder MenuBarItem wird als ein Menü der obersten Ebene der Menüleiste hinzugefügt.
+Sie verwenden die gleichen Elementen Menüs in einer Menüleiste wie in einem Flyout "Menü" zu erstellen. Allerdings gruppieren anstelle von Gruppierung von MenuFlyoutItem-Objekten in einer MenuFlyout, Sie können in einem MenuBarItem-Element. Jeder MenuBarItem wird als ein Menü der obersten Ebene der Menüleiste hinzugefügt.
 
 ![Beispiel für eine Menüleiste](images/menu-bar-submenu.png)
 
 > [!NOTE]
-> In diesem Beispiel wird veranschaulicht, wie nur die UI-Struktur erstellt, aber Implementierung einen Befehl wird nicht angezeigt.
+> In diesem Beispiel wird veranschaulicht, wie nur die UI-Struktur erstellt, aber Implementierung einer der Befehle wird nicht angezeigt.
 
 ```xaml
 <MenuBar>
@@ -255,7 +255,7 @@ Sie verwenden die gleichen Elementen Menüs in der Menüleiste in einem Menü-Fl
 
 ## <a name="get-the-sample-code"></a>Beispielcode herunterladen
 
-- [Beispiel eines XAML-Steuerelementekatalogs](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) – Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.
+- [Beispiel eines XAML-Steuerelementekatalogs](https://github.com/Microsoft/Xaml-Controls-Gallery) – Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.
 - [Beispiel für XAML-Kontextmenü](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlContextMenu)
 
 ## <a name="related-articles"></a>Verwandte Artikel

@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e38803c8cbe8b9bdee9a9365127d5f7e7866f7d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a0a267385668a276fc776c5f5d495b27ae72a2b3
+ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920084"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "9037302"
 ---
 # <a name="controls-by-function"></a>Steuerelemente nach Funktion
 
@@ -29,7 +29,7 @@ Laden Sie das [Beispiel für XAML-UI-Grundlagen](https://go.microsoft.com/fwlink
     <p>Wenn Sie die <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> -app installiert haben, klicken Sie hier, um <a href="xamlcontrolsgallery:/item/NavigationView">die app zu öffnen und finden Sie unter der NavigationView in Aktion zu sehen</a> </p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Erwerben Sie die XAML-Steuerelementekatalog-App (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Erwerben Sie den Quellcode (GitHub)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Erwerben Sie den Quellcode (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -551,11 +551,11 @@ Siehe „Medienelement“.
 
 ### <a name="navigationview"></a>NavigationView
 
-Eine anpassungsfähige Container und flexible Navigationsmodell, der im linken Navigationsbereich, oberen Navigationsleiste und registerkartenmuster implementiert.
+Eine anpassungsfähige Container und flexible Navigationsmodell, der linken Navigationsbereich angezeigt, oberen Navigationsleiste und registerkartenmuster implementiert.
 
 Referenz: [NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 
-Design und Vorgehensweise: [Handbuch für NavigationView-Steuerelement](navigationview.md)
+Design und Vorgehensweise: [Feldsteuerelement NavigationView](navigationview.md)
 
 ### <a name="splitview"></a>SplitView
 

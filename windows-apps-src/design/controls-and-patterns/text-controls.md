@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 467be141d2c198bc95c93771ffa9cf2ad8fd6c0d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0812e4655b8d817f4318f6bd87f7578ee09d635e
+ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943128"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "9037192"
 ---
 # <a name="text-controls"></a>Textsteuerelemente
 
@@ -80,7 +80,7 @@ Es bestehen zahlreiche Möglichkeiten, Benutzereingaben in Ihrer App zu erhalten
     <p>Wenn Sie die App <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> installiert haben, klicken Sie hier, um <a href="xamlcontrolsgallery:/category/Text">die App zu öffnen und Textsteuerelemente in Aktion zu sehen</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Erwerben Sie die XAML-Steuerelementekatalog-App (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Erwerben Sie den Quellcode (GitHub)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Erwerben Sie den Quellcode (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -123,7 +123,7 @@ Ab Windows10, Version 1803, verfügen XAML-Texteingabefelder über eine integrie
 
 ![Textfeld wird erweitert, wenn mit einem Stift darauf getippt wird](images/handwritingview/handwritingview2.gif)
 
-Weitere Informationen finden Sie in der [Texteingabe mit der Handschrift-Ansicht](text-handwriting-view.md).
+Weitere Informationen finden Sie unter [Texteingabe mit der handschriftansicht](text-handwriting-view.md).
 
 ## <a name="choose-the-right-keyboard-for-your-text-control"></a>Auswählen der richtigen Tastatur für Ihr Textsteuerelement
 

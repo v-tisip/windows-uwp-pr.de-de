@@ -9,12 +9,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e8ed0c28199e49e9c4be69785a7af5985afae6a2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: afda713e4a3d0ae30a4ee1ad9e9308d835062108
+ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944538"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "9037362"
 ---
 # <a name="media-player"></a>Media Player
 
@@ -44,7 +44,7 @@ Verwenden Sie einen Mediaplayer, wenn Sie Audio- oder Videodateien in Ihrer App 
     <p>Wenn Sie die App <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> installiert haben, klicken Sie hier, um die App zu öffnen und <a href="xamlcontrolsgallery:/item/MediaPlayerElement">MediaPlayerElement</a> oder <a href="xamlcontrolsgallery:/item/MediaPlayer">MediaPlayer</a> in Aktion zu sehen.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Erwerben Sie die XAML-Steuerelementekatalog-App (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Erwerben Sie den Quellcode (GitHub)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Erwerben Sie den Quellcode (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -97,7 +97,7 @@ Das [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/windows
 ### <a name="set-the-media-source"></a>Festlegen der Medienquelle
 Um Dateien im Netzwerk oder in die App eingebettete Dateien wiederzugeben, legen Sie die [Source](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)-Eigenschaft auf eine [MediaSource](https://msdn.microsoft.com/library/windows/apps/windows.media.core.mediasource.aspx) mit dem Pfad der Datei fest.
 
-**Tipp:** zum Öffnen von Dateien aus dem Internet müssen Sie die Funktion **Internet (Client)** in Ihrem app-Manifest (Package.appxmanifest) deklarieren. Weitere Informationen zum Deklarieren von Funktionen finden Sie unter [Deklarieren von App-Funktionen](https://msdn.microsoft.com/library/windows/apps/mt270968).
+**Tipp:** zum Öffnen von Dateien aus dem Internet müssen Sie die Funktion **Internet (Client)** in Ihrem app Manifest (Package.appxmanifest) deklarieren. Weitere Informationen zum Deklarieren von Funktionen finden Sie unter [Deklarieren von App-Funktionen](https://msdn.microsoft.com/library/windows/apps/mt270968).
 
  
 
@@ -302,7 +302,7 @@ private DisplayRequest appDisplayRequest = null;
 Das [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) bietet zahlreiche Eigenschaften, Methoden und Ereignisse zur Steuerung der Audio- und Videowiedergabe über die Eigenschaft [MediaPlayerElement.MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx). Eine vollständige Liste der Eigenschaften, Methoden und Ereignisse finden Sie auf der Referenzseite zum [MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx) .
 
 ### <a name="advanced-media-playback-scenarios"></a>Erweiterte Medienwiedergabeszenarien
-Für komplexere Medienwiedergabeszenarien, z.B. die Wiedergabe einer Playlist, Umschalten zwischen Audiosprachen oder Erstellen benutzerdefinierter Metadatentracks, legen Sie [MediaPlayerElement.Source](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) auf eine [MediaPlaybackItem](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybackitem.aspx) oder eine [MediaPlaybackList](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacklist.aspx) fest. So aktivieren Sie verschiedene erweiterte Medienfunktionen finden Sie auf der [Medienwiedergabe](https://msdn.microsoft.com/windows/uwp/audio-video-camera/media-playback-with-mediasource) Seite für Weitere Informationen.
+Für komplexere Medienwiedergabeszenarien, z.B. die Wiedergabe einer Playlist, Umschalten zwischen Audiosprachen oder Erstellen benutzerdefinierter Metadatentracks, legen Sie [MediaPlayerElement.Source](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) auf eine [MediaPlaybackItem](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybackitem.aspx) oder eine [MediaPlaybackList](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacklist.aspx) fest. Finden Sie unter der Seite " [Medienwiedergabe](https://msdn.microsoft.com/windows/uwp/audio-video-camera/media-playback-with-mediasource) " für Weitere Informationen, wie Sie verschiedene erweiterte Medienfunktionen aktivieren können.
 
 ### <a name="enable-full-window-video-rendering"></a>Aktivieren des Videorenderings im Vollbildmodus
 
@@ -391,7 +391,7 @@ Die Standardsteuerelemente wurden für die Medienwiedergabe optimiert. Sie könn
 
 ## <a name="get-the-sample-code"></a>Beispielcode herunterladen
 
-- [Beispiel eines XAML-Steuerelementkatalogs](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) – Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.
+- [Beispiel eines XAML-Steuerelementkatalogs](https://github.com/Microsoft/Xaml-Controls-Gallery) – Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.
 
 ## <a name="related-articles"></a>Verwandte Artikel
 

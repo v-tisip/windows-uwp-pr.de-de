@@ -1,29 +1,29 @@
 ---
-description: Dieses Thema führt Sie durch die Schritte zum Erstellen eines einfachen benutzerdefinierten Steuerelements mit C++ / WinRT. Sie können auf den Informationen zum Erstellen Ihrer eigenen Features und anpassbare UI-Steuerelemente erstellen.
+description: Dieses Thema führt Sie durch die Schritte zum Erstellen eines einfachen benutzerdefinierten Steuerelements mit C++ / WinRT. Sie können auf den Informationen zum Erstellen Ihrer eigenen funktionsreiche und anpassbare UI-Steuerelemente erstellen.
 title: Benutzerdefinierte (vorlagenbasierte) XAML-Steuerelemente mit C++ / WinRT
 ms.date: 10/03/2018
 ms.topic: article
-keywords: Windows 10, Uwp, Standard, c++, Cpp, Winrt, Projizierung, XAML, benutzerdefinierte Steuerelement mit Vorlagen,
+keywords: Windows 10, Uwp, Standard, c++, Cpp, Winrt, Projizierung, XAML, benutzerdefinierten, auf Vorlagen basierenden-Steuerelement
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: e929f217c71a90540803b180e6e79b98802f9c7a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 24739e79b3999309aef9c1c6b35afd9ef2bbc9ab
+ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943655"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "9036992"
 ---
 # <a name="xaml-custom-templated-controls-with-cwinrt"></a>Benutzerdefinierte (vorlagenbasierte) XAML-Steuerelemente mit C++ / WinRT
 
 > [!IMPORTANT]
 > Wichtige Konzepte und Begriffe, die Ihr Verständnis für die Verwendung von Laufzeitklassen mit unterstützen [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), finden Sie unter [Nutzen von APIs mit C++ / WinRT](consume-apis.md) und [Erstellen von APIs mit C++ / WinRT](author-apis.md).
 
-Eines der leistungsstärksten Features von der universellen Windows-Plattform (UWP) ist die Flexibilität, die die Benutzeroberfläche (UI)-Stapel bereitstellt, um benutzerdefinierte Steuerelemente, die basierend auf dem Typ des XAML- [**Steuerelement**](/uwp/api/windows.ui.xaml.controls.control) zu erstellen. Das XAML-UI-Framework bietet Features, z. B. [benutzerdefinierte Abhängigkeitseigenschaften](/windows/uwp/xaml-platform/custom-dependency-properties) und angefügte Eigenschaften und [Steuerelementvorlagen](/windows/uwp/design/controls-and-patterns/control-templates), die Erstellen von Steuerelementen mit zahlreichen Funktionen und anpassbare erleichtern. Dieses Thema führt Sie durch die Schritte zum Erstellen einer benutzerdefinierten (Steuerelementvorlage) mit C++ / WinRT.
+Eines der leistungsstärksten Features von der universellen Windows-Plattform (UWP) ist die Flexibilität, die der Benutzeroberfläche (UI)-Stapel bereitgestellt wird, um benutzerdefinierte Steuerelemente, die basierend auf dem Typ des XAML- [**Steuerelement**](/uwp/api/windows.ui.xaml.controls.control) erstellen. Das XAML-UI-Framework bietet Features, z. B. [benutzerdefinierte Abhängigkeitseigenschaften](/windows/uwp/xaml-platform/custom-dependency-properties) angefügte Eigenschaften und [Steuerelementvorlagen](/windows/uwp/design/controls-and-patterns/control-templates), die Erstellen von Steuerelementen funktionsreiche und anpassbare erleichtern. Dieses Thema führt Sie durch die Schritte zum Erstellen einer benutzerdefinierten (Steuerelementvorlage) mit C++ / WinRT.
 
-## <a name="create-a-blank-app-bglabelcontrolapp"></a>Erstellen Sie eine leere App (BgLabelControlApp)
-Erstellen Sie zunächst ein neues Projekt in Microsoft Visual Studio. Erstellen Sie ein **Visual C++** > **Universelle Windows-** > **leere App (C++ / WinRT)** Projekt und nennen Sie es *BgLabelControlApp*.
+## <a name="create-a-blank-app-bglabelcontrolapp"></a>Erstellen einer leeren App (BgLabelControlApp)
+Erstellen Sie zunächst ein neues Projekt in Microsoft Visual Studio. Erstellen Sie eine **Visual C++** > **Windows Universal** > **leere App (C++ / WinRT)** Projekt und nennen Sie es *BgLabelControlApp*. In einem späteren Abschnitt dieses Themas, werden Sie zum Erstellen des Projekts weitergeleitet werden (nicht erst dann build).
 
-Wir werden eine neue Klasse zum Darstellen eines benutzerdefinierte (vorlagenbasierte) zu erstellen. Wir erstellen und nutzen die Klasse innerhalb derselben Kompilierungseinheit. Aber wir wollen in der Lage, instanziieren Sie diese Klasse im XAML-Markup und für die, die Grund, warum, dass es eine Laufzeitklasse sein soll. Und wir werden C++/WinRT verwenden, um diese zu schreiben und zu nutzen.
+Wir werden eine neue Klasse zum Darstellen eines benutzerdefinierte (vorlagenbasierte) zu erstellen. Wir erstellen und nutzen die Klasse innerhalb derselben Kompilierungseinheit. Aber wir wollen in der Lage zu instanziieren diese Klasse im XAML-Markup für, die Grund, warum, dass es eine Laufzeitklasse sein soll. Und wir werden C++/WinRT verwenden, um diese zu schreiben und zu nutzen.
 
 Der erste Schritt beim Erstellen einer neuen Laufzeitklasse besteht darin, dem Projekt ein neues **Midl-Datei (.idl)**-Element hinzuzufügen. Nennen Sie es `BgLabelControl.idl`. Löschen Sie den Standardinhalt von `BgLabelControl.idl` und fügen Sie diese Laufzeitklassendeklaration ein.
 
@@ -40,19 +40,19 @@ namespace BgLabelControlApp
 }
 ```
 
-Der Eintrag oben zeigt das Muster, das Sie befolgen, wenn Sie eine Abhängigkeitseigenschaft (DP) zu deklarieren. Es gibt zwei Teile für jede DP. Zunächst deklarieren Sie eine schreibgeschützte statische Eigenschaft vom Typ [**"DependencyProperty"**](/uwp/api/windows.ui.xaml.dependencyproperty). Es verfügt über den Namen des DP plus *Eigenschaft*. Verwenden Sie diese statische Eigenschaft in Ihrer Implementierung. Zweitens können Sie eine Instanz der Lese-/ Schreibzugriff-Eigenschaft mit den Typ und den Namen von Ihrer DP deklarieren.
+Der Eintrag oben zeigt das Muster, das Sie befolgen, wenn Sie eine Abhängigkeitseigenschaft (DP) deklarieren. Es gibt zwei Teile jedes DP. Zunächst deklarieren Sie eine schreibgeschützte statische Eigenschaft vom Typ [**"DependencyProperty"**](/uwp/api/windows.ui.xaml.dependencyproperty). Es verfügt über den Namen des DP plus *Eigenschaft*. Sie verwenden diese statische Eigenschaft in Ihrer Implementierung. Zweitens können Sie eine Instanz der Lese-/ Schreibzugriff-Eigenschaft mit den Typ und den Namen von Ihrem DP deklarieren.
 
 > [!NOTE]
-> Wenn Sie eine DP mit einem Gleitkommazahlen Typ möchten, machen sie `double` (`Double` in [MIDL 3.0](/uwp/midl-3/)). Deklarieren und implementieren eine DP vom Typ `float` (`Single` in MIDL), und klicken Sie dann einen Wert für diese DP im XAML-Markup festlegen, tritt der Fehler *Fehler beim Erstellen einer "Windows.Foundation.Single" aus dem Text "<NUMBER>"*.
+> Wenn Sie eine DP mit einem Gleitkommazahlen Typ möchten, machen sie `double` (`Double` in [MIDL 3.0](/uwp/midl-3/)). Deklarieren und implementieren eine DP vom Typ `float` (`Single` in MIDL), und klicken Sie dann für diese DP im XAML-Markup Festlegen eines Werts führt dazu, den Fehler *Fehler beim Erstellen einer "Windows.Foundation.Single" aus dem Text "<NUMBER>"*.
 
 Speichern Sie die Datei, und erstellen Sie das Projekt. Während des Buildprozesses wird das `midl.exe`-Tool ausgeführt, um eine Windows-Runtime-Metadaten-Datei (`\BgLabelControlApp\Debug\BgLabelControlApp\Unmerged\BgLabelControl.winmd`) zu erstellen, die die Laufzeitklasse beschreibt. Dann wird das `cppwinrt.exe`-Tool ausgeführt, um Quellcodedateien zu erzeugen, die Sie bei der Erstellung und Nutzung Ihrer Laufzeitklasse unterstützen. Diese Dateien enthalten Stubs, um die erste Schritte zum Implementieren der **BgLabelControl** -Runtime-Klasse, die Sie in Ihrer IDL deklariert haben. Diese Stubs sind `\BgLabelControlApp\BgLabelControlApp\Generated Files\sources\BgLabelControl.h` und `BgLabelControl.cpp`.
 
 Kopieren Sie die Stub-Dateien `BgLabelControl.h` und `BgLabelControl.cpp` von `\BgLabelControlApp\BgLabelControlApp\Generated Files\sources\` in den Projektordner `\BgLabelControlApp\BgLabelControlApp\`. Stellen Sie im **Projektmappen-Explorer** sicher, dass **Alle Dateien anzeigen** aktiviert ist. Klicken Sie mit der rechten Maustaste auf die kopierten Stub-Dateien und klicken Sie auf **In Projekt aufnehmen**.
 
 ## <a name="implement-the-bglabelcontrol-custom-control-class"></a>Implementieren Sie die **BgLabelControl** benutzerdefiniertes Steuerelement-Klasse
-Nun öffnen wir `\BgLabelControlApp\BgLabelControlApp\BgLabelControl.h` und `BgLabelControl.cpp` und implementieren unsere Laufzeitklasse. In `BgLabelControl.h`, ändern Sie den Konstruktor den Standard-Stilschlüssel festlegen, **Bezeichnung** und **LabelProperty**implementieren, fügen Sie einen statische Ereignishandler mit dem Namen **OnLabelChanged** Änderungen an den Wert der Abhängigkeitseigenschaft verarbeiten und fügen Sie ein privates Mitglied hinzu um die Sicherungsfeld für **LabelProperty**zu speichern.
+Nun öffnen wir `\BgLabelControlApp\BgLabelControlApp\BgLabelControl.h` und `BgLabelControl.cpp` und implementieren unsere Laufzeitklasse. In `BgLabelControl.h`, ändern Sie den Konstruktor zum Festlegen des Standard-Stilschlüssel, **Bezeichnung** und **LabelProperty**implementieren, fügen Sie einen statische Ereignishandler mit dem Namen **OnLabelChanged** Änderungen an den Wert der Abhängigkeitseigenschaft verarbeiten, und fügen Sie ein privates Mitglied hinzu um das Sicherungsfeld für **LabelProperty**zu speichern.
 
-Nach dem Hinzufügen, die `BgLabelControl.h` sieht wie folgt aus.
+Nach dem Hinzufügen, Ihre `BgLabelControl.h` sieht wie folgt aus.
 
 ```cppwinrt
 // BgLabelControl.h
@@ -81,7 +81,7 @@ private:
 ...
 ```
 
-In `BgLabelControl.cpp`, definieren Sie die statische Elemente wie folgt aus.
+In `BgLabelControl.cpp`, definieren Sie die statischen Member wie folgt aus.
 
 ```cppwinrt
 // BgLabelControl.cpp
@@ -107,16 +107,16 @@ void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject const& d
 ...
 ```
 
-In dieser exemplarischen Vorgehensweise wird nicht **OnLabelChanged**verwenden. Aber es gibt es, damit Sie sehen, wie Sie eine Abhängigkeitseigenschaft mit einem Rückruf mit geänderter Eigenschaft zu registrieren. Die Implementierung des **OnLabelChanged** wird gezeigt, wie einen abgeleiteten projizierten Typ aus einer Basisklasse projizierten abrufen (Basis projizierten Typs **DependencyObject**, in diesem Fall ist). Und es zeigt, wie Sie dann einen Zeiger auf den Typ zu erhalten, die den projizierten Typ implementiert werden. Die zweite Operation natürlich nur im Projekt, die den projizierten Typ (d. h., das Projekt, das die Laufzeitklasse implementiert) implementiert möglich ist.
+In dieser exemplarischen Vorgehensweise wird nicht wir **OnLabelChanged**verwenden. Es ist jedoch vorhanden, damit Sie sehen können, wie Sie eine Abhängigkeitseigenschaft mit einem "PropertyChanged"-Rückruf registrieren. Die Implementierung des **OnLabelChanged** veranschaulicht einen abgeleiteten projizierten Typ von projizierten Basistyp erhalten (des Basistyps projizierten **DependencyObject**, in diesem Fall ist). Und es zeigt, wie Sie dann einen Zeiger auf den Typ abrufen, die den projizierten Typ implementiert. Diese zweite Vorgang ist natürlich nur im Projekt möglich, die den projizierten Typ (d. h. das Projekt, das die Laufzeitklasse implementiert) implementiert.
 
 > [!NOTE]
-> Wenn Sie noch nicht installiert, das Windows SDK-Version 10.0.17763.0 (Windows 10, Version 1809 haben) oder höher, dann Sie [**WinRT:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi) in Abhängigkeit Eigenschaft geänderte-Ereignishandler oben anstelle von [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self)aufrufen müssen.
+> Wenn Sie noch nicht installiert, das Windows SDK Version 10.0.17763.0 (Windows 10, Version 1809 haben) oder höher, dann Sie [**WinRT:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi) im Abhängigkeit Eigenschaft geänderte Ereignishandler oben anstelle von [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self)aufrufen müssen.
 
 ## <a name="design-the-default-style-for-bglabelcontrol"></a>Entwerfen des Standardstils für **BgLabelControl**
 
-In den Konstruktor legt **BgLabelControl** einen Standard-Stilschlüssel für sich selbst. Was *ist* jedoch ein Standardstil? Eine benutzerdefinierte (vorlagenbasierte)-Steuerelement benötigt einen Standardstil&mdash;, enthält eine standardmäßige Steuerelementvorlage&mdash;die sie verwenden können, selbst mit für den Fall, dass der Consumer des Steuerelements einen Stil bzw. die Vorlage festlegen nicht gerendert. In diesem Abschnitt fügen wir eine Markupdatei dem Projekt, enthält unsere Standardstil.
+Im Konstruktor legt **BgLabelControl** einen Standard-Stilschlüssel für sich selbst. Was *ist* jedoch ein Standardstil? Ein benutzerdefiniertes Steuerelement (vorlagenbasiertes) benötigt einen Standardstil&mdash;mit einer Standard-Steuerelementvorlage&mdash;die sie verwenden können, selbst mit für den Fall, dass der Consumer des Steuerelements einen Stil bzw. die Vorlage festlegen nicht gerendert. In diesem Abschnitt fügen wir eine Markupdatei dem Projekt mit unseren Standardstil.
 
-Klicken Sie unter Ihrem Projektknoten erstellen Sie einen neuen Ordner, und nennen Sie es "Themes". Unter `Themes`, fügen Sie ein neues Element vom Typ **Visual C++** > **XAML** > **XAML-Ansicht**, und nennen Sie es "Generic.xaml". Die Ordner- und müssen wie folgt in der Reihenfolge für die XAML-Framework den Standardstil für ein benutzerdefiniertes Steuerelement zu finden sein. Löschen Sie den Standardinhalt von `Generic.xaml`, und fügen Sie im Markup unten.
+Klicken Sie unter Ihrem Projektknoten erstellen Sie einen neuen Ordner, und nennen Sie es "Themes". Unter `Themes`, fügen Sie ein neues Element vom Typ **Visual C++** > **XAML** > **XAML-Ansicht**, und nennen Sie es "Generic.xaml". Die Ordner- und müssen wie folgt in der Reihenfolge für das XAML-Framework, um den Standardstil für ein benutzerdefiniertes Steuerelement zu finden sein. Löschen Sie den Standardinhalt von `Generic.xaml`, und fügen Sie im Markup unten.
 
 ```xaml
 <!-- \Themes\Generic.xaml -->
@@ -139,7 +139,7 @@ Klicken Sie unter Ihrem Projektknoten erstellen Sie einen neuen Ordner, und nenn
 </ResourceDictionary>
 ```
 
-In diesem Fall ist die einzige Eigenschaft, die der Standardstil legt die Steuerelementvorlage. Die Vorlage besteht aus einem Quadrat (dessen Hintergrund auf die **Hintergrund** -Eigenschaft, die alle Instanzen von den Typ des XAML- [**Steuerelement**](/uwp/api/windows.ui.xaml.controls.control) gebunden ist) und ein Textelement (deren Text auf die Abhängigkeitseigenschaft **BgLabelControl::Label** gebunden ist).
+In diesem Fall ist die einzige Eigenschaft, die der Standardstil legt die Steuerelementvorlage. Die Vorlage besteht aus ein Quadrat (dessen Hintergrund auf die **Hintergrund** -Eigenschaft, die alle Instanzen von den Typ des XAML- [**Steuerelement**](/uwp/api/windows.ui.xaml.controls.control) gebunden ist), und ein Textelement (, dessen Text auf die Abhängigkeitseigenschaft **BgLabelControl::Label** gebunden ist).
 
 ## <a name="add-an-instance-of-bglabelcontrol-to-the-main-ui-page"></a>Fügen Sie eine Instanz des **BgLabelControl** auf die UI-Hauptseite
 
@@ -149,7 +149,7 @@ In diesem Fall ist die einzige Eigenschaft, die der Standardstil legt die Steuer
 <local:BgLabelControl Background="Red" Label="Hello, World!"/>
 ```
 
-Fügen Sie außerdem die folgenden #include `MainPage.h` , damit der **MainPage** -Typ (einer Kombination von XAML-Markup und imperativen Code Kompilieren) im Hinblick auf den Typ der benutzerdefinierten Steuerelements **BgLabelControl** ist.
+Fügen Sie außerdem hinzu, die folgenden #include `MainPage.h` , damit der **MainPage** -Typ (eine Kombination aus XAML-Markup und imperativen Code Kompilieren) im Hinblick auf den Typ der benutzerdefinierten Steuerelements **BgLabelControl** ist. Wenn Sie möchten, **BgLabelControl** von einer anderen XAML-Seite, dann fügen Sie einzubeziehen identisch Richtlinie in der Headerdatei für diese Seite. Oder, Alternativ stellen einfach eine einzelne Richtlinie in der vorkompilierten Header-Datei.
 
 ```cppwinrt
 // MainPage.h
@@ -158,13 +158,13 @@ Fügen Sie außerdem die folgenden #include `MainPage.h` , damit der **MainPage*
 ...
 ```
 
-Erstellen Sie nun das Projekt und führen Sie es aus. Sie sehen, dass die standardmäßige Steuerelementvorlage für den Pinsel für den Hintergrund, und klicken Sie mit der Bezeichnung, die Instanz **BgLabelControl** im Markup gebunden werden.
+Erstellen Sie nun das Projekt und führen Sie es aus. Sie sehen, dass die standardmäßige Steuerelementvorlage des Hintergrundpinsels und mit der Bezeichnung, die Instanz **BgLabelControl** im Markup gebunden werden.
 
-In dieser exemplarischen Vorgehensweise gezeigt ein einfaches Beispiel für eine benutzerdefinierte (vorlagenbasierte)-Steuerelement in C++ / WinRT. Sie können Ihre eigenen benutzerdefinierten Steuerelemente willkürlich reichhaltige und umfassende festlegen. Beispielsweise kann ein benutzerdefiniertes Steuerelement etwas so kompliziert ist wie ein Datenraster bearbeitet werden oder ein video-Player, eine Schnellansicht der 3D-Geometrie Form dauern.
+In dieser exemplarischen Vorgehensweise wurde ein einfaches Beispiel für ein benutzerdefiniertes Steuerelement (vorlagenbasierte) gezeigt, in C++ / WinRT. Sie können Ihre eigenen benutzerdefinierten Steuerelemente willkürlich reichhaltige und mit vollem Funktionsumfang machen. Beispielsweise kann ein benutzerdefiniertes Steuerelement etwas so kompliziert ist wie ein Raster bearbeitbare Daten, einen video-Player oder eine Schnellansicht der 3D-Geometrie Form dauern.
 
 ## <a name="implementing-overridable-functions-such-as-measureoverride-and-onapplytemplate"></a>Implementieren von *überschreibbaren* Funktionen, z. B. **MeasureOverride** und **OnApplyTemplate**
 
-Sie leiten ein benutzerdefiniertes Steuerelement von der [**Steuerelement**](/uwp/api/windows.ui.xaml.controls.control) -Runtime-Klasse, die selbst weiter Basis-Runtime-Klassen abgeleitet. Und es gibt überschreibbare Methoden eines **Steuerelements**, [**FrameworkElement**](/uwp/api/windows.ui.xaml.frameworkelement)und [**UIElement**](/uwp/api/windows.ui.xaml.uielement) , die Sie in Ihre abgeleitete Klasse überschreiben können. Hier ist ein Codebeispiel zeigt, wie das geht.
+Sie leiten ein benutzerdefiniertes Steuerelement von der [**Steuerelement**](/uwp/api/windows.ui.xaml.controls.control) -Runtime-Klasse, die selbst weiter Basis-Runtime-Klassen abgeleitet. Und es gibt überschreibbare Methoden eines **Steuerelements**, [**FrameworkElement**](/uwp/api/windows.ui.xaml.frameworkelement)und [**UIElement**](/uwp/api/windows.ui.xaml.uielement) , die Sie in Ihre abgeleitete Klasse überschreiben können. Hier ist ein Codebeispiel Sie wie das geht.
 
 ```cppwinrt
 struct BgLabelControl : BgLabelControlT<BgLabelControl>
@@ -183,10 +183,10 @@ struct BgLabelControl : BgLabelControlT<BgLabelControl>
 };
 ```
 
-*Overridable* Funktionen vorhanden selbst unterschiedlich in verschiedenen sprachprojektionen. In c# werden beispielsweise überschreibbare Funktionen in der Regel als geschützte virtuelle Funktionen. In C++ / WinRT können sie weder virtuellen noch geschützten sind, Sie können jedoch außer Kraft setzen, und eine eigene Implementierung, bereitstellen, wie oben gezeigt.
+*Overridable* Funktionen darstellen selbst unterschiedlich in verschiedenen sprachprojektionen. In c# werden z. B. überschreibbare Funktionen in der Regel als geschützte virtuelle Funktionen. In C++ / WinRT können sie virtuelle weder geschützt sind, Sie können jedoch außer Kraft setzen, und eine eigene Implementierung, bereitstellen, wie oben gezeigt.
 
 ## <a name="important-apis"></a>Wichtige APIs
-* [Control-Klasse](/uwp/api/windows.ui.xaml.controls.control)
+* [Steuerelementklasse](/uwp/api/windows.ui.xaml.controls.control)
 * [DependencyProperty-Klasse](/uwp/api/windows.ui.xaml.dependencyproperty)
 * [FrameworkElement-Klasse](/uwp/api/windows.ui.xaml.frameworkelement)
 * [UIElement-Klasse](/uwp/api/windows.ui.xaml.uielement)

@@ -10,12 +10,12 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8278b126ed209148a2e44ea464e04073dcefc829
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e5647d60cc043e167f8e2962680a88c750cc2eb1
+ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942604"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "9037262"
 ---
 # <a name="reveal-highlight"></a>Reveal-Highlight
 
@@ -26,7 +26,7 @@ Reveal-Highlight sind Lichteffekte, die wie z. B. Befehlsleisten, interaktive El
 > **Wichtige APIs**: [RevealBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [RevealBorderBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [RevealBrushHelper-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState-Klasse](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
 
 ## <a name="how-it-works"></a>Funktionsweise
-Reveal-Highlight lenkt interaktiven Elemente in der Container des Elements zeigt, wenn der Mauszeiger nähert, wie in der folgenden Abbildung ist:
+Reveal-Highlight Aufrufe hebt interaktive Elemente zeigt Sie der Container des Elements, wenn der Mauszeiger nähert, wie in der folgenden Abbildung dargestellt:
 
 ![Reveal Visual](images/Nav_Reveal_Animation.gif)
 
@@ -42,7 +42,7 @@ Da durch Einblendungen die ausgeblendeten Rahmen um Objekte herum angezeigt werd
     <p>Wenn Sie die App <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> installiert haben, klicken Sie hier, um <a href="xamlcontrolsgallery:/item/Reveal">die App zu öffnen und Einblendungen in Aktion zu sehen</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Erwerben Sie die XAML-Steuerelementekatalog-App (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Erwerben Sie den Quellcode (GitHub)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Erwerben Sie den Quellcode (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -54,7 +54,7 @@ Da durch Einblendungen die ausgeblendeten Rahmen um Objekte herum angezeigt werd
 
 ## <a name="how-to-use-it"></a>Verwendung
 
-„Reveal” funktioniert automatisch bei einigen Steuerelementen. Für andere Steuerelemente können Sie "Reveal" aktivieren, von dem Steuerelement einen speziellen Stil zuweisen, wie in den [Aktivieren von Einblendungen für andere Steuerelemente](#enabling-reveal-on-other-controls) und [Aktivieren von Einblendungen für benutzerdefinierte Steuerelemente](#enabling-reveal-on-custom-controls) Abschnitten dieses Artikels beschrieben.
+„Reveal” funktioniert automatisch bei einigen Steuerelementen. Für andere Steuerelemente können Sie "Reveal" aktivieren, indem Sie das Steuerelement einen speziellen Stil zuweisen, wie in den Abschnitten [Aktivieren "Reveal", für andere Steuerelemente](#enabling-reveal-on-other-controls) und [Aktivieren von "Reveal", für benutzerdefinierte Steuerelemente](#enabling-reveal-on-custom-controls) dieses Artikels beschrieben.
 
 ## <a name="controls-that-automatically-use-reveal"></a>Steuerelemente, die „Reveal” automatisch verwenden
 
@@ -113,7 +113,7 @@ Oder ändern Sie das „TargetTheme” des „RevealBorderBrush” auf Dunkel. B
 
 ## <a name="enabling-reveal-on-custom-controls"></a>Aktivieren von „Reveal” für benutzerdefinierte Steuerelemente
 
-Sie können „Reveal” für benutzerdefinierte Steuerelemente hinzufügen. Bevor Sie dies tun, ist es hilfreich, etwas mehr über die Funktionsweise des Reveal-Effekts. „Reveal” besteht aus zwei separaten Effekten: **Reveal border** (Rahmen) und **Reveal hover** (Draufzeigen).
+Sie können „Reveal” für benutzerdefinierte Steuerelemente hinzufügen. Bevor Sie dies tun, ist es hilfreich, etwas mehr über die Funktionsweise des Effekts "Reveal". „Reveal” besteht aus zwei separaten Effekten: **Reveal border** (Rahmen) und **Reveal hover** (Draufzeigen).
 
 - **Rahmen** zeigt die Rahmen der interaktiven Elemente an, wenn sich ein Zeiger nähert. Dadurch können Objekte in der Nähe ähnliche Aktionen wie das aktuell fokussierte Objekt durchführen.
 - Durch **Draufzeigen** wird die angedeutete oder fokussierte Form mit einem leichten Schein umgeben und beim Anklicken wird eine gedrückte Animation angezeigt. 
@@ -131,7 +131,7 @@ Sie können „Reveal” für benutzerdefinierte Steuerelemente hinzufügen. Bev
 
 Diese Effekte werden durch zwei Pinselelemente definiert: 
 * "Rahmen einblenden" wird durch **"revealborderbrush"** definiert.
-* Reveal Hover wird durch **RevealBackgroundBrush** definiert.
+* "Reveal Hover" wird durch **RevealBackgroundBrush** definiert.
 
 ```xaml
 <RevealBorderBrush x:Key="MyRevealBorderBrush" TargetTheme="Light" Color="{ThemeResource SystemAccentColor}" FallbackColor="{ThemeResource SystemAccentColor}"/>
@@ -255,7 +255,7 @@ Hier sehen Sie eine gesamte Vorlage und wie eine Schaltfläche zum Einblenden au
 
 ### <a name="fine-tuning-the-reveal-effect-on-a-custom-control"></a>Optimieren des Effekts von „Reveal” für ein benutzerdefiniertes Steuerelement 
 
-Wenn Sie "Reveal" für ein benutzerdefiniertes oder neues Steuerelement oder eine benutzerdefinierte Befehlsoberfläche aktivieren, können diese Tipps den Effekt optimieren:
+Wenn Sie "Reveal" für ein benutzerdefiniertes oder neues Steuerelement oder eine benutzerdefinierte Befehlsoberfläche aktivieren, können diese Tipps den Effekt optimieren ermöglicht Folgendes:
  
 * Auf benachbarten Elementen mit einer Größe, die nicht in Höhe oder Breite (insbesondere in Listen) ausgerichtet ist: entfernen Sie das Verhalten des Rahmens und aktivieren Sie die Rahmen nur für das Draufzeigen.
 * Für Befehlselemente, die häufig aktiviert oder deaktiviert werden: platzieren Sie den Pinsel für den Rahmen auf die Backplates der Elemente sowie deren Rahmen, um ihren Zustand zu betonen.
@@ -278,7 +278,7 @@ Wenn Sie "Reveal" für ein benutzerdefiniertes oder neues Steuerelement oder ein
 
 ## <a name="get-the-sample-code"></a>Beispielcode herunterladen
 
-- [Beispiel eines XAML-Steuerelementkatalogs](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) – Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.
+- [Beispiel eines XAML-Steuerelementkatalogs](https://github.com/Microsoft/Xaml-Controls-Gallery) – Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.
 
 ## <a name="reveal-and-the-fluent-design-system"></a>„Reveal” und das Fluent Design-System
 
