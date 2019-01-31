@@ -1,6 +1,6 @@
 ---
 title: Fokusnavigation für Tastatur, Gamepad, Fernbedienung und Bedienungshilfen
-Description: ''
+Description: Learn how to use focus navigation to provide comprehensive and consistent interaction experiences in your UWP apps and custom controls for keyboard power users, those with disabilities and other accessibility requirements, as well as the 10-foot experience of television screens and the Xbox One.
 label: ''
 template: detail.hbs
 keywords: Tastatur, Gamecontroller, Fernbedienung, Navigation, direktionale interne Navigation, direktionaler Bereich, Navigationsstrategie, Eingabe, Benutzerinteraktion, Bedienungshilfen, Verwendbarkeit
@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c76e62a4fcccec91fc6b3a083671ff68af2202e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7dd7ca5ed7694ba5f114d913580e7e3a233537ae
+ms.sourcegitcommit: 8e0fa6e2cdd5d7456a4c8a10fd9f2501b346294f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934037"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "9041048"
 ---
 # <a name="focus-navigation-for-keyboard-gamepad-remote-control-and-accessibility-tools"></a>Fokusnavigation für Tastatur, Gamepad, Fernbedienung und Bedienungshilfen
 
@@ -28,7 +28,7 @@ Verwenden Sie die Fokusnavigation, um umfassende und einheitliche Interaktionser
 
 Fokusnavigation bezieht sich auf den zugrunde liegende Mechanismus, mit dem Benutzer mithilfe einer Tastatur, eines Gamepads oder einer Fernbedienung durch die Benutzeroberfläche einer UWP-Anwendung navigieren und mit dieser interagieren können.
 
-> [!NOTE] 
+> [!NOTE]
 > Eingabegeräte werden in der Regel als Zeigegeräte, z.B. Toucheingabe, Touchpad, Stift und Maus, und Nicht-Zeigegeräte wie Tastatur, Gamepad und Fernbedienung klassifiziert.
 
 In diesem Thema wird beschrieben, wie Sie eine UWP-Anwendung optimieren und benutzerdefinierte Interaktionserfahrungen für Benutzer aufbauen, die nicht zeigenden Eingabetypen verwenden. 
@@ -40,14 +40,16 @@ Anweisungen zum Entwickeln von benutzerdefinierten Erfahrungen in UWP-Anwendunge
 Allgemeinere Informationen zum Erstellen von Apps und Erfahrungen für die Tastatur finden Sie unter [Tastaturinteraktion](keyboard-interactions.md).
 
 ## <a name="general-guidance"></a>Allgemeiner Leitfaden
+
 Nur die UI-Elemente, die eine Benutzerinteraktion erfordern, sollten die Fokusnavigation unterstützen. Elemente, für die keine Aktion erforderlich ist, z.B. statische Bilder, benötigen keinen Tastaturfokus. Sprachausgaben und ähnliche Bedienungshilfen geben diese statischen Elemente dennoch bekannt, auch wenn sie nicht in der Fokusnavigation enthalten sind. 
 
 Es ist wichtig, zu beachten, dass im Gegensatz zur Navigation mit einem Zeigegerät wie einer Maus oder einer Toucheingabe die Fokusnavigation linear ist. Bei der Implementierung der Fokusnavigation sollten Sie überlegen, wie ein Benutzer mit Ihrer Anwendung interagiert und wie die logische Navigation aussehen sollte. In den meisten Fällen ist es empfehlenswert, das Verhalten der benutzerdefinierten Fokusnavigation an das bevorzugte Lesemuster der Kultur des Benutzers anzupassen.
 
 Folgende Überlegungen zur Fokusnavigation müssen ebenfalls berücksichtigt werden:
+
 - Sind Steuerelemente logisch gruppiert?
-- Gibt es Gruppen von Steuerelementen mit größerer Bedeutung? 
-   - Falls ja, enthalten diese Gruppen Untergruppen?
+- Gibt es Gruppen von Steuerelementen mit größerer Bedeutung?
+  - Falls ja, enthalten diese Gruppen Untergruppen?
 - Sind für das Layout eine benutzerdefinierte direktionale Navigation (Pfeiltasten) und eine Aktivierreihenfolge erforderlich?
 
 Das E-Book [Entwickeln von barrierefreier Software](https://www.microsoft.com/download/details.aspx?id=19262) enthält ein hervorragendes Kapitel zum Thema *Entwerfen der logischen Hierarchie*.
@@ -57,13 +59,12 @@ Das E-Book [Entwickeln von barrierefreier Software](https://www.microsoft.com/do
 Der interne 2D-Navigationsbereich eines Steuerelements oder einer Steuerelementgruppe wird als „direktionaler Bereich“ bezeichnet. Wenn der Fokus auf dieses Objekt verschoben wird, können die Pfeiltasten der Tastatur (links, rechts, oben und unten) verwendet werden, um zwischen untergeordneten Elementen im direktionalen Bereich zu navigieren.
 
 ![direktionaler Bereich](images/keyboard/directional-area-small.png)
-
 *Interner 2D-Navigationsbereich oder direktionaler Bereich einer Steuerelementgruppe*
 
 Die können die Eigenschaft [XYFocusKeyboardNavigation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement#Windows_UI_Xaml_UIElement_XYFocusKeyboardNavigation) (mit den möglichen Werten [Auto](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode), [Enabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode) oder [Disabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)) verwenden, um die interne 2D-Navigation mit den Pfeiltasten der Tastatur zu verwalten.
 
-> [!NOTE]  
-> Die Aktivierreihenfolge ist von dieser Eigenschaft nicht betroffen. Um eine unübersichtliche Navigationserfahrung zu vermeiden, sollten untergeordnete Elemente eines direktionalen Bereichs *nicht* ausdrücklich in der Aktivierreihenfolge der Navigation Ihrer Anwendung angegeben werden. Weitere Informationen zum Verhalten der Aktivierreihenfolge für ein Element finden Sie unter den Eigenschaften [UIElement.TabFocusNavigation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement#Windows_UI_Xaml_UIElement_TabFocusNavigation) und [TabIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_TabIndex).  
+> [!NOTE]
+> Die Aktivierreihenfolge ist von dieser Eigenschaft nicht betroffen. Um eine unübersichtliche Navigationserfahrung zu vermeiden, sollten untergeordnete Elemente eines direktionalen Bereichs *nicht* ausdrücklich in der Aktivierreihenfolge der Navigation Ihrer Anwendung angegeben werden. Weitere Informationen zum Verhalten der Aktivierreihenfolge für ein Element finden Sie unter den Eigenschaften [UIElement.TabFocusNavigation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement#Windows_UI_Xaml_UIElement_TabFocusNavigation) und [TabIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_TabIndex).
 
 ### <a name="autohttpsdocsmicrosoftcomuwpapiwindowsuixamlinputxyfocuskeyboardnavigationmode-default-behavior"></a>[Auto](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode) (Standardverhalten)
 
@@ -74,7 +75,6 @@ Bei Festlegung auf Auto wird das Verhalten der direktionalen Navigation von der 
 Legen Sie **XYFocusKeyboardNavigation** auf **Disabled** fest, um die direktionale Navigation für das Steuerelement und seine untergeordneten Elemente zu blockieren.
 
 ![XYFocusKeyboardNavigation-Verhalten deaktiviert](images/keyboard/xyfocuskeyboardnav-disabled.gif)
-
 *XYFocusKeyboardNavigation-Verhalten deaktiviert*
 
 In diesem Beispiel ist beim primären [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) (ContainerPrimary) für **XYFocusKeyboardNavigation** der Wert **Enabled** festgelegt. Alle untergeordneten Elemente erben diese Einstellung, und Sie können mit den Pfeiltasten zu diesen navigieren. Die Elemente B3 und B4 befinden sich jedoch in einem sekundären [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) (ContainerSecondary), für den **XYFocusKeyboardNavigation** auf **Disabled** festgelegt wurde, wodurch der primäre Container überschrieben und die Pfeiltastennavigation zu sich selbst und zwischen den untergeordneten Elementen deaktiviert wird.
@@ -131,9 +131,8 @@ Legen Sie **XYFocusKeyboardNavigation** auf **Enabled** fest, um die direktional
 
 Bei Festlegung ist die Navigation mit den Pfeiltasten auf Elemente innerhalb des direktionalen Bereichs beschränkt. Die TAB-Navigation ist nicht betroffen, da alle Steuerelemente über eine Hierarchie für die Aktivierreihenfolge zugänglich bleiben.
 
-![XYFocusKeyboardNavigation-Verhalten aktiviert](images/keyboard/xyfocuskeyboardnav-enabled.gif)
-
-*XYFocusKeyboardNavigation-Verhalten aktiviert*
+![XYFocusKeyboardNavigation aktiviert Verhalten](images/keyboard/xyfocuskeyboardnav-enabled.gif)
+*XYFocusKeyboardNavigation Verhalten aktiviert*
 
 In diesem Beispiel ist beim primären [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) (ContainerPrimary) für **XYFocusKeyboardNavigation** der Wert **Enabled** festgelegt. Alle untergeordneten Elemente erben diese Einstellung, und Sie können mit den Pfeiltasten zu diesen navigieren. Die Elemente B3 und B4 befinden sich in einem sekundären [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) (ContainerSecondary), in dem **XYFocusKeyboardNavigation** nicht festgelegt ist und dann die Einstellung des primären Containers erbt. Das Element B5 befindet sich nicht in einem deklarierten direktionalen Bereich und bietet keine Unterstützung für die Pfeiltastennavigation, unterstützt jedoch das Standardverhalten für die TAB-Navigation.
 
@@ -195,9 +194,8 @@ Sie können auf mehreren Ebenen verschachtelte direktionale Bereiche verwenden. 
 
 Im Folgenden sehen Sie ein Beispiel für zwei geschachtelte direktionale Bereiche innerhalb eines Elements, das die direktionale 2D-Navigation nicht ausdrücklich unterstützt. In diesem Fall wird direktionale Navigation zwischen den zwei geschachtelten Bereichen nicht unterstützt.
 
-![Verhalten bei aktivierter und verschachtelter XYFocusKeyboardNavigation](images/keyboard/xyfocuskeyboardnav-enabled-nested1.gif)
-
-*Verhalten bei aktivierter und verschachtelter XYFocusKeyboardNavigation*
+![XYFocusKeyboardNavigation bei aktivierter und verschachtelter Verhalten](images/keyboard/xyfocuskeyboardnav-enabled-nested1.gif)
+*aktiviert Verhalten und verschachtelter XYFocusKeyboardNavigation*
 
 Nachfolgend sehen Sie ein komplexeres Beispiel für drei verschachtelte direktionale Bereiche, wobei Folgendes gilt:
 

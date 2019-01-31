@@ -1,33 +1,26 @@
 ---
-Description: TODO
-title: Interaktionen von Gamepad und Fernbedienung
-ms.assetid: 784a08dc-2736-4bd3-bea0-08da16b1bd47
-label: Gamepad and remote interactions
-template: detail.hbs
-isNew: true
-ms.date: 02/08/2017
-ms.topic: article
-keywords: Windows10, UWP
-ms.localizationpriority: medium
-ms.openlocfilehash: daf0452a30d494b3835ea043eee7d596921b0a75
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946255"
+<<<<<<< HEAD "author": Karl-Bridge-Microsoft-Beschreibung: Optimieren Sie Ihre app für die Eingabe von Xbox-Gamepad und Fernbedienung zu erhalten.
+=== Beschreibung: TODO
+>>>>>>> Master / Titel: Gamepad und Fernbedienung Interaktionen ms.assetid: 784a08dc-2736-4bd3-bea0-08da16b1bd47 Bezeichnung: Gamepad und remote Interaktionen Vorlage: detail.hbs IsNew: "true" <<<<<<< HEAD ms.author: Kbridge =======
+master MS.Date: 02/08/2017 ms.topic: Artikel Schlüsselwörter: Windows 10, Uwp ms.localizationpriority: Mittel
 ---
 # <a name="gamepad-and-remote-control-interactions"></a>Interaktionen von Gamepad und Fernbedienung
 
-![Fernbedienung und Steuerkreuz](images/dpad-remote/dpad-remote.png)
+![Bild von Tastatur und Gamepad](images/keyboard/keyboard-gamepad.jpg)
 
-Universelle Windows-Plattform Apps (UWP) unterstützen jetzt Eingaben von Gamepad- und Fernbedienung, welche die primären Eingabegeräte für Xbox und TV-Gerät sind.
+***Allgemeine Interaktionsmuster sind zwischen Tastatur, Gamepad und Fernbedienung gleich.***
 
-UWP-Apps sollten für diese Eingabegerätetypen ebenso optimiert werden wie für die Eingabe per Tastatur und Maus auf einem PC oder für die Toucheingabe auf einem Smartphone oder Tablet.
+Der wichtigste Schritt bei der Optimierung für 10-Fuß-Umgebungen besteht darin, sicherzustellen, dass Ihre App gut mit Gamepads und Fernbedienungen funktioniert. Es gibt spezifische Verbesserungen für Gamepads und Fernbedienungen, mit denen Sie die Interaktionserfahrungen von Benutzern auf Geräten optimieren können, auf denen ihre Aktionen eher eingeschränkt sind.
 
-Der wichtigste Schritt bei der Optimierung für Xbox und TV-Gerät besteht darin, sicherzustellen, dass die App gut mit diesen Eingabegeräten funktioniert.
+Universelle Windows-Plattform (UWP)-Apps unterstützen jetzt die Eingabe per Gamepad und Fernbedienung. 
 
-> [!NOTE] 
-> Es ist jetzt möglich, das Gamepad an einen PC anzuschließen und mit UWP-Apps zu verwenden. Die Überprüfung Ihrer Arbeit wird somit erleichtert.
+Gamepads und Remotesteuerungen sind die primären Eingabegeräte in Xbox- und TV-Umgebungen. 
+
+UWP-Apps sollten für diese Eingabegerätetypen ebenso optimiert werden wie für die Eingabe per Tastatur und Maus auf einem PC oder für die Toucheingabe auf einem Smartphone oder Tablet. 
+
+Der wichtigste Schritt bei der Optimierung für Xbox und Fernseher besteht darin, sicherzustellen, dass die App gut mit diesen Eingabegeräten funktioniert.
+
+Es ist jetzt möglich, das Gamepad an einen PC anzuschließen und mit UWP-Apps zu verwenden. Die Überprüfung Ihrer Arbeit wird somit erleichtert.
 
 Um bei Verwendung eines Gamepads oder einer Fernbedienung eine funktionierende und praktische Benutzeroberfläche für Ihre UWP-App zu gewährleisten, sollten Sie Folgendes beachten:
 
