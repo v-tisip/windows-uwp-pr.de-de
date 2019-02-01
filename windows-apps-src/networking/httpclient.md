@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: fd921782571082ee696c26480f1c55c96c30d7c2
-ms.sourcegitcommit: 7bea35c5a35c78e65f822313962c4b1579b163b2
+ms.openlocfilehash: b753b9e93a0cd2abae089f9d53915e0c109f6b63
+ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "9035444"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042422"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -158,7 +158,7 @@ int main()
 
 ## <a name="post-binary-data-over-http"></a>POST binären Daten über HTTP
 
-Die [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis) folgenden Codebeispiel wird veranschaulicht, senden eine kleine Menge von Binärdaten mit POST-Anforderung, mit der [HttpBufferContent](/uwp/api/windows.web.http.httpbuffercontent) -Klasse.
+Die [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis) folgenden Codebeispiel wird veranschaulicht, senden eine kleine Menge von Binärdaten mit POST-Anforderung, mit der [HttpBufferContent](/uwp/api/windows.web.http.httpbuffercontent) -Klasse. Aufrufen von **Abrufen** (siehe Codebeispiel unten) ist für einen UI-Thread. Die korrekten Verfahren, das Sie in diesem Fall verwenden, finden Sie unter [Parallelität und asynchrone Vorgänge mit C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency).
 
 ```cppwinrt
 // pch.h

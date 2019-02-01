@@ -5,16 +5,16 @@ ms.date: 01/10/2019
 ms.topic: article
 keywords: Windows 10, uwp, Standard, c++, cpp, winrt, projiziert, Projektion, Implementierung, implementieren, Laufzeitklasse, Aktivierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c79c51c355a2d3ccf1d7f3604a5f89c7a4f8fa2
-ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
+ms.openlocfilehash: e4ca6946df327dbe6697a71d1050e6401ed531fe
+ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "9024599"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042402"
 ---
 # <a name="author-apis-with-cwinrt"></a>Erstellen von APIs mit C++/WinRT
 
-Dieses Thema zeigt, wie man [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) -APIs mit der [**WinRT:: Implements**](/uwp/cpp-ref-for-winrt/implements) basieren Struktur, entweder direkt oder indirekt erstellt. In diesem Zusammenhang werden die Synonyme *Produzieren* oder *Implementieren* für den Begriff *Erstellen* verwendet. Dieses Thema behandelt die folgenden Szenarien für die Implementierung von APIs für einen C++/WinRT-Typ in dieser Reihenfolge.
+Dieses Thema zeigt, wie man [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) -APIs mit der [**WinRT:: Implements**](/uwp/cpp-ref-for-winrt/implements) Struktur basieren, entweder direkt oder indirekt erstellt. In diesem Zusammenhang werden die Synonyme *Produzieren* oder *Implementieren* für den Begriff *Erstellen* verwendet. Dieses Thema behandelt die folgenden Szenarien für die Implementierung von APIs für einen C++/WinRT-Typ in dieser Reihenfolge.
 
 - Sie erstellen *keine* Windows-Runtime-Klasse (Runtime-Klasse); Sie möchten lediglich eine oder mehrere Windows-Runtime-Schnittstellen für den lokalen Gebrauch in Ihrer App implementieren. Sie leiten sich in diesem Fall direkt von **winrt::implements** ab und implementieren Funktionen.
 - Sie schreiben eine *Laufzeitklasse*. Möglicherweise erstellen Sie eine Komponente, die von einer App genutzt werden soll. Oder Sie erstellen einen Typ, der von der XAML-Benutzeroberfläche (UI) genutzt werden soll, und in diesem Fall implementieren und nutzen Sie sowohl eine Laufzeitklasse innerhalb derselben Kompilierungseinheit. In diesen Fällen lassen Sie sich von den Tools Klassen generieren, die von **winrt::implements** abgeleitet sind.
@@ -28,9 +28,9 @@ In beiden Fällen wird der Typ, der Ihre C++/WinRT-APIs implementiert, als *Impl
 Das einfachste Szenario ist die Implementierung einer Windows-Runtime-Schnittstelle für die lokale Nutzung. Sie benötigen keine Laufzeitklasse, sondern nur eine normale C++ Klasse. Beispielsweise können Sie eine App rund um [**CoreApplication**](/uwp/api/windows.applicationmodel.core.coreapplication) schreiben.
 
 > [!NOTE]
-> Informationen zur Installation und Verwendung der C++/WinRT Visual Studio Extension (VSIX) (die Projektvorlagenunterstützung sowie C++/WinRT MSBuild-Eigenschaften und -Ziele bietet) finden Sie unter [Visual Studio-Unterstützung für C++/WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix).
+> Informationen zur Installation und Verwendung von C++ / WinRT Visual Studio Extension (VSIX) (die projektvorlagenunterstützung bereitstellt) finden Sie unter [Visual Studio-Unterstützung für C++ / WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
-In Visual Studio, **Visual C++** > **Universelle Windows-** > **Core App (C++ / WinRT)** Projektvorlage veranschaulicht das **CoreApplication** -Muster. Das Muster beginnt mit der Übergabe einer Implementierung von [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) an [**CoreApplication::Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run).
+In Visual Studio die **Visual C++** > **Windows Universal** > **Core App (C++ / WinRT)** Projektvorlage veranschaulicht das **CoreApplication** -Muster. Das Muster beginnt mit der Übergabe einer Implementierung von [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) an [**CoreApplication::Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run).
 
 ```cppwinrt
 using namespace Windows::ApplicationModel::Core;
@@ -278,10 +278,10 @@ iclosable.Close();
 
 Die **MyType**-Klasse ist nicht Teil der Projizierung, sondern die Implementierung. Aber auf diese Weise können Sie die Implementierungsmethoden direkt aufrufen, ohne den Aufwand für einen virtuellen Funktionsaufruf. Obwohl im obigen Beispiel **MyType::ToString** die gleiche Signatur wie die projizierte Methode von **IStringable** verwendet, rufen wir die nicht-virtuelle Methode direkt auf, ohne die binäre Schnittstelle der Anwendung (ABI) zu verwenden. Der **com_ptr** enthält einfach einen Zeiger auf die **MyType**-Struktur, sodass Sie auch auf alle anderen internen Details von **MyType** über die Variable `myimpl` und den Pfeiloperator zugreifen können.
 
-In der Fall, in dem Sie ein Interface-Objekt, und Sie wissen, dass es sich um eine Schnittstelle für die Implementierung ist können Sie Sie wieder auf die Implementierung, die mit der Funktionsvorlage [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) abrufen. Auch hier handelt es sich um eine Technik, die virtuelle Funktionsaufrufe vermeidet und Sie direkt die Implementierung nutzen lässt.
+Im Fall, in dem Sie ein Interface-Objekt, und Sie wissen, dass es sich um eine Schnittstelle für die Implementierung ist können Sie Sie wieder auf die Implementierung, die mit der Funktionsvorlage [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) abrufen. Auch hier handelt es sich um eine Technik, die virtuelle Funktionsaufrufe vermeidet und Sie direkt die Implementierung nutzen lässt.
 
 > [!NOTE]
-> Wenn Sie noch nicht installiert, das Windows SDK-Version 10.0.17763.0 (Windows 10, Version 1809 haben) oder höher, dann Sie [**WinRT:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi) anstelle von [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self)aufrufen müssen.
+> Wenn Sie noch nicht installiert, das Windows SDK Version 10.0.17763.0 (Windows 10, Version 1809 haben) oder höher, dann Sie [**WinRT:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi) anstelle von [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self)aufrufen müssen.
 
 Beispiel: [Implementieren der benutzerdefinierten Steuerelementklasse **BgLabelControl** ](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class)ist ein weiteres Beispiel.
 
@@ -311,7 +311,7 @@ myimpl.Close();
 IClosable ic1 = myimpl.as<IClosable>(); // error
 ```
 
-Wenn Sie eine Instanz Ihres Implementierungstyps haben und diese an eine Funktion übergeben müssen, die den entsprechenden projizierten Typ erwartet, dann können Sie dies tun. Eine für Ihren Implementierungstyp existiert (vorausgesetzt, dass der Implementierungstyp vom generiert wurde der `cppwinrt.exe` Tool), die Dies ermöglicht. Sie können einen Wert Implementierung direkt an eine Methode übergeben, die einen Wert, der den entsprechenden projizierten Typ erwartet. Sie können aus einer Implementierung Typ-Member-Funktion übergeben `*this` an eine Methode, die einen Wert, der den entsprechenden projizierten Typ erwartet.
+Wenn Sie eine Instanz Ihres Implementierungstyps haben und diese an eine Funktion übergeben müssen, die den entsprechenden projizierten Typ erwartet, dann können Sie dies tun. Für Ihre Implementierungstyp existiert ein Konvertierungsoperator (vorausgesetzt, dass der Implementierungstyp vom generiert wurde der `cppwinrt.exe` Tool), die Dies ermöglicht. Sie können einen Wert Implementierung direkt an eine Methode übergeben, die einen Wert, der den entsprechenden projizierten Typ erwartet. Sie können aus einer Implementierung Typ Member-Funktion übergeben `*this` an eine Methode, die einen Wert, der den entsprechenden projizierten Typ erwartet.
 
 ```cppwinrt
 // MyProject::MyType is the projected type; the implementation type would be MyProject::implementation::MyType.
@@ -334,8 +334,8 @@ void MyType::MemberFunction(MyProject::MyOtherType const& ot)
 }
 ```
 
-## <a name="deriving-from-a-type-that-has-a-non-default-constructor"></a>Abgeleitet von einem Typ, der über einen Standardkonstruktor verfügt
-[**ToggleButtonAutomationPeer::ToggleButtonAutomationPeer(ToggleButton)**](/uwp/api/windows.ui.xaml.automation.peers.togglebuttonautomationpeer.-ctor#Windows_UI_Xaml_Automation_Peers_ToggleButtonAutomationPeer__ctor_Windows_UI_Xaml_Controls_Primitives_ToggleButton_) ist ein Beispiel für einen Standardkonstruktor. Es gibt keinen Standardkonstruktor. Um ein **ToggleButtonAutomationPeer** zu erstellen, müssen Sie also einen *Owner*übergeben. Wenn Sie von **ToggleButtonAutomationPeer** ableiten, dann müssen Sie also einen Konstruktor zur Verfügung stellen, der einen *Owner* entgegen nimmt und ihn an die Basisklasse übergibt. Mal sehen, wie das in der Praxis aussieht.
+## <a name="deriving-from-a-type-that-has-a-non-default-constructor"></a>Abgeleitet von einem Typ, der einen nicht-Standardkonstruktor hat
+[**ToggleButtonAutomationPeer::ToggleButtonAutomationPeer(ToggleButton)**](/uwp/api/windows.ui.xaml.automation.peers.togglebuttonautomationpeer.-ctor#Windows_UI_Xaml_Automation_Peers_ToggleButtonAutomationPeer__ctor_Windows_UI_Xaml_Controls_Primitives_ToggleButton_) ist ein Beispiel für einen nicht standardmäßigen Konstruktor. Es gibt keinen Standardkonstruktor. Um ein **ToggleButtonAutomationPeer** zu erstellen, müssen Sie also einen *Owner*übergeben. Wenn Sie von **ToggleButtonAutomationPeer** ableiten, dann müssen Sie also einen Konstruktor zur Verfügung stellen, der einen *Owner* entgegen nimmt und ihn an die Basisklasse übergibt. Mal sehen, wie das in der Praxis aussieht.
 
 ```idl
 // MySpecializedToggleButton.idl
