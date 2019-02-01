@@ -5,12 +5,12 @@ ms.date: 01/31/2019
 ms.topic: article
 keywords: Windows 10, UWP, Standard, C++, CPP, WinRT, Projizierung, Einführung
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c7334711debf87d8834213af39ba384166404e1
-ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
+ms.openlocfilehash: 5281049aa9ddec58a97283a2ca6ba5d229a49c4e
+ms.sourcegitcommit: 038fe813c73804285d5e74d97864ac1a2fb531f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/01/2019
-ms.locfileid: "9042373"
+ms.locfileid: "9042604"
 ---
 # <a name="introduction-to-cwinrt"></a>Einführung in C++/WinRT
 &nbsp;
@@ -98,15 +98,19 @@ Wenn Ihr Projekt, mit einer Version der VSIX-Erweiterung vor 1.0.181002.2 und C+
 ...
 ```
 
-Sie können Ihr Projekt aktualisieren, indem Sie das **Microsoft.Windows.CppWinRT** NuGet-Paket manuell installieren. Nach dem Installieren (oder ein Upgrade auf) die neueste Version der VSIX-Erweiterung, öffnen Sie das Projekt in Visual Studio, klicken Sie auf **Projekt** \> **NuGet-Pakete verwalten...**  \>  **Durchsuchen**, geben Sie oder fügen Sie **Microsoft.Windows.CppWinRT** in das Suchfeld ein, wählen Sie das Element in den Suchergebnissen übergehen, und dann auf **Installieren** , um das Paket für Ihr Projekt zu installieren. Bearbeiten Sie anschließend, Ihre `.vcxproj` Datei, und entfernen Sie die `<CppWinRTEnabled>true</CppWinRTEnabled>` Eigenschaft.
+Sie können Ihr Projekt aktualisieren, indem Sie das **Microsoft.Windows.CppWinRT** NuGet-Paket manuell installieren. Nach dem Installieren (oder ein Upgrade auf) die neueste Version der VSIX-Erweiterung, öffnen Sie das Projekt in Visual Studio, klicken Sie auf **Projekt** \> **NuGet-Pakete verwalten...**  \>  **Durchsuchen**, geben Sie oder fügen Sie **Microsoft.Windows.CppWinRT** in das Suchfeld ein, wählen Sie das Element in den Suchergebnissen übergehen, und dann auf **Installieren** , um das Paket für Ihr Projekt zu installieren.
 
 ### <a name="created-with-or-upgraded-to-between-101810022-and-101901283"></a>Mit erstellt (oder aktualisiert) zwischen 1.0.181002.2 und 1.0.190128.3
 Wenn Ihr Projekt mit einer Version der VSIX-Erweiterung zwischen 1.0.181002.2 und 1.0.190128.3 erstellt wurde, einschließlich dann das **Microsoft.Windows.CppWinRT** NuGet-Paket im Projekt automatisch der Projektvorlage installiert wurde. Sie können auch eine ältere Projekt für eine Version der VSIX-Erweiterung in diesem Bereich aktualisiert haben. Wenn Sie, klicken Sie dann haben&mdash;seit Buildunterstützung auch weiterhin in Versionen der VSIX-Erweiterung in diesem Bereich&mdash;das aktualisierte Projekt möglicherweise oder möglicherweise nicht das **Microsoft.Windows.CppWinRT** NuGet-Paket installiert.
 
-Um Ihr Projekt aktualisieren, folgen Sie den Anweisungen im vorherigen Abschnitt, und stellen Sie sicher, dass Ihr Projekt das **Microsoft.Windows.CppWinRT** NuGet-Paket installiert verfügt. Entfernen Sie dann auch die `<CppWinRTEnabled>true</CppWinRTEnabled>` Eigenschaft.
+Um Ihr Projekt aktualisieren, folgen Sie den Anweisungen im vorherigen Abschnitt, und stellen Sie sicher, dass Ihr Projekt das **Microsoft.Windows.CppWinRT** NuGet-Paket installiert verfügt.
 
 ### <a name="invalid-upgrade-configurations"></a>Ungültige Upgrade-Konfigurationen
 Mit der neuesten Version der VSIX-Erweiterung, es gilt nicht für ein Projekt, haben die `<CppWinRTEnabled>true</CppWinRTEnabled>` Eigenschaft, wenn sie auch das **Microsoft.Windows.CppWinRT** NuGet-Paket installiert verfügt. Ein Projekt mit dieser Konfiguration erzeugt die Fehlermeldung "Build", "C++ / WinRT VSIX nicht mehr unterstützt Projekt erstellen.  Bitte fügen Sie einen Projektverweis auf das Microsoft.Windows.CppWinRT Nuget-Paket. hinzu"
+
+Wie erwähnt oben eine C++ / WinRT-Projekt jetzt muss das NuGet-Paket installiert haben.
+
+Da die `<CppWinRTEnabled>` Element ist veraltet, Sie können optional Bearbeiten Ihrer `.vcxproj`, und löschen Sie das Element. Es ist nicht unbedingt erforderlich, aber es ist eine Option.
 
 ## <a name="custom-types-in-the-cwinrt-projection"></a>Benutzerdefinierte Typen in der C++/WinRT-Projektion
 In Ihrer C++ / WinRT-Programmierung können Sie Standard-c++-Sprachfunktionen und [Standard C++ Datentypen und C++ / WinRT](std-cpp-data-types.md)&mdash;einschließlich einiger C++ Standard Library-Datentypen. Sie werden aber auch einige benutzerdefinierte Datentypen in der Projektion bemerken und können diese verwenden. Beispielsweise verwenden wir [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) im Schnellstart-Codebeispiel in [Erste Schritte mit C++/WinRT](get-started.md).
