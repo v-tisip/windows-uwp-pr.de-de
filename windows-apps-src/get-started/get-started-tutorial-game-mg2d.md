@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
-ms.openlocfilehash: 95fa9e8ef9c508846443e04e23184c03e38ce9a2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e6d36c368672675f503359735de8717df1be8b57
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939325"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050653"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>Erstellen eines UWP-Spiels in MonoGame-2D
 
@@ -26,7 +26,7 @@ MonoGame ist ein einfaches Framework für die Spieleentwicklung. In diesem Lernp
 
 ## <a name="prerequisites"></a>Voraussetzungen
 +   Windows10 und Microsoft Visual Studio2017  [Klicken Sie hier, um zu erfahren, wie Sie Visual Studio einrichten](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+ Das .NET Framework-desktop-Entwicklung. Wenn Sie bereits mit Dies installiert haben, können Sie es durch das Visual Studio-Installationsprogramm erneut ausführen, und ändern die Installation von Visual Studio 2017 abrufen.
++ Die .NET Framework-desktop-Entwicklung. Wenn Sie dies installiert bereits besitzen, können Sie es abrufen erneut ausführen der Visual Studio-Installer, und ändern die Installation von Visual Studio 2017.
 +   Sie sollten über Grundkenntnisse in C# oder einer ähnlichen objektorientierten Programmiersprache verfügen. [Klicken Sie hier, um Informationen zum Einstieg in C# zu erhalten](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 +   Kenntnisse über die grundlegenden Konzepte der Informatik, wie Klassen, Methoden und Variablen, sind ebenfalls von Vorteil.
 
@@ -43,7 +43,7 @@ Wenn Sie dies getan haben, überspringen Sie den nächsten Abschnittzum Einricht
 **Hinweis:** Das in diesem Beispiel erstellte Spiel soll nicht abgeschlossen sein (oder überhaupt Spaß machen). Der Zweck besteht darin, die grundlegenden Konzepte der 2D-Entwicklung in MonoGame zu veranschaulichen. Verwenden Sie diesen Code und verbessern Sie ihn – oder beginnen Sie einfach ganz von vorn, nachdem Sie die Grundlagen kennengelernt haben!
 
 ## <a name="set-up-monogame-project"></a>Einrichten des MonoGame-Projekts
-1. Installieren Sie **MonoGame 3.6** für Visual Studio aus [MonoGame.net](http://www.monogame.net/).
+1. Installieren Sie **MonoGame 3.6** für Visual Studio aus [MonoGame.net](https://www.monogame.net/).
 
 2. Starten Sie Visual Studio 2017.
 
@@ -324,7 +324,7 @@ broccoli = new SpriteClass(GraphicsDevice, "Content/broccoli.png", ScaleToHighDP
 Das Brokkoli-Bild ist viel größer, als es im Spiel angezeigt werden soll. Daher müssen wir es auf das 0,2-Fache seiner ursprünglichen Größe skalieren.
 
 ### <a name="5-program-obstacle-behaviour"></a>5. Hindernis Verhalten
-Der Brokkoli soll über den Bildschirm hinausreichen und in Richtung des Avatars des Spielers wandern, der dem Hindernis ausweichen muss. Zu diesem Zweck fügen Sie diese Methode der Klasse **Game1.cs** hinzu:
+Der Brokkoli soll über den Bildschirm hinausreichen und in Richtung des Avatars des Spielers wandern, der dem Hindernis ausweichen muss. Zu diesem Zweck fügen Sie diese Methode in der **Game1.cs** -Klasse:
 
 ```CSharp
 public void SpawnBroccoli()
@@ -379,7 +379,7 @@ public void StartGame()
 ```
 
 ### <a name="7-handle-keyboard-input"></a>7. Behandeln von Tastatureingaben
-Als Nächstes benötigen wir eine neue Methode auf Benutzereingaben über die Tastatur zu behandeln. Fügen Sie diese Methode, um **Game1.cs**:
+Als Nächstes benötigen wir eine neue Methode zum Behandeln von Benutzereingaben über die Tastatur. Fügen Sie diese Methode, um **Game1.cs**:
 
 ```CSharp
 void KeyboardHandler()
@@ -484,7 +484,7 @@ dino.Draw(spriteBatch);
 
 In MonoGame werden neue Aufrufe von **spriteBatch.Draw** über alle vorherigen Aufrufe gezeichnet. Dies bedeutet, dass das brokkoli- und das Dino-Sprite über das vorhandene Gras-Sprite gezeichnet werden, sodass sie niemals dahinter unabhängig von ihrer Position verborgen werden können.
 
-Führen Sie das Spiel nun aus, und bewegen Sie den Dino mit den Pfeiltasten und der LEERTASTE. Wenn Sie die oben beschriebenen Schritte ausgeführt haben, Sie können Sie Ihren Avatar innerhalb des Spielfensters bewegen, und der brokkoli sollte immer größeren schneller ausgehen.
+Führen Sie das Spiel nun aus, und bewegen Sie den Dino mit den Pfeiltasten und der LEERTASTE. Wenn Sie die oben beschriebenen Schritte ausgeführt haben, sollte Sie können Sie Ihren Avatar innerhalb des Spielfensters bewegen, und der brokkoli sollte mit einer Geschwindigkeit wachsende erzeugen.
 
 ![Spieler-Avatar und Hindernis](images/monogame-tutorial-2.png)
 
@@ -648,7 +648,7 @@ if (dino.RectangleCollision(broccoli)) gameOver = true;
 Dadurch wird die **RectangleCollision**-Methode aufgerufen, die wir in **SpriteClass** erstellt haben, und das Spiel als „beendet“ markiert, wenn der Wert „true“ zurückgegeben wird.
 
 ### <a name="4-add-user-input-for-resetting-the-game"></a>4. Hinzufügen von Benutzereingaben für das Zurücksetzen des Spiels
-Fügen Sie diesen Code für die Methode **KeyboardHandler** , damit der Benutzer das Spiel Drücken der EINGABETASTE zurücksetzen können:
+Fügen Sie diesen Code für die Methode **KeyboardHandler** , damit der Benutzer das Spiel zurücksetzen, wenn sie die EINGABETASTE drücken:
 
 ```CSharp
 if (gameOver && state.IsKeyDown(Keys.Enter))
@@ -692,4 +692,4 @@ Sie müssen die [Prüfliste für App-Übermittlung](https://docs.microsoft.com/e
 
 Die App muss zur [Zertifizierung](https://docs.microsoft.com/en-us/windows/uwp/publish/the-app-certification-process) eingereicht werden.
 
-Weitere Informationen finden Sie in der [Veröffentlichung Ihrer UWP-app](https://developer.microsoft.com/en-us/store/publish-apps).
+Weitere Informationen finden Sie in [Ihrer UWP-app veröffentlichen](https://developer.microsoft.com/en-us/store/publish-apps).

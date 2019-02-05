@@ -6,12 +6,12 @@ ms.date: 10/18/2017
 ms.topic: article
 keywords: Windows10, UWP, Audio, Spiele, Beispiel
 ms.localizationpriority: medium
-ms.openlocfilehash: 666ea75f1d4f18121b7ae9fa3def3b455ae3e7a3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 40fa8b1c23d591453308c3ad066967ed65902917
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924710"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050893"
 ---
 # <a name="adding-audio-to-the-marble-maze-sample"></a>Hinzufügen von Audiodaten zum Marble Maze-Beispiel
 
@@ -20,7 +20,7 @@ In diesem Dokument werden die wichtigsten Methoden beschrieben, die Sie berücks
 Marble Maze gibt Musik im Hintergrund wieder und verwendet außerdem Spielsounds, die auf Spielereignisse hinweisen, beispielsweise wenn die Murmel an eine Wand prallt. Wichtig ist bei der Implementierung, dass Marble Maze einen Hall- oder Echoeffekt verwendet, um den Klang einer aufprallenden Murmel zu simulieren. Die Implementierung des Halleffekts bewirkt, dass Sie Echos in kleineren Räumen schneller und lauter hören. In größeren Räumen dagegen sind die Echos leiser und nicht so schnell zu hören.
 
 > [!NOTE]
-> Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
+> Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](https://go.microsoft.com/fwlink/?LinkId=624011).
 
 Hier sind einige der wichtigsten in diesem Dokument erörterten Punkte für das Arbeiten mit Audio in Ihrem Spiel:
 

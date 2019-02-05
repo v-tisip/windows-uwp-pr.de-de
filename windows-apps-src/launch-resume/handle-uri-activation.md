@@ -6,12 +6,12 @@ ms.date: 07/05/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: aaaf7e6b13a3ce05bd30dd0ebf3e1d7d98915d6e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3d8cbb3d7e245b747a7637726df9559f5fa87a6d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946062"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046413"
 ---
 # <a name="handle-uri-activation"></a>Behandeln der URI-Aktivierung
 
@@ -155,7 +155,7 @@ Per Protokollaktivierung gestartete Apps sollten ggf. eine Benutzeroberfläche e
 Ihr URI-Schemaname kann von jeder App oder Website verwendet werden, auch von schädlichen. Alle im URI empfangenen Daten könnten daher von einer nicht vertrauenswürdigen Quelle stammen. Wir empfehlen, niemals eine endgültige Aktion auf Grundlage der Parameter auszuführen, die Sie im URI erhalten. URI-Parameter können z.B. zum Starten der App mit der Kontoseite eines Benutzers, aber nicht zum direkten Ändern des Kontos des Benutzers verwendet werden.
 
 > [!NOTE]
-> Wenn Sie für ihre App einen neuen URI-Schemanamen erstellen, ist es wichtig, dass Sie die Ratschläge in [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550) befolgen. Damit wird sichergestellt, dass Ihr Name die Standards für URI-Schemas erfüllt.
+> Wenn Sie für ihre App einen neuen URI-Schemanamen erstellen, ist es wichtig, dass Sie die Ratschläge in [RFC 4395](https://go.microsoft.com/fwlink/p/?LinkID=266550) befolgen. Damit wird sichergestellt, dass Ihr Name die Standards für URI-Schemas erfüllt.
 
 > [!NOTE]
 > Achten Sie darauf, dass beim Start über einen Protokollvertrag der Benutzer über die Zurück-Schaltfläche zu dem Bildschirm zurückkehren muss, von dem aus die App gestartet wurde, und nicht zum vorherigen Inhalt der App.

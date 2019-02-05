@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 08fab2b312fa4ea79d03f350d62070e205d535f8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 021e3142a4e94f762cc48dbc86905dcf0b658772
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920730"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045699"
 ---
 # <a name="launch-the-windows-maps-app"></a>Starten der Windows-Karten-App
 
@@ -20,7 +20,7 @@ ms.locfileid: "8920730"
 
 Erfahren Sie, wie Sie die Windows-Karten-App aus Ihrer App starten können. In diesem Kapitel werden die URI-(Uniform Resource Identifier)-Schemas **bingmaps:, *ms-drive-to:, ms-walk-to:** und **ms-settings:** erläutert. Verwenden Sie diese URI-Schemas zum Starten der Windows-Karten-App für bestimmte Karten, Wegbeschreibungen und Suchergebnisse oder um über die Einstellungs-App Offlinekarten für Windows-Karten herunterzuladen.
 
-**Tipp** Um mehr über das Starten der Windows-Karten-App aus Ihrer App zu erfahren, laden Sie das [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) aus dem Repository [Beispiele für universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter.
+**Tipp** Um mehr über das Starten der Windows-Karten-App aus Ihrer App zu erfahren, laden Sie das [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977) aus dem Repository [Beispiele für universelle Windows-Plattform](https://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter.
 
 ## <a name="introducing-uris"></a>Einführung in URIs
 
@@ -247,7 +247,7 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 </ul>
 <p>Unter Windows 10 sind die Stile der Luftansicht und der 3D-Ansicht identisch.</p>
 <div class="alert">
-**Hinweis:** der **Sty** -Parameter ausgelassen erzeugt dieselben Ergebnisse wie bei Sty = R.
+**Hinweis:** der **Sty** -Parameter ausgelassen liefert dieselben Ergebnisse als Sty = R.
 </div>
 <div>
  
@@ -299,7 +299,7 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 <p>trfc=1</p></td>
 <td align="left"><p>Gibt an, ob die Karte Verkehrsinformationen enthält. Wenn der trfc-Parameter ausgelassen wird, werden dieselben Ergebnisse wie bei <code>trfc=0</code> zurückgegeben.</p>
 <div class="alert">
-**Hinweis:** Verkehrsinformationen sind nicht in allen Regionen verfügbar.
+**Hinweis:** Datenverkehr Daten sind nicht in allen Regionen verfügbar.
 </div>
 <div>
  
@@ -328,7 +328,7 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 <p>Bei einer unvollständigen Route wird keine Routenlinie gezeichnet.</p>
 <p>Geben Sie dies zusammen mit dem **mode**-Parameter an, um die Transportmethode (fahren, laufen oder öffentliche Verkehrsmittel) anzugeben. Wenn **mode** nicht angegeben ist, werden Wegbeschreibungen mithilfe der Einstellung für die Transportmethode des Benutzers bereitgestellt.</p>
 <div class="alert">
-**Hinweis:** ein Titel kann für einen Ort verwendet werden, der Speicherort von **pos** -Parameterwert angegeben wird. Anstatt der Breiten- und Längengrade wird der Titel angezeigt.
+**Hinweis:** ein Titel kann für einen Ort verwendet werden, der Speicherort von der **pos** -Parameterwert angegeben wird. Anstatt der Breiten- und Längengrade wird der Titel angezeigt.
 </div>
 <div>
  

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Kartenauthentifizierungsschlüssel, Kartensteuerelement
 ms.localizationpriority: medium
-ms.openlocfilehash: e986880ccedfdb4648b1554c35c23a8a841fe820
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 620566036dc5aa9357d10e60ec92067ba0faf130
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945613"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046160"
 ---
 # <a name="request-a-maps-authentication-key"></a>Anfordern eines Kartenauthentifizierungsschlüssels
 
@@ -20,9 +20,9 @@ ms.locfileid: "8945613"
 
 Ihre [universelle Windows-App](https://msdn.microsoft.com/library/windows/apps/dn894631) muss authentifiziert werden, bevor sie die [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)-Klasse und Kartendienste im [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979)-Namespace verwenden kann. Zum Authentifizieren Ihrer App müssen Sie einen Kartenauthentifizierungsschlüssel angeben. In diesem Thema wird beschrieben, wie Sie einen Kartenauthentifizierungsschlüssel vom [Bing Maps Developer Center](https://www.bingmapsportal.com/) anfordern und Ihrer App hinzufügen.
 
-**Tipp** Um mehr über die Verwendung von Karten in Ihrer App zu erfahren, können Sie das folgende Beispiel aus den [API-Beispielen für die Universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunterladen.
+**Tipp** Um mehr über die Verwendung von Karten in Ihrer App zu erfahren, können Sie das folgende Beispiel aus den [API-Beispielen für die Universelle Windows-Plattform](https://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunterladen.
 
--   [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## <a name="get-a-key"></a>Abrufen eines Schlüssels
 
@@ -90,7 +90,7 @@ Um Dienste im [**Windows.Services.Maps**](https://msdn.microsoft.com/library/win
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Bing Maps Developer Center](https://www.bingmapsportal.com/)
-* [Beispiel für UWP-Karte](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Beispiel für UWP-Karte](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Entwurfsrichtlinien für Karten](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Build 2015-Video: Nutzen von Karten und Ortung über Telefon, Tablet und PC in Ihren Windows-Apps](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Beispiel für eine UWP-App mit Verkehrsinformationen](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Beispiel für eine UWP-App mit Verkehrsinformationen](https://go.microsoft.com/fwlink/p/?LinkId=619982)

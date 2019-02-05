@@ -6,18 +6,18 @@ ms.date: 07/19/2018
 ms.topic: article
 keywords: Windows10, UWP, Karte, Standort, Bilder, Überlagerung
 ms.localizationpriority: medium
-ms.openlocfilehash: 47b9c4335a99e7b0f17da0fb9ddb520cc917e398
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c0c2f07a364980b67a34a519eb5dd8b4da1a18f0
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942302"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046433"
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>Überlagern von nebeneinander angeordneten Bildern in einer Karte
 
 Überlagern Sie Bilder von Drittanbietern oder benutzerdefinierte nebeneinander angeordnete Bilder in einer Karte mithilfe von Kachelquellen. Verwenden Sie Kachelquellen, um spezielle Infos wie Wetterdaten, Einwohnerzahlen oder seismische Daten zu überlagern oder die Standardkarte vollständig zu ersetzen.
 
-**Tipp**: Laden Sie das [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) auf Github herunter, um mehr über die Verwendung von Karten in Ihrer App zu erfahren.
+**Tipp**: Laden Sie das [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977) auf Github herunter, um mehr über die Verwendung von Karten in Ihrer App zu erfahren.
 
 <a id="tileintro" />
 
@@ -25,7 +25,7 @@ ms.locfileid: "8942302"
 
 Kartendienste wie Nokia Karten und Bing Maps teilen Karten zum schnellen Abrufen und Anzeigen in quadratische Kacheln ein. Diese Kacheln messen 256 x 256 Pixel und werden vorab auf mehrere Detailebenen gerendert. Viele Dienste von Drittanbietern umfassen auch kartenbasierte Daten, die in Kacheln aufgeteilt sind. Verwenden Sie Kachelquellen, um Kacheln von Drittanbietern abzurufen oder benutzerdefinierte Kacheln zu erstellen. Überlagern Sie diese auf der angezeigten Karte im [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)-Objekt.
 
-**Wichtige**  Wenn Sie kachelquellen verwenden, müssen Sie nicht Schreiben von Code zum Anfordern oder um einzelne Kacheln zu positionieren. Das [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)-Objekt fordert bei Bedarf Kacheln an. Bei jeder Anforderung werden die X- und Y-Koordinaten und der Zoomfaktor für die einzelnen Kacheln angegeben. Geben Sie einfach das Format des URIs oder Dateinamens an, um die Kacheln in der **UriFormatString**-Eigenschaft abzurufen. Dazu fügen Sie ersetzbare Parameter in den Basis-URI oder Dateinamen ein, um anzugeben, wo die X- und Y-Koordinaten und der Zoomfaktor für jede Kachel übergeben werden.
+**Wichtige**  Wenn Sie kachelquellen verwenden, Sie müssen keinen Code zum Anfordern oder zum Positionieren der einzelner Kacheln schreiben. Das [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)-Objekt fordert bei Bedarf Kacheln an. Bei jeder Anforderung werden die X- und Y-Koordinaten und der Zoomfaktor für die einzelnen Kacheln angegeben. Geben Sie einfach das Format des URIs oder Dateinamens an, um die Kacheln in der **UriFormatString**-Eigenschaft abzurufen. Dazu fügen Sie ersetzbare Parameter in den Basis-URI oder Dateinamen ein, um anzugeben, wo die X- und Y-Koordinaten und der Zoomfaktor für jede Kachel übergeben werden.
 
 In diesem Beispiel sehen Sie eine [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992)-Eigenschaft für eine [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986)-Klasse. Diese zeigt die ersetzbaren Parameter für die X- und Y-Koordinaten und den Zoomfaktor an.
 
@@ -35,7 +35,7 @@ http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
 
 (Die X- und Y-Koordinaten stellen die Position der einzelnen Kachel in der Zuordnung der Weltkarte auf der angegebenen Detailebene dar. Die Nummerierung der Kachel beginnt bei {0, 0} in der oberen linken Ecke der Karte. Die Kachel bei {1, 2} befindet sich beispielsweise in der zweiten Spalte der dritten Zeile des Kachelrasters.)
 
-Weitere Informationen über das Kachelsystem von Kartendiensten finden Sie unter [Kachelsystem von Bing Maps](http://go.microsoft.com/fwlink/p/?LinkId=626692).
+Weitere Informationen über das Kachelsystem von Kartendiensten finden Sie unter [Kachelsystem von Bing Maps](https://go.microsoft.com/fwlink/p/?LinkId=626692).
 
 ### <a name="overlay-tiles-from-a-tile-source"></a>Überlagern von Kacheln aus einer Kachelquelle
 
@@ -421,7 +421,7 @@ So ersetzen Sie die Standardkarte durch Drittanbieter- oder benutzerdefinierte K
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Bing Maps Developer Center](https://www.bingmapsportal.com/)
-* [Beispiel für UWP-Karte](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Beispiel für UWP-Karte](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Entwurfsrichtlinien für Karten](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Build 2015-Video: Nutzen von Karten und Ortung über Telefon, Tablet und PC in Ihren Windows-Apps](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Beispiel für eine UWP-App mit Verkehrsinformationen](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Beispiel für eine UWP-App mit Verkehrsinformationen](https://go.microsoft.com/fwlink/p/?LinkId=619982)

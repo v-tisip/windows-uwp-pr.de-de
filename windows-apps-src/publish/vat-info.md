@@ -6,22 +6,22 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 90447f63cf28660eaffc0dff4e28524f8ef4372a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3d8b11815d7762179ad982edaf3985c06f9f54e4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928059"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051083"
 ---
 # <a name="vat-info"></a>Umsatzsteuerinfo
 
 
-Wenn Sie das USt-IdNr während des Registrierungsprozesses Partner Center bereitstellen müssen, sehen hier Sie einige Informationen, um Ihnen den Einstieg erleichtern.
+Wenn Sie eine USt-IdNr während des Registrierungsprozesses Partner Center bereitstellen müssen, sehen hier Sie einige Informationen, um Ihnen den Einstieg erleichtern.
 
 ## <a name="understanding-vat-numbers"></a>Grundlagen der Steuernummern
 
 
-Eine Umsatzsteuernummer ist eine ID, die für Länder oder Regionen in der EU verwendet wird Weitere Informationen erhalten Sie auf der offiziellen [VIES-Website](http://go.microsoft.com/fwlink/p/?LinkId=258372) der EU.
+Eine Umsatzsteuernummer ist eine ID, die für Länder oder Regionen in der EU verwendet wird Weitere Informationen erhalten Sie auf der offiziellen [VIES-Website](https://go.microsoft.com/fwlink/p/?LinkId=258372) der EU.
 
 ## <a name="accepted-formats-for-vat-numbers"></a>Gültige Formate für Umsatzsteuernummern
 

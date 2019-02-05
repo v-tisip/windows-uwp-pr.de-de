@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows10, UWP, zielgruppenorientierte Benachrichtigungen, Push-Benachrichtigungen, Popups, Kachel
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
-ms.openlocfilehash: 902a8d84c2a0cfa1549c4c3926e838e9bb8ed9c4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9858665eaf36f5cd261dd1098b23aeecccf9179c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923137"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045779"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>Senden von Benachrichtigungen an die Kunden Ihrer App
 
@@ -35,7 +35,7 @@ Beachten Sie beim Inhalt der Benachrichtigungen Folgendes:
 
 Sie müssen drei übergeordnete Schritte durchführen, um Ihre Kunden mithilfe von Benachrichtigungen zu erreichen.
 
-1. **Registrieren Sie Ihre App für den Empfang von Pushbenachrichtigungen.** Hierzu einen Verweis auf die Microsoft Store Services SDK in Ihrer app hinzufügen und ergänzen Sie anschließend einige wenige Codezeilen, die einen Benachrichtigungskanal zwischen Partner Center und Ihrer app registriert. Über diesen Kanal übermitteln wir Ihre Benachrichtigungen an Ihre Kunden. Details finden Sie unter [Konfigurieren Ihrer App für benutzerorientierte Pushbenachrichtigungen](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+1. **Registrieren Sie Ihre App für den Empfang von Pushbenachrichtigungen.** Sie hierzu einen Verweis auf das Microsoft Store Services SDK in Ihrer app hinzufügen und ergänzen Sie anschließend einige wenige Codezeilen, die ein Benachrichtigungskanal zwischen Partner Center und Ihrer app registriert wird. Über diesen Kanal übermitteln wir Ihre Benachrichtigungen an Ihre Kunden. Details finden Sie unter [Konfigurieren Ihrer App für benutzerorientierte Pushbenachrichtigungen](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 2. **Entscheiden Sie, welche Kunden Ihre Zielgruppe ist.** Sie können Ihre Benachrichtigung an alle Kunden Ihrer App senden, oder (für Benachrichtigungen für eine einzelne App) an eine Gruppe von Kunden, die ein *Segment* genannt werden und diese basierend auf demografischen oder Umsatz-Kriterien definieren. Weitere Informationen finden Sie unter [Erstellen von Kundensegmenten](create-customer-segments.md).
 3. **Erstellen Sie den Inhalt der Benachrichtigung und versenden sie diesen. **Sie möchten möglicherweise eine Benachrichtigung erstellen, die Ihre Kunden dazu auffordert, Ihre App zu bewerten oder eine Benachrichtigung mit einem Sonderangebot für den Kauf eines Add-On senden.
 
@@ -45,11 +45,11 @@ Sie müssen drei übergeordnete Schritte durchführen, um Ihre Kunden mithilfe v
 Befolgen Sie diese Schritte, um eine Benachrichtigung im Partner Center erstellen und an ein bestimmtes Kundensegment zu senden.
 
 > [!NOTE]
-> Bevor Sie eine app von Partner Center Benachrichtigungen empfangen kann, müssen Sie zuerst die Methode [RegisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) in Ihrer app, um Ihre app zum Empfangen von Benachrichtigungen registrieren aufrufen. Diese Methode ist im [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) verfügbar. Weitere Informationen zum Aufrufen dieser Methode, einschließlich eines Codebeispiels, finden Sie unter [Konfigurieren Ihrer App für benutzerorientierte Pushbenachrichtigungen](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+> Bevor eine app von Partner Center Benachrichtigungen empfangen kann, müssen Sie zuerst die Methode [RegisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) in Ihrer app, um Ihre app zum Empfangen von Benachrichtigungen registrieren aufrufen. Diese Methode ist im [Microsoft Store Services SDK](https://aka.ms/store-em-sdk) verfügbar. Weitere Informationen zum Aufrufen dieser Methode, einschließlich eines Codebeispiels, finden Sie unter [Konfigurieren Ihrer App für benutzerorientierte Pushbenachrichtigungen](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 
 1. Klicken Sie im [Partner Center](https://partner.microsoft.com/dashboard)erweitern Sie den Abschnitt **einbeziehen** , und wählen Sie dann die **Benachrichtigungen**.
 2. Wählen Sie auf der Seite **Benachrichtigungen** die Option **Neue Benachrichtigung** aus.
-3. Wählen Sie im Abschnitt **Wählen Sie eine Vorlage** [Art der Benachrichtigung](#notification-template-types) zu senden, und klicken Sie dann auf **OK**.
+3. Wählen Sie im Abschnitt **Wählen Sie eine Vorlage** die [Art der Benachrichtigung](#notification-template-types) zu senden, und klicken Sie dann auf **OK**.
 4. Verwenden Sie auf der nächsten Seite das Dropdownmenü, um entweder **Einzelne App** oder **Mehrere Apps** auszuwählen, für die Sie eine Benachrichtigung generieren möchten. Sie können nur apps auswählen, die [den Empfang von Benachrichtigungen mithilfe des Microsoft Store Services SDK konfiguriert](../monetize/configure-your-app-to-receive-dev-center-notifications.md)wurden.
 5. Wählen Sie im Abschnitt **Benachrichtigungseinstellungen** einen **Namen** für die Benachrichtigung aus, und wählen Sie (falls zutreffend) anschließend die **Kundengruppe** aus, an die die Benachrichtigung gesendet werden soll. (Benachrichtigungen, die an mehrere Apps gesendet werden, können nur an alle Kunden dieser Apps gesendet werden.) Wenn Sie ein Segment verwenden möchten, das Sie noch nicht bereits erstellt haben, wählen Sie **Neue Kundengruppe erstellen** aus. Beachten Sie, dass es 24Stunden dauert, bis ein neues Segmentfür Benachrichtigungen verfügbar ist. Weitere Informationen finden Sie unter [Erstellen von Kundensegmenten](create-customer-segments.md).
 6. Wenn Sie das Senden der Benachrichtigung festlegen möchten, löschen Sie das Kontrollkästchen **Benachrichtigung sofort senden** und wählen Sie ein bestimmtes Datum und die Uhrzeit aus (in UTC für alle Kunden, es sei denn, Sie geben die lokale Zeitzone jedes Kunden an).
@@ -109,7 +109,7 @@ Sie können ermitteln, wie gut Sie mit den einzelnen Benachrichtigungen Ihre Kun
 ### <a name="to-measure-notification-performance"></a>So messen Sie die Benachrichtigungsleistung
 
 1.  Aktivieren Sie beim Erstellen einer Benachrichtigung im Abschnitt **Benachrichtigungsinhalt** das Kontrollkästchen **Track app launch rate**.
-2.  Rufen Sie in Ihrer app die [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) -Methode zum Partner Center zu benachrichtigen, dass Ihre app in Reaktion auf eine benutzerorientierte Benachrichtigung gestartet wurde. Diese Methode wird vom Microsoft Store Services SDK bereitgestellt. Weitere Informationen zum Aufrufen dieser Methode finden Sie unter [Konfigurieren Ihrer app Partner Center-Benachrichtigungen zu empfangen](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+2.  Rufen Sie in Ihrer app die [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) -Methode zum Partner Center zu benachrichtigen, dass Ihre app in Reaktion auf eine benutzerorientierte Benachrichtigung gestartet wurde. Diese Methode wird vom Microsoft Store Services SDK bereitgestellt. Weitere Informationen zum Aufrufen dieser Methode finden Sie unter [Konfigurieren Ihrer app um Partner Center-Benachrichtigungen zu erhalten](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 
 
 ### <a name="to-view-notification-performance"></a>So zeigen Sie die Benachrichtigungsleistung an
@@ -119,7 +119,7 @@ Wenn Sie die Benachrichtigung und Ihre app Messen der benachrichtigungsleistung 
 Um detaillierte Daten für jede Benachrichtigung zu überprüfen:
 
 1.  Klicken Sie im Partner Center erweitern Sie den Abschnitt **einbeziehen** , und wählen Sie **Benachrichtigungen**.
-2.  Wählen Sie in der Tabelle der vorhandenen Benachrichtigungen **In Bearbeitung** oder **abgeschlossen**, und suchen Sie dann in die allgemeine Leistung der einzelnen Benachrichtigungen finden Sie unter der **Übermittlungsrate** und **Starten der App Rate** Spalte.
+2.  Wählen Sie in der Tabelle der vorhandenen Benachrichtigungen **In Bearbeitung** oder **abgeschlossen**, und betrachten Sie dann in die allgemeine Leistung der einzelnen Benachrichtigungen finden Sie unter der Spalte **Übermittlungsrate** bzw. **App starten Rate** .
 3.  Um detailliertere Leistungsdetails anzuzeigen, wählen Sie einen Benachrichtigungsnamen aus. Im Abschnitt **Lieferstatistik** sehen Sie Daten zu **Anzahl** und **Prozentsatz** für die folgenden **Status**-Typen der Benachrichtigung angezeigt:
     * **Fehlgeschlagen**: Die Benachrichtigung wurde aus einem bestimmten Grund nicht übermittelt. Dies kann z.B. bei einem Problem im Windows-Benachrichtigungsdienst der Fall sein.
     * **Channel Expiration Failure**: die Benachrichtigung konnte nicht übermittelt werden, da der Kanal zwischen der app und Partner Center abgelaufen ist. Dies kann beispielsweise vorkommen, wenn der Kunde Ihre App seit längerem nicht mehr geöffnet hat.
@@ -131,14 +131,14 @@ Um detaillierte Daten für jede Benachrichtigung zu überprüfen:
 So analysieren Sie die Aktivität Benutzerdaten für alle Ihre Benachrichtigungen:
 
 1.  Klicken Sie im Partner Center erweitern Sie den Abschnitt **einbeziehen** , und wählen Sie **Benachrichtigungen**.
-2.  Klicken Sie auf **der Benachrichtigungsseite** auf der Registerkarte **Analysieren** . Diese Registerkarte zeigt die folgenden Daten:
-    * Ansichten von den verschiedenen Benutzerzuständen Aktion für Info-Center-Benachrichtigungen und Popups.
-    * Welt Kartenansichten der Click über Steuersätze für Ihre Popups und die Aktion center Benachrichtigungen.
-3. Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist 30D (30Tage), aber Sie können Daten für 3, 6 oder 12Monate anzeigen, oder für einen benutzerdefinierten Zeitraum, den Sie angeben. Sie können auch die **Filter** , um alle Daten von der app und der Markt zu filtern erweitern.
+2.  Klicken Sie auf der Seite " **Notifications** " auf der Registerkarte " **Analysieren** ". Diese Registerkarte zeigt die folgenden Daten:
+    * Graph-Ansichten von den verschiedenen Benutzerzuständen Aktion für Ihre Popups und Info-Center-Benachrichtigungen.
+    * Welt Kartenansichten der Click-über-Sätze für Ihre Popups und Aktion zentrieren Benachrichtigungen.
+3. Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist 30D (30Tage), aber Sie können Daten für 3, 6 oder 12Monate anzeigen, oder für einen benutzerdefinierten Zeitraum, den Sie angeben. Sie können auch **Filter** , um alle Daten von app und Markt zu filtern erweitern.
 
 ## <a name="translate-your-notifications"></a>Übersetzen Ihrer Benachrichtigungen
 
-Um die Wirkung von Benachrichtigungen zu maximieren, sollten Sie sie in die von den Kunden bevorzugten Sprachen übersetzen. Partner Center erleichtert es Ihnen, Ihre Benachrichtigungen durch die Nutzung der [Microsoft Translator](https://www.microsoft.com/translator/home.aspx) -Dienst automatisch zu übersetzen.
+Um die Wirkung von Benachrichtigungen zu maximieren, sollten Sie sie in die von den Kunden bevorzugten Sprachen übersetzen. Partner Center erleichtert es Ihnen, Ihre Benachrichtigungen automatisch zu übersetzen, durch die Leistungsfähigkeit des [Microsoft Translator](https://www.microsoft.com/translator/home.aspx) -Diensts.
 
 1.  Nachdem Sie die Benachrichtigung in der Standardsprache geschrieben haben, wählen Sie **Sprachen hinzufügen** aus (unterhalb des Menüs **Sprachen** im Abschnitt **Benachrichtigungsinhalt**).
 2.  Wählen Sie im Fenster **Sprachen hinzufügen** die weiteren Sprachen aus, in denen Ihre Benachrichtigungen angezeigt werden sollen, und wählen Sie anschließend **Aktualisieren** aus.

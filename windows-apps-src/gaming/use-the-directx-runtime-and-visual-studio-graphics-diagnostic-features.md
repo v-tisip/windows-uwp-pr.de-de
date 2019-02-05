@@ -6,20 +6,20 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Grafiken, Diagnose, Tools, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: f9fc1f6fa28fa36c876517eb0653693c670282ff
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6e3c48e69dd1ad991a2a04017d4e262e45430504
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945842"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047917"
 ---
 # <a name="graphics-diagnostics-tools"></a>Tools für die Grafikdiagnose
 
 
 
-Mit Windows 10 sind die Grafiken Diagnosetools nun als optionales Feature in Windows zur Verfügung. Installieren Sie das optionale Grafiktoolfeature, um die in der Runtime und in VisualStudio bereitgestellten Grafikdiagnosefeatures für die Entwicklung von DirectX-Apps oder -Spielen zu nutzen:
+Mit Windows 10 stehen die Grafik-Diagnosetools jetzt in Windows als optionales Feature. Installieren Sie das optionale Grafiktoolfeature, um die in der Runtime und in VisualStudio bereitgestellten Grafikdiagnosefeatures für die Entwicklung von DirectX-Apps oder -Spielen zu nutzen:
 
-1.  Wechseln Sie zu **Einstellungen**, wählen Sie **Apps**, und klicken Sie dann auf **optionale Features verwalten**.
+1.  Wechseln Sie zu **Einstellungen**, wählen Sie **Apps**aus, und klicken Sie dann auf **optionale Features verwalten**.
 2.  Klicken Sie auf **Feature hinzufügen**.   
 3.  Wählen Sie in der Liste **Optionale Features** **Grafiktools** aus, und klicken Sie dann auf **Installieren**.
 
@@ -32,7 +32,7 @@ Die Grafikdiagnosefeatures ermöglichen das Erstellen von Direct3D-Debugging-Ger
 ## <a name="related-topics"></a>Verwandte Themen
 
 
-[Übersicht über die Grafikdiagnose in Visual Studio](http://go.microsoft.com/fwlink/p/?LinkID=526382)
+[Übersicht über die Grafikdiagnose in Visual Studio](https://go.microsoft.com/fwlink/p/?LinkID=526382)
 
  
 

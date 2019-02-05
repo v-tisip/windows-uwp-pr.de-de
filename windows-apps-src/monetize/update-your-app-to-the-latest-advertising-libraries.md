@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, AdControl, AdMediatorControl, Migrieren
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 ms.localizationpriority: medium
-ms.openlocfilehash: adac5cfdb1b4a10674fb7173e5b84a86b509f130
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ff0ea54f55803e652964203899f429faf196805e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920167"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048677"
 ---
 # <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a>Aktualisieren Ihrer App auf die neuesten Advertising-Bibliotheken für Banneranzeigen
 
@@ -19,7 +19,7 @@ Am dem 1.April2017 werden Banneranzeigen nicht mehr für Apps bereitgestellt, di
 
 ## <a name="overview"></a>Übersicht
 
-UWP-Apps, die Banneranzeige verwenden, müssen **AdControl** aus der Advertising-Bibliotheken verwenden, die in [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) verteilt werden. Diese SDK-Version unterstützt einen mindestens erforderlichen Satz von Funktionen. Dies umfasst auch die Möglichkeit, HTML5-Rich-Media über die [Mobile Rich Media Ad Interface Definitions (MRAID) 1.0-Spezifikation](http://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_VersionOne.pdf) vom Interactive Advertising Bureau (IAB) zu verarbeiten. Viele unserer Werbekunden wünschen sich diese Funktionen und wir setzen voraus, dass App-Entwickler eine dieser SDK-Versionen verwenden, damit unser App-Ökosystem für Werbekunden attraktiver wird und Ihr Umsatz wächst.
+UWP-Apps, die Banneranzeige verwenden, müssen **AdControl** aus der Advertising-Bibliotheken verwenden, die in [Microsoft Advertising-SDK](https://aka.ms/ads-sdk-uwp) verteilt werden. Diese SDK-Version unterstützt einen mindestens erforderlichen Satz von Funktionen. Dies umfasst auch die Möglichkeit, HTML5-Rich-Media über die [Mobile Rich Media Ad Interface Definitions (MRAID) 1.0-Spezifikation](https://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_VersionOne.pdf) vom Interactive Advertising Bureau (IAB) zu verarbeiten. Viele unserer Werbekunden wünschen sich diese Funktionen und wir setzen voraus, dass App-Entwickler eine dieser SDK-Versionen verwenden, damit unser App-Ökosystem für Werbekunden attraktiver wird und Ihr Umsatz wächst.
 
 Vor der Freigabe dieses SDK wurde die **AdControl**-Klasse in mehreren älteren Advertising-SDK-Versionen angeboten. Diese älteren Advertising-SDK-Versionen werden nicht mehr unterstützt, da sie den oben beschriebenen mindestens erforderlichen Satz von Funktionen nicht unterstützen. Am dem 1.April2017 werden Banneranzeigen nicht mehr für Apps bereitgestellt, die nicht unterstützte Advertising-SDK-Versionen verwenden. Wenn Sie eine App besitzen, die weiterhin eine nicht unterstützte Advertising-SDK-Version verwendet, geschieht Folgendes:
 
@@ -27,14 +27,14 @@ Vor der Freigabe dieses SDK wurde die **AdControl**-Klasse in mehreren älteren 
 
 * Wenn **AdControl** in Ihrer App eine neue Anzeige anfordert, wird ein **ErrorOccurred**-Ereignis des Steuerelements ausgegeben, und die **ErrorCode**-Eigenschaft der Ereignisargumente hat den Wert **NoAdAvailable**.
 
-* Alle Anzeigeneinheiten, die Ihrer App zugeordnet sind, werden deaktiviert. Diese deaktivierten Anzeigeeinheiten nicht aus Ihrem DePartnerv Center-Konto entfernen werden. Wenn Sie Ihre App aktualisieren, damit Sie ein unterstütztes [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) nutzen können, ignorieren Sie diese Anzeigeneinheiten und erstellen Sie neue.
+* Alle Anzeigeneinheiten, die Ihrer App zugeordnet sind, werden deaktiviert. Sie können nicht diese deaktivierten Anzeigeeinheiten nicht aus Ihrem DePartnerv Center-Konto entfernen. Wenn Sie Ihre App aktualisieren, damit Sie ein unterstütztes [Microsoft Advertising-SDK](https://aka.ms/ads-sdk-uwp) nutzen können, ignorieren Sie diese Anzeigeneinheiten und erstellen Sie neue.
 
 * Banneranzeigen werden nicht mehr für Anzeigeneinheiten bereitgestellt, die in mehreren Apps verwendet werden. Stellen Sie sicher, dass Ihre Anzeigeneinheiten jeweils nur in einer App verwendet werden.
 
-Wenn Sie über eine App verfügen (bereits im Store oder noch in Entwicklung), die Banneranzeigen mithilfe von **AdControl** anzeigt, und Sie nicht sicher sind, welches Advertising-SDK von Ihrer App verwendet wird, ermitteln Sie anhand der Anweisungen in diesem Artikel, ob Sie Ihre App auf ein unterstütztes SDK aktualisieren müssen. Wenn Schwierigkeiten auftreten oder Sie Hilfe benötigen, [wenden Sie sich an den Support](http://go.microsoft.com/fwlink/?LinkId=393643).
+Wenn Sie über eine App verfügen (bereits im Store oder noch in Entwicklung), die Banneranzeigen mithilfe von **AdControl** anzeigt, und Sie nicht sicher sind, welches Advertising-SDK von Ihrer App verwendet wird, ermitteln Sie anhand der Anweisungen in diesem Artikel, ob Sie Ihre App auf ein unterstütztes SDK aktualisieren müssen. Wenn Schwierigkeiten auftreten oder Sie Hilfe benötigen, [wenden Sie sich an den Support](https://go.microsoft.com/fwlink/?LinkId=393643).
 
 > [!NOTE]
-> Wenn Ihre App bereits [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) (für UWP-Apps) verwendet müssen für Ihre App keine weiteren Änderungen vorgenommen werden.
+> Wenn Ihre App bereits [Microsoft Advertising-SDK](https://aka.ms/ads-sdk-uwp) (für UWP-Apps) verwendet müssen für Ihre App keine weiteren Änderungen vorgenommen werden.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -76,7 +76,7 @@ Wenn Ihre App eine alte SDK-Version verwendet, führen Sie diese Anweisungen aus
     MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
     ```
 
-3.  Installieren des [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp).
+3.  Installieren des [Microsoft Advertising-SDK](https://aka.ms/ads-sdk-uwp).
 
 ## <a name="part-3-update-your-project"></a>Teil 3: Aktualisieren Ihres Projekts
 

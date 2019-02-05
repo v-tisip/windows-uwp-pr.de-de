@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 79b1889167f3c13aea78c31ec189cfeb7a6f17bc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bf89810f67e16bcfabfc80de48d2dee82c9e0f92
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925685"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048923"
 ---
 # <a name="toast-content-schema"></a>Popupinhaltsschema
 
@@ -40,15 +40,15 @@ ToastContent ist das Objekt der obersten Ebene, das den Inhalt einer Benachricht
 
 | Eigenschaft | Typ | Erforderlich | Beschreibung |
 |---|---|---|---|
-| **Launch**| Zeichenfolge | Falsch | Eine Zeichenfolge, die an die Anwendung übergeben wird, wenn sie durch das Popup aktiviert wird. Das Format und der Inhalt dieser Zeichenfolge werden von der App für eigene Zwecke definiert. Wenn der Benutzer zum Starten der zugeordneten App auf das Popup tippt oder klickt, stellt die Startzeichenfolge der App den Kontext bereit, um dem Benutzer eine Ansicht passend zum Popupinhalt zu ermöglichen, anstatt sie in der Standardgröße starten. |
-| **Visual** | [ToastVisual](#toastvisual) | Wahr | Beschreibt den visuellen Teil der Popupbenachrichtigung. |
-| **Actions** | [IToastActions](#itoastactions) | Falsch | Erstellen Sie optional benutzerdefinierte Aktionen mit Schaltflächen und Eingaben. |
-| **Audio** | [ToastAudio](#toastaudio) | Falsch | Beschreibt den Audioteil der Popupbenachrichtigung. |
-| **ActivationType** | [ToastActivationType](#toastactivationtype) | Falsch | Gibt an, welche Art der Aktivierung verwendet wird, wenn der Benutzer auf den Text dieser Popupbenachrichtigung klickt. |
-| **ActivationOptions** | [ToastActivationOptions](#toastactivationoptions) | Falsch | Neu im Creators Update: zusätzliche Optionen zur Aktivierung der Popupbenachrichtigung. |
-| **Szenario** | [ToastScenario](#toastscenario) | Falsch | Gibt das Szenario an, für das Ihr Popup verwendet wird, wie ein Weckton oder eine Erinnerung. |
-| **DisplayTimestamp** | DateTimeOffset? | Falsch | Neu im Creators Update: Überschreiben Sie den Standardzeitstempel mit einem benutzerdefiniertem Zeitstempel, der anstelle des Zeitpunkts, an dem die Benachrichtigung bei der Windows-Plattform eingegangen ist, den Zeitpunkt der tatsächlichen Übermittlung des Benachrichtigungsinhalts angibt. |
-| **Kopfzeile** | [ToastHeader](#toastheader) | Falsch | Neu im Creators Update: Fügen Sie Ihrer Benachrichtigung eine benutzerdefinierte Kopfzeile hinzu, um mehrere Benachrichtigungen im Info-Center zu gruppieren. |
+| **Launch**| string | false | Eine Zeichenfolge, die an die Anwendung übergeben wird, wenn sie durch das Popup aktiviert wird. Das Format und der Inhalt dieser Zeichenfolge werden von der App für eigene Zwecke definiert. Wenn der Benutzer zum Starten der zugeordneten App auf das Popup tippt oder klickt, stellt die Startzeichenfolge der App den Kontext bereit, um dem Benutzer eine Ansicht passend zum Popupinhalt zu ermöglichen, anstatt sie in der Standardgröße starten. |
+| **Visual** | [ToastVisual](#toastvisual) | true | Beschreibt den visuellen Teil der Popupbenachrichtigung. |
+| **Actions** | [IToastActions](#itoastactions) | false | Erstellen Sie optional benutzerdefinierte Aktionen mit Schaltflächen und Eingaben. |
+| **Audio** | [ToastAudio](#toastaudio) | false | Beschreibt den Audioteil der Popupbenachrichtigung. |
+| **ActivationType** | [ToastActivationType](#toastactivationtype) | false | Gibt an, welche Art der Aktivierung verwendet wird, wenn der Benutzer auf den Text dieser Popupbenachrichtigung klickt. |
+| **ActivationOptions** | [ToastActivationOptions](#toastactivationoptions) | false | Neu im Creators Update: zusätzliche Optionen zur Aktivierung der Popupbenachrichtigung. |
+| **Szenario** | [ToastScenario](#toastscenario) | false | Gibt das Szenario an, für das Ihr Popup verwendet wird, wie ein Weckton oder eine Erinnerung. |
+| **DisplayTimestamp** | DateTimeOffset? | false | Neu im Creators Update: Überschreiben Sie den Standardzeitstempel mit einem benutzerdefiniertem Zeitstempel, der anstelle des Zeitpunkts, an dem die Benachrichtigung bei der Windows-Plattform eingegangen ist, den Zeitpunkt der tatsächlichen Übermittlung des Benachrichtigungsinhalts angibt. |
+| **Kopfzeile** | [ToastHeader](#toastheader) | false | Neu im Creators Update: Fügen Sie Ihrer Benachrichtigung eine benutzerdefinierte Kopfzeile hinzu, um mehrere Benachrichtigungen im Info-Center zu gruppieren. |
 
 
 ### <a name="toastscenario"></a>ToastScenario
@@ -68,7 +68,7 @@ Der visuelle Teil von Popups enthält die Bindungen, die Text, Bilder, adaptiven
 | Eigenschaft | Typ | Erforderlich | Beschreibung |
 |---|---|---|---|
 | **BindingGeneric** | [ToastBindingGeneric](#toastbindinggeneric) | Wahr | Die allgemeine Popupbindung, die auf allen Geräten gerendert werden kann. Diese Bindung ist erforderlich und kann nicht null sein. |
-| **BaseUri** | Uri | Falsch | Eine grundlegende Standard-URL, die mit relativen URLs in Bildquellattributen kombiniert wird. |
+| **BaseUri** | Uri | false | Eine grundlegende Standard-URL, die mit relativen URLs in Bildquellattributen kombiniert wird. |
 | **AddImageQuery** | bool? | Falsch | Legen Sie den Wert auf „Wahr“ fest, um an die in der Popupbenachrichtigung angegebene Bild-URL eine Abfragezeichenfolge anzufügen. Verwenden Sie dieses Attribut, wenn Ihr Server Bilder hostet und Abfragezeichenfolgen verarbeiten kann, indem er entweder basierend auf den Abfragezeichenfolgen eine Bildvariante abruft oder die Abfragezeichenfolge ignoriert und das Bild wie angegeben ohne die Abfragezeichenfolge zurückgibt. Diese Abfragezeichenfolge gibt Skalierung, Kontrasteinstellung und Sprache an. So wird beispielsweise ein in der Benachrichtigung angegebener Wert „www.website.com/images/hello.png“ zu „www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us“ |
 | **Sprache**| Zeichenfolge | Falsch | Das Zielgebietsschema der visuellen Nutzlast bei Verwendung lokalisierter Ressourcen, angegeben als BCP-47-Sprachtags wie z.B. „en-US“ oder „fr-FR“. Dieses Gebietsschema wird von jedem in der Bindung oder dem Text angegebenen Gebietsschema überschrieben. Falls nicht angegeben, wird stattdessen das Gebietsschema des Systems verwendet. |
 
@@ -79,12 +79,12 @@ Die allgemeine Bindung ist die Standardbindung für Popups, und der Ort, an dem 
 | Eigenschaft | Typ | Erforderlich | Beschreibung |
 |---|---|---|---|
 | **Untergeordnete Elemente** | IList<[IToastBindingGenericChild](#itoastbindinggenericchild)> | Falsch | Der Inhalt des Texts des Popups, der Text, Bilder und Gruppen enthalten kann (im Anniversary Update hinzugefügt). Textelemente müssen vor allen anderen Elementen stehen, und nur 3 Textelemente werden unterstützt. Wenn ein Textelement nach einem anderen Element platziert wird, wird es nach oben verschoben oder gelöscht. Außerdem werden bestimmte Texteigenschaften wie HintStyle für die untergeordneten Stammtextelemente nicht unterstützt und können nur in einer AdaptiveSubgroup verwendet werden. Wenn Sie AdaptiveGroup auf Geräten ohne das Anniversary Update verwenden, wird der Gruppeninhalt einfach gelöscht. |
-| **AppLogoOverride** | [ToastGenericAppLogo](#toastgenericapplogo) | Falsch | Ein optionales Logo zum Überschreiben des App-Logos. |
-| **HeroImage** | [ToastGenericHeroImage](#toastgenericheroimage) | Falsch | Eine optionales ausgewähltes Favoritenbild, das auf dem Popup und im Info-Center angezeigt wird. |
-| **Zuordnung** | [ToastGenericAttributionText](#toastgenericattributiontext) | Falsch | Optionaler Zuordnungstext, der am unteren Rand der Popupbenachrichtigung angezeigt wird. |
-| **BaseUri** | Uri | Falsch | Eine grundlegende Standard-URL, die mit relativen URLs in Bildquellattributen kombiniert wird. |
-| **AddImageQuery** | bool? | Falsch | Legen Sie den Wert auf „Wahr“ fest, um an die in der Popupbenachrichtigung angegebene Bild-URL eine Abfragezeichenfolge anzufügen. Verwenden Sie dieses Attribut, wenn Ihr Server Bilder hostet und Abfragezeichenfolgen verarbeiten kann, indem er entweder basierend auf den Abfragezeichenfolgen eine Bildvariante abruft oder die Abfragezeichenfolge ignoriert und das Bild wie angegeben ohne die Abfragezeichenfolge zurückgibt. Diese Abfragezeichenfolge gibt Skalierung, Kontrasteinstellung und Sprache an. So wird beispielsweise ein in der Benachrichtigung angegebener Wert „www.website.com/images/hello.png“ zu „www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us“ |
-| **Sprache**| Zeichenfolge | Falsch | Das Zielgebietsschema der visuellen Nutzlast bei Verwendung lokalisierter Ressourcen, angegeben als BCP-47-Sprachtags wie z.B. „en-US“ oder „fr-FR“. Dieses Gebietsschema wird von jedem in der Bindung oder dem Text angegebenen Gebietsschema überschrieben. Falls nicht angegeben, wird stattdessen das Gebietsschema des Systems verwendet. |
+| **AppLogoOverride** | [ToastGenericAppLogo](#toastgenericapplogo) | false | Ein optionales Logo zum Überschreiben des App-Logos. |
+| **HeroImage** | [ToastGenericHeroImage](#toastgenericheroimage) | false | Eine optionales ausgewähltes Favoritenbild, das auf dem Popup und im Info-Center angezeigt wird. |
+| **Zuordnung** | [ToastGenericAttributionText](#toastgenericattributiontext) | false | Optionaler Zuordnungstext, der am unteren Rand der Popupbenachrichtigung angezeigt wird. |
+| **BaseUri** | Uri | false | Eine grundlegende Standard-URL, die mit relativen URLs in Bildquellattributen kombiniert wird. |
+| **AddImageQuery** | bool? | false | Legen Sie den Wert auf „Wahr“ fest, um an die in der Popupbenachrichtigung angegebene Bild-URL eine Abfragezeichenfolge anzufügen. Verwenden Sie dieses Attribut, wenn Ihr Server Bilder hostet und Abfragezeichenfolgen verarbeiten kann, indem er entweder basierend auf den Abfragezeichenfolgen eine Bildvariante abruft oder die Abfragezeichenfolge ignoriert und das Bild wie angegeben ohne die Abfragezeichenfolge zurückgibt. Diese Abfragezeichenfolge gibt Skalierung, Kontrasteinstellung und Sprache an. So wird beispielsweise ein in der Benachrichtigung angegebener Wert „www.website.com/images/hello.png“ zu „www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us“ |
+| **Sprache**| Zeichenfolge | false | Das Zielgebietsschema der visuellen Nutzlast bei Verwendung lokalisierter Ressourcen, angegeben als BCP-47-Sprachtags wie z.B. „en-US“ oder „fr-FR“. Dieses Gebietsschema wird von jedem in der Bindung oder dem Text angegebenen Gebietsschema überschrieben. Falls nicht angegeben, wird stattdessen das Gebietsschema des Systems verwendet. |
 
 
 ## <a name="itoastbindinggenericchild"></a>IToastBindingGenericChild
@@ -103,12 +103,12 @@ Ein adaptives Textelement. Wenn in ToastBindingGeneric.Children der obersten Ebe
 
 | Eigenschaft | Typ | Erforderlich |Beschreibung |
 |---|---|---|---|
-| **Text** | Zeichenfolge oder [BindableString](#bindablestring) | Falsch | Der Text, der angezeigt werden soll. Unterstützung für Datenbindung, die im Creators Update hinzugefügt wurde, kann aber nur für Elemente der obersten Ebene verwendet werden. |
-| **HintStyle** | [AdaptiveTextStyle](#adaptivetextstyle) | Falsch | Der Stil steuert den Schriftgrad, die Schriftbreite und die Deckkraft des Texts. Kann nur für Textelemente innerhalb einer Gruppe/Untergruppe verwendet werden. |
-| **HintWrap** | bool? | Falsch | Legen Sie diese Option auf „Wahr“ fest, um Textumbruch zu aktivieren. Textelemente der obersten Ebene ignorieren diese Eigenschaft und verwenden immer Textumbruch (Sie können HintMaxLines = 1 verwenden, um den Textumbruch für Textelemente der obersten Ebene zu deaktivieren). Bei Textelementen in Gruppen/Untergruppen ist für Textumbruch standardmäßig „Falsch“ festgelegt. |
-| **HintMaxLines** | int? | Falsch | Die maximale Anzahl der Zeilen, die das Textelement anzeigen darf. |
-| **HintMinLines** | int? | Falsch | Die Mindestanzahl der Zeilen, die das Textelement anzeigen muss. Kann nur für Textelemente innerhalb einer Gruppe/Untergruppe verwendet werden. |
-| **HintAlign** | [AdaptiveTextAlign](#adaptivetextalign) | Falsch | Die horizontale Ausrichtung des Texts. Kann nur für Textelemente innerhalb einer Gruppe/Untergruppe verwendet werden. |
+| **Text** | Zeichenfolge oder [BindableString](#bindablestring) | false | Der Text, der angezeigt werden soll. Unterstützung für Datenbindung, die im Creators Update hinzugefügt wurde, kann aber nur für Elemente der obersten Ebene verwendet werden. |
+| **HintStyle** | [AdaptiveTextStyle](#adaptivetextstyle) | false | Der Stil steuert den Schriftgrad, die Schriftbreite und die Deckkraft des Texts. Kann nur für Textelemente innerhalb einer Gruppe/Untergruppe verwendet werden. |
+| **HintWrap** | bool? | false | Legen Sie diese Option auf „Wahr“ fest, um Textumbruch zu aktivieren. Textelemente der obersten Ebene ignorieren diese Eigenschaft und verwenden immer Textumbruch (Sie können HintMaxLines = 1 verwenden, um den Textumbruch für Textelemente der obersten Ebene zu deaktivieren). Bei Textelementen in Gruppen/Untergruppen ist für Textumbruch standardmäßig „Falsch“ festgelegt. |
+| **HintMaxLines** | int? | false | Die maximale Anzahl der Zeilen, die das Textelement anzeigen darf. |
+| **HintMinLines** | int? | false | Die Mindestanzahl der Zeilen, die das Textelement anzeigen muss. Kann nur für Textelemente innerhalb einer Gruppe/Untergruppe verwendet werden. |
+| **HintAlign** | [AdaptiveTextAlign](#adaptivetextalign) | false | Die horizontale Ausrichtung des Texts. Kann nur für Textelemente innerhalb einer Gruppe/Untergruppe verwendet werden. |
 | **Sprache** | Zeichenfolge | Falsch | Das Zielgebietsschema der XML-Nutzlast, angegeben als BCP-47-Sprachtags wie z.B. „ en-US“ oder „fr-FR“. Das hier angegebene Gebietsschema überschreibt jedes andere– etwa in der Bindung oder im visuellen Element– angegebene Gebietsschema. Wenn dieser Wert eine Literalzeichenfolge ist, wird für dieses Attribut standardmäßig die Sprache der Benutzeroberfläche des Benutzers verwendet. Wenn dieser Wert ein Zeichenfolgenverweis ist, wird für dieses Attribut standardmäßig das Gebietsschema verwendet, das beim Auflösen der Zeichenfolge von Windows-Runtime ausgewählt wurde. |
 
 
@@ -163,17 +163,17 @@ Ein Inlinebild.
 | Eigenschaft | Typ | Erforderlich |Beschreibung |
 |---|---|---|---|
 | **Quelle** | Zeichenfolge | Wahr | Die URL zum Bild. ms-appx, ms-appdata und http werden unterstützt. Im Fall Creators Update kann die Größe der Webbilder 3MB für normale Verbindungen und 1MB für getaktete Verbindungen betragen. Auf Geräten, die noch nicht das Fall Creators Update haben, dürfen Webbilder nicht größer als 200KB sein. |
-| **HintCrop** | [AdaptiveImageCrop](#adaptiveimagecrop) | Falsch | Neu im Anniversary Update: den gewünschten Zuschnitt des Bilds festlegen. |
-| **HintRemoveMargin** | bool? | Falsch | Bilder in Gruppen/Untergruppen verfügen standardmäßig über einen Rand von 8Pixel. Sie können diesen Rand entfernen, indem Sie diese Eigenschaft auf „Wahr“ festlegen. |
+| **HintCrop** | [AdaptiveImageCrop](#adaptiveimagecrop) | false | Neu im Anniversary Update: den gewünschten Zuschnitt des Bilds festlegen. |
+| **HintRemoveMargin** | bool? | false | Bilder in Gruppen/Untergruppen verfügen standardmäßig über einen Rand von 8Pixel. Sie können diesen Rand entfernen, indem Sie diese Eigenschaft auf „Wahr“ festlegen. |
 | **HintAlign** | [AdaptiveImageAlign](#adaptiveimagealign) | Falsch | Die horizontale Ausrichtung des Bilds. Kann nur für Bilder in einer Gruppe/Untergruppe verwendet werden. |
-| **AlternateText** | Zeichenfolge | Falsch | Alternativtext, der das Bild beschreibt; wird für Bedienungshilfen verwendet. |
-| **AddImageQuery** | bool? | Falsch | Legen Sie den Wert auf „Wahr“ fest, um an die in der Popupbenachrichtigung angegebene Bild-URL eine Abfragezeichenfolge anzufügen. Verwenden Sie dieses Attribut, wenn Ihr Server Bilder hostet und Abfragezeichenfolgen verarbeiten kann, indem er entweder basierend auf den Abfragezeichenfolgen eine Bildvariante abruft oder die Abfragezeichenfolge ignoriert und das Bild wie angegeben ohne die Abfragezeichenfolge zurückgibt. Diese Abfragezeichenfolge gibt Skalierung, Kontrasteinstellung und Sprache an. So wird beispielsweise ein in der Benachrichtigung angegebener Wert „www.website.com/images/hello.png“ zu „www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us“ |
+| **AlternateText** | string | Falsch | Alternativtext, der das Bild beschreibt; wird für Bedienungshilfen verwendet. |
+| **AddImageQuery** | bool? | false | Legen Sie den Wert auf „Wahr“ fest, um an die in der Popupbenachrichtigung angegebene Bild-URL eine Abfragezeichenfolge anzufügen. Verwenden Sie dieses Attribut, wenn Ihr Server Bilder hostet und Abfragezeichenfolgen verarbeiten kann, indem er entweder basierend auf den Abfragezeichenfolgen eine Bildvariante abruft oder die Abfragezeichenfolge ignoriert und das Bild wie angegeben ohne die Abfragezeichenfolge zurückgibt. Diese Abfragezeichenfolge gibt Skalierung, Kontrasteinstellung und Sprache an. So wird beispielsweise ein in der Benachrichtigung angegebener Wert „www.website.com/images/hello.png“ zu „www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us“ |
 
 
 ### <a name="adaptiveimagecrop"></a>AdaptiveImageCrop
 Gibt den gewünschten Zuschnitt des Bilds an.
 
-| Wert | Bedeutung |
+| Value | Bedeutung |
 |---|---|
 | **Standardwert** | Standardwert. Zuschneideverhalten wird vom Renderer bestimmt. |
 | **Keine** | Bild wird nicht zugeschnitten. |
@@ -183,7 +183,7 @@ Gibt den gewünschten Zuschnitt des Bilds an.
 ### <a name="adaptiveimagealign"></a>AdaptiveImageAlign
 Gibt die horizontale Ausrichtung für ein Bild an.
 
-| Wert | Bedeutung |
+| Value | Bedeutung |
 |---|---|
 | **Standardwert** | Standardwert. Ausrichtungsverhalten vom Renderer bestimmt. |
 | **Strecken** | Bild wird gestreckt, um die verfügbare Breite (und möglicherweise auch die verfügbare Höhe, je nachdem, wo das Bild platziert wird) auszufüllen. |
@@ -197,7 +197,7 @@ Neu im Anniversary Update: Gruppen geben semantisch an, dass der Inhalt in der G
 
 | Eigenschaft | Typ | Erforderlich |Beschreibung |
 |---|---|---|---|
-| **Untergeordnete Elemente** | IList<[AdaptiveSubgroup](#adaptivesubgroup)> | Falsch | Untergruppen werden als vertikale Spalten angezeigt. Sie müssen Untergruppen verwenden, um Inhalt innerhalb einer AdaptiveGroup bereitzustellen. |
+| **Untergeordnete Elemente** | IList<[AdaptiveSubgroup](#adaptivesubgroup)> | false | Untergruppen werden als vertikale Spalten angezeigt. Sie müssen Untergruppen verwenden, um Inhalt innerhalb einer AdaptiveGroup bereitzustellen. |
 
 
 ## <a name="adaptivesubgroup"></a>AdaptiveSubgroup
@@ -205,9 +205,9 @@ Neu im Anniversary Update: Untergruppen sind vertikale Spalten, die Text und Bil
 
 | Eigenschaft | Typ | Erforderlich |Beschreibung |
 |---|---|---|---|
-| **Untergeordnete Elemente** | IList<[IAdaptiveSubgroupChild](#iadaptivesubgroupchild)> | Falsch | [AdaptiveText](#adaptivetext) und [AdaptiveImage](#adaptiveimage) gültige untergeordnete Elemente von Untergruppen. |
-| **HintWeight** | int? | Falsch | Steuern Sie die Breite dieser Untergruppenspalte, indem Sie die Breite im Verhältnis zu den anderen Untergruppen angeben. |
-| **HintTextStacking** | [AdaptiveSubgroupTextStacking](#adaptivesubgrouptextstacking) | Falsch | Steuern Sie die vertikale Ausrichtung des Inhalts dieser Untergruppe. |
+| **Untergeordnete Elemente** | IList<[IAdaptiveSubgroupChild](#iadaptivesubgroupchild)> | false | [AdaptiveText](#adaptivetext) und [AdaptiveImage](#adaptiveimage) gültige untergeordnete Elemente von Untergruppen. |
+| **HintWeight** | int? | false | Steuern Sie die Breite dieser Untergruppenspalte, indem Sie die Breite im Verhältnis zu den anderen Untergruppen angeben. |
+| **HintTextStacking** | [AdaptiveSubgroupTextStacking](#adaptivesubgrouptextstacking) | false | Steuern Sie die vertikale Ausrichtung des Inhalts dieser Untergruppe. |
 
 
 ### <a name="iadaptivesubgroupchild"></a>IAdaptiveSubgroupChild
@@ -222,7 +222,7 @@ Markierungsschnittstelle für untergeordnete Untergruppenelemente.
 ### <a name="adaptivesubgrouptextstacking"></a>AdaptiveSubgroupTextStacking
 TextStacking gibt die vertikale Ausrichtung des Inhalts an.
 
-| Wert | Bedeutung |
+| Value | Bedeutung |
 |---|---|
 | **Standardwert** | Standardwert. Renderer wählt automatisch die standardmäßige vertikale Ausrichtung aus. |
 | **Oben** | Vertikal oben ausrichten. |
@@ -235,7 +235,7 @@ Neu im Creators Update: die Statusanzeige. Wird nur von Popups auf Desktop, Buil
 
 | Eigenschaft | Typ | Erforderlich | Beschreibung |
 |---|---|---|---|
-| **Titel** | Zeichenfolge oder [BindableString](#bindablestring) | Falsch | Ruft einen optionalen Zeichenfolgetitel auf oder legt diesen fest. Unterstützt die Datenbindung. |
+| **Titel** | Zeichenfolge oder [BindableString](#bindablestring) | false | Ruft einen optionalen Zeichenfolgetitel auf oder legt diesen fest. Unterstützt die Datenbindung. |
 | **Wert** | doppelt oder [AdaptiveProgressBarValue](#adaptiveprogressbarvalue) oder [BindableProgressBarValue](#bindableprogressbarvalue) | Falsch | Ruft den Wert der Statusanzeige auf oder legt diesen fest. Unterstützt die Datenbindung. Die Standardeinstellung ist 0. |
 | **ValueStringOverride** | Zeichenfolge oder [BindableString](#bindablestring) | Falsch | Ruft eine optionale Zeichenfolge auf oder legt diese fest, damit sie anstelle der Standardzeichenfolge in Prozent angezeigt wird. Wenn dies nicht bereitgestellt ist, wird etwas wie "70 %" angezeigt. |
 | **Status** | Zeichenfolge oder [BindableString](#bindablestring) | Wahr | Ruft eine Statuszeichenfolge auf oder legt diese fest (erforderlich), die unter der Statusanzeige auf der linken Seite angezeigt wird. Diese Zeichenfolge sollte den Status des Vorgangs widerspiegeln, z.B. "Herunterladen..." oder "Installieren von..." |
@@ -246,7 +246,7 @@ Eine Klasse, die den Fortschritt der Statusanzeige anzeigt
 
 | Eigenschaft | Typ | Erforderlich | Beschreibung |
 |---|---|---|---|
-| **Wert** | doppelt | Falsch | Ruft den Wert (0,0 – 1,0) ab oder legt diese fest, der den abgeschlossenen Prozentsatz darstellt. |
+| **Wert** | doppelt | false | Ruft den Wert (0,0 – 1,0) ab oder legt diese fest, der den abgeschlossenen Prozentsatz darstellt. |
 | **IsIndeterminate** | bool | Falsch | Ruft den Wert ab, der angibt, ob die Statusanzeige unbestimmt ist, oder legt diesen fest. Wenn dies der Fall ist, wird **Wert** ignoriert. |
 
 
@@ -263,16 +263,16 @@ Ein Logo, das anstelle des App-Logos angezeigt werden soll.
 
 | Eigenschaft | Typ | Erforderlich |Beschreibung |
 |---|---|---|---|
-| **Quelle** | Zeichenfolge | Wahr | Die URL zum Bild. ms-appx, ms-appdata und http werden unterstützt. HTTP-Bilder müssen kleiner als 200KB sein. |
-| **HintCrop** | [ToastGenericAppLogoCrop](#toastgenericapplogocrop) | Falsch | Geben Sie an, wie das Bild zugeschnitten werden soll. |
-| **AlternateText** | Zeichenfolge | Falsch | Alternativtext, der das Bild beschreibt; wird für Bedienungshilfen verwendet. |
-| **AddImageQuery** | bool? | Falsch | Legen Sie den Wert auf „Wahr“ fest, um an die in der Popupbenachrichtigung angegebene Bild-URL eine Abfragezeichenfolge anzufügen. Verwenden Sie dieses Attribut, wenn Ihr Server Bilder hostet und Abfragezeichenfolgen verarbeiten kann, indem er entweder basierend auf den Abfragezeichenfolgen eine Bildvariante abruft oder die Abfragezeichenfolge ignoriert und das Bild wie angegeben ohne die Abfragezeichenfolge zurückgibt. Diese Abfragezeichenfolge gibt Skalierung, Kontrasteinstellung und Sprache an. So wird beispielsweise ein in der Benachrichtigung angegebener Wert „www.website.com/images/hello.png“ zu „www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us“ |
+| **Quelle** | Zeichenfolge | true | Die URL zum Bild. ms-appx, ms-appdata und http werden unterstützt. HTTP-Bilder müssen kleiner als 200KB sein. |
+| **HintCrop** | [ToastGenericAppLogoCrop](#toastgenericapplogocrop) | false | Geben Sie an, wie das Bild zugeschnitten werden soll. |
+| **AlternateText** | string | false | Alternativtext, der das Bild beschreibt; wird für Bedienungshilfen verwendet. |
+| **AddImageQuery** | bool? | false | Legen Sie den Wert auf „Wahr“ fest, um an die in der Popupbenachrichtigung angegebene Bild-URL eine Abfragezeichenfolge anzufügen. Verwenden Sie dieses Attribut, wenn Ihr Server Bilder hostet und Abfragezeichenfolgen verarbeiten kann, indem er entweder basierend auf den Abfragezeichenfolgen eine Bildvariante abruft oder die Abfragezeichenfolge ignoriert und das Bild wie angegeben ohne die Abfragezeichenfolge zurückgibt. Diese Abfragezeichenfolge gibt Skalierung, Kontrasteinstellung und Sprache an. So wird beispielsweise ein in der Benachrichtigung angegebener Wert „www.website.com/images/hello.png“ zu „www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us“ |
 
 
 ### <a name="toastgenericapplogocrop"></a>ToastGenericAppLogoCrop
 Steuert das Zuschneiden des App-Logo-Bilds.
 
-| Wert | Bedeutung |
+| Value | Bedeutung |
 |---|---|
 | **Standardwert** | Beim Zuschneiden wird das Standardverhalten des Renderers verwendet. |
 | **Keine** | Bild wird nicht zugeschnitten, wird quadratisch angezeigt. |
@@ -284,9 +284,9 @@ Ein ausgewähltes Favoritenbild, das auf dem Popup und im Info-Center angezeigt 
 
 | Eigenschaft | Typ | Erforderlich |Beschreibung |
 |---|---|---|---|
-| **Quelle** | Zeichenfolge | Wahr | Die URL zum Bild. ms-appx, ms-appdata und http werden unterstützt. HTTP-Bilder müssen kleiner als 200KB sein. |
-| **AlternateText** | Zeichenfolge | Falsch | Alternativtext, der das Bild beschreibt; wird für Bedienungshilfen verwendet. |
-| **AddImageQuery** | bool? | Falsch | Legen Sie den Wert auf „Wahr“ fest, um an die in der Popupbenachrichtigung angegebene Bild-URL eine Abfragezeichenfolge anzufügen. Verwenden Sie dieses Attribut, wenn Ihr Server Bilder hostet und Abfragezeichenfolgen verarbeiten kann, indem er entweder basierend auf den Abfragezeichenfolgen eine Bildvariante abruft oder die Abfragezeichenfolge ignoriert und das Bild wie angegeben ohne die Abfragezeichenfolge zurückgibt. Diese Abfragezeichenfolge gibt Skalierung, Kontrasteinstellung und Sprache an. So wird beispielsweise ein in der Benachrichtigung angegebener Wert „www.website.com/images/hello.png“ zu „www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us“ |
+| **Quelle** | Zeichenfolge | true | Die URL zum Bild. ms-appx, ms-appdata und http werden unterstützt. HTTP-Bilder müssen kleiner als 200KB sein. |
+| **AlternateText** | string | false | Alternativtext, der das Bild beschreibt; wird für Bedienungshilfen verwendet. |
+| **AddImageQuery** | bool? | false | Legen Sie den Wert auf „Wahr“ fest, um an die in der Popupbenachrichtigung angegebene Bild-URL eine Abfragezeichenfolge anzufügen. Verwenden Sie dieses Attribut, wenn Ihr Server Bilder hostet und Abfragezeichenfolgen verarbeiten kann, indem er entweder basierend auf den Abfragezeichenfolgen eine Bildvariante abruft oder die Abfragezeichenfolge ignoriert und das Bild wie angegeben ohne die Abfragezeichenfolge zurückgibt. Diese Abfragezeichenfolge gibt Skalierung, Kontrasteinstellung und Sprache an. So wird beispielsweise ein in der Benachrichtigung angegebener Wert „www.website.com/images/hello.png“ zu „www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us“ |
 
 
 ## <a name="toastgenericattributiontext"></a>ToastGenericAttributionText
@@ -294,8 +294,8 @@ Zuschreibungstext, der am unteren Rand der Popupbenachrichtigung angezeigt wird.
 
 | Eigenschaft | Typ | Erforderlich | Beschreibung |
 |---|---|---|---|
-| **Text** | Zeichenfolge | Wahr | Der Text, der angezeigt werden soll. |
-| **Sprache** | Zeichenfolge | Falsch | Das Zielgebietsschema der visuellen Nutzlast bei Verwendung lokalisierter Ressourcen, angegeben als BCP-47-Sprachtags wie z.B. „en-US“ oder „fr-FR“. Falls nicht angegeben, wird stattdessen das Gebietsschema des Systems verwendet. |
+| **Text** | Zeichenfolge | true | Der Text, der angezeigt werden soll. |
+| **Sprache** | string | false | Das Zielgebietsschema der visuellen Nutzlast bei Verwendung lokalisierter Ressourcen, angegeben als BCP-47-Sprachtags wie z.B. „en-US“ oder „fr-FR“. Falls nicht angegeben, wird stattdessen das Gebietsschema des Systems verwendet. |
 
 
 ## <a name="itoastactions"></a>IToastActions
@@ -314,9 +314,9 @@ Erstellen Sie Ihre eigenen benutzerdefinierten Aktionen und Eingaben unter Verwe
 
 | Eigenschaft | Typ | Erforderlich | Beschreibung |
 |---|---|---|---|
-| **Eingaben** | IList<[IToastInput](#itoastinput)> | Falsch | Eingaben wie Textfelder und Auswahleingaben. Es sind nur bis zu 5 Eingaben zulässig. |
-| **Schaltflächen** | IList<[IToastButton](#itoastbutton)> | Falsch | Schaltflächen werden nach all den Eingaben (oder neben einer Eingabe, wenn die Schaltfläche als schnelle Antwortschaltfläche verwendet wird) angezeigt. Es sind nur bis zu 5 Eingaben zulässig (oder weniger, wenn Sie auch Kontextmenüelemente besitzen). |
-| **ContextMenuItems** | IList<[ToastContextMenuItem](#toastcontextmenuitem)> | Falsch | Neu im Anniversary Update: benutzerdefinierte Kontextmenüelemente, die zusätzliche Aktionen bereitstellen, wenn der Benutzer mit der rechten Maustaste auf die Benachrichtigung klickt. Es sind nur bis zu 5 Schaltflächen und Kontextmenüelemente *in Kombination* zulässig. |
+| **Eingaben** | IList<[IToastInput](#itoastinput)> | false | Eingaben wie Textfelder und Auswahleingaben. Es sind nur bis zu 5 Eingaben zulässig. |
+| **Schaltflächen** | IList<[IToastButton](#itoastbutton)> | false | Schaltflächen werden nach all den Eingaben (oder neben einer Eingabe, wenn die Schaltfläche als schnelle Antwortschaltfläche verwendet wird) angezeigt. Es sind nur bis zu 5 Eingaben zulässig (oder weniger, wenn Sie auch Kontextmenüelemente besitzen). |
+| **ContextMenuItems** | IList<[ToastContextMenuItem](#toastcontextmenuitem)> | false | Neu im Anniversary Update: benutzerdefinierte Kontextmenüelemente, die zusätzliche Aktionen bereitstellen, wenn der Benutzer mit der rechten Maustaste auf die Benachrichtigung klickt. Es sind nur bis zu 5 Schaltflächen und Kontextmenüelemente *in Kombination* zulässig. |
 
 
 ## <a name="itoastinput"></a>IToastInput
@@ -336,9 +336,9 @@ Ein Textfeld-Steuerelement, in das der Benutzer Text eingeben kann.
 | Eigenschaft | Typ | Erforderlich | Beschreibung |
 |---|---|---|---|
 | **ID** | Zeichenfolge | Wahr | Die ID ist erforderlich und wird verwendet, um dem vom Benutzer eingegebenen Text einem Schlüssel-Wert-Paar von ID/Wert zuzuordnen, das Ihre App später verwendet. |
-| **Titel** | Zeichenfolge | Falsch | Titeltext, der über dem Textfeld angezeigt werden soll. |
-| **PlaceholderContent** | Zeichenfolge | Falsch | Platzhaltertext kann im Textfeld angezeigt werden, wenn der Benutzer noch keinen Text eingegeben hat. |
-| **DefaultInput** | Zeichenfolge | Falsch | Der erste Text, der im Textfeld platziert werden soll. Lassen Sie diesen Wert bei einem leeren Textfeld auf Null. |
+| **Titel** | string | false | Titeltext, der über dem Textfeld angezeigt werden soll. |
+| **PlaceholderContent** | string | false | Platzhaltertext kann im Textfeld angezeigt werden, wenn der Benutzer noch keinen Text eingegeben hat. |
+| **DefaultInput** | string | false | Der erste Text, der im Textfeld platziert werden soll. Lassen Sie diesen Wert bei einem leeren Textfeld auf Null. |
 
 
 ## <a name="toastselectionbox"></a>ToastSelectionBox
@@ -358,8 +358,8 @@ Ein Auswahlfeldelement (ein Element, das der Benutzer aus der Dropdown-Liste aus
 | Eigenschaft | Typ | Erforderlich | Beschreibung |
 |---|---|---|---|
 | **ID** | Zeichenfolge | Wahr | Die ID ist erforderlich und wird verwendet, um dem vom Benutzer eingegebenen Text einem Schlüssel-Wert-Paar von ID/Wert zuzuordnen, das Ihre App später verwendet. |
-| **Titel** | Zeichenfolge | Falsch | Titeltext, der über dem Auswahlfeld angezeigt werden soll. |
-| **DefaultSelectionBoxItemId** | Zeichenfolge | Falsch | Hiermit wird gesteuert, welches Element standardmäßig ausgewählt wird, und auf die ID-Eigenschaft von [ToastSelectionBoxItem](#toastselectionboxitem) Bezug genommen. Wenn Sie diese nicht angeben, wird die Standardauswahl leer sein (Benutzer wird nichts angezeigt). |
+| **Titel** | string | false | Titeltext, der über dem Auswahlfeld angezeigt werden soll. |
+| **DefaultSelectionBoxItemId** | string | false | Hiermit wird gesteuert, welches Element standardmäßig ausgewählt wird, und auf die ID-Eigenschaft von [ToastSelectionBoxItem](#toastselectionboxitem) Bezug genommen. Wenn Sie diese nicht angeben, wird die Standardauswahl leer sein (Benutzer wird nichts angezeigt). |
 | **Artikel** | IList<[ToastSelectionBoxItem](#toastselectionboxitem)> | Falsch | Die Auswahlelemente, die der Benutzer in dieser SelectionBox auswählen kann. Es können nur 5 Elemente hinzugefügt werden. |
 
 
@@ -382,8 +382,8 @@ Eine Schaltfläche, auf die der Benutzer klicken kann.
 |---|---|---|---|
 | **Inhalt** | Zeichenfolge | Wahr | Erforderlich. Der Text, der auf der Schaltfläche angezeigt werden soll. |
 | **Argumente** | Zeichenfolge | Wahr | Erforderlich. Von der App definierte Zeichenfolge mit Argumenten, welche die App später empfängt, wenn der Benutzer auf diese Schaltfläche klickt. |
-| **ActivationType** | [ToastActivationType](#toastactivationtype) | Falsch | Steuert, welche Art der Aktivierung beim Klicken auf diese Schaltfläche verwendet wird. Der Standardwert ist Vordergrund. |
-| **ActivationOptions** | [ToastActivationOptions](#toastactivationoptions) | Falsch | Neu im Creators Update: Ruft eine zusätzliche Optionen zur Aktivierung der Popupschaltfläche auf oder legt diese fest. |
+| **ActivationType** | [ToastActivationType](#toastactivationtype) | false | Steuert, welche Art der Aktivierung beim Klicken auf diese Schaltfläche verwendet wird. Der Standardwert ist Vordergrund. |
+| **ActivationOptions** | [ToastActivationOptions](#toastactivationoptions) | false | Neu im Creators Update: Ruft eine zusätzliche Optionen zur Aktivierung der Popupschaltfläche auf oder legt diese fest. |
 
 
 ### <a name="toastactivationtype"></a>ToastActivationType
@@ -402,7 +402,7 @@ Neu im Creators Update: zusätzliche Optionen für Aktivierung.
 | Eigenschaft | Typ | Erforderlich | Beschreibung |
 |---|---|---|---|
 | **AfterActivationBehavior** | [ToastAfterActivationBehavior](#toastafteractivationbehavior) | Falsch | Neu im Fall Creators Update: Ruft das Verhalten auf, das das Popup verwenden soll, wenn der Benutzer diese Aktion aufruft oder legt es fest. Dies funktioniert nur auf Desktop für [ToastButton](#toastbutton) und [ToastContextMenuItem](#toastcontextmenuitem). |
-| **ProtocolActivationTargetApplicationPfn** | Zeichenfolge | Falsch | Bei Verwendung von *ToastActivationType.Protocol* können Sie optional die Ziel-PFN angeben, sodass die gewünschte App immer gestartet wird, unabhängig davon, ob mehrere Apps zur Behandlung des gleichen Protokoll-Uri registriert sind. |
+| **ProtocolActivationTargetApplicationPfn** | string | false | Bei Verwendung von *ToastActivationType.Protocol* können Sie optional die Ziel-PFN angeben, sodass die gewünschte App immer gestartet wird, unabhängig davon, ob mehrere Apps zur Behandlung des gleichen Protokoll-Uri registriert sind. |
 
 
 ### <a name="toastafteractivationbehavior"></a>ToastAfterActivationBehavior
@@ -421,7 +421,7 @@ Eine systemgesteuerte Erneut erinnern-Schaltfläche, die automatisch das erneute
 
 | Eigenschaft | Typ | Erforderlich | Beschreibung |
 |---|---|---|---|
-| **CustomContent** | Zeichenfolge | Falsch | Optionaler benutzerdefinierter Text, der auf der Schaltfläche angezeigt wird und den standardmäßigen lokalisierten „Erneut erinnern“-Text überschreibt. |
+| **CustomContent** | string | false | Optionaler benutzerdefinierter Text, der auf der Schaltfläche angezeigt wird und den standardmäßigen lokalisierten „Erneut erinnern“-Text überschreibt. |
 
 
 ## <a name="toastbuttondismiss"></a>ToastButtonDismiss
@@ -431,7 +431,7 @@ Eine systemgesteuerte Schließen-Schaltfläche, welche die Benachrichtigung schl
 
 | Eigenschaft | Typ | Erforderlich | Beschreibung |
 |---|---|---|---|
-| **CustomContent** | Zeichenfolge | Falsch | Optionaler benutzerdefinierter Text, der auf der Schaltfläche angezeigt wird und den standardmäßigen lokalisierten „Schließen“-Text überschreibt. |
+| **CustomContent** | string | false | Optionaler benutzerdefinierter Text, der auf der Schaltfläche angezeigt wird und den standardmäßigen lokalisierten „Schließen“-Text überschreibt. |
 
 
 ## <a name="toastactionssnoozeanddismiss"></a>ToastActionsSnoozeAndDismiss
@@ -441,7 +441,7 @@ Erstellt automatisch ein Auswahlfeld für Erneut erinnern-Intervalle und Erneut 
 
 | Eigenschaft | Typ | Erforderlich | Beschreibung |
 |---|---|---|---|
-| **ContextMenuItems** | IList<[ToastContextMenuItem](#toastcontextmenuitem)> | Falsch | Neu im Anniversary Update: benutzerdefinierte Kontextmenüelemente, die zusätzliche Aktionen bereitstellen, wenn der Benutzer mit der rechten Maustaste auf die Benachrichtigung klickt. Sie können nur bis zu 5 Elemente haben. |
+| **ContextMenuItems** | IList<[ToastContextMenuItem](#toastcontextmenuitem)> | false | Neu im Anniversary Update: benutzerdefinierte Kontextmenüelemente, die zusätzliche Aktionen bereitstellen, wenn der Benutzer mit der rechten Maustaste auf die Benachrichtigung klickt. Sie können nur bis zu 5 Elemente haben. |
 
 
 ## <a name="toastcontextmenuitem"></a>ToastContextMenuItem
@@ -451,8 +451,8 @@ Ein Kontextmenüelement-Eintrag.
 |---|---|---|---|
 | **Inhalt** | Zeichenfolge | Wahr | Erforderlich. Der Text, der angezeigt werden soll. |
 | **Argumente** | Zeichenfolge | Wahr | Erforderlich. Von der App definierte Zeichenfolge mit Argumenten, welche die App später nach deren Aktivierung abrufen kann, wenn der Benutzer auf das Menüelement klickt. |
-| **ActivationType** | [ToastActivationType](#toastactivationtype) | Falsch | Steuert, welche Art der Aktivierung beim Klicken auf dieses Menüelement verwendet wird. Der Standardwert ist Vordergrund. |
-| **ActivationOptions** | [ToastActivationOptions](#toastactivationoptions) | Falsch | Neu im Creators Update: zusätzliche Optionen im Zusammenhang mit der Aktivierung des Kontextmenüelements des Popups. |
+| **ActivationType** | [ToastActivationType](#toastactivationtype) | false | Steuert, welche Art der Aktivierung beim Klicken auf dieses Menüelement verwendet wird. Der Standardwert ist Vordergrund. |
+| **ActivationOptions** | [ToastActivationOptions](#toastactivationoptions) | false | Neu im Creators Update: zusätzliche Optionen im Zusammenhang mit der Aktivierung des Kontextmenüelements des Popups. |
 
 
 ## <a name="toastaudio"></a>ToastAudio
@@ -460,7 +460,7 @@ Geben Sie die Audiodaten an, die beim Empfang der Popupbenachrichtigung wiederge
 
 | Eigenschaft | Typ | Erforderlich | Beschreibung |
 |---|---|---|---|
-| **Src** | Uri | Falsch | Die Mediendatei, die anstelle des Standardsounds wiedergegeben werden soll. Es werden nur ms-appx und ms-appdata unterstützt. |
+| **Src** | Uri | false | Die Mediendatei, die anstelle des Standardsounds wiedergegeben werden soll. Es werden nur ms-appx und ms-appdata unterstützt. |
 | **Schleife** | boolesch | Falsch | Legen Sie den Wert auf „Wahr“ fest, wen der Sound so lange wiederholt werden soll, wie das Popup angezeigt wird. Wählen Sie „Falsch“ aus, wenn der Sound nur einmal wiedergegeben werden soll (Standardeinstellung). |
 | **Unbeaufsichtigt** | boolesch | Falsch | „Wahr“, um den Sound stummzuschalten; „Falsch“, um die Wiedergabe des Popupbenachrichtigungs-Sounds zu erlauben (Standardeinstellung). |
 
@@ -471,13 +471,13 @@ Neu im Creators Update: Eine benutzerdefinierte Kopfzeile, die mehrere Benachric
 | Eigenschaft | Typ | Erforderlich | Beschreibung |
 |---|---|---|---|
 | **ID** | Zeichenfolge | Wahr | Ein vom Entwickler erstellter Bezeichner, der diese Kopfzeile eindeutig identifiziert. Wenn zwei Benachrichtigungen die gleiche Kopfzeilen-ID haben, werden sie im Info-Center unter der gleichen Kopfzeile angezeigt. |
-| **Titel** | Zeichenfolge | Wahr | Ein Titel für die Kopfzeile. |
+| **Titel** | string | Wahr | Ein Titel für die Kopfzeile. |
 | **Argumente**| Zeichenfolge | Wahr | Ruft oder legt eine vom Entwickler definierte Zeichenfolge mit Argumenten fest, die an die App zurückgegeben wird, wenn der Benutzer diesen Header anklickt. Darf nicht NULL sein. |
-| **ActivationType** | [ToastActivationType](#toastactivationtype) | Falsch | Steuert, welche Art der Aktivierung beim Klicken auf diesen Header verwendet wird. Der Standardwert ist Vordergrund. Beachten Sie, dass nur Vordergrund und Protokoll unterstützt werden. |
+| **ActivationType** | [ToastActivationType](#toastactivationtype) | false | Steuert, welche Art der Aktivierung beim Klicken auf diesen Header verwendet wird. Der Standardwert ist Vordergrund. Beachten Sie, dass nur Vordergrund und Protokoll unterstützt werden. |
 | **ActivationOptions** | [ToastActivationOptions](#toastactivationoptions) | Falsch | Ruft eine zusätzliche Optionen zur Aktivierung der Popup-Header auf oder legt diese fest. |
 
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Schnellstart: Senden einer lokalen Popupbenachrichtigung und Behandeln der Aktivierung](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10.aspx)
+* [Schnellstart: Senden einer lokalen Popupbenachrichtigung und Behandeln der Aktivierung](https://blogs.msdn.com/b/tiles_and_toasts/archive/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10.aspx)
 * [Benachrichtigungsbibliothek auf GitHub](https://github.com/Microsoft/UWPCommunityToolkit/tree/dev/Notifications)

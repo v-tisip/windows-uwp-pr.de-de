@@ -6,16 +6,16 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0959c9bc09782538cdb15a68c46b0797d4b7d230
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fce2c9230add569c4494b01546f1b3ced81d488b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925652"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048137"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>Bildschirmgrößen und Breakpoints
 
-UWP-Apps können auf jedem Gerät mit Windows 10 ausgeführt werden – z. B. Telefone, Tablets, Desktops, Fernseher und mehr. Mit einer großen Anzahl der geräteziele und Bildschirmgrößen bei Windows 10-Ökosystem, anstatt die Optimierung der Benutzeroberfläche für jedes Gerät empfehlen wir, ein Design für einige schlüsselbreiten (sogenannte "Breakpoints"): 
+UWP-Apps können auf jedem Gerät mit Windows 10 ausgeführt werden – z. B. Telefone, Tablets, Desktops, Fernseher und mehr. Mit einer großen Anzahl der geräteziele und Bildschirmgrößen über das Windows 10-Ökosystem, anstatt die Optimierung der Benutzeroberfläche für jedes Gerät empfehlen wir, ein Design für einige schlüsselbreiten (sogenannte "Breakpoints"): 
 - Klein (kleiner als 640 Pixel)
 - Mittel (641 Pixel bis 1007 Pixel)
 - Groß (1008 Pixel und größer)
@@ -90,7 +90,7 @@ UWP-Apps skalieren Ihre Benutzeroberfläche automatisch, um sicherzustellen, das
 - Verwenden Sie bis zu zwei Spalten/Regionen.
 - Zeigen Sie das Suchfeld an.
 - Legen Sie für [Navigationsleiste](../controls-and-patterns/navigationview.md) den Streifenmodus fest, sodass immer ein schmaler Streifen mit Symbolen angezeigt wird.
-- Ziehen Sie weitere Anpassungen für [TV-Umgebungen](http://go.microsoft.com/fwlink/?LinkId=760736) in Erwägung.
+- Ziehen Sie weitere Anpassungen für [TV-Umgebungen](https://go.microsoft.com/fwlink/?LinkId=760736) in Erwägung.
 
 ### <a name="large"></a>Groß
 - Legen Sie den linken und den rechten Fensterrand auf 24px fest, um eine visuelle Trennung zwischen dem linken und dem rechten Rand des App-Fensters zu erzielen.
@@ -100,6 +100,6 @@ UWP-Apps skalieren Ihre Benutzeroberfläche automatisch, um sicherzustellen, das
 - Platzieren Sie den [Navigationsbereich](../controls-and-patterns/navigationview.md) im angedockten Modus so, dass er immer angezeigt wird.
 
 >[!TIP] 
-> Mit [**Continuum für Smartphones**](http://go.microsoft.com/fwlink/p/?LinkID=699431)können Benutzer kompatible Windows 10 mobile-Geräte mit Monitor, Maus und Tastatur damit ihr Gerät wie verbinden. Berücksichtigen Sie diese neue Funktion beim Entwerfen für bestimmte Breakpoints – ein Mobiltelefon bleibt nicht immer in einer Klasse mit geringer Größe.
+> Mit [**Continuum für Smartphones**](https://go.microsoft.com/fwlink/p/?LinkID=699431)können Benutzer kompatible Windows 10 mobile-Geräte mit Monitor, Maus und Tastatur damit ihr Gerät wie verbinden. Berücksichtigen Sie diese neue Funktion beim Entwerfen für bestimmte Breakpoints – ein Mobiltelefon bleibt nicht immer in einer Klasse mit geringer Größe.
 
 

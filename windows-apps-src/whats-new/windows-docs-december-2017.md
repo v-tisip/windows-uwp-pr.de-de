@@ -5,18 +5,18 @@ keywords: Neuigkeiten, Update, Features, Anleitungen für Entwickler, Windows10,
 ms.date: 12/14/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 52a60189d7fba39709aa679dbff79551b151e5a4
-ms.sourcegitcommit: b66c5ccbf519b99a432c83c890436a044fc891df
+ms.openlocfilehash: a79edb39cc4bfa5794d79d68f4fb8d5b0e976105
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "8992614"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050633"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>Neuigkeiten in der Windows-Entwicklerdokumentation im Dezember 2017
 
 Die Entwicklerdokumentation für die Windows-Plattform wird ständig mit Informationen über neue Features für Entwickler aktualisiert. Die folgenden Featureübersichten, Entwicklerleitfäden und Beispiele wurden nach der Veröffentlichung des Fall Creators Update bereitgestellt und enthalten neue oder aktualisierte Informationen für Windows-Entwickler.
 
-Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/create-uwp-apps.md) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](../porting/index.md) vertraut machen.
+Nach der [Installation der Tools und des SDKs](https://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/create-uwp-apps.md) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](../porting/index.md) vertraut machen.
 
 ## <a name="features"></a>Features
 
@@ -46,7 +46,7 @@ Fügen Sie auf Geräten, die Interaktionen per Fingereingabe unterstützen, die 
 
 Das „Microsoft Collaborate”-Portal bietet Tools und Dienste, um die Zusammenarbeit der Entwickler im Microsoft-Ökosystem durch die Freigabe von Engineering Systems-Arbeitsaufgaben (Fehler, Features usw.) und die Verteilung von Inhalten (Builds, Dokumente, Spezifikationen). [Weitere Informationen](https://docs.microsoft.com/en-us/collaborate).
 
-![Microsoft Collaborate im Partner Center](images/microsoft_collaborate_screenshot.PNG)
+![Microsoft im Partner Center zusammenarbeiten](images/microsoft_collaborate_screenshot.PNG)
 
 ### <a name="package-desktop-applications-with-uwp-projects"></a>Paket-Desktopanwendungen mit UWP-Projekten
 

@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows10, uwp, debuggen, testen, leistung
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f58485b6f6829b9eec0495cce088304b181a2b1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 606ab4489b86b1fbba7346b4a503339c4c19f7d4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940672"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048317"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>Bereitstellen und Debuggen von UWP-Apps
 
 
 Dieser Artikel führt Sie Schritt für Schritt durch die Ausrichtung Ihrer Apps auf verschiedene Bereitstellungs- und Debugziele.
 
-Microsoft Visual Studio ermöglicht Ihnen das Bereitstellen und Debuggen Ihrer apps universelle Windows-Plattform (UWP) auf einer Vielzahl von Windows 10-Geräten. Das Erstellen und Registrieren der App auf dem Zielgerät wird von Visual Studio abgewickelt.
+Microsoft Visual Studio ermöglicht Ihnen das Bereitstellen und Debuggen Ihrer universellen Windows-Plattform (UWP) apps auf einer Vielzahl von Windows 10-Geräte. Das Erstellen und Registrieren der App auf dem Zielgerät wird von Visual Studio abgewickelt.
 
 ## <a name="picking-a-deployment-target"></a>Auswählen eines Bereitstellungsziels
 
@@ -45,7 +45,7 @@ Bei der Auswahl von **Eigenen Code zunächst nicht starten, sondern debuggen** w
 UWP-Apps können unter Windows8.1 oder höher entwickelt und kompiliert werden. Sie müssen jedoch unter Windows10 ausgeführt werden. Wenn Sie eine UWP-App auf einem PC unter Windows8.1 entwickeln, können Sie eine auf einem anderen Windows10-Gerät ausgeführte UWP-App remote debuggen. Der Host und der Zielcomputer müssen sich im selben LAN befinden. Laden Sie hierzu auf beiden Computern die [Remotetools für Visual Studio](https://www.visualstudio.com/downloads/) herunter, und installieren Sie sie. Die installierte Version muss der installierten Version von Visual Studio entsprechen. Die ausgewählte Architektur der Auswahl (x86, x64) muss mit der Architektur der Ziel-App übereinstimmen.   
 
 ## <a name="package-layout"></a>Paketlayout
-Ab Visual Studio 2015 Update 3 wurde für Entwickler zum Angeben des Pfads Layout für ihre UWP-apps die Option hinzugefügt. Hiermit wird festgelegt, an welchen Ort auf dem Datenträger das Paketlayout beim Erstellen der App kopiert wird. In der Standardeinstellung wird diese Eigenschaft relativ zum Stammverzeichnis des Projekts festgelegt. Wenn Sie diese Eigenschaft nicht ändern, entspricht das Verhalten dem der früheren Versionen von Visual Studio.
+Ab Visual Studio 2015 Update 3 haben wir die Option für Entwickler zum Angeben des Pfads Layout für ihre UWP-apps hinzugefügt. Hiermit wird festgelegt, an welchen Ort auf dem Datenträger das Paketlayout beim Erstellen der App kopiert wird. In der Standardeinstellung wird diese Eigenschaft relativ zum Stammverzeichnis des Projekts festgelegt. Wenn Sie diese Eigenschaft nicht ändern, entspricht das Verhalten dem der früheren Versionen von Visual Studio.
 
 Diese Eigenschaft kann in den **Debug**-Eigenschaften des Projekts geändert werden.
 
@@ -123,7 +123,7 @@ Für die Bereitstellung auf Remotecomputern gibt es drei Authentifizierungsmodi:
 - **Ohne**: Dieser Authentifizierungsmodus sollte nur für die Bereitstellung auf Remote-PCs (Desktop oder Laptop) verwendet werden, auf denen die Remotetools für Visual Studio ausgeführt werden. Verwenden Sie diese Authentifizierungsmoduseinstellung, wenn Sie einen Testcomputer in einer Umgebung eingerichtet haben, bei der die Anmeldung über ein Testkonto erfolgte und keine Anmeldeinformationen eingegeben werden können. Die Remotedebuggereinstellungen müssen so festgelegt sein, dass sie den Modus „Keine Authentifizierung“ akzeptieren.
 
 ## <a name="advanced-remote-deployment-options"></a>Erweiterte Remotebereitstellungsoptionen
-Wie der Version von Visual Studio 2015 Update 3 und Windows 10 Anniversary Update, stehen Optionen neue erweiterte remote-Bereitstellung für bestimmte Windows 10-Geräte. Die erweiterten Optionen für Remotebereitstellung finden Sie im Menü **Debuggen** für die Projekteigenschaften.
+Wie der Version von Visual Studio 2015 Update 3 und Windows 10 Anniversary Update, stehen Optionen neue erweiterte Remotebereitstellung für bestimmte Windows 10-Geräte. Die erweiterten Optionen für Remotebereitstellung finden Sie im Menü **Debuggen** für die Projekteigenschaften.
 
 Zu den neuen Eigenschaften zählen:
 * Bereitstellungstyp
@@ -132,7 +132,7 @@ Zu den neuen Eigenschaften zählen:
 
 ### <a name="requirements"></a>Anforderungen
 Um die erweiterten Remotebereitstellungsoptionen verwenden zu können, müssen folgende Anforderungen erfüllt sein:
-* Visual Studio 2015 Update 3 oder einige Visual Studio höher oder höher installiert mit Windows 10 Tools 1.4.1 (einschließlich Windows 10 Anniversary Update SDK) haben wir empfehlen, dass Sie die neueste Version von Visual Studio mit Updates verwenden, um sicherzustellen, dass Sie alle erhalten die neueste Funktionen für Entwicklung und Sicherheit.
+* Visual Studio 2015 Update 3 oder einigen neueren Visual Studio Version installiert mit Windows 10 Tools 1.4.1 oder höher (einschließlich Windows 10 Anniversary Update SDK) haben wir empfehlen, dass Sie die neueste Version von Visual Studio mit Updates verwenden, um sicherzustellen, dass Sie alle erhalten die neueste Funktionen für Entwicklung und Sicherheit.
 * Ziel ist ein Xbox-Remotegerät mit Windows10 Anniversary Update oder ein PC mit Windows10 Creators Update. 
 * Der universelle Authentifizierungsmodus muss verwendet werden.
 
@@ -177,20 +177,20 @@ Beim Registrieren des Geräts über das Netzwerk können Sie **Alle Dateien auf 
 > [!NOTE]
 > **Registrieren des Layouts über das Netzwerk** wird derzeit für Xbox mit Windows10 Anniversary Update und PCs mit Windows 10 Creators Update unterstützt.
 
-Auf dem Remotegerät, das Layout je nach Gerätefamilie am folgenden Standardspeicherort registriert: `Xbox: \\MY-DEVKIT\DevelopmentFiles\XrfsFiles` – bei dieser eine symbolische Verknüpfung mit der **paketregistrierungspfad** PC keinen symbolischen Link und stattdessen das Paket **direkt registriert ist Registrierung Pfad**
+Auf dem Remotegerät, das Layout je nach Gerätefamilie am folgenden Standardspeicherort registriert: `Xbox: \\MY-DEVKIT\DevelopmentFiles\XrfsFiles` – bei dieser eine symbolische Verknüpfung mit der **paketregistrierungspfad** PC verwendet keine symbolische und stattdessen das Paket **direkt registriert ist Registrierung Pfad**
 
 
 ## <a name="debugging-options"></a>Debugoptionen
 
-Unter Windows 10 die startleistung von UWP-apps verbessern, indem proaktiv starten und dann eine Technik [Vorabstart](https://msdn.microsoft.com/library/windows/apps/Mt593297)apps anhalten. Viele Apps sind in diesem Modus sofort funktionsfähig, das Verhalten einiger Apps muss jedoch möglicherweise angepasst werden. Um das Debuggen von Problemen in diesen Codepfaden zu erleichtern, können Sie das Debuggen der App von Visual Studio im Vorabstartmodus starten.
+Unter Windows 10 die startleistung von UWP-apps verbessern, indem Sie proaktiv starten und dann als bezeichnete Technik [Vorabstart](https://msdn.microsoft.com/library/windows/apps/Mt593297)apps anhalten. Viele Apps sind in diesem Modus sofort funktionsfähig, das Verhalten einiger Apps muss jedoch möglicherweise angepasst werden. Um das Debuggen von Problemen in diesen Codepfaden zu erleichtern, können Sie das Debuggen der App von Visual Studio im Vorabstartmodus starten.
 
-Das Debuggen wird sowohl von einem Visual Studio-Projekt (**Debuggen** -&gt; **Andere Debugziele** -&gt; **Vorabstart der universellen Windows-App debuggen**) als auch für bereits auf dem Computer installierte Apps (**Debuggen** -&gt; **Andere Debugziele** -&gt; **Installiertes App-Paket debuggen** mit aktiviertem Kontrollkästchen **App mit Vorabstart aktivieren**) unterstützt. Weitere Informationen finden Sie unter [Debuggen des UWP-Vorabstarts](http://go.microsoft.com/fwlink/p/?LinkId=717245).
+Das Debuggen wird sowohl von einem Visual Studio-Projekt (**Debuggen** -&gt; **Andere Debugziele** -&gt; **Vorabstart der universellen Windows-App debuggen**) als auch für bereits auf dem Computer installierte Apps (**Debuggen** -&gt; **Andere Debugziele** -&gt; **Installiertes App-Paket debuggen** mit aktiviertem Kontrollkästchen **App mit Vorabstart aktivieren**) unterstützt. Weitere Informationen finden Sie unter [Debuggen des UWP-Vorabstarts](https://go.microsoft.com/fwlink/p/?LinkId=717245).
 
 Sie können die folgenden Bereitstellungsoptionen auf der Eigenschaftenseite **Debuggen** des Startprojekts festlegen:
 
 - **Lokales Netzwerkloopback zulassen**
 
-  Aus Sicherheitsgründen darf eine UWP-App, die mit der Standardmethode installiert wurde, keine Netzwerkaufrufe an das Gerät senden, auf dem sie installiert ist. Für die bereitgestellte App erstellt die Visual Studio-Bereitstellung standardmäßig eine Ausnahme von dieser Regel. Diese Ausnahme macht es möglich, Kommunikationsverfahren auf einem einzelnen Computer zu testen. Bevor Sie Ihre app im Microsoft Store übermitteln, sollten Sie Ihre app ohne die Ausnahme testen.
+  Aus Sicherheitsgründen darf eine UWP-App, die mit der Standardmethode installiert wurde, keine Netzwerkaufrufe an das Gerät senden, auf dem sie installiert ist. Für die bereitgestellte App erstellt die Visual Studio-Bereitstellung standardmäßig eine Ausnahme von dieser Regel. Diese Ausnahme macht es möglich, Kommunikationsverfahren auf einem einzelnen Computer zu testen. Bevor Sie Ihre app an den Microsoft Store übermitteln, sollten Sie Ihre app ohne die Ausnahme testen.
 
   So entfernen Sie die Netzwerkloopback-Ausnahme aus der App
 
@@ -201,12 +201,12 @@ Sie können die folgenden Bereitstellungsoptionen auf der Eigenschaftenseite **D
 
   So konfigurieren Sie die Bereitstellung für das automatische Starten einer Debugsitzung beim Starten der App
 
-  -   Aktivieren Sie das Kontrollkästchen **nicht starten, sondern Debuggen Sie eigenen Code beim Starten** , auf der Eigenschaftenseite c# und Visual Basic**Debuggen** .
+  -   Aktivieren Sie auf der Eigenschaftenseite c# und Visual Basic**Debuggen** das Kontrollkästchen **nicht starten, sondern Debuggen Sie eigenen Code beim Starten** .
   -   Legen Sie den Wert **Anwendung starten** auf der Eigenschaftenseite **Debuggen** für JavaSCript und C++ auf **Ja** fest.
 
 ## <a name="symbols"></a>Symbole
 
-Symboldateien enthalten eine Vielzahl von Daten, die sehr hilfreich beim Debuggen von Code sind (z.B. Variablen, Funktionsnamen und Adressen von Einsprungspunkten). Mit diesen Daten können Sie die Ausnahmen und Ausführungsreihenfolge von Aufruflisten besser überblicken. Über den [Microsoft-Symbolserver](http://msdl.microsoft.com/download/symbols) stehen Symbole für die meisten Windows-Varianten zur Verfügung. Für schnellere Offline-Lookups können Sie jedoch auch unter [Herunterladen von Windows-Symbolpaketen](http://aka.ms/winsymbols) heruntergeladen werden.
+Symboldateien enthalten eine Vielzahl von Daten, die sehr hilfreich beim Debuggen von Code sind (z.B. Variablen, Funktionsnamen und Adressen von Einsprungspunkten). Mit diesen Daten können Sie die Ausnahmen und Ausführungsreihenfolge von Aufruflisten besser überblicken. Über den [Microsoft-Symbolserver](https://msdl.microsoft.com/download/symbols) stehen Symbole für die meisten Windows-Varianten zur Verfügung. Für schnellere Offline-Lookups können Sie jedoch auch unter [Herunterladen von Windows-Symbolpaketen](https://aka.ms/winsymbols) heruntergeladen werden.
 
 Wählen Sie zum Festlegen von Symboloptionen für Visual Studio **Extras > Optionen** aus, und navigieren Sie im Dialogfeld zu **Debuggen > Symbole**.
 
@@ -223,7 +223,7 @@ Mit `‘;’` als Trennzeichen oder dem Befehl `.sympath+` können Sie mehrere P
 
 ## <a name="windbg"></a>WinDbg
 
-WinDbg ist ein leistungsstarker Debugger, der als Teil der Debugtools für Windows bereitgestellt wird (Letzteres ist des [Windows SDK](http://go.microsoft.com/fwlink/p/?LinkID=271979)). Die Windows-SDK-Installation ermöglicht die Installation der Debugtools für Windows als eigenständiges Produkt. WinDbg ist beim Debuggen von systemeigenem Code sehr hilfreich. Es wird jedoch nicht für Apps empfohlen, die in verwaltetem Code oder in HTML5 geschrieben wurden.
+WinDbg ist ein leistungsstarker Debugger, der als Teil der Debugtools für Windows bereitgestellt wird (Letzteres ist des [Windows SDK](https://go.microsoft.com/fwlink/p/?LinkID=271979)). Die Windows-SDK-Installation ermöglicht die Installation der Debugtools für Windows als eigenständiges Produkt. WinDbg ist beim Debuggen von systemeigenem Code sehr hilfreich. Es wird jedoch nicht für Apps empfohlen, die in verwaltetem Code oder in HTML5 geschrieben wurden.
 
 Um WinDbg mit UWP-Apps zu verwenden, müssen Sie zunächst die Prozesslebensdauer-Verwaltung (Process Lifetime Management, PLM) für Ihr App-Paket mit PLMDebug deaktivieren (siehe [Test- und Debugtools für die Prozesslebensdauer-Verwaltung (PLM)](testing-debugging-plm.md).
 

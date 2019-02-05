@@ -6,12 +6,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, Video, Planer, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: 29e2c46636445adac496d0f2149e956c5703c20d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 69fef2bc5deb21be8685badb0cf18f38769170cb
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934785"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045073"
 ---
 # <a name="show-ads-in-video-content"></a>Anzeigen von Werbung in Videoinhalten
 
@@ -26,7 +26,7 @@ Werbung für Videoinhalte variiert in Abhängigkeit davon, ob das Programm kürz
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-* Installieren Sie das [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) mit Visual Studio2015 oder einer neueren Version.
+* Installieren Sie das [Microsoft Advertising-SDK](https://aka.ms/ads-sdk-uwp) mit Visual Studio2015 oder einer neueren Version.
 
 * In Ihrem Projekt muss das [MediaPlayer](https://github.com/Microsoft/TVHelpers/wiki/MediaPlayer-Overview)-Steuerelement verwendet werden, um die Videoinhalte bereitstellen zu können, für die die Anzeigen eingeplant werden. Dieses Steuerelement ist in der Bibliotheksammlung [TVHelpers](https://github.com/Microsoft/TVHelpers) von Microsoft auf GitHub verfügbar.
 

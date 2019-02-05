@@ -9,33 +9,33 @@ f1_keywords:
 - vs.packagewizard
 - vs.storeassociationwizard
 ms.localizationpriority: medium
-ms.openlocfilehash: dc5f033737e36bd5a891543fbad6b3eba933f052
-ms.sourcegitcommit: 62bc4936ca8ddf1fea03d43a4ede5d14a5755165
+ms.openlocfilehash: f2e89490a76c9174c1e938466bf1fbcc9cc13455
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "8991626"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045954"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Verpacken einer UWP-App mit Visual Studio
 
 Um Ihre Universelle Windows Plattform (UWP)-App zu verkaufen oder an andere Benutzer zu verteilen, müssen Sie es verpacken. Wenn Sie Ihre App nicht über den Microsoft Store verteilen möchten, können Sie das App-Paket direkt auf einem Gerät querladen oder über [Web Install](installing-UWP-apps-web.md) verteilen. In diesem Artikel wird das Konfigurieren, Erstellen und Testen von UWP-App-Paketen mit Visual Studio beschrieben. Weitere Informationen zum Verwalten und Bereitstellen von branchenspezifischen Apps (Line-of-Business, LOB) finden Sie unter [Enterprise-App-Verwaltung](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management).
 
-In Windows 10 können Sie ein app-Paket oder app-Bündel, eine vollständige app-paketuploaddatei in das [Partner Center](https://partner.microsoft.com/dashboard)übermitteln. Dieser Optionen wird das Übermitteln einer app-paketuploaddatei die beste Erfahrung bieten.
+In Windows 10 können Sie ein app-Paket, app-Bündel oder eine vollständige app-paketuploaddatei in das [Partner Center](https://partner.microsoft.com/dashboard)übermitteln. Diese Optionen werden Übermitteln einer app-paketuploaddatei optimale erzielt.
 
 ## <a name="types-of-app-packages"></a>App-Pakettypen
 
-- **App-Paket (.appx oder .msix)**  
-    Eine Datei, die Ihre App in einem Format enthält, das auf einem Gerät quergeladen werden kann. Jede einzelne app-Paket-Datei, die von Visual Studio erstellt ist **nicht** dafür vorgesehen, in das Partner Center übermittelt werden und für das querladen und nur zu Testzwecken verwendet werden soll. Wenn Sie Ihre app in das Partner Center übermitteln möchten, verwenden Sie die app-paketuploaddatei.  
+- **App-Paket (AppX oder .msix)**  
+    Eine Datei, die Ihre App in einem Format enthält, das auf einem Gerät quergeladen werden kann. Jede einzelne app-Paket-Datei, die von Visual Studio erstellt ist **nicht** dafür vorgesehen, in das Partner Center übermittelt werden und sollte für das querladen und nur zu Testzwecken verwendet werden. Wenn Sie Ihre app in das Partner Center übermitteln möchten, verwenden Sie die app-paketuploaddatei.  
 
 - **App-Bündel (.appxbundle oder .msixbundle)**  
     Ein App-Bündel ist ein Pakettyp, der mehrere App-Pakete enthalten kann, von denen jedes so erstellt wurde, dass es eine bestimmte Gerätearchitektur unterstützt. Beispielsweise kann ein App-Bündel drei separate App-Pakete für die Konfigurationen x86, x64 und ARM enthalten. App-Bündel sollten nach Möglichkeit generiert werden, da sie ermöglichen, dass Ihre App auf den verschiedensten Geräten verfügbar ist.  
 
-- **App-Paketuploaddatei (.appxupload oder .msixupload)**  
-    Eine einzelne Datei, die mehrere App-Pakete oder ein App-Bündel zur Unterstützung verschiedener Prozessorarchitekturen enthalten kann. Die app-paketuploaddatei enthält auch eine Symboldatei für [app-Leistung analysieren](https://docs.microsoft.com/windows/uwp/publish/analytics) , nachdem Ihre app im Microsoft Store veröffentlicht wurde. Diese Datei wird automatisch für Sie erstellt werden, wenn Sie Ihre app mit Visual Studio Verpacken, um sie in das Partner Center für die Veröffentlichung zu übermitteln.
+- **App-Paketuploaddatei (".appxupload" oder .msixupload)**  
+    Eine einzelne Datei, die mehrere App-Pakete oder ein App-Bündel zur Unterstützung verschiedener Prozessorarchitekturen enthalten kann. Die app-paketuploaddatei enthält auch eine Symboldatei für [app-Leistung analysieren](https://docs.microsoft.com/windows/uwp/publish/analytics) , nachdem Ihre app im Microsoft Store veröffentlicht wurde. Diese Datei wird automatisch für Sie erstellt werden, wenn Sie Ihre app mit Visual Studio Verpacken, um es in das Partner Center für die Veröffentlichung zu übermitteln.
 
 Hier sehen Sie eine Übersicht über die Schrittezum Vorbereiten und Erstellen eines App-Pakets:
 
-1.  [Vor dem Verpacken der App](#before-packaging-your-app). Befolgen Sie diese Schritte, um sicherzustellen, dass Ihre app zum Partner Center verpackt werden kann.
+1.  [Vor dem Verpacken der App](#before-packaging-your-app). Befolgen Sie diese Schritte aus, um sicherzustellen, dass Ihre app an Partner Center verpackt werden kann.
 2.  [Konfigurieren eines App-Pakets](#configure-an-app-package). Verwenden Sie den Visual Studio Manifest-Designer, um das Paket zu konfigurieren. Fügen Sie beispielsweise Kachelbilder hinzu, und wählen Sie die von Ihrer App unterstützten Ausrichtungen aus.
 3.  [Erstellen einer App-Paketuploaddatei](#create-an-app-package-upload-file). Verwenden Sie den Visual Studio App-Verpackungsassistenten, um ein App-Paket zu erstellen. Zertifizieren Sie dann Ihr Paket mit dem Zertifizierungskit für Windows-Apps.
 4.  [Querladen des App-Pakets](#sideload-your-app-package). Nach dem Querladen Ihrer App auf ein Gerät können Sie testen, ob sie erwartungsgemäß funktioniert.
@@ -46,7 +46,7 @@ Nachdem Sie die vorangehenden Schritte abgeschlossen haben, können Sie Ihre App
 
 1.  **Testen der App.** Bevor Sie Ihre app für die Übermittlung Partner Center Verpacken, stellen Sie sicher, dass sie erwartungsgemäß funktioniert auf allen gerätefamilien, die Sie unterstützen möchten. Diese Gerätefamilien umfassen Desktop-, Mobile-, Surface Hub-, Xbox-, IoT- und andere Geräte. Weitere Informationen zum Bereitstellen und Testen Ihrer app mit Visual Studio finden Sie unter [Bereitstellen und Debuggen von UWP-apps](../debug-test-perf/deploying-and-debugging-uwp-apps.md).
 2.  **Optimieren der App.** Sie können die Profilerstellungs- und Debugtools von Visual Studio verwenden, um die Leistung Ihrer UWP-App zu optimieren. Zu diesen Tools gehören das Zeitachsentool für „Reaktionsfähigkeit der Benutzeroberfläche“, das Speichernutzungstool, das CPU-Auslastungstool und viele mehr. Weitere Informationen zur Verwendung dieser Tools finden Sie im Thema [Profilerstellungsfeature-Tour](https://docs.microsoft.com/visualstudio/profiling/profiling-feature-tour).
-3.  **Überprüfen der .NET Native-Kompatibilität (für VB- und C#-Apps).** Mit der Universelle Windows-Plattform wurde ein neuer systemeigener Compiler eingeführt, der die Laufzeitleistung Ihrer App verbessert. Diese Änderung macht es erforderlich, dass Sie Ihre App in dieser Kompilierungsumgebung testen. Standardmäßig aktiviert die **Release**-Buildkonfiguration die .NET Native-Toolkette. Daher ist es wichtig, die App und das erwartete Verhalten mit dieser **Release**-Konfiguration zu testen. Einige häufige Debugprobleme, die bei .NET Native auftreten können, werden [Native .NET Windows Universal Apps debuggen](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx) ausführlich erläutert.
+3.  **Überprüfen der .NET Native-Kompatibilität (für VB- und C#-Apps).** Mit der Universelle Windows-Plattform wurde ein neuer systemeigener Compiler eingeführt, der die Laufzeitleistung Ihrer App verbessert. Diese Änderung macht es erforderlich, dass Sie Ihre App in dieser Kompilierungsumgebung testen. Standardmäßig aktiviert die **Release**-Buildkonfiguration die .NET Native-Toolkette. Daher ist es wichtig, die App und das erwartete Verhalten mit dieser **Release**-Konfiguration zu testen. Einige häufige Debugprobleme, die bei .NET Native auftreten können, werden [Native .NET Windows Universal Apps debuggen](https://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx) ausführlich erläutert.
 
 ## <a name="configure-an-app-package"></a>Konfigurieren eines App-Pakets
 
@@ -72,16 +72,16 @@ Visual Studio verfügt über einen Manifest-Designer, mit dem Sie die Manifestda
 
 4.  Speichern Sie die Datei **Package.appxmanifest**, nachdem Sie die erforderlichen Bearbeitungsschritte für die App vorgenommen haben.
 
-Wenn Sie Ihre app über den Microsoft Store verteilen, kann Visual Studio Ihr Paket mit dem Store zuordnen. Zu diesem Zweck mit der rechten Maustaste in der Name des Projekts im Projektmappen-Explorer, und wählen Sie **Store**->**App mit Store verknüpfen**. Sie können auch im Assistenten für die **App-Pakete erstellen** dazu die im folgenden Abschnitt beschrieben wird. Wenn Sie Ihre App zuordnen, werden einige Felder der Registerkarte „Verpacken“ im Manifest-Designer automatisch aktualisiert.
+Wenn Sie Ihre app über den Microsoft Store verteilen, kann Visual Studio Ihr Paket mit dem Store zuordnen. Zu diesem Zweck mit der rechten Maustaste im Projektmappen-Explorer des Projektnamen, und wählen Sie **Store**->**App mit Store verknüpfen**. Sie können auch im Assistenten für die **App-Pakete erstellen** dazu die im folgenden Abschnitt beschrieben wird. Wenn Sie Ihre App zuordnen, werden einige Felder der Registerkarte „Verpacken“ im Manifest-Designer automatisch aktualisiert.
 
 ## <a name="create-an-app-package-upload-file"></a>Erstellen einer App-Paketuploaddatei
 
-Um eine app über den Microsoft Store verteilen zu können, müssen Sie ein app-Paket (.appx oder .msix), app-Bündel (.appxbundle oder .msixbundle), oder ein app-paketuploaddatei (.appxupload oder .msixupload) und [übermitteln das app-Paket in das Partner Center](https://docs.microsoft.com/windows/uwp/publish/app-submissions)erstellen. Obwohl es möglich, übermitteln ein app-Paket oder app-Bündel in das Partner Center allein ist, empfehlen wir, dass Sie eine app-paketuploaddatei übermitteln. Sie können eine app-paketuploaddatei erstellen, indem Sie mithilfe des **App-Pakete erstellen** -Assistenten in Visual Studio, oder erstellen Sie einen manuell aus einer vorhandenen app-Pakete oder app-Bündel.
+Um eine app über den Microsoft Store verteilen zu können, müssen Sie ein app-Paket (AppX oder .msix), app-Bündel (.appxbundle oder .msixbundle), oder ein app-paketuploaddatei (".appxupload" oder .msixupload) und [übermitteln das app-Paket in das Partner Center](https://docs.microsoft.com/windows/uwp/publish/app-submissions)erstellen. Obwohl es möglich, ein app-Paket oder app-Bündel in das Partner Center allein übermitteln ist, empfehlen wir, dass Sie eine app-paketuploaddatei übermitteln. Sie können eine app-paketuploaddatei erstellen, indem Sie mit dem **App-Pakete erstellen** -Assistenten in Visual Studio, oder Sie können manuell aus vorhandenen app-Pakete oder app-Bündel erstellen.
 
 >[!NOTE]
-> Wenn Sie eine app-Paket (.appx oder .msix) oder ein app-Bündel (.appxbundle oder .msixbundle) manuell erstellen möchten, finden Sie unter [Erstellen eines app-Pakets mit dem MakeAppx.exe-Tool](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool).
+> Wenn Sie eine app-Paket (AppX oder .msix) oder app-Bündel (.appxbundle oder .msixbundle) manuell erstellen möchten, finden Sie unter " [Erstellen eines app-Pakets mit dem MakeAppx.exe-Tool](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool)".
 
-### <a name="to-create-your-app-package-upload-file-using-visual-studio"></a>Erstellen Sie Ihre app-paketuploaddatei mithilfe von Visual Studio
+### <a name="to-create-your-app-package-upload-file-using-visual-studio"></a>Um Ihre app-paketuploaddatei mithilfe von Visual Studio zu erstellen.
 
 1.  Öffnen Sie im **Projektmappen-Explorer** die Projektmappe für Ihr UWP-App-Projekt.
 2.  Klicken Sie mit der rechten Maustaste auf das Projekt, und wählen Sie **Store**->**App-Pakete erstellen** aus. Wenn diese Option deaktiviert ist oder nicht angezeigt wird, überprüfen Sie, ob es sich beim Projekt um ein Universal Windows-Projekt handelt.  
@@ -89,25 +89,25 @@ Um eine app über den Microsoft Store verteilen zu können, müssen Sie ein app-
 
     Der Assistent **App-Pakete erstellen** wird angezeigt.
 
-3.  Wählen Sie im ersten Dialogfeld **zum Erstellen von Paketen zum Hochladen in den Microsoft Store mit einem neuen app-Namen werden soll** , und klicken Sie dann auf **Weiter**.  
+3.  Wählen Sie im ersten Dialogfeld **zum Erstellen von Paketen zum Hochladen in den Microsoft Store eine neue app-Namen werden soll** , und klicken Sie dann auf **Weiter**.  
     ![Dialogfeld „Ihre Pakete erstellen“](images/packaging-screen3.jpg)
 
-    Wenn Sie Ihr Projekt bereits mit einer app im Store zugeordnet haben, müssen Sie auch eine Option zum Erstellen von Paketen für die zugehörigen Store-app. Wenn Sie **Pakete zum querladen erstellen**auswählen, wird die app-Paket (.msixupload oder ".appxupload") paketuploaddatei für Partner Center-Übermittlungen von Visual Studio nicht generiert. Sie können diese Option auswählen, wenn Sie die App lediglich für die Ausführung auf internen Geräten querladen oder für Testzwecke verwenden möchten. Weitere Informationen zum Querladen finden Sie unter [Aktivieren Ihres Geräts für die Entwicklung](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).
+    Wenn Sie Ihr Projekt bereits mit einer app im Store zugeordnet haben, müssen Sie auch eine Option zum Erstellen von Paketen für die zugehörigen Store-app. Wenn Sie **Pakete zum querladen erstellen**auswählen, wird die app-(.msixupload oder ".appxupload") paketuploaddatei für Partner Center Übermittlungen von Visual Studio nicht generiert. Sie können diese Option auswählen, wenn Sie die App lediglich für die Ausführung auf internen Geräten querladen oder für Testzwecke verwenden möchten. Weitere Informationen zum Querladen finden Sie unter [Aktivieren Ihres Geräts für die Entwicklung](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).
 4.  Auf der nächsten Seite melden Sie sich mit Ihrem Entwicklerkonto beim Partner Center. Wenn Sie noch kein Entwicklerkonto besitzen, hilft Ihnen der Assistent bei der Erstellung.
     ![Dialogfeld „App-Pakete erstellen“ mit Auswahl des App-Namens](images/packaging-screen4.jpg)
 5.  Wählen Sie den app-Namen für Ihr Paket aus der Liste der apps, die derzeit für Ihr Konto registriert, oder reservieren Sie eine neue, wenn Sie noch kein Paket im Partner Center reserviert haben.  
-6.  Stellen Sie sicher, dass Sie im Dialogfeld **Auswählen und Konfigurieren von Paketen** alle drei Architekturkonfigurationen (x86, x64 und ARM) auswählen, um zu gewährleisten, dass Ihre App auf einer breiten Palette von Geräten bereitgestellt werden kann. Wählen Sie im Listenfeld **App-Bündel erstellen** die Option **Immer**. Ein app-Bündel (.appxbundle oder .msixbundle) wird über eine einzelne app-Paketdatei bevorzugt, da es enthält eine Sammlung von app-Pakete, die für jeden Prozessor-Architekturtyp konfiguriert sind. Wenn Sie das app-Bündel generieren, wird das app-Bündel in der endgültigen app-Paket Hochladen (".appxupload" oder .msixupload) zusammen mit debugging und die Absturzanalyse Informationen enthalten. Wenn Sie nicht sicher sind, welche Architektur(en) Sie auswählen sollen, oder wenn Sie mehr darüber erfahren möchten, welche Architekturen von verschiedenen Geräten verwendet werden, finden Sie weitere Informationen unter [App-Paketarchitekturen](https://docs.microsoft.com/windows/uwp/packaging/device-architecture).  
+6.  Stellen Sie sicher, dass Sie im Dialogfeld **Auswählen und Konfigurieren von Paketen** alle drei Architekturkonfigurationen (x86, x64 und ARM) auswählen, um zu gewährleisten, dass Ihre App auf einer breiten Palette von Geräten bereitgestellt werden kann. Wählen Sie im Listenfeld **App-Bündel erstellen** die Option **Immer**. Ein app-Bündel (.appxbundle oder .msixbundle) wird über eine einzelne app-Paketdatei bevorzugt, da es enthält eine Sammlung von app-Pakete, die für jeden Prozessor-Architekturtyp konfiguriert sind. Wenn Sie das app-Bündel generieren, wird das app-Bündel in der endgültigen app-Paket Hochladen (".appxupload" oder .msixupload) Datei zusammen mit debugging und die Absturzanalyse Informationen enthalten. Wenn Sie nicht sicher sind, welche Architektur(en) Sie auswählen sollen, oder wenn Sie mehr darüber erfahren möchten, welche Architekturen von verschiedenen Geräten verwendet werden, finden Sie weitere Informationen unter [App-Paketarchitekturen](https://docs.microsoft.com/windows/uwp/packaging/device-architecture).  
     ![Dialogfeld „App-Pakete erstellen“ mit Paketkonfiguration](images/packaging-screen5.jpg)
-7.  Einbinden Sie vollständige PDB-Symboldateien wird zu [analysieren, app-Leistung](https://docs.microsoft.com/windows/uwp/publish/analytics) aus dem Partner Center, nachdem Ihre app veröffentlicht wurde. Konfigurieren Sie zusätzliche Details wie die Versionsnummer oder den Ausgabespeicherort des Pakets.
-9.  Klicken Sie zum Erstellen des App-Pakets auf **Erstellen**. Wenn Sie eine der Optionen **zum Erstellen von Paketen zum Hochladen in den Microsoft Store gewünschte** in Schritt 3 ausgewählt und ein Paket für die Übermittlung Partner Center erstellen, erstellt der Assistent eine Datei (".appxupload" oder .msixupload) Paket. Wenn Sie **Pakete zum querladen erstellen** in Schritt 3 ausgewählt haben, wird ein einzelnes app-Paket oder ein app-Bündel, je nach Ihrer Auswahl in Schritt 6 erstellt.
+7.  Einbinden Sie vollständige PDB-Symboldateien wird zu [Analysieren app-Leistung](https://docs.microsoft.com/windows/uwp/publish/analytics) aus dem Partner Center, nachdem Ihre app veröffentlicht wurde. Konfigurieren Sie zusätzliche Details wie die Versionsnummer oder den Ausgabespeicherort des Pakets.
+9.  Klicken Sie zum Erstellen des App-Pakets auf **Erstellen**. Wenn Sie eine der Optionen **zum Erstellen von Paketen zum Hochladen in den Microsoft Store soll** in Schritt 3 ausgewählt und ein Paket für die Übermittlung Partner Center erstellen, erstellt der Assistent eine (".appxupload" oder .msixupload) paketuploaddatei. Wenn Sie **Pakete zum querladen erstellen** in Schritt 3 ausgewählt haben, erstellt der Assistent ein einzelnes app-Paket oder ein app-Bündel, je nach Ihrer Auswahl in Schritt 6.
 10. Wenn Ihre app erfolgreich verpackt wurde, wird dieses Dialogfeld angezeigt, und Sie können Ihre app-paketuploaddatei aus dem angegebenen Ausgabepfad abrufen. An dieser Stelle können Sie [Ihre app-Paket auf dem lokalen Computer oder einem Remotecomputer überprüfen](#validate-your-app-package).
     ![Dialogfeld „Paketerstellung abgeschlossen“ mit Überprüfungsoptionen](images/packaging-screen6.jpg)
 
 ### <a name="to-create-your-app-package-upload-file-manually"></a>So erstellen Sie Ihre app-paketuploaddatei manuell
 
-1. Legen Sie die folgenden Dateien in einem Ordner:
-    - Eine oder mehrere app-Pakete (.msix oder AppX) oder ein app-Bündel (".msixbundle" oder ".appxbundle").
-    - Eine appxsym-Datei. Dies ist eine komprimierte PDB-Datei enthält öffentliche Symbole Ihrer App für den [Absturz Analytics](../publish/health-report.md) im Partner Center verwendet. Sie können diese Datei weglassen, aber wenn Sie dies tun, wird keine absturzanalysen oder debugging-Informationen für Ihre app verfügbar sein.
+1. Platzieren Sie die folgenden Dateien in einem Ordner:
+    - Eine oder mehrere app-Pakete (.msix oder AppX) oder ein app-Bündel (.msixbundle oder .appxbundle).
+    - Eine appxsym-Datei. Dies ist eine komprimierte PDB-Datei enthält öffentliche Symbole Ihrer App zum [Absturz Analytics](../publish/health-report.md) im Partner Center. Sie können diese Datei weglassen, aber wenn Sie dies tun, wird keine Absturz oder Informationen zum Debuggen für Ihre app verfügbar sein.
 2. Zippen Sie den Ordner.
 3. Ändern Sie den Namen des komprimierten Ordners-Erweiterung von ZIP in .msixupload oder ".appxupload".
 
@@ -115,23 +115,23 @@ Um eine app über den Microsoft Store verteilen zu können, müssen Sie ein app-
 
 Überprüfen Sie Ihre app, bevor Sie sie zur Zertifizierung auf einem lokalen oder Remotecomputer in das Partner Center übermitteln. Versionsbuilds können nur für Ihr App-Paket, nicht aber für Debugbuilds überprüft werden. Weitere Informationen zum Übermitteln Ihrer app in das Partner Center finden Sie in der [App-Übermittlungen](https://docs.microsoft.com/windows/uwp/publish/app-submissions).
 
-**Überprüfen Sie das app-Paket lokal**
+**Um das app-Paket lokal überprüfen**
 
-1. Lassen Sie den **lokalen Computer** Option aktiviert, und klicken Sie auf **App Zertifizierungskit für Windows starten**, in der letzten **Paketerstellung abgeschlossen** Seite des Assistenten zum **App-Pakete erstellen** . Weitere Informationen zum Testen der App mit dem Zertifizierungskit für Windows-Apps finden Sie unter [Zertifizierungskit für Windows-Apps](https://msdn.microsoft.com/library/windows/apps/Mt186449).
+1. Lassen Sie in der letzten **Paketerstellung abgeschlossen** Seite des Assistenten zum **App-Pakete erstellen** die Option **Lokaler Computer** aktiviert, und klicken Sie auf **App Zertifizierungskit für Windows starten**. Weitere Informationen zum Testen der App mit dem Zertifizierungskit für Windows-Apps finden Sie unter [Zertifizierungskit für Windows-Apps](https://msdn.microsoft.com/library/windows/apps/Mt186449).
 
     Das Zertifizierungskit für Windows-Apps führt die verschiedene Tests aus und gibt die Ergebnisse zurück. Weitere Informationen finden Sie unter [Tests des Zertifizierungskits für Windows-Apps](https://msdn.microsoft.com/library/windows/apps/mt186450).
 
     Wenn Sie ein Windows 10-Remotegerät, die Sie zum Testen verwenden möchten verfügen, müssen Sie das Zertifizierungskit für Windows-Apps manuell auf dem Gerät installieren. Im nächsten Abschnitt werden die erforderlichen Schritte beschrieben. Nachdem Sie damit fertig sind, wählen Sie **Remotecomputer** und klicken auf **Zertifizierungskit für Windows-Apps starten**, um eine Verbindung zum Remotegerät herzustellen und die Überprüfungen ausführen.
 
-2. Nachdem das WACK abgeschlossen hat und Ihre app hat, können Sie Ihre app in das Partner Center übermitteln. Stellen Sie sicher, dass Sie die richtige Datei hochladen. Der standardmäßige Speicherort der Datei finden Sie im Stammordner der Projektmappe `\[AppName]\AppPackages` und endet mit der Dateierweiterung ".appxupload" oder .msixupload. Der Name des Formulars werden `[AppName]_[AppVersion]_x86_x64_arm_bundle.appxupload` oder `[AppName]_[AppVersion]_x86_x64_arm_bundle.msixupload` , wenn Sie ein app-Bündel mit allen ausgewählten paketarchitekturen.
+2. Nachdem WACK abgeschlossen hat, und Ihre app die Zertifizierung bestanden hat, können Sie Ihre app in das Partner Center übermitteln. Stellen Sie sicher, dass Sie die richtige Datei hochladen. Der standardmäßige Speicherort der Datei finden Sie im Stammordner der Projektmappe `\[AppName]\AppPackages` und endet mit der Erweiterung ".appxupload" oder .msixupload. Der Name des Formulars werden `[AppName]_[AppVersion]_x86_x64_arm_bundle.appxupload` oder `[AppName]_[AppVersion]_x86_x64_arm_bundle.msixupload` , wenn Sie ein app-Bündel mit allen ausgewählten paketarchitekturen.
 
 **Überprüfen Sie Ihre app-Paket auf einem Windows 10-Remotegerät**
 
-1.  Aktivieren Sie das Windows 10-Gerät für die Entwicklung gemäß die Anweisungen zum [Aktivieren Ihres Geräts für die Entwicklung](https://msdn.microsoft.com/library/windows/apps/Dn706236) .
+1.  Aktivieren Sie Ihr Windows 10-Gerät für die Entwicklung gemäß die Anweisungen zum [Aktivieren Ihres Geräts für die Entwicklung](https://msdn.microsoft.com/library/windows/apps/Dn706236) .
     >[!IMPORTANT]
     > Sie können nicht das app-Paket auf einem ARM-Remotegerät für Windows 10 überprüfen.
 2.  Laden Sie die Remotetools für Visual Studio herunter, und installieren Sie sie. Diese Tools werden verwendet, um das Zertifizierungskit für Windows-Apps remote auszuführen. Weitere Informationen zu diesen Tools einschließlich der Downloadseite finden Sie unter [Ausführen von UWP-Apps auf einem Remotecomputer](https://msdn.microsoft.com/library/hh441469.aspx#BKMK_Starting_the_Remote_Debugger_Monitor).
-3.  Herunterladen Sie die erforderlichen [Zertifizierungskit für Windows-Apps](http://go.microsoft.com/fwlink/p/?LinkID=309666) und installieren Sie es auf Ihrem Windows 10-Remotegerät.
+3.  Herunterladen Sie erforderliche [Zertifizierungskit für Windows-Apps](https://go.microsoft.com/fwlink/p/?LinkID=309666) und installieren Sie es auf Ihrem Windows 10-Remotegerät.
 4.  Aktivieren Sie auf der Seite **Paketerstellung abgeschlossen** des Assistenten das Optionsfeld **Remotecomputer**. Klicken Sie anschließend neben der Schaltfläche **Testverbindung** auf die Schaltfläche mit den Auslassungszeichen.
     >[!NOTE]
     > Das Optionsfeld **Remotecomputer** ist nur verfügbar, wenn Sie mindestens eine Projektmappenkonfiguration ausgewählt haben, die Überprüfung unterstützt. Weitere Informationen zum Testen der App mit dem WACK finden Sie unter [Zertifizierungskit für Windows-Apps](https://msdn.microsoft.com/library/windows/apps/Mt186449).
@@ -143,9 +143,9 @@ Um eine app über den Microsoft Store verteilen zu können, müssen Sie ein app-
 
 Mit UWP-app-Paketen apps werden nicht auf einem Gerät installiert, mit der desktop-apps werden. In der Regel laden Sie UWP-Apps aus dem Microsoft Store herunter, wodurch die App auch auf Ihrem Gerät installiert wird. Apps können installiert werden, ohne im Store veröffentlicht zu werden (Querladen). Auf diese Weise können Sie bei der Installation und Test mit dem app-Paket-Datei, die Sie erstellt haben. Wenn Sie über eine App verfügen, die Sie nicht im Store anbieten möchten (z. B. eine branchenspezifische App), können Sie diese App querladen, um sie für Kollegen im Unternehmen bereitzustellen.
 
-Bevor Sie Ihre app auf einem Zielgerät querladen können, müssen Sie [Aktivieren Ihres Geräts für die Entwicklung](../get-started/enable-your-device-for-development.md).
+Bevor Sie Ihre app auf ein Zielgerät querladen können, müssen Sie [Aktivieren Ihres Geräts für die Entwicklung](../get-started/enable-your-device-for-development.md).
 
-Verwenden Sie zum querladen Ihrer app auf einem Windows 10 Mobile-Gerät das [WinAppDeployCmd.exe](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) Tool. Desktops Laptops und Tablets, führen Sie die folgenden Anweisungen.
+Verwenden Sie zum querladen Ihrer app auf einem Windows 10 Mobile-Gerät, das [WinAppDeployCmd.exe](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) Tool. Führen Sie für Desktops, Laptops und Tablets die folgenden Anweisungen.
 
 ### <a name="sideload-your-app-package-on-windows-10-anniversary-update-or-later"></a>Querladen Ihrer app zu verpacken, unter Windows 10 Anniversary Update oder höher
 

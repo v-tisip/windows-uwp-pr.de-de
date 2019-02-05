@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 26f47f3175802191a866bcd77e4cc7a95ffdbbe4
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: 2101eba9c78c87339af5f1bd46e6afc81eacf6af
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981474"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047425"
 ---
 # <a name="create-custom-transport-controls"></a>Erstellen benutzerdefinierter Transportsteuerelemente
 
@@ -26,7 +26,7 @@ MediaPlayerElement verfügt über anpassbare XAML-Transportsteuerelemente, um di
 Bevor Sie beginnen, sollten Sie mit den Klassen „MediaPlayerElement“ und „MediaTransportControls“ vertraut sein. Weitere Informationen finden Sie im Leitfaden für das MediaPlayerElement-Steuerelement.
 
 > [!TIP]
-> Die Beispiele in diesem Thema basieren auf dem [Beispiel für die Steuerelemente für den Medientransport](http://go.microsoft.com/fwlink/p/?LinkId=620023). Sie können das Beispiel herunterladen, um den fertigen Code anzuzeigen und auszuführen.
+> Die Beispiele in diesem Thema basieren auf dem [Beispiel für die Steuerelemente für den Medientransport](https://go.microsoft.com/fwlink/p/?LinkId=620023). Sie können das Beispiel herunterladen, um den fertigen Code anzuzeigen und auszuführen.
 
 > [!NOTE]
 > **MediaPlayerElement** steht erst ab Windows10 Version1607 zur Verfügung. Für das Entwickeln von Apps für niedrigere Windows10-Versionen muss stattdessen [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) verwendet werden. Alle Beispiele auf dieser Seite funktionieren auch mit **MediaElement**.
@@ -95,7 +95,7 @@ Weitere Informationen zum Ändern von Stilen und Vorlagen finden Sie unter [Form
 
 ### <a name="create-a-derived-control"></a>Erstellen eines abgeleiteten Steuerelements
 
-Wenn Sie die Funktionalität der Transportsteuerelemente erweitern oder ändern möchten, müssen Sie eine neue von MediaTransportControls abgeleitete Klasse erstellen. Eine abgeleitete Klasse namens `CustomMediaTransportControls` wird im [Beispiel für die Steuerelemente für den Medientransport](http://go.microsoft.com/fwlink/p/?LinkId=620023) und den übrigen Beispielen auf dieser Seite gezeigt.
+Wenn Sie die Funktionalität der Transportsteuerelemente erweitern oder ändern möchten, müssen Sie eine neue von MediaTransportControls abgeleitete Klasse erstellen. Eine abgeleitete Klasse namens `CustomMediaTransportControls` wird im [Beispiel für die Steuerelemente für den Medientransport](https://go.microsoft.com/fwlink/p/?LinkId=620023) und den übrigen Beispielen auf dieser Seite gezeigt.
 
 **So erstellen Sie eine neue Klasse, die von MediaTransportControls abgeleitet ist**
 1. Fügen Sie Ihrem Projekt eine neue Klassendatei hinzu.
@@ -202,7 +202,7 @@ Da das Überlaufmenü aus Textschaltflächen besteht, müssen Sie der Schaltflä
 
 ### <a name="adding-a-custom-button"></a>Hinzufügen einer benutzerdefinierten Schaltfläche
 
-Das Anpassen von MediaTransportControls kann beispielsweise erforderlich sein, wenn Sie dem Steuerelement einen benutzerdefinierten Befehl hinzufügen möchten. Unabhängig davon, ob Sie ihn als primären oder sekundären Befehl hinzufügen, sind die Verfahren zum Erstellen der Befehlsschaltfläche und zum Ändern des Verhaltens gleich. Im [Beispiel für die Medientransportsteuerelemente](http://go.microsoft.com/fwlink/p/?LinkId=620023) wird den primären Befehlen eine Bewertungsschaltfläche hinzugefügt.
+Das Anpassen von MediaTransportControls kann beispielsweise erforderlich sein, wenn Sie dem Steuerelement einen benutzerdefinierten Befehl hinzufügen möchten. Unabhängig davon, ob Sie ihn als primären oder sekundären Befehl hinzufügen, sind die Verfahren zum Erstellen der Befehlsschaltfläche und zum Ändern des Verhaltens gleich. Im [Beispiel für die Medientransportsteuerelemente](https://go.microsoft.com/fwlink/p/?LinkId=620023) wird den primären Befehlen eine Bewertungsschaltfläche hinzugefügt.
 
 **So fügen Sie eine benutzerdefinierte Befehlsschaltfläche hinzu**
 1. Erstellen Sie ein AppBarButton-Objekt, und fügen Sie es dem CommandBar-Element in der Steuerelementvorlage hinzu.
@@ -215,9 +215,9 @@ Das Anpassen von MediaTransportControls kann beispielsweise erforderlich sein, w
               VerticalAlignment="Center" />
 ```
 
-Sie müssen es dem CommandBar-Element an der entsprechenden Stelle hinzufügen. (Weitere Informationen finden Sie im arbeiten mit dem Überlauf Menüabschnitt.) Wie in der Benutzeroberfläche befindet, wird durch steht für die Schaltfläche im Markup festgelegt. Wenn die Schaltfläche also beispielsweise als letztes Element der primären Befehle angezeigt werden soll, fügen Sie sie ganz am Ende der Liste der primären Befehle hinzu.
+Sie müssen es dem CommandBar-Element an der entsprechenden Stelle hinzufügen. (Weitere Informationen finden Sie unter dem Abschnitt Arbeiten mit der Überlauf Menü.) Wie es in der Benutzeroberfläche positioniert wird, wird durch steht für die Schaltfläche im Markup festgelegt. Wenn die Schaltfläche also beispielsweise als letztes Element der primären Befehle angezeigt werden soll, fügen Sie sie ganz am Ende der Liste der primären Befehle hinzu.
 
-Sie können auch das Symbol für die Schaltfläche anpassen. Weitere Informationen finden Sie unter der <a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx"><b>AppBarButton</b></a> -Referenz.
+Sie können auch das Symbol für die Schaltfläche anpassen. Weitere Informationen finden Sie im Referenzthema <a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx"><b>AppBarButton</b></a> .
     
 
 2. Rufen Sie in der [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.onapplytemplate.aspx)-Überschreibung die Schaltfläche aus der Vorlage ab, und registrieren Sie einen Handler für das dazugehörige [**Click**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)-Ereignis. Dieser Code wird in die `CustomMediaTransportControls`-Klasse eingefügt.

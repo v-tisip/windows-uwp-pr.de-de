@@ -6,17 +6,17 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Steuerelemente, Eingabe
 ms.localizationpriority: medium
-ms.openlocfilehash: 09bda2bda5f6f8731b64321d3282f540e6c50db4
-ms.sourcegitcommit: 4e12e820141fa5c3e61052ec78452b4032a974da
+ms.openlocfilehash: 369aa076184f79aa1e43c3aac11706982a6be268
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "8999755"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045639"
 ---
 # <a name="add-controls"></a>Hinzufügen von Steuerelementen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](https://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 Ein gutes universelles WindowsPlattform (UWP)-Spiel unterstützt viele unterschiedliche Schnittstellen. Ein potenzieller Spieler kann Windows 10 auf einem Tablet ohne physischen Tasten, einem PC mit Xbox-Controller, oder die neuesten desktop-Spiele-PC mit hochleistungsmaus ein High-End und Gaming-Tastatur. In unserem Spiel werden die Steuerelemente in der [**MoveLookController**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp)-Klasse implementiert. Diese Klasse aggregiert alle drei Arten von Eingaben (Maus und Tastatur, Fingereingabe und Gamepad) in einem einzelnen Domänencontroller. Das Endergebnis ist ein First-Person-Shooter, der Standard-Bewegungs-/Blicksteuerungen des Genres verwendet, die mit mehreren Geräten funktionieren.
 
@@ -95,7 +95,7 @@ Status | Beschreibung
 Das Spiel wechselt in den **WaitForInput**-Zustand, wenn das Spiel angehalten wurde. Dies passiert, wenn der Spieler den Zeiger aus dem Hauptfenster des Spiels bewegt oder die Pause-Taste drückt (P-TASTE oder **Start**-Taste auf dem Gamepad), drückt. Die **MoveLookController-Instanz** registriert die Tastenbetätigung und informiert die Spielschleife, wenn sie die [**IsPauseRequested**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L107-L127)-Methode aufruft. Wenn **IsPauseRequested** jetzt **true** zurückgibt, ruft die Spielschleife **WaitForPress** für die **MoveLookController**-Instanz auf, um den Controller in den Zustand **WaitForInput** zu versetzen. 
 
 
-Im **WaitForInput**-Zustand beendet das Spiel die Verarbeitung von fast allen Eingabeereignissen, bis der Controller wieder in den **Active**-Zustand übergeht. Eine Ausnahme ist die Pause-Taste, da durch Drücken der Taste das Spiel zum aktiven Zustand zurückkehret. Außer der Pause-Taste muss in der Reihenfolge für das Spiel zum **aktiven** Zustand zurückkehren der Spieler ein Menüelement auswählen. 
+Im **WaitForInput**-Zustand beendet das Spiel die Verarbeitung von fast allen Eingabeereignissen, bis der Controller wieder in den **Active**-Zustand übergeht. Eine Ausnahme ist die Pause-Taste, da durch Drücken der Taste das Spiel zum aktiven Zustand zurückkehret. Außer der Pause-Taste muss in der Reihenfolge für das Spiel zum **aktiven** Zustand zurückkehren, der Spieler ein Menüelement auswählen. 
 
 
 
@@ -399,7 +399,7 @@ Sehen Sie den vollständigen Code für die **MoveLookController::OnPointerPresse
 
 
 
-Hier weist **MoveLookController** die Zeiger-ID für den Zeiger zu, der das Ereignis für eine bestimmte Variable ausgelöst hat, die dem Blickbereich entspricht. Im Falle eine Fingereingabe, die im Bereich auftreten wird die Variable **M\_lookPointerID** auf die Zeiger-ID festgelegt, die das Ereignis ausgelöst wurde. Außerdem wird die boolesche Verwendungsvariable **m\_lookInUse** festgelegt, um anzugeben, dass die Steuerung noch nicht freigegeben wurde.
+Hier weist **MoveLookController** die Zeiger-ID für den Zeiger zu, der das Ereignis für eine bestimmte Variable ausgelöst hat, die dem Blickbereich entspricht. Im Falle eine Fingereingabe im blickwinkelbereich auftritt wird die Variable **M\_lookPointerID** auf die Zeiger-ID festgelegt, die das Ereignis ausgelöst wurde. Außerdem wird die boolesche Verwendungsvariable **m\_lookInUse** festgelegt, um anzugeben, dass die Steuerung noch nicht freigegeben wurde.
 
 Im nächsten Schritt erfahren Sie, wie das Beispielspiel das [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276)-Touchscreenereignis behandelt.
 
@@ -587,7 +587,7 @@ In der [**InitWindow**](https://github.com/Microsoft/Windows-universal-samples/b
 ```
 
 > [!NOTE]
-> UWP-apps können keine Eingabe von Xbox One-Controller empfangen, während die app nicht im Fokus ist.
+> UWP-apps können keine Eingabe aus einem Xbox One-Controller empfangen, während die app nicht im Fokus befindet.
 
 ### <a name="the-updatepollingdevices-method"></a>Die UpdatePollingDevices-Methode
 

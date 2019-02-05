@@ -6,22 +6,22 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: Windows 10, UWP, Anzeigen, Werbung, Interstitial, C#, Beispielcode
 ms.localizationpriority: medium
-ms.openlocfilehash: a8276e1a9639b23a965c5a608fb951d1e1035133
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 075d98d49ba7e878abc7e800af84984bdb93e3a2
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947884"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045086"
 ---
 # <a name="interstitial-ad-sample-code-in-c"></a>Beispielcode für Interstitialwerbung in C\# #  
 
-Dieses Thema enthält den vollständigen Beispielcode für eine grundlegende C#- und XAML-App für die universelle Windows-Plattform (UWP), in der Videointerstitialwerbung angezeigt wird. Eine schrittweise Anleitung dazu, wie Sie Ihr Projekt zur Verwendung dieses Codes konfigurieren, finden Sie unter [Interstitialwerbung](interstitial-ads.md). Ein vollständiges Beispielprojekt finden Sie unter den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).
+Dieses Thema enthält den vollständigen Beispielcode für eine grundlegende C#- und XAML-App für die universelle Windows-Plattform (UWP), in der Videointerstitialwerbung angezeigt wird. Eine schrittweise Anleitung dazu, wie Sie Ihr Projekt zur Verwendung dieses Codes konfigurieren, finden Sie unter [Interstitialwerbung](interstitial-ads.md). Ein vollständiges Beispielprojekt finden Sie unter den [Anzeigenbeispielen auf GitHub](https://aka.ms/githubads).
 
 ## <a name="code-example"></a>Codebeispiel
 
 In diesem Abschnitt wird der Inhalt der Dateien „MainPage.xaml“ und „MainPage.xaml.cs“ in einer einfachen App veranschaulicht, in der eine Interstitialwerbung angezeigt wird. Um die Beispiele zu verwenden, kopieren Sie den Code in ein Visual C#-Projekt **Leere App (Universelle Windows-App)** in Visual Studio.
 
-Diese Beispiel-App verwendet zwei Schaltflächen, um eine Interstitialwerbung anzufordern und dann zu starten. Ersetzen Sie die Werte für die ```myAppId``` und ```myAdUnitId``` Felder durch livewerte aus dem Partner Center, bevor Sie Ihre app an den Store übermitteln. Weitere Informationen finden Sie unter [Einrichten von Anzeigeneinheiten in der App](set-up-ad-units-in-your-app.md#live-ad-units).
+Diese Beispiel-App verwendet zwei Schaltflächen, um eine Interstitialwerbung anzufordern und dann zu starten. Ersetzen Sie die Werte von der ```myAppId``` und ```myAdUnitId``` Felder durch livewerte aus dem Partner Center, bevor Sie Ihre app an den Store übermitteln. Weitere Informationen finden Sie unter [Einrichten von Anzeigeneinheiten in der App](set-up-ad-units-in-your-app.md#live-ad-units).
 
 > [!NOTE]
 > Wenn Sie dieses Beispiel ändern möchten, um eine Interstitialwerbung mit Bannern anstelle einer Videointerstitialanzeige anzuzeigen, übergeben Sie den Wert **AdType.Display** an den ersten Parameter der [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad)-Methode anstelle von **AdType.Video**. Weitere Informationen finden Sie unter [Interstitialanzeigen](interstitial-ads.md).
@@ -39,5 +39,5 @@ Diese Beispiel-App verwendet zwei Schaltflächen, um eine Interstitialwerbung an
  
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Anzeigenbeispiele bei GitHub](http://aka.ms/githubads)
+* [Anzeigenbeispiele bei GitHub](https://aka.ms/githubads)
  

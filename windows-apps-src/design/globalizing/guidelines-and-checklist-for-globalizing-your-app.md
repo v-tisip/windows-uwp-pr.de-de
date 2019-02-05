@@ -8,12 +8,12 @@ ms.date: 11/02/2017
 ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e2dc5186c028aa8f20c2cc1d697f1749b4f1765
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bdc7e5de3be941f2622c04d515e5e1211247b9a2
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930681"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047242"
 ---
 # <a name="guidelines-for-globalization"></a>Richtlinien für Globalisierung
 
@@ -29,7 +29,7 @@ Entwerfen und entwickeln Sie Ihre App so, dass sie auf Systemen mit unterschiedl
 | Unterstützen Sie internationale Papierformate. | Die gebräuchlichen Papierformate unterscheiden sich zwischen den Ländern. Unterstützen und testen Sie häufig verwendete internationale Formate, wenn Sie Features einsetzen möchten, bei denen das Papierformat eine Rolle spielt (z.B. beim Drucken). |
 | Speichern Sie die Sprache von Tastatur oder IME. | Wenn Ihre App den Benutzer zur Texteingabe auffordert, speichern Sie das Sprachentag für das derzeit aktivierte Tastaturlayout oder den Eingabemethoden-Editor (IME). Dadurch stellen Sie sicher, dass die Eingabe dem Benutzer später in der richtigen Formatierung angezeigt wird. Ermitteln Sie die aktuelle Eingabesprache mit der Eigenschaft [**Language.CurrentInputMethodLanguageTag**](/uwp/api/windows.globalization.language.CurrentInputMethodLanguageTag). |
 | Leiten Sie die Region des Benutzers nicht von der Sprache ab und umgekehrt nicht die Sprache von der Region des Benutzers. | Sprache und Region sind zwei unterschiedliche Konzepte. Ein Benutzer kann eine bestimmte regionale Sprachvariante sprechen, beispielsweise „en-GB ”für Englisch in England, kann sich jedoch in einem ganz anderen Land oder einer anderen Region befinden. Überlegen Sie, ob die Sprache des Benutzers für die App relevant ist, etwa für UI-Text, und ob die Region relevant ist (beispielsweise für Lizenzbelange). Weitere Informationen finden Sie unter [Benutzerprofilsprachen und App-Manifest-Sprachen verstehen](manage-language-and-region.md). |
-| Die Regeln zum Vergleichen von Sprachtags sind nicht trivial. | [BCP-47-Sprachtags](http://go.microsoft.com/fwlink/p/?linkid=227302) sind komplex. Beim Vergleichen von Sprachtags muss einiges berücksichtigt werden, wie z.B. der Abgleich von Skriptinformationen, Legacytags und mehrfache regionale Varianten. Das Ressourcenverwaltungssystem in Windows übernimmt den Abgleich für Sie. Sie können eine Ressourcengruppe in beliebigen Sprachen angeben, und das System wählt die geeignete Gruppe für den Benutzer und die App aus. Weitere Informationen finden Sie unter [App-Ressourcen und das Ressourcenverwaltungssystem](../../app-resources/index.md) und [Wie das Ressourcenverwaltungssystem Sprachtags zuordnet](../../app-resources/how-rms-matches-lang-tags.md). |
+| Die Regeln zum Vergleichen von Sprachtags sind nicht trivial. | [BCP-47-Sprachtags](https://go.microsoft.com/fwlink/p/?linkid=227302) sind komplex. Beim Vergleichen von Sprachtags muss einiges berücksichtigt werden, wie z.B. der Abgleich von Skriptinformationen, Legacytags und mehrfache regionale Varianten. Das Ressourcenverwaltungssystem in Windows übernimmt den Abgleich für Sie. Sie können eine Ressourcengruppe in beliebigen Sprachen angeben, und das System wählt die geeignete Gruppe für den Benutzer und die App aus. Weitere Informationen finden Sie unter [App-Ressourcen und das Ressourcenverwaltungssystem](../../app-resources/index.md) und [Wie das Ressourcenverwaltungssystem Sprachtags zuordnet](../../app-resources/how-rms-matches-lang-tags.md). |
 | Entwerfen Sie Ihre Benutzeroberfläche so, dass verschiedenen Textlängen und Schriftgrößen für Beschriftungen und Texteingabesteuerelemente möglich sind. | Zeichenfolgen, die in verschiedene Sprachen übersetzt sind, können sehr unterschiedlich lang sein. Daher müssen Sie die UI-Steuerelemente dynamisch an ihren Inhalt anpassen. Gängige Zeichen in anderen Sprachen enthalten Markierungen über oder unter denen, die normalerweise in Englisch verwendet werden (wie Å oder Ņ). Verwenden Sie die standardmäßigen Schriftgrößen und Zeilenhöhen, um angemessenen vertikalen Platz bereitzustellen. Beachten Sie, dass Schriften für andere Sprachen möglicherweise größere Mindestschriftgrößen benötigen, um lesbar zu bleiben. Siehe die Klassen im Namespace [Windows.Globalization.Fonts](/uwp/api/windows.globalization.fonts?branch=live). |
 | Unterstützen Sie die Spiegelung der Leserichtung. | Die Textausrichtung und Leserichtung kann von links nach rechts (wie bei Deutsch) oder von links nach rechts (RTL, wie bei Arabisch oder Hebräisch) verlaufen. Wenn Sie Ihr Produkt in Sprachen mit einer anderen Leserichtung lokalisieren, achten Sie darauf, dass das Layout der UI-Elemente eine Spiegelung unterstützt. Auch Elemente wie Zurück-Schaltflächen, UI-Übergangseffekte und Bilder müssen gegebenenfalls gespiegelt werden. Weitere Informationen finden Sie unter [Layout und Schriften anpassen und RTL unterstützen](adjust-layout-and-fonts--and-support-rtl.md). |
 | Zeigen Sie Text und Schriften richtig an. | Die ideale Schriftart sowie Schriftgröße und Textrichtung sind vom jeweiligen Markt abhängig. Weitere Informationen finden Sie unter [**Layout und Schriften anpassen und RTL unterstützen**](adjust-layout-and-fonts--and-support-rtl.md) und [Internationale Schriften](loc-international-fonts.md). |
@@ -46,7 +46,7 @@ Entwerfen und entwickeln Sie Ihre App so, dass sie auf Systemen mit unterschiedl
 * [Empfehlungen für die Verwendung von Zeichenfolgen](/dotnet/standard/base-types/best-practices-strings?branch=live#recommendations_for_string_usage)
 * [Globalisieren von Datum, Uhrzeit und Zahlenformaten](use-global-ready-formats.md)
 * [Benutzerprofilsprachen und App-Manifest-Sprachen verstehen](manage-language-and-region.md)
-* [BCP-47-Sprachtags](http://go.microsoft.com/fwlink/p/?linkid=227302)
+* [BCP-47-Sprachtags](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [App-Ressourcen und das Ressourcenverwaltungssystem](../../app-resources/index.md)
 * [Wie das Ressourcenverwaltungssystem Sprachtags zuordnet](../../app-resources/how-rms-matches-lang-tags.md)
 * [Layout und Schriften anpassen und RTL unterstützen](adjust-layout-and-fonts--and-support-rtl.md)
@@ -55,4 +55,4 @@ Entwerfen und entwickeln Sie Ihre App so, dass sie auf Systemen mit unterschiedl
 
 ## <a name="samples"></a>Beispiele
 
-* [Beispiel für Globalisierungseinstellungen](http://go.microsoft.com/fwlink/p/?linkid=231608)
+* [Beispiel für Globalisierungseinstellungen](https://go.microsoft.com/fwlink/p/?linkid=231608)

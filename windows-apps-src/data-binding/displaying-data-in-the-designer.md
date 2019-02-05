@@ -6,26 +6,26 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e18be702c1b2bbd9ce1831b6991324896769192
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c72af86edd3d0a20ab8a0f062b5e0ccf8608e8a9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930741"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050793"
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Beispieldaten für die Entwurfsoberfläche und Prototyperstellung
 =============================================================================================
 
 
 
-**Hinweis:** der Grad, zu dem Sie Beispieldaten – und wie viel wird – hängen davon ab, ob die Bindungen [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) oder der [{X: Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783). Die in diesem Thema beschriebenen Verfahren basieren auf der Verwendung eines [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) und eignen sich deshalb nur für **{Binding}**. Wenn Sie jedoch **{x:Bind}** verwenden, zeigen die Bindungen zumindest Platzhalterwerte auf der Entwurfsoberfläche an (selbst für Elementsteuerelemente). Deshalb besteht ein geringerer Bedarf an Beispieldaten.
+**Hinweis:** den Grad, Sie Beispieldaten benötigen – und wie viel wird – hängen davon ab, ob die Bindungen [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) oder die [{X: Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783). Die in diesem Thema beschriebenen Verfahren basieren auf der Verwendung eines [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) und eignen sich deshalb nur für **{Binding}**. Wenn Sie jedoch **{x:Bind}** verwenden, zeigen die Bindungen zumindest Platzhalterwerte auf der Entwurfsoberfläche an (selbst für Elementsteuerelemente). Deshalb besteht ein geringerer Bedarf an Beispieldaten.
 
 Möglicherweise ist es nicht möglich oder nicht erwünscht (z.B. aus Gründen des Datenschutzes oder der Leistung), dass Ihre App Livedaten auf der Entwurfsoberfläche von Microsoft Visual Studio oder Blend für Visual Studio anzeigt. Es gibt mehrere Möglichkeiten, Entwurfszeit-Beispieldaten zu verwenden, damit die Steuerelemente mit Daten aufgefüllt werden (sodass Sie das Layout, die Vorlagen und andere visuelle Eigenschaften der App bearbeiten können). Beispieldaten können auch hilfreich sein und Zeit sparen, wenn Sie eine App als Skizze (oder Prototyp) erstellen. Sie können zur Laufzeit Beispieldaten in der Skizze oder im Prototyp verwenden, um Ihre Ideen zu veranschaulichen, ohne echte Livedaten nutzen zu müssen.
 
 **Beispiel-Apps zur Veranschaulichung von {Binding}**
 
--   Laden Sie die App [Bookstore1](http://go.microsoft.com/fwlink/?linkid=532950) herunter.
--   Laden Sie die App [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) herunter.
+-   Laden Sie die App [Bookstore1](https://go.microsoft.com/fwlink/?linkid=532950) herunter.
+-   Laden Sie die App [Bookstore2](https://go.microsoft.com/fwlink/?linkid=532952) herunter.
 
 <a name="setting-datacontext-in-markup"></a>Festlegen des DataContext im Markup
 -----------------------------
@@ -97,7 +97,7 @@ Sie müssen lediglich eine Klasse für den zu verwendenden Befehl angeben. Der B
 
 Die verschiedenen xmlns-Deklarationen bedeuten, dass Attribute mit dem **d:**-Präfix nur zur Entwurfszeit interpretiert und während der Laufzeit ignoriert werden. Somit wirkt sich das **d:DataContext**-Attribut nur zur Entwurfszeit auf den Wert der Eigenschaft [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) aus und hat zur Laufzeit keine Auswirkungen. Sie können im Markup sogar sowohl **d:DataContext** als auch **DataContext** festlegen, wenn Sie dies wünschen. **d:DataContext** überschreibt zur Entwurfszeit, und **DataContext** überschreibt zur Laufzeit. Diese Überschreibungsregeln werden auf alle Entwurfszeit- und Laufzeitattribute angewendet.
 
-Das **d:DataContext**-Attribut und alle anderen Entwurfszeitattribute sind im Thema [Designzeitattribute](http://go.microsoft.com/fwlink/p/?LinkId=272504) dokumentiert, das für Universelle Windows-Plattform (UWP)-Apps) weiterhin Gültigkeit hat.
+Das **d:DataContext**-Attribut und alle anderen Entwurfszeitattribute sind im Thema [Designzeitattribute](https://go.microsoft.com/fwlink/p/?LinkId=272504) dokumentiert, das für Universelle Windows-Plattform (UWP)-Apps) weiterhin Gültigkeit hat.
 
 [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) besitzt nicht die Eigenschaft **DataContext**, jedoch die Eigenschaft **Source**. Daher gibt es eine Eigenschaft **d:Source**, mit der Sie auf die Entwurfszeit beschränkte Beispieldaten in einer **CollectionViewSource** festlegen können.
 

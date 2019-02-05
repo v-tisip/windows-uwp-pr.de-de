@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e418e5a159df44d6ff6e15e4faa972164447f5ee
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b64ddadd0e543930fa72d0c44a6cacf0a873df89
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944515"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050683"
 ---
 # <a name="which-networking-technology"></a>Welche Netzwerktechnologie?
 
@@ -69,7 +69,7 @@ Verwenden Sie [HttpClient](httpclient.md) (und den Rest der [**Windows.Web.Http*
 
 Verwenden Sie die [Hintergrundübertragungs-API](background-transfers.md), wenn Sie zuverlässig Dateien über das Netzwerk übertragen möchten. Die Hintergrundübertragungs-API bietet erweiterte Upload- und Downloadfeatures, die bei angehaltener App im Hintergrund ausgeführt werden und auch nach Beendigung der App aktiv bleiben. Die API überwacht den Netzwerkstatus und kann Übertragungen automatisch anhalten und fortsetzen, wenn die Verbindung unterbrochen wird. Übertragungen sind außerdem daten- und akkuabhängig – die Downloadaktivität wird also basierend auf dem aktuellen Verbindungs- und Geräteakkustatus angepasst. Diese Funktionen sind wichtig, wenn Ihre App auf mobilen oder akkubetriebenen Geräten ausgeführt wird. Die API ist ideal für das Hoch- und Herunterladen von großen Dateien über HTTP(S) geeignet. FTP wird auch unterstützt, allerdings nur für Downloads.
 
-Ein neues Feature für die hintergrundübertragung in Windows 10 ist die Möglichkeit, eine nachverarbeitung auszulösen, wenn eine Dateiübertragung abgeschlossen ist, damit Sie lokale Kataloge aktualisieren, andere apps aktivieren oder den Benutzer benachrichtigen, wenn ein Download abgeschlossen ist.
+Ein neues Feature für die hintergrundübertragung in Windows 10 ist die Möglichkeit, eine nachverarbeitung auszulösen, wenn eine Dateiübertragung abgeschlossen hat, damit können Sie lokale Kataloge aktualisieren, andere apps aktivieren oder den Benutzer benachrichtigen, wenn ein Download abgeschlossen ist.
 
 ### <a name="when-to-use-background-transfers"></a>Wann sollten Hintergrundübertragungen verwendet werden?
 
@@ -91,7 +91,7 @@ Mit der [**Windows.Networking.Connectivity**](https://msdn.microsoft.com/library
 
 ### <a name="dns-service-discovery"></a>DNS Service Discovery (DNS-SD)
 
-Mit der [**Windows.Networking.ServiceDiscovery.Dnssd**](https://msdn.microsoft.com/library/windows/apps/dn895183)-API können Sie einen Netzwerkdienst für andere Geräte im Netzwerk mithilfe des DNS-SD-Protokolls ankündigen, das in IETF [RFC 2782](http://go.microsoft.com/fwlink/?LinkId=524158) beschrieben wurde.
+Mit der [**Windows.Networking.ServiceDiscovery.Dnssd**](https://msdn.microsoft.com/library/windows/apps/dn895183)-API können Sie einen Netzwerkdienst für andere Geräte im Netzwerk mithilfe des DNS-SD-Protokolls ankündigen, das in IETF [RFC 2782](https://go.microsoft.com/fwlink/?LinkId=524158) beschrieben wurde.
 
 ### <a name="communicating-over-bluetooth"></a>Kommunikation über Bluetooth
 

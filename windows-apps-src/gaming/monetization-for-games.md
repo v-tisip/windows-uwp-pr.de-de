@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Monetisierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 91545116b0d7eae107021cc52ee05d299257518c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 92d85f81be25eed5f0a43cafb4bb34d9f879c827
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929756"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050923"
 ---
 #  <a name="monetization-for-games"></a>Monetisierung für Spiele
 
@@ -22,7 +22,7 @@ Bisher haben Sie Ihr Spiel einfach mit einem Preis versehen und gewartet, dass e
 Sie können ein UWP-Spiel folgendermaßen bewerben und monetisieren:
 * Fügen Sie das Spiel im Microsoft Store, die eine sichere, online-Store-Angebots [weltweite Verteilung](#worldwide-distribution-channel)ist. Spieler auf der ganzen Welt können Ihr Spiel online zu dem von Ihnen [festgelegten Preis](#set-a-price-for-your-game) kaufen.
 * Verwenden Sie APIs im Windows SDK zum Erstellen von [In-Game-Käufen](#in-game-purchases). Spieler können In-Game-Käufe tätigen oder ergänzende Inhalte wie zusätzliche Ausstattung, Designs, Karten oder Spiellevels kaufen.
-* Verwenden Sie APIs im [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp), um Anzeigen aus Anzeigennetzwerken anzuzeigen. Sie können [Anzeigen in Ihrem Spiel anzeigen](#display-ads-in-your-game) und Spielern die Option anbieten, Videoanzeigen im Austausch für In-Game-Belohnungen anzusehen.
+* Verwenden Sie APIs im [Microsoft Advertising-SDK](https://aka.ms/ads-sdk-uwp), um Anzeigen aus Anzeigennetzwerken anzuzeigen. Sie können [Anzeigen in Ihrem Spiel anzeigen](#display-ads-in-your-game) und Spielern die Option anbieten, Videoanzeigen im Austausch für In-Game-Belohnungen anzusehen.
 * [Maximieren Sie das Potenzial des Spiels über Anzeigenkampagnen](#maximize-your-games-potential-through-ad-campaigns). Bewerben Sie Ihr Spiel mithilfe von kostenpflichtigen Anzeigenkampagnen, kostenlosen Community-Anzeigenkampagnen oder kostenloser Eigenwerbung, um die Benutzeranzahl zu steigern.
 
 ## <a name="worldwide-distribution-channel"></a>Weltweiter Vertriebskanal
@@ -37,7 +37,7 @@ Hier sind einige wichtige Konzepte bezüglich der Preise für Ihr Spiel im Store
 
 ### <a name="base-price"></a>Grundpreis
 
-Der Grundpreis für das Spiel bestimmt, ob Ihr Spiel als _bezahlt_ oder _kostenlos_ eingestuft wird. [Partner Center](https://partner.microsoft.com/dashboard) können Sie um den Grundpreis basierend auf Land und Region zu konfigurieren.
+Der Grundpreis für das Spiel bestimmt, ob Ihr Spiel als _bezahlt_ oder _kostenlos_ eingestuft wird. Sie können [Partner Center](https://partner.microsoft.com/dashboard) verwenden, um den Grundpreis basierend auf Land und Region zu konfigurieren.
 Beim Festlegen des Preises müssen unter Umständen [Steuerpflichten beim Verkauf in anderen Ländern](https://msdn.microsoft.com/windows/uwp/publish/tax-details-for-paid-apps) und [Kostenüberlegungen für bestimmte Märkte](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#price-considerations-for-specific-markets) in Betracht gezogen werden. Sie können auch [angepasste Preise für spezifische Märkte](../publish/set-and-schedule-app-pricing.md#override-base-price-for-specific-markets) festlegen.
 
 ### <a name="sale-price"></a>Angebotspreis
@@ -47,13 +47,13 @@ Sie können Angebotskampagnen im Voraus planen, indem Sie Start- und Enddatum de
 
 ## <a name="in-game-purchases"></a>In-Game-Käufe
 
-Bei In-Game-Käufen handelt es sich um Produkte, die in einem Spiel gekauft werden. Sie werden allgemein auch als _In-App-Käufe_ bezeichnet. In der Microsoft Store heißen diese Produkte _-Add-Ons_. [Add-ons werden veröffentlicht](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions) , über das Partner Center. Sie müssen die Add-Ons außerdem im Code Ihres Spiels aktivieren.
+Bei In-Game-Käufen handelt es sich um Produkte, die in einem Spiel gekauft werden. Sie werden allgemein auch als _In-App-Käufe_ bezeichnet. Im Microsoft Store heißen diese Produkte _-Add-Ons_. [Add-ons werden veröffentlicht](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions) , über das Partner Center. Sie müssen die Add-Ons außerdem im Code Ihres Spiels aktivieren.
 
 ### <a name="types-of-add-ons"></a>Arten von Add-Ons
 
 Sie können zwei Arten von Add-Ons im Store erstellen: _Gebrauchsgüter_ oder _Verbrauchsartikel_. Gebrauchsgüter sind Elemente, die bis zu ihrem Ablauf für einen angegebenen Zeitraum erhalten bleiben und nur einmal erworben werden können. Verbrauchsartikel sind Elemente, die gekauft und immer wieder verwendet werden können.
 
-Beim Erstellen von Verbrauchsartikeln entscheiden Sie, wie Sie sie nachverfolgen möchten, d.h. ob sie _vom Entwickler verwaltet_ oder _vom Store verwaltet_ werden. (Dieses Feature ist ab Windows10, Version 1607, verfügbar). Mit einem Entwickler verwalteten Verbrauchsartikel sind Sie verantwortlich für das Element Guthabens für den Spieler. mit einem vom Store verwalteten Verbrauchsartikel verfolgt der Microsoft Store das Element Guthaben für Sie. Weitere Informationen finden Sie unter [Übersicht über Endverbraucher-Add-Ons](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
+Beim Erstellen von Verbrauchsartikeln entscheiden Sie, wie Sie sie nachverfolgen möchten, d.h. ob sie _vom Entwickler verwaltet_ oder _vom Store verwaltet_ werden. (Dieses Feature ist ab Windows10, Version 1607, verfügbar). Bei einem Entwicklern verwalteten Verbrauchsartikel sind Sie verantwortlich für das Element Guthabens für den Spieler. Bei einem Store verwalteter Verbrauchsartikel verfolgt der Microsoft Store des Artikels Guthaben für Sie. Weitere Informationen finden Sie unter [Übersicht über Endverbraucher-Add-Ons](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
 
 ### <a name="create-in-game-purchases"></a>Erstellen von In-Game-Käufen
 
@@ -165,7 +165,7 @@ Die vollständige Liste der Länder und Regionen, die Anzeigen unterstützen, fi
 
 Die [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx), [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) und [NativeAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativead.aspx)-Klassen werden zum Einblenden von Anzeigen in Spielen verwendet.
 
-Laden Sie zunächst mit Visual Studio 2015 das [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) oder höher herunter, und installieren Sie es. Weitere Informationen finden Sie unter [Installieren von Microsoft Advertising-SDK](../monetize/install-the-microsoft-advertising-libraries.md).
+Laden Sie zunächst mit Visual Studio 2015 das [Microsoft Advertising-SDK](https://aka.ms/ads-sdk-uwp) oder höher herunter, und installieren Sie es. Weitere Informationen finden Sie unter [Installieren von Microsoft Advertising-SDK](../monetize/install-the-microsoft-advertising-libraries.md).
 
 #### <a name="implementation-guides"></a>Implementierungshandbücher
 

@@ -6,12 +6,12 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, Versionshinweise
 ms.localizationpriority: medium
-ms.openlocfilehash: 1bab822c81cdd5af1e6b00ca8d33ed7f7ea3838f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d7a250880d148dd4ca3ced522312904f2786715e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923857"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050863"
 ---
 # <a name="release-notes-for-the-advertising-libraries"></a>Versionshinweise für die Advertising-Bibliotheken
 
@@ -23,7 +23,7 @@ Dieser Abschnittenthält Versionshinweise für die aktuelle Version der Microsof
 ## <a name="installation"></a>Installation
 
 
-Diese Microsoft Advertising-Bibliotheken stehen als Teil von [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) zur Verfügung. Weitere Informationen zur SDK-Installation finden Sie unter [Installieren von Microsoft Advertising-SDK](install-the-microsoft-advertising-libraries.md).
+Diese Microsoft Advertising-Bibliotheken stehen als Teil von [Microsoft Advertising-SDK](https://aka.ms/ads-sdk-uwp) zur Verfügung. Weitere Informationen zur SDK-Installation finden Sie unter [Installieren von Microsoft Advertising-SDK](install-the-microsoft-advertising-libraries.md).
 
 ## <a name="uninstall-previous-versions"></a>Deinstallieren früherer Versionen
 
@@ -39,7 +39,7 @@ Die Microsoft Advertising-Bibliotheken (in den die Klassen **AdControl** und **I
 
 ## <a name="no-toolbox-control"></a>Kein Toolbox-Steuerelement
 
-In der aktuellen Version der Microsoft Advertising-Bibliotheken im [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) gibt es kein Toolbox-Steuerelement zum Ziehen eines **AdControl** oder **InterstitialAd** in die Entwurfsoberfläche Ihrer App. Informationen zum Hinzufügen dieser Steuerelemente in Ihrem Markup und Code finden Sie in der [Exemplarische Vorgehensweisen für Entwickler](developer-walkthroughs.md).
+In der aktuellen Version der Microsoft Advertising-Bibliotheken im [Microsoft Advertising-SDK](https://aka.ms/ads-sdk-uwp) gibt es kein Toolbox-Steuerelement zum Ziehen eines **AdControl** oder **InterstitialAd** in die Entwurfsoberfläche Ihrer App. Informationen zum Hinzufügen dieser Steuerelemente in Ihrem Markup und Code finden Sie in der [Exemplarische Vorgehensweisen für Entwickler](developer-walkthroughs.md).
 
 ## <a name="latitude-and-longitude-properties-no-longer-available"></a>Eigenschaften Latitude und Longitude nicht mehr verfügbar
 

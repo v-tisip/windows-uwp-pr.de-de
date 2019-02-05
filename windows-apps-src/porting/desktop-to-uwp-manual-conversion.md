@@ -8,20 +8,20 @@ keywords: windows10, UWP
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 4b9b5f08be695d803e9254e5801ac63b2889e1c9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1dd159b7cd04a7641bf3f89605e054a00a0bad58
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945812"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051113"
 ---
 # <a name="package-a-desktop-application-manually"></a>Manuelles Verpacken einer desktop-Anwendungs
 
-In diesem Thema erfahren Sie, wie Sie Ihrer Anwendung ohne Tools wie Visual Studio oder den Desktop App Converter (DAC) verpacken.
+Dieses Thema zeigt, wie Sie Ihre Anwendung ohne Tools wie Visual Studio oder den Desktop App Converter (DAC) verpacken.
 
 Um Ihre App manuell zu verpacken, erstellen Sie eine Paketmanifestdatei, und führen Sie dann ein Befehlszeilentool aus, um ein Windows-App-Paket zu generieren.
 
-Berücksichtigen Sie die manuelle Verpackung, wenn Sie die Anwendung mithilfe der "Xcopy" installieren, oder Sie mit den an das System Ihre app-Installer vorgenommenen Änderungen vertraut sind und genauere Kontrolle über den Prozess.
+Berücksichtigen Sie die manuelle Verpackung, wenn Sie die Anwendung mithilfe der "Xcopy" installieren, oder Sie mit den auf dem System Ihren app Installer vorgenommenen Änderungen vertraut sind und genauere Kontrolle über den Prozess.
 
 Wenn Sie sich nicht darüber sicher sind, welche Änderungen an das System durch Ihren Installer vorgenommen werden oder wenn Sie lieber automatisierte Tools für das Generieren Ihres Paketmanifestes verwenden möchten, sollten Sie eine [dieser](desktop-to-uwp-root.md#convert) Optionen erwägen.
 
@@ -84,7 +84,7 @@ Hier ist ein Beispiel für ein **Identitäts**-Element mit Platzhaltertext für 
                 ProcessorArchitecture="x64">
 ```
 > [!NOTE]
-> Wenn Sie den Anwendungsnamen Ihrer im Microsoft Store reserviert haben, können Sie den Namen und Herausgeber abrufen, mit der [Partner Center](https://partner.microsoft.com/dashboard). Wenn Sie Ihre Anwendung auf andere Systeme querladen möchten, können Sie für diese Ihre eigenen Namen bereitstellen, solange der Name des Herausgebers, die Sie auswählen, mit dem Namen des Zertifikats übereinstimmt, die Sie zum Signieren Ihrer app verwenden.
+> Wenn Sie den Anwendungsnamen Ihrer im Microsoft Store reserviert haben, können Sie den Namen und Herausgeber abrufen, mit [Partner Center](https://partner.microsoft.com/dashboard). Wenn Sie Ihre Anwendung auf andere Systeme querladen möchten, können Sie für diese Ihre eigenen Namen bereitstellen, solange der Name des Herausgebers, die Sie auswählen, mit dem Namen des Zertifikats übereinstimmt, die Sie zum Signieren Ihrer app verwenden.
 
 ### <a name="properties"></a>Eigenschaften
 
@@ -109,7 +109,7 @@ Hier ist ein Beispiel für einen [Ressourcen](https://docs.microsoft.com/uwp/sch
 ```
 ### <a name="dependencies"></a>Abhängigkeiten
 
-Für desktop-apps, die Sie ein Paket erstellen, legen Sie immer die ``Name`` -Attribut auf ``Windows.Desktop``.
+Legen Sie immer für desktop-apps, die Erstellung eines Pakets für die ``Name`` -Attribut auf ``Windows.Desktop``.
 
 ```XML
 <Dependencies>
@@ -198,20 +198,20 @@ Weitere Informationen finden Sie in [Erstellen eines App-Pakets mit dem Tool „
 
 ## <a name="run-the-packaged-app"></a>Ausführung der verpackten App
 
-Sie können Ihre Anwendung zu testen, lokal, ohne dass ein Zertifikat, und signieren Sie es ausführen. Führen Sie einfach dieses PowerShell-Cmdlet aus:
+Sie können Ihre Anwendung zu testen, lokal ohne Erwerb eines Zertifikats und signieren Sie es ausführen. Führen Sie einfach dieses PowerShell-Cmdlet aus:
 
 ```Add-AppxPackage –Register AppxManifest.xml```
 
 Ersetzen Sie zum Aktualisieren der EXE- oder DLL-Dateien Ihrer App die vorhandenen Dateien in Ihrem Paket durch die neuen, vergrößern Sie die Versionsnummer in der Datei „AppxManifest.xml“, und führen Sie den oben genannten Befehl erneut aus.
 
 > [!NOTE]
-> Eine Anwendung immer als interaktiver Benutzer ausgeführt wird, und jedes Laufwerk, auf die Installation Ihres Anwendungspakets unter muss auf NTFS-Format formatiert sein.
+> Eine Anwendung immer als interaktiver Benutzer ausgeführt wird, und jedes Laufwerk, das Sie Ihres Anwendungspakets zu installieren, muss auf NTFS-Format formatiert sein.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 **Finden Sie Antworten auf Ihre Fragen**
 
-Haben Sie Fragen? Fragen Sie uns auf Stack Overflow. Unser Team überwacht diese [Tags](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Sie können [hier](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D) Fragen dazu stellen.
+Haben Sie Fragen? Fragen Sie uns auf Stack Overflow. Unser Team überwacht diese [Tags](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Sie können [hier](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D) Fragen dazu stellen.
 
 **Geben Sie Feedback oder Verbesserungsvorschläge**
 

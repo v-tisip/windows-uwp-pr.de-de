@@ -5,18 +5,18 @@ keywords: Neuigkeiten, Update, Features, Anleitungen für Entwickler, Windows10,
 ms.date: 08/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: aeb6f60396b270a78df5203106635436fe2dabe5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: edf81f0474855c868ea1fb50afa683523aedcd07
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922843"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050783"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a>Neuigkeiten in der Windows-Entwicklerdokumentation im August 2017
 
 Die Entwicklerdokumentation für die Windows-Plattform wird ständig mit Informationen über neue Features für Entwickler aktualisiert. Die folgenden Featureübersichten, Entwicklerleitfäden und Videos wurden erst kürzlich bereitgestellt und enthalten neue oder aktualisierte Informationen für Windows-Entwickler.
 
-Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/your-first-app.md) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](../porting/index.md) vertraut machen.
+Nach der [Installation der Tools und des SDKs](https://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/your-first-app.md) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](../porting/index.md) vertraut machen.
 
 ## <a name="features"></a>Features
 

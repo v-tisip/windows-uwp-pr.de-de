@@ -11,12 +11,12 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: abe77526a7ac12bc905839065913dd59d70fdf62
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: eaf6118720ab77931decf93113a13341ab4f51d0
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925897"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046513"
 ---
 # <a name="handle-file-activation"></a>Behandeln der Dateiaktivierung
 
@@ -123,19 +123,19 @@ void App::OnFileActivated(Windows::ApplicationModel::Activation::FileActivatedEv
 > [!NOTE]
 > Achten Sie darauf, dass beim Start über einen Dateivertrag der Benutzer über die Zurück-Schaltfläche zu dem Bildschirm zurückkehren muss, von dem aus die App gestartet wurde, und nicht zum vorherigen Inhalt der App.
 
-Es wird empfohlen, dass Sie einen neuen XAML- **Frame** für jedes Aktivierungsereignis erstellen, die eine neue Seite geöffnet wird. Auf diese Weise nicht der navigationsbackstack für den neuen XAML-Frame keinen vorherigen Inhalt enthalten, der die app im aktuellen Fenster beim Anhalten. Wenn Sie einen einzelnen XAML- **Frame** für den Start und Dateiverträge verwenden möchten, sollten Sie die Seiten in den **Frame**-navigationsjournal löschen, vor dem Navigieren zu einer neuen Seite.
+Es wird empfohlen, dass Sie einen neuen XAML- **Frame** für jedes Aktivierungsereignis erstellen, das eine neue Seite geöffnet wird. Auf diese Weise nicht der navigationsbackstack für den neuen XAML-Frame keinen vorherigen Inhalt enthalten, der die app im aktuellen Fenster beim Anhalten. Wenn Sie einen einzelnen XAML- **Frame** für den Start und Dateiverträge verwenden möchten, sollten Sie die Seiten im navigationsjournal der **Frame**löschen, vor dem Navigieren zu einer neuen Seite.
 
 Wenn Ihre app über dateiaktivierung gestartet wird, sollten Sie überlegen, einschließlich Benutzeroberfläche, die der Benutzer zur ersten Seite der app zurückkehren kann.
 
 ## <a name="remarks"></a>Anmerkungen
 
-Die empfangenen Dateien stammen unter Umständen aus einer nicht vertrauenswürdigen Quelle. Wir empfehlen, den Inhalt einer Datei zu überprüfen, bevor Sie sie weiter verarbeiten. Weitere Informationen zur Eingabeüberprüfung finden Sie unter [Schreiben von sicherem Code](http://go.microsoft.com/fwlink/p/?LinkID=142053).
+Die empfangenen Dateien stammen unter Umständen aus einer nicht vertrauenswürdigen Quelle. Wir empfehlen, den Inhalt einer Datei zu überprüfen, bevor Sie sie weiter verarbeiten. Weitere Informationen zur Eingabeüberprüfung finden Sie unter [Schreiben von sicherem Code](https://go.microsoft.com/fwlink/p/?LinkID=142053).
 
 ## <a name="related-topics"></a>Verwandte Themen
 
 ### <a name="complete-example"></a>Vollständiges Beispiel
 
-* [Beispiel für Assoziationsstart](http://go.microsoft.com/fwlink/p/?LinkID=231484)
+* [Beispiel für Assoziationsstart](https://go.microsoft.com/fwlink/p/?LinkID=231484)
 
 ### <a name="concepts"></a>Konzepte
 

@@ -6,12 +6,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: Windows10, UWP, Anzeige, Werbung, Fehlerbehandlung, Javascript, XAML, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: a6c14ecf8e8909ab6cd95a54ca8144fbf8a8d912
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d0e2e1c019497fc22e8d922ba5f0a02a30034b65
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947677"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050663"
 ---
 # <a name="handle-ad-errors"></a>Behandeln von Fehlern bei Anzeigen
 
@@ -67,9 +67,9 @@ Hier ist ein Beispiel, das einen Ereignishandler mit dem Namen **errorLogger** d
 </div>
 ```
 
-Die Fehlerbehandlungsfunktion ist deklarativ und muss in die Funktion [MarkSupportedForProcessing](http://msdn.microsoft.com/library/windows/apps/Hh967819.aspx) eingeschlossen werden.
+Die Fehlerbehandlungsfunktion ist deklarativ und muss in die Funktion [MarkSupportedForProcessing](https://msdn.microsoft.com/library/windows/apps/Hh967819.aspx) eingeschlossen werden.
 
-Der Fehlerhandler fängt das JavaScript-Fehlerobjekt auf, wenn ein Fehler auftritt. Das Fehlerobjekt liefert dem Fehlerhandler zwei Argumente. Weitere Informationen finden Sie unter [Eigenschaften spezieller Fehler von asynchronen Methoden von Windows-Runtime](http://msdn.microsoft.com/library/windows/apps/hh994690.aspx).
+Der Fehlerhandler fängt das JavaScript-Fehlerobjekt auf, wenn ein Fehler auftritt. Das Fehlerobjekt liefert dem Fehlerhandler zwei Argumente. Weitere Informationen finden Sie unter [Eigenschaften spezieller Fehler von asynchronen Methoden von Windows-Runtime](https://msdn.microsoft.com/library/windows/apps/hh994690.aspx).
 
 Hier ist ein Beispiel für eine Fehlerbehandlungsfunktion mit dem Namen **ErrorLogger**, die das Ereignis **OnErrorOccurred** behandelt.
 

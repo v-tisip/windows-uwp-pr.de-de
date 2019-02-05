@@ -6,12 +6,12 @@ ms.date: 06/03/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 7d75afd17d5aa7edf64fda36b3a35b3a101c1d89
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4cdad8f3405420e0548974c734ad23bfd44f2c6b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924823"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046756"
 ---
 # <a name="sockets"></a>Sockets
 Sockets sind eine einfache Datenübertragungstechnologie, auf der viele Netzwerkprotokolle implementiert sind. UWP bietet TCP- und UDP-Socketklassen für Client-Server oder Peer-to-Peer-Anwendungen, unabhängig davon, ob Verbindungen langlebig sind oder keine bestehende Verbindung erforderlich ist.
@@ -521,7 +521,7 @@ void StreamSocketListener_ConnectionReceived(Windows::Networking::Sockets::Strea
 }
 ```
 
-Aus der Perspektive des **StreamSocket** schließt der Abschlusshandler die Ausführung ab bzw. kann der Socket gelöscht werden, bevor der Fortsetzungstext ausgeführt wird. Um zu verhindern, dass das Socket gelöscht wird, wenn Sie es in dieser Fortsetzung verwenden möchten, müssen Sie entweder direkt auf das Socket verweisen (über Lambda-Capture) und es verwenden, oder indirekt darauf verweisen (indem Sie innerhalb der Fortsetzung weiterhin auf `args->Socket` zugreifen), oder erzwingen, dass die Fortsetzungsaufgaben inline sind. Im [StreamSocket-Beispiel](http://go.microsoft.com/fwlink/p/?LinkId=620609) sehen Sie die erste Methode (Lambda-Capture) in Aktion. Im C++/CX-Code im Abschnitt [Erstellen eines grundlegenden TCP-Socket-Clients und -Servers](#build-a-basic-tcp-socket-client-and-server) oben wird die zweite Methode verwendet&mdash;sie gibt die Anforderung als Antwort zurück und greift auf `args->Socket` von innerhalb der innersten Fortsetzungen zu.
+Aus der Perspektive des **StreamSocket** schließt der Abschlusshandler die Ausführung ab bzw. kann der Socket gelöscht werden, bevor der Fortsetzungstext ausgeführt wird. Um zu verhindern, dass das Socket gelöscht wird, wenn Sie es in dieser Fortsetzung verwenden möchten, müssen Sie entweder direkt auf das Socket verweisen (über Lambda-Capture) und es verwenden, oder indirekt darauf verweisen (indem Sie innerhalb der Fortsetzung weiterhin auf `args->Socket` zugreifen), oder erzwingen, dass die Fortsetzungsaufgaben inline sind. Im [StreamSocket-Beispiel](https://go.microsoft.com/fwlink/p/?LinkId=620609) sehen Sie die erste Methode (Lambda-Capture) in Aktion. Im C++/CX-Code im Abschnitt [Erstellen eines grundlegenden TCP-Socket-Clients und -Servers](#build-a-basic-tcp-socket-client-and-server) oben wird die zweite Methode verwendet&mdash;sie gibt die Anforderung als Antwort zurück und greift auf `args->Socket` von innerhalb der innersten Fortsetzungen zu.
 
 Die dritte Methode ist geeignet, wenn Sie keine Antwort zurückgeben. Verwenden Sie die `task_continuation_context::use_synchronous_execution()`-Option um zu erzwingen, dass PPL den Fortsetzungstext inline ausführt. Dieses Codebeispiel veranschaulicht, wie Sie dies durchführen.
 
@@ -1202,7 +1202,7 @@ private async void BatchedSendsCSharpOnly(Windows.Networking.Sockets.StreamSocke
 }
 ```
 
-Dieses nächste Beispiel ist für jede UWP-Sprache geeignet, nicht nur für C#. Es basiert auf dem Verhalten in [**StreamSocket.OutputStream**](/uwp/api/windows.networking.sockets.streamsocket.OutputStream) und [**DatagramSocket.OutputStream**](/uwp/api/windows.networking.sockets.datagramsocket.OutputStream), das Sendevorgänge zusammen in Batches vornimmt. Die Methode ruft [**FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.FlushAsync) auf diesem Ausgabedatenstrom, der ab Windows 10, garantiert zurück, nur ein, nachdem alle Vorgänge im Ausgabedatenstrom abgeschlossen sind.
+Dieses nächste Beispiel ist für jede UWP-Sprache geeignet, nicht nur für C#. Es basiert auf dem Verhalten in [**StreamSocket.OutputStream**](/uwp/api/windows.networking.sockets.streamsocket.OutputStream) und [**DatagramSocket.OutputStream**](/uwp/api/windows.networking.sockets.datagramsocket.OutputStream), das Sendevorgänge zusammen in Batches vornimmt. Die Methode ruft [**FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.FlushAsync) auf diesem Ausgabedatenstrom, die ab Windows 10 garantiert erst zurückgegeben, nachdem alle Vorgänge im Ausgabedatenstrom abgeschlossen sind.
 
 ```csharp
 // An implementation of batched sends suitable for any UWP language.
@@ -1384,4 +1384,4 @@ Der [**HostName**](/uwp/api/Windows.Networking.HostName)-Konstruktor kann eine A
 * [Windows Sockets 2 (Winsock)](https://msdn.microsoft.com/library/windows/desktop/ms740673)
 
 ## <a name="samples"></a>Beispiele
-* [StreamSocket-Beispiel](http://go.microsoft.com/fwlink/p/?LinkId=620609)
+* [StreamSocket-Beispiel](https://go.microsoft.com/fwlink/p/?LinkId=620609)

@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows10, UWP, WIP, Windows Information Protection, Unternehmensdaten, Unternehmensdatenschutz, edp, optimierte Apps
 ms.assetid: 913ac957-ea49-43b0-91b3-e0f6ca01ef2c
 ms.localizationpriority: medium
-ms.openlocfilehash: 229d97c137344de26be0168be437825bea8e9700
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6f022045787512f6baea679633d5327b6ba4caf8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932543"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048357"
 ---
 # <a name="windows-information-protection-wip-developer-guide"></a>Entwicklerhandbuch für Windows Information Protection (WIP)
 
@@ -21,7 +21,7 @@ Eine *optimierte* App unterscheidet zwischen Firmen- oder persönlichen Daten un
 
 In diesem Handbuch zeigen wir Ihnen, wie eine erstellt wird. Wenn Sie fertig sind, werden Richtlinienadministratoren Ihrer App vertrauen, Daten für ihre Organisation zu verwenden. Und Mitarbeiter schätzen es, dass ihre persönlichen Daten auf den Geräten unangetastet bleiben, auch wenn sie die Registrierung des Geräts in der mobilen Geräteverwaltung (Mobile Device Management, MDM) aufheben oder das Unternehmen ganz verlassen.
 
-__Hinweis:__ Dieses Handbuch hilft Ihnen beim Optimieren einer UWP-App. Wenn Sie eine C++-Windows-Desktop-App optimieren möchten, lesen Sie die Informationen unter [Entwicklerhandbuch für Windows Information Protection (WIP) (C++)](http://go.microsoft.com/fwlink/?LinkId=822192).
+__Hinweis:__ Dieses Handbuch hilft Ihnen beim Optimieren einer UWP-App. Wenn Sie eine C++-Windows-Desktop-App optimieren möchten, lesen Sie die Informationen unter [Entwicklerhandbuch für Windows Information Protection (WIP) (C++)](https://go.microsoft.com/fwlink/?LinkId=822192).
 
 Weitere Informationen zu WIP und optimierten Apps hier: [Windows Information Protection (WIP)](wip-hub.md).
 
@@ -1163,4 +1163,4 @@ private void ProtectionPolicyManager_ProtectedContentRevoked(object sender, Prot
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-[Windows Information Protection (WIP)-Beispiel](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)
+[Windows Information Protection (WIP)-Beispiel](https://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)

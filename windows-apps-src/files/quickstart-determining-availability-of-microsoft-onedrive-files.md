@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e431694f3f0effb6fd5e7688b146109dfc1f5dc7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 26eb371e767f0c1e7f3d5855cf68728958c0cda3
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946022"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044993"
 ---
 # <a name="determining-availability-of-microsoft-onedrive-files"></a>Ermitteln der Verfügbarkeit von MicrosoftOneDrive-Dateien
 
@@ -42,8 +42,8 @@ Benutzer können OneDrive-Dateien als „Offline verfügbar“ (Standardeinstell
 
 | Dateityp                              | Online | Getaktetes Netzwerk        | Offline |
 |-------------------------------------------|--------|------------------------|---------|
-| Lokale Datei                                | True   | True                   | True    |
-| Als "Offline verfügbar" gekennzeichnete OneDrive-Datei | True   | True                   | True    |
+| Lokale Datei                                | Wahr   | Wahr                   | Wahr    |
+| Als "Offline verfügbar" gekennzeichnete OneDrive-Datei | Wahr   | Wahr                   | Wahr    |
 | Als "Nur online verfügbar" gekennzeichnete OneDrive-Datei       | True   | Basierend auf Benutzereinstellungen | False   |
 | Netzwerkdatei                              | True   | Basierend auf Benutzereinstellungen | False   |
 
@@ -53,7 +53,7 @@ Die folgenden Schritte zeigen, wie festgestellt wird, ob eine Datei momentan ver
 
 1.  Deklarieren Sie eine für die Bibliothek, auf die Sie zugreifen möchten, geeignete Funktion.
 2.  Schließen Sie den [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346)-Namespace ein. Dieser Namespace enthält die Typen zum Verwalten von Dateien, Ordnern und Anwendungseinstellungen. Außerdem enthält er den erforderlichen [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171)-Typ.
-3.  Beschaffen Sie ein [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171)-Objekt für die gewünschte Datei bzw. die gewünschten Dateien. Wenn Sie eine Bibliothek aufzählen, können Sie zur Durchführung dieses Schritts die [**StorageFolder.CreateFileQuery**](https://msdn.microsoft.com/library/windows/apps/BR227252)-Methode und dann die [**GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227276.aspx)-Methode des sich ergebenden [**StorageFileQueryResult**](https://msdn.microsoft.com/library/windows/apps/BR208046)-Objekts aufrufen. Die **GetFilesAsync**-Methode gibt eine [IReadOnlyList](http://go.microsoft.com/fwlink/p/?LinkId=324970)-Sammlung mit **StorageFile**-Objekten zurück.
+3.  Beschaffen Sie ein [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171)-Objekt für die gewünschte Datei bzw. die gewünschten Dateien. Wenn Sie eine Bibliothek aufzählen, können Sie zur Durchführung dieses Schritts die [**StorageFolder.CreateFileQuery**](https://msdn.microsoft.com/library/windows/apps/BR227252)-Methode und dann die [**GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227276.aspx)-Methode des sich ergebenden [**StorageFileQueryResult**](https://msdn.microsoft.com/library/windows/apps/BR208046)-Objekts aufrufen. Die **GetFilesAsync**-Methode gibt eine [IReadOnlyList](https://go.microsoft.com/fwlink/p/?LinkId=324970)-Sammlung mit **StorageFile**-Objekten zurück.
 4.  Nachdem Sie den Zugriff auf ein [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171)-Objekt eingerichtet haben, das die gewünschten Dateien darstellt, spiegelt der Wert der [**StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx)-Eigenschaft wider, ob die Datei verfügbar ist.
 
 Die folgende generische Methode veranschaulicht, wie Sie einen beliebigen Ordner aufzählen und die Sammlung mit [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171)-Objekten für diesen Ordner zurückgeben. Die aufrufende Methode durchläuft dann die zurückgegebene Sammlung und verweist für jede Datei auf die [**StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx)-Eigenschaft.

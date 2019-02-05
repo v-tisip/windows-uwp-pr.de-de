@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 9714488473bf4bdc118fd56129ea67e00019dcb1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3359c3e7d7841e68dd00dc318eb1de9f1418df06
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934765"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047342"
 ---
 # <a name="effects-for-analyzing-camera-frames"></a>Effekte für die Analyse von Kamera-Frames
 
@@ -97,7 +97,7 @@ Wenn Sie während der Gesichtserkennung Aktionen ausführen möchten, z. B. Zeic
 
 [!code-cs[RegisterFaceDetectionHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetRegisterFaceDetectionHandler)]
 
-Im Handler für das Ereignis erhalten Sie eine Liste mit allen in einem Frame erkannten Gesichtern, indem Sie auf die [**FaceDetectionEffectFrame.DetectedFaces**](https://msdn.microsoft.com/library/windows/apps/dn948792)-Eigenschaft von [**FaceDetectedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948774) zugreifen. Die [**FaceBox**](https://msdn.microsoft.com/library/windows/apps/dn974126)-Eigenschaft ist eine [**BitmapBounds**](https://msdn.microsoft.com/library/windows/apps/br226169)-Struktur, die das Rechteck mit dem erkannten Gesicht relativ zu den Abmessungen des Vorschaudatenstroms beschreibt. Einen Beispielcode, der die Koordinaten des Vorschaudatenstroms in Bildschirmkoordinaten umwandelt, finden Sie unter [Gesichtserkennungsbeispiel für UWP](http://go.microsoft.com/fwlink/?LinkId=619486).
+Im Handler für das Ereignis erhalten Sie eine Liste mit allen in einem Frame erkannten Gesichtern, indem Sie auf die [**FaceDetectionEffectFrame.DetectedFaces**](https://msdn.microsoft.com/library/windows/apps/dn948792)-Eigenschaft von [**FaceDetectedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948774) zugreifen. Die [**FaceBox**](https://msdn.microsoft.com/library/windows/apps/dn974126)-Eigenschaft ist eine [**BitmapBounds**](https://msdn.microsoft.com/library/windows/apps/br226169)-Struktur, die das Rechteck mit dem erkannten Gesicht relativ zu den Abmessungen des Vorschaudatenstroms beschreibt. Einen Beispielcode, der die Koordinaten des Vorschaudatenstroms in Bildschirmkoordinaten umwandelt, finden Sie unter [Gesichtserkennungsbeispiel für UWP](https://go.microsoft.com/fwlink/?LinkId=619486).
 
 [!code-cs[FaceDetected](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFaceDetected)]
 

@@ -1,24 +1,24 @@
 ---
-description: Wenn Sie eine universelle 8.1-app und \#8212;whether haben als Ziel ist Windows8.1, Windows Phone 8.1 oder beides und \#8212;then, die Sie feststellen, dass der Quellcode und Ihre Kenntnisse sich reibungslos zu Windows 10 portieren lassen.
+description: 'Besitzen Sie eine universelle 8.1-App&\ #8212; gibt an, ob es Windows8.1, Windows Phone 8.1 oder Both&\ #8212; ausgerichtet ist dann finden Sie, dass der Quellcode und Ihre Kenntnisse sich reibungslos zu Windows 10 portieren lassen.'
 title: Wechsel von Windows-Runtime 8.x zu UWP
 ms.assetid: ac163b57-dee0-43fa-bab9-8c37fbee3913
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: c94b2a9a1ad13db4051d276aaff9a082f95f33fb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7d0a75ae4306535d37c5c2d776fda2cbdc3a0634
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938621"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047688"
 ---
 # <a name="move-from-windows-runtime-8x-to-uwp"></a>Wechsel von Windows-Runtime 8.x zu UWP
 
 
-Bei einer universellen 8.1-app – Windows8.1 und/oder Windows Phone 8.1 ausgerichtet ist, und Sie feststellen, dass der Quellcode und Ihre Kenntnisse sich reibungslos zu Windows 10 portieren lassen. Mit Windows 10 können Sie eine app (universelle Windows Plattform) erstellen, also ein einzelnes app-Paket, das Ihre Kunden auf jeder Art von Gerät installieren können. Weitere Hintergrundinformationen zu Windows 10 UWP-apps und den Konzepten von adaptivem Code und adaptiver UI, die wir in diesem portierungshandbuch erörtern werden finden Sie in der [Anleitung für UWP-apps](https://msdn.microsoft.com/library/windows/apps/dn894631).
+Bei einer universellen 8.1-app – gibt an, ob es Windows8.1 und/oder Windows Phone 8.1 ausgerichtet ist, und Sie feststellen, dass der Quellcode und Ihre Kenntnisse sich reibungslos zu Windows 10 portieren lassen. Mit Windows 10 können Sie eine app (universelle Windows Plattform) erstellen, also ein einzelnes app-Paket, das Ihre Kunden auf jeder Art von Gerät installieren können. Weitere Hintergrundinformationen zu Windows 10 UWP-apps und den Konzepten von adaptivem Code und adaptiver UI, die wir in diesem Handbuch für das Portieren, erörtern werden finden Sie in der [Anleitung für UWP-apps](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
-Beim Portieren, werden Sie feststellen, dass Windows 10 teilt sich die bisherigen Plattformen als auch XAML-Markup, Benutzeroberflächenframework und die meisten APIs, und Sie es feststellen werden alle angenehm vertraut. Genau wie vorher, können Sie weiterhin zwischen C++, C# und Visual Basic als Programmiersprache mit dem XAML-Benutzeroberflächenframework wählen. Die ersten Schritte bei der Planung, was genau mit der aktuellen App oder den Apps geschehen soll, hängt von der Art der vorhandenen Apps und Projekte ab. Dies wird in den folgenden Abschnitten erläutert.
+Beim Portieren, werden Sie feststellen, dass Windows 10 teilt sich die meisten APIs mit den bisherigen Plattformen als auch XAML-Markup, Benutzeroberflächenframework und Tools, und Sie, es feststellen werden alle angenehm vertraut. Genau wie vorher, können Sie weiterhin zwischen C++, C# und Visual Basic als Programmiersprache mit dem XAML-Benutzeroberflächenframework wählen. Die ersten Schritte bei der Planung, was genau mit der aktuellen App oder den Apps geschehen soll, hängt von der Art der vorhandenen Apps und Projekte ab. Dies wird in den folgenden Abschnitten erläutert.
 
 ## <a name="if-you-have-a-universal-81-app"></a>Bei einer universellen8.1-App
 
@@ -28,7 +28,7 @@ Eine universelle 8.1-App wird aus einem universellen 8.1-App-Projekt erstellt. A
 -   AppName\_81.WindowsPhone. Dies ist das Projekt, das das App-Paket für Windows Phone 8.1 erstellt.
 -   AppName\_81.Shared. Dies ist das Projekt, das den Quellcode, die Markupdateien und andere Assets und Ressourcen enthält, die von den beiden anderen Projekten verwendet werden.
 
-Häufig bietet eine universelle Windows-app für 8.1 die gleichen Features – und das anhand des gleichen Codes und Markups – in der Windows8.1 und Windows Phone 8.1-Formularen. Eine app ist ein idealer Kandidat für die Portierung zu einer einzelnen Windows 10-app, die auf die universelle Gerätefamilie ausgerichtet ist (und Sie auf einer breiten Palette von Geräten installieren können). Sie portieren im Grunde den Inhalt des freigegebenen Projekts und müssen nur wenige oder gar keine Elemente von den anderen beiden Projekten verwenden, da sie nur wenig oder keinen Inhalt haben.
+Häufig bietet eine universelle Windows-app für 8.1 die gleichen Features – und das anhand des gleichen Codes und Markups – in seiner Windows8.1 und Windows Phone 8.1-Formularen. Eine app ist ein idealer Kandidat für die Portierung zu einer einzelnen Windows 10-app, die auf die universelle Gerätefamilie ausgerichtet ist (und die Sie auf einer breiten Palette von Geräten installieren können). Sie portieren im Grunde den Inhalt des freigegebenen Projekts und müssen nur wenige oder gar keine Elemente von den anderen beiden Projekten verwenden, da sie nur wenig oder keinen Inhalt haben.
 
 In anderen Fällen, die Windows8.1 und/oder Windows Phone 8.1-Formulare der app enthalten einzigartige Features. Oder sie enthalten den gleichen Featureumfang, implementieren diese Features jedoch mit verschiedenen Techniken oder anderen Technologien. Mit einer solchen App haben Sie die Möglichkeit, sie zu einer einzelnen App zu portieren, die auf die universelle Gerätefamilie ausgerichtet ist (in diesem Fall sollte sich die App selbst an verschiedene Geräte anpassen), oder Sie können sie zu mehr als einer App portieren, z.B. zu einer, die auf die Desktopgerätefamilie ausgerichtet ist, und einer für die Mobilgerätefamilie. Die Art der universellen8.1-App bestimmt, welche Option für diesen Fall am besten geeignet ist.
 
@@ -55,9 +55,9 @@ Beim Portieren einer universellen8.1-App zum Modell für UWP-Apps können Sie au
 
 -   **Ansicht**. Die Ansicht und das Ansichtsmodell bilden die UI Ihrer App. Im Idealfall besteht die Ansicht aus Markup, das an feststellbare Eigenschaften eines Ansichtsmodells gebunden ist. Ein weiteres gängiges, aber nur auf kurze Sicht zweckmäßiges Muster ist das direkte Ändern von UI-Elementen mit imperativem Code in einer CodeBehind-Datei. In beiden Fällen lassen sich Ihre UI-Markups und -Designs–und sogar imperativer Code zum Ändern von UI-Elementen–einfach portieren.
 -   **Ansichtsmodelle und Datenmodelle**. Auch wenn Sie Muster zur Trennung der Zuständigkeiten (z.B. MVVM) nicht ausdrücklich anwenden, gibt es in Ihrer App zwangsläufig Code, der die Funktion des Ansichts- und Datenmodells übernimmt. Code für das Ansichtsmodell nutzt Typen in den Namespaces des Benutzeroberflächenframeworks. Sowohl der Code für das Ansichtsmodell als auch der Code für das Datenmodell nutzen zudem nicht visuelle Betriebssystem- und .NETFramework-APIs (darunter APIs für den Datenzugriff). Und diese APIs sind [auch für UWP-Apps verfügbar](https://msdn.microsoft.com/library/windows/apps/br211369), sodass der Großteil dieses Codes, wenn nicht gar der gesamte Code, ohne Änderung portiert wird.
--   **Clouddienste**. Höchstwahrscheinlich werden einige (oder sogar die meisten) Teile Ihrer App in Form von Diensten in der Cloud ausgeführt. Der auf dem Clientgerät ausgeführte Teil der App stellt eine Verbindung mit diesen Diensten her. Dies ist der Teil einer verteilten App, bei dem es am wahrscheinlichsten ist, dass er beim Portieren des Clientteils unverändert bleibt. Falls Sie noch keine Clouddienste nutzen, sind [Microsoft Azure Mobile Services](http://azure.microsoft.com/services/mobile-services/) eine gute Wahl für Ihre UWP-App. Sie bieten leistungsstarke Back-End-Komponenten, die Ihre App für verschiedenste Dienste aufrufen kann– angefangen bei einfachen Benachrichtigungen für Live-Kachelaktualisierungen bis hin zur komplexen Skalierbarkeit, die eine Serverfarm bereitstellen kann.
+-   **Clouddienste**. Höchstwahrscheinlich werden einige (oder sogar die meisten) Teile Ihrer App in Form von Diensten in der Cloud ausgeführt. Der auf dem Clientgerät ausgeführte Teil der App stellt eine Verbindung mit diesen Diensten her. Dies ist der Teil einer verteilten App, bei dem es am wahrscheinlichsten ist, dass er beim Portieren des Clientteils unverändert bleibt. Falls Sie noch keine Clouddienste nutzen, sind [Microsoft Azure Mobile Services](https://azure.microsoft.com/services/mobile-services/) eine gute Wahl für Ihre UWP-App. Sie bieten leistungsstarke Back-End-Komponenten, die Ihre App für verschiedenste Dienste aufrufen kann– angefangen bei einfachen Benachrichtigungen für Live-Kachelaktualisierungen bis hin zur komplexen Skalierbarkeit, die eine Serverfarm bereitstellen kann.
 
-Überlegen Sie vor oder während der Portierung, ob Ihre App dadurch verbessert werden könnte, wenn Sie sie umgestalten und Code mit einem ähnlichen Zweck in Ebenen zusammenfassen, anstatt ihn willkürlich zu verteilen. Die Aufteilung Ihrer App in Ebenen wie die oben beschriebenen erleichtert Ihnen das Ausschließen von Fehlern, Testen und spätere Lesen und Warten Ihrer App. Sie können Funktionalität stärker wiederverwendbar machen, indem Sie dem Model-View-ViewModel ([MVVM](http://msdn.microsoft.com/magazine/dd419663.aspx))-Muster folgen. Dieses Muster trennt die Daten-, Geschäfts- und UI-Teile der App voneinander. Auch innerhalb der UI kann das Muster Zustand und Verhalten von den visuellen Elementen getrennt halten, sodass diese separat getestet werden können. Das MVVM-Muster bietet Ihnen die Möglichkeit, Ihre Daten und Geschäftslogik einmal zu schreiben und auf allen Geräten, unabhängig von der UI, zu verwenden. Es ist wahrscheinlich, dass Sie auch einen Großteil des Ansichtsmodells und der Ansichtselemente auf verschiedenen Geräten wiederverwenden können.
+Überlegen Sie vor oder während der Portierung, ob Ihre App dadurch verbessert werden könnte, wenn Sie sie umgestalten und Code mit einem ähnlichen Zweck in Ebenen zusammenfassen, anstatt ihn willkürlich zu verteilen. Die Aufteilung Ihrer App in Ebenen wie die oben beschriebenen erleichtert Ihnen das Ausschließen von Fehlern, Testen und spätere Lesen und Warten Ihrer App. Sie können Funktionalität stärker wiederverwendbar machen, indem Sie dem Model-View-ViewModel ([MVVM](https://msdn.microsoft.com/magazine/dd419663.aspx))-Muster folgen. Dieses Muster trennt die Daten-, Geschäfts- und UI-Teile der App voneinander. Auch innerhalb der UI kann das Muster Zustand und Verhalten von den visuellen Elementen getrennt halten, sodass diese separat getestet werden können. Das MVVM-Muster bietet Ihnen die Möglichkeit, Ihre Daten und Geschäftslogik einmal zu schreiben und auf allen Geräten, unabhängig von der UI, zu verwenden. Es ist wahrscheinlich, dass Sie auch einen Großteil des Ansichtsmodells und der Ansichtselemente auf verschiedenen Geräten wiederverwenden können.
 
 | Thema | Beschreibung |
 |-------|-------------|
@@ -73,5 +73,5 @@ Beim Portieren einer universellen8.1-App zum Modell für UWP-Apps können Sie au
 
 **Dokumentation**
 * [Windows-Runtime-Referenz](https://msdn.microsoft.com/library/windows/apps/br211377)
-* [Erstellen von universellen Windows-Apps für alle Windows-Geräte](http://go.microsoft.com/fwlink/p/?LinkID=397871)
+* [Erstellen von universellen Windows-Apps für alle Windows-Geräte](https://go.microsoft.com/fwlink/p/?LinkID=397871)
 * [Gestaltung der Benutzererfahrung für Apps](https://msdn.microsoft.com/library/windows/apps/hh767284)

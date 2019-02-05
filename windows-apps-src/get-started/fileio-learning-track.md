@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Erste Schritte, UWP, Windows10, Lernpfad, Dateien, Datei-E/A, Datei lesen, Datei schreiben, Datei erstellen, Text schreiben, Text lesen
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 9350228585ec8108c41bd15de6179de0294140dc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e0abc146820ca27ee83662ba5f8b79a1daf90bab
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921080"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045529"
 ---
 # <a name="work-with-files"></a>Arbeiten mit Dateien
 
@@ -61,7 +61,7 @@ Die **FileIO**-Klasse bietet eine bequeme Möglichkeit, um Text in die Datei zu 
 
 ## <a name="read-text-from-a-file"></a>Lesen von Text aus einer Datei
 
-Wie beim Schreiben einer Datei beginnt das Lesen einer Datei durch die Angabe, wo sich die Datei befindet. Wir verwenden den gleichen Speicherort wie im obigen Beispiel. Anschließend verwenden wir **FileIO** -Klasse, um den Inhalt zu lesen.
+Wie beim Schreiben einer Datei beginnt das Lesen einer Datei durch die Angabe, wo sich die Datei befindet. Wir verwenden den gleichen Speicherort wie im obigen Beispiel. Anschließend verwenden wir die **FileIO** -Klasse, um den Inhalt zu lesen.
 
 ```csharp
 Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
@@ -130,7 +130,7 @@ Nachfolgend finden Sie einen kurzen Überblick über die APIs und andere nützli
 | [Erstellen, Schreiben und Lesen einer Datei](https://docs.microsoft.com/windows/uwp/files/quickstart-reading-and-writing-files) | Erläutert das Erstellen, Lesen und Schreiben von Text, binären Daten und Streams. |
 | [Erste Schritte zum lokalen Speichern von App-Daten](https://blogs.windows.com/buildingapps/2016/05/10/getting-started-storing-app-data-locally/#pCbJKGjcShh5DTV5.97) | Zusätzlich zu den bewährte Methoden zum Speichern lokaler Daten wird hier der Zweck der Ordner LocalSettings und LocalCache erörtert. |
 | [Erste Schritte mit Roaming-App-Daten](https://blogs.windows.com/buildingapps/2016/05/03/getting-started-with-roaming-app-data/#RgjgLt5OkU9DbVV8.97) | Eine zweiteilige Serie über die Verwendung von Roaming-App-Daten. |
-| [Richtlinien für das Roaming von Anwendungsdaten](http://msdn.microsoft.com/library/windows/apps/hh465094) | Befolgen Sie diese Richtlinien für das Daten-Roaming, wenn Sie Ihre App entwerfen. |
+| [Richtlinien für das Roaming von Anwendungsdaten](https://msdn.microsoft.com/library/windows/apps/hh465094) | Befolgen Sie diese Richtlinien für das Daten-Roaming, wenn Sie Ihre App entwerfen. |
 | [Speichern und Abrufen von Einstellungen und anderen App-Daten](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data) | Bietet eine Übersicht über die verschiedenen App-Datenspeicher wie z.B. die lokalen, Roaming- und temporären Ordner. Unter [Roamingdaten](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data#roaming-data) finden Sie Richtlinien und weitere Informationen zum Schreiben von Daten, die via Roaming zwischen Geräten übertragen werden. |
 | [Berechtigungen für den Dateizugriff](https://docs.microsoft.com/windows/uwp/files/file-access-permissions) | Informationen darüber, auf welche Dateisystemspeicherorte Ihre App zugreifen kann. |
 | [Öffnen von Dateien und Ordnern mit einer Auswahl](https://docs.microsoft.com/windows/uwp/files/quickstart-using-file-and-folder-pickers) | Zeigt, wie Sie auf Dateien und Ordner zugreifen, indem Sie Benutzer über eine Auswahl-UI entscheiden lassen. |
@@ -143,6 +143,6 @@ Nachfolgend finden Sie einen kurzen Überblick über die APIs und andere nützli
 |-----------------|---------------|
 | [Beispiel für Anwendungsdaten](https://code.msdn.microsoft.com/windowsapps/ApplicationData-sample-fb043eb2) | Zeigt, wie Sie die Anwendungsdaten-APIs verwenden können, um spezifische Daten für jeden Benutzer zu speichern und abzurufen. |
 | [Beispiel zum Dateizugriff](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess) | Veranschaulicht das Erstellen, Lesen, Schreiben, Kopieren und Löschen einer Datei. |
-| [Beispiel zur Dateiauswahl](http://code.msdn.microsoft.com/windowsapps/File-picker-sample-9f294cba) | Zeigt, wie auf Dateien und Ordner zugegriffen werden kann, indem der Benutzer diese über die Benutzeroberfläche auswählen darf, und wie eine Datei so gespeichert wird, dass der Benutzer den Namen, Dateityp und Speicherort der Datei angeben kann. |
+| [Beispiel zur Dateiauswahl](https://code.msdn.microsoft.com/windowsapps/File-picker-sample-9f294cba) | Zeigt, wie auf Dateien und Ordner zugegriffen werden kann, indem der Benutzer diese über die Benutzeroberfläche auswählen darf, und wie eine Datei so gespeichert wird, dass der Benutzer den Namen, Dateityp und Speicherort der Datei angeben kann. |
 | [JSON-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Json) | Veranschaulicht das Codieren und Decodieren von JSON-Objekten (JavaScript Object Notation), Arrays, Zeichenfolgen, Zahlen und booleschen Werten mit dem [Windows.Data.Json-Namespace](https://docs.microsoft.com/uwp/api/Windows.Data.Json). |
 | [Weitere Codebeispiele](https://developer.microsoft.com//windows/samples) | Wählen Sie **Dateien, Ordner und Bibliotheken** in der Dropdownliste mit den Kategorien. |

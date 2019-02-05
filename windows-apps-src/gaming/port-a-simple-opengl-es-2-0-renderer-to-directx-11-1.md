@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Opengl, Direct3D 11, Portieren
 ms.localizationpriority: medium
-ms.openlocfilehash: 78bcf3c2cae53fba4e67ecd4b3bcc44adddde1bf
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0b6d06ff168f778c87e46fa399775492a3cebcaa
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939878"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047678"
 ---
 # <a name="port-a-simple-opengl-es-20-renderer-to-direct3d-11"></a>Portieren eines einfachen OpenGL ES 2.0-Renderers zu Direct3D 11
 
@@ -80,7 +80,7 @@ typedef struct
 
 Diese Struktur verfügt über eine Instanz und enthält alle erforderlichen Komponenten zum Rendern eines sehr einfach aufgebauten Gitters mit Vertexschattierung.
 
-> **Hinweis:** Any OpenGL ES 2.0-Code in diesem Thema basiert auf der Windows-API-Implementierung von der Khronos Group, und Programmiersyntax von Windows C verwendet.
+> **Hinweis:** Any OpenGL ES 2.0-Code in diesem Thema basiert auf der Windows-API-Implementierung von der Khronos Group und Programmiersyntax Windows C verwendet.
 
  
 
@@ -89,7 +89,7 @@ Diese Struktur verfügt über eine Instanz und enthält alle erforderlichen Komp
 
 ### <a name="technologies"></a>Technologien
 
--   [Microsoft Visual C++](http://msdn.microsoft.com/library/vstudio/60k1461a.aspx)
+-   [Microsoft Visual C++](https://msdn.microsoft.com/library/vstudio/60k1461a.aspx)
 -   OpenGL ES 2.0
 
 ### <a name="prerequisites"></a>Voraussetzungen

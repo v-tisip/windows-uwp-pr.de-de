@@ -4,35 +4,35 @@ title: Reagieren auf Kundenrezensionen
 ms.assetid: 96AA2108-E793-4DD0-8CDA-0D115423C68D
 ms.date: 10/31/2018
 ms.topic: article
-keywords: Überprüfen Sie Windows 10, Uwp, reagieren, Antworten
+keywords: Überprüfen Sie Windows 10, Uwp, reagiert, Antworten
 ms.localizationpriority: medium
-ms.openlocfilehash: 1feb6f463fe018d356d678b23199716ad0cbd3e8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0d45b5144bb13e66c506c4a55115bf252288064d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920624"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048207"
 ---
 # <a name="respond-to-customer-reviews"></a>Reagieren auf Kundenrezensionen
 
 
-Sie können auf Rezensionen Ihrer App zu ermöglichen, dass Kunden wissen, dass Sie ihr Feedback ernst reagieren. Wenn Sie auf Kritiken antworten, können Sie Kunden über neue Features oder behobene Schwachstellen informieren, die in Bezug zu ihren Kommentaren stehen, oder Sie erhalten detaillierteres Feedback mit Verbesserungsvorschlägen für Ihre App. Ihre Antworten werden im Microsoft Store für alle Windows 10-Kunden angezeigt. Sie können auch auswählen, um Ihre Antwort per e-Mail an den Kunden senden, (Wenn sie noch nicht deaktiviert und ein Gerät mit Windows 10, Version 1803 oder höher).
+Sie können auf Rezensionen Ihrer App zu ermöglichen, dass Kunden wissen, dass Sie ihr Feedback ernst reagieren. Wenn Sie auf Kritiken antworten, können Sie Kunden über neue Features oder behobene Schwachstellen informieren, die in Bezug zu ihren Kommentaren stehen, oder Sie erhalten detaillierteres Feedback mit Verbesserungsvorschlägen für Ihre App. Ihre Antworten werden im Microsoft Store für alle Windows 10-Kunden angezeigt. Sie können auch auswählen, um Ihre Antwort per e-Mail an dem Kunden zu senden, (Wenn sie noch nicht Deaktivierung wurde ausgeführt und ein Gerät mit Windows 10, Version 1803 oder höher).
 
-Um Rezensionen Ihrer app anzuzeigen und Antworten bereitzustellen, suchen Sie die app im [Partner Center](https://partner.microsoft.com/dashboard). Erweitern Sie im linken Navigationsmenü *Analytics** und klicken Sie auf **Rezensionen** , um den [Bericht "Rezensionen"](reviews-report.md)anzuzeigen. Wählen Sie **reagieren, um zu überprüfen** , um Ihre Antwort bereitzustellen.
+Um Rezensionen zu Ihrer app anzuzeigen und Antworten bereitzustellen, suchen Sie die app im [Partner Center](https://partner.microsoft.com/dashboard). Erweitern Sie im linken Navigationsmenü, *Analyse**, und klicken Sie dann auf **Rezensionen** , um den [Bericht "Rezensionen"](reviews-report.md)anzuzeigen. Wählen Sie aus, **reagieren, um zu überprüfen** , um Ihre Antwort bereitzustellen.
 
 > [!TIP]
 > Zusätzlich zur Verwendung von Partner Center zum Reagieren auf Rezensionen, können Sie auf Rezensionen [programmgesteuert](../monetize/submit-responses-to-app-reviews.md)reagieren.
 
-Standardmäßig wird Ihre Antwort im Store direkt unter der ursprüngliche Rezension für Kunden veröffentlicht. Diese Antworten werden allen Kunden, die den Store auf einem Windows 10-Gerät anzeigen. Wenn der Kunde, der der Rezension verwendet ein Gerät mit Windows 10, Version 1803 oder höher, und sie noch nicht den Empfang von Antworten e-Mail entschieden, wird eine Kopie der Ihre Antwort auch für diesen Kunden per e-Mail gesendet.  Sie müssen eine gültige e-Mail-Adresse angeben, um Ihre Antwort zu übermitteln, die wir in der e-Mail an den Kunden enthält. Sie können dann diese e-Mail-Adresse, Sie direkt kontaktieren.
+Standardmäßig wird Ihre Antwort im Store direkt unter der ursprüngliche Rezension für Kunden veröffentlicht. Diese Antworten werden allen Kunden, die den Store auf einem Windows 10-Gerät anzeigen. Wenn der Kunde, der der Rezension verwendet ein Gerät mit Windows 10, Version 1803 oder höher, und sie noch nicht den Empfang von Antworten e-Mail entschieden, wird eine Kopie der Ihre Antwort auch für diesen Kunden per e-Mail gesendet.  Sie müssen eine gültige e-Mail-Adresse angeben, um Ihre Antwort, übermitteln, die wir in der e-Mail an den Kunden enthält. Klicken Sie dann können diese e-Mail-Adresse Sie direkt kontaktieren.
 
-Wenn Sie nicht möchten, dass Ihre Antwort im Store angezeigt werden, und stattdessen nur per e-Mail an den Kunden antworten möchten, deaktivieren Sie das **Diese Antwort veröffentlichen** . Beachten Sie, dass es nicht möglich ist, Deaktivieren dieses Kontrollkästchen, wenn der Kunde den Empfang von Antworten e-Mail entschieden hat bzw. Wenn sie ein Gerät verwenden, die nicht Windows 10, Version 1803 oder höher ausgeführt wird.
+Wenn Sie nicht möchten, dass Ihre Antwort im Store, und stattdessen nur per e-Mail an den Kunden antworten möchten, deaktivieren Sie das **Veröffentlichen Sie diese Antwort** . Beachten Sie, dass Sie nicht in der Lage ist, Deaktivieren dieses Kontrollkästchen, wenn der Kunde den Empfang von Antworten e-Mail entschieden hat bzw. Wenn sie ein Gerät verwenden, die nicht Windows 10, Version 1803 oder höher ausgeführt wird.
 
 ## <a name="guidelines-for-responses"></a>Richtlinien für Antworten
 
-Beim Beantworten von Kundenrezensionen müssen folgende Richtlinien beachtet werden. Dies gilt für alle Antworten, ob sie öffentlich oder nicht sind.
+Beim Beantworten von Kundenrezensionen müssen folgende Richtlinien beachtet werden. Dies gilt für alle Antworten, ob sie öffentliche oder nicht befinden.
 
 > [!IMPORTANT]
-> Sie können nicht auf die Antworten, die Sie an den Store zu veröffentlichen (es sei denn, der Kunde überarbeitet seine ursprüngliche Rezension) ändern, daher sollten Sie Ihre Antwort sorgfältig überprüfen können. Wenn ein Kunde seine ursprüngliche Rezension überarbeitet, wird Ihre Antwort von der app Store-Eintragsseite entfernt werden. Sie haben dann die Möglichkeit, eine neue Antwort zur überarbeiteten Rezension zu senden, indem Sie auswählen, **Aktualisieren Sie Ihre Antwort**.
+> Nicht möglich, ändern die Antworten, die Sie an den Store postet (es sei denn, der Kunde überarbeitet seine ursprüngliche Rezension), daher sollten Sie Ihre Antwort sorgfältig überprüfen. Wenn ein Kunde seine ursprüngliche Rezension überarbeitet, wird Ihre Antwort von der app Store-Eintragsseite entfernt werden. Sie haben dann die Möglichkeit, eine neue Antwort zur überarbeiteten Rezension zu senden, indem Sie auswählen, **Aktualisieren Sie Ihre Antwort**.
 
 -   Antworten dürfen maximal 1.000Zeichen umfassen.
 -   Sie dürfen Benutzern keine Gegenleistungen, einschließlich digitaler Apps, anbieten, um sie zum Ändern ihrer App-Bewertung zu animieren. Wie Sie bereits wissen, dürfen Sie gemäß der [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) keine Bewertungen manipulieren.
@@ -46,7 +46,7 @@ Beim Beantworten von Kundenrezensionen müssen folgende Richtlinien beachtet wer
 >
 > Microsoft behält sich das Recht vor, die Genehmigung für einen Entwickler zum Senden von Antworten aus jeglichem Grund zu widerrufen, beispielsweise, wenn auf Ihre Rezensionsantworten übermäßig viele unangemessene Antworten gemeldet werden oder ungewöhnlich viele Kunden den Empfang von Antworten auf ihre Rezensionen abwählen.
 
-Sie alleine sind für die Kommunikation mit Ihren Kunden verantwortlich. Microsoft beteiligt sich nicht an Meinungsverschiedenheiten zwischen Entwicklern und Kunden. Jedoch, wenn eine Rezension Ihrer App anstößige, profane oder beleidigende Sprache enthält, öffnen Sie eine [Supportanfrage](http://go.microsoft.com/fwlink/p/?LinkID=401178).
+Sie alleine sind für die Kommunikation mit Ihren Kunden verantwortlich. Microsoft beteiligt sich nicht an Meinungsverschiedenheiten zwischen Entwicklern und Kunden. Jedoch, wenn eine Rezension Ihrer App anstößige, profane oder beleidigende Sprache enthält, öffnen Sie eine [Supportanfrage](https://go.microsoft.com/fwlink/p/?LinkID=401178).
 
 
 ## <a name="use-customer-reviews-to-improve-your-app"></a>Kundenrezensionen als Verbesserungschance für Ihre App

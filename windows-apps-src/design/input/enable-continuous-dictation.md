@@ -8,12 +8,12 @@ keywords: Sprache, Stimme, Spracherkennung, natürliche Sprache, diktieren, Eing
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 839dc024204ec9b76ffe621a35cbbbaffc248d02
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0865b229faad646901ab76f46982e738b2830035
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939646"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046643"
 ---
 # <a name="continuous-dictation"></a>Kontinuierliches Diktieren
 
@@ -26,7 +26,7 @@ In [Spracherkennung](speech-recognition.md) haben Sie gelernt, wie Sie mithilfe 
 Bei längeren, kontinuierlichen Spracherkennungssitzungen (z.B. für Diktate oder E-Mails) wird hingegen die [**ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913913)-Eigenschaft eines [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226)-Objekts verwendet, um ein [**SpeechContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913896)-Objekt zu erhalten.
 
 > [!NOTE]
-> Diktat sprachunterstützung hängt davon ab, auf dem [Gerät](https://docs.microsoft.com/windows/uwp/design/devices/) , in denen Ihre app ausgeführt wird. Für PCs und Laptops wird nur "En-US" erkannt, während Xbox und Telefone alle Sprachen, die von der Spracherkennung unterstützt erkennen können. Weitere Informationen finden Sie unter [angeben Sprache für die Spracherkennung](specify-the-speech-recognizer-language.md).
+> Diktat sprachunterstützung hängt von dem [Gerät](https://docs.microsoft.com/windows/uwp/design/devices/) , in denen Ihre app ausgeführt wird. Für PCs und Laptops wird nur "En-US" erkannt, während Xbox und Telefone alle Sprachen, die von der Spracherkennung unterstützt erkennen können. Weitere Informationen finden Sie unter [angeben Sprache für die Spracherkennung](specify-the-speech-recognizer-language.md).
 
 ## <a name="set-up"></a>Einrichtung
 
@@ -269,7 +269,7 @@ if (speechRecognizer.State != SpeechRecognizerState.Idle)
 * [Sprachinteraktionen](speech-interactions.md)
 
 **Beispiele**
-* [Beispiel zu Spracherkennung und Sprachsynthese](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Beispiel zu Spracherkennung und Sprachsynthese](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

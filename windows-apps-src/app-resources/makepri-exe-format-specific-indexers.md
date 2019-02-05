@@ -6,19 +6,19 @@ ms.date: 10/18/2017
 ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: e6938807a589337489f07f5865e02a580a72dae2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1a245c4ec0280f687cf34e85123960e64fe36a57
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925857"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044627"
 ---
 # <a name="makepriexe-format-specific-indexers"></a>Formatspezifische Indexer für MakePri.exe
 
 In diesem Thema werden die formatspezifischen Indexer beschrieben, die das Tool [MakePri.exe](compile-resources-manually-with-makepri.md) verwendet, um seinen Ressourcenindex zu generieren.
 
 > [!NOTE]
-> MakePri.exe wird installiert, wenn Sie die Option **Windows SDK für verwalteten UWP-Apps** während der Installation von Windows Software Development Kit überprüfen. Es installiert ist, um den Pfad `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (ebenso wie in den Ordnern für die anderen Architekturen). Beispiel: `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
+> MakePri.exe wird installiert, wenn Sie im **Windows SDK für UWP-Apps verwaltet** Option während der Installation im Windows Software Development Kit aktivieren. Es installiert ist, auf den Pfad `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (ebenso wie in den Ordnern für die anderen Architekturen). Beispiel: `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
 MakePri.exe wird in der Regel mit den Befehlen `new`, `versioned` oder `resourcepack` verwendet. Siehe [Befehlszeilenoptionen für MakePri.exe](makepri-exe-command-options.md). In diesen Fällen indiziert das Tool Quelldateien und generiert einen Ressourcenindex. MakePri.exe verwendet eine Reihe individueller Indexer, um die verschiedenen Quellressourcendateien oder Ressourcencontainer zu lesen. Der einfachste Indexer ist der Ordnerindexer. Er indiziert den Inhalt eines Ordners, beispielsweise `.jpg`- oder `.png`-Bilder.
 
@@ -311,7 +311,7 @@ Der ResJSON-Indexer wird mit dem `type`-Attribut RESJSON angegeben. Er indiziert
 </xs:schema>\
 ```
 
-Eine `.resjson`-Datei enthält JSON-Text (siehe [Anwendungs-/JSON-Medientyp für JavaScript Object Notation (JSON)](http://www.ietf.org/rfc/rfc4627.txt)). Die Datei muss ein einzelnes JSON-Objekt mit hierarchischen Eigenschaften enthalten. Jede Eigenschaft muss ein anderes JSON-Objekt oder ein Zeichenfolgenwert sein.
+Eine `.resjson`-Datei enthält JSON-Text (siehe [Anwendungs-/JSON-Medientyp für JavaScript Object Notation (JSON)](https://www.ietf.org/rfc/rfc4627.txt)). Die Datei muss ein einzelnes JSON-Objekt mit hierarchischen Eigenschaften enthalten. Jede Eigenschaft muss ein anderes JSON-Objekt oder ein Zeichenfolgenwert sein.
 
 JSON-Eigenschaften, deren Name mit einem Unterstrich (_) beginnt, werden nicht in die abschließende PRI-Datei kompiliert, sondern in der Protokolldatei beibehalten.
 
@@ -400,4 +400,4 @@ Das `initialPath`-Attribut platziert alle Ressourcen unter diesem Anfangspfad. Z
 * [Manuelles Kompilieren von Ressourcen mit MakePri.exe](compile-resources-manually-with-makepri.md)
 * [Befehlszeilenoptionen für MakePri.exe](makepri-exe-command-options.md)
 * [Konfigurationsdatei für MakePri.exe](makepri-exe-configuration.md)
-* [Anwendungs-/JSON-Medientyp für JavaScript Object Notation (JSON)](http://www.ietf.org/rfc/rfc4627.txt)
+* [Anwendungs-/JSON-Medientyp für JavaScript Object Notation (JSON)](https://www.ietf.org/rfc/rfc4627.txt)

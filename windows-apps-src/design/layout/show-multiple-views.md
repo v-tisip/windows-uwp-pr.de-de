@@ -5,12 +5,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 107c904dc4b89941c0f453efd830504d2d032534
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7ed69dc912e916f7964c125550621c22dfcd9555
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929123"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049062"
 ---
 # <a name="show-multiple-views-for-an-app"></a>Anzeigen mehrerer Ansichten für eine App
 
@@ -75,7 +75,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 2.  Verfolgen Sie die [**Id**](https://msdn.microsoft.com/library/windows/apps/dn281120) der neuen Ansicht nach. Über die ID können Sie die Ansicht später anzeigen.
 
-    Sie können Ihre App mit einer bestimmten Infrastruktur ausstatten, um das Nachverfolgen der erstellten Ansichten zu erleichtern. Ein Beispiel bietet die `ViewLifetimeControl`-Klasse im [MultipleViews-Beispiel](http://go.microsoft.com/fwlink/p/?LinkId=620574).
+    Sie können Ihre App mit einer bestimmten Infrastruktur ausstatten, um das Nachverfolgen der erstellten Ansichten zu erleichtern. Ein Beispiel bietet die `ViewLifetimeControl`-Klasse im [MultipleViews-Beispiel](https://go.microsoft.com/fwlink/p/?LinkId=620574).
 
     ```csharp
     int newViewId = 0;
@@ -83,7 +83,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 3.  Füllen Sie das Fenster im neuen Thread auf.
 
-    Mithilfe der [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317)-Methode können Sie die Arbeit am UI-Thread für die neue Ansicht planen. Mithilfe eines [Lambdaausdrucks](http://go.microsoft.com/fwlink/p/?LinkId=389615) übergeben Sie eine Funktion als Argument an die **RunAsync**-Methode. Die in der Lambdafunktion ausgeführten Arbeiten finden im Thread der neuen Ansicht statt.
+    Mithilfe der [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317)-Methode können Sie die Arbeit am UI-Thread für die neue Ansicht planen. Mithilfe eines [Lambdaausdrucks](https://go.microsoft.com/fwlink/p/?LinkId=389615) übergeben Sie eine Funktion als Argument an die **RunAsync**-Methode. Die in der Lambdafunktion ausgeführten Arbeiten finden im Thread der neuen Ansicht statt.
 
     In XAML fügen Sie der [**Content**](https://msdn.microsoft.com/library/windows/apps/br209051)-Eigenschaft von [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041) in der Regel einen [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) hinzu und navigieren dann den **Frame** zu einer XAML-[**Page**](https://msdn.microsoft.com/library/windows/apps/br227503), auf der Sie den App-Inhalt definiert haben. Weitere Informationen finden Sie unter [Peer-zu-Peer-Navigation zwischen zwei Seiten](../basics/navigate-between-two-pages.md).
 

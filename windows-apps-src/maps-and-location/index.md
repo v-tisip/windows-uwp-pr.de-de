@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, Karte, Position, Kartendienste
 ms.localizationpriority: medium
-ms.openlocfilehash: aea553a46357a26028848db5ff0e9b5debbeae56
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3482370719a658f303964204661f1fb5d69ae5b4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930905"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044810"
 ---
 # <a name="maps-and-location-overview"></a>Übersicht über Karten und Position
 
@@ -21,9 +21,9 @@ ms.locfileid: "8930905"
 In diesem Abschnitt wird erläutert, wie Sie in Ihrer App Karten anzeigen, Kartendienste verwenden, die Position suchen und einen Geofence einrichten. Außerdem erfahren Sie in diesem Abschnitt, wie die Windows-Karten-App mit einer bestimmten Karte, Route oder detaillierten Wegbeschreibung gestartet wird.
 
 > [!TIP]
-> Um mehr über die Verwendung von Karten und Position in Ihrer app zu erfahren, laden Sie die folgenden Beispiele aus dem [Windows-Universal-Samples-Repository](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter:
--   [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
--   [UWP-Geolocation-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=533278)
+> Laden Sie die folgenden Beispiele aus dem [Windows-Universal-Samples-Repository](https://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter, um weitere Informationen zum Verwenden von Karten und Positionen in Ihrer app:
+-   [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [UWP-Geolocation-Beispiel](https://go.microsoft.com/fwlink/p/?linkid=533278)
 
  
 
@@ -51,9 +51,9 @@ Fügen Sie Ihrer App mithilfe der APIs aus dem [**Windows.Services.Maps**](https
 | [Anzeigen von interessanten Orten (POI) auf einer Karte](display-poi.md) | Hinzufügen interessanter Orte (POI) mit Ortsmarken, Bildern, Formen und XAML-UI-Elementen auf einer Karte. |
 | [Anzeigen von Routen und Wegbeschreibungen](routes-and-directions.md) | Fordern Sie Routen und Wegbeschreibungen an, und zeigen Sie diese in Ihrer App an. |
 | [Durchführen der Geocodierung und umgekehrten Geocodierung](geocoding.md) | Sie konvertieren Adressen in geografische Standorte (Geocodierung) und geografische Standorte in Adressen (umgekehrte Geocodierung), indem Sie die Methoden der [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550)-Klasse im [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979)-Namespace aufrufen. |
-| [Suchen und Laden Sie kartenpakete für die Offlineverwendung herunter](https://docs.microsoft.com/uwp/api/windows.services.maps.offlinemaps)| In der Vergangenheit mussten Ihre app, Benutzern die Einstellungs-app Offlinekarten herunterladen. Jetzt können Sie Klassen im [Windows.Services.Maps.OfflineMaps](https://docs.microsoft.com/en-us/uwp/api/windows.services.maps.offlinemaps) -Namespace verwenden, um heruntergeladenen Pakete finden Sie in einem bestimmten Bereich (basierend auf einer [Geopoint](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint), [GeoboundingBox](https://docs.microsoft.com/en-us/uwp/api/windows.devices.geolocation.geoboundingbox)usw.).. <br> Sie können auch überprüfen und Lauschen auf der heruntergeladenen Status der kartenpakete als auch einen Download starten, ohne dass der Benutzer Ihrer app verlassen. <br> Finden Sie Beispiele für hierzu in der Referenz und das [kartenbeispiel für die universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977).
+| [Suchen und Laden Sie kartenpakete für die Offlineverwendung herunter](https://docs.microsoft.com/uwp/api/windows.services.maps.offlinemaps)| In der Vergangenheit mussten Ihre app, Benutzern die Einstellungs-app Offlinekarten herunterladen. Jetzt können Klassen im Namespace [Windows.Services.Maps.OfflineMaps](https://docs.microsoft.com/en-us/uwp/api/windows.services.maps.offlinemaps) Sie heruntergeladenen Pakete in einem bestimmten Bereich (basierend auf einer [Geopoint](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint), [GeoboundingBox](https://docs.microsoft.com/en-us/uwp/api/windows.devices.geolocation.geoboundingbox)usw.). suchen. <br> Sie können auch überprüfen und für den heruntergeladenen Status der kartenpakete überwachen sowie einen Download starten, ohne dass der Benutzer Ihrer app verlassen. <br> Finden Sie Beispiele zur Verwendung von dazu in der verweisen auf Inhalte und das [kartenbeispiel für die universelle Windows-Plattform (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977).
 
-## <a name="get-the-users-location"></a>Abrufen des Benutzerstandorts
+## <a name="get-the-users-location"></a>Abrufen der Position eines Benutzers
 
 Mit APIs aus dem [**Windows.Devices.Geolocation**](https://msdn.microsoft.com/library/windows/apps/br225603)-Namespace kann Ihre App die aktuelle Position des Benutzers abrufen und Sie über Positionsänderungen benachrichtigen. Diese API-Member werden auch häufig in Parametern der Karten-APIs verwendet. Mit APIs aus dem [**Windows.Devices.Geolocation.Geofencing**](https://msdn.microsoft.com/library/windows/apps/dn263744)-Namespace wird Ihre App benachrichtigt, wenn der Benutzer einen Geofence (einen vordefinierten geografischen Bereich) betritt oder verlässt.
 
@@ -63,7 +63,7 @@ Mit APIs aus dem [**Windows.Devices.Geolocation**](https://msdn.microsoft.com/li
 | [Entwurfsrichtlinien für Apps mit Standortbestimmung](guidelines-and-checklist-for-detecting-location.md) | Leistungsrichtlinien für Apps, für die der Zugriff auf den Standort eines Benutzers erforderlich ist. |
 | [Abrufen des Benutzerstandorts](get-location.md) | Erhalten Sie Zugriff auf die Position eines Benutzers, und rufen Sie diese anschließend ab. | 
 | [Richtlinien für die Verwendung von Visits Tracking](guidelines-for-visits.md) | Erfahren Sie, wie Sie die leistungsstarke „Visits Tracking”-Funktion (besuchte Standorte) für eine praktischere Standortnachverfolgung verwenden können. |
-| [Entwurfsanleitung für Geofencing](guidelines-for-geofencing.md) | Leistungsrichtlinien für apps, die das Geofencing-Feature verwenden. |
+| [Entwurfsanleitung für Geofencing](guidelines-for-geofencing.md) | Leistungsrichtlinien für apps, die das Geofencing-Feature nutzen. |
 | [Einrichten eines Geofence](set-up-a-geofence.md) | Richten Sie einen Geofence-Bereich in Ihrer App ein, und erfahren Sie, wie Sie Benachrichtigungen im Vordergrund und Hintergrund behandeln. |
 
 ## <a name="launch-the-windows-maps-app"></a>Starten der Windows-Karten-App
@@ -74,12 +74,12 @@ Ihre App kann die Windows-Karten-App starten, wie hier veranschaulicht, um besti
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Beispiel für UWP-Karte](http://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [UWP-Geolocation-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=533278)
+* [Beispiel für UWP-Karte](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [UWP-Geolocation-Beispiel](https://go.microsoft.com/fwlink/p/?linkid=533278)
 * [Bing Maps Developer Center](https://www.bingmapsportal.com/)
 * [Abrufen der aktuellen Position](get-location.md)
 * [Entwurfsrichtlinien für Apps mit Standortbestimmung](guidelines-and-checklist-for-detecting-location.md)
 * [Entwurfsrichtlinien für Karten](controls-map.md)
 * [Entwurfsrichtlinien für Apps mit Berücksichtigung von Datenschutz](https://msdn.microsoft.com/library/windows/apps/hh768223)
 * [Build 2015-Video: Nutzen von Karten und Ortung über Telefon, Tablet und PC in Ihren Windows-Apps](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Beispiel für eine UWP-App mit Verkehrsinformationen](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Beispiel für eine UWP-App mit Verkehrsinformationen](https://go.microsoft.com/fwlink/p/?LinkId=619982)

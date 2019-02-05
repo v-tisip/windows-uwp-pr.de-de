@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 811a9b42efe83cf89fd3df89e5c43c72274af36f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 517302b7db1e7b65ca7a181a8c766ce1e71737ac
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928534"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044544"
 ---
  # <a name="files-folders-and-libraries"></a>Dateien, Ordner und Bibliotheken
 
@@ -29,17 +29,17 @@ Verwenden Sie die APIs im [Windows.Storage](https://msdn.microsoft.com/library/w
 | [Ermitteln der Verfügbarkeit von Microsoft OneDrive-Dateien](quickstart-determining-availability-of-microsoft-onedrive-files.md) | Ermitteln Sie mithilfe der [StorageFile.IsAvailable](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx)-Eigenschaft, ob eine Microsoft OneDrive-Datei verfügbar ist. |
 | [Dateien und Ordner in den Musik-, Bild- und Videobibliotheken](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md) | Fügen Sie vorhandene Musik-, Bilder- oder Video-Ordner den entsprechenden Bibliotheken hinzu. Sie können auch Ordner aus Bibliotheken entfernen, die Liste der Ordner in einer Bibliothek abrufen und gespeicherte Fotos, Musik und Videos untersuchen. |
 | [Nachverfolgen kürzlich verwendeter Dateien und Ordner](how-to-track-recently-used-files-and-folders.md) | Sie können Dateien nachverfolgen, auf die häufig zugegriffen wird, indem Sie sie der Liste mit den zuletzt verwendeten Elementen (MRU) der App hinzufügen. Die Plattform verwaltet die MRU für Sie. Dabei werden Elemente nach der Zeit und dem Ort des letzten Zugriffs sortiert und die ältesten Elemente entfernt, wenn das Limit von 25Elementen erreicht ist. Alle Apps besitzen eine eigene MRU. |
-| [Verfolgen Sie die Datei systemänderungen im Hintergrund](change-tracking-filesystem.md) | Nachverfolgen von Änderungen auf das Dateisystem, auch wenn die app nicht ausgeführt wird.|
+| [Nachverfolgen von Dateisystemänderungen im Hintergrund](change-tracking-filesystem.md) | Nachverfolgen von Änderungen auf das Dateisystem, auch wenn die app nicht ausgeführt wird.|
 | [Zugreifen auf die SD-Karte](access-the-sd-card.md) | Sie können weniger wichtige Daten auf einer optionalen microSD-Karte speichern und auf diese zugreifen. Dies gilt besonders für kostengünstige Geräte, die nur über einen begrenzten internen Speicher verfügen. |
 | [Berechtigungen für den Dateizugriff](file-access-permissions.md) | Apps können standardmäßig auf bestimmte Dateisystemspeicherorte zugreifen. Apps können darüber hinaus mithilfe der Dateiauswahl oder durch die Deklaration von Funktionen auf weitere Speicherorte zugreifen. |
 | [Schneller Zugriff auf Dateieigenschaften in UWP](fast-file-properties.md) | Stellen Sie schnell eine Liste von Dateien und ihren Eigenschaften über eine Bibliothek in einer UWP-App zusammen. |
 
 ## <a name="related-samples"></a>Verwandte Beispiele
-[Beispiel für Ordnerenumeration](http://go.microsoft.com/fwlink/p/?linkid=619993)
+[Beispiel für Ordnerenumeration](https://go.microsoft.com/fwlink/p/?linkid=619993)
 
-[Beispiel zum Dateizugriff](http://go.microsoft.com/fwlink/p/?linkid=619995)
+[Beispiel zum Dateizugriff](https://go.microsoft.com/fwlink/p/?linkid=619995)
 
-[Beispiel zur Dateiauswahl](http://go.microsoft.com/fwlink/p/?linkid=619994)
+[Beispiel zur Dateiauswahl](https://go.microsoft.com/fwlink/p/?linkid=619994)
  
 
  

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 63a39dfcfaab8b42afc98b7fe786a05908d49d16
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 682a743e45626939242af963fba47ca82a13a90e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923629"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048507"
 ---
 # <a name="getting-started-navigation"></a>Erste Schritte: Navigation
 
@@ -22,7 +22,7 @@ iOS bietet die **UINavigationController**-Klasse als In-App-Navigationshilfe: Si
 
 In orientierten eine Windows 10-app mit mehreren Ansichten holt mehr von einer Website Ansatz zur Navigation. Sie können sich vorstellen, wie Benutzer von Seite zu Seite wechseln, indem Sie auf Steuerelemente klicken, um durch die App zu navigieren. Weitere Informationen finden Sie unter [Navigationsdesigngrundlagen](https://msdn.microsoft.com/library/windows/apps/dn958438).
 
-Eine der Methoden zum Verwalten dieser Navigation in einer Windows 10-app ist die [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) -Klasse nutzen können. Die folgende exemplarische Vorgehensweise veranschaulicht, wie Sie dies ausprobieren können.
+Eine der Methoden zum Verwalten dieser Navigation in einer Windows 10-app ist die Verwendung die [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) -Klasse. Die folgende exemplarische Vorgehensweise veranschaulicht, wie Sie dies ausprobieren können.
 
 Fahren Sie mit der Lösung aus früheren Schritten fort, öffnen Sie die **MainPage.xaml**-Datei, und fügen Sie eine Schaltfläche in der Ansicht **Entwurf** hinzu. Ändern Sie die **Content**-Eigenschaft der Schaltfläche von „Button“ in „Go To Page“. Erstellen Sie anschließend einen Handler für das **Click**-Ereignis der Schaltfläche, wie in der folgenden Abbildung dargestellt. Wenn Sie nicht mehr wissen, wie das geht, schlagen Sie unter der exemplarischen Vorgehensweise im vorherigen Abschnitt nach (Hinweis: Doppelklicken Sie auf die Schaltfläche in der Ansicht **Entwurf**).
 
@@ -64,7 +64,7 @@ private void Button_Click(object sender, RoutedEventArgs e)
 
 Führen Sie nun das Programm aus. Tippen Sie auf die Schaltfläche „Go To Page“, um zu der anderen Seite zu wechseln, und tippen Sie dann auf die Schaltfläche mit dem Zurück-Pfeil, um zur vorherigen Seite zurückzukehren.
 
-Die Seitennavigation wird mithilfe der [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)-Klasse verwaltet. Wie die **UINavigationController** -Klasse in iOS **PushViewController** und **PopViewController** Methoden verwendet wird, bietet die **Frame** -Klasse für UWP-apps [**Navigieren**](https://msdn.microsoft.com/library/windows/apps/br242694) und [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn996568) -Methode. Die **Frame**-Klasse verfügt außerdem über eine Methode mit dem Namen [**GoForward**](https://msdn.microsoft.com/library/windows/apps/br242693), die genau das tut, was Sie vermutlich erwartet haben.
+Die Seitennavigation wird mithilfe der [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)-Klasse verwaltet. Wie die **UINavigationController** -Klasse in iOS **PushViewController** und **PopViewController** Methoden verwendet, stellt die **Frame** -Klasse für UWP-apps [**Navigieren**](https://msdn.microsoft.com/library/windows/apps/br242694) und [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn996568) Methoden bereit. Die **Frame**-Klasse verfügt außerdem über eine Methode mit dem Namen [**GoForward**](https://msdn.microsoft.com/library/windows/apps/br242693), die genau das tut, was Sie vermutlich erwartet haben.
 
 Bei dieser exemplarischen Vorgehensweise wird immer dann eine neue Instanz von BlankPage erstellt, wenn Sie zu dieser Seite navigieren. (Die vorherige Instanz wird automatisch *freigegeben*.) Wenn nicht jedes Mal eine neue Instanz erstellt werden soll, fügen Sie dem Konstruktor der BlankPage-Klasse in der Datei „BlankPage.xaml.cs“ den folgenden Code hinzu. Dadurch wird das [**NavigationCacheMode**](https://msdn.microsoft.com/library/windows/apps/br227506)-Verhalten aktiviert.
 
@@ -79,7 +79,7 @@ public BlankPage()
 
 Sie können auch die [**CacheSize**](https://msdn.microsoft.com/library/windows/apps/br242683)-Eigenschaft der **Frame**-Klasse abrufen oder festlegen, um zu definieren, wie viele Seiten im Navigationsverlauf zwischengespeichert werden können.
 
-Weitere Informationen zur Navigation finden Sie unter [Navigation](https://msdn.microsoft.com/library/windows/apps/mt187344) und unter [XAML-Beispiel für Charakteranimationen](http://go.microsoft.com/fwlink/p/?LinkID=242401).
+Weitere Informationen zur Navigation finden Sie unter [Navigation](https://msdn.microsoft.com/library/windows/apps/mt187344) und unter [XAML-Beispiel für Charakteranimationen](https://go.microsoft.com/fwlink/p/?LinkID=242401).
 
 **Hinweis:** Informationen zur Navigation für UWP-apps mit JavaScript und HTML finden Sie unter [Schnellstart: Verwenden der einzelseitennavigation](https://msdn.microsoft.com/library/windows/apps/hh452768).
  

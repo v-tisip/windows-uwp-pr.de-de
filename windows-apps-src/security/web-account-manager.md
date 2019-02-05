@@ -6,19 +6,19 @@ ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: 14f5139f5fe2c3d5d1f97040ee3bec33ea48d6ac
-ms.sourcegitcommit: ffad7cfb5d5c099f9f559e966fd93b705b47d2bd
+ms.openlocfilehash: e2c1be80ada3e337a4bf7353b854ae4cbe5bd99a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2018
-ms.locfileid: "8990328"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050983"
 ---
 # <a name="web-account-manager"></a>Web Account Manager
 
 In diesem Artikel wird beschrieben, wie Sie **[AccountsSettingsPane](https://docs.microsoft.com/uwp/api/Windows.UI.ApplicationSettings.AccountsSettingsPane)** verwenden, um Ihre App für die Universelle Windows-Plattform (UWP) mit externen Identitätsanbietern wie Microsoft oder Facebook zu verbinden. Dazu verwenden Sie die Web Account Manager-APIs in Windows 10. Sie erfahren, wie Sie die Berechtigung eines Benutzers für die Verwendung des Microsoft-Kontos des Benutzers anfordern können, ein Zugriffstoken erhalten und mit diesem grundlegende Vorgänge wie das Abrufen von Profildaten oder das Hochladen von Daten in das OneDrive-Konto des Benutzers durchführen können. Die Schritte ähneln denen, die zum Abrufen einer Benutzerberechtigung und für den Zugriff über einen beliebigen Identitätsanbieter ausgeführt werden, der Web Account Manager unterstützt.
 
 > [!NOTE]
-> Ein vollständiges Codebeispiel finden Sie im [WebAccountManagement-Beispiel auf GitHub](http://go.microsoft.com/fwlink/p/?LinkId=620621).
+> Ein vollständiges Codebeispiel finden Sie im [WebAccountManagement-Beispiel auf GitHub](https://go.microsoft.com/fwlink/p/?LinkId=620621).
 
 ## <a name="get-set-up"></a>Vorbereitung
 
@@ -178,7 +178,7 @@ In diesem Beispiel wird die Zeichenfolge „wl.basic“ an den Parameter _scope_
 * Informationen zu OneDrive-Bereichen finden Sie unter [Authentifizierung und Anmeldung bei OneDrive](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes). 
 
 > [!TIP]
-> Wenn Ihre app Hinweis Anmeldung (für die Benutzerfeld mit einem standardmäßigen e-Mail-Adresse zu füllen) oder andere spezielle Eigenschaft, die im Zusammenhang mit der Oberfläche-Anmeldung verwendet, führen Sie sie optional in der **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** -Eigenschaft. Dadurch wird das System an die Eigenschaft ignoriert werden sollen, die Web-Konto, das Konto Unterschiede im Cache verhindert, dass für die Zwischenspeicherung.
+> Wenn Ihre app Anmeldung Hinweis (für das Benutzerfeld mit der Standard-e-Mail-Adresse zu füllen) oder andere spezielle Eigenschaft, die im Zusammenhang mit der Oberfläche-Anmeldung verwendet, führen Sie sie optional in der **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** -Eigenschaft. Dadurch wird das System an die Eigenschaft ignoriert werden sollen, beim Zwischenspeichern des Web-Kontos, das Konto Unterschiede im Cache verhindert.
 
 Wenn Sie eine Unternehmens-App entwickeln, möchten Sie wahrscheinlich eine Verbindung mit einer Azure Active Directory (AAD)-Instanz herstellen und die Microsoft Graph-API anstelle regulärer MSA-Dienste verwenden. Verwenden Sie in diesem Szenario stattdessen folgenden Code: 
 
@@ -430,6 +430,6 @@ Einstellungsbefehle lassen sich grundsätzlich überall verwenden. Es wird jedoc
 
 [Webauthentifizierungsbroker](web-authentication-broker.md)
 
-[Beispiel für die Webkontoverwaltung](http://go.microsoft.com/fwlink/p/?LinkId=620621)
+[Beispiel für die Webkontoverwaltung](https://go.microsoft.com/fwlink/p/?LinkId=620621)
 
 [Lunch Scheduler-App](https://github.com/Microsoft/Windows-appsample-lunch-scheduler)

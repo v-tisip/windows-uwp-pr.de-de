@@ -7,12 +7,12 @@ ms.date: 09/28/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e4e8d5f49d10219a06a36fdfbe7ec3abe236109a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b58eb4b6e3f3f02bb1f72fcba9da3710f08a72da
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931457"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045994"
 ---
 # <a name="high-contrast-themes"></a>Designs mit hohem Kontrast  
 
@@ -46,7 +46,7 @@ Im zweiten Beispiel wird die [**{ThemeResource}-Markuperweiterung**](../../xaml-
 Wenn Sie die Systemstandardfarbe ändern müssen, erstellen Sie eine ThemeDictionaries-Sammlung für Ihre App.
 
 1. Erstellen Sie zunächst die richtige Grundstruktur (sofern nicht bereits vorhanden). Erstellen Sie in „App.xaml” eine **ThemeDictionaries**-Sammlung, die mindestens **Default** und **HighContrast** enthält.
-2. Erstellen Sie unter **Default** den gewünschten [Brush](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.aspx)-Typ (in der Regel **SolidColorBrush**). Vergeben Sie einen *x:Key*-Namen, der für die Verwendung spezifisch ist.
+2. Erstellen Sie unter **Default** den gewünschten [Brush](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.aspx)-Typ (in der Regel **SolidColorBrush**). Vergeben Sie einen *x:Key*-Namen, der für die Verwendung spezifisch ist.
 3. Weisen Sie das gewünschte **Color**-Element zu.
 4. Kopieren Sie das **Brush**-Objekt in **HighContrast**.
 
@@ -235,7 +235,7 @@ Sie können mithilfe von Membern der [**AccessibilitySettings**](https://msdn.mi
 
 ## <a name="related-topics"></a>Verwandte Themen  
 * [Barrierefreiheit](accessibility.md)
-* [Beispiel für UI-Kontrast und -Einstellungen](http://go.microsoft.com/fwlink/p/?linkid=231539)
-* [XAML-Beispiel für Barrierefreiheit](http://go.microsoft.com/fwlink/p/?linkid=238570)
-* [XAML-Beispiel für hohen Kontrast](http://go.microsoft.com/fwlink/p/?linkid=254993)
+* [Beispiel für UI-Kontrast und -Einstellungen](https://go.microsoft.com/fwlink/p/?linkid=231539)
+* [XAML-Beispiel für Barrierefreiheit](https://go.microsoft.com/fwlink/p/?linkid=238570)
+* [XAML-Beispiel für hohen Kontrast](https://go.microsoft.com/fwlink/p/?linkid=254993)
 * [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237)

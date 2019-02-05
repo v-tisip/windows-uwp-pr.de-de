@@ -1,27 +1,27 @@
 ---
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: Vorbereitung
-description: Das Durchführen der Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, und starten Sie die universelle Windows-Plattform (UWP) apps für Windows 10 erstellen.
+description: Das Durchführen der Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, und Erstellen von universellen Windows-Plattform (UWP) apps für Windows 10.
 ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f3d14467856aee733f2e11d057db0deb873269ff
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a92b8d0f921bc747108b802d285b783e7f2bcaa8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920634"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047937"
 ---
 # <a name="get-set-up"></a>Vorbereiten
 
 ![Vorbereitungen für die Verwendung von Visual Studio](images/VisualStudio2017Hero_ImageXL-LG.png)
 
-Die Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, und starten Sie die universelle Windows-Plattform (UWP) apps für Windows 10 erstellen.
+Die Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, und Erstellen von universellen Windows-Plattform (UWP) apps für Windows 10.
 
 ## <a name="1-download-or-update-visual-studio"></a>1. Laden Sie Visual Studio herunter, oder aktualisieren Sie es.
 
-Microsoft Visual Studio2017 unterstützt, entwerfen, code, testen und Debuggen Ihrer apps.
+Microsoft Visual Studio2017 können, die Sie entwerfen, codieren, testen und Debuggen Ihrer apps.
 
 Wenn Sie bereits über Visual Studio2017 besitzen, können Sie das kostenlose Microsoft Visual Studio Community2017 installieren. Dieser Download umfasst auch Geräte-Simulatoren zum Testen Ihrer Apps:
 
@@ -64,7 +64,7 @@ Wenn Sie Ihr Gerät anpassen und andere Funktionen oder Pakete installieren möc
 
 ## <a name="want-more-tools-and-downloads"></a>Benötigen Sie mehr Tools und Downloads?
 
-Die vollständige Liste der Tools und Downloads finden Sie unter [Downloads](http://go.microsoft.com/fwlink/p/?linkid=285935).
+Die vollständige Liste der Tools und Downloads finden Sie unter [Downloads](https://go.microsoft.com/fwlink/p/?linkid=285935).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 888de987d507f0a1a21458c299605ebcc7b1bc70
-ms.sourcegitcommit: 393180e82e1f6b95b034e99c25053d400e987551
+ms.openlocfilehash: 3f474ec0c3017c3834d3eadb6f1caa989fc188a7
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "8990473"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050743"
 ---
 # <a name="accessible-text-requirements"></a>Anforderungen für barrierefreien Text  
 
@@ -28,13 +28,13 @@ In diesem Thema werden die bewährten Methoden für barrierefreien Text in Apps 
 ## <a name="contrast-ratios"></a>Kontrastverhältnisse  
 Obwohl Benutzer immer die Möglichkeit haben, die Anzeige auf einen Modus mit hohem Kontrast umzuschalten, sollten Sie diese Option in Ihrem App-Design für Text möglichst nicht verwenden. Stellen Sie stattdessen sicher, dass der App-Text bestimmte Richtlinien für die Kontraststufe zwischen Text und seinem Hintergrund erfüllt. Die Bewertung der Kontraststufe basiert auf deterministischen Techniken, bei denen der Farbton nicht berücksichtigt wird. Wenn Sie z.B. roten Text auf grünem Hintergrund haben, ist dieser Text für einen farbenblinden Benutzer möglicherweise nicht lesbar. Durch eine Überprüfung und Korrektur des Kontrastverhältnisses können Sie solche Probleme bezüglich der Barrierefreiheit vermeiden.
 
-Die hier dokumentierten Empfehlungen für den Textkontrast basieren auf einem Standard für Barrierefreiheit im Internet, [G18: Sicherstellen eines Kontrastverhältnisses von mindestens 4,5:1 zwischen Text (und Textbildern) und dem Texthintergrund](http://go.microsoft.com/fwlink/p/?linkid=221823). Dieser Leitfaden ist in der *W3C-Spezifikation für die Techniken für WCAG 2.0* enthalten.
+Die hier dokumentierten Empfehlungen für den Textkontrast basieren auf einem Standard für Barrierefreiheit im Internet, [G18: Sicherstellen eines Kontrastverhältnisses von mindestens 4,5:1 zwischen Text (und Textbildern) und dem Texthintergrund](https://go.microsoft.com/fwlink/p/?linkid=221823). Dieser Leitfaden ist in der *W3C-Spezifikation für die Techniken für WCAG 2.0* enthalten.
 
 Damit sichtbarer Text als barrierefreier Text gilt, muss er ein Leuchtdichte-Kontrastverhältnis von mindestens 4,5:1 bezogen auf den Hintergrund aufweisen. Ausnahmen sind Logos und nebensächlicher Text (z.B. Text, der Teil einer inaktiven Benutzeroberflächenkomponente ist).
 
 Für dekorativen Text, der keine Informationen liefert, gilt diese Anforderung nicht. Wenn beispielsweise zufällige Wörter zum Erstellen eines Hintergrunds verwendet werden und die Wörter ohne Bedeutungsänderung neu angeordnet oder ersetzt werden können, gelten die Wörter als dekorative Elemente und müssen dieses Kriterium nicht erfüllen.
 
-Überprüfen Sie mit den Farbkontrasttools, ob das Kontrastverhältnis von sichtbarem Text in Ordnung ist. Tools zum Testen des Kontrastverhältnisses finden Sie unter [Techniken für WCAG 2.0 G18 (Abschnitt Ressourcen)](http://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources).
+Überprüfen Sie mit den Farbkontrasttools, ob das Kontrastverhältnis von sichtbarem Text in Ordnung ist. Tools zum Testen des Kontrastverhältnisses finden Sie unter [Techniken für WCAG 2.0 G18 (Abschnitt Ressourcen)](https://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources).
 
 > [!NOTE]
 > Einige der unter den Techniken für WCAG2.0G18 aufgeführten Tools können bei einer UWP-App nicht interaktiv verwendet werden. Sie müssen möglicherweise die Werte für Vordergrund- und Hintergrundfarben manuell in das Tool eingeben oder Bildschirmaufnahmen der App-UI erstellen und anschließend das Kontrastverhältnistool für das aufgenommene Bild ausführen.
@@ -124,21 +124,21 @@ Verwenden Sie nach Möglichkeit keinen Text in Grafiken. Text, den Sie der in de
 
 ## <a name="text-font-size-and-scale"></a>Schriftgrad des Texts und Skalierung
 
-Benutzer haben Probleme beim Lesen von Text in einer app, wenn die Schriftarten verwendet, einfach werden zu klein, stellen Sie daher sicher, dass Text in Ihrer Anwendung ist eine angemessene Größe in erster Linie.
+Benutzer haben Probleme beim Lesen von Text in einer app, wenn die Schriftarten verwendet, einfach werden zu klein, stellen Sie daher sicher, dass Text in Ihrer Anwendung eine angemessene Größe in erster Linie ist.
 
-Nachdem Sie die offensichtlich getan haben, enthält Windows verschiedene Bedienungshilfen und Einstellungen, die Benutzer auf ihre eigenen Anforderungen und Einstellungen für das Lesen von Text anpassen und nutzen können. Dazu zählen:
+Nachdem Sie die offensichtlich getan haben, enthält Windows verschiedene Bedienungshilfen und Einstellungen, die Benutzer an ihre eigenen Anforderungen und Einstellungen für das Lesen von Text anpassen und nutzen können. Dazu zählen:
 
 * Die Bildschirmlupe, die einen ausgewählten Bereich der UI vergrößert. Sie sollten sicherstellen, dass das Layout der Text in Ihrer app zum Verwenden der Bildschirmlupe zum Lesen erschweren nicht.
-* Globale Einstellungen für Skalierung und Auflösung in **-Einstellungen -> System Anzeige -> ->, Skalierung und Layout**. Genau können Optionen für die größenanpassung variieren, da dies nach den Funktionen des Anzeigegeräts richtet.
-* Text Größe Einstellungen in **-Einstellungen -> erleichterte Bedienung Anzeige ->**. Passen Sie die **Formatieren von Text, die größer als** Einstellung, um nur die Größe von Text in die Steuerelemente für alle Anwendungen und Bildschirme (alle UWP-Textsteuerelemente unterstützen die Skalierung Umgebung ohne Anpassung oder Vorlagen Text) unterstützt. 
+* Globale Skalierung und Auflösung Einstellungen im **Einstellungen->System->Display->Scale und Layout**. Genau können Optionen für die größenanpassung variieren, da dies nach den Funktionen des Anzeigegeräts richtet.
+* Text Größe Einstellungen im **Einstellungen->Ease von Access->Display**. Anpassen der **größeren Schrift** Einstellung, um nur die Größe von Text in die Steuerelemente für alle Anwendungen und Bildschirme (alle UWP-Textsteuerelemente unterstützen den Skalierung Erfahrung ohne Anpassung oder Templating Text) unterstützt. 
 > [!NOTE]
-> Die Einstellung **Alles größer machen** kann Benutzer ihre bevorzugte Größe für Text und apps in der Regel nur auf ihre angeben.
+> Die Einstellung **Alles größer machen** kann Benutzer ihre bevorzugte Größe für Text und apps in der Regel ihre primäre nur auf Bildschirm angeben.
 
-Verschiedene Textelemente und Steuerelemente verfügen über eine [**IsTextScaleFactorEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.istextscalefactorenabled)-Eigenschaft. Diese Eigenschaft weist standardmäßig den Wert **true** auf. Wenn kann **"true"**, die Größe von Text im Element skaliert werden. Die Skalierung wirkt sich aus Text, der eine kleine **FontSize** deutlicher aus als sie Text wirkt sich auf, die eine große **FontSize**hat. Sie können die automatische Ändern der Größe durch Festlegen des Elements **IsTextScaleFactorEnabled** -Eigenschaft auf **"false"** deaktivieren. 
+Verschiedene Textelemente und Steuerelemente verfügen über eine [**IsTextScaleFactorEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.istextscalefactorenabled)-Eigenschaft. Diese Eigenschaft weist standardmäßig den Wert **true** auf. Wenn kann **"true"**, die Größe der Text im Element skaliert werden. Die Skalierung wirkt sich auf Text mit einer kleinen **FontSize** deutlicher aus als sie Text wirkt sich auf, die eine große **FontSize**wurde aus. Sie können die automatische Größe ändern, indem Sie die Eigenschaft eines Elements **IsTextScaleFactorEnabled** auf **"false"** deaktivieren. 
 
-Weitere Informationen finden Sie in der [Text zu skalieren](https://docs.microsoft.com/windows/uwp/design/input/text-scaling) .
+Weitere Informationen finden Sie in der [Text skalieren](https://docs.microsoft.com/windows/uwp/design/input/text-scaling) .
 
-Fügen Sie das folgende Markup für eine app, und führen Sie es aus. Passen Sie die Einstellung **des Texts** , und sehen Sie, was auf jeder **TextBlock**geschieht.
+Fügen Sie das folgende Markup für eine app, und führen Sie es aus. Passen Sie die **Textgröße** -Einstellung, und sehen Sie, was auf jeder **TextBlock**geschieht.
 
 XAML
 ```xml
@@ -186,6 +186,6 @@ Diese Typen verfügen über eine **IsTextScaleFactorEnabled**-Eigenschaft:
 * [Textskalierung](https://docs.microsoft.com/windows/uwp/design/input/text-scaling)
 * [Barrierefreiheit](accessibility.md)
 * [Grundlegende Barrierefreiheitsinformationen](basic-accessibility-information.md)
-* [Beispiel für die XAML-Textanzeige](http://go.microsoft.com/fwlink/p/?linkid=238579)
-* [Beispiel für die XAML-Textbearbeitung](http://go.microsoft.com/fwlink/p/?linkid=251417)
-* [XAML-Beispiel für Barrierefreiheit](http://go.microsoft.com/fwlink/p/?linkid=238570) 
+* [Beispiel für die XAML-Textanzeige](https://go.microsoft.com/fwlink/p/?linkid=238579)
+* [Beispiel für die XAML-Textbearbeitung](https://go.microsoft.com/fwlink/p/?linkid=251417)
+* [XAML-Beispiel für Barrierefreiheit](https://go.microsoft.com/fwlink/p/?linkid=238570) 

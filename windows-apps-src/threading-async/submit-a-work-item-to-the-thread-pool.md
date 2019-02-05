@@ -1,21 +1,21 @@
 ---
 ms.assetid: E2A1200C-9583-40FA-AE4D-C9E6F6C32BCF
 title: Senden einer Arbeitsaufgabe an den Threadpool
-description: Hier erfahren Sie, wie Sie Arbeit in einem separaten Thread erledigen können, indem Sie eine Arbeitsaufgabe an den Threadpool übermitteln.
+description: Hier erfahren Sie, wie Sie Arbeit in einem separaten Thread erledigen können, indem Sie eine Arbeitsaufgabe an den Threadpool senden.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, Threads, Threadpool
 ms.localizationpriority: medium
-ms.openlocfilehash: 08608bc5715031f9ddf5b6bec05e7c86737f7e10
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: 423f0efa9118f581d6e768a815dd2550801aa87e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981374"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048617"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Übermitteln einer Arbeitsaufgabe an den Threadpool
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](https://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 <b>Wichtige APIs</b>
 
@@ -350,7 +350,7 @@ Beachten Sie, dass vom Vervollständigungshandler überprüft wird, ob die Arbei
 
 ## <a name="summary-and-next-steps"></a>Zusammenfassung und nächste Schritte
 
-Weitere Informationen finden Sie durch das Herunterladen des Codes in dieser schnellstartanleitung unter dem [Erstellen einer ThreadPool Element Beispiel funktioniert](http://go.microsoft.com/fwlink/p/?LinkID=328569) für Windows8.1, geschrieben und den Quellcode in einer Win\_unap Windows 10-app wiederverwenden.
+Weitere Informationen finden Sie durch das Herunterladen des Codes in dieser schnellstartanleitung unter [Erstellen einer ThreadPool Element Beispiel funktioniert](https://go.microsoft.com/fwlink/p/?LinkID=328569) für Windows8.1, geschrieben und den Quellcode in einer Win\_unap Windows 10-app wiederverwenden.
 
 ## <a name="related-topics"></a>Verwandte Themen
 

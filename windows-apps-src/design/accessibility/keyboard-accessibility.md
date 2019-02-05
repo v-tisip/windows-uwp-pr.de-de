@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 938b5b3cdd2e23995a1031875a28f178e0c97a26
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5ad64c2a0d4d7569ec2c0c0a44f9236fc4b2819f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931131"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045519"
 ---
 # <a name="keyboard-accessibility"></a>Barrierefreiheit der Tastaturnavigation  
 
@@ -148,7 +148,7 @@ XAML
 
 Aus Gründen der Einfachheit werden im obigen Beispiel Ressourcen für Zeichenfolgen wie „STRG+A“ weggelassen. Sie müssen die Tastenkombinationen aber auch während der Lokalisierung berücksichtigen. Die Lokalisierung von Tastenkombinationen ist wichtig, da die Auswahl einer Taste als Tastenkombination in der Regel von der sichtbaren Textbeschriftung des Elements abhängt.
 
-Weitere Unterstützung bei der Implementierung von Tastenkombinationen erhalten Sie unter [Tastenkombinationen](http://go.microsoft.com/fwlink/p/?linkid=221825) in den Richtlinien zur benutzerfreundlichen Interaktion bei Windows.
+Weitere Unterstützung bei der Implementierung von Tastenkombinationen erhalten Sie unter [Tastenkombinationen](https://go.microsoft.com/fwlink/p/?linkid=221825) in den Richtlinien zur benutzerfreundlichen Interaktion bei Windows.
 
 <span id="Implementing_a_key_event_handler"/>
 <span id="implementing_a_key_event_handler"/>
@@ -249,5 +249,5 @@ Tastenkombinationen sind für Windows Phone-Apps in der Regel nicht relevant, da
 * [Barrierefreiheit](accessibility.md)
 * [Tastaturinteraktionen](https://msdn.microsoft.com/library/windows/apps/Mt185607)
 * [Beispiel für die Bildschirmtastatur](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [XAML-Beispiel für Barrierefreiheit](http://go.microsoft.com/fwlink/p/?linkid=238570)
+* [XAML-Beispiel für Barrierefreiheit](https://go.microsoft.com/fwlink/p/?linkid=238570)
 

@@ -1,17 +1,17 @@
 ---
 title: Grundlagen am Beispiel von Marble Maze
-description: Dieses Dokument beschreibt die fundamentalen Eigenschaften des Marble Maze-Projekt. beispielsweise wie Visual C++ in der Windows-Runtime-Umgebung verwendet wird, wie es erstellt und strukturiert wird und wie es aufgebaut ist.
+description: Dieses Dokument beschreibt die fundamentalen Eigenschaften des Marble Maze-Projekt. beispielsweise wie Visual C++ in der Windows-Runtime-Umgebung verwendet wird, wie es erstellt und strukturiert ist und wie es aufgebaut ist.
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
 ms.date: 08/22/2017
 ms.topic: article
 keywords: Windows10, Uwp, Spiele, Beispiel, Directx, Grundlagen
 ms.localizationpriority: medium
-ms.openlocfilehash: 94dd22a6f6b1ace5589104574a695b236c1ebd39
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d41a9fe2363e5d5c462fb0646fbcc2479c756119
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946378"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049387"
 ---
 # <a name="marble-maze-sample-fundamentals"></a>Grundlagen am Beispiel von Marble Maze
 
@@ -21,7 +21,7 @@ ms.locfileid: "8946378"
 In diesem Thema werden die fundamentalen Eigenschaften des Marble Maze-Projekt&mdash;s beschrieben, beispielsweise wie Visual C++ in der Windows Runtime-Umgebung verwendet wird, wie es erstellt und strukturiert wird und wie es aufgebaut ist. Das Thema enthält auch eine Beschreibung verschiedener Konventionen, die im Code verwendet werden.
 
 > [!NOTE]
-> Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
+> Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](https://go.microsoft.com/fwlink/?LinkId=624011).
 
 Es folgen einige wichtige Punkte, die in diesem Dokument erläutert werden und die beim Planen und Entwickeln Ihres UWP-Spiels relevant sind.
 
@@ -34,17 +34,17 @@ Es folgen einige wichtige Punkte, die in diesem Dokument erläutert werden und d
 ## <a name="creating-the-visual-studio-project"></a>Erstellen des Visual Studio-Projekts
 
 
-Wenn Sie heruntergeladen und extrahiert haben das Beispiel, können, öffnen Sie die **MarbleMaze_VS2017.sln** -Datei (in der **C++** -Ordner) in Visual Studio, und Sie müssen den Code vor Ihnen.
+Wenn Sie heruntergeladen und extrahiert haben das Beispiel, Sie können die **MarbleMaze_VS2017.sln** -Datei (in der **C++** -Ordner) in Visual Studio öffnen, und Sie müssen den Code vor Ihnen.
 
 Beim Erstellen des Visual Studio-Projekts für Marble Maze haben wir mit einem bereits vorhandenen Projekt begonnen. Wenn Sie jedoch noch kein vorhandenes Projekt haben, das die grundlegende, für Ihr DirectX-UWP-Spiel erforderliche Funktionalität bereitstellt, wird empfohlen, ein Projekt basierend auf der Visual Studio-Vorlage **DirectX 11-App (Universelle Windows-App)** zu erstellen, da sie eine grundlegende, funktionierende 3D-Anwendung enthält. Gehen Sie hierzu folgendermaßen vor:
 
-1. Wählen Sie in Visual Studio 2017 **Datei > Neu > Projekt**
+1. Wählen Sie in Visual Studio 2017 **Datei > neue > Projekt**
 
-2. Wählen Sie im Fenster **Neues Projekt** in der linken Seitenleiste **installiert > Vorlagen > Visual C++**.
+2. Wählen Sie im Fenster **Neues Projekt** in der linken Randleiste **installiert > Vorlagen > Visual C++**.
 
-3. Wählen Sie in der Liste mittleren **DirectX 11-App (Universal Windows)**. Wenn Sie diese Option nicht angezeigt, Sie haben keine die erforderlichen Komponenten installiert&mdash;finden Sie Informationen dazu, wie Sie zusätzliche Komponenten installieren [Ändern Visual Studio 2017 hinzufügen oder Entfernen von Workloads und Komponenten](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) .
+3. Wählen Sie in der Liste mittleren **DirectX 11-App (Universal Windows)**. Wenn Sie diese Option nicht angezeigt wird, Sie haben keine die erforderlichen Komponenten installiert&mdash;finden Sie Informationen dazu, wie Sie zusätzliche Komponenten installieren [Ändern Visual Studio 2017 hinzufügen oder Entfernen von Workloads und Komponenten](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) .
 
-4. Geben Sie Ihrem Projekt einen **Namen**, einen **Speicherort** für die Dateien gespeichert werden und eine **Lösungsnamen**, und klicken Sie auf **OK**.
+4. Verleihen Sie Ihrem Projekt einen **Namen**, einen **Speicherort** für die Dateien gespeichert werden und einen **Namen Projektmappe**, und klicken Sie auf **OK**.
 
 ![Neues Projekt](images/marble-maze-sample-fundamentals-1.png)
 
@@ -67,24 +67,24 @@ Wählen Sie in den Dropdownmenüs oben in Visual Studio links neben der grünen 
 Sie können die Fingereingabe, den Beschleunigungsmesser, Xbox One-Controller oder die Maus-Steuerung von Marble Maze verwenden.
 
 -   Mithilfe des Steuerkreuzes am Controller können Sie das aktive Menüelement ändern.
--   Verwenden Sie Toucheingabe, die eine oder Start Taste am Controller oder die Maus, um ein Menüelement auszuwählen.
+-   Verwenden Sie Toucheingabe, die ein oder Start Taste am Controller oder die Maus, um ein Menüelement auszuwählen.
 -   Über die Fingereingabe, den Beschleunigungsmesser, den linken Ministick oder die Maus können Sie das Labyrinth neigen.
--   Verwenden Sie Toucheingabe, die eine oder Start Taste am Controller oder die Maus zum Schließen von Menüs wie der Highscore-Tabelle.
--   Verwenden Sie die Start-Taste am Controller oder der P-Taste auf der Tastatur, um das Spiel anzuhalten oder fortzusetzen.
+-   Verwenden Sie Toucheingabe, die ein oder Start Taste am Controller oder die Maus zum Schließen von Menüs wie der Highscore-Tabelle.
+-   Verwenden Sie die Schaltfläche "Start" am Controller oder der P-Taste auf der Tastatur, um das Spiel anzuhalten oder fortzusetzen.
 -   Zum Neustarten des Spiels können Sie die Zurück-Taste am Controller oder die Pos1-Taste auf der Tastatur verwenden.
 -   Wenn die Highscore Tabelle angezeigt wird, verwenden Sie die zurück-Taste am Controller oder die POS1-Taste auf der Tastatur, um alle punktergebnisse löschen.
 
 ##  <a name="code-conventions"></a>Codekonventionen
 
 
-Die Windows-Runtime ist eine Programmierschnittstelle, die Sie zum Erstellen von UWP-Apps verwenden können, die nur in einer speziellen Anwendungsumgebung ausgeführt werden. Solche apps verwenden autorisierte Funktionen, Datentypen und Geräte, und Sie werden aus dem Microsoft Store verteilt. Die Windows-Runtime besteht auf der untersten Ebene aus einer binären Anwendungsschnittstelle (Application Binary Interface, ABI). Die ABI ist ein binärer Vertrag auf unterer Ebene, der Windows-Runtime-APIs für mehrere Programmiersprachen zur Verfügung stellt, beispielsweise für JavaScript, die .NET-Sprachen und Visual C++.
+Die Windows-Runtime ist eine Programmierschnittstelle, die Sie zum Erstellen von UWP-Apps verwenden können, die nur in einer speziellen Anwendungsumgebung ausgeführt werden. Solche apps verwenden autorisierte Funktionen, Datentypen und Geräte, und werden aus dem Microsoft Store verteilt. Die Windows-Runtime besteht auf der untersten Ebene aus einer binären Anwendungsschnittstelle (Application Binary Interface, ABI). Die ABI ist ein binärer Vertrag auf unterer Ebene, der Windows-Runtime-APIs für mehrere Programmiersprachen zur Verfügung stellt, beispielsweise für JavaScript, die .NET-Sprachen und Visual C++.
 
 Diese Sprachen erfordern für den Aufruf von Windows-Runtime-APIs aus JavaScript und .NET Projektionen, die für die jeweilige Sprachumgebung spezifisch sind. Wenn Sie eine Windows-Runtime-API aus JavaScript oder .NET aufrufen, rufen Sie die Projektion auf, die wiederum die zugrunde liegende ABI-Funktion aufruft. Sie können zwar die ABI-Funktionen direkt aus Standard-C++ aufrufen, jedoch stellt Microsoft auch Projektionen für C++ bereit, da diese die Verwendung der Windows-Runtime-APIs stark vereinfachen und dennoch eine hohe Leistung aufrecht erhalten. Microsoft stellt außerdem Spracherweiterungen für Visual C++ bereit, die spezielle Unterstützung für die Windows-Runtime-Projektionen bieten. Viele dieser Spracherweiterungen ähneln der Syntax für die Sprache C++/CLI. Anstelle einer Zielgruppenadressierung für die Common Language Runtime (CLR) durchzuführen, verwenden systemeigene Apps diese Syntax zum Erreichen der Windows-Runtime. Der Modifizierer in Form einer Objektreferenz, bzw. des Hütchensymbols (^), ist ein wichtiger Teil dieser neuen Syntax, da er die automatische Löschung von Runtime-Objekten anhand einer Referenzzählung ermöglicht. Anstatt Methoden wie [AddRef](https://msdn.microsoft.com/library/windows/desktop/ms691379) und [Release](https://msdn.microsoft.com/library/windows/desktop/ms682317) zum Verwalten der Lebensdauer eines Windows-Runtime-Objekts aufzurufen, löscht die Runtime das Objekt, wenn keine andere Komponente darauf verweist. Dies ist beispielsweise der Fall, wenn es den Bereich verlässt oder wenn Sie alle Verweise auf **nullptr** festlegen. Ein weiterer wichtiger Aspekt beim Erstellen von UWP-Apps ist das **ref new**-Schlüsselwort. Verwenden Sie **ref new** anstelle von **new**, um Windows-Runtime-Objekte mit Verweiszählung zu erstellen. Weitere Informationen finden Sie unter [Typsystem (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822).
 
 > [!IMPORTANT]
 > Wenn Sie Windows-Runtime-Objekte oder Komponenten für die Windows-Runtime erstellen, müssen Sie nur **^** und **ref new** verwenden. Sie können die C++-Standardsyntax verwenden, wenn Sie Kernanwendungscode schreiben, in dem die Windows-Runtime nicht genutzt wird.
 
-In Marble Maze werden mit **^** und **Microsoft::WRL::ComPtr** vom Heap zugewiesene Objekte verwaltet und Arbeitsspeicherverluste minimiert. Wir empfehlen die Verwendung ^ die Lebensdauer von Windows-Runtime-Variablen zu **ComPtr** zum Verwalten der Lebensdauer von COM-Variables (z. B. bei Verwendung von DirectX), "und" **Std:: shared\_ptr** "oder" **Std:: unique\_ptr** zum Verwalten der Lebensdauer aller anderen zu verwalten vom Heap zugewiesenen C++-Objekte.
+In Marble Maze werden mit **^** und **Microsoft::WRL::ComPtr** vom Heap zugewiesene Objekte verwaltet und Arbeitsspeicherverluste minimiert. Wir empfehlen die Verwendung ^ die Lebensdauer von Windows-Runtime-Variablen zu **ComPtr** zum Verwalten der Lebensdauer von COM-Variables (z. B. bei Verwendung von DirectX), "und" **Std:: shared\_ptr** "oder" **Std:: unique\_ptr** zum Verwalten der Lebensdauer des alle anderen zu verwalten Heap zugewiesenen C++-Objekte.
 
  
 
@@ -119,7 +119,7 @@ Verwenden Sie SAL-Anmerkungen in Kombination mit Codeanalysetools, um Fehler in 
 
 Mithilfe der Microsoft-Quellcodeanmerkungssprache (Source Code Annotation Language, SAL) können Sie anmerken bzw. beschreiben, wie eine Funktion die zugehörigen Parameter verwendet. SAL-Anmerkungen werden auch zum Beschreiben von Rückgabewerten verwendet. SAL-Anmerkungen können mit dem C/C++-Codeanalysetool verwendet werden, um mögliche Fehler im C- und C++-Quellcode zu finden. Häufige Codierungsfehler, die vom Tool gemeldet werden, beinhalten Pufferüberläufe, nicht initialisierte Speicher, Nullzeiger-Dereferenzierungen und Speicher- und Ressourcenverluste.
 
-Berücksichtigen Sie die **basicloader:: Loadmesh** -Methode, die in [BasicLoader.h](https://github.com/Microsoft/Windows-appsample-marble-maze/blob/e62d68a85499e208d591d2caefbd9df62af86809/C%2B%2B/Shared/BasicLoader.h)deklariert wird. Diese Methode verwendet `_In_` *Dateinamen* ist ein Eingabeparameter angeben (und daher nur von lesen), `_Out_` angeben, dass *VertexBuffer* und *IndexBuffer* Ausgabeparameter sind (und daher nur geschrieben wird) und `_Out_opt_` angeben, dass *VertexCount* und *IndexCount* optional sind Ausgabeparameter (und geschrieben werden kann). Da *vertexCount* und *indexCount* optionale Ausgabeparameter sind, dürfen sie **nullptr** sein. Das C/C++-Codeanalysetool untersucht Aufrufe dieser Methode, um sicherzustellen, dass die von ihr übergebenen Parameter diese Kriterien erfüllen.
+Berücksichtigen Sie die **basicloader:: Loadmesh** -Methode, die in [BasicLoader.h](https://github.com/Microsoft/Windows-appsample-marble-maze/blob/e62d68a85499e208d591d2caefbd9df62af86809/C%2B%2B/Shared/BasicLoader.h)deklariert wird. Diese Methode verwendet `_In_` an der *Dateiname* ist ein Eingabeparameter (und daher wird nur gelesen werden, aus), `_Out_` angeben, dass *VertexBuffer* und *IndexBuffer* Ausgabeparameter sind (und daher nur geschrieben wird) und `_Out_opt_` angeben, dass *VertexCount* und *IndexCount* optional sind Ausgabeparameter (und möglicherweise in geschrieben werden). Da *vertexCount* und *indexCount* optionale Ausgabeparameter sind, dürfen sie **nullptr** sein. Das C/C++-Codeanalysetool untersucht Aufrufe dieser Methode, um sicherzustellen, dass die von ihr übergebenen Parameter diese Kriterien erfüllen.
 
 ```cpp
 void LoadMesh(

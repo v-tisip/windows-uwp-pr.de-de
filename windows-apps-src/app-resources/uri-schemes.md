@@ -6,12 +6,12 @@ ms.date: 10/16/2017
 ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: 345a41a45e28843161e65ecb04f0083f1a71269a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b449179468d26c357e69ad1d8868004cadd6e2fa
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942846"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048347"
 ---
 # <a name="uri-schemes"></a>URI-Schemen
 
@@ -19,9 +19,9 @@ Es gibt mehrere URI (Uniform Resource Identifier)-Schemen, die Sie verwenden kö
 
 ## <a name="common-features-of-the-uri-schemes"></a>Allgemeine Features der URI-Schemen
 
-Alle in diesem Thema beschriebenen Schemen folgen den typischen URI-Schema-Regeln für die Normalisierung und den Ressourcenabruf. Weitere Informationen für die allgemeine Syntax für eine URI finden Sie unter [RFC 3986](http://go.microsoft.com/fwlink/p/?LinkId=263444).
+Alle in diesem Thema beschriebenen Schemen folgen den typischen URI-Schema-Regeln für die Normalisierung und den Ressourcenabruf. Weitere Informationen für die allgemeine Syntax für eine URI finden Sie unter [RFC 3986](https://go.microsoft.com/fwlink/p/?LinkId=263444).
 
-Bei allen URI-Schemen wird der hierarchische Teil gemäß [RFC 3986](http://go.microsoft.com/fwlink/p/?LinkId=263444) als die Autoritäts- und Pfadkomponenten des URI definiert:
+Bei allen URI-Schemen wird der hierarchische Teil gemäß [RFC 3986](https://go.microsoft.com/fwlink/p/?LinkId=263444) als die Autoritäts- und Pfadkomponenten des URI definiert:
 
 ```syntax
 URI         = scheme ":" hier-part [ "?" query ] [ "#" fragment ]
@@ -251,9 +251,9 @@ Der Pfad gibt den hierarchischen Ort der [ResourceMap](/uwp/api/Windows.Applicat
 
 Beispiele und weitere Informationen finden Sie unter [Lokalisieren der Zeichenfolge im Paketmanifest der Benutzeroberfläche und der App](localize-strings-ui-manifest.md) und [Unterstützte Kachel- und Popupbenachrichtigungen für Sprache, Skalierungsfaktor und hohen Kontrast](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md).
 
-Bei der Pfadkomponente von `ms-resource` muss wie bei generischen URIs die Groß-/Kleinschreibung beachtet werden. Der zugrunde liegende Abruf wird jedoch ein [CompareStringOrdinal](https://msdn.microsoft.com/library/windows/apps/br224628) und *IgnoreCase* als `true`.
+Bei der Pfadkomponente von `ms-resource` muss wie bei generischen URIs die Groß-/Kleinschreibung beachtet werden. Der zugrunde liegende Abruf jedoch eine [CompareStringOrdinal](https://msdn.microsoft.com/library/windows/apps/br224628) und *IgnoreCase* auf festgelegt `true`.
 
-Bei der normalisierten Form des URI bleibt die Groß-/Kleinschreibung erhalten, und von nicht reservierten RFC 3986-Zeichen werden die Prozentzeichen entfernt. Die Zeichen "?", "#", "/", "*" und '”' (doppelte Anführungszeichen) müssen in einem Pfad mit einem Prozentzeichen versehen werden, um Daten wie Datei- oder Ordnernamen anzugeben. Alle mit Prozentzeichen versehenen Zeichen werden vor dem Abrufen decodiert. Daher zum Abrufen einer Zeichenfolgenressource aus einer Ressourcendatei mit dem Namen `Hello#World.resw`, verwenden Sie diese URI.
+Bei der normalisierten Form des URI bleibt die Groß-/Kleinschreibung erhalten, und von nicht reservierten RFC 3986-Zeichen werden die Prozentzeichen entfernt. Die Zeichen "?", "#", "/", "*" und '”' (doppelte Anführungszeichen) müssen in einem Pfad mit einem Prozentzeichen versehen werden, um Daten wie Datei- oder Ordnernamen anzugeben. Alle mit Prozentzeichen versehenen Zeichen werden vor dem Abrufen decodiert. Daher zum Abrufen von einer Zeichenfolgenressource aus einer Ressourcendatei mit dem Namen `Hello#World.resw`, verwenden Sie diese URI.
 
 ```xml
 ms-resource:///Hello%23World/String1
@@ -267,7 +267,7 @@ Entwickler bestimmter Komponenten, die sich in Ebenen über dieser URI-Analyse b
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Uniform Resource Identifier (URI): Allgemeine Syntax](http://go.microsoft.com/fwlink/p/?LinkId=263444)
+* [Uniform Resource Identifier (URI): Allgemeine Syntax](https://go.microsoft.com/fwlink/p/?LinkId=263444)
 * [Verpacken von Apps](../packaging/index.md)
 * [Verweisen auf ein Bild oder eine Ressource aus XAML-Markup und Code](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
 * [Speichern und Abrufen von Einstellungen und anderen App-Daten](../design/app-settings/store-and-retrieve-app-data.md)

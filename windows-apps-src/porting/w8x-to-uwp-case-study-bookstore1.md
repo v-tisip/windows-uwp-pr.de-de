@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 88a5492116eaf48f72d512a093001a5c3835f0d2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5e0b8ffbebdca920bc6cc584dd735062a364d1d9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920064"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048117"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore1"></a>Windows Runtime 8.x zu UWP – Fallstudie, Bookstore1
 
 
-Dieses Thema enthält eine Fallstudie für das Portieren einer sehr einfachen universellen 8.1-Apps zu einer app Windows10Universal Windows-Plattform (UWP). Eine universelle 8.1-app ist eine app-Paket für Windows8.1 und ein anderes app-Paket für Windows Phone 8.1 erstellt. Mit Windows 10, können Sie ein einzelnes app-Paket erstellen, die Ihre Kunden auf einer Vielzahl von Geräten installieren können, und wie wir in dieser Fallstudie tun. Weitere Informationen finden Sie unter [Anleitung für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn894631).
+Dieses Thema enthält eine Fallstudie für das Portieren einer sehr einfachen universellen 8.1-Apps zu einer app Windows10Universal Windows-Plattform (UWP). Eine universelle 8.1-app ist eine app-Paket für Windows8.1 und ein anderes app-Paket für Windows Phone 8.1 erstellt. Mit Windows 10, können Sie ein einzelnes app-Paket erstellen, die Ihre Kunden auf einer Vielzahl von Geräten installieren können, und was wir in dieser Fallstudie tun. Weitere Informationen finden Sie unter [Anleitung für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
 Die portierte App besteht aus einem **ListBox**-Element, das an ein Ansichtsmodell gebunden ist. Das Ansichtsmodell verfügt über eine Liste mit Büchern, für die Titel, Autor und Bucheinband angezeigt werden. Für die Bucheinbandbilder ist **Buildvorgang** auf **Inhalt** und **In Ausgabeverzeichnis kopieren** auf **Nicht kopieren** festgelegt.
 
@@ -26,9 +26,9 @@ Die vorherigen Themen in diesem Abschnitt beschreiben die Unterschiede zwischen 
 
 ## <a name="downloads"></a>Downloads
 
-[Laden Sie die universelle8.1-App „Bookstore1\_81“ herunter](http://go.microsoft.com/fwlink/?linkid=532946).
+[Laden Sie die universelle8.1-App „Bookstore1\_81“ herunter](https://go.microsoft.com/fwlink/?linkid=532946).
 
-[Laden Sie die Bookstore1Universal\_10 Sie Windows 10-app](http://go.microsoft.com/fwlink/?linkid=532950).
+[Laden der Bookstore1Universal\_10 Windows 10-app](https://go.microsoft.com/fwlink/?linkid=532950).
 
 ## <a name="the-universal-81-app"></a>Die universelle8.1-App
 

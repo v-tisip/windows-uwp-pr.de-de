@@ -6,14 +6,14 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e9d0fdee4ba9f44f15c461e5a53dad28700023a4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e50d3613e5f7058e99f2e71ba023fb4191e5c734
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947040"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051103"
 ---
-# <a name="best-practices-for-your-apps-startup-performance"></a>Bewährte Methoden für die Leistung Ihrer App beim Starten
+# <a name="best-practices-for-your-apps-startup-performance"></a>Bewährte Methoden für die Startleistung der App
 
 
 Erstellen Sie UWP-Apps (Universelle Windows-Plattform) mit optimalen Startzeiten, indem Sie die Vorgehensweise bei Start und Aktivierung optimieren.
@@ -103,7 +103,7 @@ Die Startleistung in einer XAML-App korreliert direkt mit der Anzahl von Element
 -   Da UserControls und Steuerelementvorlagen erweitert werden, sollten diese Elemente ebenfalls berücksichtigt werden.
 -   Wenn Sie beliebige XAML-Daten erstellen, die nicht auf dem Bildschirm angezeigt werden, sollte es einen guten Grund dafür geben, dass diese XAML-Elemente während des Starts erstellt werden.
 
-Im Fenster mit der [Visuellen Live-Struktur von Visual Studio](http://blogs.msdn.com/b/visualstudio/archive/2015/02/24/introducing-the-ui-debugging-tools-for-xaml.aspx) wird die Anzahl der untergeordneten Elemente für jeden Knoten der Struktur angezeigt.
+Im Fenster mit der [Visuellen Live-Struktur von Visual Studio](https://blogs.msdn.com/b/visualstudio/archive/2015/02/24/introducing-the-ui-debugging-tools-for-xaml.aspx) wird die Anzahl der untergeordneten Elemente für jeden Knoten der Struktur angezeigt.
 
 ![Visuelle Live-Struktur:](images/live-visual-tree.png)
 
@@ -323,7 +323,7 @@ Bei Apps mit längerer Initialisierungsperiode ist das Anzeigen einer Ladeseite 
 > End Class
 > ```
 
-Ein Beispiel für die Verwendung erweiterter Begrüßungsbildschirme finden Sie im [Beispiel für einen Begrüßungsbildschirm](http://go.microsoft.com/fwlink/p/?linkid=234889).
+Ein Beispiel für die Verwendung erweiterter Begrüßungsbildschirme finden Sie im [Beispiel für einen Begrüßungsbildschirm](https://go.microsoft.com/fwlink/p/?linkid=234889).
 
 ### <a name="phase-3"></a>Phase3
 
@@ -339,7 +339,7 @@ Wie genau eine App auf die einzelnen Startphasen reagiert, liegt ganz bei Ihnen.
 
 Wiederverwendbarer Code liegt oft in Gestalt von in das Projekt einbezogenen Modulen (DLL-Dateien) vor. Zum Laden dieser Module muss auf den Datenträger zugegriffen werden, was – wie Sie sich vorstellen können – schnell einen größeren Mehraufwand bedeuten kann. Dieser Aspekt wirkt sich am stärksten bei einem Kaltstart aus, kann aber auch Auswirkungen auf den Warmstart haben. Im Falle von C# und Visual Basic versucht die CLR, die Auswirkungen bestmöglich zu verzögern, indem sie die Assemblys nur bei Bedarf lädt. Mit anderen Worten: Die CLR lädt ein Modul erst, wenn in einer ausgeführten Methode darauf verwiesen wird. Verweisen Sie im Startcode also nur auf Assemblys, die für den Start Ihrer App erforderlich sind, damit die CLR keine überflüssigen Module lädt. Falls Ihr Startpfad nicht verwendete Codepfade mit unnötigen Verweisen enthält, können Sie diese Codepfade in andere Methoden auslagern, um unnötige Ladevorgänge zu vermeiden.
 
-Eine weitere Möglichkeit zum Optimieren von Modulladevorgängen ist das Kombinieren von App-Modulen. Eine einzelne große Assembly wird in der Regel schneller geladen als zwei kleinere Assemblys. Dies ist allerdings nicht immer möglich. Außerdem sollten Sie Module nur dann kombinieren, wenn dieser Schritt keine großen Nachteile für die Entwicklerproduktivität oder die Wiederverwendbarkeit des Codes bedeutet. Welche Module beim Start geladen werden, können Sie mit Tools wie [PerfView](http://go.microsoft.com/fwlink/p/?linkid=251609) oder mit der [Windows-Leistungsanalyse](https://msdn.microsoft.com/library/windows/apps/xaml/ff191077.aspx) ermitteln.
+Eine weitere Möglichkeit zum Optimieren von Modulladevorgängen ist das Kombinieren von App-Modulen. Eine einzelne große Assembly wird in der Regel schneller geladen als zwei kleinere Assemblys. Dies ist allerdings nicht immer möglich. Außerdem sollten Sie Module nur dann kombinieren, wenn dieser Schritt keine großen Nachteile für die Entwicklerproduktivität oder die Wiederverwendbarkeit des Codes bedeutet. Welche Module beim Start geladen werden, können Sie mit Tools wie [PerfView](https://go.microsoft.com/fwlink/p/?linkid=251609) oder mit der [Windows-Leistungsanalyse](https://msdn.microsoft.com/library/windows/apps/xaml/ff191077.aspx) ermitteln.
 
 ### <a name="make-smart-web-requests"></a>Verwenden intelligenter Webanforderungen
 

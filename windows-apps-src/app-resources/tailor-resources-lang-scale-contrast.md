@@ -6,14 +6,14 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: ac61d57a965e3a35c6eb7cfaf17d0f4ef2a02501
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1ab8dde9984ed0e4f7d99e7809361d928bebb718
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943306"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045426"
 ---
-# <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung, hohen Kontrast und anderen Qualifizierern
+# <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Passen Sie Ihrer Ressourcen der Sprache, Skalierung, dem hohen Kontrast und anderen Qualifizierern an
 
 In diesem Thema wird das allgemeine Konzept der Ressourcenqualifizierer erläutert, wie sie verwendet werden und wofür die einzelnen Qualifizierernamen dienen. Eine Referenztabelle für die verschiedenen Qualifiziererwerte finden Sie unter [**ResourceContext.QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues).
 
@@ -191,11 +191,11 @@ Es ist unwahrscheinlich, dass Sie den `dxfeaturelevel` Qualifizierernamen benöt
 
 ## <a name="homeregion"></a>HomeRegion
 
-Der `homeregion`-Qualifizierer entspricht auf der Benutzereinstellung für Land/Region. Es stellt den Wohnort des Benutzers dar. Werte umfassen beliebig gültige [BCP-47-Regionstags](http://go.microsoft.com/fwlink/p/?linkid=227302). D.h. jeder **ISO 3166-1-Alpha-2** Regionscode mit zwei Buchstaben sowie ein Satz **ISO 3166-1 numerischen** dreistelliger geografischer Codes für zusammengesetzte Regionen (siehe [Zusammenstellung von Regionscodes der Statistikabteilung der Vereinten Nationen (M49)](http://go.microsoft.com/fwlink/p/?linkid=247929)). Codes für bestimmte wirtschaftliche und andere Gruppierungen sind ungültig.
+Der `homeregion`-Qualifizierer entspricht auf der Benutzereinstellung für Land/Region. Es stellt den Wohnort des Benutzers dar. Werte umfassen beliebig gültige [BCP-47-Regionstags](https://go.microsoft.com/fwlink/p/?linkid=227302). D.h. jeder **ISO 3166-1-Alpha-2** Regionscode mit zwei Buchstaben sowie ein Satz **ISO 3166-1 numerischen** dreistelliger geografischer Codes für zusammengesetzte Regionen (siehe [Zusammenstellung von Regionscodes der Statistikabteilung der Vereinten Nationen (M49)](https://go.microsoft.com/fwlink/p/?linkid=247929)). Codes für bestimmte wirtschaftliche und andere Gruppierungen sind ungültig.
 
 ## <a name="language"></a>Sprache
 
-Ein `language`-Qualifizierer entspricht der Einstellung für die Anzeigesprache. Werte umfassen beliebig gültige [BCP-47-Sprachtags](http://go.microsoft.com/fwlink/p/?linkid=227302). Eine Liste der Sprachen finden Sie unter [IANA Language Subtag Registry](http://go.microsoft.com/fwlink/p/?linkid=227303).
+Ein `language`-Qualifizierer entspricht der Einstellung für die Anzeigesprache. Werte umfassen beliebig gültige [BCP-47-Sprachtags](https://go.microsoft.com/fwlink/p/?linkid=227302). Eine Liste der Sprachen finden Sie unter [IANA Language Subtag Registry](https://go.microsoft.com/fwlink/p/?linkid=227303).
 
 Wenn Ihre App unterschiedliche Sprachen unterstützten soll und Sie Zeichenfolgenliterale im Code oder im XAML-Markup haben, verschieben Sie diese Zeichenfolgen aus dem Code/Markup und in eine Ressourcendatei (`.resw`). Sie können dann eine übersetzte Kopie dieser Ressourcendatei für jede Sprache erstellen, die Ihre App unterstützt.
 
@@ -273,7 +273,7 @@ Der Qualifizierer `theme` wird verwendet, um Ressourcen bereitzustellen, die am 
 * [Erkennen der Plattform, auf der Ihre App ausgeführt wird](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
 * [Übersicht über die Gerätefamilien](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
 * [Lokalisieren der Zeichenfolgen Ihrer Benutzeroberfläche](localize-strings-ui-manifest.md)
-* [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)
-* [Zusammenstellung von Regionscodes der Statistikabteilung der Vereinten Nationen (M49)](http://go.microsoft.com/fwlink/p/?linkid=247929)
-* [IANA Language Subtag Registry](http://go.microsoft.com/fwlink/p/?linkid=227303)
+* [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
+* [Zusammenstellung von Regionscodes der Statistikabteilung der Vereinten Nationen (M49)](https://go.microsoft.com/fwlink/p/?linkid=247929)
+* [IANA Language Subtag Registry](https://go.microsoft.com/fwlink/p/?linkid=227303)
 * [Anpassen von Layout und Schriftarten und Unterstützen von „Von rechts nach links“](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md)

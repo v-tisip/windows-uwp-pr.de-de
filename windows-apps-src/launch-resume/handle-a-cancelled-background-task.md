@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: b888bf1373dfb0cac80881117570eb23e8802142
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2c8bb1e352fe4924b45fd56963de324528269a12
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929440"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044474"
 ---
 # <a name="handle-a-cancelled-background-task"></a>Behandeln einer abgebrochenen Hintergrundaufgabe
 
@@ -85,7 +85,7 @@ private:
 
 Legen Sie in der **OnCanceled** -Methode, die Sie in Schritt 1 erstellt haben das Flag-Variable **\_CancelRequested** auf **"true"** fest.
 
-Im vollständigen [Beispiel für eine Hintergrundaufgabe]( http://go.microsoft.com/fwlink/p/?linkid=227509) **OnCanceled** -Methode **\_CancelRequested** auf **"true"** fest, und es gibt eine möglicherweise hilfreiche Debugmeldung aus.
+Das vollständige [Beispiel für eine Hintergrundaufgabe]( http://go.microsoft.com/fwlink/p/?linkid=227509) **OnCanceled** -Methode **\_CancelRequested** auf **"true"** fest, und gibt eine möglicherweise hilfreiche Debugmeldung aus.
 
 ```csharp
 private void OnCanceled(IBackgroundTaskInstance sender, BackgroundTaskCancellationReason reason)
@@ -131,11 +131,11 @@ taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &Exam
 
 ## <a name="handle-cancellation-by-exiting-your-background-task"></a>Behandeln des Abbruchs durch Beenden der Hintergrundaufgabe
 
-Wenn eine Abbruchanforderung empfangen wird, muss die Methode für die Hintergrundverarbeitung angehalten und beendet werden, indem erkannt wird, dass **\_cancelRequested** auf **true** festgelegt wurde. Für Hintergrundaufgaben innerhalb von Prozessen bedeutet dies ein Zurückwechseln aus der **OnBackgroundActivated** -Methode. Für Out-of-Process-Hintergrundaufgaben bedeutet dies ein Zurückwechseln aus der **Run** -Methode.
+Wenn eine Abbruchanforderung empfangen wird, muss die Methode für die Hintergrundverarbeitung angehalten und beendet werden, indem erkannt wird, dass **\_cancelRequested** auf **true** festgelegt wurde. Bei Hintergrundaufgaben innerhalb von Prozessen bedeutet dies ein Zurückwechseln aus der **OnBackgroundActivated** -Methode. Für Out-of-Process-Hintergrundaufgaben bedeutet dies ein Zurückwechseln aus der **Run** -Methode.
 
-Ändern Sie den Code der Hintergrundaufgabenklasse, um die Kennzeichenvariable zu überprüfen, während die Hintergrundaufgabe ausgeführt wird. Wenn **\_cancelRequested** auf "true" ist, arbeiten mit dieser festgelegt wird.
+Ändern Sie den Code der Hintergrundaufgabenklasse, um die Kennzeichenvariable zu überprüfen, während die Hintergrundaufgabe ausgeführt wird. Wenn **\_cancelRequested** auf "true", nicht mehr Arbeit Geschäftsvorgänge festgelegt wird.
 
-[Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) enthält eine Überprüfung, die den regelmäßigen Zeitgeberrückruf anhält, wenn die Hintergrundaufgabe abgebrochen wird.
+Das [Beispiel für eine Hintergrundaufgabe](https://go.microsoft.com/fwlink/p/?LinkId=618666) enthält eine Überprüfung, die den regelmäßigen Zeitgeberrückruf anhält, wenn die Hintergrundaufgabe abgebrochen wird.
 
 ```csharp
 if ((_cancelRequested == false) && (_progress < 100))
@@ -181,7 +181,7 @@ else
 
 Ändern Sie die **Run** -Methode, damit nach dem Anhalten der Arbeit aufzeichnet, ob die Aufgabe ausgeführt oder abgebrochen wurde. Dieser Schritt gilt für Hintergrundaufgaben außerhalb von Prozessen, da eine Möglichkeit für die Kommunikation zwischen Prozessen haben müssen, wenn die Hintergrundaufgabe abgebrochen wurde. Für Hintergrundaufgaben innerhalb von Prozessen können Sie den Status einfach mit der Anwendung teilen, um anzugeben, dass die Aufgabe abgebrochen wurde.
 
-[Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) zeichnet den Status in "localsettings".
+Das [Beispiel für eine Hintergrundaufgabe](https://go.microsoft.com/fwlink/p/?LinkId=618666) zeichnet den Status in "localsettings".
 
 ```csharp
 if ((_cancelRequested == false) && (_progress < 100))
@@ -255,13 +255,13 @@ else
 
 ## <a name="remarks"></a>Anmerkungen
 
-Sie können das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) herunterladen, um diese Codebeispiele im Kontext von Methoden anzuzeigen.
+Sie können das [Beispiel zur Hintergrundaufgabe](https://go.microsoft.com/fwlink/p/?LinkId=618666) herunterladen, um diese Codebeispiele im Kontext von Methoden anzuzeigen.
 
-Zur Veranschaulichung zeigt der Beispielcode nur Teile der **Run** -Methode (und des rückruftimers) aus dem [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666).
+Zur Veranschaulichung zeigt der Beispielcode nur Teile der **Run** -Methode (und des rückruftimers) aus dem [Beispiel für eine Hintergrundaufgabe](https://go.microsoft.com/fwlink/p/?LinkId=618666).
 
 ## <a name="run-method-example"></a>Beispiel der Run-Methode
 
-Die vollständige **Run** -Methode und den timerrückruf-Code, der aus dem [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) sind unten aufgeführt, für den Kontext.
+Die vollständige **Run** -Methode und den timerrückruf-Code, der aus dem [Beispiel für eine Hintergrundaufgabe](https://go.microsoft.com/fwlink/p/?LinkId=618666) sind unten aufgeführt, für den Kontext.
 
 ```csharp
 // The Run method is the entry point of a background task.
@@ -414,4 +414,4 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 - [Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe](update-a-live-tile-from-a-background-task.md)
 - [Verwenden eines Wartungsauslösers](use-a-maintenance-trigger.md)
 - [Debuggen einer Hintergrundaufgabe](debug-a-background-task.md)
-- [So wird’s gemacht: Auslösen von Anhalte-, Fortsetzungs- und Hintergrundereignissen in UWP-Apps (beim Debuggen)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+- [So wird’s gemacht: Auslösen von Anhalte-, Fortsetzungs- und Hintergrundereignissen in UWP-Apps (beim Debuggen)](https://go.microsoft.com/fwlink/p/?linkid=254345)

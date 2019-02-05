@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 04534316c3357dfecc4a94b91dcab42f8238dec6
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
+ms.openlocfilehash: 09ddb212cd84b9754c35adccdf6e60ad96a4f94f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980328"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050803"
 ---
 # <a name="open-files-and-folders-with-a-picker"></a>Öffnen von Dateien und Ordnern mit einer Auswahl
 
@@ -24,7 +24,7 @@ ms.locfileid: "8980328"
 Greifen Sie auf Dateien und Ordner zu, indem Sie Benutzern die Interaktion mit einer Auswahl ermöglichen. Mithilfe der Klassen [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) und [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) können Sie auf Dateien und mithilfe der Klasse [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/br207881) auf einen Ordner zugreifen.
 
 > [!NOTE]
-> Ein vollständiges Beispiel finden Sie im [Dateiauswahl-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619994).
+> Ein vollständiges Beispiel finden Sie im [Dateiauswahl-Beispiel](https://go.microsoft.com/fwlink/p/?linkid=619994).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

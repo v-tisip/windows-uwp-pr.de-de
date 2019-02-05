@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows10, uwp, Spiele, directx, xaml-interoperabilität
 ms.localizationpriority: medium
-ms.openlocfilehash: 058a1458f8990e5f70e7ed0ea4ef1a2b5f4a4956
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 34fb65ec53f6addccf8723b451d333d602c17908
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944525"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046210"
 ---
 # <a name="directx-and-xaml-interop"></a>Interoperabilität von DirectX und XAML
 
@@ -53,7 +53,7 @@ Im Folgenden erfahren Sie mehr über die grundlegende Vorgehensweise zum Erstell
 
 1.  Legen Sie die Größe der gemeinsam genutzten Fläche fest, indem Sie die Werte für die Höhe und Breite an den Konstruktor [SurfaceImageSource](https://msdn.microsoft.com/library/windows/apps/hh702041) übergeben. Sie können ebenfalls festlegen, ob für die gemeinsam genutzte Fläche Alpha-Unterstützung (Deckkraft) erforderlich ist.
 
-    Beispiele:
+    Beispiel:
 
     `SurfaceImageSource^ surfaceImageSource = ref new SurfaceImageSource(400, 300);`
 
@@ -77,7 +77,7 @@ Im Folgenden erfahren Sie mehr über die grundlegende Vorgehensweise zum Erstell
     > [!NOTE]
     > Wenn Sie über einen Hintergrundthread in Ihr **SurfaceImageSource** zeichnen, müssen Sie außerdem sicherstellen, dass der Multithread-Zugriff auf dem DXGI-Gerät aktiviert ist. Dies sollte aus Leistungsgründen beim Zeichnen über einen Hintergrundthread erfolgen.
 
-    Beispiele:
+    Beispiel:
 
     ```cpp
     Microsoft::WRL::ComPtr<ID3D11Device> m_d3dDevice;
@@ -460,7 +460,7 @@ Im Folgenden erfahren Sie mehr über die grundlegende Vorgehensweise zum Erstell
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm)
+* [Win2D](https://microsoft.github.io/Win2D/html/Introduction.htm)
 * [SurfaceImageSource](https://msdn.microsoft.com/library/windows/apps/hh702041)
 * [VirtualSurfaceImageSource](https://msdn.microsoft.com/library/windows/apps/hh702050)
 * [SwapChainPanel](https://msdn.microsoft.com/library/windows/apps/dn252834)

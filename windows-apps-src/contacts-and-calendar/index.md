@@ -6,12 +6,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: Windows 10, UWP, Kontakte, Kalender, Termine, E-Mail-Nachrichten
 ms.localizationpriority: medium
-ms.openlocfilehash: a2ccf75796140723270e49a7b967ce234d41baf1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 239dbaa7799d9991a63223d1cd8706d34445a16b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945679"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048237"
 ---
 # <a name="contacts-my-people-and-calendar"></a>Kontakte, Meine Kontakte und Kalender
 
@@ -35,8 +35,8 @@ Die folgenden Themen enthalten Informationen zu verschiedenen Verfahren, wie Ihr
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Beispiel zur Termin-API](http://go.microsoft.com/fwlink/p/?linkid=309836)
-* [Beispiel zur Kontakt-Manager-API](http://go.microsoft.com/fwlink/p/?LinkID=310079)
-* [Beispiel-App für die Kontaktauswahl](http://go.microsoft.com/fwlink/p/?linkid=231575)
-* [Beispiel zum Behandeln von Kontaktaktionen](http://go.microsoft.com/fwlink/p/?LinkID=320151)
+* [Beispiel zur Termin-API](https://go.microsoft.com/fwlink/p/?linkid=309836)
+* [Beispiel zur Kontakt-Manager-API](https://go.microsoft.com/fwlink/p/?LinkID=310079)
+* [Beispiel-App für die Kontaktauswahl](https://go.microsoft.com/fwlink/p/?linkid=231575)
+* [Beispiel zum Behandeln von Kontaktaktionen](https://go.microsoft.com/fwlink/p/?LinkID=320151)
 * [Beispiel für die Visitenkartenintegration](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration)

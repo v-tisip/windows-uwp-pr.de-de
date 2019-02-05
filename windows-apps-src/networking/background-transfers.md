@@ -6,12 +6,12 @@ ms.date: 03/23/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d67bb7c7fd2173e1406669367935efdb09967ea
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2535818d5362b1ffe4b7b35c7b4079bee73a511f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932523"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9046054"
 ---
 # <a name="background-transfers"></a>Hintergrundübertragungen
 Verwenden Sie die Hintergrundübertragungs-API zum zuverlässigen Kopieren von Dateien im Netzwerk. Die Hintergrundübertragungs-API bietet erweiterte Upload- und Downloadfeatures, die bei angehaltener App im Hintergrund ausgeführt werden und auch nach Beendigung der App aktiv bleiben. Die API überwacht den Netzwerkstatus und kann Übertragungen automatisch anhalten und fortsetzen, wenn die Verbindung unterbrochen wird. Übertragungen sind außerdem akkuabhängig – die Downloadaktivität wird also basierend auf dem aktuellen Verbindungs- und Geräteakkustatus angepasst. Die API ist ideal für das Hoch- und Herunterladen von großen Dateien über HTTP(S) geeignet. FTP wird auch unterstützt, allerdings nur für Downloads.
@@ -28,7 +28,7 @@ Wenn eine App die Hintergrundübertragung verwendet, um eine Übertragung zu ini
 > [!NOTE]
 > Aufgrund von Ressourcenbeschränkungen pro App sollte eine App nicht mehr als 200 Übertragungen (DownloadOperations + UploadOperations) zu einem bestimmten Zeitpunkt verfügen. Dieses Limit zu überschreiten kann die App-Übertragungswarteschlange in einen nicht wiederherstellbaren Zustand lassen.
 
-Wenn eine Anwendung gestartet wird, muss er [**AttachAsync**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation.AttachAsync) für alle vorhandenen [**DownloadOperation**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation?branch=live) und [**UploadOperation**](/uwp/api/windows.networking.backgroundtransfer.uploadperation?branch=live) -Objekte aufrufen. Nicht auf diese Weise bewirkt, dass der Verlust von Übertragungen bereits abgeschlossen und schließlich rendert die Verwendung des Features Hintergrundübertragung nutzlos.
+Wenn eine Anwendung gestartet wird, muss er [**AttachAsync**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation.AttachAsync) für alle vorhandenen [**DownloadOperation**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation?branch=live) und [**UploadOperation**](/uwp/api/windows.networking.backgroundtransfer.uploadperation?branch=live) -Objekte aufrufen. Dies nicht zu tun bewirkt, dass den Verlust von Übermittlungen bereits abgeschlossen und schließlich rendert die Verwendung des Features Hintergrundübertragung nutzlos.
 
 ### <a name="performing-authenticated-file-requests-with-background-transfer"></a>Durchführen authentifizierter Dateianforderungen mit Hintergrundübertragung
 Das Feature für die Hintergrundübertragung stellt Methoden bereit, die allgemeine Server- und Proxyanmeldeinformationen, Cookies sowie die Verwendung von benutzerdefinierten HTTP-Headern (mithilfe von [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146)) für einzelne Übertragungen unterstützen.
@@ -40,7 +40,7 @@ Beispielsweise kann die für einen Vorgang definierte Kostenrichtlinie vorsehen,
 
 Obwohl das Feature für die Hintergrundübertragung über eigene Mechanismen zur Behandlung von Netzwerkstatusänderungen verfügt, müssen bei mit einem Netzwerk verbundenen Apps einige allgemeine Punkte im Zusammenhang mit der Konnektivität beachtet werden. Weitere Informationen finden Sie unter [Zugreifen auf den Netzwerkverbindungsstatus und Verwalten von Netzwerkkosten (HTML)](https://msdn.microsoft.com/library/windows/apps/hh452983).
 
-> **Hinweis:** für apps, die auf mobilen Geräten ausgeführt werden, stehen die folgenden Features, mit denen den Benutzer zu überwachen und beschränken die Menge an Daten, die übertragen wird, basierend auf dem Typ der Verbindung, roaming Status, und die Daten des Benutzers zu planen. Aus diesem Grund können Hintergrundübertragungen auf dem Telefon auch dann angehalten werden, wenn die Übertragung gemäß dem [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138)-Wert fortgesetzt werden sollte.
+> **Hinweis:** für apps, die auf mobilen Geräten ausgeführt werden, stehen die folgenden Features, die dem Benutzer ermöglichen, überwachen und Einschränken der Datenmenge, die übertragen wird basierend auf dem Typ der Verbindung, roaming Status und die Daten des Benutzers zu planen. Aus diesem Grund können Hintergrundübertragungen auf dem Telefon auch dann angehalten werden, wenn die Übertragung gemäß dem [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138)-Wert fortgesetzt werden sollte.
 
 Die folgende Tabelle zeigt für jeden [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138)-Wert, wann Hintergrundübertragungen basierend auf dem aktuellen Status des Telefons zulässig sind. Sie können den aktuellen Status des Telefons auch mithilfe der [**ConnectionCost**](https://msdn.microsoft.com/library/windows/apps/br207244)-Klasse ermitteln.
 
@@ -82,7 +82,7 @@ Beachten Sie die asynchronen Methodenaufrufe, die mit JavaScript-Zusagen definie
 promise = upload.startAsync().then(complete, error, progress);
 ```
 
-Nach dem Async-Methodenaufruf folgt eine then-Anweisung, die von der App definierte Methoden angibt, die aufgerufen werden, wenn ein Ergebnis aus dem Async-Methodenaufruf zurückgegeben wird. Weitere Informationen zu diesem Programmierungsmuster finden Sie unter [Asynchrone Programmierung in JavaScript mit Zusagen](http://msdn.microsoft.com/library/windows/apps/hh464930.aspx).
+Nach dem Async-Methodenaufruf folgt eine then-Anweisung, die von der App definierte Methoden angibt, die aufgerufen werden, wenn ein Ergebnis aus dem Async-Methodenaufruf zurückgegeben wird. Weitere Informationen zu diesem Programmierungsmuster finden Sie unter [Asynchrone Programmierung in JavaScript mit Zusagen](https://msdn.microsoft.com/library/windows/apps/hh464930.aspx).
 
 ### <a name="uploading-multiple-files"></a>Hochladen mehrerer Dateien
 **Identifizieren der Dateien und des Ziels für den Upload**
@@ -178,7 +178,7 @@ Beachten Sie die asynchronen Methodenaufrufe, die mit JavaScript-Zusagen definie
 promise = download.startAsync().then(complete, error, progress);
 ```
 
-Nach dem Async-Methodenaufruf folgt eine then-Anweisung, die von der App definierte Methoden angibt, die aufgerufen werden, wenn ein Ergebnis aus dem Async-Methodenaufruf zurückgegeben wird. Weitere Informationen zu diesem Programmierungsmuster finden Sie unter [Asynchrone Programmierung in JavaScript mit Zusagen](http://msdn.microsoft.com/library/windows/apps/hh464930.aspx).
+Nach dem Async-Methodenaufruf folgt eine then-Anweisung, die von der App definierte Methoden angibt, die aufgerufen werden, wenn ein Ergebnis aus dem Async-Methodenaufruf zurückgegeben wird. Weitere Informationen zu diesem Programmierungsmuster finden Sie unter [Asynchrone Programmierung in JavaScript mit Zusagen](https://msdn.microsoft.com/library/windows/apps/hh464930.aspx).
 
 ### <a name="adding-additional-operation-control-methods"></a>Hinzufügen weiterer Methoden zur Vorgangssteuerung
 Der Grad der Steuerung lässt sich durch Implementieren zusätzlicher [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154)-Methoden erhöhen. Wenn Sie beispielsweise dem obigen Beispiel den folgenden Code hinzufügen, wird das Abbrechen des Downloads ermöglicht.

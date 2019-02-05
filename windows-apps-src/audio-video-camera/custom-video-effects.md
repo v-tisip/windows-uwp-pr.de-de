@@ -9,12 +9,12 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.assetid: 40a6bd32-a756-400f-ba34-2c5f507262c0
 ms.localizationpriority: medium
-ms.openlocfilehash: a9e796eee76025e7697c08669e6942e0d69206f7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1e48febb3fb49a35fe256e58cf7c80b4abe93267
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923490"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045569"
 ---
 # <a name="custom-video-effects"></a>Benutzerdefinierte Videoeffekte
 
@@ -162,7 +162,7 @@ Nun, da die Datenpuffer abgerufen wurden, können Sie aus dem Eingabepuffer lese
 ## <a name="implement-the-ibasicvideoeffect-interface-using-hardware-processing"></a>Implementieren der IBasicVideoEffect-Schnittstelle mit Hardwareverarbeitung
 
 
-Das Erstellen eines benutzerdefinierten Videoeffekts mit der Hardwareverarbeitung (GPU) ist nahezu identisch mit der oben beschriebenen Verfahrensweise mit Softwareverarbeitung. In diesem Abschnitt werden die wenigen Unterschiede in einem Effekt erläutert, bei dem die Hardwareverarbeitung verwendet wird. In diesem Beispiel wird die Win2D-Windows-Runtime-API verwendet. Weitere Informationen zur Verwendung von Win2D finden Sie in der [Win2D-Dokumentation](http://go.microsoft.com/fwlink/?LinkId=519078).
+Das Erstellen eines benutzerdefinierten Videoeffekts mit der Hardwareverarbeitung (GPU) ist nahezu identisch mit der oben beschriebenen Verfahrensweise mit Softwareverarbeitung. In diesem Abschnitt werden die wenigen Unterschiede in einem Effekt erläutert, bei dem die Hardwareverarbeitung verwendet wird. In diesem Beispiel wird die Win2D-Windows-Runtime-API verwendet. Weitere Informationen zur Verwendung von Win2D finden Sie in der [Win2D-Dokumentation](https://go.microsoft.com/fwlink/?LinkId=519078).
 
 Führen Sie die folgenden Schritte aus, um das Win2D-NuGet-Paket zu dem Projekt hinzuzufügen, das Sie wie im Abschnitt **Hinzufügen eines benutzerdefinierten Effekts zu Ihrer App** zu Beginn dieses Artikels beschrieben erstellt haben.
 
@@ -241,5 +241,5 @@ Allgemeine Informationen zum Erstellen von Medienkompositionen aus Videoclips fi
 ## <a name="related-topics"></a>Verwandte Themen
 * [Einfacher Zugriff auf die Kameravorschau](simple-camera-preview-access.md)
 * [Medienkompositionen und -bearbeitung](media-compositions-and-editing.md)
-* [Win2D-Dokumentation](http://go.microsoft.com/fwlink/p/?LinkId=519078)
+* [Win2D-Dokumentation](https://go.microsoft.com/fwlink/p/?LinkId=519078)
 * [Medienwiedergabe](media-playback.md)

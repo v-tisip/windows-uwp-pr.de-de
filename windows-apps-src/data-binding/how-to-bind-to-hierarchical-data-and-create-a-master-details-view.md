@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 194bbeefbd3ca5f8237bb3449ec935211056aea3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1c2280fd7234fc41ee02dc17909bda8d7af0e1b9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923682"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049095"
 ---
 # <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>Binden von hierarchischen Daten und Erstellen einer Master/Details-Ansicht
 
 
 
-> **Hinweis:** finden Sie auch das [Master/Detail-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619991).
+> **Hinweis:** finden Sie auch im [Master/Detail-Beispiel](https://go.microsoft.com/fwlink/p/?linkid=619991).
 
 Sie können eine Master/Details-Ansicht mit mehreren Ebenen (auch bekannt als Listen-Details-Ansicht) von hierarchischen Daten erstellen, indem Sie Elementsteuerelemente an [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833)-Instanzen binden, die in einer Kette verbunden sind. In diesem Thema verwenden wir nach Möglichkeit die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) und die flexiblere (aber weniger leistungsfähige) [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782), wenn nötig.
 

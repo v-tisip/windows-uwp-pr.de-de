@@ -11,12 +11,12 @@ dev_langs:
 - cppwinrt
 - cpp
 - vb
-ms.openlocfilehash: e964650e90870ef09d8d1b142917f96b61002544
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
+ms.openlocfilehash: b561e08227664f723802ffc0ee3f0e16bc34a5cc
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980278"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045096"
 ---
 # <a name="enumerate-and-query-files-and-folders"></a>Aufzählen und Abfragen von Dateien und Ordnern
 
@@ -25,7 +25,7 @@ Greifen Sie auf Dateien und Ordner zu, die sich in einem Ordner, in einer Biblio
 Anleitungen zum Speichern der Daten Ihrer App für die Universelle Windows-Plattform finden Sie in der [ApplicationData](/uwp/api/windows.storage.applicationdata)-Klasse.
 
 > [!NOTE]
-> Ein vollständiges Beispiel finden Sie im [Beispiel für ordnerenumeration](http://go.microsoft.com/fwlink/p/?linkid=619993).
+> Ein vollständiges Beispiel finden Sie im [Beispiel für ordnerenumeration](https://go.microsoft.com/fwlink/p/?linkid=619993).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -177,7 +177,7 @@ Next folder
 > [!NOTE]
 > Denken Sie daran, dass in C# oder Visual Basic das **async**-Schlüsselwort in der Deklaration jeder Methode anzugeben ist, in der Sie den **await**-Operator verwenden.
 
-Alternativ können Sie die Methode [**StorageFolder.GetItemsAsync**](/uwp/api/windows.storage.storagefolder.getitemsasync) verwenden, um alle Elemente (Dateien und Ordner) an einem bestimmten Speicherort abzurufen. Im folgenden Beispiel wird die **GetItemsAsync** -Methode, um alle Dateien und Unterordner im Stammordner der [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary) (nicht in den Unterordnern) abzurufen. Anschließend werden die Namen der einzelnen Dateien und Unterordner aufgelistet. Wenn das Element ein Unterordner ist, wird dem Namen die Zeichenfolge `"folder"` angefügt.
+Alternativ können Sie die Methode [**StorageFolder.GetItemsAsync**](/uwp/api/windows.storage.storagefolder.getitemsasync) verwenden, um alle Elemente (Dateien und Ordner) an einem bestimmten Speicherort abzurufen. Im folgende Beispiel verwendet die **GetItemsAsync** -Methode, um alle Dateien und Unterordner im Stammordner der [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary) (nicht in den Unterordnern) abzurufen. Anschließend werden die Namen der einzelnen Dateien und Unterordner aufgelistet. Wenn das Element ein Unterordner ist, wird dem Namen die Zeichenfolge `"folder"` angefügt.
 
 ```csharp
 StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
@@ -280,7 +280,7 @@ Next item
 
 ## <a name="query-files-in-a-location-and-enumerate-matching-files"></a>Abfragen von Dateien an einem Speicherort und Auflisten der entsprechenden Dateien
 
-In diesem Beispiel, dass wir für alle Dateien in den [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary) gruppiert nach dem Monat und zu diesem Zeitpunkt Abfragen rekursiv im Beispiel Unterordner bearbeitet. Zunächst wird [**StorageFolder.CreateFolderQuery**](/uwp/api/windows.storage.storagefolder.createfolderquery) aufgerufen und der [**CommonFolderQuery.GroupByMonth**](/uwp/api/windows.storage.search.commonfolderquery)-Wert an die Methode übergeben. Dadurch erhalten wir ein [**StorageFolderQueryResult**](/uwp/api/windows.storage.search.storagefolderqueryresult)-Objekt.
+In diesem Beispiel, dass wir für alle Dateien in der [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary) gruppiert nach dem Monat und zu diesem Zeitpunkt Abfragen rekursiv im Beispiel Unterordner bearbeitet. Zunächst wird [**StorageFolder.CreateFolderQuery**](/uwp/api/windows.storage.storagefolder.createfolderquery) aufgerufen und der [**CommonFolderQuery.GroupByMonth**](/uwp/api/windows.storage.search.commonfolderquery)-Wert an die Methode übergeben. Dadurch erhalten wir ein [**StorageFolderQueryResult**](/uwp/api/windows.storage.search.storagefolderqueryresult)-Objekt.
 
 Als Nächstes wird [**StorageFolderQueryResult.GetFoldersAsync**](/uwp/api/windows.storage.search.storagefolderqueryresult.getfoldersasync) aufgerufen, das [**StorageFolder**](/uwp/api/windows.storage.storagefolder)-Objekte zurückgibt, die virtuelle Ordner darstellen. In diesem Fall wird nach Monat gruppiert, sodass die virtuellen Ordner jeweils eine Gruppe von Dateien mit der gleichen Monatsangabe darstellen.
 

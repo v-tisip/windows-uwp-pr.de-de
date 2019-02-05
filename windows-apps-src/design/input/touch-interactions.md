@@ -8,12 +8,12 @@ keywords: Touch, Zeiger, Eingabe, Benutzerinteraktion
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b662a7689f0b0b24fc3f70a9fbc143d4268d2cb8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b889fede67c7e32ff48c0e48a516f389afda820a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940494"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048642"
 ---
 # <a name="touch-interactions"></a>Toucheingabe-Interaktionen
 
@@ -80,7 +80,7 @@ In der folgenden Tabelle sind einige der Unterschiede zwischen den Eingabegerät
 
 ## <a name="use-touch-feedback"></a>Verwenden von Feedback für die Fingereingabe
 
-Durch entsprechendes visuelles Feedback bei Interaktionen mit der app helfen Sie den Benutzern zu erkennen und zu lernen und anpassen, wie ihre Interaktionen von der app und die Windowsplatform interpretiert werden. Visuelles Feedback kann auf erfolgreiche Interaktionen hinweisen, über den Systemstatus informieren, das Gefühl der Kontrolle verstärken, Fehler verringern, Benutzern das Verständnis des Systems und des Eingabegeräts erleichtern und zu Interaktionen ermutigen.
+Entsprechendes visuelles Feedback bei Interaktionen mit der app helfen Sie den Benutzern zu erkennen und zu lernen, und anpassen, wie ihre Interaktionen von der app und die Windowsplatform interpretiert werden. Visuelles Feedback kann auf erfolgreiche Interaktionen hinweisen, über den Systemstatus informieren, das Gefühl der Kontrolle verstärken, Fehler verringern, Benutzern das Verständnis des Systems und des Eingabegeräts erleichtern und zu Interaktionen ermutigen.
 
 Visuelles Feedback ist wichtig, wenn der Benutzer die Fingereingabe für Aktivitäten verwendet, bei denen Positionsgenauigkeit gefragt ist. Zeigen Sie immer Feedback an, wenn Toucheingabe erkannt wird, damit der Benutzer die von der App und den Steuerelementen definierten angepassten Zielbestimmungsregeln versteht.
 
@@ -436,7 +436,7 @@ Eine Bewegung setzt sich aus einer Reihe von Bearbeitungsereignissen zusammen. J
 
 Anschließend wird mindestens ein [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946)-Ereignis ausgelöst. Beispielsweise, wenn Sie den Bildschirm berühren und dann den Finger über den Bildschirm ziehen. Schließlich wird ein [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945)-Ereignis ausgelöst, wenn die Interaktion beendet ist.
 
-**Hinweis:**, wenn Sie keinen Touchscreen besitzen, können Sie Ihren manipulationsereigniscode in der Simulator mithilfe einer Maus- und mausradschnittstelle testen.
+**Hinweis:** Wenn Sie keinen Touchscreen besitzen, können Sie Ihren manipulationsereigniscode in der Simulator mithilfe einer Maus- und mausradschnittstelle testen.
 
  
 
@@ -591,17 +591,17 @@ Alle hier erwähnten Zeiger-, Gestik- und Manipulationsereignisse werden als *Ro
 
 **Beispiele**
 
-* [Einfaches Eingabebeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Beispiel für Eingabe mit niedriger Latenz](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Beispiel für den Benutzerinteraktionsmodus](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Beispiel für visuelle Fokuselemente](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Einfaches Eingabebeispiel](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Beispiel für Eingabe mit niedriger Latenz](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Beispiel für den Benutzerinteraktionsmodus](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Beispiel für visuelle Fokuselemente](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Archivbeispiele**
 
-* [Eingabe: Beispiel für Gerätefunktionen](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Eingabe: Beispiel für XAML-Benutzereingabeereignisse](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoom](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Eingabe: Gesten und Manipulationen mit GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Eingabe: Beispiel für Gerätefunktionen](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Eingabe: Beispiel für XAML-Benutzereingabeereignisse](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoom](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Eingabe: Gesten und Manipulationen mit GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
  
 
  

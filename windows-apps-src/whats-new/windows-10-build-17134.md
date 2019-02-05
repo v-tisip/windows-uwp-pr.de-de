@@ -5,18 +5,18 @@ keywords: Neuigkeiten, was neu ist, Aktualisierung, Updates, Features, neu, Wind
 ms.date: 4/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 72319e7d97bfaaff4595c56a09fb7d3a874faa50
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 570e9c463175475db15bd15adbb6b9b88cb9ff39
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923215"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9046280"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>Neuigkeiten für Entwickler in Windows10, Build 17134
 
-Windows10 Build 17134 (auch bekannt als April Update oder Version 1803), in Kombination mit Visual Studio2017 und dem aktualisierten SDK, bietet die Tools, Features und Umgebungen für die Entwicklung eindrucksvoller Apps für die Universelle Windows-Plattform. Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/create-uwp-apps.md) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](../porting/index.md) vertraut machen.
+Windows10 Build 17134 (auch bekannt als April Update oder Version 1803), in Kombination mit Visual Studio2017 und dem aktualisierten SDK, bietet die Tools, Features und Umgebungen für die Entwicklung eindrucksvoller Apps für die Universelle Windows-Plattform. Nach der [Installation der Tools und des SDKs](https://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/create-uwp-apps.md) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](../porting/index.md) vertraut machen.
 
-Dies ist eine Sammlung von neuen und verbesserten Features und Richtlinien, die in dieser Version für Windows-Entwickler interessant sind. Eine vollständige Liste mit neuen Namespaces, die dem Windows SDK hinzugefügt wurden, finden Sie in den [API-Änderungen unter Windows10, Build 17134](windows-10-build-17134-api-diff.md). Weitere Informationen zu den Highlights von Windows10 finden Sie unter [Die Highlights in Windows10](http://go.microsoft.com/fwlink/?LinkId=823181). Darüber hinaus finden Sie unter [Windows Developer Platform-Features](https://developer.microsoft.com/windows/platform/features) eine grobe Übersicht über die früheren und zukünftigen neuen Features der Windows-Plattform.
+Dies ist eine Sammlung von neuen und verbesserten Features und Richtlinien, die in dieser Version für Windows-Entwickler interessant sind. Eine vollständige Liste mit neuen Namespaces, die dem Windows SDK hinzugefügt wurden, finden Sie in den [API-Änderungen unter Windows10, Build 17134](windows-10-build-17134-api-diff.md). Weitere Informationen zu den Highlights von Windows10 finden Sie unter [Die Highlights in Windows10](https://go.microsoft.com/fwlink/?LinkId=823181). Darüber hinaus finden Sie unter [Windows Developer Platform-Features](https://developer.microsoft.com/windows/platform/features) eine grobe Übersicht über die früheren und zukünftigen neuen Features der Windows-Plattform.
 
 ## <a name="design--ui"></a>Design und UI
 
@@ -34,7 +34,7 @@ Aktualisierung durch Ziehen | Dank des Steuerelements [Aktualisieren durch Ziehe
 Navigationsansicht | Das [Navigationsansicht](../design/controls-and-patterns/navigationview.md)-Steuerelement bietet über ein reduzierbares Navigationsmenü ein allgemeines vertikales Layout für App-Bereiche auf oberster Ebene. Dieses Steuerelement dient der Implementierung des Navigationsbereichsmusters oder Hamburger-Menü-Musters, wobei die Anordnung automatisch an verschiedene Fenstergrößen des Bereichs angepasst wird.
 Einblendungen mit Fokus | Die neuen [Einblendungen mit Fokus](../design/style/reveal-focus.md)-Effekte bieten Lichtelemente für Erfahrungen wie z.B. Xbox One- und Fernsehbildschirme. Sie animieren den Rahmen des fokussierbaren Elementes wie beispielsweise Schaltflächen, wenn der Benutzer den Fokus des Gamepad oder der Tastatur darauf lenken.
 Sound | XAML unterstützt jetzt 3D Audio mit der Eigenschaft **SpatialAudioMode**. Weitere Informationen zur Konfiguration finden Sie unter [Sound](../design/style/sound.md).
-Kacheln | [Verfolgbare Kachelbenachrichtigungen](../design/shell/tiles-and-notifications/chaseable-tile-notifications.md) werden jetzt in JavaScript-basierten UWP-Apps unterstützt.<br><br>Sekundäre Benachrichtigungen für Kachel- und signalbenachrichtigungen werden [jetzt vom Desktop-Brücke-apps unterstützt](../design/shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md#send-tile-notifications).
+Kacheln | [Verfolgbare Kachelbenachrichtigungen](../design/shell/tiles-and-notifications/chaseable-tile-notifications.md) werden jetzt in JavaScript-basierten UWP-Apps unterstützt.<br><br>Sekundäre Kacheln und Badge-Benachrichtigungen sind [jetzt von Desktop-Brücke-apps unterstützt](../design/shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md#send-tile-notifications).
 Strukturansicht | Das Steuerelement [Strukturansicht](../design/controls-and-patterns/tree-view.md) ermöglicht eine Hierarchieauflistung mit Knoten, die das Aus- und Einblenden von geschachtelten Elementen erlauben. Es kann verwendet werden, um eine Ordnerstruktur oder geschachtelte Beziehungen zwischen Elementen in der Benutzeroberfläche zu veranschaulichen.
 Schreibstil | Wir haben unseren Artikel über Ausdrucksweise und Tonfall aktualisiert und erweitert und diesen in eine [Schreibstilanleitung](../design/style/writing-style.md) umgewandelt. Diese neue Information enthält Prinzipien zur Erstellung von effektivem Text in Ihrer App sowie bewährte Methoden für das Schreiben von Steuerelementen wie z.B. Fehlermeldungen oder Dialogfelder.
 
@@ -69,7 +69,7 @@ Bildschirmaufnahme | Der [Windows.Graphics.Capture-Namespace](https://docs.micro
 Systemtrigger | Mit dem [CustomSystemEventTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.customsystemeventtrigger) können Sie einen Systemtrigger definieren, wenn das Betriebssystem keinen Systemtrigger zur Verfügung steht, den Sie benötigen. Wenn beispielsweise der Hardwaretreiber und die UWP-App beide von Drittanbietern stammen und der Hardwaretreiber ein benutzerdefiniertes Ereignis auslösen soll, das die App behandeln muss. Zum Beispiel eine Soundkarte, die Benutzer darüber benachrichtigt, wenn eine Audiobuchse angeschlossen wird.
 Benutzeraktivitäten | In der neuen [UserActivity-Dokumentation](../launch-resume/useractivities.md) wird erläutert, wie Benutzer fortsetzen können, was sie in Ihrer App erledigt haben, auch über mehrere Geräte hinweg.</br>Die **UserActivitySessionHistoryItem**-Klasse verfügt über neue Methoden, um Aktivitäten des aktuellen Benutzers abzurufen. Weitere Informationen dazu und über eine Überlastung finden Sie unter [GetRecentUserActivitiesAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitychannel.getrecentuseractivitiesasync).
 Windows Mixed Reality-APIs | Um die wachsende Windows Mixed Reality-Plattform zu unterstützen, wurden neue APIs zu den [Windows.Graphic.Holographic](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic) und [Windows.UI.Input.Spatial](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Spatial)-Namespaces hinzugefügt.
-Windows Mixed Reality-Dokumente | Der Windows Mixed Reality-Entwicklerleitfaden ist [jetzt unter docs.microsoft.com gehostet.](https://docs.microsoft.com/windows/mixed-reality/) Genau wie bei UWP-Dokumenten können jetzt Feedback mit GitHub-Problemen oder eigene Beiträge per Pull Request übermitteln.
+Windows Mixed Reality-Dokumente | Der Windows Mixed Reality-Entwicklerleitfaden ist [jetzt unter docs.microsoft.com gehostet.](https://docs.microsoft.com/windows/mixed-reality/) Genau wie bei den UWP-Dokumenten können jetzt Feedback mit GitHub-Problemen oder eigene Beiträge per Pull Request übermitteln.
 
 ## <a name="publish--monetize-windows-apps"></a>Veröffentlichen und Monetarisieren von Windows-Apps
 

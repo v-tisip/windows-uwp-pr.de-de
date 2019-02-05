@@ -6,12 +6,12 @@ keywords: Erste Schritte Entwicklerlizenz Visual Studio, Entwicklerlizenz Gerät
 ms.date: 05/30/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 802555f6b1e6f928edf43806226ac497a437b4ff
-ms.sourcegitcommit: 67cc4153dac48a2633d93c954eaad61be8600fa8
+ms.openlocfilehash: 90ff8e8c0d11e58d251e9c2f5bfb00f3b8aedf1a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "8991758"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044943"
 ---
 # <a name="enable-your-device-for-development"></a>Aktivieren Ihres Geräts für die Entwicklung
 
@@ -56,7 +56,7 @@ Standardmäßig können Sie nur UWP-Apps (Universelle Windows-Plattform) aus dem
 
 ### <a name="sideload-apps"></a>Querladen von Apps
 
-Das Festlegen von Querladen von apps wird normalerweise verwendet, von Unternehmen oder Bildungseinrichtungen, die benutzerdefinierte apps auf verwalteten Geräten installieren, ohne dass über den Microsoft Store müssen oder alle Personen, die apps aus nicht-Microsoft-Quellen ausgeführt werden muss. In diesem Fall wird im Unternehmen häufig eine Richtlinie erzwungen, mit der die Einstellung *UWP-Apps* deaktiviert wird, wie oben in der Abbildung der Einstellungsseite dargestellt. Die Organisation stellt außerdem das erforderliche Zertifikat und den Installationsspeicherort zum Querladen von Apps bereit. Weitere Informationen finden Sie in den TechNet-Artikeln [Querladen von Branchen-Apps in Windows 10](https://technet.microsoft.com/library/mt269549.aspx) und [Erste Schritte mit der Bereitstellung von Apps in Microsoft Intune](https://technet.microsoft.com/library/dn646955.aspx).
+Das Querladen von apps Einstellung wird meist von Unternehmen Schulen, die benutzerdefinierte apps auf verwalteten Geräten installieren, ohne dass über den Microsoft Store oder auf alle Personen, die apps aus nicht-Microsoft-Quellen ausgeführt werden muss. In diesem Fall wird im Unternehmen häufig eine Richtlinie erzwungen, mit der die Einstellung *UWP-Apps* deaktiviert wird, wie oben in der Abbildung der Einstellungsseite dargestellt. Die Organisation stellt außerdem das erforderliche Zertifikat und den Installationsspeicherort zum Querladen von Apps bereit. Weitere Informationen finden Sie in den TechNet-Artikeln [Querladen von Branchen-Apps in Windows 10](https://technet.microsoft.com/library/mt269549.aspx) und [Erste Schritte mit der Bereitstellung von Apps in Microsoft Intune](https://technet.microsoft.com/library/dn646955.aspx).
 
 Spezifische Informationen für Gerätefamilien
 
@@ -68,7 +68,7 @@ Spezifische Informationen für Gerätefamilien
 Das **Querladen von Apps** ist eine sicherere Option als der Entwicklermodus, da Sie Apps ohne vertrauenswürdiges Zertifikat nicht auf dem Gerät installieren können.
 
 > [!NOTE]
-> Achten Sie beim Querladen von Apps darauf, dass diese von einer vertrauenswürdigen Quelle stammen. Wenn Sie eine quergeladene, nicht vom Microsoft Store zertifizierte App installieren, bestätigen Sie, dass Sie über alle erforderlichen Rechte zum Querladen dieser App verfügen und die alleinige Verantwortung für jegliche Schäden tragen, die durch das Installieren und Ausführen dieser App entstehen können. Weitere Informationen finden Sie in diesen [Datenschutzbestimmungen](http://go.microsoft.com/fwlink/?LinkId=521839) im Abschnitt zu Windows &gt; „Microsoft Store“.
+> Achten Sie beim Querladen von Apps darauf, dass diese von einer vertrauenswürdigen Quelle stammen. Wenn Sie eine quergeladene, nicht vom Microsoft Store zertifizierte App installieren, bestätigen Sie, dass Sie über alle erforderlichen Rechte zum Querladen dieser App verfügen und die alleinige Verantwortung für jegliche Schäden tragen, die durch das Installieren und Ausführen dieser App entstehen können. Weitere Informationen finden Sie in diesen [Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?LinkId=521839) im Abschnitt zu Windows &gt; „Microsoft Store“.
 
 
 ### <a name="developer-mode"></a>Entwicklermodus
@@ -133,7 +133,7 @@ In früheren Versionen von Windows10 Mobile gab es die Option „Absturzabbild�
 
 Es gibt verschiedene Tools, mit denen Sie eine App von einem Windows10-PC auf einem Gerät bereitstellen können. Beide Geräte müssen über eine kabelgebundene oder drahtlose Verbindung mit dem gleichen Subnetz des Netzwerks verbunden sein oder über USB verbunden werden. Mit beiden aufgeführten Methoden wird nur das App-Paket (.appx/.appxbundle) installiert, nicht die Zertifikate.
 
--   Verwenden Sie das Tool für die Windows10-Anwendungsbereitstellung (WinAppDeployCmd). Weitere Informationen zum [Tool WinAppDeployCmd](http://msdn.microsoft.com/library/windows/apps/mt203806.aspx).
+-   Verwenden Sie das Tool für die Windows10-Anwendungsbereitstellung (WinAppDeployCmd). Weitere Informationen zum [Tool WinAppDeployCmd](https://msdn.microsoft.com/library/windows/apps/mt203806.aspx).
 -   Im [Geräteportal](../debug-test-perf/device-portal.md) ist die Bereitstellung aus Ihrem Browser auf einem mobilen Gerät unter Windows10, Version 1511 oder höher, möglich. Im Geräteportal können Sie auf der Seite **[Apps](../debug-test-perf/device-portal.md#apps-manager)** ein App-Paket (APPX) hochladen und auf dem Gerät installieren.
 
 ## <a name="failure-to-install-developer-mode-package"></a>Fehler beim Installieren des Entwicklermoduspakets
@@ -142,7 +142,7 @@ In manchen Fällen wird der Entwicklermodus aufgrund von Problemen mit dem Netzw
 Im Forum zu den [bekannten Problemen](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) finden Sie entsprechende Problemumgehungen und vieles mehr.
 
 > [!NOTE]
-> Aktivieren des Entwicklermodus ordnungsgemäß installiert, empfehlen wir Ihnen, eine Anforderung Feedback-Datei. Klicken Sie in der **Feedback-Hub** -app wählen Sie **Hinzufügen neuer Feedback**, und wählen Sie die **Developer Platform** -Kategorie und Unterkategorie **Entwicklermodus** . Senden von Feedback hilft Microsoft, die das Problem aufgetreten ist.
+> Aktivieren des Entwicklermodus ordnungsgemäß installiert, empfehlen wir Ihnen eine Anforderung Feedback in die Datei. Klicken Sie in der **Feedback-Hub** -app wählen Sie **Hinzufügen neuer Feedback**, und wählen Sie die **Entwicklerplattform** Kategorie und Unterkategorie **Entwicklermodus** . Senden von Feedback hilft Microsoft, die das Problem aufgetreten ist.
 
 ### <a name="failed-to-locate-the-package"></a>Das Paket konnte nicht gefunden werden
 

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f707e72e73398ae21cd391da16a0f2b40dcd7ee
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2c7d40765e0d12e3543f198aebd5acd15ed3aff3
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942787"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047774"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>Erstellen eines 3D-JavaScript-Spiels mit three.js
 
@@ -28,14 +28,14 @@ Möchten Sie einen Blick auf die App werfen, die wir erstellen werden, bevor Sie
 </iframe>
 
 > [!NOTE] 
-> Dies ist kein vollständiges Spiel; Es wurde entwickelt, um zu zeigen, wie mit JavaScript und einer Drittanbieterbibliothek eine app im Microsoft Store veröffentlicht werden kann.
+> Dies ist kein vollständiges Spiel; Dieses Skript dient zu zeigen, wie mit JavaScript und einer Drittanbieterbibliothek eine app im Microsoft Store veröffentlicht werden kann.
 
 
 ## <a name="requirements"></a>Anforderungen
 
 Um dieses Projekt auszuprobieren, benötigen Sie Folgendes:
 -   Einen Windows-Computer (oder einen virtuellen Computer) mit der aktuellen Version von Windows10.
--   Eine Kopie von Visual Studio. Die kostenlose Visual Studio Community Edition kann von der [Visual Studio-Homepage](http://visualstudio.com/) heruntergeladen werden.
+-   Eine Kopie von Visual Studio. Die kostenlose Visual Studio Community Edition kann von der [Visual Studio-Homepage](https://visualstudio.com/) heruntergeladen werden.
 Dieses Projekt verwendet die **three.js**-JavaScript-Bibliothek. **three.js** ist unter der MIT-Lizenz veröffentlicht. Diese Bibliothek ist bereits im Projekt vorhanden (suchen Sie nach `js/libs` in der Projektmappen-Explorer-Ansicht). Weitere Informationen zu dieser Bibliothek finden Sie auf der [**three.js**](https://threejs.org/)-Startseite.
 
 ## <a name="getting-started"></a>Erste Schritte
@@ -399,7 +399,7 @@ Wir haben nun ein ansprechendes Labyrinth, das wir betrachten können, können j
 Testen Sie in CodePen Dinge wie das Ändern von Farben der Würfel oder das Entfernen des Bodens, indem Sie `createGround()` in der `init()`-Funktion auskommentieren.
 
 
-<iframe height='300' scrolling='no' title='Erstellen des Labyrinths' src='//codepen.io/MicrosoftEdgeDocumentation/embed/JWKYzG/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Weitere Informationen finden Sie im Pen zu <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/JWKYzG/'>Labyrintherstellung</a> von Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) auf <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Labyrinth erstellen' src='//codepen.io/MicrosoftEdgeDocumentation/embed/JWKYzG/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Weitere Informationen finden Sie im Pen zu <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/JWKYzG/'>Labyrintherstellung</a> von Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) auf <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 ### <a name="4-allowing-the-player-to-look-around"></a>4. Zulassen , dass sich der Spieler umsehen kann
@@ -486,7 +486,7 @@ animate();
 
 Zu diesem Zeitpunkt haben wir nun die Möglichkeit, **uns umzusehen**, aber der echte „Wow“-Faktor ist die Möglichkeit, **sich zu bewegen**. Nun geht es mit Vektoren etwas mathematischer zu, aber was wären 3D-Grafiken ohne etwas Mathematik?
 
-<iframe height='300' scrolling='no' title='Suchen Sie' src='//codepen.io/MicrosoftEdgeDocumentation/embed/gmwbMo/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Weitere Informationen finden Sie im Pen zu <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/gmwbMo/'>Sich umsehen</a> von Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) auf <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Umsehen' src='//codepen.io/MicrosoftEdgeDocumentation/embed/gmwbMo/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Weitere Informationen finden Sie im Pen zu <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/gmwbMo/'>Sich umsehen</a> von Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) auf <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 
@@ -1086,5 +1086,5 @@ Nachdem Sie nun eine UWP-app haben, ist es möglich, die Sie veröffentlichen, a
 1.  Sie müssen als Windows-Entwickler [registriert](https://developer.microsoft.com/store/register) sein.
 2.  Verwenden Sie die [Prüfliste für App-Übermittlung](https://msdn.microsoft.com/windows/uwp/publish/app-submissions).
 3.  Die App muss zur [Zertifizierung](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process) eingereicht werden.
-Weitere Informationen finden Sie in der [Veröffentlichung Ihrer UWP-app](https://developer.microsoft.com/store/publish-apps).
+Weitere Informationen finden Sie in [Ihrer UWP-app veröffentlichen](https://developer.microsoft.com/store/publish-apps).
 

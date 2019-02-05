@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, Uwp, das Drucken
 ms.localizationpriority: medium
-ms.openlocfilehash: 16fca2fc98450375ec2dcf7a0d10775b2bba1bf2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3783105c054e5d956ab64aabe9971bb952d6cae6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926263"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046383"
 ---
 # <a name="customize-the-print-preview-ui"></a>Anpassen der Benutzeroberfläche für die Druckvorschau
 
@@ -25,7 +25,7 @@ ms.locfileid: "8926263"
 
 In diesem Abschnitt wird beschrieben, wie die Druckoptionen und -einstellungen in der Benutzeroberfläche für die Druckvorschau angepasst werden. Weitere Informationen zur Druckfunktion finden Sie unter [Drucken in Apps](print-from-your-app.md).
 
-**Tipp:** die meisten Beispiele in diesem Thema basieren auf dem Druckbeispiel. Laden Sie das [Druckbeispiel für die universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619984) aus dem Repository [Beispiele für Universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter, um den vollständigen Code anzuzeigen.
+**Tipp:** die meisten Beispiele in diesem Thema basieren auf dem Druckbeispiel. Laden Sie das [Druckbeispiel für die universelle Windows-Plattform (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619984) aus dem Repository [Beispiele für Universelle Windows-Plattform](https://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter, um den vollständigen Code anzuzeigen.
 
  
 
@@ -48,7 +48,7 @@ Diese Optionen werden in der [**StandardPrintTaskOptions**](https://msdn.microso
 
 Die Änderungen, die Sie auf diese Weise vornehmen, betreffen allerdings nur die Druckvorschau-Benutzeroberfläche. Der Benutzer kann stets auf alle vom Drucker unterstützten Optionen zugreifen, indem er in der Druckvorschau-Benutzeroberfläche auf **Weitere Einstellungen** tippt.
 
-**Hinweis:** Ihrer app alle Druckoptionen angezeigt werden kann zwar angeben, werden nur solche, die vom ausgewählten Drucker unterstützten in der Druckvorschau-Benutzeroberfläche angezeigt. In der Druckbenutzeroberfläche werden keine Optionen angezeigt, die der ausgewählte Drucker nicht unterstützt.
+**Hinweis:** Ihrer app alle Druckoptionen angezeigt werden kann zwar angeben, werden nur solche, die vom ausgewählten Drucker unterstützt werden in der Druckvorschau-Benutzeroberfläche angezeigt. In der Druckbenutzeroberfläche werden keine Optionen angezeigt, die der ausgewählte Drucker nicht unterstützt.
 
  
 
@@ -96,7 +96,7 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
 }
 ```
 
-**Wichtige**Aufrufen [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)() entfernt werden alle Druckoptionen aus der Druckvorschau-Benutzeroberfläche, einschließlich des Links **Weitere Einstellungen** . Fügen Sie alle Optionen an, die in der Druckvorschau-Benutzeroberfläche angezeigt werden sollen.
+**Wichtige** [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)() aufrufen entfernt alle Druckoptionen aus der Druckvorschau-Benutzeroberfläche, einschließlich des Links **Weitere Einstellungen** . Fügen Sie alle Optionen an, die in der Druckvorschau-Benutzeroberfläche angezeigt werden sollen.
 
 ### <a name="specify-default-options"></a>Festlegen der Standardoptionen
 
@@ -187,4 +187,4 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 
 * [Gestaltungsrichtlinien für Druckvorgänge](https://msdn.microsoft.com/library/windows/apps/Hh868178)
 * [//Build 2015-Video: Entwickeln von druckfähigen Apps in Windows 10](https://channel9.msdn.com/Events/Build/2015/2-94)
-* [UWP-Druckbeispiel](http://go.microsoft.com/fwlink/p/?LinkId=619984)
+* [UWP-Druckbeispiel](https://go.microsoft.com/fwlink/p/?LinkId=619984)

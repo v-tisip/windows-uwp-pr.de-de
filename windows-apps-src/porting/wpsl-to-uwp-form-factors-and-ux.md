@@ -1,24 +1,24 @@
 ---
 description: Windows-Apps weisen auf PCs, Mobilgeräten und vielen anderen Arten von Geräten ein einheitliches Erscheinungsbild auf. Die Benutzeroberfläche, Eingabe und Interaktionsmuster sind fast identisch, und Benutzer profitieren von einer einheitlichen Umgebung auf allen Geräten.
-title: Portieren von WindowsPhone-Silverlight zu UWP für Formfaktor und Benutzerfreundlichkeit
+title: Portieren von WindowsPhone Silverlight zu UWP für Formfaktor und Benutzerfreundlichkeit
 ms.assetid: 96244516-dd2c-494d-ab5a-14b7dcd2edbd
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0897bd2636f13cfb02568847c0ba40b2d6b218f3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: dbba9dbdf6bc3df02657cc03b9264e74664318b4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936464"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045163"
 ---
-#  <a name="porting-windowsphone-silverlight-to-uwp-for-form-factor-and-ux"></a>Portieren von WindowsPhone-Silverlight zu UWP für Formfaktor und Benutzerfreundlichkeit
+#  <a name="porting-windowsphone-silverlight-to-uwp-for-form-factor-and-ux"></a>Portieren von WindowsPhone Silverlight zu UWP für Formfaktor und Benutzerfreundlichkeit
 
 
 Das vorherige Thema war [Portieren der Geschäfts- und Datenebene](wpsl-to-uwp-business-and-data.md).
 
-Windows-Apps weisen auf PCs, Mobilgeräten und vielen anderen Arten von Geräten ein einheitliches Erscheinungsbild auf. Die Benutzeroberfläche, Eingabe und Interaktionsmuster sind fast identisch, und Benutzer profitieren von einer einheitlichen Umgebung auf allen Geräten. Unterschiede zwischen Geräten, z. B. physische Größe, standardausrichtung und effektive pixelauflösung, wirken sich auf die Darstellung einer app für die universelle Windows-Plattform (UWP) von Windows 10 gerendert wird. Die gute Nachricht ist, dass viele schwierige Aufgaben für Sie vom System übernommen werden, indem intelligente Konzepte wie effektive Pixel verwendet werden.
+Windows-Apps weisen auf PCs, Mobilgeräten und vielen anderen Arten von Geräten ein einheitliches Erscheinungsbild auf. Die Benutzeroberfläche, Eingabe und Interaktionsmuster sind fast identisch, und Benutzer profitieren von einer einheitlichen Umgebung auf allen Geräten. Unterschiede zwischen Geräten, z. B. physische Größe, standardausrichtung und effektive pixelauflösung, wirken sich auf die Darstellung einer app (universelle Windows Plattform) von Windows 10 gerendert wird. Die gute Nachricht ist, dass viele schwierige Aufgaben für Sie vom System übernommen werden, indem intelligente Konzepte wie effektive Pixel verwendet werden.
 
 ## <a name="different-form-factors-and-user-experience"></a>Verschiedene Formfaktoren und Benutzerfreundlichkeit
 
@@ -30,7 +30,7 @@ Kurz gesagt, ist das subjektiv. Das hängt nicht nur von der objektiven Anzeigeg
 
 Objektiv gesehen wird ein Bildschirm in der Einheit Zoll und physischen Pixeln („raw pixel“) gemessen. Mit diesen beiden Werten können Sie ermitteln, wie viele Pixel in ein Zoll passen. Dies ist die Pixeldichte, auch bekannt als DPI-Wert (dots per inch, Punkte pro Zoll), auch bekannt als PPI (pixels per inch, Pixel pro Zoll). Und der Kehrwert des DPI-Werts ist die physische Größe der Pixel als Bruchteil eines Zolls. Pixeldichte ist auch als *Auflösung* bekannt, obwohl mit diesem Begriff häufig die Pixelanzahl gemeint ist.
 
-Bei zunehmendem Abstand *erscheinen* all diese objektiven Metriken kleiner und werden in der *effektiven Größe* und der entsprechenden *effektiven Auflösung* des Bildschirms angezeigt. Mit dem geringsten Abstand zu Ihrem Auge betrachten Sie in der Regel Ihr Smartphone, gefolgt von Ihrem Tablet und dem PC-Bildschirm. Bei [Surface Hub](http://www.microsoft.com/microsoft-surface-hub)-Geräten und Fernsehern ist der Abstand am größten. Um dies auszugleichen, werden Geräte mit zunehmendem Abstand vom Bildschirm objektiv größer. Wenn Sie Größe für Ihre UI-Elemente festlegen, verwenden Sie dabei die Einheit der so genannten „effektiven Pixel“ (Epx). Und Windows 10 DPI-Wert, und der normale betrachtungsabstand von einem Gerät, um die beste Größe für UI-Elemente in physischen Pixeln, um die bestmögliche Anzeige zu berechnen. Weitere Informationen finden Sie unter [Anzeigepixel/Effektive Pixel, Abstand zum Bildschirm und Skalierungsfaktoren](wpsl-to-uwp-porting-xaml-and-ui.md).
+Bei zunehmendem Abstand *erscheinen* all diese objektiven Metriken kleiner und werden in der *effektiven Größe* und der entsprechenden *effektiven Auflösung* des Bildschirms angezeigt. Mit dem geringsten Abstand zu Ihrem Auge betrachten Sie in der Regel Ihr Smartphone, gefolgt von Ihrem Tablet und dem PC-Bildschirm. Bei [Surface Hub](https://www.microsoft.com/microsoft-surface-hub)-Geräten und Fernsehern ist der Abstand am größten. Um dies auszugleichen, werden Geräte mit zunehmendem Abstand vom Bildschirm objektiv größer. Wenn Sie Größe für Ihre UI-Elemente festlegen, verwenden Sie dabei die Einheit der so genannten „effektiven Pixel“ (Epx). Und Windows 10 DPI-Wert, und der normale betrachtungsabstand von einem Gerät, um die beste Größe für UI-Elemente in physischen Pixeln die bestmögliche Anzeige zu berechnen. Weitere Informationen finden Sie unter [Anzeigepixel/Effektive Pixel, Abstand zum Bildschirm und Skalierungsfaktoren](wpsl-to-uwp-porting-xaml-and-ui.md).
 
 Trotzdem ist es ratsam, Ihre App mit vielen verschiedenen Geräten zu testen, damit Sie die Benutzerfreundlichkeit jeweils selbst überprüfen können.
 
@@ -50,7 +50,7 @@ Die Mobilgeräteversion ist auf die Ausrichtung im Hochformat beschränkt, da di
 
 Durch das optische Zoomen der App wirkt diese wie die Mobilgeräteversion, nur größer. Das Gerät und sein zusätzlicher Platz werden nicht voll ausgeschöpft, was für den Benutzer nicht von Vorteil ist. Wir sollten mehr Inhalt anzeigen, anstatt nur den gleichen Inhalt größer anzuzeigen. Sogar auf einem Phablet könnten weitere Zeilen mit Inhalt angezeigt werden. Wir könnten den zusätzlichen Platz nutzen, um andere Inhalte wie Werbung anzuzeigen, oder wir könnten das Listenfeld in eine Listenansicht ändern und, wo möglich, Elemente in mehrere Spalten aufteilen. Siehe [Richtlinien für Listen- und Rasteransichts-Steuerelemente](https://msdn.microsoft.com/library/windows/apps/mt186889).
 
-Zusätzlich zu den neuen Steuerelementen, z. B. Listen- und Rasteransicht verfügen die meisten etablierten Layouttypen aus WindowsPhone Silverlight über Entsprechungen in die universelle Windows-Plattform (UWP). Beispiele: [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267), [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) und [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635). Das Portieren des Großteils der Benutzeroberfläche, die diese Typen verwendet, sollte unkompliziert ablaufen. Suchen Sie jedoch immer nach Möglichkeiten, die dynamischen Layoutfunktionen dieser Layoutpanel zu nutzen und diese auf Geräten mit verschiedenen Größen automatisch anzupassen und neu zu gestalten.
+Zusätzlich zu den neuen Steuerelementen, z. B. Listen- und Rasteransicht verfügen die meisten etablierten Layouttypen von WindowsPhone Silverlight über Entsprechungen in die universelle Windows-Plattform (UWP). Beispiele: [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267), [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) und [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635). Das Portieren des Großteils der Benutzeroberfläche, die diese Typen verwendet, sollte unkompliziert ablaufen. Suchen Sie jedoch immer nach Möglichkeiten, die dynamischen Layoutfunktionen dieser Layoutpanel zu nutzen und diese auf Geräten mit verschiedenen Größen automatisch anzupassen und neu zu gestalten.
 
 Über das dynamische Layout hinaus in Systemsteuerelemente und Layoutpanel integriert werden, können wir ein neues Windows 10-Feature, das [Adaptive Visual State-Manager](wpsl-to-uwp-porting-xaml-and-ui.md)aufgerufen.
 
@@ -64,7 +64,7 @@ In der Liste [Maximieren der Wiederverwendung von Markup und Code](wpsl-to-uwp-p
 
 ## <a name="more-info-and-design-guidelines"></a>Weitere Informationen und Designrichtlinien
 
--   [Entwerfen von UWP-Apps](http://dev.windows.com/design)
+-   [Entwerfen von UWP-Apps](https://dev.windows.com/design)
 -   [Richtlinien für Schriftarten](https://msdn.microsoft.com/library/windows/apps/hh700394)
 -   [Planen für verschiedene Formfaktoren](https://msdn.microsoft.com/library/windows/apps/dn958435)
 

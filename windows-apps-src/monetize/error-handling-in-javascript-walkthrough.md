@@ -6,18 +6,18 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: Windows10, UWP, Anzeige, Werbung, Fehlerbehandlung, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: 68f49cd97e8b4e2ef5e20502909a7dc8cb4ab676
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: df33dc84823d5bcdc02d892820967b74ff0e5f65
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943808"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049003"
 ---
 # <a name="error-handling-in-javascript-walkthrough"></a>Exemplarische Vorgehensweise zur Fehlerbehandlung in JavaScript
 
 In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Anzeigen-bezogene Fehler in Ihrer JavaScript-App erfasst werden können. In dieser exemplarischen Vorgehensweise wird ein [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) verwendet, um eine Banneranzeige anzuzeigen, die allgemeinen Konzepte gelten jedoch auch für Interstitialwerbung und native Anzeigen.
 
-In diesen Beispielen wird davon ausgegangen, dass Sie eine JavaScript-App haben, die ein **AdControl** enthält. Schritt-für-Schritt-Anleitungen, die zeigen, wie ein **AdControl** zu Ihrer App hinzugefügt wird, finden Sie unter [AdControl in HTML 5 und Javascript](adcontrol-in-html-5-and-javascript.md). Ein vollständiges Beispiel-Projekt, das veranschaulicht, wie Sie mithilfe von C# und C++ Werbebanner zu einer JavaScript/HTML-App hinzufügen, finden Sie unter den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).
+In diesen Beispielen wird davon ausgegangen, dass Sie eine JavaScript-App haben, die ein **AdControl** enthält. Schritt-für-Schritt-Anleitungen, die zeigen, wie ein **AdControl** zu Ihrer App hinzugefügt wird, finden Sie unter [AdControl in HTML 5 und Javascript](adcontrol-in-html-5-and-javascript.md). Ein vollständiges Beispiel-Projekt, das veranschaulicht, wie Sie mithilfe von C# und C++ Werbebanner zu einer JavaScript/HTML-App hinzufügen, finden Sie unter den [Anzeigenbeispielen auf GitHub](https://aka.ms/githubads).
 
 1.  Fügen Sie in der Datei "default.html" einen Wert für das Ereignis **OnErrorOccurred** hinzu, wo Sie die **data-win-options** in **div** für das **AdControl** definieren. Suchen Sie den folgenden Code in der Datei „default.html“.
     ``` HTML
@@ -66,4 +66,4 @@ In diesen Beispielen wird davon ausgegangen, dass Sie eine JavaScript-App haben,
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Anzeigenbeispiele bei GitHub](http://aka.ms/githubads)
+* [Anzeigenbeispiele bei GitHub](https://aka.ms/githubads)

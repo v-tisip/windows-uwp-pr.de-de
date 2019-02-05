@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 8801c0d9-94a5-41a2-bec3-14f523d230df
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c812cea510865da68760788a723830fe0940c21
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2c1d8c6a33bd7d9249b5000767ece154ab7f8776
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920180"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046004"
 ---
 # <a name="set-up-your-uwp-on-xbox-development-environment"></a>Einrichten der UWP-Entwicklungsumgebung auf Xbox
 
@@ -23,7 +23,7 @@ In diesem Artikel werden die Schritte zum Einrichten und Testen der Entwicklungs
 
 ## <a name="visual-studio-setup"></a>Einrichten von Visual Studio
 
-1. Installieren Sie Visual Studio 2017 oder Visual Studio 2015 Update 3, die neueste Version von Visual Studio. Weitere Informationen und Downloads für die Installation finden Sie unter [Downloads und Tools für Windows 10](https://dev.windows.com/downloads). Es wird empfohlen, dass Sie die neueste Version von Visual Studio verwenden, damit Sie die neuesten Updates für Entwickler und Sicherheit erhalten können.
+1. Installieren Sie Visual Studio 2017, Visual Studio 2015 Update 3 oder die neueste Version von Visual Studio. Weitere Informationen und Downloads für die Installation finden Sie unter [Downloads und Tools für Windows 10](https://dev.windows.com/downloads). Es wird empfohlen, dass Sie die neueste Version von Visual Studio verwenden, damit Sie die neuesten Updates für Entwickler und Sicherheit erhalten können.
 
 2. Wenn Sie Visual Studio2017 erneut installieren, stellen Sie sicher, dass Sie die Arbeitsauslastung **Entwicklung für die universelle Windows-Plattform** auswählen. Wenn Sie ein C++-Entwickler sind, stellen Sie sicher, dass Sie auch das Kontrollkästchen ** 	UWP-Tools für C++** im Bereich **Zusammenfassung** rechts unter **Entwicklung für die universelle Windows-Plattform** wählen. Es ist nicht Teil der Standardinstallation.
 
@@ -123,6 +123,6 @@ Herzlichen Glückwunsch! Sie haben Ihre erste UWP-App auf Xbox erfolgreich erste
 ## <a name="see-also"></a>Weitere Informationen
 - [Aktivierung des Xbox One-Entwicklermodus](devkit-activation.md)  
 - [Downloads und Tools für Windows 10](https://dev.windows.com/downloads)  
-- [Windows-Insider-Programm](http://go.microsoft.com/fwlink/?LinkId=780552)  
+- [Windows-Insider-Programm](https://go.microsoft.com/fwlink/?LinkId=780552)  
 - [Einführung in Xbox One-Tools](introduction-to-xbox-tools.md) 
 - [UWP auf Xbox One](index.md)

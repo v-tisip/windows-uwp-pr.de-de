@@ -6,12 +6,12 @@ ms.date: 09/20/2017
 ms.topic: article
 keywords: Windows 10, UWP, Route, Karte, Standort, Wegbeschreibungen
 ms.localizationpriority: medium
-ms.openlocfilehash: dd93a092ee0db0821e9326d0f9ffa86890850b87
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 218ca052a3e525a1f7cfc2ce18542a5a30c61e5e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944624"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049257"
 ---
 # <a name="display-routes-and-directions-on-a-map"></a>Anzeigen von Routen und Wegbeschreibungen auf einer Karte
 
@@ -20,7 +20,7 @@ ms.locfileid: "8944624"
 Fordern Sie Routen und Wegbeschreibungen an, und zeigen Sie diese in Ihrer App an.
 
 >[!Note]
->Laden Sie das [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) herunter, um mehr über die Verwendung von Karten in Ihrer App zu erfahren.
+>Laden Sie das [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977) herunter, um mehr über die Verwendung von Karten in Ihrer App zu erfahren.
 >Wenn die Kartenfunktion kein zentrales Feature Ihrer App ist, sollten Sie stattdessen die Windows-Karten-App starten. Sie können die URI-Schemas `bingmaps:`, `ms-drive-to:` und `ms-walk-to:` zum Starten der Windows-Karten-App für bestimmte Karten und für Turn-by-Turn-Wegbeschreibungen verwenden. Weitere Informationen finden Sie unter [Starten der Windows-Karten-App](https://msdn.microsoft.com/library/windows/apps/mt228341).
 
  
@@ -242,7 +242,7 @@ private async void ShowRouteOnMap()
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Bing Maps Developer Center](https://www.bingmapsportal.com/)
-* [Beispiel für UWP-Karte](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Beispiel für UWP-Karte](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Entwurfsrichtlinien für Karten](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Build 2015-Video: Nutzen von Karten und Ortung über Telefon, Tablet und PC in Ihren Windows-Apps](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Beispiel für eine UWP-App mit Verkehrsinformationen](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Beispiel für eine UWP-App mit Verkehrsinformationen](https://go.microsoft.com/fwlink/p/?LinkId=619982)

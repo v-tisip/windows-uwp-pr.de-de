@@ -6,12 +6,12 @@ ms.date: 01/23/2018
 ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 84e3c74171c619fd59e272e539fd9a4e5428e258
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 74ad832d5516a4fa9bef849c5f691e2909c6c3d4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925579"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047615"
 ---
 # <a name="use-the-multilingual-app-toolkit-40"></a>Verwenden des Multilingual App Toolkit 4.0
 
@@ -63,13 +63,13 @@ Führen Sie die folgenden Schritte aus, um Ihrem Projekt Sprachen hinzuzufügen.
 
 Das Toolkit führt daraufhin Folgendes aus:
 
-- Für jede Sprache, die Sie hinzugefügt haben, wird ein neuer Ordner erstellt, benannt nach dem [BCP-47-Sprachtag](http://go.microsoft.com/fwlink/p/?linkid=227302) der Sprache. In diesem Ordner werden neue Ressourcendateien (.resw) erstellt, die mit denen übereinstimmen, in denen die Zeichenfolgen der Standardsprache enthalten sind.
+- Für jede Sprache, die Sie hinzugefügt haben, wird ein neuer Ordner erstellt, benannt nach dem [BCP-47-Sprachtag](https://go.microsoft.com/fwlink/p/?linkid=227302) der Sprache. In diesem Ordner werden neue Ressourcendateien (.resw) erstellt, die mit denen übereinstimmen, in denen die Zeichenfolgen der Standardsprache enthalten sind.
 - Wenn Sie das erste Mal eine Sprache hinzufügen, wird dem Projekt ein neuer Ordner namens `MultilingualResources` hinzugefügt. Dieser Ordner enthält für jede Sprache eine XLF-Datei. Die XLF-Dateien enthalten eine Übersetzungseinheit für jede Zeichenfolge aus jeder Ressourcendatei (.resw) Ihres Projekts.
 - Im Ausgabefenster wird das Hinzufügen der Sprachen bestätigt.
 
 Wenn Sie eine Ressourcendatei für Standardsprachen (.resx) hinzufügen/entfernen oder eine Zeichenfolge in einer Ressourcendatei für Standardsprachen (.resx) hinzufügen/entfernen, müssen Sie das Projekt neu erstellen, um die XLF-Dateien erneut zu synchronisieren. Dadurch wird sichergestellt, dass die XLF-Dateien die Gesamtmenge der Zeichenfolgen in der Standardsprache enthalten.
 
-Installierte Übersetzungsanbieter wie das [Microsoft-Sprachenportal](http://go.microsoft.com/fwlink/p/?LinkId=330295) oder [Microsoft Translator](http://go.microsoft.com/fwlink/p/?LinkId=258220) können zum Übersetzen der Ressourcen Ihrer App verwendet werden. Wenn ein Anbieter eine bestimmte Sprache unterstützt, wird das Symbol des Anbieters im Dialogfeld „Übersetzungssprachen” neben dem Namen der Sprache angezeigt.
+Installierte Übersetzungsanbieter wie das [Microsoft-Sprachenportal](https://go.microsoft.com/fwlink/p/?LinkId=330295) oder [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220) können zum Übersetzen der Ressourcen Ihrer App verwendet werden. Wenn ein Anbieter eine bestimmte Sprache unterstützt, wird das Symbol des Anbieters im Dialogfeld „Übersetzungssprachen” neben dem Namen der Sprache angezeigt.
 
 Im Dialogfeld "Übersetzungssprachen" wird für alle vorhandenen XLF-basierten Sprachen, die vom Toolkit erkannt werden, das Auswahlkontrollkästchen aktiviert, um anzuzeigen, dass die Sprache bereits im Projekt enthalten ist.
 
@@ -149,8 +149,8 @@ Mit dem Multilingual Editor erhalten Sie die gleiche Übersetzungsunterstützung
 
 Das Multilingual App Toolkit verfügt über zwei Anbieter.
 
-- Der Anbieter [Microsoft-Sprachportal](http://go.microsoft.com/fwlink/p/?LinkId=330295) ermöglicht die Wiederverwendung von Übersetzungen sowie Terminologieanpassungen. Grundlage hierfür sind Übersetzungen der Benutzeroberflächentexte von Produkten und Diensten von Microsoft.
-- Der Anbieter [Microsoft Translator](http://go.microsoft.com/fwlink/p/?LinkId=258220) bietet maschinelle Übersetzungen nach Bedarf.
+- Der Anbieter [Microsoft-Sprachportal](https://go.microsoft.com/fwlink/p/?LinkId=330295) ermöglicht die Wiederverwendung von Übersetzungen sowie Terminologieanpassungen. Grundlage hierfür sind Übersetzungen der Benutzeroberflächentexte von Produkten und Diensten von Microsoft.
+- Der Anbieter [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220) bietet maschinelle Übersetzungen nach Bedarf.
 
 Sie und Ihre Übersetzer können den Status von Übersetzungen im Mehrsprachen-Editor verwalten, um unsichere Übersetzungen später zu überarbeiten. Sie können den Status jeder Zeichenfolge auf der Registerkarte **Eigenschaften** festlegen. Statuswerte sind: **Neu**, **Prüfung erforderlich**, **Übersetzt**, **Endgültig** und **Genehmigt**. Der Status wird durch eine Markierung links von der Zeile angezeigt. Wenn für alle Zeilen im Multilingual Editor Grün angezeigt wird, ist die Übersetzung beendet.
 
@@ -166,7 +166,7 @@ Vor dem Start des Zertifizierungsprozesses für den Microsoft Store müssen Sie 
 * [Globalisierung und Lokalisierung](globalizing-portal.md)
 * [Richtlinien für Globalisierung](guidelines-and-checklist-for-globalizing-your-app.md)
 * [App lokalisierbar machen](prepare-your-app-for-localization.md)
-* [BCP-47-Sprachtag](http://go.microsoft.com/fwlink/p/?linkid=227302)
+* [BCP-47-Sprachtag](https://go.microsoft.com/fwlink/p/?linkid=227302)
 
 ## <a name="downloads"></a>Downloads
 
@@ -175,5 +175,5 @@ Vor dem Start des Zertifizierungsprozesses für den Microsoft Store müssen Sie 
 
 ## <a name="translation-services"></a>Übersetzungsdienste
 
-* [Microsoft-Sprachportal](http://go.microsoft.com/fwlink/p/?LinkId=330295)
-* [Microsoft Translator](http://go.microsoft.com/fwlink/p/?LinkId=258220)
+* [Microsoft-Sprachportal](https://go.microsoft.com/fwlink/p/?LinkId=330295)
+* [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220)

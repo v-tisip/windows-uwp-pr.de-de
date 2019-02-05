@@ -5,12 +5,12 @@ ms.date: 07/10/2017
 ms.topic: article
 keywords: Windows10, Uwp, Microsoft Store-Übermittlungs-API, Codebeispiele, Spieloptionen, Trailer, erweiterte Angebote, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 041f07fd6b24af3658bc9cfffe07117e4b353831
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 277d455fe3387452a4afe91fd74e5c2099f76ce4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939636"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044261"
 ---
 # <a name="c-sample-app-submission-with-game-options-and-trailers"></a>C\#-Beispiel: App-Übermittlung mit Spieloptionen und Trailer
 
@@ -29,7 +29,7 @@ Sie können die einzelnen Beispiele prüfen, um mehr über die jeweilige Aufgabe
 Für diese Beispiele gelten die folgenden Anforderungen:
 
 * Hinzufügen eines Verweises auf die the System.Web-Assembly zu Ihrem Projekt
-* Installieren Sie das [Newtonsoft.Json](http://www.newtonsoft.com/json) NuGet-Paket von Newtonsoft für Ihr Projekt.
+* Installieren Sie das [Newtonsoft.Json](https://www.newtonsoft.com/json) NuGet-Paket von Newtonsoft für Ihr Projekt.
 
 <span id="create-app-submission" />
 
@@ -37,7 +37,7 @@ Für diese Beispiele gelten die folgenden Anforderungen:
 
 Die ```CreateAndSubmitSubmissionExample```-Klasse definiert eine öffentliche ```Execute```-Methode, die anderen Beispielmethoden aufruft, um die Microsoft Store-Übermittlungs-API zum Erstellen und Ausführen eines Commits einer App-Übermittlung mit Optionen und einem Trailer verwendet. So passen Sie den Code für eigene Zwecke an:
 
-* Weisen Sie die ```tenantId```-Variable zur Mandanten-ID für Ihre App zu und weisen Sie die Variablen ```clientId``` und ```clientSecret``` zur Client-ID und dem Schlüssel für die App zu. Weitere Informationen finden Sie [eine Azure AD-Anwendung mit Ihrem Partner Center-Konto zuordnen](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
+* Weisen Sie die ```tenantId```-Variable zur Mandanten-ID für Ihre App zu und weisen Sie die Variablen ```clientId``` und ```clientSecret``` zur Client-ID und dem Schlüssel für die App zu. Weitere Informationen finden Sie unter [Zuordnen einer Azure AD-Anwendung mit Ihrem Partner Center-Konto](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
 * Weisen Sie die ```applicationId```-Variable zur [Store-ID](in-app-purchases-and-trials.md#store-ids) der App zu, für die eine Übermittlung erstellen möchten.
 
 > [!div class="tabbedCodeSnippets"]

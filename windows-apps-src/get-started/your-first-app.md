@@ -6,12 +6,12 @@ ms.date: 1/25/2017
 ms.topic: article
 keywords: Windows10, UWP, erste App, C#, c++, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: 6cd4d60e6eb3eee7253997938882e6fbdf9fba69
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ef6e364f8c6c88400d2d47a0591d4b7432c33215
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923741"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048017"
 ---
 # <a name="create-your-first-app"></a>Erstellen Ihrer ersten App
 
@@ -30,7 +30,7 @@ Wenn Sie die Grundlagen erlernen oder Ihr Gedächtnis auffrischen möchten, lese
 * [C#-Grundlagen für Neueinsteiger](https://go.microsoft.com/fwlink/?linkid=850801)
 * [VB-Grundlagen für Neueinsteiger](https://go.microsoft.com/fwlink/?linkid=850802)
 * [Entwicklerhandbuch für Windows10](https://go.microsoft.com/fwlink/?linkid=850804)
-* [Microsoft Virtual Academy](http://www.microsoftvirtualacademy.com/)
+* [Microsoft Virtual Academy](https://www.microsoftvirtualacademy.com/)
 
 Wenn Sie etwas Komplizierteres als "Hello, World!" ausprobieren möchten, schauen Sie diese Lernprogramme an:
 
@@ -46,8 +46,8 @@ Nutzen Sie Ihre C++-Programmierkenntnisse zum Erstellen von apps mit für Visual
 
 Weitere Informationen zu C++:
 
-* [C++: Schnelleinstieg: eine allgemeine Sprache und Bibliothek](http://www.microsoftvirtualacademy.com/training-courses/c-a-general-purpose-language-and-library-jump-start)
-* [Microsoft Virtual Academy](http://go.microsoft.com/fwlink/p/?LinkID=389916)
+* [C++: Schnelleinstieg: eine allgemeine Sprache und Bibliothek](https://www.microsoftvirtualacademy.com/training-courses/c-a-general-purpose-language-and-library-jump-start)
+* [Microsoft Virtual Academy](https://go.microsoft.com/fwlink/p/?LinkID=389916)
 
 Wenn Sie etwas Komplizierteres als "Hello, World!" ausprobieren möchten, schauen Sie diese Lernprogramme an:
 
@@ -71,9 +71,9 @@ Web-Apps können einfach in das UWP-Framework als gehostete Web-Apps verpackt we
 
 Müssen Sie Ihre Webkenntnisse auffrischen?
 
-* [JavaScript-Grundlagen für Neueinsteiger](http://www.microsoftvirtualacademy.com/training-courses/javascript-fundamentals-for-absolute-beginners)
-* [HTML5- und CSS3-Grundlagen für Neueinsteiger](http://www.microsoftvirtualacademy.com/training-courses/html5-css3-fundamentals-development-for-absolute-beginners)
-* [Microsoft Virtual Academy](http://go.microsoft.com/fwlink/p/?LinkID=389916)
+* [JavaScript-Grundlagen für Neueinsteiger](https://www.microsoftvirtualacademy.com/training-courses/javascript-fundamentals-for-absolute-beginners)
+* [HTML5- und CSS3-Grundlagen für Neueinsteiger](https://www.microsoftvirtualacademy.com/training-courses/html5-css3-fundamentals-development-for-absolute-beginners)
+* [Microsoft Virtual Academy](https://go.microsoft.com/fwlink/p/?LinkID=389916)
 
 ## <a name="see-also"></a>Weitere Informationen
 

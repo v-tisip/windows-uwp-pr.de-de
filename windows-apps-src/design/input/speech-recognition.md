@@ -8,12 +8,12 @@ keywords: Sprache, Stimme, Spracherkennung, natürliche Sprache, diktieren, Eing
 ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b6e0c6a751116ad03c4e8d69cb02e7147938097
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1b7eec51044a70b0738e246d3aa516c37643cf68
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927344"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048547"
 ---
 # <a name="speech-recognition"></a>Spracherkennung
 
@@ -26,17 +26,17 @@ Die Spracherkennung besteht aus einer Sprachlaufzeit, Erkennungs-APIs zum Progra
 
 ## <a name="configure-speech-recognition"></a>Konfigurieren Sie die Spracherkennung
 
-Um die Spracherkennung mit Ihrer app zu unterstützen, muss der Benutzer eine Verbindung herstellen und ein Mikrofon auf ihrem Gerät aktivieren und akzeptieren Sie die Microsoft-Datenschutzrichtlinie Berechtigung für Ihre app um sie zu verwenden.
+Um die Spracherkennung mit Ihrer app zu unterstützen, muss der Benutzer verbinden und ein Mikrofon auf ihrem Gerät aktivieren, und akzeptieren Sie die Microsoft-Datenschutzrichtlinie Berechtigung für Ihre app um sie zu verwenden.
 
-Den Benutzer automatisch aufgefordert, mit der ein systemdialogfeld anfordern und Zugriffsberechtigung für das Mikrofon verwenden die Audio feed nur Satz (beispielsweise von der [Spracherkennung und Speech Synthesis Beispiel](http://go.microsoft.com/fwlink/p/?LinkID=619897) unten) das **Mikrofon** [Gerät Funktion](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-devicecapability) in der [App-Paket-manifest](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest). Weitere Informationen finden Sie in der [Deklaration der App](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
+Den Benutzer automatisch aufgefordert, mit der ein systemdialogfeld anfordern und Zugriffsberechtigung für das Mikrofon verwenden des Audio feed nur Satz (beispielsweise von der [Spracherkennung Beispiel und Sprachsynthese](https://go.microsoft.com/fwlink/p/?LinkID=619897) unten dargestellt) das **Mikrofon** [Gerät Funktion](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-devicecapability) in der [App-Paket-manifest](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest). Weitere Details finden Sie in der [Deklaration der App](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
 
 ![Datenschutzrichtlinie für den Zugriff auf das Mikrofon](images/speech/privacy.png)
 
-Klickt der Benutzer auf "Ja", um Zugriff auf das Mikrofon gewähren Ihrer app wird hinzugefügt, um die Liste der zugelassenen Anwendungen auf die Einstellungen -> Datenschutz -> Mikrofon Seite. Jedoch, wie der Benutzer auswählen kann, um diese Einstellung zu einem beliebigen Zeitpunkt deaktivieren, sollten Sie sicherstellen, dass Ihre app Zugriff auf das Mikrofon hat, bevor Sie versuchen, die sie verwenden.
+Klickt der Benutzer auf "Ja", um Zugriff auf das Mikrofon gewähren, wird Ihre app zur Liste der zugelassenen Anwendungen auf die Einstellungen hinzugefügt-> Datenschutz-> Mikrofon Seite. Jedoch, wie der Benutzer auswählen kann, um diese Einstellung zu einem beliebigen Zeitpunkt zu deaktivieren, sollten Sie sicherstellen, dass Ihre app Zugriff auf das Mikrofon hat, bevor Sie versuchen, es zu verwenden.
 
-Wenn auch diktieren, Cortana, unterstützt werden sollen, oder andere Spracherkennung-(z. B. eine [vordefinierte Grammatik](#predefined-grammars) in eine Einschränkung zu einem Thema definiert Dienste), Sie müssen sich vergewissern, dass **Online Spracherkennung** (Einstellungen -> Datenschutz -> Spracherkennung) ist aktiviert.
+Wenn Sie auch diktieren, Cortana, unterstützen möchten, oder andere Spracherkennung-(z. B. eine [vordefinierte Grammatik](#predefined-grammars) in eine Einschränkung zu einem Thema definiert Dienste), Sie müssen sich vergewissern, dass **Online-Spracherkennung** (Einstellungen-> Datenschutz-> Sprache) ist aktiviert.
 
-Dieser Codeausschnitt zeigt, wie Ihre app überprüfen kann, wenn ein Mikrofon vorhanden ist, und hat die Berechtigung zum verwenden.
+Dieser Codeausschnitt zeigt, wie Ihre app überprüfen kann, wenn ein Mikrofon vorhanden ist und sie berechtigt sie zu verwenden.
 
 ```csharp
 public class AudioCapturePermissions
@@ -220,7 +220,7 @@ Die Standardgrammatik der Freitext-Diktierfunktion erkennt die meisten Wörter u
 
 Die Grammatik für die Websuche enthält wie die Diktiergrammatik eine große Anzahl von Wörtern und Ausdrücken, die Benutzer sagen können. Sie ist allerdings für die Erkennung von Begriffen optimiert, die beim Suchen im Web häufig verwendet werden.
 
-**Hinweis:** da vordefinierte Diktier- und die Websuche Grammatiken groß sein können und da diese online sind (nicht auf dem Gerät), Leistung ist möglicherweise nicht so gut wie bei einer lokal auf dem Gerät installierten benutzerdefinierten Grammatik.     
+**Hinweis:** da vordefinierte Diktier- und Websuche Grammatiken groß sein können und diese online sind (nicht auf dem Gerät), Leistung ist möglicherweise nicht so gut wie bei einer lokal auf dem Gerät installierten benutzerdefinierten Grammatik.     
 
 Diese vordefinierten Grammatiken können zum Erkennen von bis zu zehn Sekunden Spracheingabe verwendet werden. Sie müssen dazu keinen Code selbst erstellen. Sie erfordern jedoch eine Netzwerkverbindung.
 
@@ -269,7 +269,7 @@ Finden Sie unter [**SpeechRecognitionListConstraint**](https://msdn.microsoft.co
 
 ### <a name="srgs-grammars"></a>SRGS-Grammatik
 
-Eine Speech Recognition Grammar Specification (SRGS)-Grammatik ist ein statisches Dokument, das im Gegensatz zu einer Einschränkung per programmgesteuerter Liste das in [SRGS Version1.0](http://go.microsoft.com/fwlink/p/?LinkID=262302) definierte XML-Format verwendet. Eine SRGS-Grammatik bietet die höchstmögliche Kontrolle über die Spracherkennungsfunktion, da Sie mehrere semantische Bedeutungen in einem einzigen Erkennungsvorgang erfassen können.
+Eine Speech Recognition Grammar Specification (SRGS)-Grammatik ist ein statisches Dokument, das im Gegensatz zu einer Einschränkung per programmgesteuerter Liste das in [SRGS Version1.0](https://go.microsoft.com/fwlink/p/?LinkID=262302) definierte XML-Format verwendet. Eine SRGS-Grammatik bietet die höchstmögliche Kontrolle über die Spracherkennungsfunktion, da Sie mehrere semantische Bedeutungen in einem einzigen Erkennungsvorgang erfassen können.
 
  Finden Sie unter [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412).
 
@@ -279,7 +279,7 @@ Verwenden Sie eine Voice Command Definition-(VCD-)XML-Datei, um die Befehle zu d
 
 Finden Sie unter [ **SpeechRecognitionVoiceCommandDefinitionConstraint**](https://msdn.microsoft.com/library/windows/apps/dn653220)/
 
-**Hinweis:** die Art der Einschränkung, den Sie verwenden, hängt von der Komplexität der Erkennungsfunktion, die Sie erstellen möchten. Für eine bestimmte Erkennungsaufgabe kann jeweils einer der Ansätze am besten geeignet sein, und vielleicht haben Sie in Ihrer App sogar für alle Einschränkungsarten Verwendung.
+**Hinweis:** der Typ der Einschränkung, den Sie verwenden, hängt von der Komplexität der Erkennungsfunktion, die Sie erstellen möchten. Für eine bestimmte Erkennungsaufgabe kann jeweils einer der Ansätze am besten geeignet sein, und vielleicht haben Sie in Ihrer App sogar für alle Einschränkungsarten Verwendung.
 Informationen zu den ersten Schritten mit Einschränkungen finden Sie unter [Definieren von benutzerdefinierten Erkennungseinschränkungen](define-custom-recognition-constraints.md).
 
 Die vordefinierte Diktiergrammatik von universellen Windows-Apps erkennt die meisten Wörter und kurzen Wortgruppen einer Sprache. Sie wird standardmäßig aktiviert, wenn ein Spracherkennungsobjekt ohne benutzerdefinierte Einschränkungen instanziiert wird.
@@ -373,7 +373,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 **Designer**
 * [Entwicklungsrichtlinien für die Spracherkennung](https://msdn.microsoft.com/library/windows/apps/dn596121)
 **Beispiele**
-* [Beispiel zu Spracherkennung und Sprachsynthese](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Beispiel zu Spracherkennung und Sprachsynthese](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

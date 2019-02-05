@@ -12,12 +12,12 @@ design-contact: jeffarn
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 028c499877c971fab5671fe308670a1233ed10e8
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: a162d992390e8fc7d05d52303ec292fcf8e920a9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037202"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044394"
 ---
 # <a name="progress-controls"></a>Statussteuerelemente
 
@@ -192,4 +192,4 @@ Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows
 
 **Für Entwickler (XAML)**
 - [Hinzufügen von Statussteuerelementen](https://msdn.microsoft.com/library/windows/apps/xaml/hh780651)
-- [So wird's gemacht: Erstellen einer benutzerdefinierten unbestimmten Statusleiste für Windows Phone](http://go.microsoft.com/fwlink/p/?LinkID=392426)
+- [So wird's gemacht: Erstellen einer benutzerdefinierten unbestimmten Statusleiste für Windows Phone](https://go.microsoft.com/fwlink/p/?LinkID=392426)

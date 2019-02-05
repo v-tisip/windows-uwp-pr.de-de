@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10 UWP, Auszahlungszusammenfassung, Anweisung, Zahlungen, Einnahmen, Auszahlung, Einnahmen
 ms.localizationpriority: medium
-ms.openlocfilehash: fa35ac4961b64379ee8a50ec192f5cebad5720d6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e9ab2d2d096c6c0a639a831bb7d09f6d1d044a0c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919880"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046240"
 ---
 # <a name="payout-summary"></a>Auszahlungsübersicht
 
@@ -20,7 +20,7 @@ Die **Auszahlungsübersicht** enthält Details zu den mit Ihren Apps und Add-Ons
 
 Wenn Sie mit Werbung Geld verdienen möchten, finden Sie seit dem 1. April 2016 in der **Auszahlungsübersicht** auch Zahlungsinformationen für Werbung. Wir geben die App an, in der diese Erlöse erzielt wurden, oder den Hinweis „nicht zugeordnet“ für Anzeigeneinheiten, die in mehreren Apps verwendet werden oder keiner bestimmten App zugeordnet werden können. 
 
-Wenn Sie Produkte im Azure Marketplace verkaufen, werden Ihnen in der **Auszahlungsübersicht** auch Informationen zu erfolgreichen Auszahlungen angezeigt. Weitere Informationen zur Bezahlung im Azure Marketplace finden Sie in den [Teilnahmerichtlinien für Microsoft Azure Marketplace](http://go.microsoft.com/fwlink/p/?LinkId=722436) und in der [Microsoft Azure Marketplace-Herausgebervereinbarung](http://go.microsoft.com/fwlink/p/?LinkID=699560 ). Weitere Informationen zum Anzeigen von Azure Marketplace-Auszahlungsberichten finden Sie [hier](http://go.microsoft.com/fwlink/p/?LinkID=722439).
+Wenn Sie Produkte im Azure Marketplace verkaufen, werden Ihnen in der **Auszahlungsübersicht** auch Informationen zu erfolgreichen Auszahlungen angezeigt. Weitere Informationen zur Bezahlung im Azure Marketplace finden Sie in den [Teilnahmerichtlinien für Microsoft Azure Marketplace](https://go.microsoft.com/fwlink/p/?LinkId=722436) und in der [Microsoft Azure Marketplace-Herausgebervereinbarung](https://go.microsoft.com/fwlink/p/?LinkID=699560 ). Weitere Informationen zum Anzeigen von Azure Marketplace-Auszahlungsberichten finden Sie [hier](https://go.microsoft.com/fwlink/p/?LinkID=722439).
 
 > [!NOTE]
 > Eine Auszahlung kann nur erfolgen, wenn Ihre Erlöse den gültigen [Auszahlungsschwellenwert](payment-thresholds-methods-and-timeframes.md) erreichen. Sind die Erlöse niedriger als der Auszahlungsschwellenwert, verbleiben sie in der Kategorie **Reserviert**, bis der Schwellenwert erreicht wurde. Weitere Informationen zur Auszahlungsschwelle für App-Erlöse finden Sie in der [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Für Erlöse aus Werbung ist die Zahlungsschwelle 50 US-Dollar (oder die Entsprechung in der lokalen Währung). 

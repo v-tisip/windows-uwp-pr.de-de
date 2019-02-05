@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: Windows10, UWP, Mobilfunkanbieter, mobile Abrechnung, Abrechnung über den Mobilfunkanbieter
 ms.localizationpriority: medium
-ms.openlocfilehash: f9f751735c2387ab5009e2e6f19f68db304916ec
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
+ms.openlocfilehash: 3f23e40abfb269e2b52e9dc5b66c2486da071c9b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980388"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045679"
 ---
 # <a name="mobile-operator-billing"></a>Abrechnung über den Mobilfunkanbieter
 
@@ -19,7 +19,7 @@ ms.locfileid: "8980388"
 Der Microsoft Store bietet Abrechnung über den Mobilfunkanbieter als Zahlungsmethode für Geräte mit Windows10, Smartphones mit Windows10 Mobile und Xbox One-Konsolen an. Wenn der Mobilfunkanbieter eines Kunden diese unterstützt, kann der Kunde die Abrechnung über den Mobilfunkanbieter als Zahlungsmethode hinzufügen und verwenden, um Store-Käufe über sein Mobilfunkkonto zu tätigen.
 
 > [!TIP]
->  Wenn der Mobilfunkanbieter eines Kunden die Abrechnung über das Mobilfunkkonto anbietet, diese Option auf dem Gerät des Kunden jedoch nicht zu finden ist, lesen Sie diese [Schritte](http://go.microsoft.com/fwlink/p/?LinkId=523993) erneut durch.
+>  Wenn der Mobilfunkanbieter eines Kunden die Abrechnung über das Mobilfunkkonto anbietet, diese Option auf dem Gerät des Kunden jedoch nicht zu finden ist, lesen Sie diese [Schritte](https://go.microsoft.com/fwlink/p/?LinkId=523993) erneut durch.
 
 Wir arbeiten ständig mit Mobilfunkanbietern zusammen, um die Verfügbarkeit dieser Zahlungsmethode auszubauen. Wenden Sie sich an den Mobilfunkanbieter und bitten Sie diesen, die Zahlungsmethode hinzuzufügen, wenn Sie einen Mobilfunkanbieter vorschlagen möchten, der unten in der Liste nicht aufgeführt ist.
 

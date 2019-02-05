@@ -6,12 +6,12 @@ ms.date: 07/10/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Codebeispiele, Java
 ms.localizationpriority: medium
-ms.openlocfilehash: 0466c7dad5ac2f543e6b447a9b2661c2889f7b4e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9a98584fcac446a673bf76cd3d448e05455a89bb
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924352"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045053"
 ---
 # <a name="java-sample-submissions-for-apps-add-ons-and-flights"></a>Java-Beispiel: Übermittlungen für Apps, Add-Ons und Flights
 
@@ -30,7 +30,7 @@ Sie können die einzelnen Beispiele durchgehen, um mehr über die jeweilige Aufg
 
 Für diese Beispiele werden die folgenden Bibliotheken verwendet:
 
-* [Apache Commons Logging 1.2](http://commons.apache.org/proper/commons-logging)  (commons-logging-1.2.jar)
+* [Apache Commons Logging 1.2](https://commons.apache.org/proper/commons-logging)  (commons-logging-1.2.jar)
 * [Apache HttpComponents Core 4.4.5 und Apache HttpComponents Client 4.5.2](https://hc.apache.org/) (httpcore-4.4.5.jar und httpclient-4.5.2.jar)
 * [JSR 353 JSON Processing API 1.0](https://mvnrepository.com/artifact/javax.json/javax.json-api/1.0) und [JSR 353 JSON Processing Default Provider API 1.0.4](https://mvnrepository.com/artifact/org.glassfish/javax.json/1.0.4) (javax.json-api-1.0.jar und javax.json-1.0.4.jar)
 
@@ -68,13 +68,13 @@ Das folgende Beispiel zeigt, wie Sie EIN Flight-Paket [erstellen](create-a-fligh
 
 ## <a name="create-an-app-submission"></a>Erstellen einer App-Übermittlung
 
-Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Store-Übermittlungs-API verwenden, um eine App-Übermittlung zu erstellen. Hierzu die ```SubmitNewApplicationSubmission``` -Methode erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung und anschließend aktualisiert und sendet die geklonte Übermittlung für das Partner Center. Genauer gesagt führt die ```SubmitNewApplicationSubmission```-Methode diese Aufgaben aus:
+Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Store-Übermittlungs-API verwenden, um eine App-Übermittlung zu erstellen. Hierzu die ```SubmitNewApplicationSubmission``` Methode erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung, und sich dann aktualisiert und sendet die geklonte Übermittlung in das Partner Center. Genauer gesagt führt die ```SubmitNewApplicationSubmission```-Methode diese Aufgaben aus:
 
 1. Zunächst [ruft die Methode Daten für die angegebene App ab](get-an-app.md).
 2. Als Nächstes [löscht sie die ausstehende Übermittlung für die App](delete-an-app-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für die App erstellt](create-an-app-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
 4. Es werden einige Details für die neue Übermittlung geändert und ein neues Paket für die Übermittlung zu Azure Blob Storage hochgeladen.
-5. Als Nächstes wird es [Updates](update-an-app-submission.md) und [sendet](commit-an-app-submission.md) die neue Übermittlung für das Partner Center.
+5. Als Nächstes wird es [Updates](update-an-app-submission.md) und anschließend auf die neue Übermittlung für das Partner Center [committet](commit-an-app-submission.md) .
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-an-app-submission.md), bis die Übermittlung erfolgreich gesendet wurde.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L97-L183)]
@@ -83,13 +83,13 @@ Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Stor
 
 ## <a name="create-an-add-on-submission"></a>Erstellen einer Add-On-Übermittlung
 
-Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Store-Übermittlungs-API verwenden, um eine Add-On-Übermittlung zu erstellen. Hierzu die ```SubmitNewInAppProductSubmission``` Methode erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung, aktualisiert anschließend und sendet die geklonte Übermittlung für das Partner Center. Genauer gesagt führt die ```SubmitNewInAppProductSubmission```-Methode diese Aufgaben aus:
+Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Store-Übermittlungs-API verwenden, um eine Add-On-Übermittlung zu erstellen. Hierzu die ```SubmitNewInAppProductSubmission``` Methode erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung, aktualisiert anschließend und sendet die geklonte Übermittlung in das Partner Center. Genauer gesagt führt die ```SubmitNewInAppProductSubmission```-Methode diese Aufgaben aus:
 
 1. Zunächst [ruft die Methode Daten für das angegebene Add-On ab](get-an-add-on.md).
 2. Als Nächstes [wird eine ausstehende Übermittlung für das Add-On gelöscht](delete-an-add-on-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für das Add-On erstellt](create-an-add-on-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
 4. Es wird ein ZIP-Archiv hochgeladen, das Symbole für die Übermittlung an Azure Blob Storage enthält.
-5. Als Nächstes wird es [Updates](update-an-add-on-submission.md) und [sendet](commit-an-add-on-submission.md) die neue Übermittlung für das Partner Center.
+5. Als Nächstes wird es [Updates](update-an-add-on-submission.md) und anschließend auf die neue Übermittlung für das Partner Center [committet](commit-an-add-on-submission.md) .
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-an-add-on-submission.md), bis die Übermittlung erfolgreich gesendet wurde.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L347-L431)]
@@ -98,13 +98,13 @@ Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Stor
 
 ## <a name="create-a-package-flight-submission"></a>Erstellen einer Flight-Paket-Übermittlung
 
-Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Store-Übermittlungs-API verwenden, um eine Flight-Paket-Übermittlung zu erstellen. Hierzu die ```SubmitNewFlightSubmission``` Methode erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung, aktualisiert anschließend und sendet die geklonte Übermittlung für das Partner Center. Genauer gesagt führt die ```SubmitNewFlightSubmission```-Methode diese Aufgaben aus:
+Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Store-Übermittlungs-API verwenden, um eine Flight-Paket-Übermittlung zu erstellen. Hierzu die ```SubmitNewFlightSubmission``` Methode erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung, aktualisiert anschließend und sendet die geklonte Übermittlung in das Partner Center. Genauer gesagt führt die ```SubmitNewFlightSubmission```-Methode diese Aufgaben aus:
 
 1. Zunächst [ruft die Methode Daten für das angegebene Flight-Paket ab](get-a-flight.md).
 2. Als Nächstes [wird eine ausstehende Übermittlung für das Flight-Paket gelöscht](delete-a-flight-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für das Flight-Paket erstellt](create-a-flight-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
 4. Es wird ein neues Paket für die Übermittlung an Azure Blob Storage hochgeladen.
-5. Als Nächstes wird es [Updates](update-a-flight-submission.md) und [sendet](commit-a-flight-submission.md) die neue Übermittlung an PartnerCenter.
+5. Als Nächstes wird es [Updates](update-a-flight-submission.md) und anschließend auf die neue Übermittlung an PartnerCenter [übergibt](commit-a-flight-submission.md) .
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-a-flight-submission.md), bis die Übermittlung erfolgreich committet wurde.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L223-L308)]

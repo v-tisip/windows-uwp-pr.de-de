@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Standort, Ort, Karte, Geolocation
 ms.localizationpriority: medium
-ms.openlocfilehash: e5150188c99bfc448bf85df6a6dabbbb4c60bd49
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d7004f579bb8bb60b1f9585e49319e278770700a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921103"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048157"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>Richtlinien für Apps mit Standortbestimmung
 
@@ -47,7 +47,7 @@ In diesem Thema werden Leistungsrichtlinien für Apps beschrieben, für die der 
 
     Geben Sie das [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534)-Objekt frei, wenn der Benutzer den Zugriff auf Standortinformationen unter „Einstellungen“ deaktiviert. Die App empfängt **ACCESS\_DENIED**-Ergebnisse für alle standortbezogenen API-Aufrufe. Wenn Ihre App Standortdaten (zwischen)speichert, löschen Sie zwischengespeicherte Daten, wenn der Benutzer den Zugriff auf seinen Standort zurücknimmt. Stellen Sie eine Alternativmöglichkeit zur Angabe des Standorts bereit, wenn keine diesbezüglichen Informationen für Positionsdienste verfügbar sind.
 
--   Stellen Sie eine Benutzeroberfläche für das erneute Aktivieren der Positionsdienste bereit. Geben Sie z. B. eine Aktualisierungsschaltfläche, die das Objekt [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) Aktualisierungsschaltfläche und versucht, Standortinformationen erneut abrufen.
+-   Stellen Sie eine Benutzeroberfläche für das erneute Aktivieren der Positionsdienste bereit. Geben Sie z. B. eine Aktualisierungsschaltfläche, die das Objekt [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) Aktualisierungsschaltfläche und versucht, Standortinformationen erneut abzurufen.
 
     Stellen Sie in Ihrer App eine Benutzeroberfläche zum Aktivieren der Positionsdienste bereit.
 
@@ -165,7 +165,7 @@ Der geografische Standort eines Benutzers gehört zu den personenbezogenen Infor
 * [Abrufen der aktuellen Position](https://msdn.microsoft.com/library/windows/apps/mt219698)
 * [Anzeigen von Karten mit 2D-, 3D- und Streetside-Ansichten](https://msdn.microsoft.com/library/windows/apps/mt219695)
 <!--* [Design guidelines for privacy-aware apps](guidelines-for-enabling-sensitive-devices.md)-->
-* [UWP – Positionsbeispiel (Geolocation)](http://go.microsoft.com/fwlink/p/?linkid=533278)
+* [UWP – Positionsbeispiel (Geolocation)](https://go.microsoft.com/fwlink/p/?linkid=533278)
  
 
  

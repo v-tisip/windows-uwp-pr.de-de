@@ -8,12 +8,12 @@ keywords: Sprache, Stimme, Spracherkennung, natürliche Sprache, diktieren, Eing
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: acd8b06c98c95750b6d047cda96b8c2884a9d7a9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9e23cb9c01178640bfa1519d8df369ec76ed2a6c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937914"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046553"
 ---
 # <a name="specify-the-speech-recognizer-language"></a>Festlegen der Sprache für die Spracherkennung
 
@@ -56,7 +56,7 @@ var language = SpeechRecognizer.SystemSpeechLanguage;
 
 Die installierten Sprachen können sich von Gerät zu Gerät unterscheiden. Überprüfen Sie, ob eine Sprache vorhanden ist, wenn diese für eine bestimmte Einschränkung erforderlich ist.
 
-**Hinweis:** nach der Installation eines neues Sprachpakets ist ein Neustart erforderlich. Eine Ausnahme mit dem Fehlercode SPERR\_NOT\_FOUND (0x8004503a) wird ausgelöst, wenn die angegebene Sprache nicht unterstützt wird oder nicht vollständig installiert wurde.
+**Hinweis:** nach der Installation eines neuen Sprachpakets ist ein Neustart erforderlich. Eine Ausnahme mit dem Fehlercode SPERR\_NOT\_FOUND (0x8004503a) wird ausgelöst, wenn die angegebene Sprache nicht unterstützt wird oder nicht vollständig installiert wurde.
 
  
 
@@ -100,7 +100,7 @@ Bei einer SRGS-Grammatik handelt es sich um ein offenes XML-Standardformat, das 
 
 **Beispiele**
 
-* [Beispiel zu Spracherkennung und Sprachsynthese](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Beispiel zu Spracherkennung und Sprachsynthese](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

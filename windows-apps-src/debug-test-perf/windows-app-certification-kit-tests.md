@@ -1,17 +1,17 @@
 ---
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: Tests im Zertifizierungskit für Windows-Apps
-description: Das Zertifizierungskit für Windows-Apps enthält eine Reihe von Tests, die dabei helfen können, stellen Sie sicher, dass Ihre app im Microsoft Store veröffentlicht werden kann.
+description: Das Zertifizierungskit für Windows-Apps enthält eine Reihe von Tests, die sicherstellen, dass Ihre app im Microsoft Store veröffentlicht werden kann.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, Uwp, app-Zertifizierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 55c11232847e2e7aa4827da0e3816f0cc34e9bed
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ecb7cb68b57e3d9b30a25237a63410d3bfa319b3
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923127"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047159"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Tests im Zertifizierungskit für Windows-Apps
 
@@ -124,7 +124,7 @@ Apps müssen ein korrekt formatiertes App-Manifest besitzen.
 
 -   **Überprüfung der prozessübergreifenden Kommunikation (Inter-process Communication, IPC)**
 
-    Mit diesem Test wird die Anforderung, die UWP-apps nicht außerhalb des app-Containers mit Desktopkomponenten kommunizieren. Die prozessübergreifende Kommunikation ist nur für quergeladene Apps vorgesehen. Apps, die für [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414) den Namen „DesktopApplicationPath“ angeben, bestehen diesen Test nicht.
+    Bei diesem Test wird die Anforderung durchgesetzt, die UWP-apps nicht außerhalb des app-Containers mit Desktopkomponenten kommunizieren. Die prozessübergreifende Kommunikation ist nur für quergeladene Apps vorgesehen. Apps, die für [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414) den Namen „DesktopApplicationPath“ angeben, bestehen diesen Test nicht.
 
 ### <a name="corrective-action"></a>Maßnahmen
 
@@ -172,7 +172,7 @@ Das AllowPartiallyTrustedCallersAttribute-Attribut (kurz: APTCA-Attribut) ermög
 
 Verwenden Sie das APTCA-Attribut nur dann für Assemblys mit starkem Namen, falls dies für das Projekt erforderlich ist und die Risiken bekannt sind. Falls das Attribut erforderlich ist, stellen Sie sicher, dass alle APIs durch geeignete Sicherheitsanforderungen für den Codezugriff geschützt sind. APTCA hat keine Auswirkung, wenn die Assembly Teil einer UWP-App (Universelle Windows-Plattform) ist.
 
-**Anmerkungen**
+**Hinweise**
 
 Dieser Test wird nur für verwalteten Code (C#, .NET usw.) ausgeführt.
 
@@ -186,7 +186,7 @@ Ein Ausnahmehandler wird ausgeführt, wenn in der App eine Ausnahmebedingung auf
 
 Aktivieren Sie beim Erstellen der App die Option "/SAFESEH" im Linker-Befehl. Diese Option ist in den Veröffentlichungskonfigurationen von VisualStudio standardmäßig aktiviert. Vergewissern Sie sich, dass diese Option in den Erstellungsanweisungen für alle alle ausführbaren Module Ihrer App aktiviert ist.
 
-**Anmerkungen**
+**Hinweise**
 
 Für 64-Bit-Binärdateien oder für Binärdateien für den ARM-Chipsatz wird dieser Test nicht ausgeführt, da hier keine Ausnahmehandleradressen im Stapel gespeichert werden.
 
@@ -200,7 +200,7 @@ Dieser Test stellt sicher, dass die App keinen Code ausführt, der in einem Date
 
 Aktivieren Sie beim Erstellen der App die Option „/NXCOMPAT“ im Linker-Befehl. Diese Option ist in Linker-Versionen mit Unterstützung der Datenausführungsverhinderung (Data Execution Prevention, DEP) standardmäßig aktiviert.
 
-**Anmerkungen**
+**Hinweise**
 
 Wir empfehlen, Apps auf einer DEP-fähigen CPU zu testen und alle DEP-bedingten Fehler zu beheben.
 
@@ -214,7 +214,7 @@ Die Zufallsgestaltung des Adressraumlayouts (Address Space Layout Randomization,
 
 Aktivieren Sie beim Erstellen der App die Option "/DYNAMICBASE" im Linker-Befehl. Vergewissern Sie sich, dass auch alle von der App verwendeten Module diese Linker-Option verwenden.
 
-**Anmerkungen**
+**Hinweise**
 
 ASLR hat in der Regel keine Auswirkungen auf die Leistung. In einigen Szenarios ist auf 32-Bit-Systemen aber eine geringfügige Leistungsverbesserung zu beobachten. Es ist möglich, dass sich die Leistung bei einem stark belasteten System verschlechtert, bei dem viele Bilder an vielen unterschiedlichen Speicherbereichen geladen sind.
 
@@ -230,7 +230,7 @@ Binärdateien mit beschreibbaren Abschnitten, die als freigegeben gekennzeichnet
 
 Entfernen Sie sämtliche freigegebenen Abschnitte aus der App, und erstellen Sie freigegebene Speicherobjekte, indem Sie [**CreateFileMapping**](https://msdn.microsoft.com/library/windows/desktop/Aa366537) oder [**MapViewOfFile**](https://msdn.microsoft.com/library/windows/desktop/Aa366761) mit den passenden Sicherheitsattributen aufrufen und die App dann neu erstellen.
 
-**Anmerkungen**
+**Hinweise**
 
 Dieser Test wird nur für Apps ausgeführt, die in nicht verwalteten Sprachen geschrieben wurden, z.B. mit C oder C++.
 
@@ -246,7 +246,7 @@ Wenn der Test für eine systemeigene ausführbare Datei nicht erfolgreich ist, s
 
 Wenn eine verwaltete ausführbare Datei der Test fehlschlägt, stellen Sie sicher, dass Sie den aktuellen Compiler und Linker wie beispielsweise Microsoft Visual Studio verwendet, um die UWP-app zu erstellen.
 
-**Anmerkungen**
+**Hinweise**
 
 Dieser Test wird für alle EXE-Dateien und nicht verwalteten DLLs ausgeführt.
 
@@ -308,7 +308,7 @@ Apps müssen die APIs für UWP-apps (Windows-Runtime- oder unterstützte Win32-A
 
 ### <a name="test-details"></a>Testdetails
 
--   Stellt sicher, dass jede Binärdatei innerhalb des app-Pakets keine Abhängigkeit von einer Win32-API aufweist, die für die Entwicklung von UWP-Apps nicht unterstützt wird, indem Sie die Importadressentabelle der Binärdatei.
+-   Stellt sicher, dass jeder Binärdatei innerhalb des app-Pakets keine Abhängigkeit von einer Win32-API aufweist, die nicht für die Entwicklung von UWP-Apps unterstützt werden, indem Sie die Importadressentabelle der Binärdatei.
 -   Stellt sicher, dass eine verwaltete Binärdatei des App-Pakets keine Abhängigkeit von einer Funktion außerhalb des genehmigten Profils aufweist.
 
 ### <a name="corrective-actions"></a>Maßnahmen
@@ -319,7 +319,7 @@ Stellen Sie sicher, dass die App als Releasebuild und nicht als Debugbuild kompi
 
 Überprüfen Sie die Fehlermeldungen, um der API zu identifizieren, die app verwendet, die eine [API für UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)nicht ist.
 
-> **Hinweis:** C++-apps, die unter einer Debugkonfiguration erstellt wurden, auch wenn die Konfiguration nur APIs aus dem Windows SDK für UWP-apps verwendet diesen Test nicht. Siehe [alternativen zu Windows-APIs in UWP-apps](http://go.microsoft.com/fwlink/p/?LinkID=244022) für Weitere Informationen.
+> **Hinweis:** C++-apps, die unter einer Debugkonfiguration erstellt wurden, auch wenn die Konfiguration nur APIs aus dem Windows SDK für UWP-apps verwendet diesen Test nicht. Finden Sie unter [alternativen zu Windows-APIs in UWP-apps](https://go.microsoft.com/fwlink/p/?LinkID=244022) für Weitere Informationen.
 
 ## <a name="performance-tests"></a>Leistungstests
 
@@ -429,7 +429,7 @@ Orientieren Sie sich an der folgenden Tabelle.
 <tr><td>
 <p>Für die Datei „resources.pri“ darf „Automatisch zusammenführen“ nicht aktiviert sein.</p>
 </td><td>
-<p>„MakePRI.exe“ unterstützt eine Option mit dem Namen <strong>AutoMerge</strong>. Der Standardwert von <strong>AutoMerge</strong> ist <strong>Aus</strong>. Ist sie aktiviert, führt <strong>AutoMerge</strong> die App-Sprachpaketressourcen in einer einzelnen Datei „resources.pri“ zur Laufzeit zusammen. Wir empfohlen dies nicht für apps, die Sie über den Microsoft Store vertreiben möchten. Die Datei "Resources.pri" einer App, die über den Microsoft Store verteilt wird müssen im Stammverzeichnis des app Pakets werden und enthalten die Sprachverweise, die die app unterstützt.</p>
+<p>„MakePRI.exe“ unterstützt eine Option mit dem Namen <strong>AutoMerge</strong>. Der Standardwert von <strong>AutoMerge</strong> ist <strong>Aus</strong>. Ist sie aktiviert, führt <strong>AutoMerge</strong> die App-Sprachpaketressourcen in einer einzelnen Datei „resources.pri“ zur Laufzeit zusammen. Wird dies nicht für apps empfohlen, die Sie über den Microsoft Store vertreiben möchten. Die Datei "Resources.pri" einer App, die über den Microsoft Store vertriebenen Windows Store müssen im Stammverzeichnis des app Pakets und alle Sprachverweise, die von der app unterstützten enthalten.</p>
 </td></tr>
 <tr><td>
 <p>Die Zeichenfolge „{string}“ entspricht nicht der Längenbeschränkung von maximal {number} Zeichen.</p>
@@ -497,7 +497,7 @@ Testet die App, um sicherzustellen, dass es sich nicht um einen Debugbuild hande
 
 ### <a name="background"></a>Hintergrund
 
-Um für den Microsoft Store zertifiziert zu werden, müssen apps nicht zum Debuggen kompiliert werden und sie nicht auf die Debugversionen einer ausführbaren Datei verweisen. Darüber hinaus müssen Sie den Code für die App optimiert erstellen, damit dieser Test bestanden wird.
+Um für den Microsoft Store zertifiziert zu werden, dürfen apps nicht zum Debuggen kompiliert werden, und sie müssen nicht auf die Debugversionen einer ausführbaren Datei verweisen. Darüber hinaus müssen Sie den Code für die App optimiert erstellen, damit dieser Test bestanden wird.
 
 ### <a name="test-details"></a>Testdetails
 
@@ -505,7 +505,7 @@ Testen Sie die App, um sicherzustellen, dass es sich nicht um einen Debugbuild h
 
 ### <a name="corrective-actions"></a>Maßnahmen
 
--   Erstellen Sie die app als Veröffentlichungsbuild, bevor Sie sie an den Microsoft Store übermitteln.
+-   Erstellen Sie die app als Releasebuild, bevor Sie sie an den Microsoft Store übermitteln.
 -   Stellen Sie sicher, dass Sie die richtige .NET Framework-Version installiert haben.
 -   Stellen Sie sicher, dass die App nicht über Links zu Debugversionen eines Frameworks verfügt und dass die Erstellung mit einer Releaseversion erfolgt. Wenn diese App .NET-Komponenten enthält, sollten Sie sich vergewissern, dass Sie die richtige Version des .NET-Frameworks installiert haben.
 
@@ -533,7 +533,7 @@ Testet MicrosoftDirect3D-Apps, um sicherzustellen, dass sie auf Geräten mit äl
 
 ### <a name="background"></a>Hintergrund
 
-Microsoft Store müssen alle Anwendungen mit Direct3D richtig gerendert bzw. ordnungsgemäß beendet werden Grafikkarten der Featureebene 9\-1.
+Microsoft Store müssen alle Anwendungen mit Direct3D richtig gerendert bzw. ordnungsgemäß Grafikkarten der Featureebene 9\-1 werden.
 
 Da die Benutzer die Grafikhardware ihrer Geräte nach der Installation der App ändern können, muss Ihre App für den Fall, dass Sie eine Featureebene höher als 9\-1 verwenden, beim Start erkennen, ob die aktuelle Hardware die Mindestanforderungen erfüllt. Wenn die Mindestanforderungen nicht erfüllt sind, muss Ihre App dem Benutzer eine Meldung mit den Direct3D-Anforderungen anzeigen. Wird zudem eine App auf ein Gerät heruntergeladen, mit dem sie nicht kompatibel ist, sollte sie dies beim Start erkennen und dem Kunden eine Meldung bezüglich der erforderlichen Voraussetzungen anzeigen.
 
@@ -543,7 +543,7 @@ Bei diesem Test wird überprüft, ob Apps unter der Featureebene9\-1 richtig ger
 
 ### <a name="corrective-action"></a>Maßnahmen
 
-Stellen Sie sicher, dass die App unter der Direct3D-Featureebene9\-1 richtig gerendert wird. Dies gilt auch, wenn die App für die Ausführung auf einer höheren Featureebene bestimmt ist. Weitere Informationen finden Sie unter [Entwickeln für unterschiedliche Direct3D-Featureebenen](http://go.microsoft.com/fwlink/p/?LinkID=253575).
+Stellen Sie sicher, dass die App unter der Direct3D-Featureebene9\-1 richtig gerendert wird. Dies gilt auch, wenn die App für die Ausführung auf einer höheren Featureebene bestimmt ist. Weitere Informationen finden Sie unter [Entwickeln für unterschiedliche Direct3D-Featureebenen](https://go.microsoft.com/fwlink/p/?LinkID=253575).
 
 ### <a name="direct3d-trim-after-suspend"></a>Direct3D-Kürzung nach dem Anhalten
 

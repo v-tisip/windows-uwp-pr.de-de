@@ -6,19 +6,19 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: Windows 10, UWP, Anzeigen, Werbung, Installieren, SDK, Werbebibliotheken
 ms.localizationpriority: medium
-ms.openlocfilehash: 2066d055f7abf0e9a34e245d9c6a95e14596d362
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 121accdfc8996c609c616838f645f19e2377c7c5
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939338"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047751"
 ---
 # <a name="install-the-microsoft-advertising-sdk"></a>Installieren des Microsoft Advertising-SDK
 
-Zum Anzeigen von UWP-Apps unter Windows10, installieren Sie das [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp). Dieses SDK ist eine Erweiterung von Visual Studio2015 und späteren Versionen.
+Zum Anzeigen von UWP-Apps unter Windows10, installieren Sie das [Microsoft Advertising-SDK](https://aka.ms/ads-sdk-uwp). Dieses SDK ist eine Erweiterung von Visual Studio2015 und späteren Versionen.
 
 > [!NOTE]
-> Wenn Sie Entwickeln einer JavaScript/HTML UWP-app, und Sie Windows 10 SDK Version 10.0.14393 (Anniversary Update) installiert haben, oder höher ist, müssen Sie auch die [WinJS](https://github.com/winjs/winjs) -Bibliothek installieren. Diese Bibliothek war in den früheren Versionen von Windows 10 enthalten, aber ab Windows 10 Anniversary SDK Version 10.0.14393 (Anniversary Update) muss diese Bibliothek separat installiert werden.
+> Wenn Sie Entwickeln einer JavaScript/HTML UWP-app und Sie Windows 10 SDK Version 10.0.14393 (Anniversary Update) installiert haben, oder höher ist, müssen Sie auch die [WinJS](https://github.com/winjs/winjs) -Bibliothek installieren. Diese Bibliothek war in den früheren Versionen von Windows 10 enthalten, aber ab Windows 10 Anniversary SDK Version 10.0.14393 (Anniversary Update) muss diese Bibliothek separat installiert werden.
 
 <span id="install-msi" />
 
@@ -35,7 +35,7 @@ So installieren Sie das Microsoft Advertising-SDK über das MSI-Installationspro
     MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
     ```
 
-3.  Laden Sie das [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) herunter, und installieren Sie es. Die Installation kann einige Minuten dauern. Warten Sie unbedingt, bis der Vorgang abgeschlossen ist.
+3.  Laden Sie das [Microsoft Advertising-SDK](https://aka.ms/ads-sdk-uwp) herunter, und installieren Sie es. Die Installation kann einige Minuten dauern. Warten Sie unbedingt, bis der Vorgang abgeschlossen ist.
 
 4.  Starten Sie Visual Studio neu.
 
@@ -66,7 +66,7 @@ So installieren Sie das Microsoft Advertising-SDK für ein bestimmtes UWP-Projek
 
 5. Geben Sie in das Suchfeld **Microsoft.Advertising.XAML** (für ein XAML-Projekt) oder **Microsoft.Advertising.JS** (für ein JavaScript/HTML-Projekt) ein, und installieren Sie das entsprechende Paket. Wenn das Paket fertig ist installieren, speichern Sie die Projektmappe.
     > [!NOTE]
-    > Wenn das **Ausgabe**-Fenster einen *Installationspaket*-Fehler anzeigt, der Ihnen mitteilt, dass der angegebene Pfad zu lang ist, müssen Sie NuGet möglicherweise so konfigurieren, dass es Pakete an einen anderen Speicherort mit einem kürzeren Pfad extrahiert. Fügen Sie hierzu den ```repositoryPath```-Wert einer nuget.config-Datei auf Ihrem Computer hinzu, und weisen Sie ihn einem kurzen Ordnerpfad zu, unter dem die NuGet-Pakete extrahiert werden können. Weitere Informationen finden Sie in [diesem Artikel](http://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior) in der NuGet-Dokumentation. Sie können auch versuchen, das Visual Studio-Projekt in einen anderen Ordner mit einem kürzeren Pfad zu verschieben.
+    > Wenn das **Ausgabe**-Fenster einen *Installationspaket*-Fehler anzeigt, der Ihnen mitteilt, dass der angegebene Pfad zu lang ist, müssen Sie NuGet möglicherweise so konfigurieren, dass es Pakete an einen anderen Speicherort mit einem kürzeren Pfad extrahiert. Fügen Sie hierzu den ```repositoryPath```-Wert einer nuget.config-Datei auf Ihrem Computer hinzu, und weisen Sie ihn einem kurzen Ordnerpfad zu, unter dem die NuGet-Pakete extrahiert werden können. Weitere Informationen finden Sie in [diesem Artikel](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior) in der NuGet-Dokumentation. Sie können auch versuchen, das Visual Studio-Projekt in einen anderen Ordner mit einem kürzeren Pfad zu verschieben.
 
 6. Schließen Sie die Lösung und öffnen Sie es erneut.
 
@@ -101,7 +101,7 @@ Exemplarische Vorgehensweisen zur erstmaligen Verwendung der Werbe-APIs finden S
 
 ## <a name="understanding-framework-packages-in-the-microsoft-advertising-sdk"></a>Grundlegendes zu Frameworkpaketen im Microsoft Advertising-SDK
 
-Die Bibliothek „Microsoft.Advertising.dll“ im [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) (für UWP-Apps) ist als *Frameworkpaket* konfiguriert. Diese Bibliothek enthält die Werbe-APIs in den [Microsoft.Advertising](https://docs.microsoft.com/uwp/api/microsoft.advertising)- und [Microsoft.Advertising.WinRT.UI](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui)-Namespaces.
+Die Bibliothek „Microsoft.Advertising.dll“ im [Microsoft Advertising-SDK](https://aka.ms/ads-sdk-uwp) (für UWP-Apps) ist als *Frameworkpaket* konfiguriert. Diese Bibliothek enthält die Werbe-APIs in den [Microsoft.Advertising](https://docs.microsoft.com/uwp/api/microsoft.advertising)- und [Microsoft.Advertising.WinRT.UI](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui)-Namespaces.
 
 Da es sich bei dieser Bibliothek um ein Frameworkpaket handelt, bedeutet dies Folgendes: Nachdem ein Benutzer eine Version Ihrer App installiert hat, die diese Bibliothek verwendet, wird diese Bibliothek automatisch auf dessen Gerät über Windows Update aktualisiert, wenn eine neue Version der Bibliothek mit Fixes und Leistungsverbesserungen veröffentlicht wird. Dadurch wird sichergestellt, dass Ihre Kunden stets die neueste Version der Bibliothek auf ihren Geräten installiert haben.
 

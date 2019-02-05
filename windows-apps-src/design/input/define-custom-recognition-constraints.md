@@ -8,12 +8,12 @@ keywords: Sprache, Stimme, Spracherkennung, natürliche Sprache, diktieren, Eing
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 53539c73137b40d154db00fa9e340d81412764da
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 539acb242cfe6ee70d1311133a3f1a193860541a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942179"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047555"
 ---
 # <a name="define-custom-recognition-constraints"></a>Festlegen von benutzerdefinierten Erkennungseinschränkungen
 
@@ -144,7 +144,7 @@ SRGS-Grammatik bietet einen umfassenden Featuresatz, den Sie zum Erstellen kompl
 -   Verwenden Sie Semantik, um zu definieren, was Spracherkennung für Ihre App bedeutet.
 -   Geben Sie verschiedene Aussprachen an, entweder direkt in einer Grammatik oder über einen Link zu einem Lexikon.
 
-Weitere Informationen zu SRGS-Elementen und -Attributen finden Sie unter [SRGS-Grammatik – XML-Referenz](http://go.microsoft.com/fwlink/p/?LinkID=269886). Informationen zu den ersten Schritten zur Erstellung einer SRGS-Grammatik finden Sie unter [So wird's gemacht: Erstellen einer einfachen XML-Grammatik](http://go.microsoft.com/fwlink/p/?LinkID=269887).
+Weitere Informationen zu SRGS-Elementen und -Attributen finden Sie unter [SRGS-Grammatik – XML-Referenz](https://go.microsoft.com/fwlink/p/?LinkID=269886). Informationen zu den ersten Schritten zur Erstellung einer SRGS-Grammatik finden Sie unter [So wird's gemacht: Erstellen einer einfachen XML-Grammatik](https://go.microsoft.com/fwlink/p/?LinkID=269887).
 
 Beachten Sie folgende Punkte:
 
@@ -178,7 +178,7 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Diese SRGS-Datei (srgs.grxml) enthält Tags für die semantische Interpretation. Diese Tags liefern einen Mechanismus, mit dem übereinstimmende Grammatikdaten an Ihre App zurückgegeben werden. Die Grammatik muss der [Semantic Interpretation for Speech Recognition (SISR)1.0](http://go.microsoft.com/fwlink/p/?LinkID=201765)-Spezifikation des World Wide Web Consortium (W3C) entsprechen.
+Diese SRGS-Datei (srgs.grxml) enthält Tags für die semantische Interpretation. Diese Tags liefern einen Mechanismus, mit dem übereinstimmende Grammatikdaten an Ihre App zurückgegeben werden. Die Grammatik muss der [Semantic Interpretation for Speech Recognition (SISR)1.0](https://go.microsoft.com/fwlink/p/?LinkID=201765)-Spezifikation des World Wide Web Consortium (W3C) entsprechen.
 
 Hier horchen wir auf Varianten von „Ja“ und „Nein“.
 
@@ -236,7 +236,7 @@ Mit den Eigenschaften [**SpeechRecognizerUIOptions.AudiblePrompt**](https://msdn
 * [Sprachinteraktionen](speech-interactions.md)
 
 **Beispiele**
-* [Beispiel zu Spracherkennung und Sprachsynthese](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Beispiel zu Spracherkennung und Sprachsynthese](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

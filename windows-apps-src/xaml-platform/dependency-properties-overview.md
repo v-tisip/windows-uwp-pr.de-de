@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 92e8b0b0d68b1dc4110818977024d3040194a376
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 52ab0dfba6261a5e278a42f38ea13c632df400f9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928461"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050773"
 ---
 # <a name="dependency-properties-overview"></a>Übersicht über Abhängigkeitseigenschaften
 
@@ -30,7 +30,7 @@ Der Zweck von Abhängigkeitseigenschaften besteht darin, es zu ermöglichen, den
 - Vorlagen zur mehrfachen Verwendung, z.B. Ressourcen und Stile
 - Werte, die aufgrund von Beziehungen mit anderen Elementen in der Elementstruktur bekannt sind (übergeordnete und untergeordnete Elemente).
 
-Eine Abhängigkeitseigenschaft repräsentiert oder unterstützt ein spezifisches Feature des Programmiermodells zum Definieren einer Windows-Runtime-app mit XAML für die UI und c#, Microsoft Visual Basic oder für VisualC++-komponentenerweiterungen (C++ / CX) für den Code. Zu diesen Features gehören:
+Eine Abhängigkeitseigenschaft repräsentiert oder unterstützt ein spezifisches Feature des Programmiermodells zum Definieren einer Windows-Runtime-app mit XAML für die UI und c#, Microsoft Visual Basic oder für VisualC++-komponentenerweiterungen (C++ / CX) für Code. Zu diesen Features gehören:
 
 - Datenbindung
 - Stile
@@ -209,7 +209,7 @@ Die Threadingmerkmale von [**DependencyObject**](https://msdn.microsoft.com/libr
 - [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946)
 - [Storyboardanimationen](https://msdn.microsoft.com/library/windows/apps/mt187354)
 - [Erstellen von Windows-Runtime-Komponenten](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
-- [XAML-Benutzer und benutzerdefinierte Steuerelemente](http://go.microsoft.com/fwlink/p/?linkid=238581)
+- [XAML-Benutzer und benutzerdefinierte Steuerelemente](https://go.microsoft.com/fwlink/p/?linkid=238581)
 
 ## <a name="apis-related-to-dependency-properties"></a>APIs für Abhängigkeitseigenschaften
 

@@ -7,12 +7,12 @@ ms.date: 11/07/2017
 ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
-ms.openlocfilehash: e8a2b0125944a8a4db66b41d26fcd4a0aa35b5b2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d641bcff48b830c56a1d03ee861ec2a4c5f433b6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933750"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048607"
 ---
 # <a name="globalize-your-datetimenumber-formats"></a>Globalisieren von Datum, Uhrzeit und Zahlenformaten
 
@@ -173,7 +173,7 @@ Für Szenarien, in denen Sie basierend auf den Sprach-, Regions- und Kultureinst
 
 ## <a name="samples"></a>Beispiele
 
-* [Kalenderdetails und Mathematikbeispiel](http://go.microsoft.com/fwlink/p/?linkid=231636)
-* [Beispiel für Datums- und Uhrzeitformatierung](http://go.microsoft.com/fwlink/p/?linkid=231618)
-* [Beispiel für Globalisierungseinstellungen](http://go.microsoft.com/fwlink/p/?linkid=231608)
-* [Beispiel für Zahlenformatierung und Analyse](http://go.microsoft.com/fwlink/p/?linkid=231620)
+* [Kalenderdetails und Mathematikbeispiel](https://go.microsoft.com/fwlink/p/?linkid=231636)
+* [Beispiel für Datums- und Uhrzeitformatierung](https://go.microsoft.com/fwlink/p/?linkid=231618)
+* [Beispiel für Globalisierungseinstellungen](https://go.microsoft.com/fwlink/p/?linkid=231608)
+* [Beispiel für Zahlenformatierung und Analyse](https://go.microsoft.com/fwlink/p/?linkid=231620)

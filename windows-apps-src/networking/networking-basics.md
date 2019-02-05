@@ -6,12 +6,12 @@ ms.date: 06/01/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 173164106e068e3fa081c8d7ddf7838d5b3d18db
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ffc2f31b52e7913905c7d64ab797b2939cfb313d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927456"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045223"
 ---
 # <a name="networking-basics"></a>Networking-Grundlagen
 Aktionen, die Sie für eine netzwerkfähige App ausführen müssen.
@@ -45,7 +45,7 @@ Der Socketbroker soll den Steuerkanal-Auslöser ersetzen, in dem er anwendbar is
 ### <a name="choosing-a-network-trigger"></a>Wählen eines Netzwerkauslösers
 Es gibt einige Szenarien, in denen beide Auslöserarten geeignet sind. Beachten Sie bei der Auswahl der Auslöserart der App Folgendes:
 
--   Bei Verwendung von [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) oder [System.Net.Http.HttpClientHandler](http://go.microsoft.com/fwlink/p/?linkid=241638) müssen Sie [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) verwenden.
+-   Bei Verwendung von [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) oder [System.Net.Http.HttpClientHandler](https://go.microsoft.com/fwlink/p/?linkid=241638) müssen Sie [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) verwenden.
 -   Wenn Sie pushfähige **StreamSockets** verwenden, können Sie Kanaltrigger und vorzugsweise [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) verwenden. In letzterem Fall kann das System Arbeitsspeicher freigeben und den Stromverbrauch verringern, wenn die Verbindung nicht aktiv verwendet wird.
 -   Wenn Sie den Speicherbedarf Ihrer App während der aktiven Verarbeitung von Netzwerkanforderungen minimieren möchten, sollten Sie nach Möglichkeit [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) verwenden.
 -   Wenn Sie möchten, dass Ihre App Daten empfängt, während sich das System im verbundenen Standbymodus befindet, verwenden Sie [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009).
@@ -507,4 +507,4 @@ Die Netzwerk-APIs unterstützen verschiedene Methoden zum Abrufen der detaillier
 -   Andere APIs bieten eine Methode zum Abrufen des tatsächlichen **HRESULT**-Werts.
 
 ## <a name="related-topics"></a>Verwandte Themen
-* [Verbesserungen bei der Netzwerk-API unter Windows 10](http://blogs.windows.com/buildingapps/2015/07/02/networking-api-improvements-in-windows-10/)
+* [Verbesserungen bei der Netzwerk-API unter Windows 10](https://blogs.windows.com/buildingapps/2015/07/02/networking-api-improvements-in-windows-10/)

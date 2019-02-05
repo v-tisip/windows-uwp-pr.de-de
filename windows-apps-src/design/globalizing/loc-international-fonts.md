@@ -6,125 +6,125 @@ ms.date: 11/02/2017
 ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c525c79287a81421c68fca5bed3393b4d230d8a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6f1d618a111ee207eacfceb52680859c8272e0ed
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942684"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046653"
 ---
 # <a name="international-fonts"></a>Internationale Schriften
 
 Dieses Thema enthält eine Liste der für UWP-Apps verfügbaren Schriften, die in andere Sprachen als Englisch (USA) lokalisiert sind.
 
-In der folgenden Tabelle ist in der Spalte „Sprachtag” das [BCP-47-Sprachtag](http://go.microsoft.com/fwlink/p/?linkid=227302) der Sprache angegeben. Eine Liste mit speziell vom Microsoft Store unterstützten Sprachtags finden Sie unter [Unterstützte Sprachen](../../publish/supported-languages.md).
+In der folgenden Tabelle ist in der Spalte „Sprachtag” das [BCP-47-Sprachtag](https://go.microsoft.com/fwlink/p/?linkid=227302) der Sprache angegeben. Eine Liste mit speziell vom Microsoft Store unterstützten Sprachtags finden Sie unter [Unterstützte Sprachen](../../publish/supported-languages.md).
 
 | Sprachen | Sprachtag | In Windows verwendete Schriftart |
 | --------- | ----------- | -------------------- |
-| Afrikaans | af-ZA | SegoeUI |
-| Albanisch | sq-AL | SegoeUI |
+| Afrikaans | af-ZA | Segoe UI |
+| Albanisch | sq-AL | Segoe UI |
 | Amhari | am-ET | Ebrima |
-| Arabisch | ar-SA | SegoeUI |
-| Armenisch | hy-AM | SegoeUI |
-| Assamesisch | as-IN | NirmalaUI |
-| Aserbaidschanisch (Lateinisch) | az-Latn-AZ | SegoeUI |
-| Bangla (Bangladesch) | bn-BD | NirmalaUI |
+| Arabisch | ar-SA | Segoe UI |
+| Armenisch | hy-AM | Segoe UI |
+| Assamesisch | as-IN | Nirmala UI |
+| Aserbaidschanisch (Lateinisch) | az-Latn-AZ | Segoe UI |
+| Bangla (Bangladesch) | bn-BD | Nirmala UI |
 | Bangla (Indien) | bn-IN | NirmalaUI |
-| Baskisch (Baskisch) | eu-ES | SegoeUI |
-| Belarussisch | be-BY | SegoeUI |
-| Bosnisch (Lateinisch) | bs-Latn-BA | SegoeUI |
-| Bulgarisch | bg-BG | SegoeUI |
-| Katalanisch | ca-ES | SegoeUI |
-| Zentralkurdisch (Arabisch) | ku-ARAB-IQ | SegoeUI |
+| Baskisch (Baskisch) | eu-ES | Segoe UI |
+| Belarussisch | be-BY | Segoe UI |
+| Bosnisch (Lateinisch) | bs-Latn-BA | Segoe UI |
+| Bulgarisch | bg-BG | Segoe UI |
+| Katalanisch | ca-ES | Segoe UI |
+| Zentralkurdisch (Arabisch) | ku-ARAB-IQ | Segoe UI |
 | Cherokee (Cherokee) | chr-CHER-US | Gadugi |
 | Chinesisch vereinfacht | zh-CN | MSYaHei UI |
 | Chinesisch (traditionell, Hongkong SAR) | zh-HK | MSJhengHei UI |
 | Chinesisch (traditionell, Taiwan) | zh-TW | MSJhengHei UI |
-| Kroatisch | hr-HR | SegoeUI |
-| Tschechisch | cs-CZ | SegoeUI |
-| Dänisch | da-DK | SegoeUI |
-| Dari | prs-AF | SegoeUI |
-| Niederländisch | nl-NL | SegoeUI |
-| Englisch (Vereinigtes Königreich) | en-GB | SegoeUI |
-| Estnisch | et-EE | SegoeUI |
-| Filipino | fil-PH | SegoeUI |
-| Finnisch | fi-FI | SegoeUI |
-| Französisch | fr-FR | SegoeUI |
+| Kroatisch | hr-HR | Segoe UI |
+| Tschechisch | cs-CZ | Segoe UI |
+| Dänisch | da-DK | Segoe UI |
+| Dari | prs-AF | Segoe UI |
+| Niederländisch | nl-NL | Segoe UI |
+| Englisch (Vereinigtes Königreich) | en-GB | Segoe UI |
+| Estnisch | et-EE | Segoe UI |
+| Filipino | fil-PH | Segoe UI |
+| Finnisch | fi-FI | Segoe UI |
+| Französisch | fr-FR | Segoe UI |
 | Galicisch | gl-ES | SegoeUI |
-| Georgisch | ka-GE | SegoeUI |
-| Deutsch | de-DE | SegoeUI |
-| Griechisch | el-GR | SegoeUI |
-| Gujarati | gu-IN | NirmalaUI |
-| Haussa (Lateinisch) | ha-Latn-NG | SegoeUI |
-| Hebräisch | he-IL | SegoeUI |
-| Hindi | hi-IN | NirmalaUI |
-| Ungarisch | hu-HU | SegoeUI |
-| Isländisch | is-IS | SegoeUI |
-| Igbo | ig-NG | SegoeUI |
-| Indonesisch | id-ID | SegoeUI |
-| Irisch | ga-IE | SegoeUI |
-| isi Xhosa | xh-ZA | SegoeUI |
-| isi Zulu | zu-ZA | SegoeUI |
-| Italienisch | it-IT | SegoeUI |
+| Georgisch | ka-GE | Segoe UI |
+| Deutsch | de-DE | Segoe UI |
+| Griechisch | el-GR | Segoe UI |
+| Gujarati | gu-IN | Nirmala UI |
+| Haussa (Lateinisch) | ha-Latn-NG | Segoe UI |
+| Hebräisch | he-IL | Segoe UI |
+| Hindi | hi-IN | Nirmala UI |
+| Ungarisch | hu-HU | Segoe UI |
+| Isländisch | is-IS | Segoe UI |
+| Igbo | ig-NG | Segoe UI |
+| Indonesisch | id-ID | Segoe UI |
+| Irisch | ga-IE | Segoe UI |
+| isi Xhosa | xh-ZA | Segoe UI |
+| isi Zulu | zu-ZA | Segoe UI |
+| Italienisch | it-IT | Segoe UI |
 | Japanisch | ja-JP | MeiryoUI (siehe unten stehende Anmerkungen) |
-| Kannada | kn-IN | NirmalaUI |
-| Kasachisch | kk-KZ | SegoeUI |
+| Kannada | kn-IN | Nirmala UI |
+| Kasachisch | kk-KZ | Segoe UI |
 | Khmer | km-KH | LeelawadeeUI |
-| K'iche' | qut-GT | SegoeUI |
-| Rwanda | rw-RW | SegoeUI |
-| Kisuaheli | sw-KE | SegoeUI |
-| Konkani | kok-IN | NirmalaUI |
+| K'iche' | qut-GT | Segoe UI |
+| Rwanda | rw-RW | Segoe UI |
+| Kisuaheli | sw-KE | Segoe UI |
+| Konkani | kok-IN | Nirmala UI |
 | Koreanisch | ko-KR | Malgun Gothic |
-| Kirgisisch | ky-KG | SegoeUI |
-| Lettisch | lv-LV | SegoeUI |
-| Litauisch | lt-LT | SegoeUI |
-| Luxemburgisch | lb-LU | SegoeUI |
-| Mazedonisch | mk-MK | SegoeUI |
-| Malaiisch | ms-MY | SegoeUI |
+| Kirgisisch | ky-KG | Segoe UI |
+| Lettisch | lv-LV | Segoe UI |
+| Litauisch | lt-LT | Segoe UI |
+| Luxemburgisch | lb-LU | Segoe UI |
+| Mazedonisch | mk-MK | Segoe UI |
+| Malaiisch | ms-MY | Segoe UI |
 | Malayalam | ml-IN | NirmalaUI |
-| Maltesisch | mt-MT | SegoeUI |
+| Maltesisch | mt-MT | Segoe UI |
 | Maori | mi-NZ | SegoeUI |
-| Marathi | mr-IN | NirmalaUI |
-| Mongolisch (Kyrillisch) | mn-MN | SegoeUI |
-| Nepali | ne-NP | NirmalaUI |
-| Norwegisch (Bokmal) | nb-NO | SegoeUI |
-| Norwegisch (Nynorsk)  | nn-NO | SegoeUI |
-| Odia | or-IN | NirmalaUI |
-| Persisch | fa-IR | SegoeUI |
-| Polnisch | pl-PL | SegoeUI |
-| Portugiesisch (Brasilien) | pt-BR | SegoeUI |
-| Portugiesisch (Portugal) | pt-PT | SegoeUI |
-| Punjabi | pa-IN | NirmalaUI |
-| Punjabi (Arabisch) | pa-Arab-PK | SegoeUI |
-| Quechua | quz-PE | SegoeUI |
-| Rumänisch | ro-RO | SegoeUI |
-| Russisch | ru-RU | SegoeUI |
-| Schottisch-Gälisch | gd-GB | SegoeUI |
-| Serbisch (Kyrillisch, Bosnien und Herzegowina) | sr-Cyrl-BA | SegoeUI |
-| Serbisch (Kyrillisch, Serbien) | sr-Cyrl-CS | SegoeUI |
-| Serbisch (Lateinisch) | sr-Latn-CS | SegoeUI |
-| Sesotho sa Leboa | nso-ZA | SegoeUI |
-| seTswana | tn-ZA | SegoeUI |
-| Sindhi (Arabisch) | sd-Arab-PK | SegoeUI |
-| Sinhala | si-LK | NirmalaUI |
-| Slowakisch | sk-SK | SegoeUI |
-| Slowenisch | sl-SI | SegoeUI |
-| Spanisch | es-ES | SegoeUI |
-| Schwedisch | sv-SE | SegoeUI |
-| Tadschikisch (Kyrillisch) | tg-Cyrl-TJ | SegoeUI |
+| Marathi | mr-IN | Nirmala UI |
+| Mongolisch (Kyrillisch) | mn-MN | Segoe UI |
+| Nepali | ne-NP | Nirmala UI |
+| Norwegisch (Bokmal) | nb-NO | Segoe UI |
+| Norwegisch (Nynorsk)  | nn-NO | Segoe UI |
+| Odia | or-IN | Nirmala UI |
+| Persisch | fa-IR | Segoe UI |
+| Polnisch | pl-PL | Segoe UI |
+| Portugiesisch (Brasilien) | pt-BR | Segoe UI |
+| Portugiesisch (Portugal) | pt-PT | Segoe UI |
+| Punjabi | pa-IN | Nirmala UI |
+| Punjabi (Arabisch) | pa-Arab-PK | Segoe UI |
+| Quechua | quz-PE | Segoe UI |
+| Rumänisch | ro-RO | Segoe UI |
+| Russisch | ru-RU | Segoe UI |
+| Schottisch-Gälisch | gd-GB | Segoe UI |
+| Serbisch (Kyrillisch, Bosnien und Herzegowina) | sr-Cyrl-BA | Segoe UI |
+| Serbisch (Kyrillisch, Serbien) | sr-Cyrl-CS | Segoe UI |
+| Serbisch (Lateinisch) | sr-Latn-CS | Segoe UI |
+| Sesotho sa Leboa | nso-ZA | Segoe UI |
+| seTswana | tn-ZA | Segoe UI |
+| Sindhi (Arabisch) | sd-Arab-PK | Segoe UI |
+| Sinhala | si-LK | Nirmala UI |
+| Slowakisch | sk-SK | Segoe UI |
+| Slowenisch | sl-SI | Segoe UI |
+| Spanisch | es-ES | Segoe UI |
+| Schwedisch | sv-SE | Segoe UI |
+| Tadschikisch (Kyrillisch) | tg-Cyrl-TJ | Segoe UI |
 | Tamil | ta-IN | NirmalaUI |
-| Tatarisch | tt-RU | SegoeUI |
+| Tatarisch | tt-RU | Segoe UI |
 | Telugu | te-IN | NirmalaUI |
 | Thailändisch | th-TH | LeelawadeeUI |
 | Tigrinya | ti-ET | Ebrima |
 | Türkisch | tr-TR | SegoeUI |
-| Turkmenisch | tk-TM | SegoeUI |
-| Ukrainisch | uk-UA | SegoeUI |
-| Urdu | ur-PK | SegoeUI |
-| Uigurisch | ug-CN | SegoeUI |
-| Usbekisch (Lateinisch) | uz-Latn-UZ | SegoeUI |
-| Valencianisch | ca-ES-valencia | SegoeUI |
-| Vietnamesisch | vi-VN | SegoeUI |
+| Turkmenisch | tk-TM | Segoe UI |
+| Ukrainisch | uk-UA | Segoe UI |
+| Urdu | ur-PK | Segoe UI |
+| Uigurisch | ug-CN | Segoe UI |
+| Usbekisch (Lateinisch) | uz-Latn-UZ | Segoe UI |
+| Valencianisch | ca-ES-valencia | Segoe UI |
+| Vietnamesisch | vi-VN | Segoe UI |
 | Walisisch | cy-GB | SegoeUI |
 | Wolof | wo-SN | SegoeUI |
 | Yoruba | yo-NG | Segoe UI |
@@ -135,5 +135,5 @@ Die Schriftart MeiryoUI wird in Windows verwendet Windows enthält Yu Gothic und
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [BCP-47-Sprachtag](http://go.microsoft.com/fwlink/p/?linkid=227302)
+* [BCP-47-Sprachtag](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Unterstützte Sprachen](../../publish/supported-languages.md)

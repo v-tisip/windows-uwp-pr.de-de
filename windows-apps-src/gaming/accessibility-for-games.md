@@ -6,12 +6,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: Windows10, UWP, Bedienungshilfen, Spiele
 ms.localizationpriority: medium
-ms.openlocfilehash: 489804c4645c8e6d1c4926e362f81926c8b2f3c8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0e1d9d25fc63dd2fbb8d258fdaee692ccdfdc911
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937598"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9046333"
 ---
 #  <a name="making-games-accessible"></a>Erstellen barrierefreier Spiele
 
@@ -33,7 +33,7 @@ Grundsätzlich betrachtet, ist es nicht schwierig, die Entwicklung barrierefreie
 
 Sie multiplizieren die Zahl der Benutzer, die Ihr Spiel spielen können, mit der Qualität Ihres Spiels und erhalten so die Verkaufszahlen für Ihr Spiel.
 
-Wenn Sie ein beeindruckendes Spiel entwickelt haben, das so kompliziert oder komplex ist, dass es nur von sehr wenigen Menschen gespielt werden kann, begrenzen Sie Ihre Verkaufszahlen. Und wenn Sie ein Spiel entwickeln, das von Menschen mit physischen, sensorischen oder kognitiven Behinderungen nicht gespielt werden kann, entgehen Ihnen ebenfalls mögliche Umsätze. Angesichts der Tatsache, dass [19 % der Bevölkerung in den Vereinigten Staaten über eine Art von Behinderung verfügen](http://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html), [ungefähr 14% aller Erwachsener in den USA Probleme haben](https://nces.ed.gov/naal/estimates/overview.aspx) und [ungefähr 10% der Männer über eine Form von Farbenblindheit verfügen](https://www.aao.org/eye-health/diseases/color-blindness-risk), kann dies potenziell einen großen Einfluss auf den Umsatz Ihres Titels haben. 
+Wenn Sie ein beeindruckendes Spiel entwickelt haben, das so kompliziert oder komplex ist, dass es nur von sehr wenigen Menschen gespielt werden kann, begrenzen Sie Ihre Verkaufszahlen. Und wenn Sie ein Spiel entwickeln, das von Menschen mit physischen, sensorischen oder kognitiven Behinderungen nicht gespielt werden kann, entgehen Ihnen ebenfalls mögliche Umsätze. Angesichts der Tatsache, dass [19 % der Bevölkerung in den Vereinigten Staaten über eine Art von Behinderung verfügen](https://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html), [ungefähr 14% aller Erwachsener in den USA Probleme haben](https://nces.ed.gov/naal/estimates/overview.aspx) und [ungefähr 10% der Männer über eine Form von Farbenblindheit verfügen](https://www.aao.org/eye-health/diseases/color-blindness-risk), kann dies potenziell einen großen Einfluss auf den Umsatz Ihres Titels haben. 
 
 Weitere geschäftliche Begründungen finden Sie unter [Erstellen barrierefreier Videospiele](https://msdn.microsoft.com/library/windows/desktop/ee415219).
 
@@ -158,7 +158,7 @@ Verbraucher möchten wissen, ob Ihr Spiel von Spielern mit Behinderungen gespiel
 
 ## <a name="game-accessibility-features"></a>Barrierefreiheitsfeatures von Spielen
 
-In diesem Abschnitt werden einige Features beschrieben, mit denen Sie die Barrierefreiheit Ihres Spiels verbessern können. Diese Features sind den [Anleitungen für die Barrierefreiheit von Spielen](http://gameaccessibilityguidelines.com/) entnommen, die die Ergebnisse der Zusammenarbeit einer Gruppe von Studios, Spezialisten und Hochschullehrern darstellen. Weitere Informationen finden Sie unter [Anleitungen für die Barrierefreiheit von Spielen](http://gameaccessibilityguidelines.com/). 
+In diesem Abschnitt werden einige Features beschrieben, mit denen Sie die Barrierefreiheit Ihres Spiels verbessern können. Diese Features sind den [Anleitungen für die Barrierefreiheit von Spielen](https://gameaccessibilityguidelines.com/) entnommen, die die Ergebnisse der Zusammenarbeit einer Gruppe von Studios, Spezialisten und Hochschullehrern darstellen. Weitere Informationen finden Sie unter [Anleitungen für die Barrierefreiheit von Spielen](https://gameaccessibilityguidelines.com/). 
 
 ### <a name="colorblind-friendly-graphics-and-user-interface"></a>Für farbenblinde Personen geeignete Grafiken und Benutzeroberflächen
 
@@ -175,7 +175,7 @@ Da eine reduzierte Empfindlichkeit für blaues Licht seltener ist, werden bei de
     
   + Verlassen Sie sich nicht ausschließlich auf Farben, um zu kommunizieren oder um Spielobjekte zu unterscheiden. Verwenden Sie ebenfalls Formen und Muster.
   + Wenn Sie sich nur auf Farben verlassen, gruppieren Sie die Einstellungen mit einer kostenlosen Auswahl an Farben, damit das Spiel vollständig durch den Spieler angepasst werden kann, der diese benötigt, und keine zusätzliche Arbeit für Spieler darstellt, die diese nicht benötigen.
-  + Verwenden Sie einen Simulator für Sehschwächen, um Ihre Entwürfe zu testen, damit Sie diese mit den Augen einer Person mit Sehschwäche anzeigen können. Dadurch können Sie Kontrastprobleme vermeiden. [Color Oracle](http://www.colororacle.org) ist ein kostenloser Simulator für farbenblinde Personen, der die drei am häufigsten verwendeten Arten von Farbsehschwäche – Rotgrünblindheit, Protanopia und Tritanopia – simulieren kann.
+  + Verwenden Sie einen Simulator für Sehschwächen, um Ihre Entwürfe zu testen, damit Sie diese mit den Augen einer Person mit Sehschwäche anzeigen können. Dadurch können Sie Kontrastprobleme vermeiden. [Color Oracle](https://www.colororacle.org) ist ein kostenloser Simulator für farbenblinde Personen, der die drei am häufigsten verwendeten Arten von Farbsehschwäche – Rotgrünblindheit, Protanopia und Tritanopia – simulieren kann.
   
 ### <a name="closed-captioning-and-subtitles"></a>Untertitelungen und Untertitel
 
@@ -209,13 +209,13 @@ Audio- oder Soundeffekte bieten dem Spieler Feedback, zusätzlich zum visuellen 
 
 ### <a name="fully-mappable-controls"></a>Vollständig zuordbare Steuerelemente
 
-Es gibt Unternehmen und Organisationen wie z.B. [Special Effect](http://www.specialeffect.org.uk/), die benutzerdefinierte Steuergeräte für Spiele entwickeln, die mit verschiedenen Gamingsystemen wie Windows und Xbox One verwendet werden können. Diese Anpassung ermöglicht Benutzern mit unterschiedlichen Arten von Behinderungen, Spiele zu spielen, die sie andernfalls möglicherweise nicht spielen könnten. Weitere Informationen zu Personen, die nun mithilfe angepasster Steuergeräte eigenständig Spiele spielen können, finden Sie unter [Unterstützte Personen](http://www.specialeffect.org.uk/who-we-helped).
+Es gibt Unternehmen und Organisationen wie z.B. [Special Effect](https://www.specialeffect.org.uk/), die benutzerdefinierte Steuergeräte für Spiele entwickeln, die mit verschiedenen Gamingsystemen wie Windows und Xbox One verwendet werden können. Diese Anpassung ermöglicht Benutzern mit unterschiedlichen Arten von Behinderungen, Spiele zu spielen, die sie andernfalls möglicherweise nicht spielen könnten. Weitere Informationen zu Personen, die nun mithilfe angepasster Steuergeräte eigenständig Spiele spielen können, finden Sie unter [Unterstützte Personen](https://www.specialeffect.org.uk/who-we-helped).
 
 Als Spieleentwickler können Sie die Barrierefreiheit Ihres Spiels verbessern, indem Sie die vollständige Zuordbarkeit von Steuerelemente ermöglichen, damit Spieler ihre benutzerdefinierten Steuergeräte anschließen und die Tasten entsprechend ihren Bedürfnissen zuordnen können.
 
 Vollständig zuordbare Steuerelemente sind auch von Vorteil für Personen, die Standard-Controller verwenden. Ihre Spieler können ein Layout erstellen, das ihren eindeutigen Wünschen individuell entspricht.
 
-Sowohl die Xbox One-Standardsteuergeräte als auch die Xbox Elite-Steuergeräte ermöglichen die Anpassung der Steuergeräte, um ein präzises Gaming zu bieten. Um die Neuzuordnungsfunktionen vollkommen zu verwenden, __wird empfohlen, dass Entwickler das Neuzuordnen direkt im Spiel miteinbeziehen__. Weitere Informationen hierzu finden Sie unter [Xbox One](http://support.xbox.com/xbox-one/accessories/customize-standard-controller-with-accessories-app) und [Xbox Elite](http://support.xbox.com/xbox-one/accessories/use-accessories-app-configure-elite-controller).
+Sowohl die Xbox One-Standardsteuergeräte als auch die Xbox Elite-Steuergeräte ermöglichen die Anpassung der Steuergeräte, um ein präzises Gaming zu bieten. Um die Neuzuordnungsfunktionen vollkommen zu verwenden, __wird empfohlen, dass Entwickler das Neuzuordnen direkt im Spiel miteinbeziehen__. Weitere Informationen hierzu finden Sie unter [Xbox One](https://support.xbox.com/xbox-one/accessories/customize-standard-controller-with-accessories-app) und [Xbox Elite](https://support.xbox.com/xbox-one/accessories/use-accessories-app-configure-elite-controller).
 
 ### <a name="wider-selection-of-difficulty-levels"></a>Breitere Auswahl an Schwierigkeitsgraden
 
@@ -225,7 +225,7 @@ Die Anpassung der Schwierigkeitsgrade Ihres Spiels ist ein heikler Vorgang. Wenn
 
 ### <a name="photosensitivity-epilepsy-testing"></a>Tests auf Lichtempfindlichkeitsepilepsie
 
-Lichtempfindlichkeitsepilepsie (PSE) ist eine Erkrankung, bei der durch visuelle Reize wie aufblitzendes Licht oder bestimmte sich bewegende visuelle Formen und Muster Anfälle ausgelöst werden. Diese Erkrankung tritt bei ungefähr drei Prozent der Menschen auf und ist besonders bei Kindern und Jugendlichen verbreitet. Wir haben ungefähr [1 Person unter 4000 Personen im Alter von 5 bis 24 Jahren](http://www.epilepsy.com/information/professionals/about-epilepsy-seizures/reflex-seizures-and-related-epileptic-syndromes-3).
+Lichtempfindlichkeitsepilepsie (PSE) ist eine Erkrankung, bei der durch visuelle Reize wie aufblitzendes Licht oder bestimmte sich bewegende visuelle Formen und Muster Anfälle ausgelöst werden. Diese Erkrankung tritt bei ungefähr drei Prozent der Menschen auf und ist besonders bei Kindern und Jugendlichen verbreitet. Wir haben ungefähr [1 Person unter 4000 Personen im Alter von 5 bis 24 Jahren](https://www.epilepsy.com/information/professionals/about-epilepsy-seizures/reflex-seizures-and-related-epileptic-syndromes-3).
 
 Es gibt viele Faktoren, die beim Spielen von Videospielen eine lichtempfindliche Reaktion auslösen können, darunter die Spieldauer, die Häufigkeit des aufblitzenden Lichts, die Intensität des Lichts, der Kontrast zwischen Hintergrund und Licht, der Abstand zwischen Bildschirm und Spieler sowie die Wellenlänge des Lichts.
 
@@ -241,7 +241,7 @@ Vermeiden Sie Folgendes:
 * Mehr als fünf gleichmäßige wiederholte Streifen mit hohem Kontrast – Zeilen oder Spalten wie Raster und Schachbrettmuster, die aus kleineren Elementen wie z.B. Tupfen zusammengesetzt sind
 * Mehr als fünf Zeilen Text in Großbuchstaben ohne viel Abstand zwischen den Buchstaben und Zeilenabstände, die genauso hoch wie die Zeilen selbst sind, effektives Umwandeln in hohen Kontrast mit gleichmäßig alternieRendern Zeilen
 
-Verwenden Sie ein automatisiertes System, um das Spiel auf Reize zu überprüfen, die einen Anfall von Lichtempfindlichkeitsepilepsie auslösen können. (Beispiel: [The Harding Test](http://www.hardingtest.com/index.php?page=test) und [Harding Flash and Pattern Analyzer (FPA) G2](http://www.hardingfpa.com/harding-fpa-for-games/) von Cambridge Research System Ltd und Professor Graham Harding.) 
+Verwenden Sie ein automatisiertes System, um das Spiel auf Reize zu überprüfen, die einen Anfall von Lichtempfindlichkeitsepilepsie auslösen können. (Beispiel: [The Harding Test](https://www.hardingtest.com/index.php?page=test) und [Harding Flash and Pattern Analyzer (FPA) G2](https://www.hardingfpa.com/harding-fpa-for-games/) von Cambridge Research System Ltd und Professor Graham Harding.) 
 
 Fügen Sie **ein- und ausblenden** als Einstellung hinzu und legen Sie **Blitz** standardmäßig auf **Aus** fest. Dadurch schützen Sie Spieler, die noch nicht wissen, dass sie für Anfälle anfällig sind.
 
@@ -252,21 +252,21 @@ Planen Sie Pausen zwischen Spiellevels ein, damit Spieler nicht ohne Unterbrechu
 Im Folgenden finden Sie einige externe Websites, die zusätzliche Informationen in Bezug auf barrierefreie Spiele bereitstellen.
 
 ### <a name="game-accessibility-guidelines"></a>Anleitungen für die Barrierefreiheit von Spielen
-* [Anleitungen für die Barrierefreiheit von Spielen](http://gameaccessibilityguidelines.com/)
-* [Anleitungen der AbleGamers Foundation](http://www.includification.com/)
-* [Universell zugängliche Spiele (Universally Accessible (UA)-Spiele)](http://www.ics.forth.gr/hci/ua-games/index_main.php?l=e&c=555)
+* [Anleitungen für die Barrierefreiheit von Spielen](https://gameaccessibilityguidelines.com/)
+* [Anleitungen der AbleGamers Foundation](https://www.includification.com/)
+* [Universell zugängliche Spiele (Universally Accessible (UA)-Spiele)](https://www.ics.forth.gr/hci/ua-games/index_main.php?l=e&c=555)
 
 ### <a name="custom-input-controllers"></a>Benutzerdefinierte Eingabesteuergeräte
-* [Special Effect](http://www.specialeffect.org.uk/)
-* [Warfighter Engaged](http://www.warfighterengaged.org/)
+* [Special Effect](https://www.specialeffect.org.uk/)
+* [Warfighter Engaged](https://www.warfighterengaged.org/)
 
 ## <a name="references-used"></a>Verwendete Quellen
-* [Anleitungen für die Barrierefreiheit von Spielen](http://gameaccessibilityguidelines.com/)
-* [Anleitungen der AbleGamers Foundation](http://www.includification.com/)
-* [Color Blind Awareness, a Community Interest Company](http://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/)
-* [How to do subtitles well (Anleitung für das Erstellen von Untertiteln) – Blogbeitrag auf Gamasutra von Ian Hamilton](http://www.gamasutra.com/blogs/IanHamilton/20150715/248571/How_to_do_subtitles_well__basics_and_good_practices.php)
-* [Innovation for All Programme](http://www.inclusivedesign.no/practical-tools/definitions-article56-127.html)
-* [Epilepsie Foundation](http://www.epilepsy.com/)
+* [Anleitungen für die Barrierefreiheit von Spielen](https://gameaccessibilityguidelines.com/)
+* [Anleitungen der AbleGamers Foundation](https://www.includification.com/)
+* [Color Blind Awareness, a Community Interest Company](https://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/)
+* [How to do subtitles well (Anleitung für das Erstellen von Untertiteln) – Blogbeitrag auf Gamasutra von Ian Hamilton](https://www.gamasutra.com/blogs/IanHamilton/20150715/248571/How_to_do_subtitles_well__basics_and_good_practices.php)
+* [Innovation for All Programme](https://www.inclusivedesign.no/practical-tools/definitions-article56-127.html)
+* [Epilepsie Foundation](https://www.epilepsy.com/)
 
 ## <a name="related-links"></a>Verwandte Links
 * [Inklusives Design](https://www.microsoft.com/design/inclusive)

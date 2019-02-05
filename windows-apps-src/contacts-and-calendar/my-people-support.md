@@ -5,12 +5,12 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a486f27d390a651cec0dcad82246a858bab2f33
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 08acb2972469a84e6a37d7293ed00cae8df94dfb
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947553"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044444"
 ---
 # <a name="adding-my-people-support-to-an-application"></a>Support für Meine Kontakte zu einer Anwendung hinzufügen
 
@@ -252,7 +252,7 @@ async Task PinMultipleContacts(Contact[] contacts)
 + [„Meine Kontakte” freigeben](my-people-sharing.md)
 + [Meine Kontakte – Benachrichtigungen](my-people-notifications.md)
 + [Channel 9-Video zum Hinzufügen von „Meine Kontakte” zu einer Anwendung](https://channel9.msdn.com/Events/Build/2017/P4056)
-+ [Beispiel zur „Meine Kontakte”-Integration](http://aka.ms/mypeoplebuild2017)
++ [Beispiel zur „Meine Kontakte”-Integration](https://aka.ms/mypeoplebuild2017)
 + [Beispiel für Visitenkarten](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
 + [Dokumentation zur PinnedContactManager-Klasse](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager)
 + [Verbinden der App mit Aktionen auf einer Visitenkarte](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/integrating-with-contacts)

@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, Uwp, Analysen, Berichte, Dashboard, apps, Daten, Metriken
 ms.localizationpriority: medium
-ms.openlocfilehash: f6a6d79745ec98af2c7f562297092eea3feda659
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6f76b1f897c345fb71beec8e37e592165922b2ed
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945732"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047711"
 ---
 # <a name="analyze-app-performance"></a>Analysieren der App-Leistung
 
@@ -47,7 +47,7 @@ In diesem Abschnitt erhalten Sie Details zu den Informationen, die in den folgen
 
 ## <a name="access-analytics-data-outside-of-partner-center"></a>Zugreifen auf Analysedaten außerhalb von Partner Center
 
-Zusätzlich zur Anzeige der Berichte im Partner Center, können Sie die app-Analyse auf andere Weise zugreifen.
+Zusätzlich zur Anzeige der Berichte im Partner Center, können Sie app-Analyse auf andere Weise zugreifen.
 
 ### <a name="microsoft-store-analytics-api"></a>Microsoft Store-Analyse-API
 
@@ -55,7 +55,7 @@ Verwenden Sie die [Store-Analyse-API](../monetize/access-analytics-data-using-wi
 
 ### <a name="windows-dev-center-content-pack-for-power-bi"></a>Windows Dev Center-Inhaltspaket für Power BI
 
-Verwenden Sie das [Windows Dev Center-Inhaltspaket für Power BI](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/) zu erkunden und Partner Center-Analysedaten in Power BI zu überwachen. Power BI ist ein cloudbasierter Geschäftsanalysedienst, der Ihnen Ihre Geschäftsdaten in einer einzelnen Ansicht präsentiert.
+Verwenden Sie das [Windows Dev Center-Inhaltspaket für Power BI](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/) zu erkunden und Ihre Partner Center-Analysedaten in Power BI zu überwachen. Power BI ist ein cloudbasierter Geschäftsanalysedienst, der Ihnen Ihre Geschäftsdaten in einer einzelnen Ansicht präsentiert.
 
 Verwenden Sie die folgenden Ressourcen, um mit Power BI auf Ihre Analysedaten zuzugreifen.
 
@@ -64,4 +64,4 @@ Verwenden Sie die folgenden Ressourcen, um mit Power BI auf Ihre Analysedaten zu
 * [Informationen zum Einsetzen des Windows Dev Center-Inhaltspakets für Power BI, um eine Verbindung zu Ihren Analysedaten herzustellen](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/)
 
 > [!NOTE]
-> Um das Windows Dev Center-Inhaltspaket für Power BI zu verbinden, wird empfohlen, dass Sie Anmeldeinformationen aus Azure AD-Verzeichnis angeben, die Ihr Partner Center-Konto zugeordnet ist. Wenn Sie die Anmeldeinformationen Ihres Microsoft-Kontos verwenden, werden Ihre Analysedaten in Power BI nicht automatisch aktualisiert. Für eine Aktualisierung müssen Sie sich dann in Power BI anmelden. Wenn in Ihrer Organisation bereits mit Office365 oder anderen Unternehmensdiensten von Microsoft gearbeitet wird, verfügen Sie bereits über Azure AD. Andernfalls können Sie es [kostenlos abrufen](http://go.microsoft.com/fwlink/p/?LinkId=703757). Weitere Informationen zur Einrichtung der Zuordnung finden Sie unter [Ordnen Sie Azure Active Directory mit Ihrem Partner Center-Konto](associate-azure-ad-with-dev-center.md).
+> Um Windows Dev Center-Inhaltspaket für Power BI zu verbinden, wird empfohlen, dass Sie Anmeldeinformationen aus Azure AD-Verzeichnis angeben, die Ihr Partner Center-Konto zugeordnet ist. Wenn Sie die Anmeldeinformationen Ihres Microsoft-Kontos verwenden, werden Ihre Analysedaten in Power BI nicht automatisch aktualisiert. Für eine Aktualisierung müssen Sie sich dann in Power BI anmelden. Wenn in Ihrer Organisation bereits mit Office365 oder anderen Unternehmensdiensten von Microsoft gearbeitet wird, verfügen Sie bereits über Azure AD. Andernfalls können Sie es [kostenlos abrufen](https://go.microsoft.com/fwlink/p/?LinkId=703757). Weitere Informationen zum Einrichten der Zuordnung finden Sie unter [Zuordnen Azure Active Directory mit Ihrem Partner Center-Konto](associate-azure-ad-with-dev-center.md).

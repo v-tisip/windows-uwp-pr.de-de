@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: 43ffd28c-c4df-405c-bf5c-29c94e0d142b
 keywords: Windows10, UWP, Timer, Threads
 ms.localizationpriority: medium
-ms.openlocfilehash: 82e1431a6689ef9ece91cef7e2b018e24f834039
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ad0d342d773723981138619a07ea6ee37ecdc8dd
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937718"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044973"
 ---
 # <a name="using-windows-runtime-objects-in-a-multithreaded-environment"></a>Verwenden von Windows-Runtime-Objekten in einer Multithread-Umgebung
 In diesem Artikel wird beschrieben, wie das .NET Framework Aufrufe von C#- und Visual Basic-Code auf Objekte verarbeitet, die von der Windows-Runtime oder von Komponenten für Windows-Runtime bereitgestellt werden.
@@ -20,11 +20,11 @@ Im .NET Framework können Sie standardmäßig ohne besondere Verarbeitung über 
 
 Wann immer möglich, behandelt die Common Language Runtime (CLR) Objekte aus anderen Quellen, wie beispielsweise der Windows-Runtime, so, als wären sie .NET Framework-Objekte:
 
-- Wenn das Objekt die Schnittstelle [IAgileObject](http://msdn.microsoft.com/library/Hh802476.aspx) implementiert oder das Attribut [MarshalingBehaviorAttribute](http://go.microsoft.com/fwlink/p/?LinkId=256022) mit [MarshalingType.Agile](http://go.microsoft.com/fwlink/p/?LinkId=256023) aufweist, wird es von der CLR so behandelt, als wäre es agil.
+- Wenn das Objekt die Schnittstelle [IAgileObject](https://msdn.microsoft.com/library/Hh802476.aspx) implementiert oder das Attribut [MarshalingBehaviorAttribute](https://go.microsoft.com/fwlink/p/?LinkId=256022) mit [MarshalingType.Agile](https://go.microsoft.com/fwlink/p/?LinkId=256023) aufweist, wird es von der CLR so behandelt, als wäre es agil.
 
 - Wenn CLR einen Aufruf über den Thread marshallen kann, in dem er zum Threadingkontext des Zielobjekts gemacht wurde, geschieht dies transparent.
 
-- Wenn das Objekt über das Attribut [MarshalingBehaviorAttribute](http://go.microsoft.com/fwlink/p/?LinkId=256022) mit [MarshalingType.None](http://go.microsoft.com/fwlink/p/?LinkId=256023) verfügt, stellt die Klasse keine Marshalling-Informationen bereit. Die CLR kann den Aufruf nicht marshallen, daher wird eine [InvalidCastException](/dotnet/api/system.invalidcastexception)-Ausnahme mit der Meldung ausgelöst, dass das Objekt nur in dem Threadingkontext verwendet werden kann, in dem es erstellt wurde.
+- Wenn das Objekt über das Attribut [MarshalingBehaviorAttribute](https://go.microsoft.com/fwlink/p/?LinkId=256022) mit [MarshalingType.None](https://go.microsoft.com/fwlink/p/?LinkId=256023) verfügt, stellt die Klasse keine Marshalling-Informationen bereit. Die CLR kann den Aufruf nicht marshallen, daher wird eine [InvalidCastException](/dotnet/api/system.invalidcastexception)-Ausnahme mit der Meldung ausgelöst, dass das Objekt nur in dem Threadingkontext verwendet werden kann, in dem es erstellt wurde.
 
 In den folgenden Abschnitten werden die Auswirkungen dieses Verhaltens auf Objekte aus verschiedenen Quellen beschrieben.
 
@@ -34,10 +34,10 @@ Alle Typen in der Komponente, die aktiviert werden können, sind standardmäßig
 > [!NOTE]
 >  Agilität bedeutet nicht, dass Threadsicherheit gegeben ist. Sowohl in der Windows-Runtime als auch im .NET Framework sind die meisten Klassen nicht threadsicher, da Threadsicherheit mit Leistungseinbußen verbunden ist und die meisten Objekte nie von mehreren Threads aufgerufen werden. Es ist effizienter, nur bei Bedarf den Zugriff auf einzelne Objekte zu synchronisieren (oder threadsichere Klassen zu verwenden).
 
-Wenn Sie eine Windows-Runtime-Komponente erstellen, können Sie die Standardeinstellung überschreiben. Informationen hierzu finden Sie in den Abschnitten [ICustomQueryInterface](/dotnet/api/system.runtime.interopservices.icustomqueryinterface)-Schnittstelle und [IAgileObject](http://msdn.microsoft.com/library/Hh802476.aspx)-Schnittstelle.
+Wenn Sie eine Windows-Runtime-Komponente erstellen, können Sie die Standardeinstellung überschreiben. Informationen hierzu finden Sie in den Abschnitten [ICustomQueryInterface](/dotnet/api/system.runtime.interopservices.icustomqueryinterface)-Schnittstelle und [IAgileObject](https://msdn.microsoft.com/library/Hh802476.aspx)-Schnittstelle.
 
 ## <a name="objects-from-the-windows-runtime"></a>Objekte aus der Windows-Runtime
-Die meisten Klassen in der Windows-Runtime sind agil, und die CLR behandelt diese als agil. In der Dokumentation für diese Klassen wird „MarshalingBehaviorAttribute(Agile)” unter den Klassenattributen genannt. Die Elemente in einigen dieser agilen Klassen, wie beispielsweise XAML-Steuerelemente, lösen jedoch Ausnahmen aus, wenn sie nicht für den UI-Thread aufgerufen werden. Der folgende Code versucht beispielsweise, einen Hintergrundthread zu verwenden, um eine Eigenschaft der Schaltfläche festzulegen, auf die geklickt wurde. Die [Content](http://go.microsoft.com/fwlink/p/?LinkId=256025)-Eigenschaft der Schaltfläche löst eine Ausnahme aus.
+Die meisten Klassen in der Windows-Runtime sind agil, und die CLR behandelt diese als agil. In der Dokumentation für diese Klassen wird „MarshalingBehaviorAttribute(Agile)” unter den Klassenattributen genannt. Die Elemente in einigen dieser agilen Klassen, wie beispielsweise XAML-Steuerelemente, lösen jedoch Ausnahmen aus, wenn sie nicht für den UI-Thread aufgerufen werden. Der folgende Code versucht beispielsweise, einen Hintergrundthread zu verwenden, um eine Eigenschaft der Schaltfläche festzulegen, auf die geklickt wurde. Die [Content](https://go.microsoft.com/fwlink/p/?LinkId=256025)-Eigenschaft der Schaltfläche löst eine Ausnahme aus.
 
 ```csharp
 private async void Button_Click_2(object sender, RoutedEventArgs e)
@@ -58,7 +58,7 @@ Private Async Sub Button_Click_2(sender As Object, e As RoutedEventArgs)
 End Sub
 ```
 
-Ein sicherer Zugriff auf die Schaltfläche ist bei Verwendung ihrer [Dispatcher](http://go.microsoft.com/fwlink/p/?LinkId=256026)-Eigenschaft oder der `Dispatcher`-Eigenschaft eines beliebigen Objekts im Kontext des UI-Threads (beispielsweise die Seite, auf der sich die Schaltfläche befindet) möglich. Der folgende Code verwendet die Methode [RunAsync](http://go.microsoft.com/fwlink/p/?LinkId=256030) des [CoreDispatcher](http://go.microsoft.com/fwlink/p/?LinkId=256029)-Objekts, um den Aufruf für den UI-Thread zu verteilen.
+Ein sicherer Zugriff auf die Schaltfläche ist bei Verwendung ihrer [Dispatcher](https://go.microsoft.com/fwlink/p/?LinkId=256026)-Eigenschaft oder der `Dispatcher`-Eigenschaft eines beliebigen Objekts im Kontext des UI-Threads (beispielsweise die Seite, auf der sich die Schaltfläche befindet) möglich. Der folgende Code verwendet die Methode [RunAsync](https://go.microsoft.com/fwlink/p/?LinkId=256030) des [CoreDispatcher](https://go.microsoft.com/fwlink/p/?LinkId=256029)-Objekts, um den Aufruf für den UI-Thread zu verteilen.
 
 ```csharp
 private async void Button_Click_2(object sender, RoutedEventArgs e)
@@ -92,9 +92,9 @@ Die Lebensdauer eines Windows-Runtime-Objekts, das in dem UI-Thread erstellt wir
 Wenn Sie ein eigenes Steuerelement erstellen, indem Sie ein XAML-Steuerelement übernehmen oder eine Reihe von XAML-Steuerelementen erstellen, ist Ihr Steuerelement agil, da es sich um ein .NET Framework-Objekt handelt. Wenn es jedoch Elemente seiner Basisklasse oder Bestandteilklassen aufruft oder wenn Sie übernommene Elemente aufrufen, lösen diese Elemente Ausnahmen aus, wenn sie von einem anderen Thread als dem UI-Thread aufgerufen werden.
 
 ### <a name="classes-that-cant-be-marshaled"></a>Klassen, die nicht gemarshallt werden kann
-Windows-Runtime-Klassen, die keine Marshalling Informationen bereitstellen, weisen das Attribut [MarshalingBehaviorAttribute](http://go.microsoft.com/fwlink/p/?LinkId=256022) mit [MarshalingType.None](http://go.microsoft.com/fwlink/p/?LinkId=256023) auf. In der Dokumentation für solche Klassen wird „MarshalingBehaviorAttribute(None)” unter den Attributen genannt.
+Windows-Runtime-Klassen, die keine Marshalling Informationen bereitstellen, weisen das Attribut [MarshalingBehaviorAttribute](https://go.microsoft.com/fwlink/p/?LinkId=256022) mit [MarshalingType.None](https://go.microsoft.com/fwlink/p/?LinkId=256023) auf. In der Dokumentation für solche Klassen wird „MarshalingBehaviorAttribute(None)” unter den Attributen genannt.
 
-Der folgende Code erstellt ein [CameraCaptureUI](http://go.microsoft.com/fwlink/p/?LinkId=256027)-Objekt im UI-Thread und versucht anschließend, eine Eigenschaft für das Objekt aus einem Threadpoolthread festzulegen. Die CLR kann den Aufruf nicht marshallen und löst eine [System.InvalidCastException](/dotnet/api/system.invalidcastexception)-Ausnahme mit der Meldung aus, dass das Objekt nur in dem Threadingkontext verwendet werden kann, in dem es erstellt wurde.
+Der folgende Code erstellt ein [CameraCaptureUI](https://go.microsoft.com/fwlink/p/?LinkId=256027)-Objekt im UI-Thread und versucht anschließend, eine Eigenschaft für das Objekt aus einem Threadpoolthread festzulegen. Die CLR kann den Aufruf nicht marshallen und löst eine [System.InvalidCastException](/dotnet/api/system.invalidcastexception)-Ausnahme mit der Meldung aus, dass das Objekt nur in dem Threadingkontext verwendet werden kann, in dem es erstellt wurde.
 
 ```csharp
 Windows.Media.Capture.CameraCaptureUI ccui;
@@ -122,9 +122,9 @@ Private Async Sub Button_Click_1(sender As Object, e As RoutedEventArgs)
 End Sub
 ```
 
-In der Dokumentation für [CameraCaptureUI](http://go.microsoft.com/fwlink/p/?LinkId=256027) wird auch „ThreadingAttribute(STA)” unter den Attributen der Klasse genannt, da es in einem Singlethread-Kontext erstellt werden muss, wie beispielsweise dem UI-Thread.
+In der Dokumentation für [CameraCaptureUI](https://go.microsoft.com/fwlink/p/?LinkId=256027) wird auch „ThreadingAttribute(STA)” unter den Attributen der Klasse genannt, da es in einem Singlethread-Kontext erstellt werden muss, wie beispielsweise dem UI-Thread.
 
-Wenn Sie von einem anderen Thread auf das [CameraCaptureUI](http://go.microsoft.com/fwlink/p/?LinkId=256027)-Objekt zugreifen möchten, können Sie das [CoreDispatcher](http://go.microsoft.com/fwlink/p/?LinkId=256029)-Objekt für den UI-Thread zwischenspeichern und später verwenden, um den Aufruf für diesen Thread zu verteilen. Sie können den Dispatcher auch über ein XAML-Objekt wie beispielsweise die Seite abrufen, wie im folgenden Code dargestellt.
+Wenn Sie von einem anderen Thread auf das [CameraCaptureUI](https://go.microsoft.com/fwlink/p/?LinkId=256027)-Objekt zugreifen möchten, können Sie das [CoreDispatcher](https://go.microsoft.com/fwlink/p/?LinkId=256029)-Objekt für den UI-Thread zwischenspeichern und später verwenden, um den Aufruf für diesen Thread zu verteilen. Sie können den Dispatcher auch über ein XAML-Objekt wie beispielsweise die Seite abrufen, wie im folgenden Code dargestellt.
 
 ```csharp
 Windows.Media.Capture.CameraCaptureUI ccui;
@@ -158,7 +158,7 @@ End Sub
 ## <a name="objects-from-a-windows-runtime-component-that-is-written-in-c"></a>Objekte aus einer in C++ geschriebenen Windows-Runtime-Komponente
 Standardmäßig sind die Klassen in der Komponente, die aktiviert werden kann, agil. C++ lässt jedoch eine umfassende Möglichkeit der Steuerung von Threadingmodellen und Marshallingverhalten zu. Wie weiter oben in diesem Artikel beschrieben, erkennt die CLR agile Klassen, sie versucht, Aufrufe zu marshallen, wenn Klassen nicht agil sind, und sie löst eine [System.InvalidCastException](/dotnet/api/system.invalidcastexception)-Ausnahme aus, wenn eine Klasse keine Marshalling-Informationen aufweist.
 
-Für Objekte, die im UI-Thread ausgeführt werden und Ausnahmen auslösen, wenn sie von einem anderen Thread als dem UI-Thread aufgerufen werden, können Sie das [CoreDispatcher](http://go.microsoft.com/fwlink/p/?LinkId=256029)-Objekt des UI-Threads verwenden, um den Aufruf zu verteilen.
+Für Objekte, die im UI-Thread ausgeführt werden und Ausnahmen auslösen, wenn sie von einem anderen Thread als dem UI-Thread aufgerufen werden, können Sie das [CoreDispatcher](https://go.microsoft.com/fwlink/p/?LinkId=256029)-Objekt des UI-Threads verwenden, um den Aufruf zu verteilen.
 
 ## <a name="see-also"></a>Weitere Informationen
 [C#-Handbuch](/dotnet/articles/csharp/)

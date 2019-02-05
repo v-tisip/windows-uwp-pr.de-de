@@ -1,8 +1,22 @@
 ---
-<<<<<<< HEAD "author": Karl-Bridge-Microsoft-Beschreibung: Optimieren Sie Ihre app für die Eingabe von Xbox-Gamepad und Fernbedienung zu erhalten.
-=== Beschreibung: TODO
->>>>>>> Master / Titel: Gamepad und Fernbedienung Interaktionen ms.assetid: 784a08dc-2736-4bd3-bea0-08da16b1bd47 Bezeichnung: Gamepad und remote Interaktionen Vorlage: detail.hbs IsNew: "true" <<<<<<< HEAD ms.author: Kbridge =======
-master MS.Date: 02/08/2017 ms.topic: Artikel Schlüsselwörter: Windows 10, Uwp ms.localizationpriority: Mittel
+author: Karl-Bridge-Microsoft
+Description: Optimize your app for input from Xbox gamepad and remote control.
+title: Interaktionen von Gamepad und Fernbedienung
+ms.assetid: 784a08dc-2736-4bd3-bea0-08da16b1bd47
+label: Gamepad and remote interactions
+template: detail.hbs
+isNew: true
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+keywords: Windows10, UWP
+ms.localizationpriority: medium
+ms.openlocfilehash: 022724064ad1e7f5551b6676bf256ca5cf6e4b8e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048557"
 ---
 # <a name="gamepad-and-remote-control-interactions"></a>Interaktionen von Gamepad und Fernbedienung
 

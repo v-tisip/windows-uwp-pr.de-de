@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.assetid: ff10bbc0-03a7-492c-b5fe-c5b9ce8ca32e
 ms.localizationpriority: medium
-ms.openlocfilehash: e9eafde0596ad3156f52a7a2f0a1566444a9836a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b1c8271c8066304dce355cf50afd4509173eed3e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918958"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046789"
 ---
 # <a name="bluetooth-le-advertisements"></a>Bluetooth LE-Ankündigungen
 
@@ -29,7 +29,7 @@ Es gibt zwei Hauptfunktionen, die ein Entwickler mithilfe der LE-Ankündigungs-A
 -   [Ankündigungsüberwachung](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher.aspx): Überwachung auf Beacons in der Nähe und deren Filterung auf der Basis von Nutzlast oder Nähe.  
 -   [Ankündigung Publisher](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher.aspx): eine Nutzlast für Windows definieren, um im Auftrag eines Entwicklers zu werben.  
 
-Ein vollständiges Codebeispiel finden Sie unter [Beispiel für Bluetooth-Ankündigungen](http://go.microsoft.com/fwlink/p/?LinkId=619990) auf Github.
+Ein vollständiges Codebeispiel finden Sie unter [Beispiel für Bluetooth-Ankündigungen](https://go.microsoft.com/fwlink/p/?LinkId=619990) auf Github.
 
 ## <a name="basic-setup"></a>Grundlegende Einrichtung
 
@@ -43,7 +43,7 @@ Um Bluetooth LE-Grundfunktionalität in einer App für die Universelle Windows-P
 
 Bluetooth LE-Ankündigungen ermöglichen Ihrem Gerät, konstant eine spezifische Nutzlast („Ankündigung“ genannt) zu signalisieren. Diese Ankündigung kann von jedem Bluetooth LE-kompatiblen Gerät in der Nähe erkannt werden, wenn es für den Empfang dieser spezifischen Ankündigung eingerichtet wurde.
 
-> **Hinweis**: für Datenschutz für Benutzer, die Lebensdauer der der Ankündigung an der app gebunden ist. Sie können einen BluetoothLEAdvertisementPublisher erstellen und in einer Hintergrundaufgabe „Start“ aufrufen, um die Ankündigung im Hintergrund auszuführen. Weitere Informationen zu Hintergrundaufgaben finden Sie unter [Starten, Fortsetzen und Hintergrundaufgaben](https://msdn.microsoft.com/windows/uwp/launch-resume/index).
+> **Hinweis**: für Schutz der Privatsphäre, ist die Lebensdauer von der Ankündigung an diejenige der app gebunden. Sie können einen BluetoothLEAdvertisementPublisher erstellen und in einer Hintergrundaufgabe „Start“ aufrufen, um die Ankündigung im Hintergrund auszuführen. Weitere Informationen zu Hintergrundaufgaben finden Sie unter [Starten, Fortsetzen und Hintergrundaufgaben](https://msdn.microsoft.com/windows/uwp/launch-resume/index).
 
 ### <a name="basic-publishing"></a>Grundlegende Veröffentlichung
 

@@ -1,31 +1,31 @@
 ---
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
-description: In diesem Abschnitt wird beschrieben, wie zum Ändern von PlayReady Web app, die Änderungen, die aus der vorherigen Windows8.1-Version auf die Windows 10-Version unterstützt wird.
+description: In diesem Abschnitt wird beschrieben, wie zum Ändern Ihrer PlayReady-Web-app, um die Änderungen, die aus der vorherigen Version Windows8.1 in die Windows 10-Version unterstützt wird.
 title: Verschlüsselte Medienerweiterung von PlayReady
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: b324cbca6d5e36193c057a6d1473ff1aad7be095
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c598868610e42e0f2ad64ef2d4fedfb48c4d91e9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945074"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047292"
 ---
 # <a name="playready-encrypted-media-extension"></a>Verschlüsselte Medienerweiterung von PlayReady
 
 
 
-In diesem Abschnitt wird beschrieben, wie zum Ändern von PlayReady Web app, die Änderungen, die aus der vorherigen Windows8.1-Version auf die Windows 10-Version unterstützt wird.
+In diesem Abschnitt wird beschrieben, wie zum Ändern Ihrer PlayReady-Web-app, um die Änderungen, die aus der vorherigen Version Windows8.1 in die Windows 10-Version unterstützt wird.
 
 Die Verwendung von PlayReady-Medienelementen in Internet Explorer ermöglicht Entwicklern das Erstellen von Web-Apps, die PlayReady-geschützte Inhalte für den Benutzer bereitstellen und gleichzeitig vom Inhaltsanbieter definierte Regeln erzwingen können. In diesem Abschnitt wird beschrieben, wie Sie Ihren vorhandenen Web-Apps PlayReady-Medienelemente hinzufügen, indem Sie nur HTML5 und JavaScript verwenden.
 
 ## <a name="whats-new-in-playready-encrypted-media-extension"></a>Neuigkeiten in der verschlüsselten Medienerweiterung von PlayReady
 
-Dieser Abschnitt enthält eine Liste der Änderungen für PlayReady verschlüsselt Media Extension (EME) um PlayReady-Inhaltsschutz unter Windows 10 zu aktivieren.
+Dieser Abschnitt enthält eine Liste der Änderungen, die PlayReady verschlüsselten Extension (EME) an die PlayReady-Inhaltsschutz unter Windows 10 bereitzustellen.
 
-In der folgende Liste werden die neuen Features und Änderungen an verschlüsselten Medienerweiterung von PlayReady für Windows 10 beschrieben:
+Die folgende Liste beschreibt die neuen Features und Änderungen an verschlüsselten Medienerweiterung von PlayReady für Windows 10:
 
 -   Hardwarebasierte Verwaltung digitaler Rechte (Digital Rights Management, DRM) wurde hinzugefügt.
 
@@ -34,10 +34,10 @@ In der folgende Liste werden die neuen Features und Änderungen an verschlüssel
 -   Unterstützt das proaktive Abrufen nicht persistenter Lizenzen.
 -   Unterstützt das Abrufen mehrerer Lizenzen in einer Nachricht.
 
-    Sie können entweder ein PlayReady-Objekt mit mehreren schlüsselkennungen (KeyIDs) wie Windows8.1 verwenden oder [Inhalte Entschlüsselung Modell-Daten (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) mit mehreren KeyIDs verwenden.
+    Sie können entweder ein PlayReady-Objekt mit mehreren schlüsselkennungen (KeyIDs) wie bei Windows8.1 verwenden oder [Inhalten Entschlüsselung Modell-Daten (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) mit mehreren KeyIDs verwenden.
 
     > [!NOTE]
-    > In Windows 10, werden mehrere schlüsselkennungen unter unterstützt &lt;KeyID&gt; in CDMData.
+    > In Windows 10 werden mehrere schlüsselkennungen unter unterstützt &lt;KeyID&gt; in CDMData.
 
 -   Unterstützung für den Echtzeitablauf, d. h. einer Lizenz mit begrenzter Dauer (Limited Duration License, LDL), wurde hinzugefügt.
 
@@ -61,7 +61,7 @@ In der folgende Liste werden die neuen Features und Änderungen an verschlüssel
 
 In diesem Abschnitt wird die Version der verschlüsselten Medienerweiterungen von W3C beschrieben, die von PlayReady unterstützt werden.
 
-PlayReady für Web-Apps ist derzeit an die Entwurfsversion vom 10.Mai2013 ([W3C Encrypted Media Extension (EME) draft of May 10, 2013](http://www.w3.org/TR/2013/WD-encrypted-media-20130510/)) gebunden. Für zukünftige Versionen von Windows wird diese Unterstützung in die aktualisierte EME-Spezifikation geändert.
+PlayReady für Web-Apps ist derzeit an die Entwurfsversion vom 10.Mai2013 ([W3C Encrypted Media Extension (EME) draft of May 10, 2013](https://www.w3.org/TR/2013/WD-encrypted-media-20130510/)) gebunden. Für zukünftige Versionen von Windows wird diese Unterstützung in die aktualisierte EME-Spezifikation geändert.
 
 ## <a name="use-hardware-drm"></a>Verwenden des Hardware-DRM
 

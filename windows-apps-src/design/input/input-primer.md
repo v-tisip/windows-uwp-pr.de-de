@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: d9b2a894746cc9f26a0ebb3df90c967a73914c3c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 80c834257e883d3aeb8594001344abd6ef14682c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947802"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051093"
 ---
 # <a name="interaction-primer"></a>Einführung in die Interaktion
 
@@ -234,7 +234,7 @@ Sie müssen mausspezifische Benutzeroberflächenbefehle (oder Angebote) zur Unte
 
 Eine Tastatur ist das Haupteingabegerät für Text und häufig unentbehrlich für Personen mit bestimmten körperlichen Beeinträchtigungen oder für Benutzer, die die Tastatur als schnellere und effizientere Interaktionsmethode betrachten.
 
-Mit [Continuum für Smartphones](http://go.microsoft.com/fwlink/p/?LinkID=699431), einer neuen Funktion für kompatible Windows 10 mobile Geräte, können Benutzer ihre Smartphones mit einer Maus und Tastatur, damit ihr Gerät wie einen Laptop verbinden.
+Mit [Continuum für Smartphones](https://go.microsoft.com/fwlink/p/?LinkID=699431), einer neuen Funktion für kompatible Windows 10 mobile Geräte, können Benutzer ihre Smartphones mit einer Maus und Tastatur, damit ihr Gerät wie einen Laptop eine Verbindung herstellen.
 
 ### <a name="device-support"></a>Unterstützung von Geräten
 

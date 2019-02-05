@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.assetid: 265fe827-bd4a-48d4-b362-8793b9b25705
 ms.localizationpriority: medium
-ms.openlocfilehash: 036c3c1832bbb3e27a93671f399a9a97c7afaba3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 38b5144d9b70e6e2825ef11a64be8873ec5b7d63
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922265"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046949"
 ---
 # <a name="frequently-asked-questions"></a>Häufig gestellte Fragen
 
@@ -59,7 +59,7 @@ Weitere Informationen dazu, wie Sie das Entwicklerprogramm verlassen, finden Sie
 
 ### <a name="i-sold-my-xbox-one-and-left-it-in-developer-mode-how-do-i-deactivate-developer-mode"></a>Ich habe meine Xbox One verkauft und im Entwicklermodus belassen. Wie deaktiviere ich den Entwicklermodus?
 
-Wenn Sie nicht mehr Zugriff auf Ihre Xbox One haben, können Sie sie in Windows Partner Center deaktivieren. Weitere Informationen finden Sie im Abschnitt " **Deaktivieren der Konsole mit der Partner Center** " im Thema [Developer Mode Deaktivierung des Xbox One](devkit-deactivation.md#deactivate-your-console-using-partner-center) . 
+Wenn Sie nicht mehr Zugriff auf Ihre Xbox One haben, können Sie es im Windows Partner Center deaktivieren. Informationen finden Sie im Abschnitt " **Deaktivieren der Konsole mit Partner Center** " im Thema [Developer Mode Deaktivierung des Xbox One](devkit-deactivation.md#deactivate-your-console-using-partner-center) . 
 
 ### <a name="i-left-the-developer-program-using-partner-center-but-im-in-still-developer-mode-what-do-i-do"></a>Ich habe das Entwicklerprogramm mithilfe von Partner Center, aber weiterhin Entwicklermodus verlassen. Wie gehe ich vor?
 
@@ -71,7 +71,7 @@ Sie können über das Partner Center [Veröffentlichen von apps](../publish/inde
 
 ### <a name="can-i-publish-my-game"></a>Kann ich mein Spiel veröffentlichen?
 
-Sie können UWP und die Xbox One im Entwicklermodus verwenden, um Ihre Spiele auf der Xbox One zu erstellen und zu testen. Um UWP-Spiele zu veröffentlichen, müssen Sie sich bei [ID@XBOX](http://www.xbox.com/Developers/id) registrieren oder Teil des [Xbox Live Creators-Programms](https://developer.microsoft.com/games/xbox/xboxlive/creator) sein. Weitere Informationen finden Sie unter [Übersicht über das Entwicklerprogramm](https://developer.microsoft.com/games/xbox/docs/xboxlive/get-started/developer-program-overview.html).
+Sie können UWP und die Xbox One im Entwicklermodus verwenden, um Ihre Spiele auf der Xbox One zu erstellen und zu testen. Um UWP-Spiele zu veröffentlichen, müssen Sie sich bei [ID@XBOX](https://www.xbox.com/Developers/id) registrieren oder Teil des [Xbox Live Creators-Programms](https://developer.microsoft.com/games/xbox/xboxlive/creator) sein. Weitere Informationen finden Sie unter [Übersicht über das Entwicklerprogramm](https://developer.microsoft.com/games/xbox/docs/xboxlive/get-started/developer-program-overview.html).
 
 ### <a name="will-the-standard-game-engines-work"></a>Können die standardmäßigen Spielengines verwendet werden?
 

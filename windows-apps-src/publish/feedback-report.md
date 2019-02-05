@@ -6,25 +6,25 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d40e921f999381421a5a6ce422e019e7db58bbd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2ab7385d4c61c52b71c74fb61797be306bcc9851
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928365"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044341"
 ---
 # <a name="feedback-report"></a>Feedbackbericht
 
-Der **Feedback-Bericht** im Partner Center können Sie sehen, die Probleme, Vorschläge und zustimmungen, die Windows 10-Kunden über den Feedback-Hub übermittelt haben. Sie können diese Daten im Partner Center anzeigen oder exportieren Sie die Daten, um ihn offline anzuzeigen.
+Der **Bericht "Feedback"** im Partner Center gibt Aufschluss über die Probleme, Vorschläge und zustimmungen, die Windows 10-Kunden über den Feedback-Hub übermittelt haben. Sie können diese Daten im Partner Center oder exportieren Sie die Daten, um ihn offline anzuzeigen.
 
 > [!NOTE]
 > Sie können über diesen Bericht auch [direkt auf Feedback reagieren](respond-to-customer-feedback.md), um Kunden zu signalisieren, dass Sie ihr Feedback ernst nehmen.
 
 Ermuntern Sie Ihre Kunden, Ihnen Feedback zu Ihrer App zu geben. Dies ist eine hervorragende Möglichkeit, um mehr über die Probleme und Funktionen zu erfahren, die ihnen besonders wichtig sind. Wenn Ihre Kunden wissen, dass sie Ihnen ihr Feedback direkt senden können, geben sie mit höherer Wahrscheinlichkeit keine negative Bewertung im Store ab.
 
-Verwenden Sie die Feedback-API im [Microsoft Store Services SDK](http://aka.ms/store-em-sdk), um es Ihren Kunden zu ermöglichen, den [Feedback-Hub direkt aus Ihrer App heraus zu starten](../monetize/launch-feedback-hub-from-your-app.md). Bedenken Sie, dass jeder Kunde, der Ihre App auf einem Windows 10-Gerät heruntergeladen hat, das den Feedback-Hub unterstützt, mithilfe der Feedback-Hub-App ein Feedback abgeben kann. Aus diesem Grund können Sie Feedback von Kunden in diesem Bericht angezeigt, auch wenn in Ihrer app nicht explizit um Feedback gebeten haben.
+Verwenden Sie die Feedback-API im [Microsoft Store Services SDK](https://aka.ms/store-em-sdk), um es Ihren Kunden zu ermöglichen, den [Feedback-Hub direkt aus Ihrer App heraus zu starten](../monetize/launch-feedback-hub-from-your-app.md). Bedenken Sie, dass jeder Kunde, der Ihre App auf einem Windows 10-Gerät heruntergeladen hat, das den Feedback-Hub unterstützt, mithilfe der Feedback-Hub-App ein Feedback abgeben kann. Aus diesem Grund können Sie das Feedback von Kunden in diesem Bericht angezeigt, auch wenn in Ihrer app nicht explizit um Feedback gebeten haben.
 
-Feedback kann auch hilfreich sein, wenn Sie mithilfe des [Flight-Pakete](package-flights.md), **die feedbackbericht** das spezifische Paket aufgeführt wird, das auf dem Gerät jeweiligen Kunden installiert war, als er das Feedback abgegeben hat.
+Feedback kann auch hilfreich sein, Verwendung, [Flight-Paketen](package-flights.md), da **die feedbackbericht** das spezifische Paket aufgeführt, das auf ihrem Gerät jeweiligen Kunden installiert war wird, als er das Feedback abgegeben hat.
 
 > [!TIP]
 > Für einen kurzen Überblick über die Rezensionen, Bewertungen und Benutzerfeedback für alle Ihre apps in den letzten 30 Tagen, erweitern Sie im linken Navigationsmenü **einbeziehen** , und wählen Sie **Kritiken und Feedback.** 
@@ -40,7 +40,7 @@ Sie können ebenfalls **Filter** erweitern, um alle Daten auf dieser Seite mit d
 - **Gerätetyp**: Die Standardeinstellung ist **Alle Geräte**. Sie können einen bestimmten Gerätetyp auswählen, wenn auf dieser Seite nur Feedback von Kunden angezeigt werden sollen, die ein Gerät dieses Typs verwenden.
 - **Paketversion**: Die Standardeinstellung ist **Alle Pakete**. Sie können eines Ihrer Pakete auswählen, damit nur Feedback von Kunden angezeigt wird, die dieses Paket verwendet haben, als sie ihr Feedback abgegeben haben.
 - **Markt**: Die Standardeinstellung ist **Alle Märkte**. Sie können einen bestimmten Markt auswählen, um nur Feedback von den in diesem Markt ansässigen Kunden anzuzeigen.
-- **Gruppe**: Die Standardeinstellung ist **Alle**. Sie können festlegen, dass nur das Feedback angezeigt werden soll, das [Windows-Insider](http://insider.windows.com) abgeben.
+- **Gruppe**: Die Standardeinstellung ist **Alle**. Sie können festlegen, dass nur das Feedback angezeigt werden soll, das [Windows-Insider](https://insider.windows.com) abgeben.
 
 > [!TIP]
 > Wenn auf der Seite kein Feedback zu sehen ist, stellen Sie sicher, dass Sie mit Ihrer Filterauswahl nicht sämtliches Feedback ausgeschlossen haben. Wenn Sie z. B. nach einem **Gerätetyp** filtern, der von Ihrer App nicht unterstützt wird, wird kein Feedback angezeigt.
@@ -54,14 +54,14 @@ Im Bericht finden Sie das jeweilige Feedback von Ihren Kunden. Links neben dem F
 - **Populär**: Zeigt Feedback, das von anderen Kunden in den letzten sieben Tagen bewertet wurde, beginnend mit dem Feedback, das die letzte Aktivität aufweist.
 - **Aktuellste**: Zeigt sämtliches Feedback, beginnend mit dem zuletzt abgegebenen Feedback an.
 
-Neben jedem Kommentar werden der Typ des Feedbacks sowie das Datum angezeigt, an dem das Feedback abgegeben wurde. Sie werden auch den Markt des Kunden, das spezifische Paket angezeigt werden, die auf dem Gerät installiert wurde, die sie verwendet haben, wenn sie das Feedback, den Typ dieses Gerät, und **Windows-Insider-** links, wenn der Kunde das Feedback übermittelt hat ein Mitglied der Windows-Insider-ist Programm.
+Neben jedem Kommentar werden der Typ des Feedbacks sowie das Datum angezeigt, an dem das Feedback abgegeben wurde. Auch den Markt des Kunden, das spezifische Paket wird angezeigt, die auf dem Gerät installiert wurde, die sie verwendet wurden, als sie das Feedback, den Typ dieses Gerät, und **Windows-Insider-** abgegeben, wenn der Kunde das Feedback übermittelt hat ein Mitglied der Windows-Insider-ist Programm.
 
 Hier sehen Sie auch eine Option, um auf das [Feedback zu antworten](respond-to-customer-feedback.md).
 
 
 ## <a name="translating-feedback"></a>Übersetzen von Feedback
 
-Standardmäßig ist Feedback, die nicht in Ihrer bevorzugten Sprache verfasst wurde für Sie übersetzt. Falls gewünscht, können Sie die Übersetzung von Feedback deaktivieren, indem Sie das Kontrollkästchen **Feedback übersetzen** neben der Seitenfilter deaktivieren.
+Standardmäßig wird die Feedback, die nicht in Ihrer bevorzugten Sprache verfasst wurde für Sie übersetzt. Falls gewünscht, können Sie die Übersetzung von Feedback deaktivieren, indem Sie das Kontrollkästchen **Feedback übersetzen** neben der Seitenfilter deaktivieren.
 
 Da das Feedback durch ein automatisches Übersetzungssystem übersetzt wird, sind die resultierenden Übersetzungen u. U. nicht immer exakt. Für den Fall, dass sie ihn mit der Übersetzung vergleichen oder auf andere Weise übersetzen lassen möchten, steht der Originaltext zur Verfügung.
 

@@ -6,16 +6,16 @@ ms.date: 05/08/2018
 ms.topic: article
 keywords: Windows10, UWP, Altersfreigabe, Spielfreigabe, IARC, Bewertung, Fragebogen, Bewertungsgremium, Inhaltsbewertung
 ms.localizationpriority: medium
-ms.openlocfilehash: f8268e4f3fa6517da480c2ab220863de9523e845
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3582328a0f013c2f7b4ccc9affb5b61ca643761c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927195"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049082"
 ---
 # <a name="age-ratings"></a>Altersfreigaben
 
-Auf der Seite **Altersfreigaben** des [App-Übermittlungsprozesses](app-submissions.md) können Sie Informationen zu Ihrer App bereitstellen, damit sie die entsprechenden Altersfreigaben und Inhaltsbewertungen über das Bewertungssystem der [International Age Ratings Coalition (IARC)](http://go.microsoft.com/fwlink/p/?LinkId=716854) erhalten kann. Bei diesen Freigaben geht es um die Eignung des Inhalts einer App, und nicht um das Alter der Zielgruppe für Ihre App.
+Auf der Seite **Altersfreigaben** des [App-Übermittlungsprozesses](app-submissions.md) können Sie Informationen zu Ihrer App bereitstellen, damit sie die entsprechenden Altersfreigaben und Inhaltsbewertungen über das Bewertungssystem der [International Age Ratings Coalition (IARC)](https://go.microsoft.com/fwlink/p/?LinkId=716854) erhalten kann. Bei diesen Freigaben geht es um die Eignung des Inhalts einer App, und nicht um das Alter der Zielgruppe für Ihre App.
 
 ## <a name="answering-the-age-ratings-questionnaire"></a>Beantworten des Fragebogens zu den Altersfreigaben
 
@@ -35,7 +35,7 @@ Bei der nächsten Aktualisierung Ihrer App werden auf dieser Seite alle Freigabe
 <span id="boards" />
 
 > [!NOTE]
-> Das südkoreanische Recht erfordert, dass in Südkorea verfügbar gemachte Spiele durch das [Game Rating Board](http://go.microsoft.com/fwlink/p/?LinkId=228256) Südkoreas bewertet werden. Wenn Sie ein Spiel einreichen und Sie es in Südkorea anbieten möchten, müssen Sie diesen zusätzlichen Abschnitt ausfüllen und das Freigabezertifikat hochladen. Wenn Ihre App kein Spiel ist oder Sie es nicht in Südkorea anbieten möchten, können Sie diesen Abschnitt leer lassen.
+> Das südkoreanische Recht erfordert, dass in Südkorea verfügbar gemachte Spiele durch das [Game Rating Board](https://go.microsoft.com/fwlink/p/?LinkId=228256) Südkoreas bewertet werden. Wenn Sie ein Spiel einreichen und Sie es in Südkorea anbieten möchten, müssen Sie diesen zusätzlichen Abschnitt ausfüllen und das Freigabezertifikat hochladen. Wenn Ihre App kein Spiel ist oder Sie es nicht in Südkorea anbieten möchten, können Sie diesen Abschnitt leer lassen.
 
 > [!NOTE]
 > Wenn Sie ein Spiel anbieten möchten, das in Taiwan verfügbar ist, sind Sie gesetzlich verpflichtet, die bereitgestellte CSRR-Bewertung mit [diesem Formular](https://go.microsoft.com/fwlink/?linkid=867281) zu registrieren. 

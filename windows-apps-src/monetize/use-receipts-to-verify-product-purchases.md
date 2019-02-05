@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: Windows10, UWP, In-App-Einkäufe, IAPs, Belege, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: b71d55d71a63060a66265051fafc8bdf7313e77b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9449a2dd265128a83f7840872ce4995df05a4e78
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923301"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047252"
 ---
 # <a name="use-receipts-to-verify-product-purchases"></a>Überprüfen von Produktkäufen anhand von Belegen
 
@@ -108,7 +108,7 @@ Das Stammelement dieser Datei ist das Element **Receipt**, das Informationen zu 
 |-------------|------------|--------|--------|
 |  [AppReceipt](#appreceipt)  |    Nein        |  0 oder 1  |  Enthält Kaufinformationen für die aktuelle App.            |
 |  [ProductReceipt](#productreceipt)  |     Nein       |  0 oder mehr    |   Enthält Informationen zu einem In-App-Kauf für die aktuelle App.     |
-|  Signature  |      Ja      |  1   |   Dieses Element ist ein standardmäßiges [XML-DSIG-Konstrukt](http://go.microsoft.com/fwlink/p/?linkid=251093). Es enthält ein **SignatureValue**-Element, das die Signatur enthält, die Sie für die Überprüfung des Belegs verwenden können, und ein **SignedInfo**-Element.      |
+|  Signature  |      Ja      |  1   |   Dieses Element ist ein standardmäßiges [XML-DSIG-Konstrukt](https://go.microsoft.com/fwlink/p/?linkid=251093). Es enthält ein **SignatureValue**-Element, das die Signatur enthält, die Sie für die Überprüfung des Belegs verwenden können, und ein **SignedInfo**-Element.      |
 
 **Receipt** hat die folgenden Attribute.
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 012827165aaa4067c9844af0491afb77a53c5f50
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4f8c723dee8e943351d268ac678c8acc77efcbf4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936345"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051133"
 ---
 # <a name="staticresource-markup-extension"></a>{StaticResource}-Markuperweiterung
 
@@ -38,7 +38,7 @@ Stellt durch Auswerten eines Verweises auf eine bereits definierte Quelle einen 
 
 Die Regeln, nach denen die Auflösung einer **StaticResource** zu einem Element in einem Ressourcenwörterbuch erfolgt, wird in diesem Thema nicht beschrieben. Dies hängt davon ab, ob sowohl der Verweis als auch die Ressource in einer Vorlage vorhanden sind, ob zusammengeführte Ressourcenwörterbücher verwendet werden usw. Weitere Informationen dazu, wie Sie Ressourcen und Eigenschaften mithilfe eines [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) definieren, und zusätzlichen Beispielcode finden Sie unter [ResourceDictionary- und XAML-Ressourcenverweise](https://msdn.microsoft.com/library/windows/apps/mt187273).
 
-**Wichtige**  **StaticResource** muss nicht versuchen, einen Vorwärtsverweis auf eine Ressource, die definiert, ist die innerhalb der XAML-Datei weiter lexikalisch. Dieser Versuch wird nicht unterstützt. Auch wenn der weitergeleitete Verweis keinen Fehler verursacht, wird durch den Versuch die Leistung beeinträchtigt. Um optimale Ergebnisse zu erzielen, sollten Sie die Ressourcenwörterbücher so erstellen, dass Vorwärtsverweise vermieden werden können.
+**Wichtige**  **StaticResource** darf nicht versuchen, einen Vorwärtsverweis auf eine Ressource, die definiert wird innerhalb der XAML-Datei weiter lexikalisch. Dieser Versuch wird nicht unterstützt. Auch wenn der weitergeleitete Verweis keinen Fehler verursacht, wird durch den Versuch die Leistung beeinträchtigt. Um optimale Ergebnisse zu erzielen, sollten Sie die Ressourcenwörterbücher so erstellen, dass Vorwärtsverweise vermieden werden können.
 
 Wenn Sie versuchen, eine **StaticResource** für einen Schlüssel anzugeben, die nicht aufgelöst werden kann, führt dies zu einer XAML-Analyseausnahme zur Laufzeit. Entwicklungstools geben unter Umständen auch Warnungen oder Fehler aus.
 
@@ -50,7 +50,7 @@ Die [{ThemeResource}-Markuperweiterung](themeresource-markup-extension.md) ist e
 
 ### <a name="an-example-staticresource-usage"></a>{StaticResource}-Beispielverwendung
 
-Der folgende XAML-Beispielcode stammt aus dem [XAML-Datenbindungsbeispiel](http://go.microsoft.com/fwlink/p/?linkid=226854).
+Der folgende XAML-Beispielcode stammt aus dem [XAML-Datenbindungsbeispiel](https://go.microsoft.com/fwlink/p/?linkid=226854).
 
 ```xml
 <StackPanel Margin="5">

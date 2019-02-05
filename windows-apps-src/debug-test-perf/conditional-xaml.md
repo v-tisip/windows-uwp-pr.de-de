@@ -1,16 +1,16 @@
 ---
-title: Bedingte XAML
+title: Bedingtes XAML
 description: Verwenden neuer APIs in XAML-Markup bei gleichzeitiger Gewährleistung der Kompatibilität mit früheren Versionen
 ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c75a6c487fe4a7f7cb56deff869b36309a4b9c7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a3133508a0cb8919994543845412ef71a8d463fe
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921763"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050843"
 ---
 # <a name="conditional-xaml"></a>Bedingte XAML
 
@@ -59,7 +59,7 @@ Wir besprechen diese Methoden weiter unten in diesem Artikel.
 
 In diesem Beispiel zeigen Sie „Hello, Conditional XAML” als Inhalt eines Textblocks an, wenn die App mit dem Fall Creators Update oder später läuft, und standardmäßig keinen Inhalt, wenn sie unter einer früheren Version läuft.
 
-Zuerst definieren Sie einen benutzerdefinierten Namespace mit dem Präfix „contract5Present” und verwenden den standardmäßigen XAML-Namespace (http://schemas.microsoft.com/winfx/2006/xaml/presentation) als das Schema, das die Eigenschaft [TextBlock.Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.Text) enthält). Um daraus einen bedingten Namespace zu machen, fügen Sie das Trennzeichen '?' nach dem Schema ein.
+Zuerst definieren Sie einen benutzerdefinierten Namespace mit dem Präfix „contract5Present” und verwenden den standardmäßigen XAML-Namespace (https://schemas.microsoft.com/winfx/2006/xaml/presentation) als das Schema, das die Eigenschaft [TextBlock.Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.Text) enthält). Um daraus einen bedingten Namespace zu machen, fügen Sie das Trennzeichen '?' nach dem Schema ein.
 
 Dann definieren Sie eine Bedingung, die **true** auf Geräten zurückgibt, die das Fall Creators Update ausführen. Sie können die ApiInformation-Methode **IsApiContractPresent** verwenden, um zu prüfen, ob die 5. Version von UniversalApiContract vorliegt. Version 5 von UniversalApiContract wurde mit dem Fall Creators Update (SDK 16299) veröffentlicht.
 

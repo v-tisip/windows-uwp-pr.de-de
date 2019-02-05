@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 75af433d80364485b0c12a9540c0d7bb471c4e28
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ebf54e062ef2388562cc970a2f124f0ce1f978c7
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947888"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045313"
 ---
 # <a name="composition-effects"></a>Kompositionseffekte
 
 Mit der API [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878) können Echtzeiteffekte mithilfe animierbarer Effekteigenschaften auf Bilder und Benutzeroberflächen angewendet werden. In dieser Übersicht erläutern wir die Funktionen, über die Effekte auf visuelle Kompositionselemente angewendet werden können.
 
-Um die Konsistenz der [Universellen Windows-Plattform (UWP)](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx) für Entwickler zu gewährleisten, die Effektbeschreibungen in ihren Anwendungen verwenden, nutzen Kompositionseffekte die „IGraphicsEffect“-Schnittstelle von Win2D, um die Effektbeschreibungen über den [Microsoft.Graphics.Canvas.Effects](http://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm)-Namespace anzuwenden.
+Um die Konsistenz der [Universellen Windows-Plattform (UWP)](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx) für Entwickler zu gewährleisten, die Effektbeschreibungen in ihren Anwendungen verwenden, nutzen Kompositionseffekte die „IGraphicsEffect“-Schnittstelle von Win2D, um die Effektbeschreibungen über den [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm)-Namespace anzuwenden.
 
 Pinseleffekte werden verwendet, um Bereiche einer Anwendung farbig zu gestalten. Dabei werden Effekte auf eine Gruppe vorhandener Bilder angewendet. Die Kompositionseffekt-APIs in Windows 10 sind auf visuelle Sprite-Elemente ausgerichtet. Das SpriteVisual-Element ermöglicht hohe Flexibilität und Interaktion bei der Farb-, Bild- und Effektgestaltung. SpriteVisual ist ein visueller Kompositionstyp, der ein 2D-Rechteck mit einem Pinsel füllen kann. Das visuelle Element definiert die Grenzen des Rechtecks und der Pinsel die Pixel zum Zeichnen des Rechtecks.
 
@@ -39,11 +39,11 @@ Derzeit unterstützt die Komposition folgende Effekte:
 
 | Effekt               | Beschreibung                                                                                                                                                                                                                |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 2D-affine Transformation  | Wendet eine 2D-affine Transformationsmatrix auf ein Bild an. Dieser Effekt wurde verwendet, um die Alphamaske in unseren [Effektbeispielen](http://go.microsoft.com/fwlink/?LinkId=785341) zu animieren.       |
-| Arithmetische Komposition | Kombiniert zwei Bilder mittels einer flexiblen Gleichung. Eine arithmetische Komposition wurde verwendet, um einen Überblendungseffekt in unseren [Beispielen](http://go.microsoft.com/fwlink/?LinkId=785341) zu erzeugen. |
-| Fülleffekt         | Erzeugt einen Fülleffekt, der zwei Bilder kombiniert. Die Komposition stellt 21 der 26 in Win2D unterstützten [Füllmethoden](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_Effects_BlendEffectMode.htm) bereit.        |
+| 2D-affine Transformation  | Wendet eine 2D-affine Transformationsmatrix auf ein Bild an. Dieser Effekt wurde verwendet, um die Alphamaske in unseren [Effektbeispielen](https://go.microsoft.com/fwlink/?LinkId=785341) zu animieren.       |
+| Arithmetische Komposition | Kombiniert zwei Bilder mittels einer flexiblen Gleichung. Eine arithmetische Komposition wurde verwendet, um einen Überblendungseffekt in unseren [Beispielen](https://go.microsoft.com/fwlink/?LinkId=785341) zu erzeugen. |
+| Fülleffekt         | Erzeugt einen Fülleffekt, der zwei Bilder kombiniert. Die Komposition stellt 21 der 26 in Win2D unterstützten [Füllmethoden](https://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_Effects_BlendEffectMode.htm) bereit.        |
 | Farbquelle         | Generiert ein Bild, das eine Volltonfarbe enthält.                                                                                                                                                                               |
-| Komposition            | Kombiniert zwei Bilder. Die Komposition stellt alle 13 in Win2D unterstützten [Kompositionsmodi](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_CanvasComposite.htm) bereit.                                              |
+| Komposition            | Kombiniert zwei Bilder. Die Komposition stellt alle 13 in Win2D unterstützten [Kompositionsmodi](https://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_CanvasComposite.htm) bereit.                                              |
 | Kontrast             | Erhöht oder verringert den Kontrast eines Bilds.                                                                                                                                                                           |
 | Belichtung             | Erhöht oder verringert die Belichtung eines Bilds.                                                                                                                                                                           |
 | Graustufen            | Konvertiert ein Bild in ein monochromes Graustufenbild.                                                                                                                                                                                   |
@@ -54,7 +54,7 @@ Derzeit unterstützt die Komposition folgende Effekte:
 | Sepia                | Konvertiert ein Bild in Sepiatöne.                                                                                                                                                                                          |
 | Temperatur und Farbton | Passt die Temperatur und/oder den Farbton eines Bilds an.                                                                                                                                                                           |
 
-Ausführliche Informationen finden Sie in der Beschreibung des Win2D-Namespaces [Microsoft.Graphics.Canvas.Effects](http://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm). In der Komposition nicht unterstützte Effekte sind mit \[NoComposition\] gekennzeichnet.
+Ausführliche Informationen finden Sie in der Beschreibung des Win2D-Namespaces [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm). In der Komposition nicht unterstützte Effekte sind mit \[NoComposition\] gekennzeichnet.
 
 ### <a name="chaining-effects"></a>Verketten von Effekten
 
@@ -123,11 +123,11 @@ Starten Sie wie folgt die Animation der Sättigungseigenschaft des Effekts:
 catEffect.Properties.StartAnimation("saturationEffect.Saturation", effectAnimation);
 ```
 
-Im Beispiel [Entsättigung – Animation](http://go.microsoft.com/fwlink/?LinkId=785342) finden Sie mithilfe von Keyframes animierte Effekteigenschaften. Das [AlphaMask-Beispiel](http://go.microsoft.com/fwlink/?LinkId=785343) enthält Informationen zur Verwendung von Effekten und Ausdrücken.
+Im Beispiel [Entsättigung – Animation](https://go.microsoft.com/fwlink/?LinkId=785342) finden Sie mithilfe von Keyframes animierte Effekteigenschaften. Das [AlphaMask-Beispiel](https://go.microsoft.com/fwlink/?LinkId=785343) enthält Informationen zur Verwendung von Effekten und Ausdrücken.
 
 ### <a name="multiple-effect-instances-with-independent-properties"></a>Mehrere Effektinstanzen mit unabhängigen Eigenschaften
 
-Wenn angegeben wird, dass ein Parameter während der Effektkompilierung dynamisch sein soll, kann der Parameter pro Effektinstanz geändert werden. Dadurch können zwei visuelle Elemente denselben Effekt verwenden, aber mit unterschiedlichen Effekteigenschaften gerendert werden. Weitere Informationen finden Sie im [Beispiel](http://go.microsoft.com/fwlink/?LinkId=785344) zum ColorSource- und Blend-Effekt.
+Wenn angegeben wird, dass ein Parameter während der Effektkompilierung dynamisch sein soll, kann der Parameter pro Effektinstanz geändert werden. Dadurch können zwei visuelle Elemente denselben Effekt verwenden, aber mit unterschiedlichen Effekteigenschaften gerendert werden. Weitere Informationen finden Sie im [Beispiel](https://go.microsoft.com/fwlink/?LinkId=785344) zum ColorSource- und Blend-Effekt.
 
 ## <a name="getting-started-with-composition-effects"></a>Erste Schritte mit Kompositionseffekten
 
@@ -168,7 +168,7 @@ In den nächsten Schritten verwenden wir Composition-APIs, um einen Sättigungse
 ![Quellbild](images/composition-cat-source.png)
 ### <a name="setting-your-composition-basics"></a>Festlegen der Grundlagen für die Komposition
 
-Anhand des [Beispiels für die visuelle Kompositionsstruktur](http://go.microsoft.com/fwlink/?LinkId=785345) auf GitHub erfahren Sie, wie Sie den „Windows.UI.Composition“-Kompositor einrichten, den „ContainerVisual“-Stamm angeben und diesen dem Hauptfenster zuordnen.
+Anhand des [Beispiels für die visuelle Kompositionsstruktur](https://go.microsoft.com/fwlink/?LinkId=785345) auf GitHub erfahren Sie, wie Sie den „Windows.UI.Composition“-Kompositor einrichten, den „ContainerVisual“-Stamm angeben und diesen dem Hauptfenster zuordnen.
 
 ```cs
 _compositor = new Compositor();

@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 50e6c68841440120b783713ef0a591e39a7c7eec
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d0c3bea228cae8d9482a8e0cb24c958e36992848
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942823"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046573"
 ---
 # <a name="accessibility-overview"></a>Übersicht über die Barrierefreiheit  
 
@@ -188,11 +188,11 @@ Beim Erstellen eines benutzerdefinierten Steuerelements empfehlen wir, dass Sie 
 <span id="ASSISTIVE_TECHNOLOGY_SUPPORT_IN_APPS_THAT_SUPPORT_XAML___MICROSOFT_DIRECTX_INTEROP"/>
 
 ## <a name="assistive-technology-support-in-apps-that-support-xaml--microsoft-directx-interop"></a>Hilfstechnologie in Apps, die XAML/Microsoft DirectX Interop unterstützt  
-Auf in einer XAML-Benutzeroberfläche gehostete Microsoft DirectX-Inhalte (mit [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/Dn252834) oder [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/Hh702041)) kann standardmäßig nicht direkt zugegriffen werden. Im [Beispiel für SwapChainPanel-Beispiel für DirectX/XAML-Interoperabilität](http://go.microsoft.com/fwlink/p/?LinkID=309155) wird veranschaulicht, wie Benutzeroberflächenautomatisierungs-Peers für den gehosteten DirectX-Inhalt erstellt werden. Diese Technik erlaubt den Zugriff auf den gehosteten Inhalt per Benutzeroberflächenautomatisierung.
+Auf in einer XAML-Benutzeroberfläche gehostete Microsoft DirectX-Inhalte (mit [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/Dn252834) oder [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/Hh702041)) kann standardmäßig nicht direkt zugegriffen werden. Im [Beispiel für SwapChainPanel-Beispiel für DirectX/XAML-Interoperabilität](https://go.microsoft.com/fwlink/p/?LinkID=309155) wird veranschaulicht, wie Benutzeroberflächenautomatisierungs-Peers für den gehosteten DirectX-Inhalt erstellt werden. Diese Technik erlaubt den Zugriff auf den gehosteten Inhalt per Benutzeroberflächenautomatisierung.
 
 ## <a name="related-topics"></a>Verwandte Themen  
 * [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179)
 * [Entwerfen für Barrierefreiheit](https://msdn.microsoft.com/library/windows/apps/Hh700407)
-* [XAML-Beispiel für Barrierefreiheit](http://go.microsoft.com/fwlink/p/?linkid=238570)
+* [XAML-Beispiel für Barrierefreiheit](https://go.microsoft.com/fwlink/p/?linkid=238570)
 * [Bedienungshilfen](accessibility.md)
 * [Erste Schritte mit der Sprachausgabe](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)

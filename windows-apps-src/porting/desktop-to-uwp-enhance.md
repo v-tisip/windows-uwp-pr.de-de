@@ -6,16 +6,16 @@ ms.date: 10/15/2018
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 42229212a0f54e307eaa841849c1a279c4354d2a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0e06de7d33604981e0055d9d57f774d280753db2
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941867"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051053"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Verbessern Sie Ihre Desktopanwendung für Windows10
 
-Sie können Windows-Runtime-APIs verwenden, moderne Funktionen hinzufügen, die für Windows 10-Benutzer.
+Sie können Windows-Runtime-APIs verwenden, um moderner Funktionen hinzuzufügen, die für Windows 10-Benutzer.
 
 Richten Sie zuerst Ihr Projekt ein. Dann fügen Sie Windows10-Funktionen hinzu. Sie können separate Builds für Windows10-Benutzer erstellen oder die gleichen Binärdateien für alle Benutzer verteilen – unabhängig davon, welche Version von Windows sie ausführen.
 
@@ -23,7 +23,7 @@ Richten Sie zuerst Ihr Projekt ein. Dann fügen Sie Windows10-Funktionen hinzu. 
 
 Sie müssen einige Änderungen am Projekt vornehmen, um UWP-APIs zu verwenden.
 
-### <a name="modify-a-net-project-to-use-windows-runtime-apis"></a>Ändern eines .NET-Projekts, um Windows-Runtime-APIs zu verwenden.
+### <a name="modify-a-net-project-to-use-windows-runtime-apis"></a>Ändern eines .NET-Projekts für Windows Runtime-APIs
 
 Öffnen Sie das **Verweis-Manager**-Dialogfeld, wählen Sie die **Durchsuchen**-Schaltfläche, und wählen Sie dann **Alle Dateien** aus.
 
@@ -43,11 +43,11 @@ Legen Sie im Dialogfeld **Eigenschaften** die **lokale Kopie** jeder *winmd*-Dat
 
 ![„Lokal kopieren“-Feld](images/desktop-to-uwp/copy-local-field.png)
 
-### <a name="modify-a-c-project-to-use-windows-runtime-apis"></a>Ändern eines C++ Projekts für Windows-Runtime-APIs verwenden.
+### <a name="modify-a-c-project-to-use-windows-runtime-apis"></a>Ändern eines C++ Projekts für Windows-Runtime-APIs
 
-Verwendung [C++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/) für Windows-Runtime-APIs nutzen. C++/WinRT ist eine vollständig standardisierte, moderne C++17-Sprachprojektion für Windows-Runtime-(WinRT)-APIs, die als headerdateibasierte Bibliothek implementiert ist und Ihnen einen erstklassigen Zugriff auf die moderne Windows-API bietet.
+Verwendung [C++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/) Windows-Runtime-APIs nutzen. C++/WinRT ist eine vollständig standardisierte, moderne C++17-Sprachprojektion für Windows-Runtime-(WinRT)-APIs, die als headerdateibasierte Bibliothek implementiert ist und Ihnen einen erstklassigen Zugriff auf die moderne Windows-API bietet.
 
-Zum Konfigurieren des Projekts für C++ / WinRT, finden Sie unter [Ändern Sie ein Projekt der Windows-Desktop-Anwendung zum Hinzufügen von C++ / WinRT-Unterstützung](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
+Zum Konfigurieren des Projekts für C++ / WinRT, finden Sie unter [Ändern eines Windows-Desktop-Anwendung-Projekts zum Hinzufügen von C++ / WinRT-Unterstützung](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
 
 ## <a name="add-windows-10-experiences"></a>Windows10-Funktionen hinzufügen
 
@@ -55,11 +55,11 @@ Jetzt können Sie moderner Funktionen für Benutzer der Anwendung unter Windows1
 
 :white_check_mark: **Entscheiden Sie zunächst, welche Funktionen Sie hinzufügen möchten**
 
-Es gibt viele zur Auswahl. Beispielsweise können Sie Ihre Purchase Reihenfolge Fluss mithilfe von monetisierungs-APIs oder mehr Aufmerksamkeit für Ihre Anwendung bei interessante, z. B. ein neues Bild mit Teilen kaufablauf vereinfachen.
+Es gibt viele zur Auswahl. Beispielsweise können Sie Ihre Bestellung Reihenfolge Fluss mithilfe von monetisierungs-APIs oder mehr Aufmerksamkeit für Ihre Anwendung bei interessante, z. B. ein neues Bild teilen, die kaufablauf vereinfachen.
 
 ![Popup](images/desktop-to-uwp/toast.png)
 
-Auch dann, wenn Benutzer Ihre Nachricht ignorieren oder schließen, können sie diese im Info-Center anzeigen und dann auf die Nachricht klicken, um Ihre App zu öffnen. Dies erhöht die Interaktion mit Ihrer Anwendung und hat den zusätzlichen Vorteil, Ihre Anwendung tief in das Betriebssystem integrieren. Wir zeigen Ihnen den Code für diese Funktion weiter unten.
+Auch dann, wenn Benutzer Ihre Nachricht ignorieren oder schließen, können sie diese im Info-Center anzeigen und dann auf die Nachricht klicken, um Ihre App zu öffnen. Dies erhöht die Interaktion mit der Anwendung und hat den zusätzlichen Vorteil, Ihre Anwendung tief in das Betriebssystem integrieren. Wir zeigen Ihnen den Code für diese Funktion weiter unten.
 
 Besuchen Sie unsere [Developer Center](https://developer.microsoft.com/windows) mit weiteren Ideen.
 
@@ -150,7 +150,7 @@ Weitere Informationen zu Benachrichtigungen finden Sie unter [Adaptive und inter
 
 ## <a name="support-windows-xp-windows-vista-and-windows-78-install-bases"></a>Unterstützung der Windows XP-, Windows Vista- und Windows7/8-Installationsbasis
 
-Sie können Ihre Anwendung für Windows 10 modernisieren, ohne dass eine neue Verzweigung zu erstellen und eine separate Codebasis verwalten zu müssen.
+Sie können Ihre Anwendung für Windows 10 modernisieren, ohne dass eine neue Verzweigung zu erstellen und eine separate Codebasis verwalten zu.
 
 Wenn Sie separate Binärdateien für Windows10-Benutzer erstellen möchten, verwenden Sie die bedingten Kompilierung. Wenn Sie einen Satz von Binärdateien für alle Windows-Benutzer erstellen möchten, verwenden Sie Laufzeitprüfungen.
 
@@ -222,7 +222,7 @@ Die einfachste Möglichkeit zum Hinzufügen von laufzeitprüfungen zum Code ist 
 
 **Finden Sie Antworten auf Ihre Fragen**
 
-Haben Sie Fragen? Fragen Sie uns auf Stack Overflow. Unser Team überwacht diese [Tags](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Fragen Sie uns [hier](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+Haben Sie Fragen? Fragen Sie uns auf Stack Overflow. Unser Team überwacht diese [Tags](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Fragen Sie uns [hier](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
 **Geben Sie Feedback oder Verbesserungsvorschläge**
 

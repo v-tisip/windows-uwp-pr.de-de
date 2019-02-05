@@ -1,23 +1,23 @@
 ---
 Description: Windows 10 build 10240 and updates to developer tools continue to provide the tools, features, and experiences powered by the Universal Windows Platform.
-title: Neuigkeiten in Windows 10 Build 10240 – Juli 2015
+title: Was ist neu in Windows 10 Build 10240 – Juli 2015
 keywords: Neuigkeiten, was neu ist, Aktualisierung, Updates, Features, neu, Windows 10, 1507, 10240
 ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: 4853e55b-2232-4589-903a-ccb60e07aeb8
 ms.localizationpriority: medium
-ms.openlocfilehash: 75c5c34f3dec48bbee2feccde5b60cde45a241f9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9a1f3c95169842f7c9bc00a662b4498ed12df32c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941725"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045729"
 ---
 # <a name="whats-new-in-windows10-for-developers-build-10240"></a>Neuigkeiten in Windows 10 für Entwickler, build 10240
 
-Windows10, Build10240, und das aktualisierte SDK stellen Tools, Features und Umgebungen zur Verfügung, mit denen bemerkenswerte Apps für die Universelle Windows-Plattform ermöglicht werden. Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/create-uwp-apps.md) oder lesen, wie Sie Ihren [vorhandenen App-Code unter Windows verwenden](../porting/index.md) können.
+Windows10, Build10240, und das aktualisierte SDK stellen Tools, Features und Umgebungen zur Verfügung, mit denen bemerkenswerte Apps für die Universelle Windows-Plattform ermöglicht werden. Nach der [Installation der Tools und des SDKs](https://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/create-uwp-apps.md) oder lesen, wie Sie Ihren [vorhandenen App-Code unter Windows verwenden](../porting/index.md) können.
 
-Hier ist ein Feature für Feature einzeln erläutert neuen in Windows 10, Build 10240 (auch bekannt als Windows 10, Version 1507).
+Hier ist ein Feature Features einzeln erläutert neuen in Windows 10 Build 10240 (auch bekannt als Windows 10, Version 1507).
 
 ## <a name="adaptive-layouts"></a>Adaptive Layouts
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, Karten, Standort, Geofence, Benachrichtigungen
 ms.localizationpriority: medium
-ms.openlocfilehash: adcce5716a2982cf2c08e98ee337dbad20bddf28
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7e00a3db8890183f50efad6caa31bd573707c6a6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924667"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9045689"
 ---
 # <a name="set-up-a-geofence"></a>Einrichten eines Geofence
 
@@ -20,9 +20,9 @@ ms.locfileid: "8924667"
 
 Richten Sie einen [**Geofence**](https://msdn.microsoft.com/library/windows/apps/dn263587)-Bereich in Ihrer App ein, und erfahren Sie, wie Sie Benachrichtigungen im Vordergrund und Hintergrund behandeln.
 
-**Tipp** Wenn Sie weitere Informationen zum Zugreifen auf die Position in Ihrer App benötigen, laden Sie das folgende Beispiel aus den [API-Beispielen für die Universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter.
+**Tipp** Wenn Sie weitere Informationen zum Zugreifen auf die Position in Ihrer App benötigen, laden Sie das folgende Beispiel aus den [API-Beispielen für die Universelle Windows-Plattform](https://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter.
 
--   [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## <a name="enable-the-location-capability"></a>Aktivieren der Positionsfunktion
 
@@ -456,7 +456,7 @@ Das Testen und Debuggen von Geofencing-Apps kann eine Herausforderung sein, da d
 
 1.  Erstellen Sie Ihre App in Visual Studio.
 2.  Starten Sie Ihre App im Visual Studio-Emulator.
-3.  Simulieren Sie mit den Tools verschiedene Positionen innerhalb und außerhalb Ihres Geofence-Bereichs. Damit das Ereignis ausgelöst wird, müssen Sie nach der mit der [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703)-Eigenschaft festgelegten Verweilzeit ausreichend lange warten. Sie müssen in der Eingabeaufforderung Ihre Zustimmung geben, um der App Berechtigungen zum Verwenden der Position zu gewähren. Weitere Informationen zum Simulieren von Positionen finden Sie unter [Festlegen der simulierten geografischen Position des Geräts](http://go.microsoft.com/fwlink/p/?LinkID=325245).
+3.  Simulieren Sie mit den Tools verschiedene Positionen innerhalb und außerhalb Ihres Geofence-Bereichs. Damit das Ereignis ausgelöst wird, müssen Sie nach der mit der [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703)-Eigenschaft festgelegten Verweilzeit ausreichend lange warten. Sie müssen in der Eingabeaufforderung Ihre Zustimmung geben, um der App Berechtigungen zum Verwenden der Position zu gewähren. Weitere Informationen zum Simulieren von Positionen finden Sie unter [Festlegen der simulierten geografischen Position des Geräts](https://go.microsoft.com/fwlink/p/?LinkID=325245).
 4.  Sie können auch den Emulator verwenden, um die Größe von Umgrenzungen sowie die Verweildauer zu schätzen, die für die Erkennung bei unterschiedlichen Geschwindigkeiten ungefähr notwendig ist.
 
 ### <a name="test-and-debug-a-geofencing-app-that-is-running-in-the-background"></a>Testen und Debuggen einer im Hintergrund ausgeführten Geofencing-App
@@ -468,7 +468,7 @@ Das Testen und Debuggen von Geofencing-Apps kann eine Herausforderung sein, da d
 3.  Schließen Sie die lokal ausgeführte App.
 4.  Starten Sie Ihre App im Visual Studio-Emulator. Die Geofencingsimulation im Hintergrund wird im Emulator jeweils nur für eine App unterstützt. Starten Sie nicht mehrere Geofencing-Apps im Emulator.
 5.  Simulieren Sie im Emulator verschiedene Positionen innerhalb und außerhalb Ihrer Geofence-Region. Damit das Ereignis ausgelöst wird, müssen Sie nach der Verweilzeit ([**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703)) ausreichend lange warten. Sie müssen in der Eingabeaufforderung Ihre Zustimmung geben, um der App Berechtigungen zum Verwenden der Position zu gewähren.
-6.  Verwenden Sie Visual Studio, um die Hintergrundaufgabe für die Position auszulösen. Weitere Informationen zum Auslösen von Hintergrundaufgaben in Visual Studio finden Sie unter [So wird’s gemacht: Auslösen von Hintergrundaufgaben](http://go.microsoft.com/fwlink/p/?LinkID=325378).
+6.  Verwenden Sie Visual Studio, um die Hintergrundaufgabe für die Position auszulösen. Weitere Informationen zum Auslösen von Hintergrundaufgaben in Visual Studio finden Sie unter [So wird’s gemacht: Auslösen von Hintergrundaufgaben](https://go.microsoft.com/fwlink/p/?LinkID=325378).
 
 ## <a name="troubleshoot-your-app"></a>Behandeln von App-Problemen
 
@@ -481,6 +481,6 @@ Bevor Ihre App auf Positionsdaten zugreifen kann, muss **Position** auf dem Ger�
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [UWP-Geolocation-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=533278)
+* [UWP-Geolocation-Beispiel](https://go.microsoft.com/fwlink/p/?linkid=533278)
 * [Entwurfsrichtlinien für Geofencing](https://msdn.microsoft.com/library/windows/apps/dn631756)
 * [Entwurfsrichtlinien für Apps mit Positionsbestimmung](https://msdn.microsoft.com/library/windows/apps/hh465148)

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows10, UWP, Steuern, IRS, Bundessteuerbehörde der USA (IRS), Steuern, Einkommensteuer, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a5e70278d655bce4ced48b33c4711762a7cce7f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fb25887d9bc40bd9c596cd437b7d2d6d06047020
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918541"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047312"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Kennenlernen der von Microsoft ausgestellten IRS-Steuerformulare
 
@@ -23,8 +23,8 @@ Nachfolgend erläutern wir diese Formulare eingehender, etwa, wer sie erhält un
 
 | IRS-Steuerformular | Beschreibung | Verfügbarkeit |
 |--------------|-------------|--------------|
-|1099-MISC, 1099-K | Im Zusammenhang mit Verkaufsaktivitäten und/oder Zahlungen an Sie für die Teilnahme am Microsoft Marketplace | Gedruckte Formulare werden werden Siegeln vor **dem 31. Januar**und PDF-Kopien werden in [Partner Center](https://partner.microsoft.com/dashboard) verfügbar (in **Kontoeinstellungen > Steuerprofil**) zur gleichen Zeit |
-|1042-S | Im Zusammenhang mit den Zahlungen an Sie, die der Quellensteuer der USA unterliegen | Gedruckte Formulare werden werden Siegeln vor dem **15. März**und PDF-Kopien werden im Partner Center zur Verfügung stehen (in **Kontoeinstellungen > Steuerprofil**) zur gleichen Zeit |
+|1099-MISC, 1099-K | Im Zusammenhang mit Verkaufsaktivitäten und/oder Zahlungen an Sie für die Teilnahme am Microsoft Marketplace | Gedruckte Formulare werden werden Siegeln vor **dem 31. Januar**und PDF-Kopien werden zur gleichen Zeit im [Partner Center](https://partner.microsoft.com/dashboard) (im **Konto Einstellungen > Steuerprofil**) zur Verfügung stehen |
+|1042-S | Im Zusammenhang mit den Zahlungen an Sie, die der Quellensteuer der USA unterliegen | Gedruckte Formulare werden werden Siegeln vor dem **15. März**und PDF-Kopien werden zur Verfügung stehen im Partner Center (im **Konto Einstellungen > Steuerprofil**) zur gleichen Zeit |
 
 > [!NOTE]
 > Die Adresse, mit denen wir auf IRS-Steuerformularen ergibt sich aus der Adresse in Ihr [Steuerprofil](setting-up-your-payout-account-and-tax-forms.md#tax-forms). Wenn sich Ihre Adresse geändert hat, aktualisieren Sie die Adresse auch in Ihrem **Steuerprofil**.
@@ -34,17 +34,17 @@ Die Steuerformulare werden über die folgenden Adressen an Sie gesendet werden:
 **US-Bürger:**
 <table>
 <tr><th>Business-Gruppe</th><th>Juristische Person</th><th>Address</th></tr>
-<tr><td>Windows, Office, Azure</td><td>Microsoft Corporation</td><td>One Microsoft Way<br>Redmond WA 98052, USA USA</td></tr>
-<tr><td>Werbung</td><td>Microsoft Online Inc.</td><td>6100 RSA Data Road<br>Reno, NV 89511 USA</td></tr>
+<tr><td>Windows, Office, Azure</td><td>Microsoft Corporation</td><td>One Microsoft Way<br>Redmond WA 98052 USA</td></tr>
+<tr><td>Werbung</td><td>Microsoft Online Inc.</td><td>6100 Neil Road<br>Reno, NV 89511 USA</td></tr>
 <table> 
 
-**Außerhalb der USA Bürger:**
+**US-Bürger:**
 <table>
 <tr><th>Business-Gruppe</th><th>Juristische Person</th><th>Address</th></tr>
-<tr><td>Windows, Office, Azure</td><td>Microsoft Irland Operations Limited (Zahlung von Microsoft Corporation über Microsoft Irland als qualifizierter Vermittler für Microsoft Corporation)</td><td>One Microsoft Ort<br>Südkorea&nbsp;County&nbsp;Unternehmen&nbsp;Park<br>Leopardstown Dublin 18 Irland</td></tr>
-<tr><td>Werbung *</td><td>Microsoft Irland Operations Limited (Zahlung durch Microsoft Online Inc. über Microsoft Irland als Auszahlung Agent für Microsoft Online Inc.)</td><td>One Microsoft Ort<br>Südkorea&nbsp;County&nbsp;Unternehmen&nbsp;Park<br>Leopardstown Dublin 18 Irland</td></tr>
-<tr><td>Werbung</td><td>Microsoft Online Inc.</td><td>6100 RSA Data Road<br>Reno, NV 89511 USA</td></tr>
-<tr><td colspan="3">* Bürger der folgenden Ländern Umsatz Einnahmen werden über Microsoft Irland Operations Limited bezahlt: Österreich, Belgien, Bulgarien, Kroatien, Zypern, Tschechische Republik, Dänemark, Estland, Finnland, Frankreich, Deutschland, Griechenland, Ungarn, Irland, Isle Of Man, Italien, Lettland, Liechtenstein, Litauen, Luxemburg, Malta, Monaco, Niederlande, Norwegen, Polen, Portugal, Rumänien, Slowakei, Slowenien, Südafrika, Spanien, Schweden, Schweiz, Vereinigtes Königreich</td></tr>
+<tr><td>Windows, Office, Azure</td><td>Microsoft Irland Operations Limited (Zahlung erfolgt durch Microsoft Corporation über Microsoft Irland als qualifizierter Vermittler für Microsoft Corporation)</td><td>Einem Microsoft Ort<br>Südkorea&nbsp;County&nbsp;Unternehmen&nbsp;Park<br>Leopardstown, Dublin 18 Irland</td></tr>
+<tr><td>Werbung *</td><td>Microsoft Irland Operations Limited (Zahlung erfolgt durch Microsoft Online Inc. über Microsoft Irland als Auszahlung Agent für Microsoft Online Inc.)</td><td>Einem Microsoft Ort<br>Südkorea&nbsp;County&nbsp;Unternehmen&nbsp;Park<br>Leopardstown, Dublin 18 Irland</td></tr>
+<tr><td>Werbung</td><td>Microsoft Online Inc.</td><td>6100 Neil Road<br>Reno, NV 89511 USA</td></tr>
+<tr><td colspan="3">* Bürger der folgenden Länder Umsatz mit Werbung Einnahmen werden über Microsoft Irland Operations Limited bezahlt: Österreich, Belgien, Bulgarien, Kroatien, Zypern, Tschechische Republik, Dänemark, Estland, Finnland, Frankreich, Deutschland, Griechenland, Ungarn, Irland, Isle Of Man, Italien, Lettland, Liechtenstein, Litauen, Luxemburg, Malta, Monaco, Niederlande, Norwegen, Polen, Portugal, Rumänien, Slowakei, Slowenien, Südafrika, Spanien, Schweden, Schweiz, Vereinigtes Königreich</td></tr>
 </table>
 
 ## <a name="for-developers-located-in-the-united-states"></a>Für Entwickler in den USA
@@ -104,7 +104,7 @@ Ich habe mindestens 600 US-Dollar an Zahlungen erhalten, die nicht im Zusammenha
     <td valign="top"><b>Warum wurde Steuer auf meine Zahlungen einbehalten, als ich ein Formular W8 ausgefüllt habe?</b></td>
     <td valign="top">Steuern werden in einem der folgenden Fälle einbehalten:<br>
      1. Sie haben den Abschnittzum Steuerabkommen des W8 nicht ordnungsgemäß ausgefüllt oder<br>
-     2. Sie wohnen in einem Land, das über kein Steuerabkommen mit den USA verfügt.<br><br>Besuchen Sie Partner Center zu einem beliebigen Zeitpunkt ein aktualisiertes W8-Formular zu übermitteln.<br><br><b>Hinweis</b>: nicht alle Einnahmen Quellensteuer unterliegen ist.</td>
+     2. Sie wohnen in einem Land, das über kein Steuerabkommen mit den USA verfügt.<br><br>Besuchen Sie Partner Center zu einem beliebigen Zeitpunkt ein aktualisiertes W8-Formular zu übermitteln.<br><br><b>Hinweis</b>: nicht alle Einnahmen Quellensteuer unterliegt.</td>
   </tr>
   <tr>
     <td valign="top"><b>Ich habe ein aktualisiertes W8-Formular mit gültigen Informationen zum Abkommen übermittelt. Kann Microsoft mir die einbehaltene Steuer zurückerstatten?</b></td>
@@ -127,4 +127,4 @@ Ich habe mindestens 600 US-Dollar an Zahlungen erhalten, die nicht im Zusammenha
 
 
 > [!NOTE]
-> Bei weiteren Fragen oder Anliegen im Zusammenhang mit **IRS-Steuerformularen** erstellen Sie ein [Supportticket](http://aka.ms/storesupport). Microsoft kann keine Fragen im Zusammenhang mit Ihren spezifischen Steuerumständen beantworten. Bei diesen Fragen wenden Sie sich an Ihre Steuerexperten.
+> Bei weiteren Fragen oder Anliegen im Zusammenhang mit **IRS-Steuerformularen** erstellen Sie ein [Supportticket](https://aka.ms/storesupport). Microsoft kann keine Fragen im Zusammenhang mit Ihren spezifischen Steuerumständen beantworten. Bei diesen Fragen wenden Sie sich an Ihre Steuerexperten.

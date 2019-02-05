@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Eingabe, Beispiel
 ms.localizationpriority: medium
-ms.openlocfilehash: aee239f76c3d4431426f0bc9fe519a59f8f48838
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d545f696a93bfa8416e1a772ecc015867a3615c2
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923440"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045446"
 ---
 # <a name="adding-input-and-interactivity-to-the-marble-maze-sample"></a>Hinzufügen von Eingaben und Interaktivität zum Marble Maze-Beispiel
 
@@ -21,7 +21,7 @@ ms.locfileid: "8923440"
 UWP-Spiele können auf den verschiedensten Geräten ausgeführt werden, beispielsweise auf Desktopcomputern, Laptops und Tablets. Für ein Gerät sind viele verschiedene Eingabe- und Steuerungsmechanismen möglich. In diesem Dokument werden die wichtigsten Methoden beschrieben, die Sie berücksichtigen sollten, wenn Sie mit Eingabegeräten arbeiten. Außerdem erfahren Sie, wie diese Methoden in Marble Maze angewendet werden.
 
 > [!NOTE]
-> Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
+> Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](https://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 Hier sind einige der wichtigsten in diesem Dokument erörterten Punkte für das Arbeiten mit Eingaben in Ihrem Spiel:

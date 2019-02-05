@@ -6,16 +6,16 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-API für gezielte Angebote, gezielte Angebote
 ms.localizationpriority: medium
-ms.openlocfilehash: 27d99d2008352ff291f0cb620afab8ccb8f6977c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bcf270bd56d17936ef404adbc3663034b58e7a2c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937538"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045023"
 ---
 # <a name="manage-targeted-offers-using-store-services"></a>Verwalten von gezielten Angeboten mithilfe von Store-Diensten
 
-Wenn Sie ein *gezieltes Angebot* in Erstellen der **einbeziehen > zielgerichtete Angebote** Seite für Ihre app im Partner Center verwenden, die den *Microsoft Store für gezielte Angebote API* in Ihrem app Code zum Abrufen von Informationen, die Ihnen bei der Implementierung der in-app-Umgebung für die gezielten Angebots. Weitere Informationen zu gezielten Angeboten und Anleitungen zu deren Erstellung im Dashboard finden Sie unter [Verwenden Sie gezielte Angebote, um Interaktionen und Abschlüsse zu maximieren.](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
+Wenn Sie eine *gezielte Angebot* auf der Seite **beauftragen > erstellen, gezielte Angebote,** für Ihre app im Partner Center verwenden, die der *Microsoft Store für gezielte Angebote API* in Ihrem app Code, um Informationen abzurufen, die Ihnen bei der Implementierung der in-app-Umgebung für die gezielten Angebots. Weitere Informationen zu gezielten Angeboten und Anleitungen zu deren Erstellung im Dashboard finden Sie unter [Verwenden Sie gezielte Angebote, um Interaktionen und Abschlüsse zu maximieren.](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
 
 Die Gezielte-Angebote-API ist eine einfache REST-API, mit der Sie gezielte Angebote abrufen können, die für den aktuellen Benutzer verfügbar sind– basierend darauf, ob der Benutzer zum Kundensegment für das gezielte Angebot gehört. Gehen Sie folgendermaßen vor, um diese API in Ihrem App-Code zu verwenden:
 
@@ -45,7 +45,7 @@ Rufen Sie nach Erhalt des MSA-Tokens für den aktuellen Benutzer die GET-Methode
 
 Bei dieser Methode wird ein Array mit Produkt-IDs für die Add-Ons zurückgegeben, die den gezielten Angeboten zugeordnet sind, die für den aktuellen Benutzer verfügbar sind. Mit diesen Informationen können Sie ein oder mehrere gezielte Angebote als In-App-Einkauf für den Benutzer erstellen.
 
-Das folgende Beispiel zeigt, wie Sie die gezielten Angebote für den aktuellen Benutzer abrufen. Dieses Beispiel ist ein Auszug aus dem [vollständige Beispiel](#code-example). Erfordert die [Json.NET](http://www.newtonsoft.com/json)-Bibliothek von Newtonsoft und zusätzliche Klassen und **using**-Anweisungen, die im vollständigen Beispiel bereitgestellt werden.
+Das folgende Beispiel zeigt, wie Sie die gezielten Angebote für den aktuellen Benutzer abrufen. Dieses Beispiel ist ein Auszug aus dem [vollständige Beispiel](#code-example). Erfordert die [Json.NET](https://www.newtonsoft.com/json)-Bibliothek von Newtonsoft und zusätzliche Klassen und **using**-Anweisungen, die im vollständigen Beispiel bereitgestellt werden.
 
 [!code-cs[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetTargetedOffers)]
 
@@ -59,7 +59,7 @@ Das folgende Codebeispiel veranschaulicht die folgenden Aufgaben:
 * Abrufen aller gezielten Angebote für den aktuellen Benutzer mithilfe der Methode zum [Abrufen gezielter Angebote](get-targeted-offers.md)
 * Kaufen Sie das Add-On, das mit einem gezielten Angebot verknüpft ist.
 
-Dieses Beispiel erfordert die [Json.NET](http://www.newtonsoft.com/json)-Bibliothek von Newtonsoft. Im Beispiel wird diese Bibliothek verwendet, um Daten im JSON-Format zu serialisieren bzw. deserialisieren.
+Dieses Beispiel erfordert die [Json.NET](https://www.newtonsoft.com/json)-Bibliothek von Newtonsoft. Im Beispiel wird diese Bibliothek verwendet, um Daten im JSON-Format zu serialisieren bzw. deserialisieren.
 
 [!code-cs[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetTargetedOffersSample)]
 

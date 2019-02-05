@@ -6,18 +6,18 @@ ms.topic: article
 keywords: windows10, UWP
 ms.assetid: a7b82570-1f99-4bc3-ac78-412f6360e936
 ms.localizationpriority: medium
-ms.openlocfilehash: 55068ef3f0a0a0d01c61746bde02ddb7aa4ef885
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 01bc72051e9efa69adbbab574b932da829c83e72
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923566"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046533"
 ---
 # <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Bekannte Probleme mit UWP im Zusammenhang mit dem Xbox One-Entwicklerprogramm
 
 Dieses Thema beschreibt bekannte Probleme im Zusammenhang mit dem Xbox One-Entwicklerprogramm. Weitere Informationen zu diesem Programm finden Sie unter [UWP auf Xbox](index.md). 
 
-\[Wenn Sie über einen Link in einem API-Referenzthema hierher gelangten und nach Informationen zu APIs für die Universal-Gerätefamilie suchen, lesen Sie bitte [UWP-Funktionen, die noch nicht auf Xbox One unterstützt werden](http://go.microsoft.com/fwlink/?LinkID=760755).\]
+\[Wenn Sie über einen Link in einem API-Referenzthema hierher gelangten und nach Informationen zu APIs für die Universal-Gerätefamilie suchen, lesen Sie bitte [UWP-Funktionen, die noch nicht auf Xbox One unterstützt werden](https://go.microsoft.com/fwlink/?LinkID=760755).\]
 
 In der folgenden Liste werden einige bekannte Probleme aufgelistet, die auftreten können. Diese Liste ist jedoch nicht vollständig. 
 
@@ -56,11 +56,11 @@ Dies kann sich auf Xbox-Entwickler auswirken, die Dateien kopieren möchten, die
 
 ## <a name="blocked-networking-ports-on-xbox-one"></a>Gesperrte Netzwerkports auf Xbox One
 
-Bindungen an Ports im Bereich [57344, 65535] (einschließlich) sind für Apps für die universelle Windows-Plattform (UWP) auf Xbox One-Geräten nicht möglich. Obwohl die Bindung an diese Ports während der Laufzeit erfolgreich zu sein scheint, kann Netzwerkdatenverkehr im Hintergrund gelöscht werden, bevor er Ihre App erreicht. Ihre App sollte an den Port0 gebunden werden, wann immer möglich. Dieser ermöglicht dem System die Auswahl des lokalen Ports. Wenn Sie einen bestimmten Port verwenden müssen, muss sich die Portnummer im Bereich [1025, 49151] befinden, und Sie sollten Konflikte mit der IANA-Registrierung überprüfen und vermeiden. Weitere Informationen finden Sie in [Dienstname und Transportprotokoll-Portnummer-Registrierung](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml).
+Bindungen an Ports im Bereich [57344, 65535] (einschließlich) sind für Apps für die universelle Windows-Plattform (UWP) auf Xbox One-Geräten nicht möglich. Obwohl die Bindung an diese Ports während der Laufzeit erfolgreich zu sein scheint, kann Netzwerkdatenverkehr im Hintergrund gelöscht werden, bevor er Ihre App erreicht. Ihre App sollte an den Port0 gebunden werden, wann immer möglich. Dieser ermöglicht dem System die Auswahl des lokalen Ports. Wenn Sie einen bestimmten Port verwenden müssen, muss sich die Portnummer im Bereich [1025, 49151] befinden, und Sie sollten Konflikte mit der IANA-Registrierung überprüfen und vermeiden. Weitere Informationen finden Sie in [Dienstname und Transportprotokoll-Portnummer-Registrierung](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml).
 
 ## <a name="uwp-api-coverage"></a>UWP-API-Abdeckung
 
-Nicht alle UWP-APIs werden auf Xbox unterstützt. Die Liste der APIs, von denen bekannt ist, dass sie nicht funktionieren, finden Sie in [UWP-Funktionen, die noch nicht auf Xbox One unterstützt werden](http://go.microsoft.com/fwlink/p/?LinkId=760755). Wenn Sie Probleme mit anderen APIs feststellen, melden Sie dies bitte in den Foren. 
+Nicht alle UWP-APIs werden auf Xbox unterstützt. Die Liste der APIs, von denen bekannt ist, dass sie nicht funktionieren, finden Sie in [UWP-Funktionen, die noch nicht auf Xbox One unterstützt werden](https://go.microsoft.com/fwlink/p/?LinkId=760755). Wenn Sie Probleme mit anderen APIs feststellen, melden Sie dies bitte in den Foren. 
 
 
 ## <a name="navigating-to-wdp-causes-a-certificate-warning"></a>Navigieren zu WDP führt zu einer Zertifikatwarnung

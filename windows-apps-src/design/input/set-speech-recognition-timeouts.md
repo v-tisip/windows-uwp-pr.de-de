@@ -8,12 +8,12 @@ keywords: Sprache, Stimme, Spracherkennung, natürliche Sprache, diktieren, Eing
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 73c7e889b4633dae9e416cf7ccde13eb3f58e8ee
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 679c2632fd5793ae083b2a79e29de3a3e9da04cf
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939262"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044923"
 ---
 # <a name="set-speech-recognition-timeouts"></a>Festlegen von Timeouts für die Spracherkennung
 
@@ -47,7 +47,7 @@ recognizer.Timeouts.EndSilenceTimeout = TimeSpan.FromSeconds(1.2);
 
 * [Interaktionen mit der Spracherkennung](speech-interactions.md)
 **Beispiele**
-* [Beispiel zu Spracherkennung und Sprachsynthese](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Beispiel zu Spracherkennung und Sprachsynthese](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

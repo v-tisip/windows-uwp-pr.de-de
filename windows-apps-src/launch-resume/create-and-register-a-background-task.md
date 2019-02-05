@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: eb6cde0c3c31f0116c65e5d5dc4a0d8ae4a1b540
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9df6eef44d45db37e17610d6a5333f3a387b5cf6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920375"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045809"
 ---
 # <a name="create-and-register-an-out-of-process-background-task"></a>Erstellen und Registrieren einer Out-of-Process-Hintergrundaufgabe
 
@@ -36,12 +36,12 @@ Sie können Code im Hintergrund ausführen, indem Sie Klassen schreiben, die die
 
 Die folgenden Schritte zeigen, wie Sie eine neue Klasse zum Implementieren der [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)-Schnittstelle schreiben.
 
-1.  Erstellen Sie ein neues Projekt für Hintergrundaufgaben, und fügen Sie es zu Ihrer Projektmappe hinzu. Zu diesem Zweck mit der rechten Maustaste auf Ihren Projektmappenknoten im **Projektmappen-Explorer** , und wählen Sie **Hinzufügen** \> **Neues Projekt**. Wählen Sie die **Komponente für Windows-Runtime** -Projekttyp, nennen Sie das Projekt, und klicken Sie auf OK.
+1.  Erstellen Sie ein neues Projekt für Hintergrundaufgaben, und fügen Sie es zu Ihrer Projektmappe hinzu. Zu diesem Zweck mit der rechten Maustaste auf Ihren Projektmappenknoten im **Projektmappen-Explorer** , und wählen Sie **Hinzufügen** \> **Neues Projekt**. Wählen Sie den **Komponente für Windows-Runtime** -Projekttyp, nennen Sie das Projekt, und klicken Sie auf OK.
 2.  Verweisen Sie auf das Hintergrundaufgabenprojekt aus dem Projekt für UWP-Apps (Universelle Windows-Plattform). Für eine C#- oder C++-app in Ihrem app-Projekt mit der rechten Maustaste auf **Verweise** , und wählen Sie **Neuen Verweis hinzufügen**. Wählen Sie unter **Projektmappe** die Option **Projekte**. Wählen Sie dann den Namen Ihres Hintergrundaufgabenprojekts aus, und klicken Sie auf **OK**.
-3.  Fügen Sie eine neue Klasse, die die [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) -Schnittstelle implementiert, auf das hintergrundaufgabenprojekt. Die Methode [**IBackgroundTask.Run**](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) ist ein erforderlicher Einstiegspunkt und, die aufgerufen wird, wenn das angegebene Ereignis ausgelöst wird. Diese Methode ist in jeder Hintergrundaufgabe erforderlich.
+3.  Fügen Sie auf das hintergrundaufgabenprojekt eine neue Klasse, die [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) Schnittstelle implementiert. Die [**IBackgroundTask.Run**](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) -Methode ist ein erforderlicher Einstiegspunkt und, die aufgerufen wird, wenn das angegebene Ereignis ausgelöst wird. Diese Methode ist in jeder Hintergrundaufgabe erforderlich.
 
 > [!NOTE]
-> Die hintergrundaufgabenklasse selbst&mdash;und alle anderen Klassen im hintergrundaufgabenprojekt&mdash; **Öffentliche** Klassen, die **versiegelt** (oder **endgültigen**) werden müssen.
+> Die hintergrundaufgabenklasse selbst&mdash;und alle anderen Klassen im hintergrundaufgabenprojekt&mdash;müssen **Öffentliche** Klassen, die **versiegelt** (oder **endgültigen**) sind.
 
 Der folgende Beispielcode zeigt einen sehr einfachen Startpunkt für eine hintergrundaufgabenklasse.
 
@@ -142,7 +142,7 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 
 4.  Wenn asynchroner Code in der Hintergrundaufgabe ausgeführt wird, muss in der Hintergrundaufgabe eine Verzögerung verwendet werden. Wenn Sie keine Verzögerung verwenden, können dann die Hintergrund unerwartet beendet werden, wenn die **Run** -Methode zurückgegeben wird, bevor alle asynchronen Vorgänge bis zum Abschluss ausgeführt wurde.
 
-Fordern Sie die Verzögerung in der **Run** -Methode vor Aufruf der asynchronen Methode. Speichern Sie die Verzögerung auf einen Daten Klassenmember, damit sie von der asynchronen Methode zugegriffen werden kann. Deklarieren Sie das Objekt so, dass die Verzögerung nach Abschluss des asynchronen Codes abgeschlossen wird.
+Fordern Sie die Verzögerung in der **Run** -Methode vor Aufruf der asynchronen Methode. Speichern Sie die Verzögerung in Daten Klassenmember, so dass es von der asynchronen Methode zugegriffen werden kann. Deklarieren Sie das Objekt so, dass die Verzögerung nach Abschluss des asynchronen Codes abgeschlossen wird.
 
 Der folgende Beispielcode ruft die Verzögerung, speichert sie und gibt sie nach Abschluss des asynchronen Codes frei.
 
@@ -200,14 +200,14 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 ```
 
 > [!NOTE]
-> In C# werden asynchrone Methoden für Hintergrundaufgaben mithilfe der Schlagwörter **async/await** aufgerufen. In C++ / CX ein ähnliches Ergebnis mithilfe von aufgabenabfolgen erreicht werden kann.
+> In C# werden asynchrone Methoden für Hintergrundaufgaben mithilfe der Schlagwörter **async/await** aufgerufen. In C++ / CX ein ähnliches Ergebnis kann mithilfe von aufgabenabfolgen erreicht werden.
 
-Weitere Informationen zu asynchronen Mustern finden Sie unter [Asynchrone Programmierung](https://msdn.microsoft.com/library/windows/apps/mt187335). Weitere Beispiele zum Verhindern der vorzeitigen Beendigung einer Hintergrundaufgabe mithilfe von Verzögerungen finden Sie im [Beispiel zu Hintergrundaufgaben](http://go.microsoft.com/fwlink/p/?LinkId=618666).
+Weitere Informationen zu asynchronen Mustern finden Sie unter [Asynchrone Programmierung](https://msdn.microsoft.com/library/windows/apps/mt187335). Weitere Beispiele zum Verhindern der vorzeitigen Beendigung einer Hintergrundaufgabe mithilfe von Verzögerungen finden Sie im [Beispiel zu Hintergrundaufgaben](https://go.microsoft.com/fwlink/p/?LinkId=618666).
 
 Die folgenden Schritte werden in einer Ihrer App-Klassen durchgeführt (beispielsweise in "MainPage.xaml.cs").
 
 > [!NOTE]
-> Sie können auch eine Funktion zum Registrieren von Hintergrundaufgaben erstellen&mdash;finden Sie unter [Registrieren einer Hintergrundaufgabe](register-a-background-task.md). In diesem Fall anstelle der nächsten drei Schritte können einfach den Auslöser konstruieren und der Registrierungsfunktion zusammen mit den Tasknamen, Einstiegspunkt und (optional) eine Bedingung zur Verfügung stellen.
+> Sie können auch eine Funktion für die Registrierung von Hintergrundaufgaben dedizierte erstellen&mdash;finden Sie unter [Registrieren einer Hintergrundaufgabe](register-a-background-task.md). In diesem Fall anstelle der nächsten drei Schritte, können Sie einfach den Auslöser konstruieren und teilen sie Sie der Registrierungsfunktion zusammen mit den Tasknamen Einstiegspunkt und (optional) eine Bedingung.
 
 ## <a name="register-the-background-task-to-run"></a>Registrieren der auszuführenden Hintergrundaufgabe
 
@@ -272,7 +272,7 @@ while (hascur)
 
 Der Hintergrundaufgabenauslöser bestimmt, ob die Hintergrundaufgabe ausgeführt wird. Eine Liste mit möglichen Auslösern erhalten Sie unter [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839).
 
-Beispielsweise wird dieser Code erstellt eine neue Hintergrundaufgabe und wird ausgeführt, wenn die **TimeZoneChanged** Trigger auftritt:
+Beispielsweise wird dieser Code erstellt eine neue Hintergrundaufgabe und wird ausgeführt, wenn der **TimeZoneChanged** Trigger auftritt:
 
 ```csharp
 var builder = new BackgroundTaskBuilder();
@@ -393,7 +393,7 @@ void MainPage::OnCompleted(BackgroundTaskRegistration^ task, BackgroundTaskCompl
 ```
 
 > [!NOTE]
-> Aktualisierungen der Benutzeroberfläche sollten asynchron durchgeführt werden, um den Benutzeroberflächenthread nicht zu blockieren. Ein Beispiel dazu finden Sie in der UpdateUI-Methode im [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666).
+> Aktualisierungen der Benutzeroberfläche sollten asynchron durchgeführt werden, um den Benutzeroberflächenthread nicht zu blockieren. Ein Beispiel dazu finden Sie in der UpdateUI-Methode im [Beispiel für eine Hintergrundaufgabe](https://go.microsoft.com/fwlink/p/?LinkId=618666).
 
 2.  Gehen Sie dorthin zurück, wo Sie die Hintergrundaufgabe registriert haben. Fügen Sie nach dieser Codezeile ein neues [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)-Objekt hinzu. Stellen Sie Ihre OnCompleted-Methode als Parameter für den **BackgroundTaskCompletedEventHandler**-Konstruktor zur Verfügung.
 
@@ -439,7 +439,7 @@ Das folgende Erweiterungselement wird zur Datei „Package.appxmanifest“ hinzu
 Sie sollten jetzt über die Grundlagen verfügen, um eine Hintergrundaufgabenklasse zu schreiben, die Hintergrundaufgabe in Ihrer App zu registrieren und Ihre App so zu konfigurieren, dass Sie den Abschluss der Hintergrundaufgabe erkennt. Sie sollten auch mit der Aktualisierung des Anwendungsmanifests vertraut sein, damit Ihre App die Hintergrundaufgabe erfolgreich registrieren kann.
 
 > [!NOTE]
-> Laden Sie das [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) herunter, um ähnliche Codebeispiele im Kontext einer vollständigen und stabilen UWP-App (Universelle Windows-Plattform) mit Hintergrundaufgaben zu erhalten.
+> Laden Sie das [Beispiel für eine Hintergrundaufgabe](https://go.microsoft.com/fwlink/p/?LinkId=618666) herunter, um ähnliche Codebeispiele im Kontext einer vollständigen und stabilen UWP-App (Universelle Windows-Plattform) mit Hintergrundaufgaben zu erhalten.
 
 Eine API-Referenz, konzeptionelle Richtlinien zu Hintergrundaufgaben und ausführlichere Anweisungen zum Schreiben von Apps, die Hintergrundaufgaben verwenden, finden Sie unter den folgenden verwandten Themen:
 
@@ -461,7 +461,7 @@ Eine API-Referenz, konzeptionelle Richtlinien zu Hintergrundaufgaben und ausfüh
 
 * [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md)
 * [Debuggen einer Hintergrundaufgabe](debug-a-background-task.md)
-* [So wird’s gemacht: Auslösen von Anhalte-, Fortsetzungs- und Hintergrundereignissen in UWP-Apps (beim Debuggen)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [So wird’s gemacht: Auslösen von Anhalte-, Fortsetzungs- und Hintergrundereignissen in UWP-Apps (beim Debuggen)](https://go.microsoft.com/fwlink/p/?linkid=254345)
 
 **Hintergrundaufgabe – API-Referenz**
 

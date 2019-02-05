@@ -12,12 +12,12 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5060012c90ec9cfef093021f44b39321f452e01c
-ms.sourcegitcommit: 59f874b6667c3f639d8b0c7eeca886e71bf95614
+ms.openlocfilehash: 9dd47ce2acf78a76ad413d70ce8c3e7f39a793ea
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "9004596"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048197"
 ---
 # <a name="sound"></a>Sound
 
@@ -53,7 +53,7 @@ Weitere Informationen zu räumlichem Audio und wie XAML diesen behandelt finden 
 ### <a name="sound-for-tv-and-xbox"></a>Sound für TV und Xbox
 
 Sound ist ein wesentlicher Bestandteil der 10-Fuß-Schnittstelle. Standardmäßig verwendet der **ElementSoundPlayer** den Zustand **Auto**, was bedeutet, dass Sound nur dann wiedergegeben wird, wenn Ihre App auf Xbox ausgeführt wird.
-Weitere Informationen zur Funktionsweise von Sound für TV und Xbox finden Sie im Artikel [Entwerfen für Xbox und Fernsehgeräte](http://go.microsoft.com/fwlink/?LinkId=760736).
+Weitere Informationen zur Funktionsweise von Sound für TV und Xbox finden Sie im Artikel [Entwerfen für Xbox und Fernsehgeräte](https://go.microsoft.com/fwlink/?LinkId=760736).
 
 ## <a name="sound-volume-override"></a>Lautstärkeüberschreibung
 
@@ -166,5 +166,5 @@ Diese Wechselfunktion soll verhindern, dass die Focus-Sounds monoton werden und 
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
-* [Entwerfen für Xbox und Fernsehgeräte](http://go.microsoft.com/fwlink/?LinkId=760736)
+* [Entwerfen für Xbox und Fernsehgeräte](https://go.microsoft.com/fwlink/?LinkId=760736)
 * [Dokumentation zur ElementSoundPlayer-Klasse](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.elementsoundplayer)

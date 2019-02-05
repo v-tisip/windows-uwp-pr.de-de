@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, Uwp, Hintergrundaufgabe, für die
 ms.localizationpriority: medium
-ms.openlocfilehash: bd851b6deab0f7a2772720fac83bb2bfa3175071
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: af8e45e13eb89185e346c3c8e8cd5303da399471
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923097"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047485"
 ---
 # <a name="guidelines-for-background-tasks"></a>Richtlinien für Hintergrundaufgaben
 
@@ -59,7 +59,7 @@ Hintergrundaufgaben, die im gleichen Prozess wie die Vordergrund-App ausgeführt
 
 **Anfordern der Ausführung von Hintergrundaufgaben:**
 
-> **Wichtige**ab Windows 10 können apps sind nicht mehr erforderlich, um auf dem Sperrbildschirm als Voraussetzung für Hintergrundaufgaben ausgeführt werden.
+> **Wichtige**ab Windows 10 können apps sind nicht mehr erforderlich, um auf dem Sperrbildschirm als eine Voraussetzung, um Hintergrundaufgaben ausgeführt werden.
 
 UWP (Universelle Windows-Plattform)-Apps können alle unterstützten Aufgabentypen ausführen, ohne auf dem Sperrbildschirm angeheftet zu sein. Apps müssen jedoch vor dem Registrieren einer Hintergrundaufgabe [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) aufrufen. Diese Methode gibt [**BackgroundAccessStatus.DeniedByUser**](https://msdn.microsoft.com/library/windows/apps/hh700439) zurück, wenn der Benutzer Berechtigungen für Hintergrundaufgaben für Ihre App in den Geräteeinstellungen explizit verweigert hat. Weitere Informationen über die Auswahl des Benutzers über Hintergrundaktivitäten und den Stromsparmodus finden Sie unter [Optimieren von Hintergrundaktivitäten ](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity). 
 ## <a name="background-task-checklist"></a>Prüfliste für Hintergrundaufgaben
@@ -103,7 +103,7 @@ UWP (Universelle Windows-Plattform)-Apps können alle unterstützten Aufgabentyp
 * [Verwenden eines Wartungsauslösers](use-a-maintenance-trigger.md)
 * [Ausführen einer Hintergrundaufgabe für einen Timer](run-a-background-task-on-a-timer-.md)
 * [Debuggen einer Hintergrundaufgabe](debug-a-background-task.md)
-* [So wird’s gemacht: Auslösen von Anhalte-, Fortsetzungs- und Hintergrundereignissen in UWP-Apps (beim Debuggen)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [So wird’s gemacht: Auslösen von Anhalte-, Fortsetzungs- und Hintergrundereignissen in UWP-Apps (beim Debuggen)](https://go.microsoft.com/fwlink/p/?linkid=254345)
 
  
 

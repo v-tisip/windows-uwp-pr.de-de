@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, DirectX 9, DirectX 11, Portierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 56bb86706795e773d21e45263f640f9fc0aa596a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0cfaa071ea0182ef5fac264e85d919be5744d15d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936067"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050673"
 ---
 # <a name="map-directx-9-features-to-directx-11-apis"></a>Zuordnung von DirectX9-Funktionen zu DirectX11-APIs
 
@@ -55,7 +55,7 @@ D3DX und DXUT sind veraltet und können nicht in UWP-Spielen verwendet werden. V
 
 -   In der exemplarischen Vorgehensweise [Einfache Portierung von Direct3D9 zu UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md) wird gezeigt, wie ein Fenster eingerichtet, Direct3D initialisiert und einfaches 3D-Rendering durchgeführt wird.
 -   In der exemplarischen Vorgehensweise [Erstellen eines einfachen UWP-Spiels mit DirectX](tutorial--create-your-first-uwp-directx-game.md) werden allgemeine Aufgaben der Spielprogrammierung erläutert, u.a. Grafiken, Laden von Dateien, UI, Steuerelemente und Sound.
--   Das Communityprojekt [DirectX-Toolkit](http://go.microsoft.com/fwlink/p/?LinkID=248929) bietet Hilfsklassen zur Verwendung mit Direct3D11 und UWP-Apps.
+-   Das Communityprojekt [DirectX-Toolkit](https://go.microsoft.com/fwlink/p/?LinkID=248929) bietet Hilfsklassen zur Verwendung mit Direct3D11 und UWP-Apps.
 
 ## <a name="move-shader-programs-from-fx-to-hlsl"></a>Umstellung von Shaderprogrammen von FX auf HLSL
 
@@ -590,7 +590,7 @@ Ziehen Sie beim Konvertieren von Direct3D9-Formaten in DXGI-Formate die folgende
 <td align="left"><p>D3DDECLTYPE_SHORT2</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16_SINT</p>
 <div class="alert">
-<strong>Hinweis:</strong>  der Shader ruft SINT-Werte ab, wenn ganzzahlige Direct3D 9-Gleitkommawerte benötigt werden, kann SINT jedoch nur werden konvertiert einfach in float32 im Shader.
+<strong>Hinweis:</strong>  der Shader ruft SINT-Werte ab, aber wenn ganzzahlige Direct3D 9-Gleitkommawerte benötigt werden, St. kann konvertiert werden einfach in float32 im Shader.
 </div>
 <div>
  
@@ -600,7 +600,7 @@ Ziehen Sie beim Konvertieren von Direct3D9-Formaten in DXGI-Formate die folgende
 <td align="left"><p>D3DDECLTYPE_SHORT4</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16B16A16_SINT</p>
 <div class="alert">
-<strong>Hinweis:</strong>  der Shader ruft SINT-Werte ab, wenn ganzzahlige Direct3D 9-Gleitkommawerte benötigt werden, kann SINT jedoch nur werden konvertiert einfach in float32 im Shader.
+<strong>Hinweis:</strong>  der Shader ruft SINT-Werte ab, aber wenn ganzzahlige Direct3D 9-Gleitkommawerte benötigt werden, St. kann konvertiert werden einfach in float32 im Shader.
 </div>
 <div>
  

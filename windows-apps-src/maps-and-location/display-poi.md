@@ -6,18 +6,18 @@ ms.date: 08/11/2017
 ms.topic: article
 keywords: windows10, uwp, karten, standort, ortsmarken
 ms.localizationpriority: medium
-ms.openlocfilehash: f67c93a6f56fd466d981bce10eb41c16ff8da1f3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bfb307093889c5a40a452d2d406f02224ab5eab1
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930250"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050643"
 ---
 # <a name="display-points-of-interest-on-a-map"></a>Anzeigen von interessanten Orten (POI) auf einer Karte
 
 Mit Markiernadeln, Bildern, Formen und XAML-UI-Elementen können Sie interessante Orte (Points of Interest, POI) auf einer Karte hinzufügen. Ein POI ist ein Punkt auf der Karte, der Orte angibt, die von Interesse sind. Beispiele sind die Position eines Geschäfts, eines Orts oder eines Freundes.
 
-Wenn Sie mehr über das Anzeigen von POIs in Ihrer App erfahren möchten, laden Sie das folgende Beispiel aus dem [Windows-universal-samples-Repository](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter: [Universal Windows Platform (UWP)-Kartenbeispiel](http://go.microsoft.com/fwlink/p/?LinkId=619977).
+Wenn Sie mehr über das Anzeigen von POIs in Ihrer App erfahren möchten, laden Sie das folgende Beispiel aus dem [Windows-universal-samples-Repository](https://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter: [Universal Windows Platform (UWP)-Kartenbeispiel](https://go.microsoft.com/fwlink/p/?LinkId=619977).
 
 Zeigen Sie die Markiernadeln, Bilder und Formen auf der Karte an, indem Sie die Objekte [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077), [**MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard),  [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103) und [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114) zu der **MapElements**-Sammlung eines [**MapElementsLayer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelementslayer)-Objekts hinzufügen. Fügen Sie dann der **Layers**-Sammlung eines Kartensteuerelements das Layer-Objekt hinzu.
 
@@ -92,7 +92,7 @@ Berücksichtigen Sie beim Arbeiten mit der [**MapIcon**](https://msdn.microsoft.
 
 ## <a name="add-a-3d-pushpin"></a>Hinzufügen einer 3D-Markiernadel
 
-Sie können dreidimensionale Objekte auf einer Karte hinzufügen. Verwenden Sie die Klasse [MapModel3D](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapmodel3d), um ein 3D-Objekt aus einer [3D Manufacturing Format (3MF)](http://3mf.io/specification/)-Datei zu importieren.
+Sie können dreidimensionale Objekte auf einer Karte hinzufügen. Verwenden Sie die Klasse [MapModel3D](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapmodel3d), um ein 3D-Objekt aus einer [3D Manufacturing Format (3MF)](https://3mf.io/specification/)-Datei zu importieren.
 
 Diese Abbildung verwendet 3D-Kaffeekannen, um die Standorte von Cafés der Umgebung zu markieren.
 
@@ -186,7 +186,7 @@ Der [**NormalizedAnchorPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xa
 
 ## <a name="add-a-shape"></a>Hinzufügen einer Form
 
-Mithilfe der Klasse [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103) können Sie eine Multipoint-Form auf der Karte anzeigen. Im folgenden Beispiel (aus dem [UWP-Kartenbeispiel](http://go.microsoft.com/fwlink/p/?LinkId=619977)) wird ein rotes Feld mit blauem Rahmen auf der Karte angezeigt.
+Mithilfe der Klasse [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103) können Sie eine Multipoint-Form auf der Karte anzeigen. Im folgenden Beispiel (aus dem [UWP-Kartenbeispiel](https://go.microsoft.com/fwlink/p/?LinkId=619977)) wird ein rotes Feld mit blauem Rahmen auf der Karte angezeigt.
 
 ```csharp
 public void HighlightArea()
@@ -229,7 +229,7 @@ public void HighlightArea()
 ## <a name="add-a-line"></a>Hinzufügen einer Linie
 
 
-Mithilfe der Klasse [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114) können Sie eine Linie auf der Karte anzeigen. Im folgenden Beispiel (aus dem [Beispiel zu UWP-Karten](http://go.microsoft.com/fwlink/p/?LinkId=619977)) wird eine gestrichelte Linie auf der Karte angezeigt.
+Mithilfe der Klasse [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114) können Sie eine Linie auf der Karte anzeigen. Im folgenden Beispiel (aus dem [Beispiel zu UWP-Karten](https://go.microsoft.com/fwlink/p/?LinkId=619977)) wird eine gestrichelte Linie auf der Karte angezeigt.
 
 ```csharp
 public void DrawLineOnMap()
@@ -474,10 +474,10 @@ Binden Sie in der XAML-Seite die Eigenschaft aus der Ansichtsmodellklasse, die d
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Bing Maps Developer Center](https://www.bingmapsportal.com/)
-* [Beispiel für UWP-Karte](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Beispiel für UWP-Karte](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Entwurfsrichtlinien für Karten](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Build 2015-Video: Nutzen von Karten und Ortung über Telefon, Tablet und PC in Ihren Windows-Apps](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Beispiel für eine UWP-App mit Verkehrsinformationen](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Beispiel für eine UWP-App mit Verkehrsinformationen](https://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077)
 * [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103)
 * [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114)

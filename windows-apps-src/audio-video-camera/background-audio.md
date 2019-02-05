@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: b8a859f27ff24dba15f7e4fde66a8d54a84a8bf4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3f5fe7cad12193b409c4923f876b47cae0852aa9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925784"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045559"
 ---
 # <a name="play-media-in-the-background"></a>Wiedergeben von Medien im Hintergrund
 In diesem Artikel wird beschrieben, wie Sie Ihre App so konfigurieren, dass die Medienwiedergabe fortgesetzt wird, wenn die App vom Vordergrund in den Hintergrund wechselt. Dies bedeutet, dass die App weiterhin Audio wiedergeben kann, auch nachdem der Benutzer die App minimiert hat, zur Startseite zurückgekehrt ist oder die App auf andere Weise verlassen hat. 
@@ -25,7 +25,7 @@ Beispiele für Szenarien mit der Wiedergabe von Hintergrundaudio:
 Dank der in diesem Artikel beschriebenen Implementierung von Hintergrundaudio kann die App universell auf allen Windows-Geräten, einschließlich Mobile, Desktop und Xbox, ausgeführt werden.
 
 > [!NOTE]
-> Der Code in diesem Artikel wurde aus dem UWP-Beispiel für [Hintergrundaudio](http://go.microsoft.com/fwlink/p/?LinkId=800141) übernommen und angepasst.
+> Der Code in diesem Artikel wurde aus dem UWP-Beispiel für [Hintergrundaudio](https://go.microsoft.com/fwlink/p/?LinkId=800141) übernommen und angepasst.
 
 ## <a name="explanation-of-one-process-model"></a>Erläuterung des Einzelprozessmodells
 Mit Windows 10, Version 1607, wurde ein neues Einzelprozessmodell eingeführt, das die Aktivierung von Hintergrundaudio erheblich vereinfacht. Zuvor musste Ihre App zusätzlich zur Vordergrund-App einen Hintergrundprozess verwalten und die Statusänderungen zwischen den beiden Prozessen manuell kommunizieren. Beim neuen Modell fügen Sie Ihrem App-Manifest einfach die Hintergrundaudio-Funktion hinzu, damit die Audiowiedergabe automatisch fortgesetzt wird, wenn die App in den Hintergrund wechselt. Durch die beiden neuen App-Lebenszyklusereignisse [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) und [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground) weiß Ihre App, wann sie in den Hintergrund wechselt bzw. den Hintergrund wieder verlässt. Beim Übergang der App in den bzw. aus dem Hintergrund können sich die vom System erzwungenen Speicherbeschränkungen ändern. Sie können diese Ereignisse also verwenden, um die aktuelle Arbeitsspeichernutzung zu überprüfen und Ressourcen freizugeben, damit Sie unter dem Grenzwert bleiben.

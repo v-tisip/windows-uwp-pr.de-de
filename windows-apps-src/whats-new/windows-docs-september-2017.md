@@ -5,12 +5,12 @@ keywords: Neuigkeiten, Update, Features, Anleitungen für Entwickler, Windows10,
 ms.date: 09/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c3fe097be63fef790b9dcc4cedd6ee457e3c79f5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9a296cc877279292f73b591a86ede9136b0d9758
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920219"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044168"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2017"></a>Neuigkeiten in der Windows-Entwicklerdokumentation im September 2017
 
@@ -18,7 +18,7 @@ Die Entwicklerdokumentation für die Windows-Plattform wird ständig mit Informa
 
 Natürlich steht das Fall Creators Update direkt vor der Tür. Weitere Dokumentation folgen in einigen Monaten!
 
-Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/your-first-app.md) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](../porting/index.md) vertraut machen.
+Nach der [Installation der Tools und des SDKs](https://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/your-first-app.md) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](../porting/index.md) vertraut machen.
 
 ## <a name="features"></a>Features
 

@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c0eb1eb798cceb5c7a534c3aed1b8988bd1a42b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1d8e065b76a79a6733d1fa066cd924d07a8fc7c9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925201"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045366"
 ---
 # <a name="xbind-markup-extension"></a>{x:Bind}-Markuperweiterung
 
-**Hinweis:** allgemeine Informationen zur Verwendung von Daten Bindung in Ihrer app mit **{X: Bind}** (und für einen vollständigen Vergleich zwischen **{X: Bind}** "und" **{Binding}**) finden Sie unter [der Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
+**Hinweis:** allgemeine Informationen zur Verwendung von Daten Bindung in Ihrer app mit **{X: Bind}** (und die für einen vollständigen Vergleich zwischen **{X: Bind}** und **{Binding}**), finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 Die **{X: Bind}** -Markuperweiterung – neu in Windows 10 – ist eine Alternative zur **{Binding}**. **{X: Bind}** führt in kürzerer Zeit und mit weniger Arbeitsspeicher als **{Binding}** und unterstützt ein besseres Debuggen.
 
@@ -28,9 +28,9 @@ Die von **{x:Bind}** und **{Binding}** erstellten Bindungsobjekte sind von der F
 
 **Beispiel-Apps zur Veranschaulichung von {x:Bind}**
 
--   [{x:Bind}-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619989)
+-   [{x:Bind}-Beispiel](https://go.microsoft.com/fwlink/p/?linkid=619989)
 -   [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame)
--   [Beispiel für XAML-UI-Grundlagen](http://go.microsoft.com/fwlink/p/?linkid=619992)
+-   [Beispiel für XAML-UI-Grundlagen](https://go.microsoft.com/fwlink/p/?linkid=619992)
 
 ## <a name="xaml-attribute-usage"></a>XAML-Attributsyntax
 
@@ -111,7 +111,7 @@ _Hinweis: Die C#-Umwandlungssyntax ist flexibler als die Syntax der angefügten 
 
 ## <a name="functions-in-binding-paths"></a>Funktionen in Bindungspfaden
 
-Ab Windows10, Version 1607, unterstützt **{x: Bind}** die Verwendung einer Funktion als blattbildenden Schrittdes Bindungspfades. Dies ist ein leistungsfähiges Feature für Databinding, die verschiedene Szenarien im Markup ermöglicht. Finden Sie unter [Funktion Bindungen](../data-binding/function-bindings.md) für Details.
+Ab Windows10, Version 1607, unterstützt **{x: Bind}** die Verwendung einer Funktion als blattbildenden Schrittdes Bindungspfades. Dies ist ein leistungsfähiges Feature für Databinding, die mehrere Szenarien im Markup ermöglicht. Finden Sie unter [Funktion Bindungen](../data-binding/function-bindings.md) für Details.
 
 ## <a name="event-binding"></a>Ereignisbindung
 
@@ -154,7 +154,7 @@ Diese Eigenschaften funktionieren ähnlich wie die Eigenschaften der [**Binding*
 
 Da **{x:Bind}** generierten Code für die optimale Nutzung verwendet, sind zur Kompilierzeit Typinformationen erforderlich. Dies bedeutet, dass Sie nur an Eigenschaften binden können, für die Sie den Typ vorab kennen. Aus diesem Grund können Sie **{x:Bind}** nicht mit der **DataContext**-Eigenschaft verwenden, die vom Typ **Object** ist und außerdem zur Laufzeit geändert werden kann.
 
-Wenn **{X: Bind}** mit Datenvorlagen zu verwenden, müssen Sie den Typ gebunden wird, indem ein **X: DataType** -Wert festlegen, wie im Abschnitt mit [Beispielen](#examples) dargestellt angeben. Sie können den Typ auch auf eine Schnittstelle oder einen Basisklassentyp festlegen und dann ggf. Umwandlungen verwenden, um einen vollständigen Ausdruck zu formulieren.
+Bei **{X: Bind}** mit Datenvorlagen müssen Sie den Typ gebunden wird, indem ein **X: DataType** -Wert festlegen, wie im Abschnitt mit [Beispielen](#examples) gezeigt angeben. Sie können den Typ auch auf eine Schnittstelle oder einen Basisklassentyp festlegen und dann ggf. Umwandlungen verwenden, um einen vollständigen Ausdruck zu formulieren.
 
 Kompilierte Bindungen hängen von der Codegenerierung ab. Wenn Sie daher **{x:Bind}** in einem Ressourcenwörterbuch verwenden, muss das Ressourcenwörterbuch über eine CodeBehind-Klasse verfügen. Ein Codebeispiel finden Sie unter [Ressourcenwörterbücher mit {x:Bind}](../data-binding/data-binding-in-depth.md#resource-dictionaries-with-x-bind).
 
@@ -167,7 +167,7 @@ Bei Seiten und Benutzersteuerelementen, die kompilierte Bindungen umfassen, befi
 > [!NOTE]
 > Ab Windows10, Version1607, wird über das XAML-Framework ein integrierter Konverter für die Konvertierung eines booleschen Operanden in einen Sichtbarkeitszustand bereitgestellt. Der Konverter verknüpft **true** mit dem Enumerationswert **Visible** und **false** mit dem Wert **Collapsed**, sodass Sie eine Visibility-Eigenschaft an einen booleschen Wert binden können, ohne einen Konverter zu erstellen. Beachten Sie, dass dies keine Funktionsbindung ist, sondern nur eine Eigenschaftsbindung. Für die Verwendung des integrierten Konverters muss die SDK-Zielversion der App mindestens 14393 lauten. Die Verwendung ist nicht möglich, wenn Ihre App für frühere Versionen von Windows10 bestimmt ist. Weitere Informationen zu Zielversionen finden Sie unter [Versionsadaptiver Code](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
-**Tipp:**  , wenn Sie eine einzelne geschweifte Klammer für einen Wert angeben müssen, z. B. in [**Pfad**](https://msdn.microsoft.com/library/windows/apps/br209830) oder [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), stellen Sie ihr einen umgekehrten Schrägstrich voran: `\{`. Setzen Sie alternativ die gesamte Zeichenfolge mit den geschweiften Klammern, für die Escapezeichen verwendet werden müssen, in weitere Anführungszeichen, z.B. `ConverterParameter='{Mix}'`.
+**Tipp:**  Wenn Sie eine einzelne geschweifte Klammer für einen Wert angeben müssen, z. B. in [**Pfad**](https://msdn.microsoft.com/library/windows/apps/br209830) oder [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), stellen Sie ihr einen umgekehrten Schrägstrich voran: `\{`. Setzen Sie alternativ die gesamte Zeichenfolge mit den geschweiften Klammern, für die Escapezeichen verwendet werden müssen, in weitere Anführungszeichen, z.B. `ConverterParameter='{Mix}'`.
 
 [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) und **ConverterLanguage** hängen mit der Konvertierung eines Werts oder Typs aus der Bindungsquelle in einen mit der Bindungszieleigenschaft kompatiblen Typ oder Wert zusammen. Weitere Informationen und Beispiele finden Sie im Abschnitt „Datenkonvertierungen“ unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
 

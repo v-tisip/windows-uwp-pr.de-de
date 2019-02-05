@@ -5,18 +5,18 @@ keywords: Neuigkeiten, Update, Features, Anleitungen für Entwickler, Windows10,
 ms.date: 2/5/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e42401000d6333c2309933f0bd8244690aac3fd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 22ff57fb32d9c65c675ca63ae0c644b146226795
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937309"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044221"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-february-2018"></a>Neuigkeiten in der Windows-Entwicklerdokumentation im Februar 2018
 
 Die Entwicklerdokumentation für die Windows-Plattform wird ständig mit Informationen über neue Features für Entwickler aktualisiert. Die folgenden Featureübersichten, Entwicklerleitfäden und Videos wurden im Januar bereitgestellt und enthalten neue oder aktualisierte Informationen für Windows-Entwickler.
 
-Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/create-uwp-apps.md) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](../porting/index.md) vertraut machen.
+Nach der [Installation der Tools und des SDKs](https://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/create-uwp-apps.md) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](../porting/index.md) vertraut machen.
 
 
 ## <a name="features"></a>Features

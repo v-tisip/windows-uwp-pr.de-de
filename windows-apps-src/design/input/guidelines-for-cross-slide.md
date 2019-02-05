@@ -6,12 +6,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f6a37af19c9e3e9beaebbadfcc71f3ad01e3087c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b2d402bca61fc271b6d1e2e972cca280693f9ce3
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918511"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045193"
 ---
 # <a name="guidelines-for-cross-slide"></a>Richtlinien für Querziehen
 
@@ -56,7 +56,7 @@ Beachten Sie die folgenden Richtlinien, wenn Sie eine Querziehfunktion in Ihrer 
 
 Verwenden Sie das Querziehen für Listen oder Auflistungen, bei denen ein Bildlauf nur in eine Richtung möglich ist. Weitere Informationen finden Sie unter [Hinzufügen von ListView-Steuerelementen](https://msdn.microsoft.com/library/windows/apps/hh465382).
 
-**Hinweis:** In Fällen, in denen der Inhaltsbereich in zwei Richtungen, z. B. in einem Webbrowser oder e-Reader verschoben werden kann, die zeitlich festgelegte Interaktion des drücken und halten verwendet werden, um das Kontextmenü für Objekte wie Bilder und Links aufzurufen.
+**Hinweis:** In Fällen, in denen der Inhaltsbereich in zwei Richtungen, z. B. einem Webbrowser oder e-Reader verschoben werden kann, die zeitlich festgelegte Interaktion des drücken und halten verwendet werden, um das Kontextmenü für Objekte wie Bilder und Links aufzurufen.
 
  
 
@@ -133,19 +133,19 @@ Wenn mehrere Objekte verschoben werden müssen, geben Sie dem Benutzer die Mögl
 
 
 **Beispiele**
-* [Einfaches Eingabebeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Beispiel für Eingabe mit niedriger Latenz](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Beispiel für den Benutzerinteraktionsmodus](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Beispiel für visuelle Fokuselemente](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Einfaches Eingabebeispiel](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Beispiel für Eingabe mit niedriger Latenz](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Beispiel für den Benutzerinteraktionsmodus](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Beispiel für visuelle Fokuselemente](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 **Archivbeispiele**
-* [Eingabe: Beispiel XAML-Benutzereingabeereignisse](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Eingabe: Beispiel für Gerätefunktionen](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Eingabe: Beispiel für Fingereingabe-Treffertests](http://go.microsoft.com/fwlink/p/?linkid=231590)
-* [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoom](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Eingabe: vereinfachtes Freihandbeispiel](http://go.microsoft.com/fwlink/p/?linkid=246570)
-* [Eingabe: Beispiel für Windows8-Bewegungen](http://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [Eingabe: Beispiel für Manipulationen und Gesten (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Beispiel für die DirectX-Fingereingabe](http://go.microsoft.com/fwlink/p/?LinkID=231627)
+* [Eingabe: Beispiel XAML-Benutzereingabeereignisse](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Eingabe: Beispiel für Gerätefunktionen](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Eingabe: Beispiel für Fingereingabe-Treffertests](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoom](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Eingabe: vereinfachtes Freihandbeispiel](https://go.microsoft.com/fwlink/p/?linkid=246570)
+* [Eingabe: Beispiel für Windows8-Bewegungen](https://go.microsoft.com/fwlink/p/?LinkId=264995)
+* [Eingabe: Beispiel für Manipulationen und Gesten (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [Beispiel für die DirectX-Fingereingabe](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  

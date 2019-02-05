@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 027ad255feaffa25450b1c490d1697410e91f431
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 5689fd967756025872fd45bf242076e854e700aa
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037182"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048097"
 ---
 # <a name="semantic-zoom"></a>Semantischer Zoom
 
@@ -98,7 +98,7 @@ Bevor Sie einen semantischen Zoom verwenden, sollten Sie wissen, wie Sie eine Li
 </SemanticZoom>
  ```
  
-Die folgenden Beispiele stammen von der Seite „SemanticZoom” des [Beispiels für XAML-UI-Grundlagen](http://go.microsoft.com/fwlink/p/?LinkId=619992). Sie können das Beispiel herunterladen, um den kompletten Code anzuzeigen, einschließlich der Datenquelle. Dieser semantische Zoom verwendet eine GridView, um die vergrößerte Ansicht und eine ListView für die verkleinerte Ansicht bereitzustellen.
+Die folgenden Beispiele stammen von der Seite „SemanticZoom” des [Beispiels für XAML-UI-Grundlagen](https://go.microsoft.com/fwlink/p/?LinkId=619992). Sie können das Beispiel herunterladen, um den kompletten Code anzuzeigen, einschließlich der Datenquelle. Dieser semantische Zoom verwendet eine GridView, um die vergrößerte Ansicht und eine ListView für die verkleinerte Ansicht bereitzustellen.
   
 **Definieren der vergrößerten Ansicht**
 

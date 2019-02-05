@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 9940367054ae8771355012492434e12aa97d43ad
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a1d5a15bd88b7adc23ccc835001c384a91e65a31
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921786"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050703"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>Verarbeiten von Medienframes mit „MediaFrameReader“
 
@@ -23,7 +23,7 @@ Wenn Sie normale Videos oder Fotos aufnehmen möchten, wie mit einer typischen F
 > Die in diesem Artikel besprochenen Features sind erst ab Windows10, Version1607, verfügbar.
 
 > [!NOTE] 
-> Es gibt ein Beispiel für universelle Windows-Apps, in dem die Verwendung von **MediaFrameReader** zum Anzeigen von Frames aus unterschiedlichen Framequellen demonstriert wird, unter anderem Farb-, Tiefen- und Infrarotkameras. Weitere Informationen finden Sie unter [Beispiel für Kameraframes](http://go.microsoft.com/fwlink/?LinkId=823230).
+> Es gibt ein Beispiel für universelle Windows-Apps, in dem die Verwendung von **MediaFrameReader** zum Anzeigen von Frames aus unterschiedlichen Framequellen demonstriert wird, unter anderem Farb-, Tiefen- und Infrarotkameras. Weitere Informationen finden Sie unter [Beispiel für Kameraframes](https://go.microsoft.com/fwlink/?LinkId=823230).
 
 > [!NOTE] 
 > Es wurde ein neuer Satz von APIs für die Verwendung von **MediaFrameReader** mit Audiodaten in Windows10, Version 1803 eingeführt. Weitere Informationen finden Sie unter [Verarbeiten von Audioframes mit MediaFrameReader](process-audio-frames-with-mediaframereader.md).
@@ -44,7 +44,7 @@ Im Beispielcode in diesem Artikel werden neben den in der Standard-Projektvorlag
 [!code-cs[FramesUsing](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFramesUsing)]
 
 ## <a name="select-frame-sources-and-frame-source-groups"></a>Auswählen von Framequellen und Framequellgruppen
-Viele Apps, die Medienframes verarbeiten, müssen Frames aus mehreren Quellen gleichzeitig abrufen, z.B. die Farb- und Tiefenkameras eines Geräts. Das Objekt [**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) stellt einen Satz von medienframequellen definiert, die gleichzeitig verwendet werden können. Rufen Sie die statische Methode [**MediaFrameSourceGroup.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync) auf, um eine Liste aller vom aktuellen Gerät unterstützten Gruppen von Framequellen abzurufen.
+Viele Apps, die Medienframes verarbeiten, müssen Frames aus mehreren Quellen gleichzeitig abrufen, z.B. die Farb- und Tiefenkameras eines Geräts. Das [**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) -Objekt stellt einen Satz von medienframequellen definiert, die gleichzeitig verwendet werden können. Rufen Sie die statische Methode [**MediaFrameSourceGroup.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync) auf, um eine Liste aller vom aktuellen Gerät unterstützten Gruppen von Framequellen abzurufen.
 
 [!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
 
@@ -151,7 +151,7 @@ Achten Sie darauf, nach dem Lesen der Frames den Medienframe-Reader zu beenden, 
 Weitere Informationen zum Bereinigen von Medienaufnahmeobjekten bei angehaltener Anwendung finden Sie unter [**Anzeigen der Kameravorschau**](simple-camera-preview-access.md).
 
 ## <a name="the-framerenderer-helper-class"></a>Die FrameRenderer-Hilfsprogrammklasse
-Das Universal Windows-[Beispiel für Kameraframes](http://go.microsoft.com/fwlink/?LinkId=823230) stellt eine Hilfsprogrammklasse zum einfachen Anzeigen der Frames aus Farb-, Infrarot- und Tiefenquellen in Ihrer App bereit. In der Regel sollen Tiefen- und Infrarotdaten nicht nur auf dem Bildschirm angezeigt werden. Dennoch ist diese Hilfsprogrammklasse ein hilfreiches Tool zum Veranschaulichen der Frame-Reader-Funktion und zum Debuggen Ihrer eigenen Frame-Reader-Implementierung.
+Das Universal Windows-[Beispiel für Kameraframes](https://go.microsoft.com/fwlink/?LinkId=823230) stellt eine Hilfsprogrammklasse zum einfachen Anzeigen der Frames aus Farb-, Infrarot- und Tiefenquellen in Ihrer App bereit. In der Regel sollen Tiefen- und Infrarotdaten nicht nur auf dem Bildschirm angezeigt werden. Dennoch ist diese Hilfsprogrammklasse ein hilfreiches Tool zum Veranschaulichen der Frame-Reader-Funktion und zum Debuggen Ihrer eigenen Frame-Reader-Implementierung.
 
 Die **FrameRenderer**-Hilfsprogrammklasse implementiert die folgenden Methoden.
 
@@ -253,7 +253,7 @@ Weitere Informationen zur Verwendung von Kameraprofilen finden Sie unter [Kamera
 
 * [Kamera](camera.md)
 * [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Beispiel für Kameraframes](http://go.microsoft.com/fwlink/?LinkId=823230)
+* [Beispiel für Kameraframes](https://go.microsoft.com/fwlink/?LinkId=823230)
  
 
  

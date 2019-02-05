@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 145912f08075678c98dfb34ac491e123577c69e3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 696a3f0f065c209bec28f774224da6e4c8d93275
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946665"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9046323"
 ---
 # <a name="key-frame-animations-and-easing-function-animations"></a>Keyframe-Animationen und Animationen für Beschleunigungsfunktionen
 
@@ -75,7 +75,7 @@ Diskrete Keyframes verwenden überhaupt keine Interpolation. Beim Erreichen eine
 
 ### <a name="spline-key-frames"></a>Spline-Keyframes
 
-Ein Spline-Keyframe erstellt einen nicht linearen Übergang zwischen Werten entsprechend dem Wert für die Eigenschaft **KeySpline**. Diese Eigenschaft gibt den ersten und zweiten Kontrollpunkt einer Bézierkurve an, mit der die Beschleunigung einer Animation beschrieben wird. Grundsätzlich definiert eine [**KeySpline**](https://msdn.microsoft.com/library/windows/apps/BR210307) eine Beziehung der Funktion zur Zeit, wobei der Funktion-Zeit-Graph die Form dieser Bézierkurve hat. In der Regel geben Sie einen **KeySpline**-Wert in einer XAML-Kompaktattribut-Zeichenfolge an, der vierdurch Leerzeichen oder Kommata getrennte [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)-Werte umfasst. Diese Werte sind „X,Y“-Paare für zweiKontrollpunkte der Bézierkurve. „X“ ist die Zeit, und „Y“ ist der Funktionsmodifizierer für den Wert. Jeder Wert sollte sich immer zwischen 0 und einschließlich 1 bewegen. Ohne Kontrollpunktänderung an einer **KeySpline** stellt die gerade Linie von 0,0 bis 1,1 eine Funktion der Zeit für eine lineare Interpolation dar. Ihre Kontrollpunkte ändern die Form der Kurve und somit das Verhalten der Funktion der Zeit für die Spline-Animation. Dies wird am besten visuell als Graph dargestellt. Sie können das Beispiel für die [Silverlight Keyspline-Schnellansicht](http://samples.msdn.microsoft.com/Silverlight/SampleBrowser/index.htm#/?sref=KeySplineExample) in einem Browser ausführen, um zu sehen, wie die Kontrollpunkte die Kurve ändern, und wie eine Beispielanimation ausgeführt wird, wenn sie als **KeySpline**-Wert verwendet wird.
+Ein Spline-Keyframe erstellt einen nicht linearen Übergang zwischen Werten entsprechend dem Wert für die Eigenschaft **KeySpline**. Diese Eigenschaft gibt den ersten und zweiten Kontrollpunkt einer Bézierkurve an, mit der die Beschleunigung einer Animation beschrieben wird. Grundsätzlich definiert eine [**KeySpline**](https://msdn.microsoft.com/library/windows/apps/BR210307) eine Beziehung der Funktion zur Zeit, wobei der Funktion-Zeit-Graph die Form dieser Bézierkurve hat. In der Regel geben Sie einen **KeySpline**-Wert in einer XAML-Kompaktattribut-Zeichenfolge an, der vierdurch Leerzeichen oder Kommata getrennte [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)-Werte umfasst. Diese Werte sind „X,Y“-Paare für zweiKontrollpunkte der Bézierkurve. „X“ ist die Zeit, und „Y“ ist der Funktionsmodifizierer für den Wert. Jeder Wert sollte sich immer zwischen 0 und einschließlich 1 bewegen. Ohne Kontrollpunktänderung an einer **KeySpline** stellt die gerade Linie von 0,0 bis 1,1 eine Funktion der Zeit für eine lineare Interpolation dar. Ihre Kontrollpunkte ändern die Form der Kurve und somit das Verhalten der Funktion der Zeit für die Spline-Animation. Dies wird am besten visuell als Graph dargestellt. Sie können das Beispiel für die [Silverlight Keyspline-Schnellansicht](https://samples.msdn.microsoft.com/Silverlight/SampleBrowser/index.htm#/?sref=KeySplineExample) in einem Browser ausführen, um zu sehen, wie die Kontrollpunkte die Kurve ändern, und wie eine Beispielanimation ausgeführt wird, wenn sie als **KeySpline**-Wert verwendet wird.
 
 Im nächsten Beispiel wird die Anwendung von drei verschiedenen Keyframes auf eine Animation gezeigt, wobei der letzte eine Keyspline-Animation für einen [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)-Wert ([**SplineDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR210446)) ist. Beachten Sie die Anwendung der Zeichenfolge „0.6,0.0 0.9,0.00“ für **KeySpline**. Dadurch entsteht eine Kurve, bei der die Animation zuerst scheinbar langsam ausgeführt wird, dann jedoch schnell den Wert erreicht, bevor die **KeyTime** erreicht ist.
 

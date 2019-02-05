@@ -6,16 +6,16 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, Anzeigensteuerelement, Interstitial
 ms.localizationpriority: medium
-ms.openlocfilehash: c1860fe51035699aaa55d014c2f76a95c7622061
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9abf761aa141ef3d0c19d6d5401b6815542d4172
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943267"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047731"
 ---
 # <a name="interstitial-ads"></a>Interstitialwerbung
 
-In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie Interstititalwerbung in Universelle Windows-Plattform (UWP)-Apps und -Spiele für Windows10. Vollständige Beispielprojekte, die das Hinzufügen von Interstitialwerbung zu JavaScript-/HTML- und XAML-Apps unter Verwendung von C# und C++ zeigen, finden Sie in den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).
+In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie Interstititalwerbung in Universelle Windows-Plattform (UWP)-Apps und -Spiele für Windows10. Vollständige Beispielprojekte, die das Hinzufügen von Interstitialwerbung zu JavaScript-/HTML- und XAML-Apps unter Verwendung von C# und C++ zeigen, finden Sie in den [Anzeigenbeispielen auf GitHub](https://aka.ms/githubads).
 
 <span id="whatareinterstitialads10"/>
 
@@ -36,7 +36,7 @@ Wir bieten zwei Arten von Interstitialwerbung in Ihren Apps und Spielen an: **Vi
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-* Installieren Sie das [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) mit Visual Studio2015 oder einer neueren Version von Visual Studio. Installationsanweisungen finden Sie in [diesem Artikel](install-the-microsoft-advertising-libraries.md).
+* Installieren Sie das [Microsoft Advertising-SDK](https://aka.ms/ads-sdk-uwp) mit Visual Studio2015 oder einer neueren Version von Visual Studio. Installationsanweisungen finden Sie in [diesem Artikel](install-the-microsoft-advertising-libraries.md).
 
 ## <a name="integrate-an-interstitial-ad-into-your-app"></a>Interstitialwerbung in Ihrer App integrieren
 
@@ -213,13 +213,13 @@ In diesem Beispiel wird angenommen, dass Sie ein C++-Projekt **DirectX- und XAML
 
 1. Stellen Sie sicher, dass die Verwendung von Interstitialwerbung in Ihrer App unseren [Richtlinien für Interstitialwerbung](ui-and-user-experience-guidelines.md#interstitialbestpractices10) entspricht.
 
-2.  Im Partner Center wechseln Sie zu der Seite [In-app-anzeigen](../publish/in-app-ads.md) und [Erstellen Sie eine anzeigeneinheit](set-up-ad-units-in-your-app.md#live-ad-units). Wählen Sie für den Anzeigeneinheitstyp **Video-Interstitialwerbung** oder **Banner-Interstitialwerbung** aus, je nachdem, welche Art von Interstitialwerbung Sie anzeigen. Notieren Sie die Anzeigeneinheits-ID und die Anwendungs-ID.
+2.  Wechseln Sie zu der Seite [In-app-anzeigen](../publish/in-app-ads.md) und [Erstellen Sie eine anzeigeneinheit](set-up-ad-units-in-your-app.md#live-ad-units), im Partner Center. Wählen Sie für den Anzeigeneinheitstyp **Video-Interstitialwerbung** oder **Banner-Interstitialwerbung** aus, je nachdem, welche Art von Interstitialwerbung Sie anzeigen. Notieren Sie die Anzeigeneinheits-ID und die Anwendungs-ID.
     > [!NOTE]
-    > Die Anwendungs-IDs für Test-Anzeigeneinheiten und Live-UWP-Anzeigeneinheiten besitzen unterschiedliche Formate. Testanwendungs-ID sind GUIDs. Wenn Sie eine live-UWP-anzeigeneinheit im Partner Center erstellen, entspricht die Anwendungs-ID-Wert für die anzeigeneinheit immer die Store-ID für Ihre app (der ein Beispiel für Store-ID-Wert ist 9nblggh4r315).).
+    > Die Anwendungs-IDs für Test-Anzeigeneinheiten und Live-UWP-Anzeigeneinheiten besitzen unterschiedliche Formate. Testanwendungs-ID sind GUIDs. Wenn Sie eine live-UWP-anzeigeneinheit im Partner Center erstellen, entspricht der Anwendung-ID-Wert für die anzeigeneinheit immer die Store-ID für Ihre app (der ein Beispiel für Store-ID-Wert ist 9nblggh4r315).).
 
 3. Sie können optional die Anzeigenvermittlung für die **Interstitialwerbung** durch das Konfigurieren der Einstellungen in der [Vermittlungsverwaltung](../publish/in-app-ads.md#mediation) auf der Seite [in-app ads](../publish/in-app-ads.md) aktivieren. Mit der Anzeigenvermittlung können Sie Ihre Anzeigenumsätze maximieren und Werbefunktionen optimal nutzen, indem Sie Anzeigen aus mehreren Anzeigennetzwerken anzeigen, einschließlich Anzeigen aus anderen kostenpflichtigen Anzeigennetzwerken wie Taboola und Smaato sowie Anzeigen zu Werbekampagnen für Microsoft-Apps.
 
-4.  Ersetzen Sie in Ihrem Code die Testwerte der anzeigeneinheit mit den live-Werten, die Sie im Partner Center generiert.
+4.  Ersetzen Sie in Ihrem Code die Testwerte der anzeigeneinheit durch den live-Werten, die Sie im Partner Center generiert.
 
 5.  [Übermitteln Ihrer app](../publish/app-submissions.md) mithilfe der Partner Center an den Store.
 
@@ -239,5 +239,5 @@ Können mehrere Steuerelemente für **InterstitialAd** in einer einzelnen App ve
 * [Richtlinien für Interstitialanzeigen](ui-and-user-experience-guidelines.md#interstitialbestpractices10)
 * [Beispielcode für Interstitialwerbung in C#](interstitial-ad-sample-code-in-c.md)
 * [Beispielcode für Interstitialwerbung in JavaScript](interstitial-ad-sample-code-in-javascript.md)
-* [Anzeigenbeispiele auf GitHub](http://aka.ms/githubads)
+* [Anzeigenbeispiele auf GitHub](https://aka.ms/githubads)
 * [Einrichten von Anzeigeneinheiten für die App](set-up-ad-units-in-your-app.md)

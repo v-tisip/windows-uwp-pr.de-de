@@ -6,23 +6,23 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.assetid: 04983b80-2a18-4ace-93d3-e8c33c04bfb9
 ms.localizationpriority: medium
-ms.openlocfilehash: 626b2ce36d8abc4798d39a89af540c61b26b5ed1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 93d4da26dbb4c5eee1856b3a594214aabbbbaa00
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938519"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047565"
 ---
 # <a name="respond-to-customer-feedback"></a>Reagieren auf Kundenfeedback
 
 Sie können den [Feedbackbericht](feedback-report.md) verwenden, um das Feedback zu prüfen, das Ihre Windows10-Kunden zu Ihrer App im Feedback-Hub hinterlassen haben, und dann direkt auf dieses Feedback antworten. Sie können Ihre Antworten im Feedback-Hub für alle Benutzer veröffentlichen (entweder als einzelne Kommentare oder durch Aktualisieren des Status eines Feedbacks und Hinzufügen einer Beschreibung), um die Kunden über neue Funktionen und Fehlerkorrekturen zu informieren oder um detaillierteres Feedback zur Verbesserung Ihrer App zu bitten. Sie können Ihre Antwort auch per E-Mail direkt an den Kunden senden, der das Feedback abgegeben hat.
 
 > [!TIP]
-> Über die Feedback-API im [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) können Sie es Kunden ermöglichen, Feedback zu geben. Dabei wird ein Steuerelement hinzugefügt, über das Kunden direkt [den Feedback-Hub von Ihrer UWP-App starten können](../monetize/launch-feedback-hub-from-your-app.md). Bedenken Sie, dass jeder Kunde, der Ihre App auf einem Windows10-Gerät heruntergeladen hat, das den Feedback-Hub unterstützt, mithilfe der Feedback-Hub-App ein Feedback abgeben kann. Aus diesem Grund wird in diesem Bericht möglicherweise Feedback von Kunden angezeigt, auch wenn Sie in Ihrer App nicht explizit um Feedback gebeten haben.
+> Über die Feedback-API im [Microsoft Store Services SDK](https://aka.ms/store-em-sdk) können Sie es Kunden ermöglichen, Feedback zu geben. Dabei wird ein Steuerelement hinzugefügt, über das Kunden direkt [den Feedback-Hub von Ihrer UWP-App starten können](../monetize/launch-feedback-hub-from-your-app.md). Bedenken Sie, dass jeder Kunde, der Ihre App auf einem Windows10-Gerät heruntergeladen hat, das den Feedback-Hub unterstützt, mithilfe der Feedback-Hub-App ein Feedback abgeben kann. Aus diesem Grund wird in diesem Bericht möglicherweise Feedback von Kunden angezeigt, auch wenn Sie in Ihrer App nicht explizit um Feedback gebeten haben.
 
 Um zu einem Feedback eine Antwort zu geben, klicken Sie auf den Link **Feedback beantworten**, der neben dem Feedback in Ihrem **Feedbackbericht** angezeigt wird.
 
-[Partner Center](https://partner.microsoft.com/dashboard) unterstützt drei Optionen für Antworten an Kunden, die Feedback zu Ihrer app. Unabhängig davon, welche Option Sie wählen, denken Sie daran, dass maximal 1.000Zeichen für jede Antwort zulässig sind.
+[Partner Center](https://partner.microsoft.com/dashboard) unterstützt drei Optionen für Antworten an Kunden, die Feedback zu Ihrer app gegeben. Unabhängig davon, welche Option Sie wählen, denken Sie daran, dass maximal 1.000Zeichen für jede Antwort zulässig sind.
 
 ## <a name="public-comments-in-feedback-hub"></a>Öffentliche Kommentare im Feedback-Hub
 
@@ -66,4 +66,4 @@ Unabhängig davon, welche Methode Sie verwenden, um auf das Feedback der Kunden 
 > [!NOTE]
 > Kunden können eine unangemessene Antwort, mit der ein Entwickler auf ein Feedback reagiert, an Microsoft melden. Sie können auch entscheiden, keine Antworten auf Feedback per E-Mail zu erhalten.
 
-Sie alleine sind für die Kommunikation mit Ihren Kunden verantwortlich. Microsoft beteiligt sich nicht an Meinungsverschiedenheiten zwischen Entwicklern und Kunden. Wenn Sie jedoch der Meinung sind, dass der Inhalt eines Feedbacks für Ihr Produkt unangebracht ist, reichen Sie bitte ein [Supportticket](http://go.microsoft.com/fwlink/p/?LinkID=401178) ein.
+Sie alleine sind für die Kommunikation mit Ihren Kunden verantwortlich. Microsoft beteiligt sich nicht an Meinungsverschiedenheiten zwischen Entwicklern und Kunden. Wenn Sie jedoch der Meinung sind, dass der Inhalt eines Feedbacks für Ihr Produkt unangebracht ist, reichen Sie bitte ein [Supportticket](https://go.microsoft.com/fwlink/p/?LinkID=401178) ein.

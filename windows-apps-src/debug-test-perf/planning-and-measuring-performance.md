@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6388158a7b1c4fd3fa3e0ab17dcc86b7ef2d7c0e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3bfe034ed697661c81b2f01b67fafeee1941832d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921564"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050763"
 ---
 # <a name="planning-for-performance"></a>Planen der Leistung
 
@@ -104,7 +104,7 @@ Sie können jetzt die Leistungsziele verwenden, um den Entwurf Ihrer App zu beei
 
 **Starten und Fortsetzen von Apps**
 
--   Verzögern Sie den Begrüßungsbildschirm der App, und erweitern Sie diesen Begrüßungsbildschirm nur, wenn dies notwendig ist. Weitere Informationen finden Sie unter [Schaffen einer schnellen und flüssigen App-Starterfahrung](http://go.microsoft.com/fwlink/p/?LinkId=317595) und [Längere Anzeige des Begrüßungsbildschirms](https://msdn.microsoft.com/library/windows/apps/Mt187309).
+-   Verzögern Sie den Begrüßungsbildschirm der App, und erweitern Sie diesen Begrüßungsbildschirm nur, wenn dies notwendig ist. Weitere Informationen finden Sie unter [Schaffen einer schnellen und flüssigen App-Starterfahrung](https://go.microsoft.com/fwlink/p/?LinkId=317595) und [Längere Anzeige des Begrüßungsbildschirms](https://msdn.microsoft.com/library/windows/apps/Mt187309).
 -   Deaktivieren Sie Animationen, die direkt nach dem Schließen des Begrüßungsbildschirms erscheinen, da dies lediglich als Verlängerung des Startzeitraums der App angesehen wird.
 
 **Adaptive UI und Ausrichtung**
@@ -152,7 +152,7 @@ using (myLoggingActivity = new LoggingActivity("MyLoggingActivity"), myLoggingCh
 // ...
 ```
 
-Weitere Informationen finden Sie im [Beispiel für die Protokollierung](http://go.microsoft.com/fwlink/p/?LinkId=529576).
+Weitere Informationen finden Sie im [Beispiel für die Protokollierung](https://go.microsoft.com/fwlink/p/?LinkId=529576).
 
 Nachdem Sie Ihre App instrumentiert haben, können Sie die App-Leistung testen und messen.
 
@@ -171,7 +171,7 @@ Verwenden Sie diese Verfahren und Tools zum Testen, wie Ihre App gegenüber den 
     -   Führen Sie die App mehrmals aus, um zufällige Testvariablen so gut es geht auszuschließen und dadurch konsistente Messungen zu ermöglichen.
 -   Führen Sie Tests zur verringerten Leistungsverfügbarkeit durch. Das Gerät der Benutzer weist möglicherweise eine deutlich geringere Leistung als das Entwicklungssystem auf. Windows wurde unter Berücksichtigung von Geräten mit niedrigem Stromverbrauch, z.B. mobile Geräte, konzipiert. Apps, die auf der Plattform ausgeführt werden, sollten sicherstellen, dass sie auch auf diesen Geräten ordnungsgemäß ausgeführt werden können. Sie können davon ausgehen, dass ein energiesparendes Gerät ungefähr viermal langsamer ist als ein Desktop-PC. Legen Sie Ihre Ziele entsprechend fest.
 -   Verwenden Sie eine Kombination von Tools wie Microsoft Visual Studio und Windows Performance Analyzer, um die App-Leistung zu messen. Visual Studio stellt eine Analyse bereit, die auf die App ausgerichtet ist, beispielsweise die Quellcodeverknüpfung. Windows Performance Analyzer bietet dagegen eine systemorientierte Analyse, beispielsweise die Bereitstellung von Systeminfos, Infos zu Touchmanipulationsereignissen sowie Infos zur Datenträger-E/A und Grafikprozessorauslastung (GPU). Beide Tools können Ablaufverfolgungsdateien sammeln und exportieren und freigegebene sowie Post-Mortem-Traces erneut öffnen.
--   Bevor Sie Ihre app zur Zertifizierung an den Store übermitteln, müssen Sie die leistungsbezogenen Testfälle in Ihre Testpläne integrieren, wie im Abschnitt "Leistungstests" von [Zertifizierungskit für Windows-App-Tests](windows-app-certification-kit-tests.md) und beschrieben die "Leistung und Stabilität"im Abschnitt [Testfälle für UWP-app](https://msdn.microsoft.com/library/windows/apps/Dn275879).
+-   Bevor Sie Ihre app zur Zertifizierung an den Store übermitteln, müssen Sie die leistungsbezogenen Testfälle in Ihre Testpläne integrieren, wie beschrieben im Abschnitt "Leistungstests" des [Zertifizierungskits für Windows-App-Tests](windows-app-certification-kit-tests.md) und in der "Leistung und Stabilität"im Abschnitt [Testfälle für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/Dn275879).
 
 Weitere Informationen finden Sie unter diesen Ressourcen und Tools zur Profilerstellung.
 

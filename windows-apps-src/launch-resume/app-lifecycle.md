@@ -6,12 +6,12 @@ ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
 ms.date: 01/23/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8555f9594ac3d2e7ea1b9f7006750c1084db3d9f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3f70d768ad6589e210826f94f73249ed1ea272e1
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944097"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045609"
 ---
 # <a name="windows-10-universal-windows-platform-uwp-app-lifecycle"></a>Lebenszyklus von Windows 10-UWP-Apps (Universelle Windows-Plattform)
 
@@ -56,7 +56,7 @@ Den vorherigen Zustand Ihrer App können Sie von der [LaunchActivatedEventArgs.P
 |**ClosedByUser** | Der Benutzer hat die App im Tablet-Modus mit der Geste zum Schließen oder mit ALT+F4 geschlossen. Wenn der Benutzer die App schließt, wird sie zunächst angehalten und anschließend beendet. | Da die App im Wesentlichen dieselben Phasen durchlaufen hat, die zum Zustand „Terminated“ führen, behandeln Sie sie genauso wie eine App im Zustand „Terminated“.|
 |**Running** | Die App war bereits geöffnet, als der Benutzer versucht hat, sie erneut zu starten. | Keine. Beachten Sie, dass keine weitere App-Instanz gestartet wird. Es wird einfach die bereits ausgeführte Instanz aktiviert. |
 
-**Hinweis:** *Aktuelle benutzersitzung* basiert auf Windows-Anmeldung. Solange sich der aktuelle Benutzer nicht abgemeldet oder Windows heruntergefahren oder neu gestartet hat, bleibt die aktuelle Benutzersitzung unabhängig von bestimmten Ereignissen – wie Sperrbildschirmauthentifizierung, Benutzerwechsel usw. – bestehen. 
+**Hinweis:** *Aktuellen Sitzung des Benutzers* basiert auf Windows-Anmeldung. Solange sich der aktuelle Benutzer nicht abgemeldet oder Windows heruntergefahren oder neu gestartet hat, bleibt die aktuelle Benutzersitzung unabhängig von bestimmten Ereignissen – wie Sperrbildschirmauthentifizierung, Benutzerwechsel usw. – bestehen. 
 
 Folgendes sollte unbedingt beachtet werden: Wenn das Gerät über genügend Ressourcen verfügt, startet das Betriebssystem häufig verwendete Apps, für die dieses Verhalten zulässig ist, vorab, um die Reaktionsfähigkeit zu verbessern. Eine vorab gestartete App wird Hintergrund gestartet und dann schnell angehalten. Bei Bedarf kann sie fortgesetzt werden, wodurch der Benutzer schneller darauf zugreifen kann als bei einem Start der App.
 
@@ -64,7 +64,7 @@ Aufgrund des Vorabstarts kann die **OnLaunched()**-Methode der App eher vom Syst
 
 Beim Start einer App zeigt Windows einen Begrüßungsbildschirm für die App an. Informationen zum Konfigurieren des Begrüßungsbildschirms finden Sie unter [Hinzufügen eines Begrüßungsbildschirms](https://msdn.microsoft.com/library/windows/apps/xaml/hh465331).
 
-Während der Begrüßungsbildschirm angezeigt wird, sollte die App Ereignishandler registrieren und eine angepasste Benutzeroberfläche einrichten, die sie für die Startseite benötigt. Diese im Konstruktor der Anwendung und in **OnLaunched()** ausgeführten Aufgaben sollten möglichst innerhalb weniger Sekunden abgeschlossen sein, damit das System nicht annimmt, dass Ihre App nicht mehr reagiert, und sie beendet. Wenn eine App Daten aus dem Netzwerk anfordern oder große Datenmengen von einem Datenträger abrufen muss, sollten diese Aktivitäten außerhalb des Startvorgangs erfolgen. Eine App kann ihre eigene angepasste Ladebenutzeroberfläche oder einen erweiterten Begrüßungsbildschirm verwenden, während sie auf den Abschluss von Vorgängen mit langer Ausführungsdauer wartet. Weitere Infos finden Sie unter [Längere Anzeige des Begrüßungsbildschirms](create-a-customized-splash-screen.md) und im [Beispiel für einen Begrüßungsbildschirm](http://go.microsoft.com/fwlink/p/?linkid=234889).
+Während der Begrüßungsbildschirm angezeigt wird, sollte die App Ereignishandler registrieren und eine angepasste Benutzeroberfläche einrichten, die sie für die Startseite benötigt. Diese im Konstruktor der Anwendung und in **OnLaunched()** ausgeführten Aufgaben sollten möglichst innerhalb weniger Sekunden abgeschlossen sein, damit das System nicht annimmt, dass Ihre App nicht mehr reagiert, und sie beendet. Wenn eine App Daten aus dem Netzwerk anfordern oder große Datenmengen von einem Datenträger abrufen muss, sollten diese Aktivitäten außerhalb des Startvorgangs erfolgen. Eine App kann ihre eigene angepasste Ladebenutzeroberfläche oder einen erweiterten Begrüßungsbildschirm verwenden, während sie auf den Abschluss von Vorgängen mit langer Ausführungsdauer wartet. Weitere Infos finden Sie unter [Längere Anzeige des Begrüßungsbildschirms](create-a-customized-splash-screen.md) und im [Beispiel für einen Begrüßungsbildschirm](https://go.microsoft.com/fwlink/p/?linkid=234889).
 
 Nach Abschluss des App-Starts wechselt die App in den Zustand **Ausgeführt**, und der Begrüßungsbildschirm sowie alle zugehörigen Ressourcen und Objekte werden ausgeblendet.
 
@@ -129,7 +129,7 @@ Beachten Sie Folgendes: Wenn in Ihrer App Hintergrundaktivitäten ausgeführt we
 
 ### <a name="asynchronous-work-and-deferrals"></a>Asynchrone Vorgänge und Verzögerungen
 
-Wenn Sie innerhalb Ihres Handlers einen asynchronen Aufruf ausführen, wird die Steuerung sofort von diesem asynchronen Aufruf zurückgegeben. Das bedeutet, dass die Ausführung dann vom Ereignishandler zurückgegeben werden kann und die App in den nächsten Zustand übergeht, obwohl der asynchrone Aufruf noch nicht abgeschlossen wurde. Verwenden Sie die [**GetDeferral**](http://aka.ms/Kt66iv)-Methode für das an den Ereignishandler übergebene [**EnteredBackgroundEventArgs**](http://aka.ms/Ag2yh4)-Objekt, um das Anhalten zu verzögern, bis Sie für das zurückgegebene [**Windows.Foundation.Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx)-Objekt die [**Complete**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.complete.aspx)-Methode aufgerufen haben.
+Wenn Sie innerhalb Ihres Handlers einen asynchronen Aufruf ausführen, wird die Steuerung sofort von diesem asynchronen Aufruf zurückgegeben. Das bedeutet, dass die Ausführung dann vom Ereignishandler zurückgegeben werden kann und die App in den nächsten Zustand übergeht, obwohl der asynchrone Aufruf noch nicht abgeschlossen wurde. Verwenden Sie die [**GetDeferral**](https://aka.ms/Kt66iv)-Methode für das an den Ereignishandler übergebene [**EnteredBackgroundEventArgs**](https://aka.ms/Ag2yh4)-Objekt, um das Anhalten zu verzögern, bis Sie für das zurückgegebene [**Windows.Foundation.Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx)-Objekt die [**Complete**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.complete.aspx)-Methode aufgerufen haben.
 
 Durch eine Verzögerung verlängert sich nicht die Zeit, die Ihr Code ausgeführt werden muss, bevor die App beendet wird. Dabei wird nur die Beendigung verzögert, bis die *Complete*-Methode der Verzögerung aufgerufen wird oder die Frist abläuft, *je nachdem, was zuerst eintritt*.
 
@@ -173,7 +173,7 @@ Wenn die angehaltene App beendet wurde, gibt es kein **Resuming**-Ereignis, und 
 
 Angehaltene Apps empfangen keine Netzwerkereignisse, für deren Empfang sie registriert sind. Diese Netzwerkereignisse werden nicht in die Warteschlange gestellt, sondern einfach verpasst. Apps sollten beim Fortsetzen daher den Netzwerkstatus prüfen.
 
-**Hinweis:**, da das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) -Ereignis nicht vom UI-Thread ausgelöst wird, ein Dispatcher verwendet werden muss, wenn der Code im Resume-Handler mit der Benutzeroberfläche kommuniziert. Ein Codebeispiel zur Vorgehensweise finden Sie unter [Aktualisieren des UI-Threads von einem Hintergrundthread](https://github.com/Microsoft/Windows-task-snippets/blob/master/tasks/UI-thread-access-from-background-thread.md).
+**Hinweis:** da das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) -Ereignis nicht vom UI-Thread ausgelöst wird, ein Dispatcher verwendet werden muss, wenn der Code im Resume-Handler mit der Benutzeroberfläche kommuniziert. Ein Codebeispiel zur Vorgehensweise finden Sie unter [Aktualisieren des UI-Threads von einem Hintergrundthread](https://github.com/Microsoft/Windows-task-snippets/blob/master/tasks/UI-thread-access-from-background-thread.md).
 
 Allgemeine Richtlinien finden Sie unter [Richtlinien für das Anhalten und Fortsetzen von Apps](https://msdn.microsoft.com/library/windows/apps/hh465088).
 
@@ -181,9 +181,9 @@ Allgemeine Richtlinien finden Sie unter [Richtlinien für das Anhalten und Forts
 
 Im Allgemeinen müssen Benutzer Apps nicht schließen, sondern können die Verwaltung Windows überlassen. Benutzer können Apps jedoch mit der Geste zum Schließen, durch Drücken von ALT+F4 oder mithilfe der Aufgabenumschaltfunktion in Windows Phone schließen.
 
-Es gibt kein Ereignis zum Angeben, dass der Benutzer die App geschlossen hat. Wenn eine App durch den Benutzer geschlossen wird, wird sie zuerst angehalten, damit Sie ihren Zustand speichern können. In Windows8.1 und höher, nachdem eine app vom Benutzer geschlossen wurde, die app wird vom Bildschirm entfernt und switch-Liste aber nicht explizit beendet wird.
+Es gibt kein Ereignis zum Angeben, dass der Benutzer die App geschlossen hat. Wenn eine App durch den Benutzer geschlossen wird, wird sie zuerst angehalten, damit Sie ihren Zustand speichern können. In Windows8.1 und höher, nachdem eine app vom Benutzer geschlossen wurde, die app wird vom Bildschirm entfernt und switch-Liste aber nicht explizit beendet.
 
-**Geschlossen-Verhalten:** Wenn Ihre app benötigt etwas anderes tun, wenn es vom Benutzer als beim Schließen von Windows geschlossen wird, können Sie des aktivierungsereignishandlers verwenden, um festzustellen, ob die app durch den Benutzer oder durch Windows beendet wurde. Beschreibungen zu den Status **ClosedByUser** und **Terminated** finden Sie in der Referenz für die [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694)-Enumeration.
+**Geschlossen-Verhalten:** Wenn Ihre app benötigt, etwas anders, wenn sie geschlossen ist, vom Benutzer als wenn sie von Windows geschlossen ist, können des aktivierungsereignishandlers ermitteln, ob die app durch den Benutzer oder durch Windows beendet wurde. Beschreibungen zu den Status **ClosedByUser** und **Terminated** finden Sie in der Referenz für die [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694)-Enumeration.
 
 Wir raten dazu, dass Apps sich selbst nur dann programmgesteuert schließen sollten, wenn dies absolut erforderlich ist. Wenn eine App beispielsweise einen Arbeitsspeicherverlust erkennt, kann sie sich selbst schließen, um die Sicherheit der persönlichen Daten des Benutzers zu wahren.
 
@@ -191,7 +191,7 @@ Wir raten dazu, dass Apps sich selbst nur dann programmgesteuert schließen soll
 
 Der Systemabsturz ist dafür vorgesehen, dass die Benutzer ihre vorherigen Aktivitäten so schnell wie möglich wieder aufnehmen können. Sie sollten kein Warnungsdialogfeld oder eine andere Benachrichtigung bereitstellen, da dies für den Benutzer eine Verzögerung verursacht.
 
-Wenn die App abstürzt, nicht mehr reagiert oder eine Ausnahme generiert, wird über die [Feedback- und Diagnoseeinstellungen](http://go.microsoft.com/fwlink/p/?LinkID=614828) des Benutzers ein Problembericht an Microsoft gesendet. Microsoft stellt Ihnen einige der Fehlerdaten im Problembericht bereit, mit denen Sie Ihre App verbessern können. Sie können diese Daten auf der Seite „Qualität“ Ihrer App im Dashboard einsehen.
+Wenn die App abstürzt, nicht mehr reagiert oder eine Ausnahme generiert, wird über die [Feedback- und Diagnoseeinstellungen](https://go.microsoft.com/fwlink/p/?LinkID=614828) des Benutzers ein Problembericht an Microsoft gesendet. Microsoft stellt Ihnen einige der Fehlerdaten im Problembericht bereit, mit denen Sie Ihre App verbessern können. Sie können diese Daten auf der Seite „Qualität“ Ihrer App im Dashboard einsehen.
 
 Wenn der Benutzer eine App nach einem Absturz aktiviert, empfängt ihr Ereignishandler einen [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694)-Wert **NotRunning**, und es sollten einfach die ursprüngliche Benutzeroberfläche und die ursprünglichen Daten der App angezeigt werden. Nach einem Absturz sollten Sie die App-Daten, die Sie für **Resuming** verwendet hätten, nicht routinemäßig mit **Suspended** verwenden, da diese Daten beschädigt sein können. Weitere Informationen finden Sie unter [Richtlinien für das Anhalten und Fortsetzen von Apps](https://msdn.microsoft.com/library/windows/apps/hh465088).
 

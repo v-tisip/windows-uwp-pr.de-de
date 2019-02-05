@@ -5,12 +5,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, Ad-Steuerelement, native Anzeige
 ms.localizationpriority: medium
-ms.openlocfilehash: c978a07ceb30aaf9c2d0df3d38ff7ee9abbb5b2a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 89e9df87cd214d3d03f25c674ec80a73fedf53d6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939544"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045243"
 ---
 # <a name="native-ads"></a>Native Anzeigen
 
@@ -23,7 +23,7 @@ Für Werbekunden bieten native anzeigen perfekte Platzierungen, da Anzeigen-Umge
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-* Installieren Sie das [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) mit Visual Studio2015 oder einer neueren Version von Visual Studio. Installationsanweisungen finden Sie in [diesem Artikel](install-the-microsoft-advertising-libraries.md).
+* Installieren Sie das [Microsoft Advertising-SDK](https://aka.ms/ads-sdk-uwp) mit Visual Studio2015 oder einer neueren Version von Visual Studio. Installationsanweisungen finden Sie in [diesem Artikel](install-the-microsoft-advertising-libraries.md).
 
 ## <a name="integrate-a-native-ad-into-your-app"></a>Native Anzeigen in Ihrer App integrieren
 
@@ -109,13 +109,13 @@ Nachdem Sie bestätigt, dass der Implementierung der nativen Anzeige erfolgreich
 
 1.  Stellen Sie sicher, dass die Implementierung der nativen Anzeigen den [Richtlinien für native Anzeigen](ui-and-user-experience-guidelines.md#guidelines-for-native-ads) folgt.
 
-2.  Im Partner Center wechseln Sie zu der Seite [In-app-anzeigen](../publish/in-app-ads.md) und [Erstellen Sie eine anzeigeneinheit](set-up-ad-units-in-your-app.md#live-ad-units). Geben Sie als Einheitentyp **Native** an. Notieren Sie die Anzeigeneinheits-ID und die Anwendungs-ID.
+2.  Wechseln Sie zu der Seite [In-app-anzeigen](../publish/in-app-ads.md) und [Erstellen Sie eine anzeigeneinheit](set-up-ad-units-in-your-app.md#live-ad-units), im Partner Center. Geben Sie als Einheitentyp **Native** an. Notieren Sie die Anzeigeneinheits-ID und die Anwendungs-ID.
     > [!NOTE]
-    > Die Anwendungs-IDs für Test-Anzeigeneinheiten und Live-UWP-Anzeigeneinheiten besitzen unterschiedliche Formate. Testanwendungs-ID sind GUIDs. Wenn Sie eine live-UWP-anzeigeneinheit im Partner Center erstellen, entspricht die Anwendungs-ID-Wert für die anzeigeneinheit immer die Store-ID für Ihre app (der ein Beispiel für Store-ID-Wert ist 9nblggh4r315).).
+    > Die Anwendungs-IDs für Test-Anzeigeneinheiten und Live-UWP-Anzeigeneinheiten besitzen unterschiedliche Formate. Testanwendungs-ID sind GUIDs. Wenn Sie eine live-UWP-anzeigeneinheit im Partner Center erstellen, entspricht der Anwendung-ID-Wert für die anzeigeneinheit immer die Store-ID für Ihre app (der ein Beispiel für Store-ID-Wert ist 9nblggh4r315).).
 
 3. Sie können optional die Anzeigenvermittlung für die native Anzeige durch Konfigurieren der Einstellungen im Abschnitt [Vermittlungseinstellungen](../publish/in-app-ads.md#mediation) auf der [In-App-Anzeigen](../publish/in-app-ads.md)-Seite aktivieren. Mit der Anzeigenvermittlung können Sie Ihren Anzeigenumsatz und Funktionalitäten zur App-Bewerbung durch die Darstellung von Anzeigen aus mehreren Anzeigennetzwerken verbessern.
 
-4.  Ersetzen Sie in Ihrem Code die Testwerte der anzeigeneinheit (d. h. die *ApplicationId* und *AdUnitId* Parameter des [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2.-ctor) -Konstruktors) mit den live-Werten, die Sie im Partner Center generiert.
+4.  Ersetzen Sie in Ihrem Code die Testwerte der anzeigeneinheit (d. h. die *ApplicationId* und *AdUnitId* Parameter für den Konstruktor [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2.-ctor) ) mit den live-Werten, die Sie im Partner Center generiert.
 
 5.  [Übermitteln Ihrer app](../publish/app-submissions.md) mithilfe der Partner Center an den Store.
 

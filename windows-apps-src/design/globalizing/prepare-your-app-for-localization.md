@@ -7,12 +7,12 @@ ms.date: 11/07/2017
 ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 618b9d556d3c855c5aed888f0639393bdaaec52e
-ms.sourcegitcommit: 6b417970ee42b46d0a3a2307229376e41e70f8c9
+ms.openlocfilehash: fb16f682e5e1f57196737a6e15a9ffbadbfd0e84
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "9015665"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050883"
 ---
 # <a name="make-your-app-localizable"></a>App lokalisierbar machen
 
@@ -52,7 +52,7 @@ Kurz gesagt, gliedern Sie die Zeichenfolgen in Teile, die in allen Kontexten ver
 
 Berücksichtigen Sie die folgende Zeichenfolge: "die {0} konnte nicht synchronisiert werden."
 
-Konnte durch zahlreiche Wörter ersetzt. {0}, z. B. "Termin", "Aufgabe" oder "Dokument". Dieses Beispiel funktioniert zwar in der englischen Sprache, aber nicht in jedem Fall im entsprechenden deutschen Satz (beispielsweise). Sie sehen, dass in den folgenden deutschen Sätzen einige der Wörter in der Vorlagenzeichenfolge („Der“, „Die“, „Das“) zum parametrisierten Wort passen müssen:
+Kann durch zahlreiche Wörter ersetzt {0}, z. B. "Termin", "Aufgabe" oder "Dokument". Dieses Beispiel funktioniert zwar in der englischen Sprache, aber nicht in jedem Fall im entsprechenden deutschen Satz (beispielsweise). Sie sehen, dass in den folgenden deutschen Sätzen einige der Wörter in der Vorlagenzeichenfolge („Der“, „Die“, „Das“) zum parametrisierten Wort passen müssen:
 
 | Englisch                                    | Deutsch                                           |
 |:------------------------------------------ |:------------------------------------------------ |
@@ -80,24 +80,24 @@ Gegen informelle Angaben in Zeichenfolgen ist nichts einzuwenden. Sie können en
 
 Nehmen Sie ein Pseudolokalisierung Ihrer App vor, um Lokalisierungsprobleme zu erkennen. Pseudolokalisierung ist eine Art von Lokalisierungstestlauf oder Offenlegungstest. Sie erstellen eine Reihe von Ressourcen, die nicht wirklich übersetzt werden, sondern nur übersetzt aussehen. Ihre Zeichenfolgen sind beispielsweise etwa 40 % länger als in der Standardsprache, und sie enthalten Trennzeichen, sodass Sie auf einen Blick erkennen können, ob sie in der Benutzeroberfläche abgeschnitten wurden.
 
-## <a name="deployment-considerations"></a>Überlegungen zur Bereitstellung
+## <a name="deployment-considerations"></a>Aspekte der Bereitstellung
 
-Wenn Sie eine app, die lokalisierte Sprache Daten enthält installieren, kann vorkommen, dass nur die Standardsprache für die app verfügbar ist, auch wenn Sie anfänglich Ressourcen für mehrere Sprachen enthalten. Dies liegt daran des Installationsvorgangs optimiert ist, um nur die Sprachressourcen installieren, die die aktuelle Sprache und Kultur des Geräts entsprechen. Wenn Ihr Gerät für "En-US" konfiguriert ist, werden daher nur die Sprachressourcen "En-US" mit Ihrer app installiert.
+Wenn Sie eine app, die lokalisierte Sprache Daten enthält installieren, kann vorkommen, dass nur die Standardsprache für die app verfügbar ist, auch wenn Sie anfänglich Ressourcen für mehrere Sprachen enthalten. Dies liegt daran des Installationsvorgangs optimiert ist, um nur die Sprachressourcen installieren, die die aktuelle Sprache und Kultur des Geräts entsprechen. Wenn Ihr Gerät für "En-US" konfiguriert ist, werden daher nur die Sprachressourcen "En-US" mit der app installiert.
 
 > [!NOTE]
-> Es ist nicht möglich, Unterstützung für weitere Sprachen für Ihre app nach der ersten Installation zu installieren. Wenn Sie die Standardsprache nach der Installation einer app ändern, wird die app weiterhin nur die ursprüngliche Sprachressourcen verwendet.
+> Es ist nicht möglich, zusätzliche sprachunterstützung für Ihre app nach der ersten Installation installieren. Wenn Sie die Standardsprache ändern, nach der Installation einer app, verwendet weiterhin die app nur die ursprüngliche Sprachressourcen.
 
-Wenn Sie möchten, um sicherzustellen, dass alle Sprachressourcen nach der Installation verfügbar sind, erstellen Sie eine Konfigurationsdatei für die app-Paket, das angibt, dass bestimmte Ressourcen während der Installation (einschließlich Ressourcen der Standardsprache) erforderlich sind. Dieses Feature optimierte Installation wird automatisch aktiviert, wenn Ihre Anwendung .appxbundle beim Packen generiert wird. Weitere Informationen finden Sie unter [Stellen Sie sicher, dass Ressourcen, auf einem Gerät unabhängig davon installiert sind, ob ein Gerät erforderlich sind](https://docs.microsoft.com/en-us/previous-versions/dn482043(v=vs.140)).
+Wenn Sie möchten, um sicherzustellen, dass alle Sprachressourcen nach der Installation verfügbar sind, erstellen Sie eine Konfigurationsdatei für das app-Paket, das angibt, dass bestimmte Ressourcen während der Installation (einschließlich Sprachressourcen) erforderlich sind. Dieses Feature optimierte Installation wird automatisch aktiviert, wenn beim Packen Ihrer Anwendung .appxbundle generiert wird. Weitere Informationen finden Sie unter [Stellen Sie sicher, dass Ressourcen, auf einem Gerät unabhängig davon installiert sind, ob ein Gerät erforderlich sind](https://docs.microsoft.com/en-us/previous-versions/dn482043(v=vs.140)).
 
-Optional, um sicherzustellen, dass alle Ressourcen sind installiert (nicht nur eine Teilmenge) ist, können Sie .appxbundle-Generation, wenn Sie Ihre app zu verpacken, deaktivieren. Dies wird nicht empfohlen, jedoch, wie sie die Installation Ihrer App erhöhen kann.
+Optional, um sicherzustellen, dass alle Ressourcen sind installiert (nicht nur eine Teilmenge) ist, können Sie .appxbundle-Generation, wenn Sie Ihre app zu verpacken, deaktivieren. Dies wird nicht empfohlen, jedoch, wie sie die Installationszeit Ihrer App erhöhen kann.
 
-Deaktivieren Sie automatische Generierung der .appxbundle, indem Sie das Attribut "Generieren von App-Bundle", "nie":
+Deaktivieren Sie automatische Generierung der .appxbundle, indem Sie das Attribut "Generieren von App-Bundle" auf "nie":
 
 1. In Visual Studio mit der Maustaste des Namens des Projekts
 2. Wählen Sie **Store** -> **... erstellen app-Pakete**
-3. Wählen Sie im Dialogfeld " **Ihre Pakete erstellen** " **zum Erstellen von Paketen zum Hochladen in den Microsoft Store mit einem neuen app-Namen werden soll** , und klicken Sie auf **Weiter**.
-4. Benennen im Dialogfeld **Wählen Sie einen app-Namen** für Ihr Paket auszuwählen /, erstellen Sie eine app.
-5. Klicken Sie im Dialogfeld **auswählen und Konfigurieren von Paketen** **nie**als **app-Bundle erstellen** .
+3. Wählen Sie im Dialogfeld " **Ihre Pakete erstellen** " **zum Erstellen von Paketen zum Hochladen in den Microsoft Store eine neue app-Namen werden soll** , und klicken Sie dann auf **Weiter**.
+4. Benennen im Dialogfeld " **Wählen Sie einen app-Namen** " für Ihr Paket auszuwählen /, erstellen Sie eine app.
+5. Legen Sie im Dialogfeld " **auswählen und Konfigurieren von Paketen** " **app-Bundle erstellen** auf **nie**.
 
 ## <a name="geopolitical-awareness"></a>Geopolitische Rücksichtnahme
 
@@ -115,7 +115,7 @@ Gehen Sie nicht davon aus, dass Parameter in allen Sprachen in der gleichen Reih
     string.Format("Every {0} {1}", monthName, dayNumber); // For example, "Every April 1".
 ```
 
-Die Formatzeichenfolge in diesem Beispiel ist für Englisch (USA) richtig. Sie ist jedoch nicht für Deutsch (Deutschland) geeignet, da in dieser Sprache Tag und Monat in umgekehrter Reihenfolge angezeigt werden. Stellen Sie sicher, dass der Übersetzer die Bedeutung der einzelnen Parameter kennt, damit sie die Reihenfolge der Formatelemente in einer Formatzeichenfolge stornieren können (z. B. "{1} {0}") entsprechend der Zielsprache.
+Die Formatzeichenfolge in diesem Beispiel ist für Englisch (USA) richtig. Sie ist jedoch nicht für Deutsch (Deutschland) geeignet, da in dieser Sprache Tag und Monat in umgekehrter Reihenfolge angezeigt werden. Stellen Sie sicher, dass der Übersetzer die Bedeutung der einzelnen Parameter kennt, so, dass sie die Reihenfolge der Formatelemente in einer Formatzeichenfolge stornieren können (z. B. "{1} {0}") entsprechend der Zielsprache.
 
 ## <a name="dont-over-localize"></a>Vermeiden Sie eine zu starke Lokalisierung.
 
@@ -138,11 +138,11 @@ Berücksichtigen Sie diese Optionen.
 - **Die Zeichenfolgenressourcendateien werden im XML- oder ResJSON-Textformat erstellt und können somit zur Übersetzung mit einem Texteditor übergeben werden. Die übersetzten Dateien würde dann wieder in das Projekt kopiert werden.** Bei diesem Ansatz besteht die Gefahr, dass Übersetzer versehentlich die XML-Tags bearbeiten. Andererseits besteht die Möglichkeit, Übersetzungen außerhalb des Microsoft Visual Studio-Projekts durchzuführen. Dieser Ansatz eignet sich gut für Projekte, die nur in wenige Sprachen übersetzt werden. Das XLIFF-Format ist ein XML-Format, das speziell für die Lokalisierung vorgesehen ist. Es sollte zudem von einigen Lokalisierungsanbietern oder -tools unterstützt werden. Sie können mit dem [Multilingual App Toolkit](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx) XLIFF-Dateien aus anderen Ressourcendateien wie „.resw“ oder „.resjson“ generieren.
 
 > [!NOTE]
-> Lokalisierung kann auch für andere Ressourcen, z. B. Bilder und Audiodateien erforderlich sein.
+> Lokalisierung kann auch für andere Ressourcen, einschließlich Bildern und Audiodateien erforderlich sein.
 
 Sie sollten auch Folgendes beachten:
 
-- **Tools für die Lokalisierung** Eine Reihe von Tools für die Lokalisierung stehen Ressourcendateien können und nur die übersetzbaren Zeichenfolgen Übersetzer bearbeitet wird. Das Risiko, dass ein Übersetzer versehentlich XML-Tags bearbeitet, ist somit geringer. Der Nachteil ist aber, dass neue Tools und Prozesse in den Lokalisierungsprozess eingebunden werden müssen. Ein Lokalisierungstool eignet sich für Projekte mit vielen Zeichenfolgen für wenige Sprachen. Weitere Informationen finden Sie unter [Verwenden des Multilingual App Toolkit](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx).
+- **Tools für die Lokalisierung** Eine Reihe von Tools für die Lokalisierung stehen für die Ressourcendateien können und nur die übersetzbaren Zeichenfolgen Übersetzer bearbeitet wird. Das Risiko, dass ein Übersetzer versehentlich XML-Tags bearbeitet, ist somit geringer. Der Nachteil ist aber, dass neue Tools und Prozesse in den Lokalisierungsprozess eingebunden werden müssen. Ein Lokalisierungstool eignet sich für Projekte mit vielen Zeichenfolgen für wenige Sprachen. Weitere Informationen finden Sie unter [Verwenden des Multilingual App Toolkit](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx).
 - **Lokalisierungsanbietern** Erwägen Sie einen Lokalisierungsanbieter, wenn die Anwendung umfassende Zeichenfolgen enthält, die eine große Anzahl von Sprachen übersetzt werden müssen. Ein Lokalisierungsanbieter kann Sie hinsichtlich der Tools und Prozesse beraten sowie die Ressourcendateien übersetzen. Diese Lösung ist ideal, stellt allerdings auch die teuerste Option dar und kann die Bearbeitungszeit für den übersetzten Inhalt verlängern.
 
 ## <a name="keep-access-keys-and-labels-consistent"></a>Zugriffstasten und Beschreibungen konsistent halten
@@ -190,4 +190,4 @@ Die Sortierung folgt dem **regionalen Format der Systemsteuerung**:
 
 ## <a name="samples"></a>Beispiele
 
-- [Anwendungsressourcen und Lokalisierung – Beispiel](http://go.microsoft.com/fwlink/p/?linkid=254478)
+- [Anwendungsressourcen und Lokalisierung – Beispiel](https://go.microsoft.com/fwlink/p/?linkid=254478)

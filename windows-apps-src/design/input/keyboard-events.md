@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e7453d3973cef31ae8143f3ecff31fffeb763a3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9ff4e7d01d907112558993f52c8a214c91f7d499
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942551"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047069"
 ---
 # <a name="keyboard-events"></a>Tastaturereignisse
 
@@ -325,7 +325,7 @@ Eine generelle Einschränkung dieser Technik besteht darin, dass die API **AddHa
 
 Sie können die wichtigsten Ereignisse für bestimmte Steuerelemente überschreiben (z.B. [**GridView**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.GridView)), um eine konsistente Fokusnavigation für verschiedene Eingabegeräte (darunter Tastatur und Gamepad) bereitzustellen.
 
-Im folgenden Beispiel wird das Steuerelement und überschreiben das KeyDown-Verhalten für den Fokus auf das GridView Inhalt, wenn eine Pfeiltaste gedrückt wird.
+Im folgenden Beispiel wird das Steuerelement und überschreiben das KeyDown-Verhalten Fokus zum GridView Inhalte, wenn eine Pfeiltaste gedrückt wird.
 
 ```csharp
 public class CustomGridView : GridView
@@ -391,16 +391,16 @@ Benutzer können Daten in Ihre App schneller und einfacher eingeben, wenn Sie de
 
 **Beispiele**
 * [Beispiel für die Bildschirmtastatur](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [Einfaches Eingabebeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Beispiel für Eingabe mit niedriger Latenz](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Beispiel für visuelle Fokuselemente](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Einfaches Eingabebeispiel](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Beispiel für Eingabe mit niedriger Latenz](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Beispiel für visuelle Fokuselemente](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Archivbeispiele**
-* [Eingabebeispiel](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Eingabe: Beispiel für Gerätefunktionen](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Eingabe: Beispiel für die Bildschirmtastatur](http://go.microsoft.com/fwlink/p/?linkid=246019)
-* [Beispiel für die Reaktion auf die Anzeige der Bildschirmtastatur](http://go.microsoft.com/fwlink/p/?linkid=231633)
-* [Beispiel für die XAML-Textbearbeitung](http://go.microsoft.com/fwlink/p/?LinkID=251417)
+* [Eingabebeispiel](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Eingabe: Beispiel für Gerätefunktionen](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Eingabe: Beispiel für die Bildschirmtastatur](https://go.microsoft.com/fwlink/p/?linkid=246019)
+* [Beispiel für die Reaktion auf die Anzeige der Bildschirmtastatur](https://go.microsoft.com/fwlink/p/?linkid=231633)
+* [Beispiel für die XAML-Textbearbeitung](https://go.microsoft.com/fwlink/p/?LinkID=251417)
  
 
  

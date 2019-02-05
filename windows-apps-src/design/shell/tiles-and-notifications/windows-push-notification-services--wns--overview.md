@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f131ad229b4ba22f7fa4652aa302e3596819f206
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 267e6e1cf9a004b6703e000b694274b802220f60
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926184"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047525"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>Übersicht über Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)
  
@@ -51,7 +51,7 @@ Nach erfolgreicher Erstellung eines Kanal-URIs sendet die App den URI zusammen m
 
 ### <a name="important-notes"></a>Wichtige Hinweise
 
--   Wir können nicht garantieren, dass der Benachrichtigungskanal-URI für eine App jederzeit gleich bleibt. Wenn sich der URI ändert, empfehlen wir, die App immer einen neuen Kanal anfordern zu lassen, wenn sie ausgeführt wird und ihren Dienst aktualisiert. Der Entwickler sollte den Kanal-URI niemals ändern und ihn als Blackbox-Zeichenfolge betrachten. Derzeit laufen Kanal-URIs nach 30Tagen ab. Wenn Ihre app für Windows 10 in regelmäßigen Abständen den Kanal im Hintergrund verlängert werden, können Sie [Pushbenachrichtigungen und regelmäßige Benachrichtigungen-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=231476) für Windows8.1 herunterladen und erneut verwenden Sie den Quellcode und/oder das Muster, das veranschaulicht.
+-   Wir können nicht garantieren, dass der Benachrichtigungskanal-URI für eine App jederzeit gleich bleibt. Wenn sich der URI ändert, empfehlen wir, die App immer einen neuen Kanal anfordern zu lassen, wenn sie ausgeführt wird und ihren Dienst aktualisiert. Der Entwickler sollte den Kanal-URI niemals ändern und ihn als Blackbox-Zeichenfolge betrachten. Derzeit laufen Kanal-URIs nach 30Tagen ab. Wenn Ihre app für Windows 10 in regelmäßigen Abständen den Kanal im Hintergrund verlängert werden, können Sie die [Pushbenachrichtigungen und regelmäßige benachrichtigungsbeispiel](https://go.microsoft.com/fwlink/p/?linkid=231476) für Windows8.1 herunterladen und erneut verwenden Sie den Quellcode und/oder das Muster, das veranschaulicht.
 -   Die Schnittstelle zwischen dem Clouddienst und dem der Client-App wird von Ihnen (dem Entwickler) implementiert. Wir empfehlen, die App mit dem eigenen Dienst einen Authentifizierungsprozess durchlaufen zu lassen und die Daten über ein sicheres Protokoll (beispielsweise HTTPS) zu übermitteln.
 -   Der Clouddienst muss stets sicherstellen, dass der Kanal-URI die Domäne „notify.windows.com” verwendet. Der Dienst darf Benachrichtigungen niemals per Push an einen Kanal aus einer anderen Domäne übertragen. Im Falle einer Kompromittierung des Rückrufs für Ihre App könnte ein böswilliger Angreifer einen Kanal-URI übermitteln, um WNS zu täuschen. Ohne Überprüfung der Domäne gibt Ihr Clouddienst unter Umständen unwissentlich Informationen an diesen Angreifer weiter.
 -   Wenn der Clouddienst versucht, eine Benachrichtigung an einen abgelaufenen Kanal zu senden, wird von WNS der [Antwortcode 410](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#WNSResponseCodes) zurückgegeben. Als Reaktion auf diesen Code sollte der Dienst keine Benachrichtigungen mehr an diesen URI senden.
@@ -61,7 +61,7 @@ Nach erfolgreicher Erstellung eines Kanal-URIs sendet die App den URI zusammen m
 
 Zum Senden einer Authentifizierung muss der Clouddienst per WNS authentifiziert werden. Der erste Schritt in diesem Prozess erfolgt, wenn Sie Ihre App beim Microsoft Store-Dashboard registrieren. Im Rahmen der Registrierung erhält Ihre App eine Paket-Sicherheits-ID (Security Identifier, SID) sowie einen geheimen Schlüssel. Anhand dieser Informationen kann sich Ihr Clouddienst gegenüber WNS authentifizieren.
 
-Das WNS-Authentifizierungsschema wird unter Verwendung des Client-Anmeldeinformationsprofils aus dem Protokoll [OAuth2.0](http://go.microsoft.com/fwlink/p/?linkid=226787) implementiert. Der Clouddienst authentifiziert sich gegenüber WNS durch Angeben seiner Anmeldeinformationen (Paket-SID und geheimer Schlüssel). Im Gegenzug erhält er ein Zugriffstoken. Dieses Zugriffstoken ermöglicht einem Clouddienst das Senden von Benachrichtigungen. Das Token wird bei jeder an WNS gesendeten Benachrichtigungsanforderung benötigt.
+Das WNS-Authentifizierungsschema wird unter Verwendung des Client-Anmeldeinformationsprofils aus dem Protokoll [OAuth2.0](https://go.microsoft.com/fwlink/p/?linkid=226787) implementiert. Der Clouddienst authentifiziert sich gegenüber WNS durch Angeben seiner Anmeldeinformationen (Paket-SID und geheimer Schlüssel). Im Gegenzug erhält er ein Zugriffstoken. Dieses Zugriffstoken ermöglicht einem Clouddienst das Senden von Benachrichtigungen. Das Token wird bei jeder an WNS gesendeten Benachrichtigungsanforderung benötigt.
 
 Im Anschluss finden Sie eine Übersicht über die Informationskette:
 
@@ -72,7 +72,7 @@ Im Anschluss finden Sie eine Übersicht über die Informationskette:
 
 Im Rahmen der Authentifizierung gegenüber WNS übermittelt der Clouddienst eine HTTP-Anforderung per SSL (Secure Sockets Layer). Die Parameter werden im Format „application/x-www-for-urlencoded” angegeben. Geben Sie im Feld „client\_id” Ihre Paket-SID und im Feld „client\_secret” Ihren geheimen Schlüssel an. Ausführliche Informationen zur Syntax finden Sie in der Referenz zur [Zugriffstokenanforderung](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#access_token_request).
 
-**Hinweis:** Dies ist nur ein Beispiel, das nicht ausschneiden und Einfügen-Code, der Sie erfolgreich in Ihrem eigenen Code verwenden können.
+**Hinweis:** Dies ist nur ein Beispiel, nicht ausschneiden und Einfügen-Code, mit denen Sie erfolgreich in Ihrem eigenen Code.
 
  
 
@@ -160,20 +160,20 @@ Während eines aktiven Börsenhandelstags können Sie beispielsweise die Gültig
 ## <a name="push-notifications-and-battery-saver"></a>Pushbenachrichtigungen und Stromsparmodus
 
 
-Der Stromsparmodus schränkt Hintergrundaktivitäten auf dem Gerät ein und verlängert dadurch die Akkulaufzeit. Windows 10 ermöglicht den Benutzer das Festlegen der Stromsparmodus automatisch aktivieren, wenn der Akkustand einen bestimmten Schwellenwert unterschreitet. Wenn der Stromsparmodus aktiviert ist, ist der Empfang von Pushbenachrichtigungen deaktiviert, um Energie zu sparen. Es gibt allerdings einige Ausnahmen. Die folgenden Windows 10 Einstellungen für den Stromsparmodus (finden Sie in der **Einstellungs** -app) ermöglichen Ihrer app Pushbenachrichtigungen zu empfangen, auch wenn der Stromsparmodus aktiviert ist.
+Der Stromsparmodus schränkt Hintergrundaktivitäten auf dem Gerät ein und verlängert dadurch die Akkulaufzeit. Windows 10 können Benutzer den Stromsparmodus auf automatisch aktiviert wird, wenn der Akkustand einen bestimmten Schwellenwert unterschreitet festlegen. Wenn der Stromsparmodus aktiviert ist, ist der Empfang von Pushbenachrichtigungen deaktiviert, um Energie zu sparen. Es gibt allerdings einige Ausnahmen. Die folgenden Windows 10 Einstellungen für den Stromsparmodus (finden Sie in den **Einstellungen** ) ermöglichen Ihrer app Pushbenachrichtigungen zu empfangen, auch wenn der Stromsparmodus aktiviert ist.
 
 -   **Im Stromsparmodus Pushbenachrichtigungen von jeder App zulassen**: Alle Apps können Pushbenachrichtigungen empfangen, wenn der Stromsparmodus aktiviert ist. Beachten Sie, dass diese Einstellung nur für Windows 10 für Desktopeditionen (Home, Pro, Enterprise und Education) gilt.
 -   **Immer zugelassen**: Bestimmte Apps können im Hintergrund ausgeführt werden, wenn der Stromsparmodus aktiviert ist, und dabei Pushbenachrichtigungen empfangen. Die Liste wird manuell vom Benutzer verwaltet.
 
 Es ist nicht möglich, den Status dieser beiden Einstellungen zu überprüfen, Sie können aber den Status des Stromsparmodus feststellen. Verwenden Sie in Windows 10 die [**EnergySaverStatus**](https://docs.microsoft.com/uwp/api/Windows.System.Power.PowerManager.EnergySaverStatus) -Eigenschaft, um den Status des Stromsparmodus zu überprüfen. Ihre App kann auch mithilfe des [**EnergySaverStatusChanged**](https://docs.microsoft.com/uwp/api/Windows.System.Power.PowerManager.EnergySaverStatusChanged)-Ereignisses Änderungen des Stromsparmodus überwachen.
 
-Falls Pushbenachrichtigungen bei Ihrer App sehr wichtig sind, sollten Sie die Benutzer darüber informieren, dass sie bei aktiviertem Stromsparmodus keine Benachrichtigungen erhalten, und eine einfache Möglichkeit zum Anpassen der **Einstellungen für den Stromsparmodus** vorsehen. Mit URI-Schema der Akku Stromsparmodus in Windows 10, `ms-settings:batterysaver-settings`, Sie können einen praktischen Link zu der Einstellungs-app bereitstellen.
+Falls Pushbenachrichtigungen bei Ihrer App sehr wichtig sind, sollten Sie die Benutzer darüber informieren, dass sie bei aktiviertem Stromsparmodus keine Benachrichtigungen erhalten, und eine einfache Möglichkeit zum Anpassen der **Einstellungen für den Stromsparmodus** vorsehen. Verwenden den Akku Stromsparmodus URI-Schema in Windows 10, `ms-settings:batterysaver-settings`, Sie können einen praktischen Link zu der Einstellungs-app bereitstellen.
 
-**Tipp:**  , wenn den Benutzer über die Einstellungen für den Stromsparmodus informieren, wir empfehlen, eine Möglichkeit, die Nachricht in der Zukunft zu unterdrücken. Das Kontrollkästchen `dontAskMeAgainBox` im folgenden Beispiel speichert z.B. die Benutzereinstellung in [**LocalSettings**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData.LocalSettings).
+**Tipp:**  , wenn den Benutzer über die Einstellungen für den Stromsparmodus informieren, wir empfehlen, eine Möglichkeit, die Meldung in der Zukunft zu unterdrücken. Das Kontrollkästchen `dontAskMeAgainBox` im folgenden Beispiel speichert z.B. die Benutzereinstellung in [**LocalSettings**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData.LocalSettings).
 
  
 
-Hier ist ein Beispiel dazu, wie Sie überprüfen, ob der Stromsparmodus in Windows 10 aktiviert ist. In diesem Beispiel wird der Benutzer benachrichtigt, und die Einstellungs-App wird gestartet, um **Einstellungen für Stromsparmodus** anzuzeigen. Mit dem Kontrollkästchen `dontAskAgainSetting` kann der Benutzer die Meldung unterdrücken, wenn er nicht erneut benachrichtigt werden möchte.
+Hier ist ein Beispiel dafür, wie Sie überprüfen, ob der Stromsparmodus in Windows 10 aktiviert ist. In diesem Beispiel wird der Benutzer benachrichtigt, und die Einstellungs-App wird gestartet, um **Einstellungen für Stromsparmodus** anzuzeigen. Mit dem Kontrollkästchen `dontAskAgainSetting` kann der Benutzer die Meldung unterdrücken, wenn er nicht erneut benachrichtigt werden möchte.
 
 ```cs
 using System;

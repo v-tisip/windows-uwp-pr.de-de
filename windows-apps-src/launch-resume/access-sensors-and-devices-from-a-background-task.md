@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, Uwp, Hintergrundaufgabe, für die
 ms.localizationpriority: medium
-ms.openlocfilehash: 13bc8f2558b3e3f15d7329697a41b177777b6e7a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 26b665f68932f7a90127ee99414f984f5d9f2005
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918991"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046779"
 ---
 # <a name="access-sensors-and-devices-from-a-background-task"></a>Zugreifen auf Sensoren und Geräte mittels einer Hintergrundaufgabe
 
@@ -20,7 +20,7 @@ ms.locfileid: "8918991"
 
 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) ermöglicht Ihrer universellen Windows-App, im Hintergrund auf Sensoren und Peripheriegeräte zuzugreifen, selbst dann, wenn die Vordergrund-App angehalten wurde. Je nachdem, wo Ihre App ausgeführt wird, kann sie eine Hintergrundaufgabe zum Synchronisieren von Daten mit Geräten oder zum Überwachen von Sensoren verwenden. Zur Verbesserung der Akkulaufzeit und Sicherstellung der Zustimmung durch den Benutzer unterliegt die Nutzung von [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) den Richtlinien, die in diesem Thema beschrieben werden.
 
-Erstellen Sie zum Zugreifen auf Sensoren oder Peripheriegeräte im Hintergrund eine Hintergrundaufgabe, für die [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) verwendet wird. Ein Beispiel für die Vorgehensweise auf einem PC finden Sie unter [Beispiel für ein benutzerdefiniertes USB-Gerät](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Ein Beispiel für ein Smartphone finden Sie unter [Beispiel für Hintergrundsensoren](http://go.microsoft.com/fwlink/p/?LinkId=393307).
+Erstellen Sie zum Zugreifen auf Sensoren oder Peripheriegeräte im Hintergrund eine Hintergrundaufgabe, für die [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) verwendet wird. Ein Beispiel für die Vorgehensweise auf einem PC finden Sie unter [Beispiel für ein benutzerdefiniertes USB-Gerät](https://go.microsoft.com/fwlink/p/?LinkId=301975 ). Ein Beispiel für ein Smartphone finden Sie unter [Beispiel für Hintergrundsensoren](https://go.microsoft.com/fwlink/p/?LinkId=393307).
 
 > [!Important]
 > **DeviceUseTrigger** kann nicht für In-Process-Hintergrundaufgaben verwendet werden. Die Informationen in diesem Thema gelten nur für Out-of-Process-Hintergrundaufgaben.
@@ -29,11 +29,11 @@ Erstellen Sie zum Zugreifen auf Sensoren oder Peripheriegeräte im Hintergrund e
 
 Wenn Ihre App für den Benutzer nicht mehr sichtbar ist, wird die App von Windows angehalten oder beendet, um Arbeitsspeicher und CPU-Ressourcen freizugeben. Dies ermöglicht anderen Apps die Ausführung im Vordergrund und reduziert den Stromverbrauch. In diesem Fall wären alle laufenden Datenereignisse ohne die Hilfe einer Hintergrundaufgabe verloren. Windows stellt den Trigger für die Hintergrundaufgabe bereit: [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Damit kann Ihre App lange Synchronisierungs- und Überwachungsvorgänge auf Geräten und Sensoren auch dann sicher im Hintergrund ausführen, wenn Ihre App angehalten wurde. Weitere Informationen zum App-Lebenszyklus finden Sie unter [Starten, Fortsetzen und Hintergrundaufgaben](index.md). Weitere Informationen zu Hintergrundaufgaben finden Sie unter [Unterstützen von Apps durch Hintergrundaufgaben](support-your-app-with-background-tasks.md).
 
-**Hinweis:** In einer universellen Windows-app Synchronisieren eines Geräts im Hintergrund erfordert, dass der Benutzer Hintergrund Synchronisierung von Ihrer app genehmigt hat. Das Gerät muss – mit E/A-Aktivierung – auch mit dem PC verbunden oder gekoppelt sein und kann maximal zehn Minuten lang Aktivitäten im Hintergrund ausführen. Weitere Details zur Richtlinienerzwingung sind weiter unten in diesem Thema beschrieben.
+**Hinweis:** In einer universellen Windows-app Synchronisieren eines Geräts im Hintergrund erfordert, dass der Benutzer die Synchronisierung mit Hintergrund über Ihre app genehmigt hat. Das Gerät muss – mit E/A-Aktivierung – auch mit dem PC verbunden oder gekoppelt sein und kann maximal zehn Minuten lang Aktivitäten im Hintergrund ausführen. Weitere Details zur Richtlinienerzwingung sind weiter unten in diesem Thema beschrieben.
 
 ### <a name="limitation-critical-device-operations"></a>Einschränkung: Kritische Gerätevorgänge
 
-Einige kritische Gerätevorgänge (wie etwa zeitaufwändige Firmwareupdates) können mithilfe von [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) nicht durchgeführt werden. Diese Vorgänge können nur auf dem PC und nur von einer privilegierten App durchgeführt werden, für die [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315) verwendet wird. Eine *privilegierte App* ist eine App, die vom Gerätehersteller dafür autorisiert wurde, diese Vorgänge auszuführen. Mithilfe von Metadaten wird angegeben, welche App, falls zutreffend, als privilegierte App für ein Gerät festgelegt wurde. Weitere Informationen finden Sie unter [Gerätesynchronisierung und -update für Microsoft Store-Geräte-Apps](http://go.microsoft.com/fwlink/p/?LinkId=306619).
+Einige kritische Gerätevorgänge (wie etwa zeitaufwändige Firmwareupdates) können mithilfe von [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) nicht durchgeführt werden. Diese Vorgänge können nur auf dem PC und nur von einer privilegierten App durchgeführt werden, für die [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315) verwendet wird. Eine *privilegierte App* ist eine App, die vom Gerätehersteller dafür autorisiert wurde, diese Vorgänge auszuführen. Mithilfe von Metadaten wird angegeben, welche App, falls zutreffend, als privilegierte App für ein Gerät festgelegt wurde. Weitere Informationen finden Sie unter [Gerätesynchronisierung und -update für Microsoft Store-Geräte-Apps](https://go.microsoft.com/fwlink/p/?LinkId=306619).
 
 ## <a name="protocolsapis-supported-in-a-deviceusetrigger-background-task"></a>In einer DeviceUseTrigger-Hintergrundaufgabe unterstützte Protokolle/APIs
 
@@ -81,7 +81,7 @@ Führen Sie diese grundlegenden Schritte aus, um [**DeviceUseTrigger**](https://
 8.  Windows überwacht die Systembedingungen und die Aufgabenlaufzeit und bricht die Aufgabe ggf. ab, falls die erforderlichen Bedingungen nicht mehr erfüllt sind.
 9.  Wenn die Hintergrundaufgabe den aktuellen Status oder den Abschluss des Vorgangs meldet, empfängt die App diese Ereignisse über die Status- und Abschlussereignisse der registrierten Aufgabe.
 
-**Wichtige**  diese wichtigen Punkte berücksichtigen, wenn Sie die [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)verwenden:
+**Wichtige**  die [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)verwenden diese wichtigen Punkte berücksichtigen:
 
 -   Die Möglichkeit, programmgesteuert Hintergrundaufgaben auslösen, mit denen die [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) wurde in Windows8.1 und Windows Phone 8.1 eingeführt.
 
@@ -91,7 +91,7 @@ Führen Sie diese grundlegenden Schritte aus, um [**DeviceUseTrigger**](https://
 
 -   Hintergrundaufgaben, für die [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) verwendet wird, können von Windows ggf. abgebrochen werden, wenn bestimmte Richtlinienanforderungen nicht mehr erfüllt sind, einschließlich einer Maximaldauer für die Hintergrundzeit (Gesamtbetrachtungszeit). Es ist wichtig, diese Richtlinienanforderungen zu berücksichtigen, wenn Sie diese Hintergrundaufgaben zum Interagieren mit Ihrem Peripheriegerät verwenden.
 
-**Tipp:** Laden Sie ein Beispiel, um zu sehen, wie diese Hintergrundaufgaben funktionieren. Ein Beispiel für die Vorgehensweise auf einem PC finden Sie unter [Beispiel für ein benutzerdefiniertes USB-Gerät](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Ein Beispiel für ein Smartphone finden Sie unter [Beispiel für Hintergrundsensoren](http://go.microsoft.com/fwlink/p/?LinkId=393307).
+**Tipp:** Laden Sie ein Beispiel, um zu sehen, wie diese Hintergrundaufgaben funktionieren. Ein Beispiel für die Vorgehensweise auf einem PC finden Sie unter [Beispiel für ein benutzerdefiniertes USB-Gerät](https://go.microsoft.com/fwlink/p/?LinkId=301975 ). Ein Beispiel für ein Smartphone finden Sie unter [Beispiel für Hintergrundsensoren](https://go.microsoft.com/fwlink/p/?LinkId=393307).
  
 ## <a name="frequency-and-foreground-restrictions"></a>Einschränkungen in Bezug auf die Häufigkeit und den Vordergrund
 

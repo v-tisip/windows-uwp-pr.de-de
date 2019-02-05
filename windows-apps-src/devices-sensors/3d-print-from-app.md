@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, Uwp, 3dprinting, 3D-Druck
 ms.localizationpriority: medium
-ms.openlocfilehash: a51312cc9be466c6847ec7f2d98b29da1c8e5c9f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4013341a3e4e44d6ac2df66d58d4114313573d2a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918779"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048267"
 ---
 # <a name="3d-printing-from-your-app"></a>3D-Druck über Ihre App
 
@@ -65,7 +65,7 @@ Laden Sie in der `OnLoadClick`-Methode mit der [**FileOpenPicker**](https://msdn
 An dieser Stelle können Sie eine 3D-Datendatei in den Speicher der App laden. 3D-Geometriedaten können aber in den unterschiedlichsten Formaten vorliegen, und hinsichtlich des 3D-Drucks sind nicht alle effizient. In Windows 10 wird der 3MF-Dateityp (3D Manufacturing Format) für alle 3D-Druckaufgaben verwendet.
 
 > [!NOTE]  
-> Der 3MF-Dateityp unterstützt viele Funktionen, die in dieser Anleitung behandelt werden. Weitere Informationen zu 3MF und den Features des Formats für Hersteller und Verbraucher von 3D-Produkten finden Sie in der [3MF-Spezifikation](http://3mf.io/what-is-3mf/3mf-specification/). Wie Sie diese Features mithilfe von Windows 10-APIs nutzen, finden Sie im Lernprogramm [Generieren ein 3MF-Pakets](https://msdn.microsoft.com/windows/uwp/devices-sensors/generate-3mf).
+> Der 3MF-Dateityp unterstützt viele Funktionen, die in dieser Anleitung behandelt werden. Weitere Informationen zu 3MF und den Features des Formats für Hersteller und Verbraucher von 3D-Produkten finden Sie in der [3MF-Spezifikation](https://3mf.io/what-is-3mf/3mf-specification/). Wie Sie diese Features mithilfe von Windows 10-APIs nutzen, finden Sie im Lernprogramm [Generieren ein 3MF-Pakets](https://msdn.microsoft.com/windows/uwp/devices-sensors/generate-3mf).
 
 Die [3D Builder](https://www.microsoft.com/store/apps/3d-builder/9wzdncrfj3t6)-App Dateien kann gängigste 3D-Formate öffnen und diese als 3MF-Dateien speichern. In diesem Beispiel mit variierendem Dateityp besteht eine sehr einfache Lösung darin, dass 3D Builder-App geöffnet und der Benutzer aufgefordert wird, die importierten Daten als 3MF-Datei zu speichern und anschließend neu zu laden.
 

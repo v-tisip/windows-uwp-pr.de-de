@@ -5,12 +5,12 @@ keywords: Windows10, UWP, Abonnements, Lizenzen, Apps, Add-Ons, In-App-Einkäufe
 ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f46c566712f7f0c2bca45db5a107738c4104e037
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 44553d2a772dcfe3b46ea196d6f6bb7c20fdfec0
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930336"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046686"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>Aktivieren von Abonnements für Add-Ons für Ihre App
 
@@ -27,7 +27,7 @@ Abonnement-Add-Ons für UWP-Apps unterstützen die folgenden Features:
 * Sie können die kostenlose Testversionzeiträume von 1 Woche oder 1Monat zu Ihrem Abonnement hinzufügen.
 * Das Windows SDK [bietet APIs](#code-examples), die Sie in Ihrer App zum Abrufen von Informationen zu verfügbaren Abonnement-Add-Ons für die App und zum aktivieren des Kaufs eines Abonnement-Add-Ons nutzen können. Wir bieten außerdem REST-APIs, die Sie aus Ihren Diensten zum [Verwalten von Abonnements für einen Benutzer](#manage-subscriptions) aufrufen können.
 * Sie können Analyseberichte anzeigen, welche die Anzahl der Abonnementkäufe, der aktiven Abonnenten und der stornierte Abonnements in einem bestimmten Zeitraum anzeigen.
-* Die Kunden können ihr Abonnement auf der Seite [http://account.microsoft.com/services](http://account.microsoft.com/services) ihres Microsoft-Kontos verwalten. Die Kunden können diese Seite verwenden, um alle Abonnements anzeigen, die sie erworben haben, ein Abonnement zu kündigen und die Zahlungsmethode für ihr Abonnement zu ändern.
+* Die Kunden können ihr Abonnement auf der Seite [http://account.microsoft.com/services](https://account.microsoft.com/services) ihres Microsoft-Kontos verwalten. Die Kunden können diese Seite verwenden, um alle Abonnements anzeigen, die sie erworben haben, ein Abonnement zu kündigen und die Zahlungsmethode für ihr Abonnement zu ändern.
 
 ## <a name="steps-to-enable-a-subscription-add-on-for-your-app"></a>Schritte zum Aktivieren von Abonnements für Add-Ons für Ihre App
 
@@ -109,7 +109,7 @@ Nachdem die aktualisierte App im Store verfügbar ist und die Kunden Ihr Abonnem
 
 ## <a name="cancellations"></a>Stornierungen
 
-Die Kunden können die Seite [http://account.microsoft.com/services](http://account.microsoft.com/services) in ihrem Microsoft-Konto verwenden, um alle Abonnements anzuzeigen, die sie erworben haben, um ein Abonnement zu kündigen und um die Zahlungsmethode für ihr Abonnement zu ändern. Wenn ein Kunde ein Abonnement auf dieser Seite storniert, kann er für die Dauer der aktuellen Abrechnungsperiode weiterhin auf das Abonnement zugreifen. Er erhält keine Rückerstattung für einen Teil der aktuellen Abrechnungsperiode. Am Ende der aktuellen Abrechnungsperiode wird das Abonnement deaktiviert.
+Die Kunden können die Seite [http://account.microsoft.com/services](https://account.microsoft.com/services) in ihrem Microsoft-Konto verwenden, um alle Abonnements anzuzeigen, die sie erworben haben, um ein Abonnement zu kündigen und um die Zahlungsmethode für ihr Abonnement zu ändern. Wenn ein Kunde ein Abonnement auf dieser Seite storniert, kann er für die Dauer der aktuellen Abrechnungsperiode weiterhin auf das Abonnement zugreifen. Er erhält keine Rückerstattung für einen Teil der aktuellen Abrechnungsperiode. Am Ende der aktuellen Abrechnungsperiode wird das Abonnement deaktiviert.
 
 Sie können ein Abonnement auch im Auftrag eines Benutzers mithilfe unserer REST-API stornieren, um [Abrechnungszustand eines Abonnements für einen bestimmten Benutzer zu ändern](change-the-billing-state-of-a-subscription-for-a-user.md).
 
@@ -124,7 +124,7 @@ Wir gewähren keine Karenzzeit für die Abonnementabrechnung. Wenn wir die Kredi
 Die folgenden Szenarien werden für die Abonnement-Add-Ons derzeit nicht unterstützt.
 
 * Das Verkaufen von Abonnements direkt an Kunden über den Store wird zu diesem Zeitpunkt nicht unterstützt. Abonnements sind nur für In-App-Käufe von digitalen Produkten verfügbar.
-* Kunden können die Abonnementperioden nicht über die Seite [http://account.microsoft.com/services](http://account.microsoft.com/services) ihres Microsoft-Kontos ändern. Um zu einem anderen abonnementszeitraum zu wechseln, müssen Kunden das aktuelle Abonnement kündigen und ein Abonnement mit einer anderen Abonnementzeitraum in Ihrer app erwerben.
+* Kunden können die Abonnementperioden nicht über die Seite [http://account.microsoft.com/services](https://account.microsoft.com/services) ihres Microsoft-Kontos ändern. Um zu einem anderen abonnementszeitraum zu wechseln, müssen Kunden das aktuelle Abonnement kündigen und dann ein Abonnement mit einem anderen Abonnementzeitraum in Ihrer app erwerben.
 * Das Wechseln von Ebenen wird aktuell nicht für Abonnement-Add-Ons unterstützt (z.B., wenn ein Kunde aus einem einfachen Abonnement in ein Premium-Abonnement mit mehr Features wechseln will).
 * [Verkäufe](../publish/put-apps-and-add-ons-on-sale.md) und [Werbecodes](../publish/generate-promotional-codes.md) für die Abonnement-Add-Ons werden derzeit nicht unterstützt.
 

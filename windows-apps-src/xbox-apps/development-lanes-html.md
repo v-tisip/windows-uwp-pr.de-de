@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: edd40cc4-2604-4bc6-bd81-f671389a70fa
 ms.localizationpriority: medium
-ms.openlocfilehash: 60642016e5924c554534775a6576b61e935eaf1e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 019db8c93b61f84dde400f7be9f98bf82b1466e8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932503"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048577"
 ---
 # <a name="bringing-html-games-to-uwp-on-xbox"></a>Portieren von HTML-Spielen auf die UWP auf Xbox
 Xbox One ist eine hervorragende Plattform für HTML 5-Spiele. HTML 5-Spiele werden auf der [Edge](https://developer.microsoft.com/microsoft-edge/)-Browser-Engine ausgeführt. Edge ist schnell und unterstützt HTML5- und CSS3-Features wie WebGL und Canvas uneingeschränkt.
@@ -20,7 +20,7 @@ Beliebte Spielengines wie [Construct 2](https://www.scirra.com/blog/176/announci
 
 HTML-Spiele sind mit jedem anderen Typ von Spiel vergleichbar. Entwickler können Vollzugriff auf systemeigene APIs wie Controllereingaben, Kinect und vieles mehr erhalten.
 
-Xbox One wird auf der universellen Windows-Plattform ausgeführt. Dies bedeutet, dass wie bei anderen Microsoft-Geräten gehostete Web-Apps unterstützt werden, bei denen es sich um vollständig servergestützte Anwendungen handelt. Weitere Informationen hierzu finden Sie unter [Gehostete Web-Apps](http://microsoftedge.github.io/WebAppsDocs/en-US/win10/HWA.htm).
+Xbox One wird auf der universellen Windows-Plattform ausgeführt. Dies bedeutet, dass wie bei anderen Microsoft-Geräten gehostete Web-Apps unterstützt werden, bei denen es sich um vollständig servergestützte Anwendungen handelt. Weitere Informationen hierzu finden Sie unter [Gehostete Web-Apps](https://microsoftedge.github.io/WebAppsDocs/en-US/win10/HWA.htm).
 
 
 In diesem Video wird ausführlicher auf gepackte Web-Apps und gehostete Web-Apps eingegangen und gezeigt, wie sie erstellt werden.

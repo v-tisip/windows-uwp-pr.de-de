@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f81ab1ef635bf4cfb20c289d6998c242f7aa47fc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 77b8f075e0eac02722c29eddddb6f188575ca18f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929189"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047505"
 ---
 # <a name="set-format-resolution-and-frame-rate-for-mediacapture"></a>Festlegen von Format, Auflösung und Bildfrequenz für „MediaCapture“
 
@@ -21,7 +21,7 @@ In diesem Artikel erfahren Sie, wie Sie die [**IMediaEncodingProperties**](https
 
 Kameraprofile bieten eine erweiterte Möglichkeit zum Ermitteln und Festlegen der Datenstromeigenschaften der Kamera, sie werden jedoch nicht für alle Geräte unterstützt. Weitere Informationen finden Sie unter [Kameraprofile](camera-profiles.md).
 
-Der Code in diesem Artikel wurde aus dem [CameraResolution-Beispiel](http://go.microsoft.com/fwlink/p/?LinkId=624252&clcid=0x409) übernommen und angepasst. Sie können das Beispiel herunterladen, um den verwendeten Code im Kontext anzuzeigen oder das Beispiel als Ausgangspunkt für Ihre eigene App zu verwenden.
+Der Code in diesem Artikel wurde aus dem [CameraResolution-Beispiel](https://go.microsoft.com/fwlink/p/?LinkId=624252&clcid=0x409) übernommen und angepasst. Sie können das Beispiel herunterladen, um den verwendeten Code im Kontext anzuzeigen oder das Beispiel als Ausgangspunkt für Ihre eigene App zu verwenden.
 
 > [!NOTE] 
 > Dieser Artikel baut auf Konzepten und Codebeispielen auf, die unter [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md) erläutert werden. Dort werden die Schritte für die Implementierung einer grundlegenden Foto- und Videoaufnahme beschrieben. Es wird empfohlen, dass Sie sich mit dem grundlegenden Muster für die Medienerfassung in diesem Artikel vertraut machen, bevor Sie in fortgeschrittene Aufnahmeszenarien einsteigen. Bei dem Code in diesem Artikel wird davon ausgegangen, dass Ihre App bereits eine Instanz von MediaCapture aufweist, die ordnungsgemäß initialisiert wurde.

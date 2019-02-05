@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a969c0dfbfd08b5cc29651e2ad295c2bdd60ee0
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: fcbed8400b31616f92f20aa3a64a4dd8603dc7b0
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037012"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047894"
 ---
 # <a name="inking-controls"></a>Steuerelemente für Freihandeingaben
 
@@ -84,7 +84,7 @@ Zum Hinzufügen eines InkCanvas-Steuerelements zu Ihrer App ist nur eine Markupz
 ```
 
 > [!NOTE]
-> Ausführliche Informationen zur Anpassung von „InkCanvas” mit „InkPresenter” finden Sie im Artikel [Zeichen- und Eingabestiftinteraktionen in UWP-Apps](http://windowsstyleguide/input/pen-and-stylus-interactions/).
+> Ausführliche Informationen zur Anpassung von „InkCanvas” mit „InkPresenter” finden Sie im Artikel [Zeichen- und Eingabestiftinteraktionen in UWP-Apps](https://windowsstyleguide/input/pen-and-stylus-interactions/).
 
 Das InkToolbar-Steuerelement muss in Verbindung mit einem InkCanvas-Steuerelement verwendet werden. Zum Einbinden eines InkToolbar-Steuerelements (mit allen integrierten Tools) in Ihre App ist nur eine zusätzliche Markupzeile erforderlich:
 
@@ -170,6 +170,6 @@ Der Radierer verfügt ebenfalls über ein Flyout mit dem Befehl **Freihand volls
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
-- [Zeichen- und Eingabestiftinteraktionen in UWP-Apps](http://windowsstyleguide/input/pen-and-stylus-interactions/)
-- [Erkennen von Freihandstrichen](http://windowsstyleguide/input/convert-ink-to-text/)
-- [Speichern und Abrufen von Freihandstrichen](http://windowsstyleguide/input/save-and-load-ink/)
+- [Zeichen- und Eingabestiftinteraktionen in UWP-Apps](https://windowsstyleguide/input/pen-and-stylus-interactions/)
+- [Erkennen von Freihandstrichen](https://windowsstyleguide/input/convert-ink-to-text/)
+- [Speichern und Abrufen von Freihandstrichen](https://windowsstyleguide/input/save-and-load-ink/)

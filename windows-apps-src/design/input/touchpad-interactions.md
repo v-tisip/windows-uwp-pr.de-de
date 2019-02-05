@@ -8,12 +8,12 @@ keywords: Touchpad, PTP, Touch, Zeiger, Eingabe, Benutzerinteraktion
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8dfc98127133790deba9274ddba7801bea34f9cd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 895bf1ffe4fc79a65fdf452235ee9466e91b7215
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935894"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046706"
 ---
 # <a name="touchpad-design-guidelines"></a>Touchpad-Designrichtlinien
 
@@ -155,15 +155,15 @@ Beachten Sie beim Anpassen des Mauszeigers Folgendes:
 * [Behandeln von Zeigereingaben](handle-pointer-input.md)
 * [Identifizieren von Eingabegeräten](identify-input-devices.md)
 **Beispiele**
-* [Einfaches Eingabebeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Beispiel für Eingabe mit niedriger Latenz](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Beispiel für den Benutzerinteraktionsmodus](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Beispiel für Focus-Visuals](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Einfaches Eingabebeispiel](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Beispiel für Eingabe mit niedriger Latenz](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Beispiel für den Benutzerinteraktionsmodus](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Beispiel für Focus-Visuals](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 **Archivbeispiele**
-* [Eingabe: Beispiel für Gerätefunktionen](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Eingabe: Beispiel für XAML-Benutzereingabeereignisse](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoom](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Eingabe: Gesten und Manipulationen mit GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Eingabe: Beispiel für Gerätefunktionen](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Eingabe: Beispiel für XAML-Benutzereingabeereignisse](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoom](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Eingabe: Gesten und Manipulationen mit GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
  
 
 

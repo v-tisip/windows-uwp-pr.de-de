@@ -6,22 +6,22 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Bezahlung, App-Verkäufe, App-Erlöse, Auszahlung, Store-Gebühr, Auszahlungssperre, Prozentsatz
 ms.localizationpriority: medium
-ms.openlocfilehash: 91289948f2f4745456b9cebe587cf75366a4877b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0d59519e23955b53b32d2178e37e75f195fd54eb
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941157"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044361"
 ---
 # <a name="getting-paid"></a>Bezahlung
-Hier sehen Sie einige wichtige Informationen dazu, wie Sie für Ihre apps, Add-ons und Advertising-Einnahmen.
+Nachfolgend finden Sie wichtige Informationen dazu, wie Sie für Ihre apps, Add-ons und Advertising-Einnahmen.
 
 > [!IMPORTANT]
 > Bevor Sie Geld aus app-Verkäufen im Microsoft Store erhalten können, müssen Sie [Ihr auszahlungskonto einrichten und die erforderlichen Steuerformulare ausfüllen](setting-up-your-payout-account-and-tax-forms.md).
 
 ## <a name="store-fee"></a>Store-Gebühr
 
-Wenn Sie sich [für ein Entwicklerkonto registrieren](http://go.microsoft.com/fwlink/p/?LinkID=615100), akzeptieren Sie die [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). In dieser Vereinbarung ist die Geschäftsbeziehung zwischen Ihnen und Microsoft in Bezug auf den Verkauf von Apps im MicrosoftStore erläutert, einschließlich der Store-Gebühr, die Microsoft für jeden Verkauf erhebt.
+Wenn Sie sich [für ein Entwicklerkonto registrieren](https://go.microsoft.com/fwlink/p/?LinkID=615100), akzeptieren Sie die [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). In dieser Vereinbarung ist die Geschäftsbeziehung zwischen Ihnen und Microsoft in Bezug auf den Verkauf von Apps im MicrosoftStore erläutert, einschließlich der Store-Gebühr, die Microsoft für jeden Verkauf erhebt.
 
 In den meisten Fällen beträgt die Store-Gebühr 30%. Die Gebühren sind in der [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) offiziell definiert. Lesen Sie bei Fragen immer in diesem Dokument nach.
 
@@ -63,7 +63,7 @@ Um Ihre Zahlungen zu sperren, wechseln Sie zu **Kontoeinstellungen**. Setzen Sie
 Nachdem Sie die Auszahlungssperre auf **Ein** festgelegt haben, werden alle Auszahlungen gesperrt, bis Sie den Schieberegler wieder auf **Aus** setzen. Dann werden Sie im nächsten monatlichen Auszahlungszyklus berücksichtigt (vorausgesetzt, der entsprechende Zahlungsschwellenwert wurde erreicht). Wenn Sie zum Beispiel Ihre Auszahlungen gesperrt haben, aber eine Auszahlung im Juni generieren möchten, sollten Sie die Auszahlungssperre noch vor Ende Mai auf **Aus** setzen.
 
 > [!NOTE]
-> Die **auszahlungssperre** Auswahl gilt für **Alle** Umsatzquellen, die über das Windows-Entwickler-Programm im Partner Center (Microsoft Store, Microsoft advertising, Azure Marketplace usw.) bezahlt werden. Es ist nicht möglich, für jede Umsatzquelle eine separate Option für die Auszahlungssperre festzulegen.
+> Die **auszahlungssperre** Auswahl gilt für **Alle** Umsatzquellen, die über das Entwicklerprogramm für Windows im Partner Center (Microsoft Store, Microsoft advertising, Azure Marketplace usw.) bezahlt werden. Es ist nicht möglich, für jede Umsatzquelle eine separate Option für die Auszahlungssperre festzulegen.
 
 
  

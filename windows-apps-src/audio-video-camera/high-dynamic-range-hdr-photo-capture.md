@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: a4c5005885d150fdd4f6a41b3fb2586e2728bbd5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: dde7f966e47aa6c35e3bc4e508eddabf13e313ee
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921884"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045911"
 ---
 # <a name="high-dynamic-range-hdr-and-low-light-photo-capture"></a>HDR-Fotoaufnahmen (High Dynamic Range) und Fotoaufnahmen bei schlechten Lichtverhältnissen
 
@@ -39,7 +39,7 @@ Die folgenden Artikel beziehen sich ebenfalls auf HDR-Aufnahmen:
 > [!NOTE] 
 > Dieser Artikel baut auf Konzepten und Codebeispielen auf, die unter [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md) erläutert werden. Dort werden die Schritte für die Implementierung einer grundlegenden Foto- und Videoaufnahme beschrieben. Wir empfehlen Ihnen, sich mit dem grundlegenden Medienaufnahmemuster in diesem Artikel vertraut zu machen, bevor Sie sich komplexeren Aufnahmeszenarien zuwenden. Der Code in diesem Artikel setzt voraus, dass Ihre App bereits über eine korrekt initialisierte MediaCapture-Instanz verfügt.
 
-Es ist ein universelles Windows-Beispiel verfügbar, das die Verwendung der **AdvancedPhotoCapture**-Klasse veranschaulicht. Sie können dieses Beispiel verwenden, um sich die API im Kontext anzusehen, oder es als Ausgangspunkt für Ihre eigene App nutzen. Weitere Informationen finden Sie im [Beispiel für erweiterte Kameraaufnahmen](http://go.microsoft.com/fwlink/?LinkID=620517).
+Es ist ein universelles Windows-Beispiel verfügbar, das die Verwendung der **AdvancedPhotoCapture**-Klasse veranschaulicht. Sie können dieses Beispiel verwenden, um sich die API im Kontext anzusehen, oder es als Ausgangspunkt für Ihre eigene App nutzen. Weitere Informationen finden Sie im [Beispiel für erweiterte Kameraaufnahmen](https://go.microsoft.com/fwlink/?LinkID=620517).
 
 ## <a name="advanced-photo-capture-namespaces"></a>Namespaces für erweiterte Fotoaufnahmen
 

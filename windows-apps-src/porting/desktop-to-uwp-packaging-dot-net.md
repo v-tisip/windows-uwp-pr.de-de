@@ -1,22 +1,22 @@
 ---
 Description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop application.
 Search.Product: eADQiWindows 10XVcnh
-title: Verpacken Sie eine desktop-Anwendung mit Visual Studio
+title: Verpacken einer desktop-Anwendungs mit Visual Studio
 ms.date: 08/30/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e4d39690223d01a6ac553d33357c7714b2f0dca
-ms.sourcegitcommit: 8db07db70d7630f322e274ab80dfa09980fc8d52
+ms.openlocfilehash: 04a16b5e824621b0e7f32c8cb012db326f591d48
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "9014725"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048257"
 ---
-# <a name="package-a-desktop-application-by-using-visual-studio"></a>Verpacken Sie eine desktop-Anwendung mit Visual Studio
+# <a name="package-a-desktop-application-by-using-visual-studio"></a>Verpacken einer desktop-Anwendungs mit Visual Studio
 
-Sie können Visual Studio verwenden, um ein Paket für Ihre Desktop-App zu generieren. Anschließend können Sie veröffentlichen, die auf den Microsoft Store oder das querladen es auf einem oder mehreren PCs verpacken.
+Sie können Visual Studio verwenden, um ein Paket für Ihre Desktop-App zu generieren. Anschließend können Sie veröffentlichen, die auf den Microsoft Store oder querladen es auf einem oder mehreren PCs verpacken.
 
 Die aktuelle Version von Visual Studio bietet ein neue Version des Paketprojekts, um manuelle Schritte zu eliminieren, die beim Verpacken Ihrer App erforderlich sind. Sie müssen nur Ihr Paketprojekt hinzufügen, auf das Desktopprojekt verweisen und F5 drücken, um Ihre App zu debuggen. Es sind keine manuellen Optimierungsmethoden mehr erforderlich. Das neue optimierte Design ist eine enorme Verbesserung über die Benutzeroberfläche, die in der vorherigen Version von Visual Studio verfügbar war.
 
@@ -58,7 +58,7 @@ Lesen Sie dieses Handbuch, bevor Sie mit der paketerstellung für Ihre Anwendung
 
    ![Als Einstiegspunkt festlegen](images/desktop-to-uwp/entry-point-set.png)
 
-6. Erstellen Sie das Paketprojekt, um sicherzustellen, dass keine Fehler angezeigt werden.  Wenn Sie Fehler zu erhalten, öffnen Sie den **Konfigurations-Manager** und stellen, dass sicher Plattform Ihre Projekte dieselbe.
+6. Erstellen Sie das Paketprojekt, um sicherzustellen, dass keine Fehler angezeigt werden.  Wenn Fehler auftreten, öffnen Sie den **Konfigurations-Manager** , und stellen Sie sicher, dass Ihre Projekte die gleichen Zielplattform.
 
    ![Konfigurations-manager](images/desktop-to-uwp/config-manager.png)
 
@@ -75,7 +75,7 @@ Lesen Sie dieses Handbuch, bevor Sie mit der paketerstellung für Ihre Anwendung
 
 **Finden Sie Antworten auf Ihre Fragen**
 
-Haben Sie Fragen? Fragen Sie uns auf Stack Overflow. Unser Team überwacht diese [Tags](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Fragen Sie uns [hier](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+Haben Sie Fragen? Fragen Sie uns auf Stack Overflow. Unser Team überwacht diese [Tags](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Fragen Sie uns [hier](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
 **Geben Sie Feedback oder Verbesserungsvorschläge**
 

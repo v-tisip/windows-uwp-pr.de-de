@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 970fbcef984f28e779ea7c133de95f7f7f99be8d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fdeb3f18e6500cc0a907e725f34c0eb96d33876e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923523"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045931"
 ---
 # <a name="detect-faces-in-images-or-videos"></a>Erkennen von Gesichtern in Bildern oder Videos
 
@@ -23,7 +23,7 @@ In diesem Thema erfahren Sie, wie mit dem [**FaceDetector**](https://msdn.micros
 
 Ein alternatives Verfahren der Gesichtsverfolgung mit dem [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776) finden Sie unter [Szenenanalyse für die Medienaufnahme](scene-analysis-for-media-capture.md).
 
-Der Code in diesem Artikel wurde aus den Beispielen [Basic Face Detection](http://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409) und [Basic Face Tracking](http://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409) übernommen und angepasst. Sie können diese Beispiele herunterladen, um den verwendeten Code im Kontext anzuzeigen oder das Beispiel als Ausgangspunkt für Ihre eigene App zu verwenden.
+Der Code in diesem Artikel wurde aus den Beispielen [Basic Face Detection](https://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409) und [Basic Face Tracking](https://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409) übernommen und angepasst. Sie können diese Beispiele herunterladen, um den verwendeten Code im Kontext anzuzeigen oder das Beispiel als Ausgangspunkt für Ihre eigene App zu verwenden.
 
 ## <a name="detect-faces-in-a-single-image"></a>Erkennen von Gesichtern in einem einzelnen Bild
 
@@ -98,8 +98,8 @@ Rufen Sie [**ProcessNextFrameAsync**](https://msdn.microsoft.com/library/windows
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Szenenanalyse für die Medienaufnahme](scene-analysis-for-media-capture.md)
-* [Beispiel „Basic Face Detection“](http://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409)
-* [Beispiel „Basic Face Tracking“](http://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409)
+* [Beispiel „Basic Face Detection“](https://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409)
+* [Beispiel „Basic Face Tracking“](https://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409)
 * [Kamera](camera.md)
 * [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [Medienwiedergabe](media-playback.md)

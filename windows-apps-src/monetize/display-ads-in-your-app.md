@@ -6,16 +6,16 @@ ms.date: 06/20/2018
 ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, banner, Anzeigensteuerelement,Interstitial
 ms.localizationpriority: medium
-ms.openlocfilehash: baf26335ccdf34c8403cc15ecc1e68527d92e90e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 84ed7f5f1eb65f06a47e92de962777ca9d3c50c7
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941427"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044854"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Zeigt Werbung mithilfe der Microsoft Advertising-SDK in Ihrer App an
 
-Erhöhen Sie Ihre Umsatzchancen, indem Sie mithilfe des Microsoft Advertising-SDKs Anzeigen in Ihre universelle Windows-Plattform-App für Windows 10 einfügen. Unsere anzeigen-monetarisierungsplattform bietet eine Vielzahl von Ad-Formate, die problemlos in Ihre apps und unterstützt die anzeigenvermittlung mit unterschiedlichen beliebten Anzeigennetzwerken integriert werden können. Unsere Plattform ist kompatibel mit OpenRTB, große 2.x, MRAID 2 und 3 VPAID Standards und ist kompatibel mit MOAT und IAS. 
+Erhöhen Sie Ihre Umsatzchancen, indem Sie mithilfe des Microsoft Advertising-SDKs Anzeigen in Ihre universelle Windows-Plattform-App für Windows 10 einfügen. Unsere anzeigen-monetarisierungsplattform bietet eine Vielzahl von Ad-Formate, die nahtlos in Ihre apps und unterstützt die anzeigenvermittlung mit unterschiedlichen beliebten Anzeigennetzwerken integriert werden kann. Unsere Plattform ist kompatibel mit der OpenRTB, große 2.x, MRAID 2 und 3 VPAID Standards und ist kompatibel mit MOAT und IAS. 
 
 <br/>
 
@@ -32,7 +32,7 @@ Erhöhen Sie Ihre Umsatzchancen, indem Sie mithilfe des Microsoft Advertising-SD
 <tr>
 <td align="left"><img src="images/install-sdk.png" alt="Install SDK icon" /></td>
 <td align="left"><b>Erste Schritte</b><br/><br/>
-    <a href="http://aka.ms/ads-sdk-uwp">Installieren des Microsoft Advertising-SDK</a>
+    <a href="https://aka.ms/ads-sdk-uwp">Installieren des Microsoft Advertising-SDK</a>
 </td>
 <td align="left"><img src="images/write-code.png" alt="Develop icon" /></td>
 <td align="left"><b>Entwicklerhandbuch</b><br/><br/>
@@ -56,7 +56,7 @@ Erhöhen Sie Ihre Umsatzchancen, indem Sie mithilfe des Microsoft Advertising-SD
 
 ## <a name="step-1-install-the-microsoft-advertising-sdk"></a>Schritt 1: Installieren des Microsoft Advertising-SDK
 
-Installieren Sie zunächst die [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) auf dem Entwicklungscomputer, den Sie verwenden, um Ihre App zu entwickeln. Installationsanweisungen finden Sie in [diesem Artikel](install-the-microsoft-advertising-libraries.md).
+Installieren Sie zunächst die [Microsoft Advertising-SDK](https://aka.ms/ads-sdk-uwp) auf dem Entwicklungscomputer, den Sie verwenden, um Ihre App zu entwickeln. Installationsanweisungen finden Sie in [diesem Artikel](install-the-microsoft-advertising-libraries.md).
 
 ## <a name="step-2-implement-ads-in-your-app"></a>Schritt 2: Implementieren von Werbung in Ihrer App
 
@@ -100,7 +100,7 @@ Zum Starten der Anzeigenvermittlung in Ihrer UWP-App [Konfigurieren Sie die Anze
 
 Nach Abschluss der Entwicklung Ihrer Apps mit anzeigen, können Sie [die aktualisierte app übermitteln](https://docs.microsoft.com/windows/uwp/publish/app-submissions) , im Partner Center im Store verfügbar machen. Apps, die Anzeigen darstellen, müssen zusätzlich die Anforderungen erfüllen, die in [Abschnitt 10.10 der Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) [Anlage E der Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) angegeben sind.
 
-Nachdem Ihre app im Store veröffentlicht und ist, können Sie überprüfen Sie Ihre [Berichte zur anzeigenleistung](../publish/advertising-performance-report.md) im Partner Center und weiterhin Änderungen an den für die anzeigenvermittlung zur Optimierung der Leistung Ihrer anzeigen vornehmen. Der Umsatz befindet sich in der [Auszahlungszusammenfassung](../publish/payout-summary.md).
+Nachdem Ihre app im Store veröffentlicht und verfügbar ist, können Sie Ihre [Berichte zur anzeigenleistung](../publish/advertising-performance-report.md) im Partner Center überprüfen und Änderungen an den für die anzeigenvermittlung zur Optimierung der Leistung Ihrer anzeigen vornehmen. Der Umsatz befindet sich in der [Auszahlungszusammenfassung](../publish/payout-summary.md).
 
 <span id="additional-help" />
 
@@ -111,16 +111,16 @@ Weitere Hilfe zum Microsoft Advertising-SDK finden Sie in den folgenden Ressourc
 |  Aufgabe    | Ressource |               
 |----------|-------|
 | Melden eines Fehlers und Supportunterstützung für Werbung     | Besuchen Sie die [Supportseite](https://developer.microsoft.com/en-us/windows/support), und wählen Sie **Werbung in Apps**.        |
-| Community-Support erhalten     | Besuchen Sie das [Forum](http://go.microsoft.com/fwlink/p/?LinkId=401266).       |
-| Laden Sie Beispielprojekte herunter, die veranschaulichen, wie Sie Banner und Interstitialwerbung zu Apps hinzufügen.     | Weitere Informationen finden Sie unter [Anzeigenbeispiele bei GitHub](http://aka.ms/githubads).       |
+| Community-Support erhalten     | Besuchen Sie das [Forum](https://go.microsoft.com/fwlink/p/?LinkId=401266).       |
+| Laden Sie Beispielprojekte herunter, die veranschaulichen, wie Sie Banner und Interstitialwerbung zu Apps hinzufügen.     | Weitere Informationen finden Sie unter [Anzeigenbeispiele bei GitHub](https://aka.ms/githubads).       |
 | Weitere Informationen zu den neuesten Umsatzchancen für Windows-Apps     | Besuchen Sie Seite [Monetarisierung Ihrer Apps](https://developer.microsoft.com/store/monetize).        |
 
 ## <a name="windows-81-and-windows-phone-8x-apps"></a>Windows 8.1 und Windows Phone 8.x-Apps
 
-Für Apps für Windows8.1 und Windows Phone8.x bieten wir das [Microsoft Advertising-SDK for Windows and Windows Phone 8.x](http://aka.ms/store-8-sdk). Weitere Informationen zur Verwendung des SDKs für Anzeigen in einer Windows8.1- oder Windows Phone8.x-App finden Sie in [diesem Artikel](https://docs.microsoft.com/en-us/previous-versions/windows/apps/dn792120(v=win.10)).
+Für Apps für Windows8.1 und Windows Phone8.x bieten wir das [Microsoft Advertising-SDK for Windows and Windows Phone 8.x](https://aka.ms/store-8-sdk). Weitere Informationen zur Verwendung des SDKs für Anzeigen in einer Windows8.1- oder Windows Phone8.x-App finden Sie in [diesem Artikel](https://docs.microsoft.com/en-us/previous-versions/windows/apps/dn792120(v=win.10)).
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [MicrosoftAdvertising-SDK](http://aka.ms/ads-sdk-uwp)
+* [MicrosoftAdvertising-SDK](https://aka.ms/ads-sdk-uwp)
 * [Bericht zur Anzeigenleistung](../publish/advertising-performance-report.md)
 * [Programm für Herausgeber von Windows Premium-Anzeigen](windows-premium-ads-publishers-program.md)

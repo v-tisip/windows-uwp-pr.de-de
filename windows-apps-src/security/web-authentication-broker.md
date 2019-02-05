@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
-ms.openlocfilehash: 8781cbffcb8d5c433c58865fba38cd65369b5c49
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 473b7ef9f4efacbbe78e1fdb5563695f8211bca8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930075"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050903"
 ---
 # <a name="web-authentication-broker"></a>Webauthentifizierungsbroker
 
@@ -21,7 +21,7 @@ ms.locfileid: "8930075"
 In diesem Artikel wird erläutert, wie Ihre App für die universelle Windows-Plattform (UWP) eine Verbindung mit einem Onlineidentitätsanbieter herstellen kann, der Authentifizierungsprotokolle wie OpenID oder OAuth verwendet, z. B. Twitter, Facebook, Flickr, Instagram usw. Die [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066)-Methode sendet eine Anforderung an den Onlineidentitätsanbieter und erhält als Antwort ein Zugriffstoken, das die für die App zugänglichen Anbieterressourcen beschreibt.
 
 >[!NOTE]
->Um ein vollständiges, funktionsfähiges Codebeispiel zu erhalten, klonen Sie [WebAuthenticationBroker-Repository auf GitHub](http://go.microsoft.com/fwlink/p/?LinkId=620622).
+>Um ein vollständiges, funktionsfähiges Codebeispiel zu erhalten, klonen Sie [WebAuthenticationBroker-Repository auf GitHub](https://go.microsoft.com/fwlink/p/?LinkId=620622).
 
  
 
@@ -87,7 +87,7 @@ catch (Exception ex)
 ```
 
 >[!WARNING]
->Zusätzlich zu [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) enthält der [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044)-Namespace eine [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425)-Methode. Rufen Sie diese Methode nicht auf. Es ist für apps, die Windows Phone 8.1 ausgerichtet vorgesehen und ab Windows 10 veraltet.
+>Zusätzlich zu [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) enthält der [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044)-Namespace eine [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425)-Methode. Rufen Sie diese Methode nicht auf. Sie ist für apps für Windows Phone 8.1 nur und ab Windows 10 veraltet.
 
 ## <a name="connecting-with-single-sign-on-sso"></a>Herstellen einer Verbindung mit einmaligen Anmelden (Single Sign-On, SSO).
 

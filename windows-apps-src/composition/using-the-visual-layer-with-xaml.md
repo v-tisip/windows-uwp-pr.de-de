@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: ae9bc0f6d53181a88b02ecda19b3aed745febe40
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 66b61b9db88392c7ca7370f06fb2150deba7c8c3
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921707"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047535"
 ---
 # <a name="using-the-visual-layer-with-xaml"></a>Benutzung des Visual Layer mit XAML
 
@@ -283,7 +283,7 @@ void MainPage::InitializeDropShadow(Windows::UI::Xaml::UIElement^ shadowHost, Wi
 
 ### <a name="frosted-glass"></a>Milchglas
 
-Erstellen Sie einen Effekt, der den Inhalt verwischt und den Hintergrund färbt. Beachten Sie, dass Entwickler das Win2D NuGet-Paket installieren müssen, um Effekte verwenden. Sie finden unter der [Win2D Homepage](http://microsoft.github.io/Win2D/html/Introduction.htm) Installationsanweisungen.
+Erstellen Sie einen Effekt, der den Inhalt verwischt und den Hintergrund färbt. Beachten Sie, dass Entwickler das Win2D NuGet-Paket installieren müssen, um Effekte verwenden. Sie finden unter der [Win2D Homepage](https://microsoft.github.io/Win2D/html/Introduction.htm) Installationsanweisungen.
 
 #### <a name="implementation-overview"></a>Übersicht über die Implementierung
 

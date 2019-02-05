@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 keywords: uwp, in-app-käufe, IAPs, add-ons, testversionen, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 72f5875721d17bda79842989c1ac22475a06e938
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 96260b0fb2aa0818dd6df52f88bd0c63d56c35b7
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946125"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046979"
 ---
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>In-App-Käufe und Testversionen mit dem Windows.ApplicationModel.Store-Namespace
 
@@ -20,7 +20,7 @@ Sie können Mitglieder des [Windows.ApplicationModel.Store](https://msdn.microso
 Die Artikel in diesem Abschnitt enthalten ausführliche Anleitungen und Codebeispiele für die Verwendung der Mitgliedern des **Windows.ApplicationModel.Store**-Namespace für verschiedene häufige Szenarien. Eine Übersicht über die Basiskonzepte im Zusammenhang mit In-App-Käufen in UWP-Apps finden Sie unter [In-App-Käufe und Testversionen](in-app-purchases-and-trials.md). Ein vollständiges Beispiel, das zeigt, wie Sie Testversionen und In-App-Käufe mithilfe des **Windows.ApplicationModel.Store**-Namespace implementieren, finden Sie im [Store-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store).
 
 > [!IMPORTANT]
-> Der **Windows.ApplicationModel.Store**-Namespace wird nicht mehr mit neuen Funktionen aktualisiert. Wenn Ihr Projekt **Windows 10 Anniversary Edition (10.0; Build 14393)** oder eine höhere Version in Visual Studio verwendet (d. h. Sie verwenden Windows10, Version 1607 oder höher), wird stattdessen die Verwendung des [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace empfohlen. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen](https://msdn.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials). Der **Windows.ApplicationModel.Store** -Namespace wird nicht unterstützt, in der Windows-desktopanwendungen, die die [Desktop-Brücke](https://developer.microsoft.com/windows/bridges/desktop) verwenden oder in apps oder Spiele, die eine Sandbox-Entwicklung in Partner Center verwenden (z. B. Dies ist der Fall für alle, die von Spielen integriert mit Xbox Live). Diese Produkte müssen zum Implementieren von In-App-Käufen und Testversionen den **Windows.Services.Store**-Namespace verwenden.
+> Der **Windows.ApplicationModel.Store**-Namespace wird nicht mehr mit neuen Funktionen aktualisiert. Wenn Ihr Projekt **Windows 10 Anniversary Edition (10.0; Build 14393)** oder eine höhere Version in Visual Studio verwendet (d. h. Sie verwenden Windows10, Version 1607 oder höher), wird stattdessen die Verwendung des [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace empfohlen. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen](https://msdn.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials). Der **Windows.ApplicationModel.Store** -Namespace wird nicht unterstützt, in der Windows-desktopanwendungen, die die [Desktop-Brücke](https://developer.microsoft.com/windows/bridges/desktop) verwenden oder in apps oder Spiele, die eine Sandbox-Entwicklung im Partner Center verwenden (z. B. Dies ist der Fall für alle, die von Spielen integriert mit Xbox Live). Diese Produkte müssen zum Implementieren von In-App-Käufen und Testversionen den **Windows.Services.Store**-Namespace verwenden.
 
 ## <a name="get-started-with-the-currentapp-and-currentappsimulator-classes"></a>Erste Schrittemit den Klassen CurrentApp und CurrentAppSimulator
 
@@ -155,7 +155,7 @@ In diesem Abschnitt wird die XSD-Datei aufgelistet, die die Struktur der Windows
 5. Wechseln Sie zur WindowsStoreProxy.xml-Datei in Visual Studio.
 6. Klicken Sie im Menü **XML** auf **Schemas**, und suchen Sie die Zeile in der Liste für die WindowsStoreProxy.xsd-Datei. Wenn der Speicherort der Datei nicht der gewünschte ist (wenn beispielsweise die temporäre Datei weiterhin angezeigt wird), klicken Sie auf **Hinzufügen**. Navigieren Sie zur richtigen Datei, und klicken Sie dann auf **OK**. Nun sollte Ihnen diese Datei in der Liste angezeigt werden. Stellen Sie sicher, dass in der Spalte **Verwenden** für dieses Schema ein Häkchen angezeigt wird.
 
-Anschließend unterliegen Ihre Bearbeitungen der WindowsStoreProxy.xml-Datei dem Schema. Weitere Informationen finden Sie unter [So wählen Sie die zu verwendenden XML-Schemas aus](http://go.microsoft.com/fwlink/p/?LinkId=403014).
+Anschließend unterliegen Ihre Bearbeitungen der WindowsStoreProxy.xml-Datei dem Schema. Weitere Informationen finden Sie unter [So wählen Sie die zu verwendenden XML-Schemas aus](https://go.microsoft.com/fwlink/p/?LinkId=403014).
 
 > [!div class="tabbedCodeSnippets"]
 ```xml
@@ -441,7 +441,7 @@ Dieses Element stellt Informationen zum Add-On für ein bestimmtes Land oder ein
 |  **Price**  |    Ja  |  1   |     Der Preis des Add-Ons in diesem Land/dieser Region.        |
 |  **CurrencySymbol**  |    Ja  |  1   |     Das Währungssymbol, das in diesem Land/dieser Region verwendet wird.        |
 |  **CurrencyCode**  |    Nein  |  0 oder 1      |      Der Währungscode, der in diesem Land/dieser Region verwendet wird.         |  
-|  **Description**  |    Nein  |   0 oder 1   |      Die Beschreibung des Add-Ons für dieses Land/diese Region.       |
+|  **Description**  |    No  |   0 oder 1   |      Die Beschreibung des Add-Ons für dieses Land/diese Region.       |
 |  **Tag**  |    Nein  |   0 oder 1   |      Die [benutzerdefinierten Daten](../publish/enter-add-on-properties.md#custom-developer-data) (auch als „Tag“ bezeichnet) für das Add-On.       |
 |  **Keywords**  |    Nein  |   0 oder 1   |      Enthält bis zu 10 **Keyword**-Elemente, die die [Schlüsselwörter](../publish/enter-add-on-properties.md#keywords) für das Add-On enthalten.       |
 |  **ImageUri**  |    Nein  |   0 oder 1   |      Der [URI für das Bild](../publish/create-add-on-store-listings.md#icon) im Add-On-Eintrag.           |  |

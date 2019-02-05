@@ -6,12 +6,12 @@ ms.date: 02/12/2017
 ms.topic: article
 keywords: Windows 10, Uwp, geräteportal
 ms.localizationpriority: medium
-ms.openlocfilehash: 0930e970af943329cac60d02a4bfe5986c21757a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 42077756beff4269cc91624502fb9958c580bbc0
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932669"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047272"
 ---
 # <a name="device-portal-for-xbox"></a>Device Portal für Xbox
 
@@ -165,7 +165,7 @@ Um diese Einstellungen zu ändern, muss ein Kinect-Sensor an die Konsole angesch
 
 * **Im Leerlauf ausschalten nach**: Das Gerät schaltet sich nach dieser Zeit im Leerlauf ab.
 
-* **Energiesparmodus**: Der Energiesparmodus des Gerätes. Weitere Informationen finden Sie unter [Informationen zum Energiesparmodus und schnellen Hochfahren](http://support.xbox.com/xbox-one/console/learn-about-power-modes).
+* **Energiesparmodus**: Der Energiesparmodus des Gerätes. Weitere Informationen finden Sie unter [Informationen zum Energiesparmodus und schnellen Hochfahren](https://support.xbox.com/xbox-one/console/learn-about-power-modes).
 
 * **Automatisches Booten der Konsole beim Anschluss an das Stromnetz**: Das Gerät schaltet sich automatisch ein, wenn es an eine Stromquelle angeschlossen ist.
 
@@ -195,7 +195,7 @@ Dies ist ein leerer Arbeitsbereich, den Sie nach Belieben anpassen können. Sie 
 
 ### <a name="game-event-data"></a>Spiel Ereignisdaten
 
-Auf der Seite **Spiel Ereignisdaten** können Sie eine Echtzeit-Diagramm dieses Streams in die Anzahl der Event Tracing for Windows (ETW) Spiel Ereignisse, die derzeit auf Ihrer Xbox One aufgezeichnet anzeigen. Wenn Spiel Ereignisse, die aufgezeichnet, auf dem System vorhanden sind, können Sie auch Details (Ereignisnamen, Ereignis vorkommen und den Titel des Spiels) anzeigen, die beschreiben jedes Ereignis in einer Tabelle unter der Diagramm-Daten. In der Tabelle ist nur verfügbar, wenn aufgezeichnete Ereignisse vorhanden sind.
+Auf der Seite **Spiel Ereignisdaten** können Sie ein Diagramm in Echtzeit, Streams der Anzahl der derzeit auf Ihrer Xbox One aufgezeichnete Ereignisse der Event Tracing for Windows (ETW)-Spiel anzeigen. Wenn game-Ereignisse auf dem System vorhanden sind, können Sie auch Details (Ereignisnamen, Ereignis vorkommen und den Titel des Spiels) anzeigen, die jedes Ereignis in einer Tabelle unter der Diagramm-Daten beschreiben. In der Tabelle ist nur verfügbar, wenn Ereignisse aufgezeichnet vorhanden sind.
 
 ![Spiel Ereignisdaten](images/device-portal-xbox-22.PNG)
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b360425755a7dc2249a284d9f68761ce3c783ef
-ms.sourcegitcommit: 92ce837841ae8f16d203e919dbf5c4436bee56e5
+ms.openlocfilehash: da1dc2ab7444bf65074d9c7ccc615aaee07fdcff
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "9015255"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9046353"
 ---
 # <a name="audio-graphs"></a>Audiodiagramme
 
@@ -32,7 +32,7 @@ Nachdem alle Knoten erstellt und die Verbindungen zwischen ihnen eingerichtet wu
 Weitere Szenarien werden durch das Hinzufügen von Audioeffekten zum Audiodiagramm ermöglicht. Jeder Knoten in einem Audiodiagramm kann mit null oder mehr Audioeffekten gefüllt werden, die die Audioverarbeitung für die Audiodaten durchführen, die den Knoten durchlaufen. Es gibt verschiedene integrierte Effekte wie Echo, Equalizer, Begrenzungen und Halleffekt, die mit nur wenigen Codezeilen an einen Audioknoten angefügt werden können. Sie können auch eigene benutzerdefinierte Audioeffekte erstellen, die genau wie die integrierten Effekte funktionieren.
 
 > [!NOTE]
-> Im [UWP-Beispiel für AudioGraph](http://go.microsoft.com/fwlink/?LinkId=619481) wird der in dieser Übersicht erläuterte Code implementiert. Sie können das Beispiel herunterladen, um den Code im Kontext anzuzeigen oder ihn als Ausgangspunkt für Ihre eigene App zu verwenden.
+> Im [UWP-Beispiel für AudioGraph](https://go.microsoft.com/fwlink/?LinkId=619481) wird der in dieser Übersicht erläuterte Code implementiert. Sie können das Beispiel herunterladen, um den Code im Kontext anzuzeigen oder ihn als Ausgangspunkt für Ihre eigene App zu verwenden.
 
 ## <a name="choosing-windows-runtime-audiograph-or-xaudio2"></a>Auswählen von Windows-Runtime-AudioGraph oder -XAudio2
 
@@ -80,7 +80,7 @@ Eine Geräteingabeknoten liefert Audiodaten von einem an das System angeschlosse
 
 [!code-cs[CreateDeviceInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateDeviceInputNode)]
 
-Wenn Sie ein spezielles Audioaufnahmegerät für den geräteeingabeknoten festlegen möchten, können Sie die [**Windows.Devices.Enumeration.DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) -Klasse verwenden, um eine Liste mit dem System verfügbaren audioaufnahmegeräte abzurufen, durch Aufrufen von [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) und übergeben Sie die Audiowiedergabe Rendern von [**Windows.Media.Devices.MediaDevice.GetAudioCaptureSelector**](https://docs.microsoft.com/uwp/api/windows.media.devices.mediadevice.getaudiocaptureselector)zurückgegebene Geräteauswahl. Sie können eines der zurückgegebenen **DeviceInformation**-Objekte programmgesteuert auswählen oder Benutzeroberfläche anzeigen, damit der Benutzer ein Gerät auswählen und dieses dann an die [**CreateDeviceInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914218)-Methode übergeben kann.
+Wenn Sie ein spezielles Audioaufnahmegerät für den geräteeingabeknoten festlegen möchten, können die [**Windows.Devices.Enumeration.DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) -Klasse eine Liste mit dem System verfügbaren audioaufnahmegeräte abzurufen, durch Aufrufen von [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) und übergeben die Audiowiedergabe Rendern von [**Windows.Media.Devices.MediaDevice.GetAudioCaptureSelector**](https://docs.microsoft.com/uwp/api/windows.media.devices.mediadevice.getaudiocaptureselector)zurückgegebene Geräteauswahl. Sie können eines der zurückgegebenen **DeviceInformation**-Objekte programmgesteuert auswählen oder Benutzeroberfläche anzeigen, damit der Benutzer ein Gerät auswählen und dieses dann an die [**CreateDeviceInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914218)-Methode übergeben kann.
 
 [!code-cs[EnumerateAudioCaptureDevices](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetEnumerateAudioCaptureDevices)]
 

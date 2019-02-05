@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e38b57deb7101dcf0476bd3d952fc01ffd605db
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 58e9ab90115566059fb79220b7b8c0b9c5ce677e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942212"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047967"
 ---
 # <a name="developing-inclusive-windows-apps"></a>Entwickeln von inklusiven Windows-Apps  
 
@@ -82,7 +82,7 @@ Weitere Details finden Sie im vollständigen Thema [Prüfliste für die Barriere
 
 ## <a name="related-topics"></a>Verwandte Themen  
 * [Entwerfen von barrierefreier Software](designing-inclusive-software.md)  
-* [Inklusives Design](http://design.microsoft.com/inclusive)
+* [Inklusives Design](https://design.microsoft.com/inclusive)
 * [Nicht empfehlenswerte Praktiken für die Barrierefreiheit](practices-to-avoid.md)
 * [Entwickeln von barrierefreier Software](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Microsoft-Hub für die barrierefreie Entwicklung](https://msdn.microsoft.com/enable)

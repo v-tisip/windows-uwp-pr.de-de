@@ -6,12 +6,12 @@ ms.date: 04/18/2017
 ms.topic: article
 keywords: Windows10, Uwp, Metadaten, Marker, Spracherkennung, Kapitel
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f461bb70c1319352c66b8d12775dc7fa1db0edf
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2b3753e92524e300252930f48433f91e175353c9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921624"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9046107"
 ---
 # <a name="system-supported-timed-metadata-cues"></a>Vom System unterstützte, zeitbasierte Metadaten-Marker
 Dieser Artikel beschreibt, wie verschiedene Formate zeitbasierter Metadaten genutzt werden, die in Mediendateien oder -streams eingebettet sein können. UWP-Apps können Ereignisse registrieren, die von der Medienpipeline während der Wiedergabe ausgelöst werden, wenn diese Metadaten-Marker erkannt werden. Mithilfe der [**DataCue**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.DataCue)-Klasse können Apps eigene, benutzerdefinierte Metadaten-Marker implementieren; dieser Artikel behandelt mehrere Metadatenstandards, die von der Medienpipeline automatisch erkannt werden, z. B.:
@@ -148,7 +148,7 @@ Rufen Sie in der **RegisterMetadataHandlerForID3Cues**-Hilfsmethode eine Instanz
 
 [!code-cs[RegisterMetadataHandlerForID3Cues](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetRegisterMetadataHandlerForID3Cues)]
 
-Im Handler für das **CueEntered**-Ereignis übertragen Sie die in der **Cues**-Eigenschaft des [**MediaCueEventArgs**](https://docs.microsoft.com/uwp/api/windows.media.core.mediacueeventargs) enthaltenen Datenmarker auf einen [**DataCue**](https://docs.microsoft.com/uwp/api/windows.media.core.datacue).  Stellen Sie sicher, dass die Eigenschaften **DataCue** und [**Data**](https://docs.microsoft.com/uwp/api/windows.media.core.datacue.Data) des Markers nicht „Null” lauten. Erweiterte EWU-Kommentare werden im Transportstream als unformatierte Bytes bereitgestellt (siehe [http://id3.org/id3v2.4.0-structure](http://id3.org/id3v2.4.0-structure)). Erstellen Sie zum Lesen der Markerdaten einen neuen **DataReader** durch den Aufruf [**DataReader.FromBuffer**](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader.FromBuffer).  In diesem Beispiel werden die Kopfzeilenwerte des ID3-Tags aus den Markerdaten gelesen und in die Debugausgabe geschrieben.
+Im Handler für das **CueEntered**-Ereignis übertragen Sie die in der **Cues**-Eigenschaft des [**MediaCueEventArgs**](https://docs.microsoft.com/uwp/api/windows.media.core.mediacueeventargs) enthaltenen Datenmarker auf einen [**DataCue**](https://docs.microsoft.com/uwp/api/windows.media.core.datacue).  Stellen Sie sicher, dass die Eigenschaften **DataCue** und [**Data**](https://docs.microsoft.com/uwp/api/windows.media.core.datacue.Data) des Markers nicht „Null” lauten. Erweiterte EWU-Kommentare werden im Transportstream als unformatierte Bytes bereitgestellt (siehe [http://id3.org/id3v2.4.0-structure](https://id3.org/id3v2.4.0-structure)). Erstellen Sie zum Lesen der Markerdaten einen neuen **DataReader** durch den Aufruf [**DataReader.FromBuffer**](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader.FromBuffer).  In diesem Beispiel werden die Kopfzeilenwerte des ID3-Tags aus den Markerdaten gelesen und in die Debugausgabe geschrieben.
 
 [!code-cs[ID3CueEntered](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetID3CueEntered)]
 
@@ -174,7 +174,7 @@ Rufen Sie in der **RegisterMetadataHandlerForEmsgCues**-Hilfsmethode eine Instan
 
 Im Handler für das **CueEntered**-Ereignis übertragen Sie die in der **Cues**-Eigenschaft des [**MediaCueEventArgs**](https://docs.microsoft.com/uwp/api/windows.media.core.mediacueeventargs) enthaltenen Datenmarker auf einen [**DataCue**](https://docs.microsoft.com/uwp/api/windows.media.core.datacue).  Stellen Sie sicher, dass das **DataCue**-Objekt nicht „Null“ lautet. Die Eigenschaften des Emsg-Feldes werden von der Medienpipeline in der [**Properties**](https://docs.microsoft.com/uwp/api/windows.media.core.datacue.Properties)-Sammlung als benutzerdefinierte Eigenschaften des Datenmarker-Objekts bereitgestellt. In diesem Beispiel wird versucht, mehrere verschiedene Eigenschaftswerte mithilfe der **[TryGetValue](https://docs.microsoft.com/uwp/api/windows.foundation.collections.propertyset.trygetvalue)**-Methode zu extrahieren. Wenn diese Methode „Null“ zurückgibt, ist die angeforderte Eigenschaft nicht im Emsg-Feld vorhanden; stattdessen wird ein Standardwert festgelegt.
 
-Der nächste Teil des Beispiels zeigt, wie die Wiedergabe einer Anzeige ausgelöst wird, weil die im vorherigen Schrittermittelte Eigenschaft *Scheme_id_uri* den Wert „urn: scte:scte35:2013:xml” aufweist (siehe [http://dashif.org/identifiers/event-schemes/](http://dashif.org/identifiers/event-schemes/)). Beachten Sie, dass der Standard empfiehlt, das Emsg mehrmals redundant zu senden; dieses Beispiel führt daher eine Liste bereits verarbeiteter Emsg-IDs, damit nur neue Nachrichten verarbeitet werden. Erstellen Sie vor dem Lesen der Markerdaten einen neuen **DataReader** durch den Aufruf [**DataReader.FromBuffer**](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader.FromBuffer) und legen Sie durch die [**UnicodeEncoding**](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader.UnicodeEncoding)-Eigenschaft UTF-8 als Codierung fest. In diesem Beispiel wird die Meldungsnutzlast in die Debugausgabe geschrieben. Echte Apps verwenden diese Nutzlastdaten, um die Wiedergabe von Anzeigen zu planen.
+Der nächste Teil des Beispiels zeigt, wie die Wiedergabe einer Anzeige ausgelöst wird, weil die im vorherigen Schrittermittelte Eigenschaft *Scheme_id_uri* den Wert „urn: scte:scte35:2013:xml” aufweist (siehe [http://dashif.org/identifiers/event-schemes/](https://dashif.org/identifiers/event-schemes/)). Beachten Sie, dass der Standard empfiehlt, das Emsg mehrmals redundant zu senden; dieses Beispiel führt daher eine Liste bereits verarbeiteter Emsg-IDs, damit nur neue Nachrichten verarbeitet werden. Erstellen Sie vor dem Lesen der Markerdaten einen neuen **DataReader** durch den Aufruf [**DataReader.FromBuffer**](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader.FromBuffer) und legen Sie durch die [**UnicodeEncoding**](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader.UnicodeEncoding)-Eigenschaft UTF-8 als Codierung fest. In diesem Beispiel wird die Meldungsnutzlast in die Debugausgabe geschrieben. Echte Apps verwenden diese Nutzlastdaten, um die Wiedergabe von Anzeigen zu planen.
 
 [!code-cs[EmsgCueEntered](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetEmsgCueEntered)]
 

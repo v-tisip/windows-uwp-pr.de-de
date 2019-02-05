@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e28a4a7abaacd8b2de60c6163055bd9d667ba412
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e190a6d5134cc1fba4ac8be970bb8d90847700e4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946911"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044414"
 ---
 # <a name="camera"></a>Kamera
 
@@ -50,14 +50,14 @@ Dieser Abschnitt enthält Richtlinien für das Erstellen von UWP (Universelle Wi
 
 ## <a name="uwp-app-samples-for-camera"></a>UWP-App-Beispiele für Kamera
 
-* [Beispiel für Gesichtserkennung durch Kamera](http://go.microsoft.com/fwlink/p/?LinkID=619486&clcid=0x409)
-* [Beispiel für Kamera-Vorschauframe](http://go.microsoft.com/fwlink/p/?LinkID=620516&clcid=0x409)
-* [Beispiel für Kamera-HDR](http://go.microsoft.com/fwlink/p/?LinkID=620517&clcid=0x409)
-* [Beispiel für manuelle Kamerasteuerelemente](http://go.microsoft.com/fwlink/p/?LinkID=627611&clcid=0x409)
-* [Beispiel für Kameraprofil](http://go.microsoft.com/fwlink/p/?LinkID=620518&clcid=0x409)
-* [Beispiel für Kameraauflösung](http://go.microsoft.com/fwlink/p/?LinkID=624252&clcid=0x409)
-* [Kamera-Starterkit](http://go.microsoft.com/fwlink/p/?LinkID=619479&clcid=0x409)
-* [Beispiel für Videostabilisierung für Kamera](http://go.microsoft.com/fwlink/p/?LinkID=620519&clcid=0x409)
+* [Beispiel für Gesichtserkennung durch Kamera](https://go.microsoft.com/fwlink/p/?LinkID=619486&clcid=0x409)
+* [Beispiel für Kamera-Vorschauframe](https://go.microsoft.com/fwlink/p/?LinkID=620516&clcid=0x409)
+* [Beispiel für Kamera-HDR](https://go.microsoft.com/fwlink/p/?LinkID=620517&clcid=0x409)
+* [Beispiel für manuelle Kamerasteuerelemente](https://go.microsoft.com/fwlink/p/?LinkID=627611&clcid=0x409)
+* [Beispiel für Kameraprofil](https://go.microsoft.com/fwlink/p/?LinkID=620518&clcid=0x409)
+* [Beispiel für Kameraauflösung](https://go.microsoft.com/fwlink/p/?LinkID=624252&clcid=0x409)
+* [Kamera-Starterkit](https://go.microsoft.com/fwlink/p/?LinkID=619479&clcid=0x409)
+* [Beispiel für Videostabilisierung für Kamera](https://go.microsoft.com/fwlink/p/?LinkID=620519&clcid=0x409)
 
 ## <a name="related-topics"></a>Verwandte Themen
 

@@ -1,17 +1,17 @@
 ---
 title: Deklarieren von Hintergrundaufgaben im Anwendungsmanifest
-description: Sie können die Verwendung von Hintergrundaufgaben aktivieren, indem Sie diese im App-Manifest als Erweiterungen deklarieren.
+description: Aktivieren Sie die Verwendung von Hintergrundaufgaben, indem Sie diese im Anwendungsmanifest als Erweiterungen deklarieren.
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, Uwp, Hintergrundaufgabe, für die
 ms.localizationpriority: medium
-ms.openlocfilehash: 4527cface4681bf4866249c6398d43e6af782725
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3d987eac76c13b8ceb34a8779903a8067ed6a607
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947722"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048697"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a>Deklarieren von Hintergrundaufgaben im Anwendungsmanifest
 
@@ -37,7 +37,7 @@ In diesem Thema wird davon ausgegangen, dass Sie eine oder mehrere Hintergrundau
 
 Öffnen Sie das Anwendungsmanifest (Package.appxmanifest), und wechseln Sie zum „Application“-Element. Erstellen Sie ein "Extensions"-Element (sofern nicht bereits eines vorhanden ist).
 
-Der folgende Ausschnitt stammt aus dem [Hintergrundaufgabenbeispiel](http://go.microsoft.com/fwlink/p/?LinkId=618666):
+Der folgende Ausschnitt stammt aus dem [Hintergrundaufgabenbeispiel](https://go.microsoft.com/fwlink/p/?LinkId=618666):
 
 ```xml
 <Application Id="App"
@@ -90,7 +90,7 @@ Kopieren Sie diesen Code in das "Extensions"-Element (Attribute werden in den fo
 
 2.  Ändern Sie die Liste der Aufgabentypenattribute, um den für diese Hintergrundaufgabe verwendeten Typ der Aufgabenregistrierung anzugeben. Wenn die Hintergrundaufgabe mit mehreren Triggertypen registriert wird, fügen Sie für jeden Typ zusätzliche Task-Elemente und Type-Attribute hinzu.
 
-    **Hinweis:** Vergewissern Sie sich zum Auflisten aller Triggertypen Sie, oder wenn die Hintergrundaufgabe nicht mit Triggertypen (die Methode [**Registrieren**](https://msdn.microsoft.com/library/windows/apps/br224772) fehl und löst eine Ausnahme) registriert wird.
+    **Hinweis:** Vergewissern Sie sich zum Auflisten aller Triggertypen Sie, oder wenn die Hintergrundaufgabe wird nicht mit Triggertypen (die Methode [**Registrieren**](https://msdn.microsoft.com/library/windows/apps/br224772) fehl und löst eine Ausnahme) registriert.
 
     Dieses Beispiel veranschaulicht die Verwendung von Systemereignistriggern und Pushbenachrichtigungen:
 

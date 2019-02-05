@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows10, UWP
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
-ms.openlocfilehash: d56482ee036eaadbd759de9af22fdd10c652aceb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9c437e30db7007a6889a822d7d2219f1647bb3d8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932636"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051033"
 ---
 # <a name="known-issues-with-packaged-desktop-applications"></a>Bekannte Probleme mit verpackte desktop-Apps
 
@@ -50,9 +50,9 @@ Dies ist eine bekannte Einschränkung, und derzeit sind keine Umgehungen vorhand
 
 ### <a name="error-found-in-xml-the-executable-attribute-is-invalid---the-value-myappexe-is-invalid-according-to-its-datatype"></a>Fehler in XML gefunden. Das Attribut „Ausführbare Datei” ist ungültig. – Der Wert MyApp.EXE ist gemäß dem Datentyp ungültig.
 
-Dies kann vorkommen, wenn die ausführbaren Dateien in Ihrer Anwendung die Erweiterung **. EXE** in Großbuchstaben aufweisen. Obwohl die Groß-/Kleinschreibung dieser Erweiterung keine Auswirkungen auf haben, ob die Anwendung ausgeführt wird, kann dies dazu führen, dass den DAC diesen Fehler generiert.
+Dies kann vorkommen, wenn die ausführbaren Dateien in Ihrer Anwendung die Erweiterung **. EXE** in Großbuchstaben aufweisen. Obwohl die Groß-/Kleinschreibung dieser Erweiterung keine Auswirkungen auf haben, ob die Anwendung ausgeführt wird, kann dies den DAC diesen Fehler generiert.
 
-Um dieses Problem zu beheben, versuchen Sie, das **-AppExecutable**-Kennzeichen beim Verpacken festzulegen, und verwenden Sie als Erweiterung Ihrer wichtigsten ausführbaren Datei „.exe” in Kleinbuchstaben (z.B.: MYAPP.exe).    Alternativ können Sie die Groß-/Kleinschreibung für alle ausführbaren Dateien in Ihrer Anwendung in Großbuchstaben in Kleinbuchstaben ändern (z. B.: aus. EXE-Datei in .exe).
+Um dieses Problem zu beheben, versuchen Sie, das **-AppExecutable**-Kennzeichen beim Verpacken festzulegen, und verwenden Sie als Erweiterung Ihrer wichtigsten ausführbaren Datei „.exe” in Kleinbuchstaben (z.B.: MYAPP.exe).    Alternativ können Sie die Groß-/Kleinschreibung für alle ausführbaren Dateien in Ihrer Anwendung aus Kleinbuchstaben in Großbuchstaben ändern (z. B.: aus. EXE-Datei in .exe).
 
 ### <a name="corrupted-or-malformed-authenticode-signatures"></a>Beschädigte oder falsch formatierte Authenticode-Signaturen
 
@@ -67,7 +67,7 @@ Damit die Authenticode-Signatur korrekt ist, muss für die Authenticode-Signatur
 - Die Größe des **WIN_CERTIFICATE**-Eintrags muss positiv sein
 - Der **WIN_CERTIFICATE**-Eintrag muss bei ausführbaren 32-Bit-Dateien nach der **IMAGE_NT_HEADERS32**-Struktur und bei ausführbaren 64-Bit-Dateien nach der IMAGE_NT_HEADERS64-Struktur beginnen.
 
-Weitere Informationen finden Sie in der [Spezifikation zu übertragbaren ausführbaren Authenticode-Dateien](http://download.microsoft.com/download/9/c/5/9c5b2167-8017-4bae-9fde-d599bac8184a/Authenticode_PE.docx) und der [Spezifikation zum Format übertragbarer ausführbarer Dateien](https://msdn.microsoft.com/windows/hardware/gg463119.aspx).
+Weitere Informationen finden Sie in der [Spezifikation zu übertragbaren ausführbaren Authenticode-Dateien](https://download.microsoft.com/download/9/c/5/9c5b2167-8017-4bae-9fde-d599bac8184a/Authenticode_PE.docx) und der [Spezifikation zum Format übertragbarer ausführbarer Dateien](https://msdn.microsoft.com/windows/hardware/gg463119.aspx).
 
 Beachten Sie, dass SignTool.exe eine Liste der beschädigten oder falsch formatierten Binärdateien ausgeben kann, wenn Sie versuchen, ein Windows-App-Paket zu signieren. Aktivieren Sie dazu ausführliche Protokollierung , indem Sie die Umgebungsvariable APPXSIP_LOG auf 1 (z. B. ```set APPXSIP_LOG=1```) festlegen und SignTool.exe erneut ausführen.
 
@@ -119,7 +119,7 @@ Doppelklicken Sie im Datei-Explorer auf das Zertifikat, wählen Sie die Register
 
 **Option3: CertUtil**
 
-Führen Sie **Certutil** über die Befehlszeile aus, für die PFX-Datei, und kopieren Sie *den Betreff* der Ausgabe.
+Führen Sie **Certutil** über die Befehlszeile aus, für die PFX-Datei, und kopieren Sie das Feld *Betreff* der Ausgabe.
 
 ```cmd
 certutil -dump <cert_file.pfx>
@@ -131,7 +131,7 @@ certutil -dump <cert_file.pfx>
 
 Dies kann passieren, wenn Ihr Paket eine Binärdatei, die mit ein beschädigten Zertifikat enthält. Hier sehen Sie einige Gründe, warum dies geschieht:
 
-* Der Anfang des Zertifikats ist nicht am Ende eines Bilds.  
+* Beginn des Zertifikats ist nicht am Ende eines Bilds.  
 
 * Die Größe des Zertifikats ist nicht positiv.
 
@@ -139,7 +139,7 @@ Dies kann passieren, wenn Ihr Paket eine Binärdatei, die mit ein beschädigten 
 
 * Der Zertifikat-Zeiger ist nicht ordnungsgemäß für eine Struktur WIN_CERTIFICATE ausgerichtet.
 
-Zum Auffinden von Dateien, die eine ungültige PE-Zertifikat enthalten, öffnen Sie eine **Eingabeaufforderung**, und legen Sie die Umgebungsvariable `APPXSIP_LOG` auf dem Wert 1.
+Zum Auffinden von Dateien, die eine ungültige PE-Zertifikat enthalten, öffnen Sie ein **Eingabeaufforderungsfenster**, und legen Sie die Umgebungsvariable `APPXSIP_LOG` auf einen Wert von 1.
 
 ```
 set APPXSIP_LOG=1
@@ -151,7 +151,7 @@ Signieren Sie über die **Befehlszeile**dann die Anwendung erneut. Beispiel:
 signtool.exe sign /a /v /fd SHA256 /f APPX_TEST_0.pfx C:\Users\Contoso\Desktop\pe\VLC.appx
 ```
 
-Informationen zu Dateien, die eine ungültige PE-Zertifikat enthalten, werden im **Konsolenfenster**angezeigt. Beispiel:
+Informationen zu Dateien mit einem fehlerhaften PE-Zertifikat wird im **Konsolenfenster**angezeigt. Beispiel:
 
 ```
 ...
@@ -164,7 +164,7 @@ ERROR: [AppxSipCustomLoggerCallback] File has malformed certificate: uninstall.e
 
 **Finden Sie Antworten auf Ihre Fragen**
 
-Haben Sie Fragen? Fragen Sie uns auf Stack Overflow. Unser Team überwacht diese [Tags](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Fragen Sie uns [hier](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+Haben Sie Fragen? Fragen Sie uns auf Stack Overflow. Unser Team überwacht diese [Tags](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Fragen Sie uns [hier](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
 **Geben Sie Feedback oder Verbesserungsvorschläge**
 

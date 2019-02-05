@@ -6,16 +6,16 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Anzeige, Kampagne, bewerben
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ece97d2e2cf96d2905902fd563f1de9027aa64a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6c198bf9ebb8eb6f409277bfe09af6881530d5a7
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919995"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047089"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Erstellen einer Anzeigenkampagne für Ihre App
 
-Sie können Anzeigenkampagnen im [Partner Center](https://partner.microsoft.com/dashboard) , um bewerben Ihrer app und die Benutzerbasis zu erstellen. Standardmäßig wählen wir die Zielgruppe für Ihre basierend auf den Einstellungen für Ihre app im Partner Center anzeigen, aber Sie können auch eigene Zielgruppe zu definieren. Außerdem können Sie einen Standardsatz von Anzeigenvorlagen verwenden oder eigene Anzeigenentwürfe hochladen. Weitere Informationen zur Anzeigenkampagnen finden Sie unter [Allgemeine Fragen zu Anzeigenkampagnen](common-questions.md).
+Sie können Anzeigenkampagnen im [Partner Center](https://partner.microsoft.com/dashboard) zum bewerben Ihrer app und die Benutzerbasis erstellen. Standardmäßig wählen wir die Zielgruppe für Ihre basierend auf den Einstellungen für Ihre app im Partner Center anzeigen, aber Sie können auch eigene Zielgruppe zu definieren. Außerdem können Sie einen Standardsatz von Anzeigenvorlagen verwenden oder eigene Anzeigenentwürfe hochladen. Weitere Informationen zur Anzeigenkampagnen finden Sie unter [Allgemeine Fragen zu Anzeigenkampagnen](common-questions.md).
 
 Sie können Anzeigenkampagnen nur für Apps erstellen, die die letzte Veröffentlichungsphase des [App-Zertifizierungsprozesses](the-app-certification-process.md) durchlaufen haben.
 
@@ -26,7 +26,7 @@ Sie können Anzeigenkampagnen nur für Apps erstellen, die die letzte Veröffent
 
 So erstellen Sie eine Anzeigenkampagne zum Bewerben einer App.
 
-1.  Im linken Navigationsmenü der [Partner Center](https://partner.microsoft.com/dashboard)erweitern Sie **bewerben** und wählen Sie dann **Anzeigenkampagnen**.
+1.  Klicken Sie im linken Navigationsmenü der [Partner Center](https://partner.microsoft.com/dashboard)erweitern Sie **bewerben** , und wählen Sie dann **Anzeigenkampagnen**.
 2.  Wählen Sie **Erstellen einer Anzeigenkampagne** (oder wenn Sie bereits Kampagnen erstellt haben, wählen Sie **Neue Kampagne**) aus.
 3.  Wählen Sie auf der nächsten Seite im Abschnitt **Objekttyp** eine der folgenden Optionen aus:
     * **Mehr Installationen für Ihre App**. Wählen Sie diese Option, wenn Ihre Anzeigenkampagne darauf abzielt, dass Kunden Ihre App installieren.
@@ -46,7 +46,7 @@ So erstellen Sie eine Anzeigenkampagne zum Bewerben einer App.
 
         Das monatliche Budget wird für den Monat, in dem die Anzeigenkampagne erstellt wird, anteilig berechnet. Wenn Sie also eine Anzeigenkampagne in der Mitte des Monats erstellen, zahlen Sie für den betreffenden Monat die Hälfte des Monatsbudgets.
 
-    * Legen Sie eine Zahlungsmethode für Ihre Anzeigenkampagne fest, indem Sie auf **Neue Zahlungsmethode hinzufügen** klicken und Ihre Kontodaten eingeben. Wenn Sie bereits ein Zahlungsmittel angegeben haben, können Sie **Eine andere Zahlungsmethode auswählen**, wenn Sie sie aktualisieren müssen. Das Land/die Region der Rechnungsadresse Ihrer Zahlungsmethode muss mit Ihrem Entwicklerkonto verknüpfte Land/Region übereinstimmen.
+    * Legen Sie eine Zahlungsmethode für Ihre Anzeigenkampagne fest, indem Sie auf **Neue Zahlungsmethode hinzufügen** klicken und Ihre Kontodaten eingeben. Wenn Sie bereits ein Zahlungsmittel angegeben haben, können Sie **Eine andere Zahlungsmethode auswählen**, wenn Sie sie aktualisieren müssen. Das Land/die Region der Rechnungsadresse Ihrer Zahlungsmethode muss das Land/die Region Ihrem Entwicklerkonto zugeordnet übereinstimmen.
 
     * Wenn Sie von Microsoft einen Gutschein für eine Anzeigenkampagne erhalten haben, klicken Sie auf **Use a coupon**, geben Sie den Gutscheincode ein, und klicken Sie auf **Übernehmen**, um den Gutschein für die Kampagne zu übernehmen.
 
@@ -74,7 +74,7 @@ So erstellen Sie eine Anzeigenkampagne zum Bewerben einer App.
         * Wählen Sie im Dropdownmenü **Sprache** die Sprache der Anzeigen aus. Der Text für das Microsoft Store-Signal wird in der Sprache angezeigt, die Sie auswählen.
         * Um Ihrer Anzeige eine zusätzliche Textzeile hinzuzufügen, geben Sie den Text im Feld **Benutzerdefinierter Slogan** ein.
             > [!NOTE]
-            > Der von Ihnen eingegebene Text muss in die ausgewählte Sprache lokalisiert werden. Der benutzerdefinierte Slogan wird zurückgewiesen, wenn der Text nicht mit den [Bing Ads-Richtlinien](http://go.microsoft.com/fwlink?LinkId=398341) konform ist. Auf dieser Seite finden Sie Informationen zum Stil und zu nicht zulässigen Inhalten.
+            > Der von Ihnen eingegebene Text muss in die ausgewählte Sprache lokalisiert werden. Der benutzerdefinierte Slogan wird zurückgewiesen, wenn der Text nicht mit den [Bing Ads-Richtlinien](https://go.microsoft.com/fwlink?LinkId=398341) konform ist. Auf dieser Seite finden Sie Informationen zum Stil und zu nicht zulässigen Inhalten.
         * Um die Anzeige weiter anzupassen, erweitern Sie **Anzeigendesign anpassen/Alle Größen anzeigen** und wählen eine der folgenden Optionen aus:
             * **Hintergrundfarbe**. Treffen Sie Ihre Auswahl aus den verfügbaren Optionen.
             * **Bilder** Wählen Sie eine der verfügbaren Bilder aus (aus der Store-Eintrag Ihrer App).
@@ -82,15 +82,15 @@ So erstellen Sie eine Anzeigenkampagne zum Bewerben einer App.
             * **Anzeigen, dass meine App kostenlos ist**. Wenn Ihre App in allen ausgewählten Märkten kostenlos ist, können Sie dieses Kontrollkästchen aktivieren.
             * **Handlungsaufforderung**. Wenn **Mehr Interaktion in Ihrer App** als Ziel für Ihre Kampagne wählen, können Sie die Schaltfläche für die Handlungsaufforderung in Ihrer App auf **Öffnen**, **Spielen**, **Lesen**, **Hören** oder **Kaufen** festlegen.  
 
-    * **Benutzerdefiniert**. Wählen Sie diese Option aus, um Ihren eigenen Anzeigenentwurf zu verwenden. Beachten Sie, dass, wenn Sie ein Kundensegment früher ausgewählt haben, müssen Sie benutzerdefinierte Werbemittel verwenden. Sie können verschiedene Dateien für jede der verfügbaren Anzeigengrößen hochladen. Die Dateien müssen folgenden Anforderungen und Richtlinien entsprechen:
+    * **Benutzerdefiniert**. Wählen Sie diese Option aus, um Ihren eigenen Anzeigenentwurf zu verwenden. Beachten Sie, dass Sie ein Kundensegment früher ausgewählt haben, Sie benutzerdefinierte Werbemittel verwenden müssen. Sie können verschiedene Dateien für jede der verfügbaren Anzeigengrößen hochladen. Die Dateien müssen folgenden Anforderungen und Richtlinien entsprechen:
         * Jede Datei muss eine PNG- oder JPG-Datei mit höchstens 40KB sein.
-        * Ihre Anzeigenentwürfe müssen die in der [Microsoft Creative Acceptance Policy](http://go.microsoft.com/fwlink?LinkId=532595) dargelegten Anforderungen erfüllen.
+        * Ihre Anzeigenentwürfe müssen die in der [Microsoft Creative Acceptance Policy](https://go.microsoft.com/fwlink?LinkId=532595) dargelegten Anforderungen erfüllen.
         * Der Inhalt in Ihren Anzeigenentwürfen muss für die beworbene App relevant sein. Anzeigenentwürfe, die nicht mit der App zusammenhängen, werden nicht in anderen Apps verteilt.
         * Alle Inhalte in Ihren Anzeigenentwürfen sollten deutlich lesbar sein. Beispielsweise sollten Inhalte nicht verschwommen, verpixelt oder gestreckt sein.
 
 12.  Wenn Sie ein [Premiumkonto](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign) besitzen, können Sie mithilfe des Kontrollkästchens **Ziel-URL** steuern, was geschieht, wenn ein Kunde auf Ihre Anzeige klickt.
     * Wenn Sie das Kontrollkästchen nicht aktivieren, wird der Store-Eintrag Ihrer App angezeigt, wenn ein Kunde auf Ihre Anzeige klickt.
-    * Wenn Sie Kochava oder Tune verwenden, um die Installationsdaten für Ihre App zu messen, geben Sie die Installationsverfolgungs-URL von Kochava oder Tune ein. Beim Speichern der Kampagne wird die Verfolgungs-URL überprüft, um sicherzustellen, dass sie zur Eintragsseite für Ihre App im Microsoft Store aufgelöst wird. Weitere Informationen zur Installationsverfolgung mit Kochava und Tune finden Sie in der [Kochava](http://support.kochava.com/)- und [Tune](https://help.tune.com/)-Dokumentation.
+    * Wenn Sie Kochava oder Tune verwenden, um die Installationsdaten für Ihre App zu messen, geben Sie die Installationsverfolgungs-URL von Kochava oder Tune ein. Beim Speichern der Kampagne wird die Verfolgungs-URL überprüft, um sicherzustellen, dass sie zur Eintragsseite für Ihre App im Microsoft Store aufgelöst wird. Weitere Informationen zur Installationsverfolgung mit Kochava und Tune finden Sie in der [Kochava](https://support.kochava.com/)- und [Tune](https://help.tune.com/)-Dokumentation.
     * Wenn Sie **Mehr Interaktion in Ihrer App** als Kampagnenziel wählen, können Sie einen [Deep-Link-URI](../launch-resume/handle-uri-activation.md) angeben, um Kunden aus den ausgewählten Segment zu einer bestimmten Seite in Ihrer App umzuleiten.
     * Wenn Sie ein Ziel angeben, bei dem es sich nicht um die Beschreibungsseite Ihrer App oder eine Seite innerhalb Ihrer App handelt, wird Ihre Kampagne automatisch angehalten.
 

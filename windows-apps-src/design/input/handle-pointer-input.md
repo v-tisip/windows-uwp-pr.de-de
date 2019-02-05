@@ -8,12 +8,12 @@ keywords: Stift, Maus, Touchpad, Toucheingabe, Zeiger, Eingabe, Benutzerinterakt
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c8f670a5139d4969489bede3b0b4bbf72de2d55
-ms.sourcegitcommit: 2ef3d22a30afe853de891280e11d96e5e1ab62d1
+ms.openlocfilehash: 596e9221fac686964b4faaa8a75f112dbb8ddf5a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "8981869"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048397"
 ---
 # <a name="handle-pointer-input"></a>Behandeln von Zeigereingaben
 
@@ -196,7 +196,7 @@ Im Folgenden ist der XAML-Code (Extensible Application Markup Language) für die
 
 In den meisten Fällen wird empfohlen, Zeigerinformationen über die [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) des Ereignishandlers abzurufen.
 
-Wenn das Ereignisargument die erforderlichen zeigerdetails nicht, erhalten Sie Zugriff auf erweiterte [**PointerPoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) Informationen über die [**GetCurrentPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) und [,**GetIntermediatePoints**] verfügbar gemachthttps://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) Methoden der [** PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs).
+Wenn das Ereignisargument die erforderlichen zeigerdetails nicht, erhalten Sie Zugriff auf erweiterte [**PointerPoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) Informationen über die [**GetCurrentPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) und [**GetIntermediatePoints**] verfügbar gemachthttps://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) Methoden der [** PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs).
 
 Der folgende Code richtet das globale Verzeichnisobjekt für die Verfolgung jedes aktiven Zeigers ein und identifiziert die verschiedenen Zeigerereignislistener für das Zielobjekt.
 
@@ -572,7 +572,7 @@ private void Target_PointerCaptureLost(object sender, PointerRoutedEventArgs e)
 
 ### <a name="get-pointer-properties"></a>Abrufen von Zeigereigenschaften
 
-Wie bereits erwähnt, müssen Sie die erweiterten Zeigerinformationen von einem [**Windows.UI.Input.PointerPoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) -Objekt abgerufen, über den [**GetCurrentPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) und [,**GetIntermediatePoints**] erhaltenhttps://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) Methoden der [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs). Die folgenden Codeausschnitte zeigen, wie.
+Wie bereits erwähnt, müssen Sie die erweiterten Zeigerinformationen von einem [**Windows.UI.Input.PointerPoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) -Objekt abgerufen und die [**GetCurrentPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) [**GetIntermediatePoints**] erhaltenhttps://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) Methoden der [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs). Die folgenden Codeausschnitte zeigen, wie.
 
 -   Zuerst wird ein neues [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)-Objekt für jeden Zeiger erstellt.
 
@@ -954,15 +954,15 @@ Schließlich definieren wir unsere einfachen Zeigerereignishandler in der CodeBe
 * [Beispiel für Zeigereingabe (UserControl mit Animation)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)
 
 **Andere Beispiele**
-* [Einfaches Eingabebeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Beispiel für Eingabe mit niedriger Latenz](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Beispiel für den Benutzerinteraktionsmodus](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Beispiel für visuelle Fokuselemente](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Einfaches Eingabebeispiel](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Beispiel für Eingabe mit niedriger Latenz](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Beispiel für den Benutzerinteraktionsmodus](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Beispiel für visuelle Fokuselemente](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Archivbeispiele**
-* [Eingabe: Beispiel für XAML-Benutzereingabeereignisse](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Eingabe: Beispiel für Gerätefunktionen](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Eingabe: Beispiel für Bearbeitungen und Bewegungen (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Eingabe: Beispiel für Fingereingabe-Treffertests](http://go.microsoft.com/fwlink/p/?linkid=231590)
-* [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoom](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Eingabe: vereinfachtes Freihandbeispiel](http://go.microsoft.com/fwlink/p/?linkid=246570)
+* [Eingabe: Beispiel für XAML-Benutzereingabeereignisse](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Eingabe: Beispiel für Gerätefunktionen](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Eingabe: Beispiel für Bearbeitungen und Bewegungen (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [Eingabe: Beispiel für Fingereingabe-Treffertests](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoom](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Eingabe: vereinfachtes Freihandbeispiel](https://go.microsoft.com/fwlink/p/?linkid=246570)

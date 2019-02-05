@@ -7,12 +7,12 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste Microsoft Store-Analyse-API
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0f0df87f8ed5339c977dbd468f8aa2a7877f0d9e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 72e0941bb42a2a507af652758432ce51212c1042
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939140"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046403"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Zugreifen auf Analysedaten mit Store-Diensten
 
@@ -30,17 +30,17 @@ Dazu müssen folgende Schritte ausgeführt werden:
 
 Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllt haben, bevor Sie mit dem Schreiben von Code zum Aufrufen der Microsoft Store-Analyse-API beginnen:
 
-* Sie (bzw. Ihre Organisation) müssen über ein Azure AD-Verzeichnis und die Berechtigung [Globaler Administrator](http://go.microsoft.com/fwlink/?LinkId=746654) für das Verzeichnis verfügen. Wenn Sie bereits mit Office 365oder anderen Unternehmensdiensten von Microsoft arbeiten, verfügen Sie schon über ein Azure AD-Verzeichnis. Andernfalls können Sie [ein neues Azure AD im Partner Center erstellen](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) , für die ohne zusätzliche Kosten.
+* Sie (bzw. Ihre Organisation) müssen über ein Azure AD-Verzeichnis und die Berechtigung [Globaler Administrator](https://go.microsoft.com/fwlink/?LinkId=746654) für das Verzeichnis verfügen. Wenn Sie bereits mit Office 365oder anderen Unternehmensdiensten von Microsoft arbeiten, verfügen Sie schon über ein Azure AD-Verzeichnis. Andernfalls können Sie [ein neues Azure AD im Partner Center erstellen](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) , für ohne zusätzliche Kosten.
 
-* Sie müssen Ihr Partner Center-Konto eine Azure AD-Anwendung zuordnen, die Mandanten-ID und Client-ID für die Anwendung abrufen und einen Schlüssel generieren. Die Azure AD-Anwendung stellt die App oder den Dienst dar, aus denen Sie die Microsoft Store-Analyse-API aufrufen möchten. Sie benötigen die Mandanten-ID, die Client-ID und den Schlüssel zum Abrufen eines Azure AD-Zugriffstokens, das Sie an die API übergeben.
+* Sie müssen Ihrem Partner Center-Konto eine Azure AD-Anwendung zuordnen, die Mandanten-ID und Client-ID für die Anwendung abrufen und einen Schlüssel generieren. Die Azure AD-Anwendung stellt die App oder den Dienst dar, aus denen Sie die Microsoft Store-Analyse-API aufrufen möchten. Sie benötigen die Mandanten-ID, die Client-ID und den Schlüssel zum Abrufen eines Azure AD-Zugriffstokens, das Sie an die API übergeben.
     > [!NOTE]
     > Sie müssen diesen Schritt nur einmal ausführen. Wenn Sie im Besitz der Mandanten-ID, der Client-ID und des Schlüssel sind, können Sie diese Daten jederzeit wiederverwenden, um ein neues Azure AD-Zugriffstoken zu erstellen.
 
-Ihr Partner Center-Konto eine Azure AD-Anwendung zuordnen, und die erforderlichen Werte abzurufen:
+So ordnen Sie Ihr Partner Center-Konto eine Azure AD-Anwendung und die erforderlichen Werte abzurufen:
 
 1.  Im Partner Center, [Partner Center-Konto Ihrer Organisation mit Azure AD-Verzeichnis Ihrer Organisation zuordnen](../publish/associate-azure-ad-with-partner-center.md).
 
-2.  Als Nächstes auf der Seite für den **Benutzer** im Abschnitt **kontoeinstellungen** des Partner Center, [die Azure AD-Anwendung hinzufügen](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) , die die app darstellt oder Dienst, mit denen Sie Analysedaten für Ihr Partner Center-Konto zugreifen. Weisen Sie dieser Anwendung die Rolle **Verwalter** zu. Wenn die Anwendung nicht vorhanden ist, noch in Azure AD-Verzeichnis, können Sie eine [Erstellen Sie ein neues Azure AD-Anwendung im Partner Center](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account).
+2.  Als Nächstes aus der Seite " **Benutzer** " im Abschnitt **kontoeinstellungen** Partner Center, [die Azure AD-Anwendung hinzufügen](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) , die die app darstellt oder Dienst, mit denen Sie auf Analysedaten für Ihr Partner Center-Konto zugreifen. Weisen Sie dieser Anwendung die Rolle **Verwalter** zu. Wenn die Anwendung nicht vorhanden ist, noch in Azure AD-Verzeichnis, Sie können [Erstellen Sie ein neues Azure AD-Anwendung im Partner Center](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account).
 
 3.  Wechseln Sie zurück zur Seite **Benutzer**, klicken Sie auf den Namen der Azure AD-Anwendung, um die Anwendungseinstellungen aufzurufen, und kopieren Sie die Werte unter **Mandanten-ID** und **Client-ID**.
 
@@ -115,15 +115,15 @@ Die folgenden zusätzlichen Methoden sind verfügbar, für die Verwendung durch 
 | Szenario       | Methoden      |
 |---------------|--------------------|
 | Käufe |  <ul><li>[Xbox One-Spielkäufe abrufen](get-xbox-one-game-acquisitions.md)</li><li>[Xbox One-Add-On-Käufe abrufen](get-xbox-one-add-on-acquisitions.md)</li></ul> |
-| Fehler |  <ul><li>[Abrufen von Fehlerberichtsdaten für Ihre Xbox One Spiel](get-error-reporting-data-for-your-xbox-one-game.md)</li><li>[Abrufen von Details zu einem Fehler in Ihrer Xbox One-Spiele](get-details-for-an-error-in-your-xbox-one-game.md)</li><li>[Abrufen der stapelüberwachung für einen Fehler in Ihrer Xbox One-Spiele](get-the-stack-trace-for-an-error-in-your-xbox-one-game.md)</li><li>[Herunterladen der CAB-Datei für einen Fehler in Ihrer Xbox One Spiel](download-the-cab-file-for-an-error-in-your-xbox-one-game.md)</li></ul> |
+| Fehler |  <ul><li>[Abrufen von Fehlerberichtsdaten zu einem Xbox One-Spiel](get-error-reporting-data-for-your-xbox-one-game.md)</li><li>[Abrufen von Details zu einem Fehler in einem Xbox One-Spiel](get-details-for-an-error-in-your-xbox-one-game.md)</li><li>[Abrufen der Stapelüberwachung für einen Fehler in einem Xbox One-Spiel](get-the-stack-trace-for-an-error-in-your-xbox-one-game.md)</li><li>[Herunterladen der CAB-Datei zu einem Fehler in einem Xbox One-Spiel](download-the-cab-file-for-an-error-in-your-xbox-one-game.md)</li></ul> |
 
 ### <a name="methods-for-hardware-and-drivers"></a>Methoden für Hardware und Treiber
 
-Konten für Entwickler, die das [Windows-Hardware-Dashboard-Programm](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) gehört haben Zugriff auf eine Reihe von Methoden zum Abrufen von Analysedaten für Hardware und Treiber. Weitere Informationen finden Sie in der [Hardware-Dashboard-API](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api).
+Konten für Entwickler, die das [Windows-Hardware-Dashboard-Programm](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) gehört haben Zugriff auf eine Reihe von Methoden zum Abrufen von Analysedaten für Hardware und Treiber. Weitere Informationen finden Sie unter [Hardware-Dashboard-API](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api).
 
 ## <a name="code-example"></a>Codebeispiel
 
-Im folgenden Codebeispiel wird veranschaulicht, wie Sie ein AzureAD-Zugriffstoken abrufen und die Microsoft Store-Analyse-API aus einer C#-Konsolen-App aufrufen. Wenn Sie dieses Codebeispiel verwenden möchten, weisen Sie den Variablen *tenantId*, *clientId*, *clientSecret* und *appID* die entsprechenden Werte für Ihr Szenario zu. In diesem Beispiel wird das [Json.NET-Paket](http://www.newtonsoft.com/json) von Newtonsoft benötigt, um die von der Microsoft Store-Analyse-API zurückgegebenen JSON-Daten zu deserialisieren.
+Im folgenden Codebeispiel wird veranschaulicht, wie Sie ein AzureAD-Zugriffstoken abrufen und die Microsoft Store-Analyse-API aus einer C#-Konsolen-App aufrufen. Wenn Sie dieses Codebeispiel verwenden möchten, weisen Sie den Variablen *tenantId*, *clientId*, *clientSecret* und *appID* die entsprechenden Werte für Ihr Szenario zu. In diesem Beispiel wird das [Json.NET-Paket](https://www.newtonsoft.com/json) von Newtonsoft benötigt, um die von der Microsoft Store-Analyse-API zurückgegebenen JSON-Daten zu deserialisieren.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[AnalyticsApi](./code/StoreServicesExamples_Analytics/cs/Program.cs#AnalyticsApiExample)]

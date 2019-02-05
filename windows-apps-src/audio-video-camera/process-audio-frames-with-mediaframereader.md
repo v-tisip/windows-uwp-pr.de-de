@@ -6,12 +6,12 @@ ms.date: 04/18/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f85570d5c66db1641ec6352526d4db6213e199b4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e7082c3e572493656e8b109da35861ec820d4ec9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944895"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050833"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>Verarbeiten von Audioframes mit „MediaFrameReader“
 
@@ -21,7 +21,7 @@ Dieser Artikel veranschaulicht das Verwenden von [**MediaFrameReader**](https://
 > Die in diesem Artikel besprochenen Features sind erst ab Windows10, Version1803, verfügbar.
 
 > [!NOTE] 
-> Es gibt ein Beispiel für universelle Windows-Apps, in dem die Verwendung von **MediaFrameReader** zum Anzeigen von Frames aus unterschiedlichen Framequellen demonstriert wird, unter anderem Farb-, Tiefen- und Infrarotkameras. Weitere Informationen finden Sie unter [Beispiel für Kameraframes](http://go.microsoft.com/fwlink/?LinkId=823230).
+> Es gibt ein Beispiel für universelle Windows-Apps, in dem die Verwendung von **MediaFrameReader** zum Anzeigen von Frames aus unterschiedlichen Framequellen demonstriert wird, unter anderem Farb-, Tiefen- und Infrarotkameras. Weitere Informationen finden Sie unter [Beispiel für Kameraframes](https://go.microsoft.com/fwlink/?LinkId=823230).
 
 ## <a name="setting-up-your-project"></a>Einrichten Ihres Projekts
 Der Prozess zum Erwerb von Audioframes entspricht größtenteils dem Erwerb anderer Arten von Medienframes. Wie bei allen Apps, die **MediaCapture** verwenden, müssen Sie deklarieren, dass Ihre App die *Webcam*-Funktion verwendet. Erst dann können Sie auf Kamerageräte zugreifen. Wenn Ihre App von einem Audiogerät aufzeichnet, müssen Sie auch die *microphone*-Gerätefunktion deklarieren. 
@@ -79,7 +79,7 @@ Sie können Sie ein [**AudioFrame**](https://docs.microsoft.com/uwp/api/windows.
 * [Verarbeiten von Medienframes mit „MediaFrameReader“](process-media-frames-with-mediaframereader.md)
 * [Kamera](camera.md)
 * [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Beispiel für Kameraframes](http://go.microsoft.com/fwlink/?LinkId=823230)
+* [Beispiel für Kameraframes](https://go.microsoft.com/fwlink/?LinkId=823230)
 * [Audiodiagramme](audio-graphs.md)
  
 

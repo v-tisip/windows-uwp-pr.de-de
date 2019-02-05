@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6178e2072721ad8514ba7ddfc0ae8f99ab59d34c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4332bd0b19d381937e477efc472634d6d81afd58
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920582"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046493"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping"></a>XAML-Namespaces und Namespacezuordnung
 
@@ -61,11 +61,11 @@ Der XAML-Namespace „d:“ soll der Designerunterstützung dienen, speziell der
 
 -   **Attribute „d:DesignHeight“ und „d:DesignWidth“:** Diese Attribute werden gelegentlich auf den Stamm der XAML-Datei angewendet, die von Visual Studio oder einer anderen XAML-Designeroberfläche erstellt wird. Beispielsweise werden diese Attribute am [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647)-Stamm des XAML festgelegt, das beim Hinzufügen eines neuen **UserControl** zu Ihrem App-Projekt erstellt wird. Diese Attribute vereinfachen das Entwerfen der Zusammensetzung des XAML-Inhalts, sodass Sie bereits im Voraus die Layoutbeschränkungen berücksichtigen können, die u.U. vorhanden sind, sobald der XAML-Inhalt für eine Steuerelementinstanz oder einen anderen Teil einer größeren UI-Seite verwendet wird.
 
-   **Hinweis:** Wenn Sie XAML aus Microsoft Silverlight migrieren, sind möglicherweise müssen Sie diese Attribute in Stammelementen enthalten, die eine gesamte UI-Seite darstellen. In diesem Fall wird empfohlen, die Attribute zu entfernen. Andere Features des XAML-Designers wie der Simulator eignen sich wahrscheinlich besser zum Entwerfen von Seitenlayouts für die Verarbeitung von Skalierungen und Ansichtszuständen als ein Seitenlayout mit fester Größe mit **d:DesignHeight** und **d:DesignWidth**.
+   **Hinweis:** Wenn Sie XAML aus Microsoft Silverlight migrieren, sind Sie möglicherweise diese Attribute in Stammelementen enthalten, die eine gesamte UI-Seite darstellen. In diesem Fall wird empfohlen, die Attribute zu entfernen. Andere Features des XAML-Designers wie der Simulator eignen sich wahrscheinlich besser zum Entwerfen von Seitenlayouts für die Verarbeitung von Skalierungen und Ansichtszuständen als ein Seitenlayout mit fester Größe mit **d:DesignHeight** und **d:DesignWidth**.
 
 -   **d:DataContext-Attribut:** Sie können dieses Attribut für einen Seitenstamm oder ein Steuerelement festlegen, um alle expliziten oder geerbten [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)-Elemente zu überschreiben, die das Objekt ansonsten aufweist.
 -   **d:DesignSource-Attribut:** Gibt eine Entwurfszeit-Datenquelle für [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833) an, die [**Source**](https://msdn.microsoft.com/library/windows/apps/br209835) überschreibt.
--   **Markuperweiterungen „d:DesignInstance“ und „d:DesignData“:** Diese Markuperweiterungen werden verwendet, um die Entwurfszeit-Datenressourcen für **d:DataContext** oder **d:DesignSource** bereitzustellen. Die Verwendung von Designzeit-Datenressourcen wird hier nicht vollständig erläutert. Weitere Informationen finden Sie unter [Entwurfszeitattribute](http://go.microsoft.com/fwlink/p/?LinkId=272504). Einige Verwendungsbeispiele finden Sie unter [Beispieldaten für die Entwurfsoberfläche und Prototyperstellung](https://msdn.microsoft.com/library/windows/apps/mt517866).
+-   **Markuperweiterungen „d:DesignInstance“ und „d:DesignData“:** Diese Markuperweiterungen werden verwendet, um die Entwurfszeit-Datenressourcen für **d:DataContext** oder **d:DesignSource** bereitzustellen. Die Verwendung von Designzeit-Datenressourcen wird hier nicht vollständig erläutert. Weitere Informationen finden Sie unter [Entwurfszeitattribute](https://go.microsoft.com/fwlink/p/?LinkId=272504). Einige Verwendungsbeispiele finden Sie unter [Beispieldaten für die Entwurfsoberfläche und Prototyperstellung](https://msdn.microsoft.com/library/windows/apps/mt517866).
 
 ### **<a name="mc-httpschemasopenxmlformatsorgmarkup-compatibility2006"></a>mc: (`http://schemas.openxmlformats.org/markup-compatibility/2006`)**
 

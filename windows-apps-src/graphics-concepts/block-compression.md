@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b7726067055b92ae51c01d4d056a2a11624204db
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3f6a1277dbb2d756f0d3a4ffc1fd545f892a2096
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934349"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047209"
 ---
 # <a name="block-compression"></a>Blockkomprimierung
 
@@ -346,13 +346,13 @@ FLOAT32 f = 1.0f;
 UINT32 u;
 ```
 
-Um „f” als Typ „u” neu zu interpretieren, verwenden Sie [memcpy](http://msdn.microsoft.com/library/dswaw1wk.aspx):
+Um „f” als Typ „u” neu zu interpretieren, verwenden Sie [memcpy](https://msdn.microsoft.com/library/dswaw1wk.aspx):
 
 ```cpp
 memcpy( &u, &f, sizeof( f ) ); // 'u' becomes equal to 0x3F800000.
 ```
 
-In der vorherigen neuen Interpretation ändert sich der zugrunde liegende Wert der Daten nicht. [memcpy](http://msdn.microsoft.com/library/dswaw1wk.aspx) interpretiert den Float-Wert als Ganzzahl ohne Vorzeichen.
+In der vorherigen neuen Interpretation ändert sich der zugrunde liegende Wert der Daten nicht. [memcpy](https://msdn.microsoft.com/library/dswaw1wk.aspx) interpretiert den Float-Wert als Ganzzahl ohne Vorzeichen.
 
 Verwenden Sie zum Ausführen der typischen Art der Konvertierung foglende Zuweisung:
 

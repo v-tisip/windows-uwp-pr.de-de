@@ -6,20 +6,20 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
-ms.openlocfilehash: b317ba9280baef885bf6487d4bc0745112575dce
-ms.sourcegitcommit: 061de8e92935b5e438aa26ef63a6fac4acc4109d
+ms.openlocfilehash: aacce5710f8ed0066e5efdfb5e0344473f718f9b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "9009907"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049447"
 ---
 # <a name="windows-hello"></a>Windows Hello
 
-Dieser Artikel beschreibt die neue Windows Hello-Technologie, die im Lieferumfang des Windows 10-Betriebssystems und wird erläutert, wie Entwickler diese Technologie, um ihre universelle Windows-Plattform (UWP) apps und Back-End-Dienste schützen implementiert werden können. Der Artikel hebt die spezifischen Funktionen dieser Technologien hervor, die dabei helfen, aus der Verwendung herkömmlicher Anmeldeinformationen erwachsende Bedrohungen zu mindern. Darüber hinaus bietet er eine Anleitung dazu, wie diese Technologien als Bestandteil Ihrer Windows10-Einführung entworfen und bereitgestellt werden.
+Dieser Artikel beschreibt die neue Windows Hello-Technologie, die im Lieferumfang des Betriebssystems Windows 10 und erläutert, wie Entwickler diese Technologie, um ihre universelle Windows-Plattform (UWP)-Apps und Back-End-Dienste zu schützen implementiert werden können. Der Artikel hebt die spezifischen Funktionen dieser Technologien hervor, die dabei helfen, aus der Verwendung herkömmlicher Anmeldeinformationen erwachsende Bedrohungen zu mindern. Darüber hinaus bietet er eine Anleitung dazu, wie diese Technologien als Bestandteil Ihrer Windows10-Einführung entworfen und bereitgestellt werden.
 
 Beachten Sie, dass der Schwerpunkt dieses Artikels auf der App-Entwicklung liegt. Weitere Informationen zu den Architektur- und Implementierungsdetails von Windows Hello finden Sie unter [Windows-Hello-Anleitung auf TechNet](https://technet.microsoft.com/library/mt589441.aspx).
 
-Ein vollständiges Codebeispiel finden Sie im [Windows-Hello-Codebeispiel auf GitHub](http://go.microsoft.com/fwlink/?LinkID=717812).
+Ein vollständiges Codebeispiel finden Sie im [Windows-Hello-Codebeispiel auf GitHub](https://go.microsoft.com/fwlink/?LinkID=717812).
 
 Ein schrittweises Vorgehen zum Erstellen einer UWP-App mit Windows Hello und dem zugrunde liegenden Authentifizierungsdienst finden Sie in den Artikeln [Windows-Hello-Anmelde-App](microsoft-passport-login.md) und [Windows-Hello-Anmeldedienst](microsoft-passport-login-auth-service.md).
 
@@ -275,9 +275,9 @@ In diesem Sequenzdiagramm ist ein grundlegender Abfrage/Rückmeldungsablauf darg
 
 ![Windows Hello-Abfrage/Rückmeldung](images/passport-challenge-response.png)
 
-Als nächstes muss der Server die Signatur überprüfen. Wenn Sie den öffentlichen Schlüssel anfordern und senden es an den Server zur späteren Überprüfung verwenden, ist es in ein ASN. 1-codiertes PublicKeyInfo-BLOB-Blob. Wenn Sie das [Windows Hello-Codebeispiel auf GitHub](http://go.microsoft.com/fwlink/?LinkID=717812)betrachten, sehen Sie, dass Hilfsklassen die Crypt32-Funktionen, um das ASN. 1-codierte Blob in ein CNG-Blob zu übersetzen, das in der Regel verwendet wird, vorhanden sind. Das BLOB enthält den Algorithmus des öffentlichen Schlüssels, also RSA, und den öffentlichen RSA-Schlüssel.
+Als nächstes muss der Server die Signatur überprüfen. Wenn Sie den öffentlichen Schlüssel anfordern und senden es an den Server zur späteren Überprüfung verwenden, ist es in ein ASN. 1-codiertes PublicKeyInfo-BLOB-Blob. Wenn Sie das [Windows Hello-Codebeispiel auf GitHub](https://go.microsoft.com/fwlink/?LinkID=717812)betrachten, sehen Sie, dass Hilfsklassen die Crypt32-Funktionen, um das ASN. 1-codierte Blob in ein CNG-Blob zu übersetzen gängigeres ist vorhanden sind. Das BLOB enthält den Algorithmus des öffentlichen Schlüssels, also RSA, und den öffentlichen RSA-Schlüssel.
 
-Im Beispiel ist der Grund, die wir das ASN. 1-codierte Blob in ein CNG-Blob konvertieren, damit sie mit CNG verwendet (/ Windows/Desktop/SecCNG/Cng-Portal) werden kann und die BCrypt-API. Wenn Sie das CNG-Blob suchen, zeigen sie Sie auf die zugehörige [BCRYPT_KEY_BLOB-Struktur](/windows/desktop/api/bcrypt/ns-bcrypt-_bcrypt_key_blob). Diese API-Oberfläche kann für die Authentifizierung und Verschlüsselung in Windows-Anwendungen verwendet werden. ASN. 1 ist ein dokumentierten Standard für die Kommunikation Datenstrukturen, die serialisiert werden können, und es wird häufig in der Kryptografie für öffentliche Schlüssel und Zertifikate verwendet. Daher Informationen des öffentliche Schlüssels wird auf diese Weise zurückgegeben. Der öffentliche Schlüssel ist ein RSA-Schlüssel. und das ist der Algorithmus, den Windows Hello verwendet, wenn sie Daten signiert.
+Im Beispiel ist der Grund, die wir das ASN. 1-codierte Blob in ein CNG-Blob konvertieren, damit es mit CNG (/ Windows/Desktop/SecCNG/Cng-Portal) werden kann und die BCrypt-API. Wenn Sie das CNG-Blob suchen, wird es zeigen Sie auf die zugehörige [BCRYPT_KEY_BLOB-Struktur](/windows/desktop/api/bcrypt/ns-bcrypt-_bcrypt_key_blob). Diese API-Oberfläche kann für die Authentifizierung und Verschlüsselung in Windows-Anwendungen verwendet werden. ASN. 1 ist ein dokumentierten Standard für die Kommunikation Datenstrukturen, die serialisiert werden können, und es wird häufig in Kryptografie mit öffentlichem Schlüssel und Zertifikate verwendet. Deshalb Informationen des öffentliche Schlüssels wird auf diese Weise zurückgegeben. Der öffentliche Schlüssel ist ein RSA-Schlüssel. und das ist der Algorithmus, den Windows Hello verwendet, wenn sie Daten signiert.
 
 Sobald das CNG-BLOB verfügbar ist, müssen Sie die signierte Abfrage mit dem öffentlichen Schlüssel des Benutzers abgleichen. Da jeder seine eigene System- oder Back-End-Technologie verwendet, gibt es keine allgemeine Vorgehensweise zur Implementierung dieser Logik. Wir verwenden SHA256 als Hashalgorithmus und Pkcs1 für SignaturePadding, um sicherzustellen, dass Sie diese Funktionen zur Überprüfung der signierten Antwort vom Client verwenden. An dieser Stelle verweisen wir erneut auf das Beispiel, in dem die Vorgehensweise mit .NET 4.6 auf dem Server beschrieben wird. In der Regel werden jedoch etwa folgende Schritte ausgeführt:
 
@@ -407,9 +407,9 @@ Mission erfüllt! Sie haben das Internet gerade sicherer gemacht!
 
 ### <a name="61-articles-and-sample-code"></a>6.1 Artikel und Beispielcode
 
-- [Übersicht über WindowsHello](http://windows.microsoft.com/windows-10/getstarted-what-is-hello)
+- [Übersicht über WindowsHello](https://windows.microsoft.com/windows-10/getstarted-what-is-hello)
 - [Implementierungsdetails für Windows Hello](https://msdn.microsoft.com/library/mt589441)
-- [Windows Hello-Codebeispiel auf GitHub](http://go.microsoft.com/fwlink/?LinkID=717812)
+- [Windows Hello-Codebeispiel auf GitHub](https://go.microsoft.com/fwlink/?LinkID=717812)
 
 ### <a name="62-terminology"></a>6.2 Terminologie
 

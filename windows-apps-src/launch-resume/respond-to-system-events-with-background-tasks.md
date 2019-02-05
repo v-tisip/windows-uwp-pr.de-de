@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: c3773a486a1b7a29fc2a171c473edf38f6f3a7f1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: de8d585d7178a277d1df248858f69a5a5705fb1d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935784"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044534"
 ---
 # <a name="respond-to-system-events-with-background-tasks"></a>Reagieren auf Systemereignisse mit Hintergrundaufgaben
 
@@ -88,7 +88,7 @@ Rufen Sie [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh7
  
 ## <a name="remarks"></a>Anmerkungen
 
-Laden Sie das [Beispiel zu Hintergrundaufgaben](http://go.microsoft.com/fwlink/p/?LinkId=618666) herunter, um die Registrierung der Hintergrundaufgabe in Aktion zu sehen.
+Laden Sie das [Beispiel zu Hintergrundaufgaben](https://go.microsoft.com/fwlink/p/?LinkId=618666) herunter, um die Registrierung der Hintergrundaufgabe in Aktion zu sehen.
 
 Hintergrundaufgaben können als Reaktion auf die Ereignisse [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) und [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) ausgeführt werden. Dennoch ist das [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md) erforderlich. Vor dem Registrieren einer Hintergrundaufgabe müssen Sie außerdem [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) aufrufen.
 
@@ -108,4 +108,4 @@ Apps können Hintergrundaufgaben registrieren, die auf die Ereignisse [**TimeTri
 * [Ausführen einer Hintergrundaufgabe für einen Timer](run-a-background-task-on-a-timer-.md)
 * [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md)
 * [Debuggen einer Hintergrundaufgabe](debug-a-background-task.md)
-* [So wird’s gemacht: Auslösen von Anhalte-, Fortsetzungs- und Hintergrundereignissen in UWP-Apps (beim Debuggen)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [So wird’s gemacht: Auslösen von Anhalte-, Fortsetzungs- und Hintergrundereignissen in UWP-Apps (beim Debuggen)](https://go.microsoft.com/fwlink/p/?linkid=254345)

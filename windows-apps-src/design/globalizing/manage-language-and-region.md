@@ -7,26 +7,26 @@ ms.date: 11/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
-ms.openlocfilehash: d70dbc0dffc3763855924b8f7faca61ca2fb18f2
-ms.sourcegitcommit: 1901a43b9e40a05c28c7799e0f9b08ce92f8c8a8
+ms.openlocfilehash: d782e8cd64cb976df964c72199964c1d349d527e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "9035401"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045659"
 ---
 # <a name="understand-user-profile-languages-and-app-manifest-languages"></a>Benutzerprofilsprachen und App-Manifest-Sprachen verstehen
 Ein Windows-Benutzer kann mit **Einstellungen** > **Zeit und Sprache** > **und Region und Sprache** eine geordnete Liste der bevorzugten Anzeigesprachen oder nur eine bevorzugte Anzeigesprache konfigurieren. Zu einer Sprache kann es eine regionale Variante geben. Zum Beispiel können Sie u. a. ein Spanisch wählen, das entweder in Spanien, in Mexiko oder in den USA gesprochen wird.
 
 Ebenfalls unter **Einstellungen** > **Zeit und Sprache** > **Region und Sprache**kann der Benutzer unabhängig von der Sprache seinen Standort (Region genannt) in der Welt angeben. Beachten Sie, dass die Einstellung für die Anzeigesprache (und die regionale Variante) nicht die Einstellung der Region bestimmt und umgekehrt. Zum Beispiel könnte ein Benutzer derzeit in Frankreich leben, aber als bevorzugte Windows-Anzeigesprache Spanisch (Mexiko) wählen.
 
-Für UWP-Apps wird eine Sprache durch ein [BCP-47-Sprachtag](http://go.microsoft.com/fwlink/p/?linkid=227302) dargestellt. Das Sprachtag BCP-47 „en-US” entspricht beispielsweise Englisch (Vereinigte Staaten) in **Einstellungen**. Entsprechende UWP-APIs akzeptieren Zeichenfolgendarstellungen von BCP-47-Sprachtags und geben diese zurück.
+Für UWP-Apps wird eine Sprache durch ein [BCP-47-Sprachtag](https://go.microsoft.com/fwlink/p/?linkid=227302) dargestellt. Das Sprachtag BCP-47 „en-US” entspricht beispielsweise Englisch (Vereinigte Staaten) in **Einstellungen**. Entsprechende UWP-APIs akzeptieren Zeichenfolgendarstellungen von BCP-47-Sprachtags und geben diese zurück.
 
-Einzelheiten zu Sprachtags finden Sie auch unter [IANA Language Subtag Registry](http://go.microsoft.com/fwlink/p/?linkid=227303).
+Einzelheiten zu Sprachtags finden Sie auch unter [IANA Language Subtag Registry](https://go.microsoft.com/fwlink/p/?linkid=227303).
 
 In den folgenden drei Abschnitten werden die Begriffe „Benutzerprofil-Sprachenliste”, „App-Manifest-Sprachenliste” und „App-Laufzeit-Sprachenliste” definiert. Wir verwenden diese Begriffe in diesem Thema und in anderen Themen in diesem Featurebereich. Daher ist es wichtig zu wissen, was sie bedeuten.
 
 ## <a name="user-profile-language-list"></a>Benutzerprofil-Sprachenliste
-Die Benutzerprofil-Sprachenliste ist der Name der Liste, die vom Benutzer unter **Einstellungen** > **Zeit und Sprache** > **Region und Sprache** > **Sprachen** konfiguriert wird. Im Code können Sie die Eigenschaft [**GlobalizationPreferences.Languages**](/uwp/api/windows.system.userprofile.globalizationpreferences.Languages) verwenden, um auf die Benutzerprofilsprachenliste als schreibgeschützte Liste von Zeichenfolgen zuzugreifen, wobei jede Zeichenfolge ein einzelnes [BCP-47-Sprachentag](http://go.microsoft.com/fwlink/p/?linkid=227302) wie „en-US” oder „ja-JP” ist.
+Die Benutzerprofil-Sprachenliste ist der Name der Liste, die vom Benutzer unter **Einstellungen** > **Zeit und Sprache** > **Region und Sprache** > **Sprachen** konfiguriert wird. Im Code können Sie die Eigenschaft [**GlobalizationPreferences.Languages**](/uwp/api/windows.system.userprofile.globalizationpreferences.Languages) verwenden, um auf die Benutzerprofilsprachenliste als schreibgeschützte Liste von Zeichenfolgen zuzugreifen, wobei jede Zeichenfolge ein einzelnes [BCP-47-Sprachentag](https://go.microsoft.com/fwlink/p/?linkid=227302) wie „en-US” oder „ja-JP” ist.
 
 ```csharp
     IReadOnlyList<string> userLanguages = Windows.System.UserProfile.GlobalizationPreferences.Languages;
@@ -70,7 +70,7 @@ Die dritte Sprachenliste von Interesse ist eine Überschneidung der beiden Liste
 
 Genauer gesagt besteht die Sprachenliste für die App-Laufzeit aus diesen Elementen.
 
-1.  **Überschreibung der primären Sprache (optional)**. [**PrimaryLanguageOverride**](/uwp/api/Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride) ist eine einfache Überschreibungseinstellung für Apps, in denen die Benutzer eine eigene unabhängige Sprachauswahl treffen können, oder für Apps, bei denen die Standardsprachauswahl aus irgend einem Grund überschrieben werden sollte. Weitere Informationen dazu finden Sie unter [Anwendungsressourcen und Lokalisierung – Beispiel](http://go.microsoft.com/fwlink/p/?linkid=231501).
+1.  **Überschreibung der primären Sprache (optional)**. [**PrimaryLanguageOverride**](/uwp/api/Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride) ist eine einfache Überschreibungseinstellung für Apps, in denen die Benutzer eine eigene unabhängige Sprachauswahl treffen können, oder für Apps, bei denen die Standardsprachauswahl aus irgend einem Grund überschrieben werden sollte. Weitere Informationen dazu finden Sie unter [Anwendungsressourcen und Lokalisierung – Beispiel](https://go.microsoft.com/fwlink/p/?linkid=231501).
 2.  **Die von der App unterstützten Sprachen des Benutzers**. Dies ist die Benutzerprofil-Sprachenliste, gefiltert nach der App-Manifest-Sprachenliste. Das Filtern der Benutzersprachen anhand der von der App unterstützten Sprachen sorgt für dauerhafte Konsistenz zwischen den Software Development Kits (SDKs), Klassenbibliotheken, abhängigen Frameworkpaketen und der App.
 3.  **Wenn 1 und 2 leer sind, die Standardsprache oder die erste von der App unterstützte Sprache.** Wenn die Sprachenliste des Benutzerprofils keine von der App unterstützten Sprachen enthält, ist die App-Laufzeitsprache die erste von der App unterstützte Sprache.
 
@@ -98,7 +98,7 @@ Benennen Sie die Ressourcendateien oder ihre Ordner mit Qualifizierern für Spra
 **Hinweis:** Auch Ressourcen in der Standardsprache Ihrer app müssen sprachqualifizierer angeben. Beispielsweise, wenn Ihre app-Standardsprache Englisch (USA) ist, qualifizieren Ihre Ressourcen als `\Assets\Images\en-US\logo.png`.
 
 - Windows führt komplexe Vergleiche, über regionale Varianten wie "En-US" und "En-GB". Und fügen Sie das untergeordnete Regionstag nach Bedarf. Siehe [Wie das Ressourcenverwaltungssystem Sprachtags zuordnet](../../app-resources/how-rms-matches-lang-tags.md).
-- Geben Sie eine untergeordnete Skript Sprachtag in der Qualifizierer, wenn es keine Unterdrücken von Skripts Wert für die Sprache definiert. Verwenden zum Beispiel statt Zh-CN oder "Zh-TW", "Zh-Hant", "Zh-Hant-TW" oder "Zh-Hans" (Weitere Details finden Sie unter der [IANA Language Subtag Registry](http://go.microsoft.com/fwlink/p/?linkid=227303)).
+- Geben Sie eine untergeordnete Skript Sprachtag in der Qualifizierer, wenn es keine Unterdrücken von Skripts Wert für die Sprache definiert. Verwenden zum Beispiel statt Zh-CN oder "Zh-TW", "Zh-Hant", "Zh-Hant-TW" oder "Zh-Hans" (Weitere Details finden Sie unter der [IANA Language Subtag Registry](https://go.microsoft.com/fwlink/p/?linkid=227303)).
 - Für Sprachen, die einem einzelnen Standarddialekt, besteht nicht erforderlich, den Qualifizierer Region enthalten. Verwenden Sie z. B. ja anstelle ja-JP.
 - Für einige Tools und Komponenten wie Übersetzungsprogramme können spezielle Sprachtags, beispielsweise Informationen zu regionalen Dialekten, für das Verständnis der Daten hilfreich sein.
 
@@ -208,12 +208,12 @@ Die folgende Tabelle enthält Beispiele für die Elemente, die dem Benutzer unte
 * [GeographicRegion](/uwp/api/windows.globalization.geographicregion?branch=live)
 
 ## <a name="related-topics"></a>Verwandte Themen
-* [BCP-47-Sprachtag](http://go.microsoft.com/fwlink/p/?linkid=227302)
-* [IANA Language Subtag Registry](http://go.microsoft.com/fwlink/p/?linkid=227303)
+* [BCP-47-Sprachtag](https://go.microsoft.com/fwlink/p/?linkid=227302)
+* [IANA Language Subtag Registry](https://go.microsoft.com/fwlink/p/?linkid=227303)
 * [Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung, hohen Kontrast und andere Eigenschaften](../../app-resources/tailor-resources-lang-scale-contrast.md)
 * [Unterstützte Sprachen](../../publish/supported-languages.md)
 * [Globalisieren von Datum, Uhrzeit und Zahlenformaten](use-global-ready-formats.md)
 * [Wie das Ressourcenverwaltungssystem Sprachtags zuordnet](../../app-resources/how-rms-matches-lang-tags.md)
 
 ## <a name="samples"></a>Beispiele
-* [Anwendungsressourcen und Lokalisierung – Beispiel](http://go.microsoft.com/fwlink/p/?linkid=231501)
+* [Anwendungsressourcen und Lokalisierung – Beispiel](https://go.microsoft.com/fwlink/p/?linkid=231501)

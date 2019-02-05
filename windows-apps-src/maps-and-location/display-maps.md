@@ -6,18 +6,18 @@ ms.date: 03/14/2018
 ms.topic: article
 keywords: windows10, uwp, karten, standort, kartensteuerelement, kartenansichten
 ms.localizationpriority: medium
-ms.openlocfilehash: 7713c1664018a1875d80f70fb75da2afe6104c3c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 03c864a6e8bc6191f63a2b6fd55d8eb23ad965e4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924362"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046989"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>Anzeigen von Karten mit 2D-, 3D- und Streetside-Ansichten
 
 Sie können eine Karte als sog. *Popupkarte* in einem einfach ausblendbaren Fenster anzeigen oder in einem voll funktionsfähigen Kartensteuerelement.
 
-Laden Sie das [Kartenbeispiel](http://go.microsoft.com/fwlink/p/?LinkId=619977) herunter, um einige der in diesem Handbuch beschriebenen Funktionen auszuprobieren.
+Laden Sie das [Kartenbeispiel](https://go.microsoft.com/fwlink/p/?LinkId=619977) herunter, um einige der in diesem Handbuch beschriebenen Funktionen auszuprobieren.
 
 <a id="placecard" />
 
@@ -222,7 +222,7 @@ myMap.StyleSheet = MapStyleSheet.RoadDark();
 
 Sie können auch JSON verwenden, um benutzerdefinierte Stile zu definieren und dann JSON zum Erstellen eines [**MapStyleSheet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet) Objekt nutzen.
 
-Stylesheet JSON kann interaktiv mit der [Karte Formatvorlagen-Editor](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) -Anwendung erstellt werden.
+Stylesheet JSON kann interaktiv mithilfe der [Karte Formatvorlagen-Editor](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) -Anwendung erstellt werden.
 
 ```csharp
 myMap.StyleSheet = MapStyleSheet.ParseFromJson(@"
@@ -455,10 +455,10 @@ Sie behandeln Änderungen, die durch Ändern der Karteneinstellungen durch den B
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Bing Maps Developer Center](https://www.bingmapsportal.com/)
-* [Beispiel für UWP-Karte](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Beispiel für UWP-Karte](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Abrufen der aktuellen Position](get-location.md)
 * [Entwurfsrichtlinien für Apps mit Standortbestimmung](https://msdn.microsoft.com/library/windows/apps/hh465148)
 * [Entwurfsrichtlinien für Karten](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Build 2015-Video: Nutzen von Karten und Ortung über Telefon, Tablet und PC in Ihren Windows-Apps](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Beispiel für eine UWP-App mit Verkehrsinformationen](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Beispiel für eine UWP-App mit Verkehrsinformationen](https://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)
