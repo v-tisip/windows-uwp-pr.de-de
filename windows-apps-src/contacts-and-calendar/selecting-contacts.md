@@ -6,61 +6,61 @@ keywords: Kontakte, auswählen, einzelnen Kontakt auswählen, mehrere Kontakte a
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 28943c5ff60ebf2326193e4c3f90a02111f4aec2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c44f05b5d67fe094859ea0eacfb57c0012004d14
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927331"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047595"
 ---
-# <a name="select-contacts"></a><span data-ttu-id="2d25d-104">Auswählen von Kontakten</span><span class="sxs-lookup"><span data-stu-id="2d25d-104">Select contacts</span></span>
+# <a name="select-contacts"></a><span data-ttu-id="4f9c4-104">Auswählen von Kontakten</span><span class="sxs-lookup"><span data-stu-id="4f9c4-104">Select contacts</span></span>
 
 
 
-<span data-ttu-id="2d25d-105">Mit dem [**Windows.ApplicationModel.Contacts**](https://msdn.microsoft.com/library/windows/apps/BR225002)-Namespace verfügen Sie über mehrere Optionen zum Auswählen von Kontakten.</span><span class="sxs-lookup"><span data-stu-id="2d25d-105">Through the [**Windows.ApplicationModel.Contacts**](https://msdn.microsoft.com/library/windows/apps/BR225002) namespace, you have several options for selecting contacts.</span></span> <span data-ttu-id="2d25d-106">Wir zeigen Ihnen hier, wie Sie einen einzelnen Kontakt oder mehrere Kontakte auswählen und wie Sie die Kontaktauswahl so konfigurieren, dass nur die von der App benötigten Kontaktinformationen abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="2d25d-106">Here, we'll show you how to select a single contact or multiple contacts, and we'll show you how to configure the contact picker to retrieve only the contact information that your app needs.</span></span>
+<span data-ttu-id="4f9c4-105">Mit dem [**Windows.ApplicationModel.Contacts**](https://msdn.microsoft.com/library/windows/apps/BR225002)-Namespace verfügen Sie über mehrere Optionen zum Auswählen von Kontakten.</span><span class="sxs-lookup"><span data-stu-id="4f9c4-105">Through the [**Windows.ApplicationModel.Contacts**](https://msdn.microsoft.com/library/windows/apps/BR225002) namespace, you have several options for selecting contacts.</span></span> <span data-ttu-id="4f9c4-106">Wir zeigen Ihnen hier, wie Sie einen einzelnen Kontakt oder mehrere Kontakte auswählen und wie Sie die Kontaktauswahl so konfigurieren, dass nur die von der App benötigten Kontaktinformationen abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="4f9c4-106">Here, we'll show you how to select a single contact or multiple contacts, and we'll show you how to configure the contact picker to retrieve only the contact information that your app needs.</span></span>
 
-## <a name="set-up-the-contact-picker"></a><span data-ttu-id="2d25d-107">Einrichten der Kontaktauswahl</span><span class="sxs-lookup"><span data-stu-id="2d25d-107">Set up the contact picker</span></span>
+## <a name="set-up-the-contact-picker"></a><span data-ttu-id="4f9c4-107">Einrichten der Kontaktauswahl</span><span class="sxs-lookup"><span data-stu-id="4f9c4-107">Set up the contact picker</span></span>
 
-<span data-ttu-id="2d25d-108">Erstellen Sie eine Instanz von [**Windows.ApplicationModel.Contacts.ContactPicker**](https://msdn.microsoft.com/library/windows/apps/BR224913), und weisen Sie sie einer Variablen zu.</span><span class="sxs-lookup"><span data-stu-id="2d25d-108">Create an instance of [**Windows.ApplicationModel.Contacts.ContactPicker**](https://msdn.microsoft.com/library/windows/apps/BR224913) and assign it to a variable.</span></span>
+<span data-ttu-id="4f9c4-108">Erstellen Sie eine Instanz von [**Windows.ApplicationModel.Contacts.ContactPicker**](https://msdn.microsoft.com/library/windows/apps/BR224913), und weisen Sie sie einer Variablen zu.</span><span class="sxs-lookup"><span data-stu-id="4f9c4-108">Create an instance of [**Windows.ApplicationModel.Contacts.ContactPicker**](https://msdn.microsoft.com/library/windows/apps/BR224913) and assign it to a variable.</span></span>
 
 ```cs
 var contactPicker = new Windows.ApplicationModel.Contacts.ContactPicker();
 ```
 
-## <a name="set-the-selection-mode-optional"></a><span data-ttu-id="2d25d-109">Festlegen des Auswahlmodus (optional)</span><span class="sxs-lookup"><span data-stu-id="2d25d-109">Set the selection mode (optional)</span></span>
+## <a name="set-the-selection-mode-optional"></a><span data-ttu-id="4f9c4-109">Festlegen des Auswahlmodus (optional)</span><span class="sxs-lookup"><span data-stu-id="4f9c4-109">Set the selection mode (optional)</span></span>
 
-<span data-ttu-id="2d25d-110">Standardmäßig ruft die Kontaktauswahl alle verfügbaren Daten für die von Benutzern ausgewählten Kontakte ab.</span><span class="sxs-lookup"><span data-stu-id="2d25d-110">By default, the contact picker retrieves all of the available data for the contacts that the user selects.</span></span> <span data-ttu-id="2d25d-111">Mithilfe der [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.selectionmode)-Eigenschaft können Sie die Kontaktauswahl so konfigurieren, dass nur die von der App benötigten Datenfelder abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="2d25d-111">The [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.selectionmode) property lets you configure the contact picker to retrieve only the data fields that your app needs.</span></span> <span data-ttu-id="2d25d-112">Diese effiziente Verwendungsweise der Kontaktauswahl eignet sich besonders dann, wenn Sie nur einen Teil der verfügbaren Kontaktdaten benötigen.</span><span class="sxs-lookup"><span data-stu-id="2d25d-112">This is a more efficient way to use the contact picker if you only need a subset of the available contact data.</span></span>
+<span data-ttu-id="4f9c4-110">Standardmäßig ruft die Kontaktauswahl alle verfügbaren Daten für die von Benutzern ausgewählten Kontakte ab.</span><span class="sxs-lookup"><span data-stu-id="4f9c4-110">By default, the contact picker retrieves all of the available data for the contacts that the user selects.</span></span> <span data-ttu-id="4f9c4-111">Mithilfe der [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.selectionmode)-Eigenschaft können Sie die Kontaktauswahl so konfigurieren, dass nur die von der App benötigten Datenfelder abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="4f9c4-111">The [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.selectionmode) property lets you configure the contact picker to retrieve only the data fields that your app needs.</span></span> <span data-ttu-id="4f9c4-112">Diese effiziente Verwendungsweise der Kontaktauswahl eignet sich besonders dann, wenn Sie nur einen Teil der verfügbaren Kontaktdaten benötigen.</span><span class="sxs-lookup"><span data-stu-id="4f9c4-112">This is a more efficient way to use the contact picker if you only need a subset of the available contact data.</span></span>
 
-<span data-ttu-id="2d25d-113">Legen Sie zunächst die [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.selectionmode)-Eigenschaft auf **Fields** fest.</span><span class="sxs-lookup"><span data-stu-id="2d25d-113">First, set the [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.selectionmode) property to **Fields**:</span></span>
+<span data-ttu-id="4f9c4-113">Legen Sie zunächst die [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.selectionmode)-Eigenschaft auf **Fields** fest.</span><span class="sxs-lookup"><span data-stu-id="4f9c4-113">First, set the [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.selectionmode) property to **Fields**:</span></span>
 
 ```cs
 contactPicker.SelectionMode = Windows.ApplicationModel.Contacts.ContactSelectionMode.Fields;
 ```
 
-<span data-ttu-id="2d25d-114">Geben Sie dann mithilfe der [**DesiredFieldsWithContactFieldType**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.desiredfieldswithcontactfieldtype)-Eigenschaft die Felder an, die von der Kontaktauswahl abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="2d25d-114">Then, use the [**DesiredFieldsWithContactFieldType**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.desiredfieldswithcontactfieldtype) property to specify the fields that you want the contact picker to retrieve.</span></span> <span data-ttu-id="2d25d-115">In diesem Beispiel wird die Kontaktauswahl so konfiguriert, dass E-Mail-Adressen abgerufen werden:</span><span class="sxs-lookup"><span data-stu-id="2d25d-115">This example configures the contact picker to retrieve email addresses:</span></span>
+<span data-ttu-id="4f9c4-114">Geben Sie dann mithilfe der [**DesiredFieldsWithContactFieldType**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.desiredfieldswithcontactfieldtype)-Eigenschaft die Felder an, die von der Kontaktauswahl abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="4f9c4-114">Then, use the [**DesiredFieldsWithContactFieldType**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.desiredfieldswithcontactfieldtype) property to specify the fields that you want the contact picker to retrieve.</span></span> <span data-ttu-id="4f9c4-115">In diesem Beispiel wird die Kontaktauswahl so konfiguriert, dass E-Mail-Adressen abgerufen werden:</span><span class="sxs-lookup"><span data-stu-id="4f9c4-115">This example configures the contact picker to retrieve email addresses:</span></span>
 
 ``` cs
 contactPicker.DesiredFieldsWithContactFieldType.Add(Windows.ApplicationModel.Contacts.ContactFieldType.Email);
 ```
 
-## <a name="launch-the-picker"></a><span data-ttu-id="2d25d-116">Starten der Auswahl</span><span class="sxs-lookup"><span data-stu-id="2d25d-116">Launch the picker</span></span>
+## <a name="launch-the-picker"></a><span data-ttu-id="4f9c4-116">Starten der Auswahl</span><span class="sxs-lookup"><span data-stu-id="4f9c4-116">Launch the picker</span></span>
 
 ```cs
 Contact contact = await contactPicker.PickContactAsync();
 ```
 
-<span data-ttu-id="2d25d-117">Verwenden Sie [**PickContactsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.pickcontactsasync), wenn der Benutzer mindestens einen Kontakt auswählen soll.</span><span class="sxs-lookup"><span data-stu-id="2d25d-117">Use [**PickContactsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.pickcontactsasync) if you want the user to select one or more contacts.</span></span>
+<span data-ttu-id="4f9c4-117">Verwenden Sie [**PickContactsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.pickcontactsasync), wenn der Benutzer mindestens einen Kontakt auswählen soll.</span><span class="sxs-lookup"><span data-stu-id="4f9c4-117">Use [**PickContactsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.pickcontactsasync) if you want the user to select one or more contacts.</span></span>
 
 ```cs
 public IList<Contact> contacts;
 contacts = await contactPicker.PickContactsAsync();
 ```
 
-## <a name="process-the-contacts"></a><span data-ttu-id="2d25d-118">Verarbeiten der Kontakte</span><span class="sxs-lookup"><span data-stu-id="2d25d-118">Process the contacts</span></span>
+## <a name="process-the-contacts"></a><span data-ttu-id="4f9c4-118">Verarbeiten der Kontakte</span><span class="sxs-lookup"><span data-stu-id="4f9c4-118">Process the contacts</span></span>
 
-<span data-ttu-id="2d25d-119">Überprüfen Sie in der Auswahl, ob der Benutzer Kontakte ausgewählt hat.</span><span class="sxs-lookup"><span data-stu-id="2d25d-119">When the picker returns, check whether the user has selected any contacts.</span></span> <span data-ttu-id="2d25d-120">Wenn ja, verarbeiten Sie die Kontaktinformationen.</span><span class="sxs-lookup"><span data-stu-id="2d25d-120">If so, process the contact information.</span></span>
+<span data-ttu-id="4f9c4-119">Überprüfen Sie in der Auswahl, ob der Benutzer Kontakte ausgewählt hat.</span><span class="sxs-lookup"><span data-stu-id="4f9c4-119">When the picker returns, check whether the user has selected any contacts.</span></span> <span data-ttu-id="4f9c4-120">Wenn ja, verarbeiten Sie die Kontaktinformationen.</span><span class="sxs-lookup"><span data-stu-id="4f9c4-120">If so, process the contact information.</span></span>
 
-<span data-ttu-id="2d25d-121">Dieses Beispiel zeigt, wie ein einzelner Kontakt verarbeitet wird.</span><span class="sxs-lookup"><span data-stu-id="2d25d-121">This example shows how to processes a single contact.</span></span> <span data-ttu-id="2d25d-122">Hier wird der Name des Kontakts abgerufen und in ein [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)-Steuerelement namens *OutputName* kopiert.</span><span class="sxs-lookup"><span data-stu-id="2d25d-122">Here we retrieve the contact's name and copy it into a [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) control called *OutputName*.</span></span>
+<span data-ttu-id="4f9c4-121">Dieses Beispiel zeigt, wie ein einzelner Kontakt verarbeitet wird.</span><span class="sxs-lookup"><span data-stu-id="4f9c4-121">This example shows how to processes a single contact.</span></span> <span data-ttu-id="4f9c4-122">Hier wird der Name des Kontakts abgerufen und in ein [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)-Steuerelement namens *OutputName* kopiert.</span><span class="sxs-lookup"><span data-stu-id="4f9c4-122">Here we retrieve the contact's name and copy it into a [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) control called *OutputName*.</span></span>
 
 ```cs
 if (contact != null)
@@ -73,7 +73,7 @@ else
 }
 ```
 
-<span data-ttu-id="2d25d-123">Dieses Beispiel zeigt die Verarbeitung mehrerer Kontakte.</span><span class="sxs-lookup"><span data-stu-id="2d25d-123">This example shows how to process multiple contacts.</span></span>
+<span data-ttu-id="4f9c4-123">Dieses Beispiel zeigt die Verarbeitung mehrerer Kontakte.</span><span class="sxs-lookup"><span data-stu-id="4f9c4-123">This example shows how to process multiple contacts.</span></span>
 
 ```cs
 if (contacts != null && contacts.Count > 0)
@@ -85,9 +85,9 @@ if (contacts != null && contacts.Count > 0)
 }
 ```
 
-## <a name="complete-example-single-contact"></a><span data-ttu-id="2d25d-124">Vollständiges Beispiel (einzelner Kontakt)</span><span class="sxs-lookup"><span data-stu-id="2d25d-124">Complete example (single contact)</span></span>
+## <a name="complete-example-single-contact"></a><span data-ttu-id="4f9c4-124">Vollständiges Beispiel (einzelner Kontakt)</span><span class="sxs-lookup"><span data-stu-id="4f9c4-124">Complete example (single contact)</span></span>
 
-<span data-ttu-id="2d25d-125">In diesem Beispiel werden mithilfe der Kontaktauswahl der Name sowie E-Mail-Adresse, Standort oder Telefonnummer eines einzelnen Kontakts abgerufen.</span><span class="sxs-lookup"><span data-stu-id="2d25d-125">This example uses the contact picker to retrieve a single contact's name along with an email address, location or phone number.</span></span>
+<span data-ttu-id="4f9c4-125">In diesem Beispiel werden mithilfe der Kontaktauswahl der Name sowie E-Mail-Adresse, Standort oder Telefonnummer eines einzelnen Kontakts abgerufen.</span><span class="sxs-lookup"><span data-stu-id="4f9c4-125">This example uses the contact picker to retrieve a single contact's name along with an email address, location or phone number.</span></span>
 
 ```cs
 // ...
@@ -165,9 +165,9 @@ private void AppendContactFieldValues<T>(TextBlock content, IList<T> fields)
 }
 ```
 
-## <a name="complete-example-multiple-contacts"></a><span data-ttu-id="2d25d-126">Vollständiges Beispiel (mehrere Kontakte)</span><span class="sxs-lookup"><span data-stu-id="2d25d-126">Complete example (multiple contacts)</span></span>
+## <a name="complete-example-multiple-contacts"></a><span data-ttu-id="4f9c4-126">Vollständiges Beispiel (mehrere Kontakte)</span><span class="sxs-lookup"><span data-stu-id="4f9c4-126">Complete example (multiple contacts)</span></span>
 
-<span data-ttu-id="2d25d-127">In diesem Beispiel werden mithilfe der Kontaktauswahl mehrere Kontakte abgerufen und einem [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)-Steuerelement namens `OutputContacts` hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="2d25d-127">This example uses the contact picker to retrieve multiple contacts and then adds the contacts to a [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) control called `OutputContacts`.</span></span>
+<span data-ttu-id="4f9c4-127">In diesem Beispiel werden mithilfe der Kontaktauswahl mehrere Kontakte abgerufen und einem [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)-Steuerelement namens `OutputContacts` hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="4f9c4-127">This example uses the contact picker to retrieve multiple contacts and then adds the contacts to a [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) control called `OutputContacts`.</span></span>
 
 ```cs
 MainPage rootPage = MainPage.Current;
@@ -228,6 +228,6 @@ public class ContactItemAdapter
 }
 ```
 
-## <a name="summary-and-next-steps"></a><span data-ttu-id="2d25d-128">Zusammenfassung und nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="2d25d-128">Summary and next steps</span></span>
+## <a name="summary-and-next-steps"></a><span data-ttu-id="4f9c4-128">Zusammenfassung und nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="4f9c4-128">Summary and next steps</span></span>
 
-<span data-ttu-id="2d25d-129">Sie verfügen nun über grundlegende Kenntnisse zum Abrufen von Kontaktinformationen mithilfe der Kontaktauswahl.</span><span class="sxs-lookup"><span data-stu-id="2d25d-129">Now you have a basic understanding of how to use the contact picker to retrieve contact information.</span></span> <span data-ttu-id="2d25d-130">Laden Sie die [Beispiele für universelle Windows-Apps](http://go.microsoft.com/fwlink/p/?linkid=619979) von GitHub herunter, um sich weitere Beispiele für die Verwendung von Kontakten und Kontaktauswahl anzusehen.</span><span class="sxs-lookup"><span data-stu-id="2d25d-130">Download the [Universal Windows app samples](http://go.microsoft.com/fwlink/p/?linkid=619979) from GitHub to see more examples of how to use contacts and the contact picker.</span></span>
+<span data-ttu-id="4f9c4-129">Sie verfügen nun über grundlegende Kenntnisse zum Abrufen von Kontaktinformationen mithilfe der Kontaktauswahl.</span><span class="sxs-lookup"><span data-stu-id="4f9c4-129">Now you have a basic understanding of how to use the contact picker to retrieve contact information.</span></span> <span data-ttu-id="4f9c4-130">Laden Sie die [Beispiele für universelle Windows-Apps](https://go.microsoft.com/fwlink/p/?linkid=619979) von GitHub herunter, um sich weitere Beispiele für die Verwendung von Kontakten und Kontaktauswahl anzusehen.</span><span class="sxs-lookup"><span data-stu-id="4f9c4-130">Download the [Universal Windows app samples](https://go.microsoft.com/fwlink/p/?linkid=619979) from GitHub to see more examples of how to use contacts and the contact picker.</span></span>

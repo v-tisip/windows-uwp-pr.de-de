@@ -9,38 +9,38 @@ design-contact: tbd
 dev-contact: tbd
 doc-status: not-published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e4053b8f06d0ff2b02ce7c4c3bf53af30384cb3
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 728a057b445ae50a1c0af818b350b25fd390ca01
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037142"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047635"
 ---
-# <a name="contact-card"></a><span data-ttu-id="ae431-103">Visitenkarte</span><span class="sxs-lookup"><span data-stu-id="ae431-103">Contact card</span></span>
+# <a name="contact-card"></a><span data-ttu-id="4ecc2-103">Visitenkarte</span><span class="sxs-lookup"><span data-stu-id="4ecc2-103">Contact card</span></span>
 
-<span data-ttu-id="ae431-104">Die Visitenkarte zeigt Kontaktinformationen wie Name, Telefonnummer und Adresse für einen [Kontakt](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact) (der Mechanismus, den UWP zum Darstellen von Personen und Unternehmen verwendet).</span><span class="sxs-lookup"><span data-stu-id="ae431-104">The contact card displays contact information, such as the name, phone number, and address, for a [Contact](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact) (the mechanism UWP uses to represent people and businesses).</span></span>  <span data-ttu-id="ae431-105">Die Visitenkarte ermöglicht dem Benutzer auch die Bearbeitung von Kontaktinformationen.</span><span class="sxs-lookup"><span data-stu-id="ae431-105">The contact card also lets the user edit contact info.</span></span> <span data-ttu-id="ae431-106">Sie können eine kompakte Visitenkarte oder eine vollständige Visitenkarte anzeigen, die zusätzliche Informationen enthält.</span><span class="sxs-lookup"><span data-stu-id="ae431-106">You can choose to display a compact contact card, or a full contact card that contains additional information.</span></span>
+<span data-ttu-id="4ecc2-104">Die Visitenkarte zeigt Kontaktinformationen wie Name, Telefonnummer und Adresse für einen [Kontakt](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact) (der Mechanismus, den UWP zum Darstellen von Personen und Unternehmen verwendet).</span><span class="sxs-lookup"><span data-stu-id="4ecc2-104">The contact card displays contact information, such as the name, phone number, and address, for a [Contact](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact) (the mechanism UWP uses to represent people and businesses).</span></span>  <span data-ttu-id="4ecc2-105">Die Visitenkarte ermöglicht dem Benutzer auch die Bearbeitung von Kontaktinformationen.</span><span class="sxs-lookup"><span data-stu-id="4ecc2-105">The contact card also lets the user edit contact info.</span></span> <span data-ttu-id="4ecc2-106">Sie können eine kompakte Visitenkarte oder eine vollständige Visitenkarte anzeigen, die zusätzliche Informationen enthält.</span><span class="sxs-lookup"><span data-stu-id="4ecc2-106">You can choose to display a compact contact card, or a full contact card that contains additional information.</span></span>
 
-> <span data-ttu-id="ae431-107">**Wichtige APIs**: [ShowContactCard-Methode](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowFullContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_Foundation_Rect_),   [ShowFullContactCard-Methode](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_),  [IsShowContactCardSupported-Methode](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported),  [Contact-Klasse](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact)</span><span class="sxs-lookup"><span data-stu-id="ae431-107">**Important APIs**: [ShowContactCard method](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowFullContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_Foundation_Rect_),   [ShowFullContactCard method](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_),  [IsShowContactCardSupported method](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported),  [Contact class](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact)</span></span>  
+> <span data-ttu-id="4ecc2-107">**Wichtige APIs**: [ShowContactCard-Methode](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowFullContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_Foundation_Rect_),   [ShowFullContactCard-Methode](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_),  [IsShowContactCardSupported-Methode](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported),  [Contact-Klasse](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact)</span><span class="sxs-lookup"><span data-stu-id="4ecc2-107">**Important APIs**: [ShowContactCard method](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowFullContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_Foundation_Rect_),   [ShowFullContactCard method](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_),  [IsShowContactCardSupported method](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported),  [Contact class](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact)</span></span>  
 
-<span data-ttu-id="ae431-108">Es gibt zwei Möglichkeiten, die Visitenkarte anzuzeigen:</span><span class="sxs-lookup"><span data-stu-id="ae431-108">There are two ways to display the contact card:</span></span>  
-* <span data-ttu-id="ae431-109">Als standardmäßige Visitenkarte, die in einem ausblendbaren Flyout angezeigt wird (die Visitenkarte wird ausgeblendet, wenn der Benutzer auf eine Stelle außerhalb der Visitenkarte klickt).</span><span class="sxs-lookup"><span data-stu-id="ae431-109">As a standard contact card that appears in a flyout that is light-dismissable--the contact card dissapears when the user clicks outside of it.</span></span> 
-* <span data-ttu-id="ae431-110">Als vollständige Visitenkarte, die der mehr Platz in Anspruch nimmt und nicht ausgeblendet werden kann (der Benutzer muss auf **Schließen** klicken, um sie zu schließen).</span><span class="sxs-lookup"><span data-stu-id="ae431-110">As a full contact card that takes up more space and is not light-dismissable--the user must click **close** to close it.</span></span> 
+<span data-ttu-id="4ecc2-108">Es gibt zwei Möglichkeiten, die Visitenkarte anzuzeigen:</span><span class="sxs-lookup"><span data-stu-id="4ecc2-108">There are two ways to display the contact card:</span></span>  
+* <span data-ttu-id="4ecc2-109">Als standardmäßige Visitenkarte, die in einem ausblendbaren Flyout angezeigt wird (die Visitenkarte wird ausgeblendet, wenn der Benutzer auf eine Stelle außerhalb der Visitenkarte klickt).</span><span class="sxs-lookup"><span data-stu-id="4ecc2-109">As a standard contact card that appears in a flyout that is light-dismissable--the contact card dissapears when the user clicks outside of it.</span></span> 
+* <span data-ttu-id="4ecc2-110">Als vollständige Visitenkarte, die der mehr Platz in Anspruch nimmt und nicht ausgeblendet werden kann (der Benutzer muss auf **Schließen** klicken, um sie zu schließen).</span><span class="sxs-lookup"><span data-stu-id="4ecc2-110">As a full contact card that takes up more space and is not light-dismissable--the user must click **close** to close it.</span></span> 
 
 
 <figure>
     <img src="images/contact-card/contact-card-standard.png" alt="The full contact card">
-    <figcaption><span data-ttu-id="ae431-111">Die standardmäßige Visitenkarte</span><span class="sxs-lookup"><span data-stu-id="ae431-111">The standard contact card</span></span></figcaption>
+    <figcaption><span data-ttu-id="4ecc2-111">Die standardmäßige Visitenkarte</span><span class="sxs-lookup"><span data-stu-id="4ecc2-111">The standard contact card</span></span></figcaption>
 </figure>
 
 <figure>
     <img src="images/contact-card/contact-card-full.png" alt="The full contact card">
-    <figcaption><span data-ttu-id="ae431-112">Die vollständige Visitenkarte</span><span class="sxs-lookup"><span data-stu-id="ae431-112">The full contact card</span></span></figcaption>
+    <figcaption><span data-ttu-id="4ecc2-112">Die vollständige Visitenkarte</span><span class="sxs-lookup"><span data-stu-id="4ecc2-112">The full contact card</span></span></figcaption>
 </figure>
 
 
-## <a name="is-this-the-right-control"></a><span data-ttu-id="ae431-113">Ist dies das richtige Steuerelement?</span><span class="sxs-lookup"><span data-stu-id="ae431-113">Is this the right control?</span></span>
+## <a name="is-this-the-right-control"></a><span data-ttu-id="4ecc2-113">Ist dies das richtige Steuerelement?</span><span class="sxs-lookup"><span data-stu-id="4ecc2-113">Is this the right control?</span></span>
 
-<span data-ttu-id="ae431-114">Verwenden Sie die Visitenkarte, wenn Kontaktinformationen zu einem Kontakt angezeigt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="ae431-114">Use the contact card when you want to display contact info for a contact.</span></span> <span data-ttu-id="ae431-115">Wenn Sie nur den Namen und das Bild des Kontakts anzeigen möchten, verwenden Sie die das [Personenbild-Steuerelement](person-picture.md).</span><span class="sxs-lookup"><span data-stu-id="ae431-115">If you only want to display the contact's name and picture, use the [person picture control](person-picture.md).</span></span> 
+<span data-ttu-id="4ecc2-114">Verwenden Sie die Visitenkarte, wenn Kontaktinformationen zu einem Kontakt angezeigt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="4ecc2-114">Use the contact card when you want to display contact info for a contact.</span></span> <span data-ttu-id="4ecc2-115">Wenn Sie nur den Namen und das Bild des Kontakts anzeigen möchten, verwenden Sie die das [Personenbild-Steuerelement](person-picture.md).</span><span class="sxs-lookup"><span data-stu-id="4ecc2-115">If you only want to display the contact's name and picture, use the [person picture control](person-picture.md).</span></span> 
 
 
 <!-- TODO: Add examples back when the contact card has been added. -->
@@ -61,11 +61,11 @@ ms.locfileid: "9037142"
 </tr>
 </table> -->
 
-## <a name="show-a-standard-contact-card"></a><span data-ttu-id="ae431-116">Anzeigen einer standardmäßigen Visitenkarte</span><span class="sxs-lookup"><span data-stu-id="ae431-116">Show a standard contact card</span></span>
+## <a name="show-a-standard-contact-card"></a><span data-ttu-id="4ecc2-116">Anzeigen einer standardmäßigen Visitenkarte</span><span class="sxs-lookup"><span data-stu-id="4ecc2-116">Show a standard contact card</span></span>
 
-1. <span data-ttu-id="ae431-117">Eine Visitenkarte wird in der Regel angezeigt, da der Benutzer auf ein Element geklickt hat: eine Schaltfläche oder vielleicht das [Personenbild-Steuerelement](person-picture.md).</span><span class="sxs-lookup"><span data-stu-id="ae431-117">Typically, you show a contact card because the user clicked something: a button or perhaps the [person picture control](person-picture.md).</span></span> <span data-ttu-id="ae431-118">Wir möchten das Element nicht ausblenden.</span><span class="sxs-lookup"><span data-stu-id="ae431-118">We don't want to hide the element.</span></span> <span data-ttu-id="ae431-119">Um zu vermeiden, dass es ausgeblendet wird, müssen wir ein [Rect](/uwp/api/windows.foundation.rect) erstellen, das die Position und Größe des Elements beschreibt.</span><span class="sxs-lookup"><span data-stu-id="ae431-119">To avoid hiding it, we need to create a [Rect](/uwp/api/windows.foundation.rect) that describes the location and size of the element.</span></span> 
+1. <span data-ttu-id="4ecc2-117">Eine Visitenkarte wird in der Regel angezeigt, da der Benutzer auf ein Element geklickt hat: eine Schaltfläche oder vielleicht das [Personenbild-Steuerelement](person-picture.md).</span><span class="sxs-lookup"><span data-stu-id="4ecc2-117">Typically, you show a contact card because the user clicked something: a button or perhaps the [person picture control](person-picture.md).</span></span> <span data-ttu-id="4ecc2-118">Wir möchten das Element nicht ausblenden.</span><span class="sxs-lookup"><span data-stu-id="4ecc2-118">We don't want to hide the element.</span></span> <span data-ttu-id="4ecc2-119">Um zu vermeiden, dass es ausgeblendet wird, müssen wir ein [Rect](/uwp/api/windows.foundation.rect) erstellen, das die Position und Größe des Elements beschreibt.</span><span class="sxs-lookup"><span data-stu-id="4ecc2-119">To avoid hiding it, we need to create a [Rect](/uwp/api/windows.foundation.rect) that describes the location and size of the element.</span></span> 
 
-    <span data-ttu-id="ae431-120">Wir erstellen eine Hilfsfunktion, die dies automatisch ausführt (diese wird später verwendet).</span><span class="sxs-lookup"><span data-stu-id="ae431-120">Let's create a utility function that does that for us--we'll use it later.</span></span>
+    <span data-ttu-id="4ecc2-120">Wir erstellen eine Hilfsfunktion, die dies automatisch ausführt (diese wird später verwendet).</span><span class="sxs-lookup"><span data-stu-id="4ecc2-120">Let's create a utility function that does that for us--we'll use it later.</span></span>
     ```csharp
     // Gets the rectangle of the element 
     public static Rect GetElementRectHelper(FrameworkElement element) 
@@ -78,7 +78,7 @@ ms.locfileid: "9037142"
 
     ```
 
-2. <span data-ttu-id="ae431-121">Ermitteln Sie, ob Sie die Visitenkarte anzeigen können, indem Sie die [ContactManager.IsShowContactCardSupported](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported)-Methode aufrufen.</span><span class="sxs-lookup"><span data-stu-id="ae431-121">Determine whether you can display the contact card by calling the [ContactManager.IsShowContactCardSupported](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported) method.</span></span> <span data-ttu-id="ae431-122">Wenn sie nicht unterstützt wird, wird eine Fehlermeldung angezeigt.</span><span class="sxs-lookup"><span data-stu-id="ae431-122">If it's not supported, display an error message.</span></span> <span data-ttu-id="ae431-123">(In diesem Beispiel wird davon ausgegangen, dass Sie die Visitenkarte als Reaktion auf ein Click-Ereignis anzeigen.)</span><span class="sxs-lookup"><span data-stu-id="ae431-123">(This example assumes that you'll be showing the contact card in response to a click event .)</span></span>
+2. <span data-ttu-id="4ecc2-121">Ermitteln Sie, ob Sie die Visitenkarte anzeigen können, indem Sie die [ContactManager.IsShowContactCardSupported](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported)-Methode aufrufen.</span><span class="sxs-lookup"><span data-stu-id="4ecc2-121">Determine whether you can display the contact card by calling the [ContactManager.IsShowContactCardSupported](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported) method.</span></span> <span data-ttu-id="4ecc2-122">Wenn sie nicht unterstützt wird, wird eine Fehlermeldung angezeigt.</span><span class="sxs-lookup"><span data-stu-id="4ecc2-122">If it's not supported, display an error message.</span></span> <span data-ttu-id="4ecc2-123">(In diesem Beispiel wird davon ausgegangen, dass Sie die Visitenkarte als Reaktion auf ein Click-Ereignis anzeigen.)</span><span class="sxs-lookup"><span data-stu-id="4ecc2-123">(This example assumes that you'll be showing the contact card in response to a click event .)</span></span>
     ```csharp
     // Contact and Contact Managers are existing classes 
     private void OnUserClickShowContactCard(object sender, RoutedEventArgs e) 
@@ -88,13 +88,13 @@ ms.locfileid: "9037142"
 
     ```
 
-3. <span data-ttu-id="ae431-124">Verwenden Sie die in Schritt1 erstellte Hilfsfunktion, um die Grenzen des Steuerelements abzurufen, von dem das Ereignis ausgelöst wurde (damit es nicht von der Visitenkarte verdeckt wird).</span><span class="sxs-lookup"><span data-stu-id="ae431-124">Use the utility function you created in step 1 to get the bounds of the control that fired the event (so we don't cover it up with the contact card).</span></span>
+3. <span data-ttu-id="4ecc2-124">Verwenden Sie die in Schritt1 erstellte Hilfsfunktion, um die Grenzen des Steuerelements abzurufen, von dem das Ereignis ausgelöst wurde (damit es nicht von der Visitenkarte verdeckt wird).</span><span class="sxs-lookup"><span data-stu-id="4ecc2-124">Use the utility function you created in step 1 to get the bounds of the control that fired the event (so we don't cover it up with the contact card).</span></span>
 
     ```csharp
             Rect selectionRect = GetElementRect((FrameworkElement)sender); 
     ```
 
-4. <span data-ttu-id="ae431-125">Rufen Sie das [Kontakt](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact)-Objekt auf, das angezeigt werden soll.</span><span class="sxs-lookup"><span data-stu-id="ae431-125">Get the [Contact](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact) object you want to display.</span></span> <span data-ttu-id="ae431-126">In diesem Beispiel wird lediglich ein einfacher Kontakt erstellt, Ihr Code sollte jedoch einen tatsächlichen Kontakt abrufen.</span><span class="sxs-lookup"><span data-stu-id="ae431-126">This example just creates a simple contact, but your code should retrieve an actual contact.</span></span> 
+4. <span data-ttu-id="4ecc2-125">Rufen Sie das [Kontakt](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact)-Objekt auf, das angezeigt werden soll.</span><span class="sxs-lookup"><span data-stu-id="4ecc2-125">Get the [Contact](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact) object you want to display.</span></span> <span data-ttu-id="4ecc2-126">In diesem Beispiel wird lediglich ein einfacher Kontakt erstellt, Ihr Code sollte jedoch einen tatsächlichen Kontakt abrufen.</span><span class="sxs-lookup"><span data-stu-id="4ecc2-126">This example just creates a simple contact, but your code should retrieve an actual contact.</span></span> 
 
     ```csharp
                 // Retrieve the contact to display
@@ -103,7 +103,7 @@ ms.locfileid: "9037142"
                 email.Address = "jsmith@contoso.com"; 
                 contact.Emails.Add(email); 
     ```
-5. <span data-ttu-id="ae431-127">Zeigen Sie die Visitenkarte durch Aufrufen der [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowFullContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_Foundation_Rect_)-Methode an.</span><span class="sxs-lookup"><span data-stu-id="ae431-127">Show the contact card by calling the  [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowFullContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_Foundation_Rect_) method.</span></span> 
+5. <span data-ttu-id="4ecc2-127">Zeigen Sie die Visitenkarte durch Aufrufen der [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowFullContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_Foundation_Rect_)-Methode an.</span><span class="sxs-lookup"><span data-stu-id="4ecc2-127">Show the contact card by calling the  [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowFullContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_Foundation_Rect_) method.</span></span> 
 
     ```csharp
             ContactManager.ShowFullContactCard(
@@ -112,7 +112,7 @@ ms.locfileid: "9037142"
     } 
     ```
 
-<span data-ttu-id="ae431-128">Hier sehen sie den vollständigen Beispielcode:</span><span class="sxs-lookup"><span data-stu-id="ae431-128">Here's the complete code example:</span></span>
+<span data-ttu-id="4ecc2-128">Hier sehen sie den vollständigen Beispielcode:</span><span class="sxs-lookup"><span data-stu-id="4ecc2-128">Here's the complete code example:</span></span>
 
 ```csharp
 // Gets the rectangle of the element 
@@ -144,9 +144,9 @@ private void OnUserClickShowContactCard(object sender, RoutedEventArgs e)
 
 ```
 
-## <a name="show-a-full-contact-card"></a><span data-ttu-id="ae431-129">Anzeigen einer vollständigen Visitenkarte</span><span class="sxs-lookup"><span data-stu-id="ae431-129">Show a full contact card</span></span>
+## <a name="show-a-full-contact-card"></a><span data-ttu-id="4ecc2-129">Anzeigen einer vollständigen Visitenkarte</span><span class="sxs-lookup"><span data-stu-id="4ecc2-129">Show a full contact card</span></span>
 
-<span data-ttu-id="ae431-130">Rufen Sie zum Anzeigen der vollständigen Visitenkarte die [ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_)-Methode anstelle der [ShowContactCard ](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowFullContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_Foundation_Rect_)-Methode auf.</span><span class="sxs-lookup"><span data-stu-id="ae431-130">To show the full contact card, call the [ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_) method instead of [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowFullContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_Foundation_Rect_).</span></span>
+<span data-ttu-id="4ecc2-130">Rufen Sie zum Anzeigen der vollständigen Visitenkarte die [ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_)-Methode anstelle der [ShowContactCard ](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowFullContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_Foundation_Rect_)-Methode auf.</span><span class="sxs-lookup"><span data-stu-id="4ecc2-130">To show the full contact card, call the [ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_) method instead of [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowFullContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_Foundation_Rect_).</span></span>
 
 ```csharp
 private void onUserClickShowContactCard() 
@@ -172,14 +172,14 @@ private void onUserClickShowContactCard()
 
 ```
 
-## <a name="retrieving-real-contacts"></a><span data-ttu-id="ae431-131">Abrufen von „echten“ Kontakten</span><span class="sxs-lookup"><span data-stu-id="ae431-131">Retrieving "real" contacts</span></span>
+## <a name="retrieving-real-contacts"></a><span data-ttu-id="4ecc2-131">Abrufen von „echten“ Kontakten</span><span class="sxs-lookup"><span data-stu-id="4ecc2-131">Retrieving "real" contacts</span></span>
 
-<span data-ttu-id="ae431-132">Die Beispiele in diesem Artikel zeigen die Erstellung eines einfachen Kontakts.</span><span class="sxs-lookup"><span data-stu-id="ae431-132">The examples in this article create a simple contact.</span></span> <span data-ttu-id="ae431-133">In einer echten App würden Sie wahrscheinlich einen vorhandenen Kontakt abrufen.</span><span class="sxs-lookup"><span data-stu-id="ae431-133">In a real app, you'd probably want to retrieve an existing contact.</span></span> <span data-ttu-id="ae431-134">Anweisungen finden Sie in den [Artikeln zu Kontakten und Kalendern](/windows/uwp/contacts-and-calendar/).</span><span class="sxs-lookup"><span data-stu-id="ae431-134">For instructions, see the [Contacts and calendar article](/windows/uwp/contacts-and-calendar/).</span></span>
-
-
+<span data-ttu-id="4ecc2-132">Die Beispiele in diesem Artikel zeigen die Erstellung eines einfachen Kontakts.</span><span class="sxs-lookup"><span data-stu-id="4ecc2-132">The examples in this article create a simple contact.</span></span> <span data-ttu-id="4ecc2-133">In einer echten App würden Sie wahrscheinlich einen vorhandenen Kontakt abrufen.</span><span class="sxs-lookup"><span data-stu-id="4ecc2-133">In a real app, you'd probably want to retrieve an existing contact.</span></span> <span data-ttu-id="4ecc2-134">Anweisungen finden Sie in den [Artikeln zu Kontakten und Kalendern](/windows/uwp/contacts-and-calendar/).</span><span class="sxs-lookup"><span data-stu-id="4ecc2-134">For instructions, see the [Contacts and calendar article](/windows/uwp/contacts-and-calendar/).</span></span>
 
 
-## <a name="related-articles"></a><span data-ttu-id="ae431-135">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="ae431-135">Related articles</span></span>
-- [<span data-ttu-id="ae431-136">Kontakte und Kalender</span><span class="sxs-lookup"><span data-stu-id="ae431-136">Contacts and calendar</span></span>](/windows/uwp/contacts-and-calendar/)
-- [<span data-ttu-id="ae431-137">Beispiel für Visitenkarten</span><span class="sxs-lookup"><span data-stu-id="ae431-137">Contact cards sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=624040)
-- [<span data-ttu-id="ae431-138">Personenbild-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="ae431-138">People picture control</span></span>](/windows/uwp/controls-and-patterns/person-picture/)
+
+
+## <a name="related-articles"></a><span data-ttu-id="4ecc2-135">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="4ecc2-135">Related articles</span></span>
+- [<span data-ttu-id="4ecc2-136">Kontakte und Kalender</span><span class="sxs-lookup"><span data-stu-id="4ecc2-136">Contacts and calendar</span></span>](/windows/uwp/contacts-and-calendar/)
+- [<span data-ttu-id="4ecc2-137">Beispiel für Visitenkarten</span><span class="sxs-lookup"><span data-stu-id="4ecc2-137">Contact cards sample</span></span>](https://go.microsoft.com/fwlink/p/?LinkId=624040)
+- [<span data-ttu-id="4ecc2-138">Personenbild-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="4ecc2-138">People picture control</span></span>](/windows/uwp/controls-and-patterns/person-picture/)

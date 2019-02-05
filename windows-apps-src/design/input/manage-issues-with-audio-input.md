@@ -8,29 +8,29 @@ keywords: Sprache, Stimme, Spracherkennung, natürliche Sprache, diktieren, Eing
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c33e2890ce962f1321ef40ca0e0605e0f4e1f5f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5d2c80fd30d158f0890ed70311cdf83dce2058e5
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944394"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046623"
 ---
-# <a name="manage-issues-with-audio-input"></a><span data-ttu-id="294ec-103">Verwalten von Problemen bei der Audioeingabe</span><span class="sxs-lookup"><span data-stu-id="294ec-103">Manage issues with audio input</span></span>
+# <a name="manage-issues-with-audio-input"></a><span data-ttu-id="6f09d-103">Verwalten von Problemen bei der Audioeingabe</span><span class="sxs-lookup"><span data-stu-id="6f09d-103">Manage issues with audio input</span></span>
 
 
-<span data-ttu-id="294ec-104">Erfahren Sie, wie Sie Probleme mit der Genauigkeit der Spracherkennung behandeln, die auf die Qualität der Audioeingabe zurückzuführen sind.</span><span class="sxs-lookup"><span data-stu-id="294ec-104">Learn how to manage issues with speech-recognition accuracy caused by audio-input quality.</span></span>
+<span data-ttu-id="6f09d-104">Erfahren Sie, wie Sie Probleme mit der Genauigkeit der Spracherkennung behandeln, die auf die Qualität der Audioeingabe zurückzuführen sind.</span><span class="sxs-lookup"><span data-stu-id="6f09d-104">Learn how to manage issues with speech-recognition accuracy caused by audio-input quality.</span></span>
 
-> <span data-ttu-id="294ec-105">**Wichtige APIs**: [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226), [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243), [**SpeechRecognitionAudioProblem**](https://msdn.microsoft.com/library/windows/apps/dn631406)</span><span class="sxs-lookup"><span data-stu-id="294ec-105">**Important APIs**: [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226), [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243), [**SpeechRecognitionAudioProblem**](https://msdn.microsoft.com/library/windows/apps/dn631406)</span></span>
-
-
-## <a name="assess-audio-input-quality"></a><span data-ttu-id="294ec-106">Bewerten der Qualität der Audioeingabe</span><span class="sxs-lookup"><span data-stu-id="294ec-106">Assess audio-input quality</span></span>
+> <span data-ttu-id="6f09d-105">**Wichtige APIs**: [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226), [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243), [**SpeechRecognitionAudioProblem**](https://msdn.microsoft.com/library/windows/apps/dn631406)</span><span class="sxs-lookup"><span data-stu-id="6f09d-105">**Important APIs**: [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226), [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243), [**SpeechRecognitionAudioProblem**](https://msdn.microsoft.com/library/windows/apps/dn631406)</span></span>
 
 
-<span data-ttu-id="294ec-107">Wenn die Spracherkennung aktiviert ist, verwenden Sie das [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243)-Ereignis Ihrer Spracherkennung, um festzustellen, ob Audioprobleme die Spracheingabe stören.</span><span class="sxs-lookup"><span data-stu-id="294ec-107">When speech recognition is active, use the [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243) event of your speech recognizer to determine whether one or more audio issues might be interfering with speech input.</span></span> <span data-ttu-id="294ec-108">Das Ereignisargument ([**SpeechRecognitionQualityDegradingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn631430)) enthält die [**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431)-Eigenschaft, die die Probleme mit der Audioeingabe aufzeigt.</span><span class="sxs-lookup"><span data-stu-id="294ec-108">The event argument ([**SpeechRecognitionQualityDegradingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn631430)) provides the [**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431) property, which describes the issues detected with the audio input.</span></span>
+## <a name="assess-audio-input-quality"></a><span data-ttu-id="6f09d-106">Bewerten der Qualität der Audioeingabe</span><span class="sxs-lookup"><span data-stu-id="6f09d-106">Assess audio-input quality</span></span>
 
-<span data-ttu-id="294ec-109">Die Erkennung kann durch zu viele Hintergrundgeräusche, eine Stummschaltung des Mikrofons und die Lautstärke oder Geschwindigkeit des Lautsprechers beeinflusst werden.</span><span class="sxs-lookup"><span data-stu-id="294ec-109">Recognition can be affected by too much background noise, a muted microphone, and the volume or speed of the speaker.</span></span>
 
-<span data-ttu-id="294ec-110">Hier konfigurieren wir eine Spracherkennung und beginnen, auf das [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243)-Ereignis zu lauschen.</span><span class="sxs-lookup"><span data-stu-id="294ec-110">Here, we configure a speech recognizer and start listening for the [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243) event.</span></span>
+<span data-ttu-id="6f09d-107">Wenn die Spracherkennung aktiviert ist, verwenden Sie das [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243)-Ereignis Ihrer Spracherkennung, um festzustellen, ob Audioprobleme die Spracheingabe stören.</span><span class="sxs-lookup"><span data-stu-id="6f09d-107">When speech recognition is active, use the [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243) event of your speech recognizer to determine whether one or more audio issues might be interfering with speech input.</span></span> <span data-ttu-id="6f09d-108">Das Ereignisargument ([**SpeechRecognitionQualityDegradingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn631430)) enthält die [**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431)-Eigenschaft, die die Probleme mit der Audioeingabe aufzeigt.</span><span class="sxs-lookup"><span data-stu-id="6f09d-108">The event argument ([**SpeechRecognitionQualityDegradingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn631430)) provides the [**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431) property, which describes the issues detected with the audio input.</span></span>
+
+<span data-ttu-id="6f09d-109">Die Erkennung kann durch zu viele Hintergrundgeräusche, eine Stummschaltung des Mikrofons und die Lautstärke oder Geschwindigkeit des Lautsprechers beeinflusst werden.</span><span class="sxs-lookup"><span data-stu-id="6f09d-109">Recognition can be affected by too much background noise, a muted microphone, and the volume or speed of the speaker.</span></span>
+
+<span data-ttu-id="6f09d-110">Hier konfigurieren wir eine Spracherkennung und beginnen, auf das [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243)-Ereignis zu lauschen.</span><span class="sxs-lookup"><span data-stu-id="6f09d-110">Here, we configure a speech recognizer and start listening for the [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243) event.</span></span>
 
 ```CSharp
 private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
@@ -62,12 +62,12 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="manage-the-speech-recognition-experience"></a><span data-ttu-id="294ec-111">Verwalten der Spracherkennungsfunktion</span><span class="sxs-lookup"><span data-stu-id="294ec-111">Manage the speech-recognition experience</span></span>
+## <a name="manage-the-speech-recognition-experience"></a><span data-ttu-id="6f09d-111">Verwalten der Spracherkennungsfunktion</span><span class="sxs-lookup"><span data-stu-id="6f09d-111">Manage the speech-recognition experience</span></span>
 
 
-<span data-ttu-id="294ec-112">Mit der bereitgestellten Beschreibung der [**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431)-Eigenschaft können die Benutzer die Bedingungen für die Spracherkennung verbessern.</span><span class="sxs-lookup"><span data-stu-id="294ec-112">Use the description provided by the [**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431) property to help the user improve conditions for recognition.</span></span>
+<span data-ttu-id="6f09d-112">Mit der bereitgestellten Beschreibung der [**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431)-Eigenschaft können die Benutzer die Bedingungen für die Spracherkennung verbessern.</span><span class="sxs-lookup"><span data-stu-id="6f09d-112">Use the description provided by the [**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431) property to help the user improve conditions for recognition.</span></span>
 
-<span data-ttu-id="294ec-113">Hier erstellen wir einen Handler für das [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243)-Ereignis, der überprüft, ob die Lautstärke niedrig ist.</span><span class="sxs-lookup"><span data-stu-id="294ec-113">Here, we create a handler for the [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243) event that checks for a low volume level.</span></span> <span data-ttu-id="294ec-114">Anschließend verwenden wir ein [**SpeechSynthesizer**](https://msdn.microsoft.com/library/windows/apps/dn298152)-Objekt, um den Benutzer aufzufordern, lauter zu sprechen.</span><span class="sxs-lookup"><span data-stu-id="294ec-114">We then use a [**SpeechSynthesizer**](https://msdn.microsoft.com/library/windows/apps/dn298152) object to suggest that the user try speaking louder.</span></span>
+<span data-ttu-id="6f09d-113">Hier erstellen wir einen Handler für das [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243)-Ereignis, der überprüft, ob die Lautstärke niedrig ist.</span><span class="sxs-lookup"><span data-stu-id="6f09d-113">Here, we create a handler for the [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243) event that checks for a low volume level.</span></span> <span data-ttu-id="6f09d-114">Anschließend verwenden wir ein [**SpeechSynthesizer**](https://msdn.microsoft.com/library/windows/apps/dn298152)-Objekt, um den Benutzer aufzufordern, lauter zu sprechen.</span><span class="sxs-lookup"><span data-stu-id="6f09d-114">We then use a [**SpeechSynthesizer**](https://msdn.microsoft.com/library/windows/apps/dn298152) object to suggest that the user try speaking louder.</span></span>
 
 ```CSharp
 private async void speechRecognizer_RecognitionQualityDegrading(
@@ -102,13 +102,13 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 }
 ```
 
-## <a name="related-articles"></a><span data-ttu-id="294ec-115">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="294ec-115">Related articles</span></span>
+## <a name="related-articles"></a><span data-ttu-id="6f09d-115">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="6f09d-115">Related articles</span></span>
 
 
-* [<span data-ttu-id="294ec-116">Sprachinteraktionen</span><span class="sxs-lookup"><span data-stu-id="294ec-116">Speech interactions</span></span>](speech-interactions.md)
+* [<span data-ttu-id="6f09d-116">Sprachinteraktionen</span><span class="sxs-lookup"><span data-stu-id="6f09d-116">Speech interactions</span></span>](speech-interactions.md)
 
-**<span data-ttu-id="294ec-117">Beispiele</span><span class="sxs-lookup"><span data-stu-id="294ec-117">Samples</span></span>**
-* [<span data-ttu-id="294ec-118">Beispiel zu Spracherkennung und Sprachsynthese</span><span class="sxs-lookup"><span data-stu-id="294ec-118">Speech recognition and speech synthesis sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+**<span data-ttu-id="6f09d-117">Beispiele</span><span class="sxs-lookup"><span data-stu-id="6f09d-117">Samples</span></span>**
+* [<span data-ttu-id="6f09d-118">Beispiel zu Spracherkennung und Sprachsynthese</span><span class="sxs-lookup"><span data-stu-id="6f09d-118">Speech recognition and speech synthesis sample</span></span>](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  
