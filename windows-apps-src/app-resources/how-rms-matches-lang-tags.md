@@ -6,12 +6,12 @@ ms.date: 11/02/2017
 ms.topic: article
 keywords: Windows10, uwp, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: 4914a448432206e2418fe110c0b49517a7145e0b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ccbfa5f06d336604160f98dd44c27cc0cf1b0aed
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937977"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050583"
 ---
 # <a name="how-the-resource-management-system-matches-language-tags"></a>Wie das Ressourcenverwaltungssystem Sprachtags zuordnet
 
@@ -21,7 +21,7 @@ Im vorherigen Thema ([Wie das Ressourcenverwaltungssystem Ressourcen zuordnet un
 
 Ressourcen mit Sprachtagqualifizierern werden basierend auf der Sprachenliste für die App-Laufzeit verglichen und bewertet. Definitionen der verschiedenen Sprachlisten finden Sie unter [Benutzerprofilsprachen und App-Manifest-Sprachen verstehen](../design/globalizing/manage-language-and-region.md). Zuerst wird die erste Sprache in einer Liste abgeglichen und dann die zweite Sprache in der Liste (auch bei anderen regionalen Varianten). Eine Ressource für „en-GB“ wird z.B. vor einer „fr-CA“-Ressource ausgewählt, wenn „en-US“ die Sprache der App-Laufzeit ist. Nur dann, wenn keine Ressourcen für eine Form von „en“ vorhanden sind, wird eine Ressource für „fr-CA“ gewählt. (Beachten Sie, dass in diesem Fall die Standardsprache der App nicht auf eine beliebige Form von „en“ festgelegt werden kann).
 
-Der Bewertungsmechanismus verwendet Daten aus der Subtag Registry [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302) und aus andere Datenquellen. Dies ermöglicht einen Bewertungsgradienten mit unterschiedlichen Übereinstimmungsqualitäten. Sind mehrere Kandidaten verfügbar, wird der Kandidat mit der besten Übereinstimmungsbewertung ausgewählt.
+Der Bewertungsmechanismus verwendet Daten aus der Subtag Registry [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302) und aus andere Datenquellen. Dies ermöglicht einen Bewertungsgradienten mit unterschiedlichen Übereinstimmungsqualitäten. Sind mehrere Kandidaten verfügbar, wird der Kandidat mit der besten Übereinstimmungsbewertung ausgewählt.
 
 Dadurch können Sie Sprachinhalten allgemeine Tags hinzufügen, bei Bedarf aber dennoch bestimmte Inhalte angeben. Beispielsweise könnte Ihre App über viele englische Zeichenfolgen verfügen, die sowohl in den USA als auch in Großbritannien und anderen Regionen üblich sind. Werden diese Zeichenfolgen mit dem Tag „en” (Englisch) versehen, kann dadurch Platz gespart und der Lokalisierungsaufwand reduziert werden. Wenn eine Unterscheidung erforderlich ist, z.B. in einer Zeichenfolge mit dem Wort „color” oder „colour”, können für die US-amerikanische und die englische Version jeweils die Tags „en-US” und „en-GB” verwendet werden.
 
@@ -74,7 +74,7 @@ Die Tags stimmen in Bezug auf die Subtags für Sprachen und Skripte überein, un
 
 #### <a name="macro-region-match"></a>Vergleichen von Makroregion
 
-Die Tags stimmen in Bezug auf die Subtags für Sprachen- und Skripte überein. Beide Tags enthalten Regionen-Subtags, von denen eines eine Makroregion angibt, in der die andere Region enthalten ist. Die untergeordneten Tags für die Makroregion sind immer numerischer Art und werden von den Regionscodes der Statistikabteilung der Vereinten Nationen (M49) abgeleitet. Ausführliche Informationen zu umfassenden Beziehungen finden Sie unter [Composition of macro geographic (continental) regions, geographical sub-regions, and selected economic and other groupings](http://go.microsoft.com/fwlink/p/?LinkId=247929) (Zusammensetzung makrogeografischer (Kontinental-)Regionen, geografischer Unterregionen und ausgewählter ökonomischer und anderer Gruppierungen).
+Die Tags stimmen in Bezug auf die Subtags für Sprachen- und Skripte überein. Beide Tags enthalten Regionen-Subtags, von denen eines eine Makroregion angibt, in der die andere Region enthalten ist. Die untergeordneten Tags für die Makroregion sind immer numerischer Art und werden von den Regionscodes der Statistikabteilung der Vereinten Nationen (M49) abgeleitet. Ausführliche Informationen zu umfassenden Beziehungen finden Sie unter [Composition of macro geographic (continental) regions, geographical sub-regions, and selected economic and other groupings](https://go.microsoft.com/fwlink/p/?LinkId=247929) (Zusammensetzung makrogeografischer (Kontinental-)Regionen, geografischer Unterregionen und ausgewählter ökonomischer und anderer Gruppierungen).
 
 **Hinweis** UN-Codes für „ökonomische Gruppierungen” oder „andere Gruppierungen” werden in BCP-47 nicht unterstützt.
  
@@ -189,6 +189,6 @@ Englisch erfordert hierbei besondere Beachtung. Wenn für eine App die Lokalisie
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Wie das Ressourcenverwaltungssystem Ressourcen zuordnet und auswählt](how-rms-matches-and-chooses-resources.md)
-* [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)
+* [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Benutzerprofilsprachen und App-Manifest-Sprachen verstehen](../design/globalizing/manage-language-and-region.md)
-* [Zusammensetzung von makrogeografischen (kontinentalen) Regionen, geografischen Unterregionen und ausgewählten wirtschaftlichen und anderen Gruppierungen](http://go.microsoft.com/fwlink/p/?LinkId=247929)
+* [Zusammensetzung von makrogeografischen (kontinentalen) Regionen, geografischen Unterregionen und ausgewählten wirtschaftlichen und anderen Gruppierungen](https://go.microsoft.com/fwlink/p/?LinkId=247929)

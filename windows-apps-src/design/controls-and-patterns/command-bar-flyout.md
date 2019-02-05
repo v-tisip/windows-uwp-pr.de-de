@@ -12,12 +12,12 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0760805128f8f11b4598a5c8b0d19d8e9f20d04d
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 90c86e071b0e1d2a07d7755ba23cb6418ca0022a
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050953"
+ms.locfileid: "9058571"
 ---
 # <a name="command-bar-flyout"></a>Befehlsleisten-Flyout
 
@@ -165,7 +165,7 @@ Die Steuerelemente für die App-Leistenschaltfläche zeichnen sich durch ein Sym
 
 ### <a name="other-content"></a>Andere Inhalte
 
-Sie können eine Befehlsleisten-Flyout eine AppBarElementContainer umschließen andere Steuerelemente hinzufügen. Auf diese Weise können Sie die Steuerelemente wie [DropDownButton]() oder [SplitButton]()hinzugefügt oder Containern wie [StackPanel]() um komplexere Benutzeroberfläche zu erstellen.
+Sie können eine Befehlsleisten-Flyout eine AppBarElementContainer umschließen andere Steuerelemente hinzufügen. Auf diese Weise können Sie die Steuerelemente wie [DropDownButton](buttons.md) oder [SplitButton](buttons.md)hinzugefügt oder Containern wie [StackPanel](buttons.md) um komplexere Benutzeroberfläche zu erstellen.
 
 Um den primären oder sekundären Befehl Sammlungen von einem Befehlsleisten-Flyout hinzugefügt werden, muss ein Element die [ICommandBarElement](/uwp/api/windows.ui.xaml.controls.icommandbarelement) -Schnittstelle implementieren. AppBarElementContainer ist ein Wrapper, der diese Schnittstelle implementiert, sodass Sie ein Element zu einer Befehlsleiste hinzufügen können, auch wenn es nicht die Schnittstelle selbst implementiert.
 
@@ -174,7 +174,7 @@ Hier wird ein AppBarElementContainer verwendet, um zusätzliche Elemente zu eine
 > [!TIP]
 > Standardmäßig Elemente für die app-Canvas zur möglicherweise nicht sehen in einer Befehlsleiste. Wenn Sie ein Element, AppBarElementContainer hinzufügen, gibt es jedoch einige Schritte, die Sie ausführen sollten, um sicherzustellen, das Element, das andere Element auf der Befehl entsprechen:
 >
-> - Überschreiben Sie die Standardpinsel mit [einfache Formatierung](/design/controls-and-patterns/xaml-styles#lightweight-styling) des Elements Hintergrund und Rahmen Schaltflächen auf der app entsprechen.
+> - Überschreiben Sie die Standardpinsel mit [einfache Formatierung](/windows/uwp/design/controls-and-patterns/xaml-styles#lightweight-styling) des Elements Hintergrund und Rahmen Schaltflächen auf der app entsprechen.
 > - Anpassen der Größe und Position des Elements.
 > - Umschließen Sie Symbole in einer Viewbox mit einer Breite und Höhe des 16px.
 

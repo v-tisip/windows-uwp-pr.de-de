@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f7a5054fde1a1a24945b193f578b8389519dc2d5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7a3bf2ce69105787b7ca9e83c7f7fe5db8ae1038
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918626"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050513"
 ---
 # <a name="periodic-notification-overview"></a>Übersicht über regelmäßige Benachrichtigungen
  
@@ -25,7 +25,7 @@ Regelmäßige Benachrichtigungen – auch als abgerufene Benachrichtigungen beze
 
 Regelmäßige Benachrichtigungen bieten Ihnen Live-Kachelaktualisierungen mit minimaler Investition in Clouddienst und Client. Sie stellen auch eine gute Methode zum Verteilen desselben Inhalts an eine große Zielgruppe dar.
 
-**Hinweis:**  Weitere Informationen finden Sie durch [Pushbenachrichtigungen und regelmäßige Benachrichtigungen-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=231476) für Windows8.1 herunterladen und dessen Quellcode in Ihrer Windows 10-app wiederverwenden.
+**Hinweis:**  Sie weitere Informationen für Windows8.1 [Pushbenachrichtigungen und regelmäßige benachrichtigungsbeispiel](https://go.microsoft.com/fwlink/p/?linkid=231476) heruntergeladen und dessen Quellcode in Ihrer Windows 10-app wiederverwenden.
 
  
 
@@ -77,7 +77,7 @@ Wenn Sie ein App-Update, die die Abruf-URI ändert, freigeben, sollten Sie tägl
 
 Standardmäßig laufen die regelmäßigen Kachel- und Signalbenachrichtigungen drei Tage, nachdem sie heruntergeladen wurden, ab. Wenn eine Benachrichtigung abläuft, wird der Inhalt aus dem Signal, der Kachel oder der Warteschlange entfernt und nicht mehr angezeigt. Es wird empfohlen, eine explizite Ablaufzeit für alle regelmäßigen Kachel- und Signalbenachrichtigungen festzulegen. Verwenden Sie dabei eine für Ihre App sinnvolle Zeit, durch die sichergestellt wird, dass der Inhalt nur so lange beibehalten wird, wie er relevant ist. Eine explizite Ablaufzeit ist für Inhalte mit definierter Lebensdauer von großer Bedeutung. Durch sie wird weiterhin sichergestellt, dass veraltete Inhalte entfernt werden, wenn Ihr Clouddienst nicht verfügbar ist oder der Benutzer die Verbindung mit dem Netzwerk für längere Zeit trennt.
 
-Ihr Cloud-Dienst legt ein Ablaufdatum und eine Ablaufzeit für eine Benachrichtigung fest, indem der Antwortnutzlast der HTTP-Header "X-WNS-Expires" hinzugefügt wird. Der HTTP-Header „X-WNS-Expires” entspricht dem [HTTP-Datumsformat](http://go.microsoft.com/fwlink/p/?linkid=253706). Weitere Informationen finden Sie unter [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) oder [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_).
+Ihr Cloud-Dienst legt ein Ablaufdatum und eine Ablaufzeit für eine Benachrichtigung fest, indem der Antwortnutzlast der HTTP-Header "X-WNS-Expires" hinzugefügt wird. Der HTTP-Header „X-WNS-Expires” entspricht dem [HTTP-Datumsformat](https://go.microsoft.com/fwlink/p/?linkid=253706). Weitere Informationen finden Sie unter [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) oder [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_).
 
 Beispielsweise können Sie während eines aktiven Börsenhandelstags die Gültigkeitsdauer für eine Aktienpreisaktualisierung gegenüber dem Abfrageintervall verdoppeln (wie z.B. eine Stunde nach Empfang bei einer Abfrage zu jeder halben Stunde). Als weiteres Beispiel dient eine News-App, bei der festgestellt wird, dass ein Intervall von einem Tag für eine tägliche Kachelaktualisierung angemessen ist.
 

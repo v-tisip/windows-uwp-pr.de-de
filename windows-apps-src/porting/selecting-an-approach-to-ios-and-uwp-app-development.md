@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b87ee76481492de0dfb23394e0aef7f017f3305
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 8334a99fc27d96214a73d0ad01ec8ece791fd90f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935984"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049657"
 ---
 # <a name="selecting-an-approach-to-ios-and-uwp-app-development"></a>Auswählen eines Ansatzes für die Entwicklung von iOS- und UWP-Apps
 
@@ -26,19 +26,19 @@ Windows und iOS sind anscheinend sehr unterschiedlich, es stehen jedoch immer me
 
 Wenn Sie eine neue App erstellen, stehen zahlreiche Optionen zur Verfügung, u.a.:
 
--   [Xamarin](http://go.microsoft.com/fwlink/p/?LinkID=320484)
+-   [Xamarin](https://go.microsoft.com/fwlink/p/?LinkID=320484)
 
     Mit Xamarin können Sie Ihre App in C# schreiben, sie unter Windows ausführen und zudem systemeigene iOS-Apps entwickeln. Unterstützung für Xamarin ist in Visual Studio integriert. Wählen Sie einfach den richtigen Projekttyp aus.
 
--   [Apache Cordova](http://go.microsoft.com/fwlink/p/?LinkID=400439)
+-   [Apache Cordova](https://go.microsoft.com/fwlink/p/?LinkID=400439)
 
     Falls Sie Javascript und HTML bevorzugen, unterstützt Sie Apache Cordova (auch als PhoneGap bezeichnet) beim Entwickeln plattformübergreifender Apps für iOS, Windows und Android. Dieser Projekttyp ist ebenfalls in Visual Studio integriert.
 
 -   Spielengines
 
-    Mit Tools wie [Unity3D](http://go.microsoft.com/fwlink/p/?LinkID=320479) und [Unreal Engine](http://go.microsoft.com/fwlink/p/?LinkID=394062) können Sie Spiele in AAA-Qualität für Windows und zahlreiche andere Plattformen, einschließlich iOS, programmieren. Unity unterstützt C#-Skripting, Unreal verwendet C++.
+    Mit Tools wie [Unity3D](https://go.microsoft.com/fwlink/p/?LinkID=320479) und [Unreal Engine](https://go.microsoft.com/fwlink/p/?LinkID=394062) können Sie Spiele in AAA-Qualität für Windows und zahlreiche andere Plattformen, einschließlich iOS, programmieren. Unity unterstützt C#-Skripting, Unreal verwendet C++.
 
--   [MonoGame](http://go.microsoft.com/fwlink/p/?LinkID=320483)
+-   [MonoGame](https://go.microsoft.com/fwlink/p/?LinkID=320483)
 
     Der geistige Nachfolger von XNA. Nun handelt es sich dabei um ein plattformübergreifendes OpenSource-Framework. Das bedeutet, Sie können Apps in C# für zahlreiche Plattformen mit Unterstützung für Physik-Engines sowie 2D- und 3D-Grafiken schreiben.
 
@@ -54,13 +54,13 @@ Bei einer vorhandenen iOS-App stehen weniger Optionen zur Verfügung. Es ist jed
 
     Wenn die Kerngeschäftslogik nicht in Objective-C oder Swift, sondern in C++ geschrieben ist, können Sie diesen Code häufig mit geringfügigen Änderungen in Ihrem Projekt verwenden. Anschließend können Sie wie bei anderen Windows-Apps mithilfe von XAML die Benutzeroberfläche definieren und den C++-Code bei Bedarf nutzen.
 
--   [Verwenden von ANGLE zum Ausführen von OpenGL ES unter Windows](http://go.microsoft.com/fwlink/p/?linkid=618387)
+-   [Verwenden von ANGLE zum Ausführen von OpenGL ES unter Windows](https://go.microsoft.com/fwlink/p/?linkid=618387)
 
     Ein Zwischenschritt zum Portieren Ihres OpenGL ES2.0-Projekts ist die Verwendung von ANGLE. Mit ANGLE können Sie OpenGL ES-Inhalte unter Windows ausführen, indem Sie OpenGL ES-API-Aufrufe in DirectX11-API-Aufrufe übersetzen.
 
 ## <a name="other-cross-platform-authoring-tools"></a>Andere plattformübergreifende Erstellungstools
 
--   [GameSalad](http://go.microsoft.com/fwlink/p/?LinkID=320480)
+-   [GameSalad](https://go.microsoft.com/fwlink/p/?LinkID=320480)
 
     Eine Spielerstellungsumgebung
 
@@ -68,31 +68,31 @@ Bei einer vorhandenen iOS-App stehen weniger Optionen zur Verfügung. Es ist jed
 
     Eine Spielerstellungsumgebung
 
--   [Titanium Studio](http://go.microsoft.com/fwlink/p/?LinkID=320482)
+-   [Titanium Studio](https://go.microsoft.com/fwlink/p/?LinkID=320482)
 
     Eine plattformübergreifende Erstellungsumgebung
 
--   [Cocos2D-x](http://go.microsoft.com/fwlink/p/?LinkID=320485)
+-   [Cocos2D-x](https://go.microsoft.com/fwlink/p/?LinkID=320485)
 
     Eine plattformübergreifende Codebibliothek zur Spritebehandlung und Physikmodellierung
 
--   [Impact.js](http://go.microsoft.com/fwlink/p/?LinkID=320486)
+-   [Impact.js](https://go.microsoft.com/fwlink/p/?LinkID=320486)
 
     Eine HTML-basierte Spielbibliothek.
 
--   [Marmalade](http://go.microsoft.com/fwlink/p/?LinkID=320487)
+-   [Marmalade](https://go.microsoft.com/fwlink/p/?LinkID=320487)
 
     Ein plattformübergreifendes SDK
 
--   [OpenFL](http://go.microsoft.com/fwlink/p/?LinkID=320488)
+-   [OpenFL](https://go.microsoft.com/fwlink/p/?LinkID=320488)
 
     Ein plattformübergreifendes Entwicklungstool
 
--   [GameMaker](http://go.microsoft.com/fwlink/p/?LinkID=320490)
+-   [GameMaker](https://go.microsoft.com/fwlink/p/?LinkID=320490)
 
     Eine spezielle Entwicklungsumgebung für Spiele
 
--   [PlayCanvas](http://go.microsoft.com/fwlink/p/?LinkID=394061)
+-   [PlayCanvas](https://go.microsoft.com/fwlink/p/?LinkID=394061)
 
     Ein HTML-basiertes Tool für die Spielentwicklung
 

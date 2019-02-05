@@ -13,12 +13,12 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 93aee51ae558009827f755f759c4bb587564d1cd
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 194e8578244fee72d0f122ee96caaf22bf2b8807
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9036882"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058691"
 ---
 # <a name="menus-and-context-menus"></a>Menüs und Kontextmenüs
 
@@ -32,7 +32,7 @@ Menüs und Kontextmenüs zeigen auf Anforderung des Benutzers eine Liste von Bef
 
 | **Plattform-APIs** | **Windows-UI-Bibliothek APIs** |
 | - | - |
-| [MenuFlyout-Klasse](/uwp/api/windows.ui.xaml.controls.menuflyout), [Menüleiste-Klasse](/uwp/api/windows.ui.xaml.controls.menubar), [ContextFlyout-Eigenschaft](/uwp/api/windows.ui.xaml.uielement.contextflyout), [FlyoutBase.AttachedFlyout-Eigenschaft](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout) | [Menüleiste-Klasse](/uwp/api/microsoft.ui.xaml.controls.menubar) |
+| [MenuFlyout-Klasse](/uwp/api/windows.ui.xaml.controls.menuflyout), [Menüleiste-Klasse](/uwp/api/windows.ui.xaml.controls.menubar), [ContextFlyout-Eigenschaft](/uwp/api/windows.ui.xaml.uielement.contextflyout), [FlyoutBase.AttachedFlyout-Eigenschaft](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx) | [Menüleiste-Klasse](/uwp/api/microsoft.ui.xaml.controls.menubar) |
 
 ## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 

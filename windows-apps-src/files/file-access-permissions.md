@@ -11,12 +11,12 @@ dev_langs:
 - cppwinrt
 - cpp
 - javascript
-ms.openlocfilehash: 5c3732927c59cb768ef522a847f79f82994852b7
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
+ms.openlocfilehash: 4845b20ed74642f6fb34ea40dd774c91ae378e7b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980398"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050280"
 ---
 # <a name="file-access-permissions"></a>Berechtigungen für den Dateizugriff
 
@@ -29,7 +29,7 @@ Bei Erstellung einer neuen App können Sie standardmäßig auf folgende Dateisys
 ### <a name="application-install-directory"></a>Installationsverzeichnis der Anwendung
 Der Ordner, in denen Ihre app auf dem System des Benutzers installiert ist.
 
-Es gibt zwei wesentlichen Möglichkeiten, greifen Sie auf Dateien und Ordner in Ihrer app Installationsverzeichnis:
+Es gibt zwei primäre Möglichkeiten, greifen Sie auf Dateien und Ordner in Ihrer app Installationsverzeichnis:
 
 1. Sie können auf folgende Weise einen [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) aufrufen, der das Installationsverzeichnis Ihrer App darstellt:
 
@@ -90,14 +90,14 @@ Es gibt zwei wesentlichen Möglichkeiten, greifen Sie auf Dateien und Ordner in 
     
     Das Präfix „ms-appx:///“ in der URI bezieht sich auf das Installationsverzeichnis der Anwendung. Weitere Informationen zur Verwendung von App-URIs finden Sie unter [Verwenden von URIs zum Verweisen auf Inhalte](https://msdn.microsoft.com/library/windows/apps/hh781215).
 
-Darüber hinaus können Sie im Gegensatz zu anderen Speicherorten auf das Installationsverzeichnis Ihrer App auch direkt mit [Win32 und COM für UWP-Apps (Universelle Windows-Plattform)](https://msdn.microsoft.com/library/windows/apps/br205757) und einigen [Funktionen der C/C++-Standardbibliothek in Microsoft Visual Studio](http://msdn.microsoft.com/library/hh875057.aspx) zugreifen.
+Darüber hinaus können Sie im Gegensatz zu anderen Speicherorten auf das Installationsverzeichnis Ihrer App auch direkt mit [Win32 und COM für UWP-Apps (Universelle Windows-Plattform)](https://msdn.microsoft.com/library/windows/apps/br205757) und einigen [Funktionen der C/C++-Standardbibliothek in Microsoft Visual Studio](https://msdn.microsoft.com/library/hh875057.aspx) zugreifen.
 
 Das Installationsverzeichnis der Anwendung ist ein schreibgeschützter Speicherort. Sie können nicht über die Dateiauswahl auf das Installationsverzeichnis zugreifen.
 
 ### <a name="application-data-locations"></a>Speicherorte von Anwendungsdaten
 Die Ordner, in denen Ihre App Daten speichern kann. Diese Ordner (lokal, servergespeichert und temporär) werden nach Installation Ihrer Anwendung erstellt.
 
-Es gibt zwei grundlegende Verfahren Zugriff auf Dateien und Ordner in den Dateispeicherorten Ihrer app:
+Es gibt zwei wesentlichen Möglichkeiten Zugriff auf Dateien und Ordner in den Dateispeicherorten Ihrer app:
 
 1.  Verwenden Sie die [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587)-Eigenschaften, um einen Dateiordner abzurufen.
 
@@ -259,8 +259,8 @@ In der folgenden Tabelle sind weitere Speicherorte aufgeführt, auf die Sie durc
 
 | Ort | Funktion | Windows.Storage-API |
 |----------|------------|---------------------|
-| Alle Dateien, auf die der Benutzer Zugriff hat. Beispiel: Dokumente, Bilder, Fotos, Downloads, Desktop, OneDrive usw. | broadFileSystemAccess<br><br>Dies ist eine eingeschränkte Funktion. Zugriff kann unter " **Einstellungen"** konfiguriert > **Datenschutz** > **Dateisystem**. Da Benutzer gewähren oder verweigern jederzeit in den **Einstellungen**können, sollten Sie sicherstellen, dass Ihre app diese Änderungen flexibel. Wenn Sie feststellen, dass Ihre app nicht zugreifen kann, können Sie den Benutzer auffordern, die Einstellung zu ändern, indem Sie einen Link zum Artikel [Zugriff auf das Dateisystem Windows 10 und Datenschutz](https://privacy.microsoft.com/en-US/windows-10-file-system-access-and-privacy) . Beachten Sie, dass der Benutzer die app zu schließen, Sie schalten und starten Sie die app muss. Wenn sie die Einstellung aktivieren, während die app ausgeführt wird, wird die Plattform Ihre app angehalten, damit können Sie den Zustand speichern, und dann die app erzwungener zu beenden, um die neue Einstellung zu übernehmen. Im April 2018-Update ist die Standardeinstellung für die Berechtigung. In den Oktober 2018-Update ist standardmäßig deaktiviert.<br /><br />Wenn Sie eine App an den Store übermitteln, die diese Funktion deklariert, müssen Sie zusätzliche Beschreibungen dazu bereitstellen, warum die App diese Funktion benötigt und wie sie diese verwenden wird.<br>Diese Funktion funktioniert für APIs im [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) -Namespace. Finden Sie im Abschnitt " **Beispiel** " am Ende dieses Artikels finden Sie ein Beispiel für diese Funktion in Ihrer app zu aktivieren. | n.a. |
-| Dokumente | DocumentsLibrary <br><br>Hinweis: Sie müssen Ihrem App-Manifest Dateitypzuordnungen hinzufügen, die bestimmte Dateitypen deklarieren, auf die Ihre App an diesem Speicherort Zugriff hat. <br><br>Verwenden Sie diese Funktion, wenn Ihre App:<br>- Den plattformübergreifenden Offlinezugriff auf bestimmte OneDrive-Inhalte mit gültigen OneDrive-URLs oder Ressourcen-IDs ermöglicht.<br>-Speichert geöffneten Dateien des Benutzers automatisch im OneDrive offline | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
+| Alle Dateien, auf die der Benutzer Zugriff hat. Beispiel: Dokumente, Bilder, Fotos, Downloads, Desktop, OneDrive usw. | broadFileSystemAccess<br><br>Dies ist eine eingeschränkte Funktion. Zugriff lässt sich unter " **Einstellungen"** > **Datenschutz** > **Dateisystem**. Da Benutzer gewähren oder verweigern die Berechtigung jederzeit unter " **Einstellungen"** können, sollten Sie sicherstellen, dass Ihre app diese Änderungen flexibel. Wenn Sie feststellen, dass Ihre app nicht zugreifen kann, können Sie den Benutzer auffordern, die Einstellung zu ändern, indem Sie einen Link zum Artikel [Windows 10-Dateisystemzugriff und Datenschutz](https://privacy.microsoft.com/en-US/windows-10-file-system-access-and-privacy) . Beachten Sie, dass der Benutzer die app zu schließen, Sie schalten und starten Sie die app muss. Wenn sie die Einstellung umzuschalten, während die app ausgeführt wird, wird die Plattform Ihre app angehalten, damit können Sie den Zustand speichern, und dann das Apps beendet werden, um die neue Einstellung zu übernehmen. Im April 2018 Update ist die Standardeinstellung für die Berechtigung. Im Oktober 2018 Update ist standardmäßig deaktiviert.<br /><br />Wenn Sie eine App an den Store übermitteln, die diese Funktion deklariert, müssen Sie zusätzliche Beschreibungen dazu bereitstellen, warum die App diese Funktion benötigt und wie sie diese verwenden wird.<br>Diese Funktion funktioniert für APIs im [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) -Namespace. Finden Sie im Abschnitt " **Beispiel** " am Ende dieses Artikels finden Sie ein Beispiel für diese Funktion in Ihrer app zu aktivieren. | n.a. |
+| Dokumente | DocumentsLibrary <br><br>Hinweis: Sie müssen Ihrem App-Manifest Dateitypzuordnungen hinzufügen, die bestimmte Dateitypen deklarieren, auf die Ihre App an diesem Speicherort Zugriff hat. <br><br>Verwenden Sie diese Funktion, wenn Ihre App:<br>- Den plattformübergreifenden Offlinezugriff auf bestimmte OneDrive-Inhalte mit gültigen OneDrive-URLs oder Ressourcen-IDs ermöglicht.<br>-Speichert geöffnete Dateien des Benutzers automatisch im OneDrive offline | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
 | Musik     | MusicLibrary <br>Weitere Informationen finden Sie unter [Dateien und Ordner in den Musik-, Bild- und Videobibliotheken](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.MusicLibrary](https://msdn.microsoft.com/library/windows/apps/br227155) |    
 | Bilder  | PicturesLibrary<br> Weitere Informationen finden Sie unter [Dateien und Ordner in den Musik-, Bild- und Videobibliotheken](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.PicturesLibrary](https://msdn.microsoft.com/library/windows/apps/br227156) |  
 | Videos    | VideosLibrary<br>Weitere Informationen finden Sie unter [Dateien und Ordner in den Musik-, Bild- und Videobibliotheken](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.VideosLibrary](https://msdn.microsoft.com/library/windows/apps/br227159) |   

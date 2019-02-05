@@ -6,12 +6,12 @@ ms.date: 08/10/2017
 ms.topic: article
 keywords: windows10, uwp, Spiele, beispiel, directx, 3d
 ms.localizationpriority: medium
-ms.openlocfilehash: e61c96a1b4deb7dd1beb0233814f86ce1b5fb42c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 39f915ad9cf200a5c2c762976ab3c39c2ef85410
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936027"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050087"
 ---
 # <a name="developing-marble-maze-a-uwp-game-in-c-and-directx"></a>Entwickeln von Marble Maze, einem UWP-Spiel in C++ und DirectX
 
@@ -21,7 +21,7 @@ ms.locfileid: "8936027"
 In diesem Thema wird das Erstellen von UWP-3D-Spielen (Universelle Windows-Plattform) mit DirectX und Visual C++ beschrieben. Das Spiel mit dem Namen „Marble Maze” unterstützt mehrere Formfaktoren wie Tablets, herkömmliche Desktop- und Laptop-PCs.
 
 > [!NOTE]
-> Den Quellcode für Marble Maze können Sie unter [Codebeispiel auf GitHub](http://go.microsoft.com/fwlink/?LinkId=624011) herunterladen.
+> Den Quellcode für Marble Maze können Sie unter [Codebeispiel auf GitHub](https://go.microsoft.com/fwlink/?LinkId=624011) herunterladen.
 
 > [!IMPORTANT]
 > Aus Marble Maze werden Entwurfsmuster ersichtlich, die als bewährte Methoden zum Erstellen von UWP-Spielen empfohlen werden. Viele der Implementierungsdetails können Sie an Ihre eigenen Vorgehensweisen und die konkreten Anforderungen des von Ihnen entwickelten Spiels anpassen. Wenn es Ihren Anforderungen besser entgegenkommt, können Sie natürlich auch andere Verfahren oder Bibliotheken verwenden. (Achten Sie jedoch stets darauf, dass Ihr Code die Anforderungen des [ Zertifizierungskits für Windows-Apps](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit) erfüllt.) Wenn eine Marble Maze-Implementierung als unerlässlich für die erfolgreiche Spieleentwicklung erachtet wird, ist dies in der vorliegenden Dokumentation entsprechend gekennzeichnet.
@@ -51,7 +51,7 @@ Marble Maze bietet dem Benutzer mehrere Möglichkeiten zur Interaktion mit dem S
 ## <a name="who-should-read-this"></a>Wer sollte diese Dokumentation lesen?
 
 
-Wenn Sie sich für die Erstellung von 3D-Spielen oder anderen grafikintensiven Anwendungen für Windows 10 sind, ist diese Dokumentation für Sie. Wir hoffen, dass Ihnen die in dieser Dokumentation skizzierten Prinzipien und praktischen Vorgehensweisen dabei helfen, eigene UWP-Spiele zu erstellen. Den größten Nutzen aus dieser Dokumentation werden Sie ziehen, wenn Sie bereits über Erfahrungen mit C++ und DirectX verfügen oder sich sehr dafür interessieren. Wenn Sie noch keine Erfahrung mit DirectX, dafür aber mit ähnlichen 3D-Grafikprogrammierumgebungen haben, wird Ihnen die Dokumentation ebenfalls nutzen.
+Wenn Sie sich bei der Erstellung von 3D-Spielen oder anderen grafikintensiven Anwendungen für Windows 10 interessieren, ist diese Dokumentation für Sie. Wir hoffen, dass Ihnen die in dieser Dokumentation skizzierten Prinzipien und praktischen Vorgehensweisen dabei helfen, eigene UWP-Spiele zu erstellen. Den größten Nutzen aus dieser Dokumentation werden Sie ziehen, wenn Sie bereits über Erfahrungen mit C++ und DirectX verfügen oder sich sehr dafür interessieren. Wenn Sie noch keine Erfahrung mit DirectX, dafür aber mit ähnlichen 3D-Grafikprogrammierumgebungen haben, wird Ihnen die Dokumentation ebenfalls nutzen.
 
 Im Dokument [Exemplarische Vorgehensweise: Erstellen eines einfachen UWP-Spiels mit DirectX](tutorial--create-your-first-uwp-directx-game.md) wird ein weiteres Beispiel beschrieben, in dem ein einfacher 3D-Shooter mit DirectX und C++ implementiert wird.
 

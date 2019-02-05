@@ -6,12 +6,12 @@ ms.date: 06/06/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 8257a8a0c6b8ca320adb04bfb64b0308a4cbefd3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 940f82e5e4cff30a2756c32c80d2f3ab02ae440a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930177"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050503"
 ---
 # <a name="use-the-gyrometer"></a>Verwenden des Gyrometers
 
@@ -31,7 +31,7 @@ Gyrometer und Beschleunigungssensoren ergänzen sich gegenseitig als Spielecontr
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Sie sollten mit Extensible Application Markup Language (XAML), Microsoft für VisualC++ c# und Ereignissen vertraut sein.
+Sie sollten mit Extensible Application Markup Language (XAML), Microsoft für VisualC++- und Ereignissen vertraut sein.
 
 Das verwendete Gerät oder der Emulator muss ein Gyrometer unterstützen.
 
@@ -180,4 +180,4 @@ Die neuen Werte werden in die TextBlock-Elemente des XAML-Projektcodes geschrieb
 
  ## <a name="related-topics"></a>Verwandte Themen
 
-* [Gyrometerbeispiel](http://go.microsoft.com/fwlink/p/?linkid=241379)
+* [Gyrometerbeispiel](https://go.microsoft.com/fwlink/p/?linkid=241379)

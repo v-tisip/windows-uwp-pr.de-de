@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b14e413a5629dfb5447750e32c42c4efafef8fa
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0ccb9447e9594f71907f0da5d0e15f9c6c65bb6b
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931447"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058841"
 ---
 # <a name="scenario-1-generate-a-pri-file-from-string-resources-and-asset-files"></a>Szenario 1: Generieren einer PRI-Datei aus Zeichenfolgenressourcen und Ressourcendateien
 In diesem Szenario verwenden wir die [APIs zur Paketressourcenindizierung (PRI)](https://msdn.microsoft.com/library/windows/desktop/mt845690), um eine neue App zur Darstellung unseres benutzerdefinierten Buildsystems zu erstellen. Denken Sie daran: Der Zweck dieses benutzerdefinierten Buildsystems besteht darin, PRI-Dateien für eine Ziel-UWP-App zu erstellen. Im Rahmen dieser exemplarischen Vorgehensweise erstellen wir also einige Beispielressourcendateien (mit Zeichenfolgen und anderen Arten von Ressourcen), um die Ressourcen dieser Ziel-UWP-App abzubilden.
@@ -119,7 +119,7 @@ std::wstring filePathPRIDumpBasic{ generatedPRIsFolder + L"\\resources-pri-dump-
 ::CreateDirectory(generatedPRIsFolder.c_str(), nullptr);
 ```
 
-Deklarieren Sie unmittelbar nach dem Aufruf zur COM-Initialisierung einen Ressourcenindexer-Handle, und rufen Sie dann [**MrmCreateResourceIndexer**]() auf, um einen Ressourcenindexer zu erstellen.
+Deklarieren Sie unmittelbar nach dem Aufruf zur COM-Initialisierung einen Ressourcenindexer-Handle, und rufen Sie dann [**MrmCreateResourceIndexer**](/windows/desktop/menurc/mrmcreateresourceindexer) auf, um einen Ressourcenindexer zu erstellen.
 
 ```cppwinrt
 MrmResourceIndexerHandle indexer;
@@ -139,7 +139,7 @@ Hier werden die Argumente erläutert, die an **MrmCreateResourceIndexer** überg
 - Eine Liste der Standardressourcenqualifizierer.
 - Ein Zeiger auf unseren Ressourcenindexer-Handle, sodass die Funktion diesen festlegen kann.
 
-Im nächsten Schritt fügen wir unsere Ressourcen dem Ressourcenindexer hinzu, den wir gerade erstellt haben. `resources.resw` ist eine Ressourcendatei (.resw), die die neutralen Zeichenfolgen für die Ziel-UWP-App enthält. Führen Sie (in diesem Thema) einen Bildlauf nach oben durch, wenn Sie den Inhalt dieser Datei anzeigen möchten. `de-DE\resources.resw` enthält unsere deutschen Zeichenfolgen und `en-US\resources.resw` enthält unsere englischen Zeichenfolgen. Zum Hinzufügen der Zeichenfolgenressourcen innerhalb einer Ressourcendatei zu einem Ressourcenindexer rufen Sie [**MrmIndexResourceContainerAutoQualifiers**]() auf. Als Drittes rufen wir die [**MrmIndexFile**]()-Funktion zu einer Datei auf, die eine neutrale Bildressource für den Ressourcenindexer enthält.
+Im nächsten Schritt fügen wir unsere Ressourcen dem Ressourcenindexer hinzu, den wir gerade erstellt haben. `resources.resw` ist eine Ressourcendatei (.resw), die die neutralen Zeichenfolgen für die Ziel-UWP-App enthält. Führen Sie (in diesem Thema) einen Bildlauf nach oben durch, wenn Sie den Inhalt dieser Datei anzeigen möchten. `de-DE\resources.resw` enthält unsere deutschen Zeichenfolgen und `en-US\resources.resw` enthält unsere englischen Zeichenfolgen. Zum Hinzufügen der Zeichenfolgenressourcen innerhalb einer Ressourcendatei zu einem Ressourcenindexer rufen Sie [**MrmIndexResourceContainerAutoQualifiers**](/windows/desktop/menurc/mrmindexresourcecontainerautoqualifiers) auf. Als Drittes rufen wir die [**MrmIndexFile**](/windows/desktop/menurc/mrmindexfile)-Funktion zu einer Datei auf, die eine neutrale Bildressource für den Ressourcenindexer enthält.
 
 ```cppwinrt
 ::ThrowIfFailed(::MrmIndexResourceContainerAutoQualifiers(indexer, L"resources.resw"));
@@ -150,19 +150,19 @@ Im nächsten Schritt fügen wir unsere Ressourcen dem Ressourcenindexer hinzu, d
 
 Im Aufruf an **MrmIndexFile** ist der Wert „ms-resource:///Files/sample-image.png“ der Ressourcen-URI. Das erste Pfadsegment ist „Dateien“. Dieses wird als Name der Ressourcenzuordnung-Unterstruktur verwendet, wenn wir später eine PRI-Datei aus diesem Ressourcenindexer generieren.
 
-Nachdem wir den Ressourcenindexer über unsere Ressourcendateien informiert haben, ist es an der Zeit, dass dieser uns eine PRI-Datei auf dem Datenträger generiert, und zwar durch Aufrufen der [**MrmCreateResourceFile**]()-Funktion.
+Nachdem wir den Ressourcenindexer über unsere Ressourcendateien informiert haben, ist es an der Zeit, dass dieser uns eine PRI-Datei auf dem Datenträger generiert, und zwar durch Aufrufen der [**MrmCreateResourceFile**](/windows/desktop/menurc/mrmcreateresourcefile)-Funktion.
 
 ```cppwinrt
 ::ThrowIfFailed(::MrmCreateResourceFile(indexer, MrmPackagingModeStandaloneFile, MrmPackagingOptionsNone, generatedPRIsFolder.c_str()));
 ```
 
-Zu diesem Zeitpunkt wurde eine PRI-Datei mit dem Namen `resources.pri` in einem Ordner namens `Generated PRIs` erstellt. Nun, da wir mit dem Ressourcenindexer fertig sind, rufen wir [**MrmDestroyIndexerAndMessages**]() auf, um den Handle zu löschen und alle ihm zugewiesenen Computerressourcen freizugeben.
+Zu diesem Zeitpunkt wurde eine PRI-Datei mit dem Namen `resources.pri` in einem Ordner namens `Generated PRIs` erstellt. Nun, da wir mit dem Ressourcenindexer fertig sind, rufen wir [**MrmDestroyIndexerAndMessages**](/windows/desktop/menurc/mrmdestroyindexerandmessages) auf, um den Handle zu löschen und alle ihm zugewiesenen Computerressourcen freizugeben.
 
 ```cppwinrt
 ::ThrowIfFailed(::MrmDestroyIndexerAndMessages(indexer));
 ```
 
-Da eine PRI-Datei ein binäres Format hat, können wir das soeben Generierte leichter anzeigen, wenn wir die binäre PRI-Datei in ihr XML-Äquivalent sichern. Dies erreichen wir durch Aufrufen von [**MrmDumpPriFile**]().
+Da eine PRI-Datei ein binäres Format hat, können wir das soeben Generierte leichter anzeigen, wenn wir die binäre PRI-Datei in ihr XML-Äquivalent sichern. Ein Aufruf von [**MrmDumpPriFile**](/windows/desktop/menurc/mrmdumpprifile) bietet genau diese Funktion.
 
 ```cppwinrt
 ::ThrowIfFailed(::MrmDumpPriFile(filePathPRI.c_str(), nullptr, MrmDumpType::MrmDumpType_Basic, filePathPRIDumpBasic.c_str()));

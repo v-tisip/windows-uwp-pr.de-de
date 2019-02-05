@@ -6,12 +6,12 @@ ms.date: 04/18/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e7082c3e572493656e8b109da35861ec820d4ec9
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: c78e16a50bdca09f474d5016fdc86b6d27702d5b
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050833"
+ms.locfileid: "9058771"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>Verarbeiten von Audioframes mit „MediaFrameReader“
 
@@ -49,7 +49,7 @@ Wenn die Abfrage eine oder mehrere Framequellen zurückgibt, können Sie die [**
 
 Erhalten Sie eine neue Instanz des **MediaFrameReader** durch Aufrufen von [**MediaCapture.CreateFrameReaderAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.createframereaderasync#Windows_Media_Capture_MediaCapture_CreateFrameReaderAsync_Windows_Media_Capture_Frames_MediaFrameSource_), und übergeben Sie die **MediaFrameSource** dem im vorherigen Schrittausgewählten Objekt. Standardmäßig werden Audioframes im gepufferte Modus erhalten, wodurch es weniger wahrscheinlich ist, dass Frames gelöscht werden, obwohl dies weiterhin auftreten kann, wenn Sie nicht schnell genug die Audioframes verarbeiten, und diese den vom System zugewiesenen Speicherpuffer füllen.
 
-Registrieren Sie einen Handler für das [**FrameArrived**](*https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.framearrived)-Ereignis, das immer dann vom System ausgelöst wird, wenn ein neuer Frame mit Audiodaten von der Quelle verfügbar ist. Rufen Sie [**StartAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.startasync) auf, um die Übernahme des Audioframes zu beginnen. Wenn der Frame-Reader nicht startet, hat der aus dem Aufruf zurückgegebene Statuswert einen anderen Wert als [**Erfolg**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereaderstartstatus).
+Registrieren Sie einen Handler für das [**FrameArrived**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.framearrived)-Ereignis, das immer dann vom System ausgelöst wird, wenn ein neuer Frame mit Audiodaten von der Quelle verfügbar ist. Rufen Sie [**StartAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.startasync) auf, um die Übernahme des Audioframes zu beginnen. Wenn der Frame-Reader nicht startet, hat der aus dem Aufruf zurückgegebene Statuswert einen anderen Wert als [**Erfolg**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereaderstartstatus).
 
 [!code-cs[CreateAudioFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetCreateAudioFrameReader)]
 

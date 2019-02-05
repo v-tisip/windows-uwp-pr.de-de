@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 05cf78d7dec260b990d2ce71662e3db6eb07d07f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ebba5abe0de8014a21d2e651534dacc118705fff
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941216"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050157"
 ---
 # <a name="getting-started-common-controls"></a>Erste Schritte: Allgemeine Steuerelemente
 
 
 ## <a name="common-controls-list"></a>Liste "Allgemeine Steuerelemente"
 
-Im vorherigen Abschnitt haben Sie mit nur zwei Steuerelementen gearbeitet: Schaltflächen und Textblöcken. Es gibt natürlich auch viele weitere Steuerelemente, die Ihnen zur Verfügung stehen. Hier sind einige gängige Steuerelemente, die Sie in Ihren Apps und unter iOS verwenden können. Die iOS-Steuerelemente sind in alphabetischer Reihenfolge neben den entsprechenden UWP-Steuerelementen aufgeführt.
+Im vorherigen Abschnitt haben Sie mit nur zwei Steuerelementen gearbeitet: Schaltflächen und Textblöcken. Es gibt natürlich viele weitere Steuerelemente, die Ihnen zur Verfügung stehen. Hier sind einige gängige Steuerelemente, die Sie in Ihren Apps und unter iOS verwenden können. Die iOS-Steuerelemente sind in alphabetischer Reihenfolge neben den entsprechenden UWP-Steuerelementen aufgeführt.
 
 Das Besondere bei UWP-Steuerelementen ist, dass sie den Typ des Geräts erkennen, auf dem sie ausgeführt werden, und ihre Darstellung und Funktionalität entsprechend ändern können. Wenn Ihr Projekt z.B. das [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/br211681)-Steuerelement verwendet, ist dieses in der Lage, seine Darstellung und sein Verhalten auf einem Desktopcomputer im Vergleich zu einem Telefon entsprechend zu optimieren und anzupassen. Sie müssen nichts weiter unternehmen: die Steuerelemente passen sich automatisch zur Laufzeit an.
 
@@ -30,12 +30,12 @@ Das Besondere bei UWP-Steuerelementen ist, dass sie den Typ des Geräts erkennen
 | Datumsauswahl (UIDatePicker) | [DatePicker](https://msdn.microsoft.com/library/windows/apps/br211681) |
 | Bildansicht (UIImageView) | [Image](https://msdn.microsoft.com/library/windows/apps/br242752) <br/> Siehe auch [Image und ImageBrush](https://msdn.microsoft.com/library/windows/apps/mt280382) |
 | Bezeichnung (UILabel) | [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) <br/> Siehe auch [Schnellstart: Anzeigen von Text](https://msdn.microsoft.com/library/windows/apps/xaml/hh700392) |
-| Kartenansicht (MKMapView) und Kartenansichtsdelegat (MKMapViewDelegate) | Finden Sie unter [Bing Maps für UWP-apps](http://go.microsoft.com/fwlink/p/?LinkId=263496) |
+| Kartenansicht (MKMapView) und Kartenansichtsdelegat (MKMapViewDelegate) | Finden Sie unter [Bing Maps für UWP-apps](https://go.microsoft.com/fwlink/p/?LinkId=263496) |
 | Navigationscontrollerdelegat (UINavigationController) und Navigationscontrollerdelegat (UINavigationControllerDelegate) | [Frame](https://msdn.microsoft.com/library/windows/apps/br242682) <br/> Siehe auch [Navigation](https://msdn.microsoft.com/library/windows/apps/mt187344) |
 | Seitensteuerung (UIPageControl) | [Page](https://msdn.microsoft.com/library/windows/apps/br227503) <br/> Siehe auch [Navigation](https://msdn.microsoft.com/library/windows/apps/mt187344) |
 | Auswahlansicht (UIPickerView) und Auswahlansichtsdelegat (UIPickerViewDelegate) | [ComboBox](https://msdn.microsoft.com/library/windows/apps/br209348) <br/> Siehe auch [Hinzufügen von Kombinationsfeldern und Listenfeldern](https://msdn.microsoft.com/library/windows/apps/xaml/hh780616) |
 | Statusleiste (UIProgressView) | [ProgressBar](https://msdn.microsoft.com/library/windows/apps/br227529) <br/> Siehe auch [Schnellstart: Hinzufügen von Statussteuerelementen](https://msdn.microsoft.com/library/windows/apps/xaml/hh780651) |
-| Bildlaufansicht (UIScrollView) und Bildlaufansichtsdelegat (UIScrollViewDelegate) | [ScrollViewer](https://msdn.microsoft.com/library/windows/apps/br209527) <br/>  Siehe auch [Beispiele zu Bildlauf, Verschieben und Zoomen von Extensible Application Markup Language (XAML)](http://go.microsoft.com/fwlink/p/?LinkId=238577) |
+| Bildlaufansicht (UIScrollView) und Bildlaufansichtsdelegat (UIScrollViewDelegate) | [ScrollViewer](https://msdn.microsoft.com/library/windows/apps/br209527) <br/>  Siehe auch [Beispiele zu Bildlauf, Verschieben und Zoomen von Extensible Application Markup Language (XAML)](https://go.microsoft.com/fwlink/p/?LinkId=238577) |
 | Suchleiste (UISearchBar) und Suchleistendelegat (UISearchBarDelegate) | Siehe [Hinzufügen von Suchfunktionen zu einer App](https://msdn.microsoft.com/library/windows/apps/xaml/jj130767) <br/>  Siehe auch [Schnellstart: Hinzufügen von Suchfunktionen zu einer App](https://msdn.microsoft.com/library/windows/apps/xaml/hh868180) |
 | Segmentiertes Steuerelement (UISegmentedControl) | Keine |
 | Schieberegler (UISlider) | [Slider](https://msdn.microsoft.com/library/windows/apps/br209614) <br/>  Siehe auch [So wird's gemacht: Hinzufügen eines Schiebereglers](https://msdn.microsoft.com/library/windows/apps/xaml/hh868197) |
@@ -46,12 +46,12 @@ Das Besondere bei UWP-Steuerelementen ist, dass sie den Typ des Geräts erkennen
 | Textfeld (UITextField) und Textfelddelegat (UITextFieldDelegate) | [TextBox](https://msdn.microsoft.com/library/windows/apps/br209683) <br/>  Siehe auch [Anzeigen und Bearbeiten von Text](https://msdn.microsoft.com/library/windows/apps/mt280218) |
 | Textansicht (UITextView) und Textansichtsdelegat (UITextViewDelegate) | [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) <br/>  Siehe auch [Schnellstart: Anzeigen von Text](https://msdn.microsoft.com/library/windows/apps/xaml/hh700392) |
 | Ansicht (UIView) und Ansichtscontroller (UIViewController) | [Page](https://msdn.microsoft.com/library/windows/apps/br227503) <br/>  Siehe auch [Navigation](https://msdn.microsoft.com/library/windows/apps/mt187344) |
-| Webansicht (UIWebView) und Webansichtsdelegat (UIWebViewDelegate) | [WebView](https://msdn.microsoft.com/library/windows/apps/br227702) <br/>  Siehe auch [Beispiel für XAML-WebView-Steuerelement](http://go.microsoft.com/fwlink/p/?LinkId=238582) |
+| Webansicht (UIWebView) und Webansichtsdelegat (UIWebViewDelegate) | [WebView](https://msdn.microsoft.com/library/windows/apps/br227702) <br/>  Siehe auch [Beispiel für XAML-WebView-Steuerelement](https://go.microsoft.com/fwlink/p/?LinkId=238582) |
 | Fenster (UIWindow) | [Frame](https://msdn.microsoft.com/library/windows/apps/br242682) <br/>  Siehe auch [Navigation](https://msdn.microsoft.com/library/windows/apps/mt187344) |
 
 Unter [Steuerelementliste](https://msdn.microsoft.com/library/windows/apps/mt185406) finden Sie noch mehr Steuerelemente.
 
-**Hinweis:** eine Liste der Steuerelemente für UWP-apps mit JavaScript und HTML, finden Sie in der [Liste der Steuerelemente](https://msdn.microsoft.com/library/windows/apps/hh465453).
+**Hinweis:** eine Liste der Steuerelemente für UWP-apps mit JavaScript und HTML, finden Sie unter [Liste der Steuerelemente](https://msdn.microsoft.com/library/windows/apps/hh465453).
 
 ### <a name="next-step"></a>Nächster Schritt
 
@@ -59,6 +59,6 @@ Unter [Steuerelementliste](https://msdn.microsoft.com/library/windows/apps/mt185
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Build2014: Was ist mit XAML-Benutzeroberflächen und -Steuerelementen?](http://go.microsoft.com/fwlink/p/?LinkID=397897)
-* [Build2014: Entwickeln von Apps mit dem gemeinsamen XAML-Benutzeroberflächenframework](http://go.microsoft.com/fwlink/p/?LinkID=397898)
-* [Build2014: Erstellen von zusammengeführten XAML-Apps mit Visual Studio](http://go.microsoft.com/fwlink/p/?LinkID=397876)
+* [Build2014: Was ist mit XAML-Benutzeroberflächen und -Steuerelementen?](https://go.microsoft.com/fwlink/p/?LinkID=397897)
+* [Build2014: Entwickeln von Apps mit dem gemeinsamen XAML-Benutzeroberflächenframework](https://go.microsoft.com/fwlink/p/?LinkID=397898)
+* [Build2014: Erstellen von zusammengeführten XAML-Apps mit Visual Studio](https://go.microsoft.com/fwlink/p/?LinkID=397876)

@@ -1,17 +1,17 @@
 ---
 ms.assetid: ''
 description: Dieser Artikel zeigt Ihnen, wie Sie Videos aus mehreren Quellen gleichzeitig in eine einzige Datei mit mehreren eingebetteten Videospuren aufnehmen können.
-title: Erfassen von mehreren Quellen mit MediaFrameSourceGroup
+title: Erfassen von mehreren Quellen mit „MediaFrameSourceGroup”
 ms.date: 09/12/2017
 ms.topic: article
 keywords: Windows10, Uwp, Aufnahme, Video
 ms.localizationpriority: medium
-ms.openlocfilehash: a654739490043b9f821e7906fa8cf9e3e7259fed
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c474221769bf3aec6e32c80f21386ac1ca2620ea
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919933"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058631"
 ---
 # <a name="capture-from-multiple-sources-using-mediaframesourcegroup"></a>Erfassen von mehreren Quellen mit MediaFrameSourceGroup
 
@@ -56,7 +56,7 @@ Das folgende Beispiel zeigt, wie Sie ein **TimedMetadataStreamDescriptor**-Objek
 
 [!code-cs[GetStreamDescriptor](./code/SimpleCameraPreview_Win10/cs/MainPage.MultiRecord.xaml.cs#SnippetGetStreamDescriptor)]
 
-Rufen Sie [MediaEncodingProfile.SetTimedMetadataTracks](**https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.settimedmetadatatracks**) auf, um den Metadatenstream-Deskriptor dem Codierungsprofil hinzuzufügen. Das folgende Beispiel zeigt eine Hilfsmethode, die zwei Videostream-Deskriptoren akzeptiert, einen Audiodatenstrom-Deskriptor, und einen zeitgesteuerten Metadatenstream-Deskriptor und ein **MediaEncodingProfile** zurückgibt, das zum Codieren von Streams verwendet werden kann.
+Rufen Sie [**MediaEncodingProfile.SetTimedMetadataTracks**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.settimedmetadatatracks) , um den Metadatenstream-Deskriptor dem Codierungsprofil hinzuzufügen. Das folgende Beispiel zeigt eine Hilfsmethode, die zwei Videostream-Deskriptoren akzeptiert, einen Audiodatenstrom-Deskriptor, und einen zeitgesteuerten Metadatenstream-Deskriptor und ein **MediaEncodingProfile** zurückgibt, das zum Codieren von Streams verwendet werden kann.
 
 [!code-cs[GetMediaEncodingProfile](./code/SimpleCameraPreview_Win10/cs/MainPage.MultiRecord.xaml.cs#SnippetGetMediaEncodingProfile)]
 

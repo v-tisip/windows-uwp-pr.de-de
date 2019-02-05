@@ -6,12 +6,12 @@ ms.date: 07/02/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: b0ed1c7f01e8cb06f6950f2ad23a42605e97c1a0
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 80f9c8bad9445bd9cfef9b09c00f99929fda37aa
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050733"
+ms.locfileid: "9058661"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>Anwenden von Runtime-Updates auf ein MSIX-Paket mit dem Paket-Support-Framework
 
@@ -86,7 +86,7 @@ Gehen Sie wir durch einzelnen Aufgaben.
 
 ### <a name="create-the-package-layout-folder"></a>Erstellen Sie den Layout Paketordner
 
-Wenn Sie bereits über eine Datei .msix (oder AppX) verfügen, können Sie den Inhalt in einem Layoutordner entpacken, die als die Staging-Bereich für Ihr Paket dient. Hierzu können Sie über eine Befehlszeile mit Makemsix-Tool, abhängig vom Installationspfad des SDK, ist dies des makeappx.exe-Tools auf Ihrem Windows 10-PC finden Sie: X86: C:\Program Files (x86) kits\10\bin\x86\makeappx.exe X64: C:\Program Files () X86) kits\10\bin\x64\makeappx.exe
+Wenn Sie bereits über eine Datei .msix (oder AppX) verfügen, können Sie den Inhalt in einem Layoutordner entpacken, die als die Staging-Bereich für Ihr Paket dient. Hierzu können Sie über eine Befehlszeile mit MakeAppx-Tool, abhängig vom Installationspfad des SDK, ist dies des makeappx.exe-Tools auf Ihrem Windows 10-PC finden Sie: X86: C:\Program Files (x86) kits\10\bin\x86\makeappx.exe X64: C:\Program Files () X86) kits\10\bin\x64\makeappx.exe
 
 ```ps
 makeappx unpack /p PSFSamplePackage_1.0.60.0_AnyCPU_Debug.msix /d PackageContents
@@ -514,7 +514,7 @@ Während Visual Studio die einfachste Entwicklung und das debugging Erfahrung Ih
 
 Zunächst Debuggens mit F5 führt die Anwendung durch die Bereitstellung von losen Dateien aus dem Paket Layout Ordnerpfad, installieren, sondern von einer .msix / AppX-Pakets.  Der Ordner "Layout" verfügt in der Regel nicht dieselben sicherheitseinschränkungen, die als eine installierte Paketordner. Daher kann es nicht Paket Pfad Denial Zugriffsfehler vor einer Runtime Update reproduziert werden.
 
-Um dieses Problem zu beheben, verwenden Sie .msix / Bereitstellung des AppX-Pakets statt F5 lose Bereitstellung.  Erstellen Sie eine .msix / AppX-Paket-Datei aus dem Windows SDK, das [MakeMSIX](https://docs.microsoft.com/en-us/windows/desktop/appxpkg/make-appx-package--makeappx-exe-) -Hilfsprogramm verwenden, wie oben beschrieben. Oder, in Visual Studio Maustaste auf den Projektknoten Anwendung und wählen **Store**->**App-Pakete erstellen**.
+Um dieses Problem zu beheben, verwenden Sie .msix / Bereitstellung des AppX-Pakets statt F5 lose Bereitstellung.  Erstellen Sie eine .msix / AppX-Paket-Datei aus dem Windows SDK, das [MakeAppx](https://docs.microsoft.com/en-us/windows/desktop/appxpkg/make-appx-package--makeappx-exe-) -Hilfsprogramm verwenden, wie oben beschrieben. Oder, in Visual Studio Maustaste auf den Projektknoten Anwendung und wählen **Store**->**App-Pakete erstellen**.
 
 Ein weiteres Problem mit Visual Studio ist, dass es keine integrierten Unterstützung für das Anhängen an alle untergeordneten Prozesse, die vom Debugger gestartet enthält.   Dies erschwert es zum Debuggen Logik im Startpfad der Anwendung, die nach dem Start von Visual Studio manuell angefügt werden muss.
 

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Erste Schritte, UWP, Windows10, Lernpfad, Layout, Formular
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1c316ac97211e85b782bdbf8f5642889a7726a95
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 45c4acda953808a85363d1cec7c623dd79cc08f1
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037052"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058531"
 ---
 # <a name="create-and-customize-a-form"></a>Erstellen und Anpassen eines Formulars
 
@@ -135,7 +135,7 @@ Wenn Sie komplexere Layouts mit mehr visuellen Elementen erstellen, finden Sie w
 
 Auch wenn Sie hier ein Formular erstellt haben, gelten die Konzepte von Layouts und Steuerelementen für alle XAML-Benutzeroberflächen, die Sie möglicherweise erstellen. Passen Sie die Dokumente durcharbeiten, wir haben Sie verknüpft und mit dem Formular haben Sie neue Benutzeroberflächenfeatures hinzufügen und die Benutzeroberfläche eingrenzen, das zu experimentieren. Wenn Sie die schrittweise Anleitung zu detaillierteren Layoutfeatures möchten, finden Sie unsere [Lernprogramm zu adaptiven Layouts](../design/basics/xaml-basics-adaptive-layout.md)
 
-Formulare existieren außerdem nicht in einem Vakuum – Sie können einen Schritt weiter gehen und Ihres in ein [Master-/Detailmuster](../design/controls-and-patterns/master-details.md) oder [Pivot-Steuerelement](../design/controls-and-patterns/tabs-pivot.md) einbetten. Oder wenn Sie an dem CodeBehind für Ihr Formular arbeiten möchten, finden Sie die ersten Schritte in unserer [Übersicht über Ereignisse](../xaml-platform/events-and-routed-events-overview.md).
+Formulare existieren außerdem nicht in einem Vakuum – Sie können einen Schritt weiter gehen und Ihres in ein [Master-/Detailmuster](../design/controls-and-patterns/master-details.md) oder [Pivot-Steuerelement](../design/controls-and-patterns/pivot.md) einbetten. Oder wenn Sie an dem CodeBehind für Ihr Formular arbeiten möchten, finden Sie die ersten Schritte in unserer [Übersicht über Ereignisse](../xaml-platform/events-and-routed-events-overview.md).
 
 ## <a name="useful-apis-and-docs"></a>Nützliche APIs und Dokumente
 
@@ -161,7 +161,7 @@ Nachfolgend finden Sie eine kurze Zusammenfassung zu den APIs und weiterer nütz
 | [Formulare](../design/controls-and-patterns/forms.md) | Allgemeine Anweisungen zum Erstellen von Formularen |
 | [Layoutpanels](../design/layout/layout-panels.md) | Übersicht über die Arten von Layoutpanels und ihre Verwendung |
 | [Master/Details-Muster](../design/controls-and-patterns/master-details.md) | Ein Entwurfsmuster, das rund um ein oder mehrere Formulare implementiert werden kann |
-| [Pivot-Steuerelement](../design/controls-and-patterns/tabs-pivot.md) | Ein Steuerelement, das ein oder mehrere Formulare enthalten kann |
+| [Pivot-Steuerelement](../design/controls-and-patterns/pivot.md) | Ein Steuerelement, das ein oder mehrere Formulare enthalten kann |
 | [Dynamisches Design](../design/layout/responsive-design.md) | Eine Übersicht über Prinzipien für das umfangreiche dynamische Design | 
 | [Dynamische Layouts mit XAML](../design/layout/layouts-with-xaml.md) | Spezifische Informationen zu visuellen Zuständen und anderen Implementierungen des dynamischen Designs |
 | [Bildschirmgrößen für das dynamische Design](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md) | Anweisungen, welche Bildschirmgrößen für dynamische Layouts festgelegt werden sollten |

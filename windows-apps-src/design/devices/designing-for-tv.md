@@ -13,12 +13,12 @@ design-contact: jeffarn
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b09e90ea71872421a0caf1edcc1a03ce25fef42
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f6868975f793bf504dac167bf4d57d2574ddc0e9
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930661"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058641"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Entwerfen für Xbox und Fernsehgeräte
 
@@ -832,7 +832,7 @@ Sie platzieren den zuvor angezeigten Codeausschnitt entweder in die Seitenressou
 > [!NOTE]
 > Dieser Codeausschnitt gilt speziell für `ListView`-Elemente. Legen Sie bei einem `GridView`-Stil das [TargetType](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.targettype.aspx)-Attribut für [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.aspx) und [Style](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.aspx) auf `GridView` fest.
 
-Für eine genauere Kontrolle über das sind Elemente eingeblendet, wenn die Anwendung, Version 1803 abzielt oder höher, können Sie das [Ereignis UIElement.BringIntoViewRequested](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)verwenden. Für die **ListView**auf [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) platzieren/**GridView** abzufangen, bevor die internen **ScrollViewer** wie in den folgenden Codeausschnitten wird:
+Für eine genauere Kontrolle über das sind Elemente eingeblendet, wenn die Anwendung, Version 1803 abzielt oder höher, können Sie das [Ereignis UIElement.BringIntoViewRequested](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)verwenden. Sie können es auf [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) platzieren, für die **ListView**/**GridView** abzufangen, bevor die internen **ScrollViewer** , wie in den folgenden Codeausschnitten ist:
 
 ```xaml
 <GridView x:Name="gridView">
@@ -933,9 +933,9 @@ Ein [Pivot](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.cont
 
 ![Pivotunterstreichung](images/designing-for-tv/pivot-underline.png)
 
-Sie können die [Pivot.IsHeaderItemsCarouselEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.pivot.isheaderitemscarouselenabled.aspx)-Eigenschaft auf `true` festlegen, damit Pivots stets die gleiche Position haben und die Kopfzeile des ausgewählten Pivots nicht stets an die erste Position verschoben wird. Dies ist besser für große Geräte mit großen Bildschirmanzeigen wie Fernsehgeräte geeignet, da Kopfzeilenumbrüche Benutzer stark ablenken können. Wenn nicht alle Pivotkopfzeilen gleichzeitig auf den Bildschirm passen, wird eine Bildlaufleiste angezeigt, damit Kunden die restlichen Kopfzeilen sehen. Sie sollten jedoch sicherstellen, dass alle Kopfzeilen auf den Bildschirm passen, um eine optimale Erfahrung bereitzustellen. Weitere Informationen finden Sie unter [Registerkarten und Pivots](../controls-and-patterns/tabs-pivot.md).
+Sie können die [Pivot.IsHeaderItemsCarouselEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.pivot.isheaderitemscarouselenabled.aspx)-Eigenschaft auf `true` festlegen, damit Pivots stets die gleiche Position haben und die Kopfzeile des ausgewählten Pivots nicht stets an die erste Position verschoben wird. Dies ist besser für große Geräte mit großen Bildschirmanzeigen wie Fernsehgeräte geeignet, da Kopfzeilenumbrüche Benutzer stark ablenken können. Wenn nicht alle Pivotkopfzeilen gleichzeitig auf den Bildschirm passen, wird eine Bildlaufleiste angezeigt, damit Kunden die restlichen Kopfzeilen sehen. Sie sollten jedoch sicherstellen, dass alle Kopfzeilen auf den Bildschirm passen, um eine optimale Erfahrung bereitzustellen. Weitere Informationen finden Sie unter [Registerkarten und Pivots](../controls-and-patterns/pivot.md).
 
-### <a name="navigation-pane-a-namenavigation-pane"></a>Navigationsbereich <a name="navigation-pane">
+### <a name="navigation-pane-a-namenavigation-pane-"></a>Navigationsbereich <a name="navigation-pane" />
 
 Ein Navigationsbereich (auch *Hamburger-Menü* genannt) ist ein Navigationssteuerelement, das häufig in UWP-Apps verwendet wird. In der Regel handelt es sich um einen Bereich mit mehreren Optionen im Stil eine Liste, mit denen die Benutzer zu anderen Seiten wechseln können. Im Allgemeinen ist dieser Bereich zu Beginn reduziert, um Platz zu sparen. Der Benutzer kann ihn durch Klicken auf eine Schaltfläche öffnen.
 

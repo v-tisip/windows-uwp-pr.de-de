@@ -6,17 +6,17 @@ ms.topic: article
 keywords: windows10 s, always connected, einschränkungen, windows10 auf ARM
 ms.localizationpriority: medium
 redirect_url: https://docs.microsoft.com/en-us/windows/uwp/porting/apps-on-arm-troubleshooting-x86
-ms.openlocfilehash: 5fa05e1dfd04208ba547a692473fc3df136e6e4f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 42a2866642d11d1d97cc7b0b663486723499a5cf
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919276"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058671"
 ---
 # <a name="limitations-of-apps-and-experiences-on-arm"></a>Einschränkungen von Apps und Oberflächen auf ARM
 Windows10 auf ARM weist die folgenden notwendigen Einschränkungen auf:
 
-- **Es werden nur ARM64-Treiber unterstützt**. Wie bei allen Architekturen, müssen Kernelmodustreiber, [User-Mode Driver Framework (UMDF)](https://docs.microsoft.com/en-us/windows-hardware/drivers/wdf/overview-of-the-umdf)-Treiber und Druckertreibern entsprechend der Architektur des Betriebssystems kompiliert werden. Während das ARM-Betriebssystem die Möglichkeit bietet, x86-Apps im Benutzermodus zu emulieren, werden Treiber, die für andere Architekturen (z. B. x64 oder x86) implementiert sind, derzeit nicht emuliert und werden daher auf dieser Plattform nicht unterstützt. Alle Apps, die mit ihren eigenen benutzerdefinierten Treibern funktionieren, müssten auf ARM64 portiert werden. In eingeschränkten Szenarien kann die App als x86 in einer Emulation ausgeführt werden, der Treiberteil der App muss jedoch auf ARM64 portiert werden. Weitere Informationen zum Kompilieren des Treibers für ARM64 finden Sie unter [Entwickeln von ARM64-Treibern mit WDK](https://review.docs.microsoft.com/en-us/windows-hardware/drivers/develop/building-arm64-drivers?branch=rs4-arm64).
+- **Es werden nur ARM64-Treiber unterstützt**. Wie bei allen Architekturen, müssen Kernelmodustreiber, [User-Mode Driver Framework (UMDF)](https://docs.microsoft.com/en-us/windows-hardware/drivers/wdf/overview-of-the-umdf)-Treiber und Druckertreibern entsprechend der Architektur des Betriebssystems kompiliert werden. Während das ARM-Betriebssystem die Möglichkeit bietet, x86-Apps im Benutzermodus zu emulieren, werden Treiber, die für andere Architekturen (z. B. x64 oder x86) implementiert sind, derzeit nicht emuliert und werden daher auf dieser Plattform nicht unterstützt. Alle Apps, die mit ihren eigenen benutzerdefinierten Treibern funktionieren, müssten auf ARM64 portiert werden. In eingeschränkten Szenarien kann die App als x86 in einer Emulation ausgeführt werden, der Treiberteil der App muss jedoch auf ARM64 portiert werden. Weitere Informationen zum Kompilieren des Treibers für ARM64 finden Sie unter [Entwickeln von ARM64-Treibern mit WDK](/windows-hardware/drivers/develop/building-arm64-drivers).
 
 - **x64-Apps werden nicht unterstützt**. Windows10 auf ARM unterstützt keine Emulation von x64-Apps.
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: ccff9d892fbedc62cf1b54e374a0071877805731
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6bb5c156dc29f8229db9e4cb215fe462b4be6af6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921001"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050433"
 ---
 # <a name="pair-devices"></a>Koppeln von Geräten
 
@@ -68,7 +68,7 @@ Der erste Schritt beim Entkoppeln eines Geräts ist das Abrufen des [**DeviceInf
 ## <a name="sample"></a>Beispiel
 
 
-Wenn Sie ein Beispiel zur Verwendung der [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)-APIs herunterladen möchten, klicken Sie [hier](http://go.microsoft.com/fwlink/?LinkID=620536).
+Wenn Sie ein Beispiel zur Verwendung der [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)-APIs herunterladen möchten, klicken Sie [hier](https://go.microsoft.com/fwlink/?LinkID=620536).
 
  
 

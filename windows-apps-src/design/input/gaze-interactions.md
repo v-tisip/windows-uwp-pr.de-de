@@ -11,12 +11,12 @@ dev-contact: Austin Hodges
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5dc12e9b85b7274c9e1deb7d629917cbeaa981c0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 77e39b9c7440fab491b3d7ef85baa757d299fff8
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942368"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058541"
 ---
 # <a name="gaze-interactions-and-eye-tracking-in-uwp-apps"></a>Interaktionen via Blick und Eye Tracking in UWP-Apps
 
@@ -36,7 +36,7 @@ Die Eingabe über Anvisieren ist eine tolle Möglichkeit, mit Windows- und UWP-A
 Darüber hinaus bietet die Eingabe über Anvisieren gleichermaßen attraktive Möglichkeiten für Spiele (z.B. Zielbestimmung und Nachverfolgung) und herkömmliche Produktivitätsanwendungen, Kiosks und andere interaktiven Szenarien, bei denen herkömmliche Eingabegeräte (z.B. Tastatur, Maus, Touch) nicht verfügbar sind oder es hilfreich wäre, dass der Benutzer die Hände frei hat für andere Aufgaben (z.B. zum Halten von Einkaufstüten).
 
 > [!NOTE]
-> Die Unterstützung für Eye Tracking-Hardware wurde mit dem **Windows10 Fall Creators Update** zusammen mit der [Augensteuerung](https://support.microsoft.com/en-us/help/4043921/windows-10-get-started-eye-control) eingeführt, einem integrierten Feature, mit dem Sie Ihre Augen nutzen können, um den Bildschirmzeiger zu steuern, Text über die Bildschirmtastatur einzugeben und mit Personen über Text-zu-Sprache zu kommunizieren. Eine Reihe von [UWP-APIs]([Windows.Devices.Input.Preview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview)) zum Erstellen von Anwendungen, die mit der Eye Tracking-Hardware interagieren können, ist im Lieferumfang des **Windows 10-Update April 2018 (Version 1803, Build 17134)** und höher enthalten.
+> Die Unterstützung für Eye Tracking-Hardware wurde mit dem **Windows10 Fall Creators Update** zusammen mit der [Augensteuerung](https://support.microsoft.com/en-us/help/4043921/windows-10-get-started-eye-control) eingeführt, einem integrierten Feature, mit dem Sie Ihre Augen nutzen können, um den Bildschirmzeiger zu steuern, Text über die Bildschirmtastatur einzugeben und mit Personen über Text-zu-Sprache zu kommunizieren. Eine Reihe von UWP-APIs ([Windows.Devices.Input.Preview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview)) zum Erstellen von Anwendungen, die mit der Eye tracking-Hardware interagieren können ist im Lieferumfang **Windows 10 April 2018 Update (Version 1803, Build 17134)** und höher.
 
 ## <a name="privacy"></a>Privatsphäre
 

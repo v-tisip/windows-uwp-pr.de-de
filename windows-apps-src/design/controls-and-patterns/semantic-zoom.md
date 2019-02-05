@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5689fd967756025872fd45bf242076e854e700aa
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 210cca8a4b17b77e8c1f9cb490a79bcd1a53b6c7
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048097"
+ms.locfileid: "9058791"
 ---
 # <a name="semantic-zoom"></a>Semantischer Zoom
 
@@ -80,7 +80,7 @@ Sie benötigen für einen semantischen Zoom folgende drei Elemente:
 - Eine vergrößerte Ansicht, die Daten auf Elementebene anzeigt
 - Eine verkleinerte Ansicht, die die Daten auf Gruppenebene anzeigt
 
-Bevor Sie einen semantischen Zoom verwenden, sollten Sie wissen, wie Sie eine Listenansicht mit gruppierten Daten verwenden. Weitere Informationen finden Sie unter [Listenansicht und Rasteransicht](listview-and-gridview.md) und [Gruppieren von Elementen in einer Liste](). 
+Bevor Sie einen semantischen Zoom verwenden, sollten Sie wissen, wie Sie eine Listenansicht mit gruppierten Daten verwenden. Weitere Informationen finden Sie in der [Listenansicht und Rasteransicht](listview-and-gridview.md). 
 
 > **Hinweis**:&nbsp;&nbsp;Um die vergrößerte und verkleinerte Ansicht des SemanticZoom-Steuerelements zu definieren, können Sie zwei beliebige Steuerelemente verwenden, die die Benutzeroberfläche [ISemanticZoomInformation](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.isemanticzoominformation.aspx) implementieren. Das XAML-Framework bietet drei Steuerelemente, die diese Schnittstelle implementieren: ListView, GridView und Hub.
  

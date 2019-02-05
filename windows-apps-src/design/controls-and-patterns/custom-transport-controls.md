@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2101eba9c78c87339af5f1bd46e6afc81eacf6af
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: d4b9e82b0ab5e798bb0b29c4d5127cfe773db5f7
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047425"
+ms.locfileid: "9058651"
 ---
 # <a name="create-custom-transport-controls"></a>Erstellen benutzerdefinierter Transportsteuerelemente
 
@@ -57,7 +57,7 @@ Das [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/w
 - Der dritte Abschnitt enthält das [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)-Element, in dem die verschiedenen MediaTransportControls-Elemente zusammengeführt werden und mit dem das Layout der Komponenten definiert wird.
 
 > [!NOTE]
-> Weitere Informationen zum Ändern von Vorlagen finden Sie unter [Steuerelementvorlagen](). Sie können einen Text-Editor oder vergleichbare Editoren in Ihrer IDE verwenden, um die XAML-Dateien in \(*Programmdateien*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK-Version*)\Generic zu öffnen. Das Standardformat und die Vorlage für jedes Steuerelement werden in der Datei **generic.xaml** definiert. Sie finden die MediaTransportControls-Vorlage in generic.xaml, indem Sie nach „MediaTransportControls“ suchen.
+> Weitere Informationen zum Ändern von Vorlagen finden Sie unter [Steuerelementvorlagen](/windows/uwp/design/controls-and-patterns/control-templates). Sie können einen Text-Editor oder vergleichbare Editoren in Ihrer IDE verwenden, um die XAML-Dateien in \(*Programmdateien*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK-Version*)\Generic zu öffnen. Das Standardformat und die Vorlage für jedes Steuerelement werden in der Datei **generic.xaml** definiert. Sie finden die MediaTransportControls-Vorlage in generic.xaml, indem Sie nach „MediaTransportControls“ suchen.
 
 In den folgenden Abschnitten erfahren Sie, wie Sie einige der wichtigsten Elemente der Transportsteuerelemente anpassen:
 - [**Slider**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx): ermöglicht Benutzern das Scrubbing durch ihre Medien und zeigt darüber hinaus den Fortschritt an.
@@ -91,7 +91,7 @@ Wenn Sie nur die Darstellung von MediaTransportControls ändern möchten, könne
 </MediaPlayerElement>
 ```
 
-Weitere Informationen zum Ändern von Stilen und Vorlagen finden Sie unter [Formatieren von Steuerelementen]() und [Steuerelementvorlagen]().
+Weitere Informationen zum Ändern von Stilen und Vorlagen finden Sie unter [Formatieren von Steuerelementen](/windows/uwp/design/controls-and-patterns/xaml-styles) und [Steuerelementvorlagen](/windows/uwp/design/controls-and-patterns/control-templates).
 
 ### <a name="create-a-derived-control"></a>Erstellen eines abgeleiteten Steuerelements
 

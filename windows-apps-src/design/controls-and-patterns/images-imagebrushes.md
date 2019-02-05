@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: fd6accd3082c141d9288dba5c6156132188c214b
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 5451e0dd94510873f87b981a817fb55ba2c4f985
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037242"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049777"
 ---
 # <a name="images-and-image-brushes"></a>Bilder und Bildpinsel
 
@@ -155,7 +155,7 @@ Weitere Informationen zur Berücksichtigung der Skalierung in Ihrem App-Design f
 
 In der Regel werden das Image- und das ImageBrush-Element mit XAML und nicht mit Code angegeben. Das liegt daran, dass diese Elemente häufig von Entwicklungstools als Teil einer XAML-UI-Definition ausgegeben werden.
 
-Wenn Sie „Image“ oder „ImageBrush“ im Code definieren, sollten Sie die Standardkonstruktoren verwenden und anschließend die relevanten Source-Eigenschaften ([Image.Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) oder [ImageBrush.ImageSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx)) festlegen. Die Source-Eigenschaften erfordern ein [BitmapImage](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx)-Objekt (keinen URI), wenn Sie diese mithilfe von Code festlegen. Falls es sich bei Ihrer Source um einen Stream handelt, initialisieren Sie den Wert mit der [SetSourceAsync](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync.aspx)-Methode. Ist Ihre Quelle ein (URI), der Ihrer App Inhalt mit dem **ms-appx**- oder dem **ms-resource**-Schema hinzufügt, verwenden Sie den [BitmapImage](https://msdn.microsoft.com/library/windows/apps/xaml/br243238.aspx)-Konstruktor, für den ein URI angegeben wird. Wenn beim Abrufen oder Decodieren der Bildquelle Probleme mit der Zeitsteuerung auftreten und Sie alternativen Inhalt anzeigen müssen, bis die Bildquelle verfügbar ist, können Sie auch das [ImageOpened](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.imageopened.aspx)-Ereignis behandeln. Beispielcode finden Sie unter [Beispiel für XAML-Bilder](http://go.microsoft.com/fwlink/p/?linkid=238575).
+Wenn Sie „Image“ oder „ImageBrush“ im Code definieren, sollten Sie die Standardkonstruktoren verwenden und anschließend die relevanten Source-Eigenschaften ([Image.Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) oder [ImageBrush.ImageSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx)) festlegen. Die Source-Eigenschaften erfordern ein [BitmapImage](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx)-Objekt (keinen URI), wenn Sie diese mithilfe von Code festlegen. Falls es sich bei Ihrer Source um einen Stream handelt, initialisieren Sie den Wert mit der [SetSourceAsync](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync.aspx)-Methode. Ist Ihre Quelle ein (URI), der Ihrer App Inhalt mit dem **ms-appx**- oder dem **ms-resource**-Schema hinzufügt, verwenden Sie den [BitmapImage](https://msdn.microsoft.com/library/windows/apps/xaml/br243238.aspx)-Konstruktor, für den ein URI angegeben wird. Wenn beim Abrufen oder Decodieren der Bildquelle Probleme mit der Zeitsteuerung auftreten und Sie alternativen Inhalt anzeigen müssen, bis die Bildquelle verfügbar ist, können Sie auch das [ImageOpened](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.imageopened.aspx)-Ereignis behandeln. Beispielcode finden Sie unter [Beispiel für XAML-Bilder](https://go.microsoft.com/fwlink/p/?linkid=238575).
 
 > [!NOTE]
 > Wenn Sie Bilder mithilfe von Code festlegen, können Sie die automatische Behandlung für den Zugriff auf nicht qualifizierte Ressourcen mit den aktuellen Skalierungs- und Kulturqualifizierern verwenden. Alternativ können Sie auch [ResourceManager](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemanager.aspx) und [ResourceMap](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemap.aspx) mit Qualifizierern für Kultur und Skalierung verwenden, um die Ressourcen direkt abzurufen. Weitere Informationen finden Sie unter [Ressourcenverwaltungssystem](https://msdn.microsoft.com/library/windows/apps/xaml/jj552947.aspx).

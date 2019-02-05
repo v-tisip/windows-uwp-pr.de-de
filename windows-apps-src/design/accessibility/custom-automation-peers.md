@@ -1,19 +1,19 @@
 ---
 Description: Describes the concept of automation peers for Microsoft UI Automation, and how you can provide automation support for your own custom UI class.
 ms.assetid: AA8DA53B-FE6E-40AC-9F0A-CB09637C87B4
-title: Benutzerdefinierte Automatisierungs-Peers
+title: Benutzerdefinierte Automatisierungspeers
 label: Custom automation peers
 template: detail.hbs
 ms.date: 07/13/2018
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 18d3affe5f142c56314d132ba488d87c6f285723
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 13bf5d60b547f71d0cd83e5790236534d05d2544
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920134"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050533"
 ---
 # <a name="custom-automation-peers"></a>Benutzerdefinierte Automatisierungs-Peers  
 
@@ -318,7 +318,7 @@ Unter [**Windows.UI.Xaml.Automation.Provider**](https://msdn.microsoft.com/libra
 
 Ein Peer kann melden, dass er mehrere Muster unterstützt. In diesem Fall sollte die Überschreibung eine Rückgabepfadlogik für jeden unterstützten [**PatternInterface**](https://msdn.microsoft.com/library/windows/apps/BR242496)-Wert enthalten und den Peer bei jeder Übereinstimmung zurückgeben. Es wird erwartet, dass der Aufrufer jeweils nur eine Schnittstelle anfordert und dass der Aufrufer entscheiden kann, ob eine Umwandlung für die erwartete Schnittstelle durchgeführt wird.
 
-Im Folgenden finden Sie ein Beispiel für eine [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore)-Überschreibung für einen benutzerdefinierten Peer. Der Peer meldet, dass die beiden Muster [**IRangeValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242590) und [**IToggleProvider**](https://msdn.microsoft.com/library/windows/apps/BR242653) unterstützt werden. Bei dem hier verwendeten Steuerelement handelt es sich um ein Steuerelement zum Anzeigen von Medien, das als Vollbild (Umschaltmodus) dargestellt werden kann und über eine Fortschrittsleiste verfügt, auf der Benutzer eine Position (das Bereichssteuerelement) auswählen können. Dieser Code stammt aus dem [XAML-Beispiel für Barrierefreiheit](http://go.microsoft.com/fwlink/p/?linkid=238570).
+Im Folgenden finden Sie ein Beispiel für eine [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore)-Überschreibung für einen benutzerdefinierten Peer. Der Peer meldet, dass die beiden Muster [**IRangeValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242590) und [**IToggleProvider**](https://msdn.microsoft.com/library/windows/apps/BR242653) unterstützt werden. Bei dem hier verwendeten Steuerelement handelt es sich um ein Steuerelement zum Anzeigen von Medien, das als Vollbild (Umschaltmodus) dargestellt werden kann und über eine Fortschrittsleiste verfügt, auf der Benutzer eine Position (das Bereichssteuerelement) auswählen können. Dieser Code stammt aus dem [XAML-Beispiel für Barrierefreiheit](https://go.microsoft.com/fwlink/p/?linkid=238570).
 
 
 ```csharp
@@ -538,7 +538,7 @@ Darüber hinaus sollten Peers mit Ausnahmen, die sie über die Peerunterstützun
 
 ## <a name="related-topics"></a>Verwandte Themen  
 * [Barrierefreiheit](accessibility.md)
-* [XAML-Beispiel für Barrierefreiheit](http://go.microsoft.com/fwlink/p/?linkid=238570)
+* [XAML-Beispiel für Barrierefreiheit](https://go.microsoft.com/fwlink/p/?linkid=238570)
 * [**FrameworkElementAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242472)
 * [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185)
 * [**OnCreateAutomationPeer**](https://msdn.microsoft.com/ibrary/windows/apps/windows.ui.xaml.uielement.oncreateautomationpeer)

@@ -6,12 +6,12 @@ ms.date: 03/23/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2535818d5362b1ffe4b7b35c7b4079bee73a511f
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 20662a562e67ee836feb1da73a71c76228a550cb
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9046054"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058681"
 ---
 # <a name="background-transfers"></a>Hintergrundübertragungen
 Verwenden Sie die Hintergrundübertragungs-API zum zuverlässigen Kopieren von Dateien im Netzwerk. Die Hintergrundübertragungs-API bietet erweiterte Upload- und Downloadfeatures, die bei angehaltener App im Hintergrund ausgeführt werden und auch nach Beendigung der App aktiv bleiben. Die API überwacht den Netzwerkstatus und kann Übertragungen automatisch anhalten und fortsetzen, wenn die Verbindung unterbrochen wird. Übertragungen sind außerdem akkuabhängig – die Downloadaktivität wird also basierend auf dem aktuellen Verbindungs- und Geräteakkustatus angepasst. Die API ist ideal für das Hoch- und Herunterladen von großen Dateien über HTTP(S) geeignet. FTP wird auch unterstützt, allerdings nur für Downloads.
@@ -28,7 +28,7 @@ Wenn eine App die Hintergrundübertragung verwendet, um eine Übertragung zu ini
 > [!NOTE]
 > Aufgrund von Ressourcenbeschränkungen pro App sollte eine App nicht mehr als 200 Übertragungen (DownloadOperations + UploadOperations) zu einem bestimmten Zeitpunkt verfügen. Dieses Limit zu überschreiten kann die App-Übertragungswarteschlange in einen nicht wiederherstellbaren Zustand lassen.
 
-Wenn eine Anwendung gestartet wird, muss er [**AttachAsync**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation.AttachAsync) für alle vorhandenen [**DownloadOperation**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation?branch=live) und [**UploadOperation**](/uwp/api/windows.networking.backgroundtransfer.uploadperation?branch=live) -Objekte aufrufen. Dies nicht zu tun bewirkt, dass den Verlust von Übermittlungen bereits abgeschlossen und schließlich rendert die Verwendung des Features Hintergrundübertragung nutzlos.
+Wenn eine Anwendung gestartet wird, muss er [**AttachAsync**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation.AttachAsync) für alle vorhandenen [**DownloadOperation**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation) und [**UploadOperation**](/uwp/api/windows.networking.backgroundtransfer.uploadoperation) -Objekte aufrufen. Dies nicht zu tun bewirkt, dass den Verlust von Übermittlungen bereits abgeschlossen und schließlich rendert die Verwendung des Features Hintergrundübertragung nutzlos.
 
 ### <a name="performing-authenticated-file-requests-with-background-transfer"></a>Durchführen authentifizierter Dateianforderungen mit Hintergrundübertragung
 Das Feature für die Hintergrundübertragung stellt Methoden bereit, die allgemeine Server- und Proxyanmeldeinformationen, Cookies sowie die Verwendung von benutzerdefinierten HTTP-Headern (mithilfe von [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146)) für einzelne Übertragungen unterstützen.

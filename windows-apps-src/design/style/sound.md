@@ -12,12 +12,12 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9dd47ce2acf78a76ad413d70ce8c3e7f39a793ea
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: f04d364aac79ed232f35cbdd8378bc50393d2c74
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048197"
+ms.locfileid: "9058511"
 ---
 # <a name="sound"></a>Sound
 
@@ -118,7 +118,7 @@ ElementSoundPlayer.Play(ElementSoundKind.Hide);
 ```
 ### <a name="navigation-within-a-page"></a>Navigation innerhalb einer Seite
 
-Beim Navigieren zwischen Bereichen oder Ansichten innerhalb einer app Seite (siehe [Registerkarten und Pivots](../controls-and-patterns/tabs-pivot.md)), besteht in der Regel bidirektionale Bewegung. Das bedeutet, dass Sie zur nächsten Ansicht bzw. zum nächsten Bereich (oder zur/zum vorherigen) wechseln können, ohne die aktuelle App-Seite zu verlassen, auf der Sie sich befinden.
+Beim Navigieren zwischen Bereichen oder Ansichten innerhalb einer app Seite (siehe [Registerkarten und Pivots](../controls-and-patterns/pivot.md)), besteht in der Regel bidirektionale Bewegung. Das bedeutet, dass Sie zur nächsten Ansicht bzw. zum nächsten Bereich (oder zur/zum vorherigen) wechseln können, ohne die aktuelle App-Seite zu verlassen, auf der Sie sich befinden.
 
 Das Audioerlebnis für dieses Navigationskonzept wird durch die **MovePrevious**- und **MoveNext**-Sounds umgesetzt.
 

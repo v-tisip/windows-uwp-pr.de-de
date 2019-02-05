@@ -6,12 +6,12 @@ ms.date: 08/30/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 4517d3fc917cb306281e9050f8554119ff987007
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: a2d5db17be1367deea66ff2762d0350931e1861e
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044504"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058581"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -47,7 +47,7 @@ Finden Sie unter [Windows Template Studio](https://marketplace.visualstudio.com/
 
 Wir haben neue UWP-XAML-Steuerelemente zur Verfügung, die die Lücke zwischen einer herkömmlichen Desktopanwendung UI und eine UWP-UI.
 
-Z. B. die neuen [Menüleiste](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/menus?branch=jimwalk%2Frs5-menu-bar), [DropDownButton](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button), [SplitButton](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button)und [CommandBarFlyout](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/command-bar-flyout?branch=jimwalk%2Frs5-command-bar-flyout) Steuerelemente bieten Ihnen die flexiblere Methoden, die Befehle verfügbar zu machen, und lassen Sie uns der Benutzer eingeben der [EditableComboBox](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/combo-box?branch=rs5#make-a-combo-box-editable) Werte, die nicht genannt sind in einer vordefinierten Liste von Optionen.
+Z. B. die neuen [Menüleiste](/windows/uwp/design/controls-and-patterns/menus), [DropDownButton](/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button), [SplitButton](/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button)und [CommandBarFlyout](/windows/uwp/design/controls-and-patterns/command-bar-flyout) Steuerelemente bieten Ihnen die flexiblere Methoden, die Befehle verfügbar zu machen, und lassen Sie uns der Benutzer eingeben der [EditableComboBox](/windows/uwp/design/controls-and-patterns/combo-box#make-a-combo-box-editable) Werte, die nicht genannt sind in einer vordefinierten Liste von Optionen.
 
 ![Menüleiste](images/menu-bar.png)
 
@@ -68,7 +68,7 @@ Der Windows-UI-Bibliothek ist ein Satz von NuGet-Pakete, die Steuerelemente und 
 
 ![Windows-UI-Bibliothek](images/win-ui.png)
 
-Finden Sie unter [Windows-UI-Bibliothek (Preview-Version)](https://docs.microsoft.com/en-us/uwp/toolkits/winui/).
+Finden Sie unter [Windows-UI-Bibliothek (Preview-Version)](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 <a id="xaml-islands" />
 
@@ -161,7 +161,7 @@ Viele Benutzer bringen in der heutigen Zeit ihre eigenen Telefone oder Tablets z
 |-------|-------------|
 | [Anleitung für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn894631) | In dieser Anleitung können Sie sich mit der UWP-Plattform unter Windows10 vertraut machen. Sie erhalten u. a. Informationen dazu, was eine Gerätefamilie ist, wie Sie entscheiden, auf welche Ihre Apps abzielen sollen, Informationen zu neuen UI-Steuerelementen und Bereichen, mit denen Sie Ihre Benutzeroberfläche für verschiedene Geräte-Formfaktoren anpassen können, sowie zur für Ihre App verfügbaren API-Oberfläche und wie Sie diese steuern können. |
 | [Adaptives XAML-UI-Codebeispiel](https://go.microsoft.com/fwlink/p/?LinkId=619992) | Dieses Codebeispiel zeigt die möglichen Layoutoptionen und Steuerelemente für Ihre App, unabhängig von der Art des Geräts, und veranschaulicht eine Interaktion mit den Bereichen, um das gewünschte Layout zu erzielen. Neben der Reaktion der Steuerelemente und der App selbst auf verschiedene Formfaktoren, werden die verschiedenen Methoden zum Erzielen einer adaptiven Benutzeroberfläche aufgezeigt. |
-| [Xamarin-Thema]() | Xamarin für für phone |
+| [Xamarin-Thema](/xamarin/) | Xamarin für für phone |
 
 ## <a name="deployment"></a>Bereitstellung
 

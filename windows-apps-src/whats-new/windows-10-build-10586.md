@@ -6,16 +6,16 @@ ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: 0d6c65c5-2ad5-46c7-964e-a3a9833c94ce
 ms.localizationpriority: medium
-ms.openlocfilehash: 6557648e3998cedee2a6eb0bcc9e58ca2f4c27d9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ff5e131c0d6f5371d4ce9cf2b1b59ebba928c759
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928908"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050393"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-10586"></a>Neuigkeiten für Entwickler in Windows10, Build 10586
 
-Windows10 Build 10586 (auch bekannt als November Update oder Version 1511), in Kombination mit Visual Studio2017 und dem aktualisierten SDK, bietet die Tools, Features und Umgebungen für die Entwicklung eindrucksvoller Apps für die Universelle Windows-Plattform. Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/create-uwp-apps.md) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](../porting/index.md) vertraut machen.
+Windows10 Build 10586 (auch bekannt als November Update oder Version 1511), in Kombination mit Visual Studio2017 und dem aktualisierten SDK, bietet die Tools, Features und Umgebungen für die Entwicklung eindrucksvoller Apps für die Universelle Windows-Plattform. Nach der [Installation der Tools und des SDKs](https://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/create-uwp-apps.md) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](../porting/index.md) vertraut machen.
 
 ## <a name="windows-10-build-10586---november-2015"></a>Windows10 (Build10586) – November2015
 

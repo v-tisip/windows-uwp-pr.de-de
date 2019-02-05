@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: db25954b7fc6541ac5f5900236e61cb8da488be6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e4657c9dfb651c1e7f6bb4e2cafdc49d0a11237b
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922381"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058721"
 ---
 # <a name="my-people-notifications"></a>Meine Kontakte – Benachrichtigungen
 
@@ -78,7 +78,7 @@ Darüber hinaus muss der Knoten der obersten Ebene Popups **hint-people**-Parame
 > Falls Ihre App die [ContactStore APIs](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.contactstore) verwendet und auf dem Smartphone gespeicherte Kontakte mithilfe der [StoredContact.RemoteId](https://docs.microsoft.com/en-us/uwp/api/Windows.Phone.PersonalInformation.StoredContact.RemoteId)-Eigenschaft mit remote gespeicherten Kontakten verknüpft, muss der Wert für die RemoteId-Eigenschaft unbedingt stabil und eindeutig sein. Die Remote-ID muss also durchweg ein einzelnes Benutzerkonto identifizieren und ein eindeutiges Tag enthalten, um zu verhindern, dass sich Konflikte mit den Remote-IDs anderer Kontakte auf dem PC ergeben. Hierzu zählen auch Kontakte von anderen Apps.
 > Falls die Stabilität und Eindeutigkeit der von Ihrer App verwendeten Remote-IDs nicht gewährleistet ist, können Sie allen Ihren [RemoteIdHelper](https://msdn.microsoft.com/en-us/library/windows/apps/jj207024(v=vs.105).aspx#BKMK_UsingtheRemoteIdHelperclass) mithilfe der später in diesem Thema beschriebenen -Klasse ein eindeutiges Tag hinzufügen, bevor Sie die Remote-IDs dem System hinzufügen. Alternativ können Sie auch ganz auf die Verwendung der RemoteId-Eigenschaft verzichten und stattdessen eine benutzerdefinierte erweiterte Eigenschaft erstellen, um die Remote-IDs für Ihre Kontakte zu speichern.
 
-Neben der zweiten Bindung und der Nutzlast müssen Sie eine weitere Nutzlast in die erste Bindung für das Fallback-Popup aufnehmen. Die Benachrichtigung verwendet diese, wenn sie gezwungen ist, zu einem regulären Popup zurückzukehren (wird am [Ende dieses Artikels](https://review.docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-notifications#falling-back-to-toast) näher erläutert).
+Neben der zweiten Bindung und der Nutzlast müssen Sie eine weitere Nutzlast in die erste Bindung für das Fallback-Popup aufnehmen. Die Benachrichtigung verwendet diese, wenn sie gezwungen ist, zu einem regulären Popup zurückzukehren (wird am [Ende dieses Artikels](/windows/uwp/contacts-and-calendar/my-people-notifications#falling-back-to-toast) näher erläutert).
 
 ## <a name="creating-the-notification"></a>Erstellen der Benachrichtigung
 Sie können eine Benachrichtigungsvorlage für Meine Kontakte genau so erstellen wie eine [Popupbenachrichtigung](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md).

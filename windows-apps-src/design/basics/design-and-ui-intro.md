@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0006d20c1db7da16b885e82fb3f066b081e27349
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 32838e2c3369535928c9e9311f62654eba54e4e0
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936183"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058781"
 ---
 # <a name="introduction-to-uwp-app-design"></a>Einführung in das UWP-App-Design
 
@@ -26,11 +26,11 @@ Diese Einführung bietet einen Überblick über die universellen Designfunktione
 
 ## <a name="effective-pixels-and-scaling"></a>Effektive Pixel und Skalierung
 
-UWP-apps, die auf allen [Windows 10-Geräte](../devices/index.md), seien es TV Tablets oder PCs ausgeführt werden. Wie entwerfen Sie eine Benutzeroberfläche, die auf einer Vielzahl von Geräten und Bildschirmgrößen gut aussieht?
+UWP-apps, die auf allen [Windows 10-Geräte](../devices/index.md), seien es TV Tablets oder PCs ausgeführt werden. Wie also entwerfen Sie eine Benutzeroberfläche, die auf einer Vielzahl von Geräten und Bildschirmgrößen gut aussieht?
 
 ![Dieselbe App auf verschiedenen Geräten](images/universal-image-1.jpg)
 
-UWP kann durch UI-Elemente automatisch anpassen, damit sie lesbar und leicht zu interagieren auf allen Geräten und Bildschirmgrößen sind.
+UWP unterstützt, indem die UI-Elemente automatisch angepasst, sodass sie lesbar und leicht zu interagieren auf allen Geräten und Bildschirmgrößen sind.
 
 Wenn Ihre App auf einem Gerät ausgeführt wird, verwendet das System einen Algorithmus, um die Art der Anzeige der UI-Elemente auf dem Bildschirm zu normalisieren. Dieser Skalierungsalgorithmus berücksichtigt den Abstand zum Bildschirm und die Bildschirmdichte (Pixel pro Zoll), um die wahrgenommene Größe (anstelle der physischen Größe) zu optimieren. Mit dem Skalierungsalgorithmus wird sichergestellt, dass der Schriftgrad 24 Pixel auf einem 3 Meter entfernten Surface Hub genauso für den Benutzer lesbar ist wie der Schriftgrad 24 Pixel auf einem 5-Zoll-Smartphone, das nur einige Zentimeter entfernt ist.
 
@@ -64,7 +64,7 @@ Da UWP-Apps automatisch für alle Geräte skaliert werden, folgt das Entwerfen e
 
 :::row:::
     :::column:::
-        When a UWP app is launched on any Windows 10 device, it launches in a [Window](/uwp/api/Windows.UI.Xaml.Controls.Window) with a [Frame](/uwp/api/Windows.UI.Xaml.Controls.Frame), which can navigate between [Page](/uwp/api/Windows.UI.Xaml.Controls.Page) instances.
+        When a UWP app is launched on any Windows 10 device, it launches in a [Window](/uwp/api/windows.ui.xaml.window) with a [Frame](/uwp/api/windows.ui.xaml.controls.frame), which can navigate between [Page](/uwp/api/windows.ui.xaml.controls.page) instances.
     :::column-end:::
     :::column:::
         ![Frame](images/frame.svg)

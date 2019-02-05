@@ -7,22 +7,22 @@ ms.topic: article
 keywords: windows10, UWP
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 ms.localizationpriority: medium
-ms.openlocfilehash: 2180551f48a728a9b426bc7e35b2dac388ff56ef
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: 8b2350c8164548121baec231335e747166f1c082
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981574"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050047"
 ---
 # <a name="run-debug-and-test-a-packaged-desktop-application"></a>Führen Sie aus, Debuggen Sie und Testen Sie eine verpackte desktop-Anwendung
 
-Führen Sie Ihre verpackte Anwendung, und sehen Sie, wie sie aussieht, ohne zu signieren. Legen Sie anschließend Haltepunkte fest und lassen Sie den Code schrittweise durchlaufen. Wenn Sie bereit sind, Ihre Anwendung in einer produktiven Umgebung testen, Signieren Sie Ihre Anwendung, und installieren Sie es. In diesem Thema erfahren Sie, wie Sie diese einzelnen Schritte ausführen.
+Führen Sie Ihre verpackte Anwendung, und sehen Sie, wie sie aussieht, ohne dass zum Signieren. Legen Sie anschließend Haltepunkte fest und lassen Sie den Code schrittweise durchlaufen. Wenn Sie bereit sind, Ihre Anwendung in einer produktiven Umgebung testen, Signieren Sie Ihre Anwendung, und installieren Sie es dann. In diesem Thema erfahren Sie, wie Sie diese einzelnen Schritte ausführen.
 
 <a id="run-app" />
 
 ## <a name="run-your-application"></a>Führen Sie Ihre Anwendung
 
-Sie können Ihre Anwendung zu testen, lokal, ohne dass ein Zertifikat, und signieren Sie es ausführen. Wie Sie die Anwendung ausführen, hängt tool verwendet, um das Paket zu erstellen.
+Sie können Ihre Anwendung zu testen, lokal ohne Erwerb eines Zertifikats und signieren Sie es ausführen. Wie Sie die Anwendung auszuführen richtet sich nach tool verwendet, um das Paket zu erstellen.
 
 ### <a name="you-created-the-package-by-using-visual-studio"></a>Erstellen des Pakets mit Visual Studio
 
@@ -37,14 +37,14 @@ Add-AppxPackage –Register AppxManifest.xml
 ```
 Finden Sie Ihre App im Windows-Startmenü, um sie auszuführen.
 
-![Anwendungspakets im Startmenü.](images/desktop-to-uwp/converted-app-installed.png)
+![Anwendungspakets im Menü "Start"](images/desktop-to-uwp/converted-app-installed.png)
 
 > [!NOTE]
-> Eine Anwendung immer als interaktiver Benutzer ausgeführt wird, und jedes Laufwerk, auf die Installation Ihres Anwendungspakets unter muss auf NTFS-Format formatiert sein.
+> Eine Anwendung immer als interaktiver Benutzer ausgeführt wird, und jedes Laufwerk, das Sie Ihres Anwendungspakets zu installieren, muss auf NTFS-Format formatiert sein.
 
 ## <a name="debug-your-app"></a>Debuggen Sie Ihre App
 
-Wie Sie die Anwendung debuggen, hängt tool verwendet, um das Paket zu erstellen.
+Wie Sie die Anwendung debuggen richtet sich nach tool verwendet, um das Paket zu erstellen.
 
 Wenn Sie Ihr Paket mithilfe des in Version 15.4 von Visual Studio 2017 verfügbaren [neuen Paketerstellungsprojekts](desktop-to-uwp-packaging-dot-net.md#new-packaging-project) erstellt haben, legen Sie das Paketerstellungsprojekt als Startprojekt fest und drücken Sie F5, um Ihre App zu debuggen.
 
@@ -56,7 +56,7 @@ Wenn Sie Ihr Paket mit einem anderen Tool erstellt haben, gehen Sie folgenderma�
 
 2. Starten Sie Visual Studio.
 
-   Wenn Sie die Anwendung mit erhöhten Berechtigungen debuggen möchten, starten Sie Visual Studio mit der Option **als Administrator ausführen** .
+   Wenn Sie die Anwendung mit erhöhten Berechtigungen debuggen möchten, starten Sie Visual Studio mithilfe der Option " **als Administrator ausführen** ".
 
 3. Wählen Sie in Visual Studio **Debuggen**->**Andere Debugziele**->**Installiertes App-Paket debuggen**.
 
@@ -64,11 +64,11 @@ Wenn Sie Ihr Paket mit einem anderen Tool erstellt haben, gehen Sie folgenderma�
 
 #### <a name="modify-your-application-in-between-debug-sessions"></a>Ändern Sie Ihre Anwendung zwischen Debugsitzungen
 
-Wenn Sie Ihre Änderungen an Ihrer Anwendung, um Fehlern zu beheben, wechseln Sie sie mithilfe des MakeAppx-Tools. Informationen hierzu finden Sie unter [Ausführen des MakeAppx-Tools](desktop-to-uwp-manual-conversion.md#make-appx).
+Wenn Sie Ihre Änderungen an Ihrer Anwendung um Fehlern zu beheben, wechseln Sie sie mithilfe des MakeAppx-Tools. Informationen hierzu finden Sie unter [Ausführen des MakeAppx-Tools](desktop-to-uwp-manual-conversion.md#make-appx).
 
 ### <a name="debug-the-entire-application-lifecycle"></a>Debuggen des gesamten Anwendungslebenszyklus
 
-In einigen Fällen sollten Sie eine differenziertere Steuerung des debugging-Vorgangs, einschließlich der Möglichkeit zum Debuggen Ihrer Anwendung, bevor sie mit beginnt.
+In einigen Fällen sollten Sie eine differenziertere Steuerung des debugging-Vorgangs, einschließlich der Möglichkeit zum Debuggen Ihrer Anwendung, bevor er beginnt.
 
 [PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) können Sie die vollständige Kontrolle über den Anwendungslebenszyklus, einschließlich anhalten, fortsetzen und beenden erhalten.
 
@@ -76,13 +76,13 @@ In einigen Fällen sollten Sie eine differenziertere Steuerung des debugging-Vor
 
 ## <a name="test-your-app"></a>Testen der App
 
-Zum Testen Ihrer Anwendung in einer realistischen vor der Verteilung, ist es am besten, Signieren Sie Ihre Anwendung, und installieren Sie es.
+Zum Testen Ihrer Anwendung in einer realistischen, wie Sie für die Verteilung vorbereiten, empfiehlt es sich, Signieren Sie Ihre Anwendung, und installieren Sie es.
 
 ### <a name="test-an-application-that-you-packaged-by-using-visual-studio"></a>Testen Sie eine Anwendung, die Sie mit Visual Studio verpackt
 
-Visual Studio signiert Ihre Anwendung mit einem Testzertifikat. Sie finden dieses Zertifikat im Ausgabeordner, den der Assistent **App-Pakete erstellen** generiert. Die Zertifikatsdatei hat die *CER* -Erweiterung, und Sie müssen das Zertifikat in den Speicher " **Vertrauenswürdige Stammzertifizierungsstellen** " auf dem PC installieren, die Sie auf Ihre Anwendung testen möchten. Weitere Informationen finden Sie unter [Querladen des App-Pakets](../packaging/packaging-uwp-apps.md#sideload-your-app-package).
+Visual Studio signiert Ihre Anwendung mit einem Testzertifikat. Sie finden dieses Zertifikat im Ausgabeordner, den der Assistent **App-Pakete erstellen** generiert. Die Zertifikatsdatei hat die *CER* -Erweiterung, und Sie müssen das Zertifikat im Speicher **Vertrauenswürdige Stammzertifizierungsstellen** auf dem PC zu installieren, die Sie auf Ihre Anwendung testen möchten. Weitere Informationen finden Sie unter [Querladen des App-Pakets](../packaging/packaging-uwp-apps.md#sideload-your-app-package).
 
-### <a name="test-an-application-that-you-packaged-by-using-the-desktop-app-converter-dac"></a>Testen Sie eine Anwendung, die Sie mit der Desktop App Converter (DAC) verpackten
+### <a name="test-an-application-that-you-packaged-by-using-the-desktop-app-converter-dac"></a>Testen Sie eine Anwendung, die Sie mithilfe der Desktop App Converter (DAC) verpackt
 
 Wenn Sie Ihre Anwendung mithilfe der Desktop App Converter Verpacken, können Sie mithilfe der ``sign`` Parameter, um Ihre Anwendung automatisch mit einem generierten Zertifikat zu signieren. Sie müssen das Zertifikat und anschließend die App installieren. Weitere Informationen finden Sie unter [Ausführung der verpackten App](desktop-to-uwp-run-desktop-app-converter.md#run-app).   
 
@@ -124,7 +124,7 @@ Invoke-CommandInDesktopPackage [-PackageFamilyName] <string> [-AppId] <string> [
 
 **Finden Sie Antworten auf Ihre Fragen**
 
-Haben Sie Fragen? Fragen Sie uns auf Stack Overflow. Unser Team überwacht diese [Tags](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Fragen Sie uns [hier](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+Haben Sie Fragen? Fragen Sie uns auf Stack Overflow. Unser Team überwacht diese [Tags](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Fragen Sie uns [hier](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
 **Geben Sie Feedback oder Verbesserungsvorschläge**
 

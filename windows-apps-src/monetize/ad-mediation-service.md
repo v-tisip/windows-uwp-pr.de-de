@@ -5,16 +5,16 @@ ms.date: 06/05/2018
 ms.topic: article
 keywords: Windows 10, UWP, Anzeigen, Werbung, Anzeigenvermittlung
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f4041c21665bd77856b15b7e94e45d613d6ea51
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9197dd4b62df26ff63e469063573789da948c767
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945752"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049817"
 ---
 # <a name="microsoft-ad-mediation-service"></a>Microsoft-Anzeigenvermittlungsdienst
 
-Wenn Sie das [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) verwenden, um [Anzeigen in Ihren Apps anzuzeigen](display-ads-in-your-app.md), können Sie optional den Microsoft-Anzeigenvermittlungsdienst nutzen, um Ihren Anzeigenumsatz zu maximieren. In diesem Artikel wird eine Übersicht über den Anzeigenvermittlungsdienst und seine Ziele bereitgestellt.
+Wenn Sie das [Microsoft Advertising-SDK](https://aka.ms/ads-sdk-uwp) verwenden, um [Anzeigen in Ihren Apps anzuzeigen](display-ads-in-your-app.md), können Sie optional den Microsoft-Anzeigenvermittlungsdienst nutzen, um Ihren Anzeigenumsatz zu maximieren. In diesem Artikel wird eine Übersicht über den Anzeigenvermittlungsdienst und seine Ziele bereitgestellt.
 
 Der Anzeigenvermittlungsdienst ist ein Teil der [Monetarisierungsplattform mit Anzeigen bei Microsoft](https://developer.microsoft.com/windows/ad-monetization-platform). Die Plattform besteht aus folgenden Teilen.
 
@@ -47,7 +47,7 @@ Der Anzeigenvermittlungsdienst ist darauf ausgelegt, die höchste Rentabilität 
 
 Neue Anzeigennetzwerke werden automatisch eingefügt und über ein lernendes Budget auf ihre Leistung bewertet. Innerhalb kurzer Zeit finden sie Ihren Platz im Wasserfall. Damit werden die Anzeigennetzwerke wettbewerbsfähiger, und es trägt außerdem dazu bei, dass der Entwickler die Monetarisierung durch Apps optimal nutzt.
 
-Es wird dringend empfohlen, unsere [empfohlenen Vermittlungseinstellungen](../publish/in-app-ads.md#mediation-settings) zu verwenden, um den Umsatz durch Anzeigen in Ihren Apps zu maximieren. Dadurch können unsere Algorithmen,die beste Rentabilität für Ihre App ermöglichen. Sie haben jedoch auch die Freiheit, wählen Sie Ihre eigenen anzeigenvermittlungseinstellungen im Partner Center haben Sie mehr Kontrolle über die anzeigennetzwerke, die anzeigen und die Reihenfolge, in der dies, dienen.
+Es wird dringend empfohlen, unsere [empfohlenen Vermittlungseinstellungen](../publish/in-app-ads.md#mediation-settings) zu verwenden, um den Umsatz durch Anzeigen in Ihren Apps zu maximieren. Dadurch können unsere Algorithmen,die beste Rentabilität für Ihre App ermöglichen. Sie haben jedoch auch die Freiheit, wählen Sie Ihre eigenen anzeigenvermittlungseinstellungen im Partner Center, um mehr Kontrolle über die anzeigennetzwerke verfügen, die anzeigen und die Reihenfolge in der dies der Fall ist.
 
 ## <a name="rich-data-and-signals"></a>Umfangreiche Daten und Signale
 
@@ -55,6 +55,6 @@ Der Anzeigenvermittlungsdienst arbeitet mit verschiedenen Anzeigennetzwerken zus
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp)
+* [Microsoft Advertising-SDK](https://aka.ms/ads-sdk-uwp)
 * [Einstellungen der Anzeigenvermittlung](../publish/in-app-ads.md#mediation-settings)
 * [Bericht zur Anzeigenleistung](../publish/advertising-performance-report.md)

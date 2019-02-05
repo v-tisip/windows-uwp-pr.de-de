@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b109dff2896d2db01892d2b62a511d392f8054b3
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 692b8837f3bd74dfc5f74bee02786213c9a898f2
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037162"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058521"
 ---
 # <a name="text-block"></a>Textblock
 
@@ -80,7 +80,7 @@ Sie können auch Inhalte hinzufügen, indem Sie wie hier gezeigt Elemente mit fl
     <Italic>italic</Italic>, or a <Bold><Italic>combination</Italic></Bold>.</TextBlock>
 ```
 
-Von der Inline-Klasse abgeleitete Elemente, z.B. Bold, Italic, Run, Span und LineBreak, ermöglichen unterschiedliche Formatierungen für unterschiedliche Teile des Texts. Weitere Informationen finden Sie im Abschnitt [Formatieren von Text](). Mit dem Inline-Hyperlink-Element können Sie dem Text einen Link hinzufügen. Durch die Verwendung von Inlines wird jedoch auch das Rendern von Text im schnellen Pfad deaktiviert, wie im nächsten Abschnitt erläutert.
+Von der Inline-Klasse abgeleitete Elemente, z.B. Bold, Italic, Run, Span und LineBreak, ermöglichen unterschiedliche Formatierungen für unterschiedliche Teile des Texts. Weitere Informationen finden Sie im Abschnitt [Formatieren von Text](#formatting-text). Mit dem Inline-Hyperlink-Element können Sie dem Text einen Link hinzufügen. Durch die Verwendung von Inlines wird jedoch auch das Rendern von Text im schnellen Pfad deaktiviert, wie im nächsten Abschnitt erläutert.
 
 
 ## <a name="performance-considerations"></a>Leistungsaspekte

@@ -8,12 +8,12 @@ ms.date: 01/23/2018
 ms.topic: article
 keywords: Windows 10, Uwp, win32, desktop, Popup-Benachrichtigungen, Senden einer Popupbenachrichtigung, lokale Popups senden, desktop Bridge, c#, c++ scharfe und Popupbenachrichtigung, Wpf
 ms.localizationpriority: medium
-ms.openlocfilehash: 3436433c8086c2801f1ee2174a51525e48c2f7c9
-ms.sourcegitcommit: fae67a53ab1468a31120293653ade9541085bdd7
+ms.openlocfilehash: 907ba19812c9a34a7a91f42fefac4c190bfd394b
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "8992311"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058701"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>Senden von Popupbenachrichtigungen über C#-Apps
 
@@ -66,7 +66,7 @@ Kopieren Sie [DesktopNotificationManagerCompat.cs-Datei von GitHub](https://raw.
 
 ## <a name="step-4-implement-the-activator"></a>Schritt 4: Implementieren des Aktivators
 
-Sie müssen einen Handler für die Popup-Aktivierung implementieren, wenn der Benutzer auf das Popup klickt, Ihre app eine Aktion ausführen kann. Dies ist erforderlich für das Popup, damit es im Info-Center beibehalten wird (da auf das Popup Tage später geklickt werden kann, wenn die App geschlossen ist). Diese Klasse kann an eine beliebige Stelle in Ihrem Projekt platziert werden.
+Sie müssen einen Handler für Popup-Aktivierung implementieren, damit, wenn der Benutzer auf das Popup klickt, Ihre app eine Aktion ausführen kann. Dies ist erforderlich für das Popup, damit es im Info-Center beibehalten wird (da auf das Popup Tage später geklickt werden kann, wenn die App geschlossen ist). Diese Klasse kann an eine beliebige Stelle in Ihrem Projekt platziert werden.
 
 Erweitern Sie die **NotificationActivator**-Klasse, und fügen Sie die drei Attribute hinzu, die unten aufgeführt sind. Erstellen Sie dann eine eindeutige GUID CLSID für Ihre App mithilfe einer der vielen online GUID-Generatoren. Durch diese CLSID (Klassen-ID) weiß das Info-Center, welche Klasse für COM aktiviert werden soll.
 
@@ -386,7 +386,7 @@ DesktopNotificationManagerCompat.History.Clear();
 
 ## <a name="step-10-deploying-and-debugging"></a>Schritt 10: Bereitstellen und Debuggen
 
-Wenn Sie die Desktop-Brücke-App bereitstellen und debuggen möchten, lesen Sie [Ausführen, Debuggen und Testen eine verpackten Desktop-App](/porting/desktop-to-uwp-debug.md).
+Wenn Sie die Desktop-Brücke-App bereitstellen und debuggen möchten, lesen Sie [Ausführen, Debuggen und Testen eine verpackten Desktop-App](/windows/uwp/porting/desktop-to-uwp-debug).
 
 Um eine klassische Win32-App bereitzustellen und zu verwalten, müssen Sie Ihrer App durch den Installer einmal vor dem Debuggen installieren, damit die Verknüpfung auf dem Startmenü mit AUMID und CLSID vorhanden ist. Nachdem die Verknüpfung auf dem Startmenü vorhanden ist, können Sie mithilfe von F5 in Visual Studio debuggen.
 

@@ -6,12 +6,12 @@ ms.date: 11/13/2017
 ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
-ms.openlocfilehash: a39d2b3133714ab784309e131a71219beae4e3c0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2e27256fbf19ed31a7b087e94dea9e5514db516f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926652"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050593"
 ---
 # <a name="multilingual-app-toolkit-40-faq--troubleshooting"></a>Multilingual App Toolkit 4.0 – Fragen und Antworten sowie Problembehandlung
 
@@ -83,7 +83,7 @@ Bevor Sie MAT effektiv nutzen können, muss Ihre App lokalisierbar sein. Dies wi
 
 ## <a name="what-is-microsoft-translator"></a>Was ist Microsoft Translator?
 
-Microsoft Translator ist ein Cloud-Dienst für Maschinenübersetzungen. Die Maschinenübersetzung bietet eine gute Möglichkeit, um fremdsprachige Texte zu erhalten, wenn der Aufwand für eine professionelle Übersetzung durch Menschen unverhältnismäßig hoch erscheint. Weitere Informationen erhalten Sie unter [Microsoft Translator](http://go.microsoft.com/fwlink/p/?LinkId=258220).
+Microsoft Translator ist ein Cloud-Dienst für Maschinenübersetzungen. Die Maschinenübersetzung bietet eine gute Möglichkeit, um fremdsprachige Texte zu erhalten, wenn der Aufwand für eine professionelle Übersetzung durch Menschen unverhältnismäßig hoch erscheint. Weitere Informationen erhalten Sie unter [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220).
 
 Das Toolkit nutzt den Microsoft Translator-Dienst, um Ihnen Übersetzungsvorschläge anzuzeigen. Wenn das Microsoft Translator-Symbol im Fenster für Übersetzungssprachen angezeigt wird, können Sie sehen, welche Sprachen von Microsoft Translator unterstützt werden.
 
@@ -178,5 +178,5 @@ Vor dem Start des Zertifizierungsprozesses für den Microsoft Store müssen Sie 
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Verwenden des Multilingual App Toolkit 4.0](use-mat.md)
-* [Microsoft Translator](http://go.microsoft.com/fwlink/p/?LinkId=258220)
+* [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220)
 * [Befehlszeilenoptionen für MakePri.exe](../../app-resources/makepri-exe-command-options.md)

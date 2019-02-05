@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 13a22c33f3c975e5c1e797f52d7c4e81ea008b61
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 9aa5053d83518c61335807874cd0d31943a60695
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9036982"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058601"
 ---
 # <a name="hyperlinks"></a>Links
 
@@ -158,7 +158,7 @@ Da es sich bei einem Link nicht um ein [UIElement](https://msdn.microsoft.com/li
 
 **Inhalt**
 
-Für den Link liegen Einschränkungen in Bezug auf den Inhalt vor, der in der [Inlines](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx)-Sammlung enthalten sein darf. Genauer gesagt: Ein Link lässt nur [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx)- und andere [Span]()-Typen zu, die keinen anderen Link darstellen. [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx) darf nicht in der Inlines-Sammlung eines Links enthalten sein. Beim Versuch, eingeschränkte Inhalte hinzuzufügen, wird eine Ausnahme für ein ungültiges Argument oder eine XAML-Analyseausnahme ausgelöst.
+Für den Link liegen Einschränkungen in Bezug auf den Inhalt vor, der in der [Inlines](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx)-Sammlung enthalten sein darf. Genauer gesagt: Ein Link lässt nur [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx)- und andere [Span](/uwp/api/windows.ui.xaml.documents.span)-Typen zu, die keinen anderen Link darstellen. [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx) darf nicht in der Inlines-Sammlung eines Links enthalten sein. Beim Versuch, eingeschränkte Inhalte hinzuzufügen, wird eine Ausnahme für ein ungültiges Argument oder eine XAML-Analyseausnahme ausgelöst.
 
 **Links und Design-/Formatvorlagenverhalten**
 

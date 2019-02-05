@@ -5,12 +5,12 @@ ms.date: 05/30/2018
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, portieren, migrieren, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: b2e09bc5d65e9bf3029b4049049de52709e648b2
-ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
+ms.openlocfilehash: e81f82fe823ee0fdf81741c89576adf268940d91
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "9042342"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058811"
 ---
 # <a name="move-to-cwinrt-from-wrl"></a>Von WRL zu C++/WinRT wechseln
 Dieses Thema zeigt, wie Sie zum entsprechenden Äquivalent in [C++ für Windows-Runtime-Bibliothek (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) portiert [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -116,7 +116,7 @@ winrt::check_hresult(
 );
 ```
 
-## <a name="porting-a-wrl-module-microsoftwrlmodule"></a>Portieren eines WRL-Moduls ([Microsoft::WRL::Module]())
+## <a name="porting-a-wrl-module-microsoftwrlmodule"></a>Portieren eines WRL-Moduls (Microsoft::WRL::Module)
 Sie können nach und nach C++/WinRT-Code zu einem vorhandenen Projekt hinzufügen, das WRL verwendet, um eine Komponente zu implementieren; Ihre vorhandenen WRL-Klassen werden weiterhin unterstützt. Dieser Abschnitt zeigt, wie das geht.
 
 Wenn Sie einen neuen Projekttyp **Komponente für Windows-Runtime (C++/WinRT)** in Visual Studio erstellen und erzeugen, wird die Datei `Generated Files\module.g.cpp` für Sie generiert. Diese Datei enthält die Definitionen von zwei nützlichen C++/WinRT-Funktionen (siehe unten), die Sie kopieren und dem Projekt hinzufügen können. Diese Funktionen sind **WINRT_CanUnloadNow** und **WINRT_GetActivationFactory**. Wie Sie sehen können, rufen diese bedingt WRL auf, um Sie in jedem Portierungsstadium zu unterstützen.

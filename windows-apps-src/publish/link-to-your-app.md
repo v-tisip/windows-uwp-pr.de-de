@@ -6,17 +6,17 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Links, Windows Store-Protokoll, mit einer App verknüpfen, App verknüpfen
 ms.localizationpriority: medium
-ms.openlocfilehash: 59df207adf44cea04505e41a3323da1743170c46
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 56bc051c3c5a935f3b6b26e478731fcde9c06902
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931764"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050613"
 ---
 # <a name="link-to-your-app"></a>Erstellen eines Links zu Ihrer App
 
 
-Sie können Kunden Ihre app zu entdecken, über die Verknüpfung zur im Microsoft Store-Eintrag Ihrer app unterstützen.
+Sie können Kunden Ihre app zu entdecken, indem Sie mit dem Eintrag Ihrer app im Microsoft Store verknüpfen.
 
 ## <a name="getting-the-link-to-your-apps-store-listing"></a>Abrufen des Links zum Store-Eintrag Ihrer App
 
@@ -29,15 +29,15 @@ Wenn ein Kunde auf diesen Link klickt, wird die webbasierte Eintragsseite für I
 
 Sie können direkt mit dem Eintrag Ihrer app mit einem benutzerdefinierten Badge können Kunden wissen, dass Ihre app im Microsoft Store ist verknüpfen.
 
-Zum Erstellen Ihres Badges finden Sie auf der Seite " [Microsoft Store-Badges](http://go.microsoft.com/fwlink/p/?LinkID=534236) ". Sie benötigen die zwölfstellige **Store-ID** Ihrer App, um dieses Formular zum Generieren von Badge und Link verwenden zu können. Die **Store ID** Ihrer App finden Sie auf der Seite [App-Identität](view-app-identity-details.md) unter **App-Verwaltung**.
+Zum Erstellen Ihres Badges finden Sie auf der Seite " [Microsoft Store-Badges](https://go.microsoft.com/fwlink/p/?LinkID=534236) ". Sie benötigen die zwölfstellige **Store-ID** Ihrer App, um dieses Formular zum Generieren von Badge und Link verwenden zu können. Die **Store ID** Ihrer App finden Sie auf der Seite [App-Identität](view-app-identity-details.md) unter **App-Verwaltung**.
 
 > [!NOTE]
-> Informationen und Anforderungen in Bezug auf die Verwendung der Microsoft Store-Signals finden Sie unter [App-marketing-Richtlinien](app-marketing-guidelines.md) .
+> Weitere Informationen und Anforderungen in Bezug auf Ihre Verwendung der Microsoft Store-Signals [marketing Richtlinien für die App](app-marketing-guidelines.md) zu.
 
 
-## <a name="linking-directly-to-your-app-in-the-microsoft-store"></a>Verknüpfen direkt an Ihre app im Microsoft Store
+## <a name="linking-directly-to-your-app-in-the-microsoft-store"></a>Direkt an Ihre app im Microsoft Store verknüpfen
 
-Sie können einen Link an, die den Microsoft Store, und öffnen einen Browser mit direkt zur Eintragsseite für Ihre app wechselt Erstellen der **ms-Windows-Store:** URI-Schema.
+Sie können einen Link erstellen, den Microsoft Store und direkt zur Eintragsseite für Ihre app wechselt, ohne einen Browser öffnen, mit, der **ms-Windows-Store:** URI-Schema.
 
 Diese Links sind hilfreich, wenn Sie wissen, dass Benutzer Windows-Geräte verwenden, und möchten, dass sie direkt zur Eintragsseite im Store gelangen. Sie sollten z.B. diesen Link verwenden, nachdem Sie die Zeichenfolge des Benutzer-Agent in einem Browser bestätigt haben, um zu überprüfen, dass das Betriebssystem des Benutzers den Store unterstützt, oder wenn Sie bereits über eine UWP-App kommunizieren.
 
@@ -45,7 +45,7 @@ Um dieses URI-Schema verwenden, um direkt mit Store-Eintrag Ihrer app zu verknü
 
 `ms-windows-store://pdp/?ProductId=`
 
-Weitere Informationen zur Verwendung der Microsoft Store-Protokolls finden Sie unter [Starten der Microsoft-app](../launch-resume/launch-store-app.md).
+Weitere Informationen zur Verwendung der Microsoft Store-Protokolls finden Sie in der [Starten der Microsoft-app](../launch-resume/launch-store-app.md).
 
  
 
