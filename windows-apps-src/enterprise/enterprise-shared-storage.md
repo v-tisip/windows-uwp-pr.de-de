@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 006507d4665f5578310b8d3e31fb8f7fba4117a2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f9e1f285f53f2f4c9f160b573141666609560c00
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934745"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049757"
 ---
 # <a name="enterprise-shared-storage"></a>Im Unternehmen freigegebener Speicher
 
-Der freigegebene Speicher besteht aus zwei Speicherorten, auf die Apps mit der eingeschränkten Funktionalität **enterpriseDeviceLockdown** und einem Unternehmenszertifikat vollständigen Lese- und Schreibzugriff haben. Die **enterpriseDeviceLockdown**-Funktion ermöglicht Apps die Verwendung der API zur Gerätesperrung und den Zugriff auf im Unternehmen freigegebene Speicherordner. Weitere Informationen zur API finden Sie unter dem [**Windows.Embedded.DeviceLockdown**](http://go.microsoft.com/fwlink/?LinkId=699331)-Namespace.  
+Der freigegebene Speicher besteht aus zwei Speicherorten, auf die Apps mit der eingeschränkten Funktionalität **enterpriseDeviceLockdown** und einem Unternehmenszertifikat vollständigen Lese- und Schreibzugriff haben. Die **enterpriseDeviceLockdown**-Funktion ermöglicht Apps die Verwendung der API zur Gerätesperrung und den Zugriff auf im Unternehmen freigegebene Speicherordner. Weitere Informationen zur API finden Sie unter dem [**Windows.Embedded.DeviceLockdown**](https://go.microsoft.com/fwlink/?LinkId=699331)-Namespace.  
 
 Diese Speicherorte werden auf dem lokalen Laufwerk festgelegt:
 - \Data\SharedData\Enterprise\Persistent
@@ -27,7 +27,7 @@ Im Unternehmen freigegebener Speicher unterstützt die folgenden Szenarien.
 
 - Sie können Daten in einer Instanz einer App, zwischen Instanzen derselben App oder zwischen verschiedenen Apps freigeben, wenn beide über die entsprechenden Funktionen und Zertifikate verfügen.
 - Sie können Daten auf der lokalen Festplatte im Ordner „\Data\SharedData\Enterprise\Persistent“ speichern, und die Daten bleiben auch nach dem Zurücksetzen des Geräts erhalten.
-- Sie können Dateien über die mobile Geräteverwaltung (Mobile Device Management, MDM) auf einem Gerät bearbeiten (u. a. lesen, schreiben und löschen). Weitere Informationen zur Verwendung von im Unternehmen freigegebenem Speichern mit dem MDM-Dienst finden Sie unter [EnterpriseExtFileSystem-CSP](http://go.microsoft.com/fwlink/?LinkId=699333).
+- Sie können Dateien über die mobile Geräteverwaltung (Mobile Device Management, MDM) auf einem Gerät bearbeiten (u. a. lesen, schreiben und löschen). Weitere Informationen zur Verwendung von im Unternehmen freigegebenem Speichern mit dem MDM-Dienst finden Sie unter [EnterpriseExtFileSystem-CSP](https://go.microsoft.com/fwlink/?LinkId=699333).
 
 ## <a name="access-enterprise-shared-storage"></a>Zugriff auf im Unternehmen freigegebenen Speicher
 

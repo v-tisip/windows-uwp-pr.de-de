@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
-ms.openlocfilehash: 38318e7f97c8eba7d0137a865f5025fb9a77fa55
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5c3c57653899ce7d849eec72ad36f14f7806652c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930691"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049867"
 ---
 # <a name="intro-to-secure-windows-app-development"></a>Einführung in die Entwicklung sicherer Windows-Apps
 
@@ -96,7 +96,7 @@ Nachfolgend finden Sie den allgemeinen Workflow beim Aufrufen der [**WebAuthenti
 
 Wenn die Kommunikation erfolgreich verläuft: Verarbeiten der vom Identitätsanbieter zurückgegebenen Antwortzeichenfolge. Falls sie nicht erfolgreich ist: Verarbeiten des Fehlers.
 
-C#-Beispielcode für dieses Verfahren finden Sie unten. Weitere Informationen und eine ausführliche exemplarische Vorgehensweise finden Sie unter [WebAuthenticationBroker](web-authentication-broker.md). Ein vollständiges Codebeispiel finden Sie im [WebAuthenticationBroker-Beispiel auf GitHub](http://go.microsoft.com/fwlink/p/?LinkId=620622).
+C#-Beispielcode für dieses Verfahren finden Sie unten. Weitere Informationen und eine ausführliche exemplarische Vorgehensweise finden Sie unter [WebAuthenticationBroker](web-authentication-broker.md). Ein vollständiges Codebeispiel finden Sie im [WebAuthenticationBroker-Beispiel auf GitHub](https://go.microsoft.com/fwlink/p/?LinkId=620622).
 
 ```cs
 string startURL = "https://<providerendpoint>?client_id=<clientid>";

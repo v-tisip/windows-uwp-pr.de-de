@@ -8,12 +8,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a06859d6580720150383f2995505e671c0a31a4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d84683544628a9b6df0eafb2999fabb134465ea8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947235"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049627"
 ---
 # <a name="accessibility-testing"></a>Barrierefreiheitstests  
 
@@ -81,7 +81,7 @@ Die beste Methode, um die Barrierefreiheit der Tastaturnavigation zu testen, bes
 <span id="VERIFY_THE_CONTRAST_RATIO_OF_VISIBLE_TEXT"/>
 
 ## <a name="verify-the-contrast-ratio-of-visible-text"></a>Überprüfen des Kontrastverhältnisses von sichtbarem Text  
-Überprüfen Sie mit den Farbkontrasttools, ob das Kontrastverhältnis von sichtbarem Text in Ordnung ist. Zu den Ausnahmen zählen inaktive UI-Elemente und Logos oder dekorativer Text, der keine Informationen enthält und neu angeordnet werden kann, ohne dadurch seine Bedeutung zu verändern. Weitere Informationen zum Kontrastverhältnis sowie zu Ausnahmen finden Sie unter [Anforderungen für barrierefreien Text](accessible-text-requirements.md). Tools zum Testen des Kontrastverhältnisses finden Sie unter [Techniken für WCAG 2.0 G18 (Abschnitt Ressourcen)](http://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources).
+Überprüfen Sie mit den Farbkontrasttools, ob das Kontrastverhältnis von sichtbarem Text in Ordnung ist. Zu den Ausnahmen zählen inaktive UI-Elemente und Logos oder dekorativer Text, der keine Informationen enthält und neu angeordnet werden kann, ohne dadurch seine Bedeutung zu verändern. Weitere Informationen zum Kontrastverhältnis sowie zu Ausnahmen finden Sie unter [Anforderungen für barrierefreien Text](accessible-text-requirements.md). Tools zum Testen des Kontrastverhältnisses finden Sie unter [Techniken für WCAG 2.0 G18 (Abschnitt Ressourcen)](https://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources).
 
 > [!NOTE]
 > Einige der unter den Techniken für WCAG2.0G18 aufgeführten Tools können bei einer UWP-App nicht interaktiv verwendet werden. Möglicherweise müssen Sie die Farbwerte für den Vorder- und Hintergrund im Tool manuell eingeben, Bildschirmaufnahmen der App-Benutzeroberfläche anfertigen und dann das Kontrastverhältnistool für die Bildschirmaufnahme ausführen. Es kann auch erforderlich sein, dass Sie das Tool beim Öffnen der Quellbitmapdateien in einem Bildbearbeitungsprogramm ausführen, und nicht während des Ladens eines Bilds durch die App.
@@ -165,5 +165,5 @@ Außerdem können Sie testen, ob in der Elementansicht der Benutzeroberflächena
 * [Barrierefreiheit](accessibility.md)
 * [Nicht empfehlenswerte Methoden](practices-to-avoid.md)
 * [Benutzeroberflächenautomatisierung](https://msdn.microsoft.com/library/windows/desktop/Ee684009)
-* [Barrierefreiheit unter Windows](http://go.microsoft.com/fwlink/p/?LinkId=320802)
+* [Barrierefreiheit unter Windows](https://go.microsoft.com/fwlink/p/?LinkId=320802)
 * [Erste Schritte mit der Sprachausgabe](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)

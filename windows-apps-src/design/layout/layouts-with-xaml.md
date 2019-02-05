@@ -5,12 +5,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 82a528b3ec98f56e1079e11ec1123d86de15d50f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 691ce1cc0c49154142a52f329af6f2a1df4ae027
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919985"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049397"
 ---
 # <a name="responsive-layouts-with-xaml"></a>Dynamische Layouts mit XAML
 
@@ -117,7 +117,7 @@ Panelsteuerelement | Beschreibung
 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) |<li>Die Elemente werden in einer Linie gestapelt – entweder vertikal oder horizontal.</li><li>Streckungswerte für „HorizontalAlignment“/„VerticalAlignment“ werden in der entgegengesetzten Richtung der „Orientation“-Eigenschaft berücksichtigt. Wird die Größe eines Elements nicht explizit festgelegt, wird das Element gestreckt, sodass es die zur Verfügung stehende Breite (oder Höhe, falls die Ausrichtung auf „Horizontal“ festgelegt ist) ausfüllt. In der von der „Orientation“-Eigenschaft angegebenen Richtung wird ein Element an seinen Inhalt angepasst.</li><li>Untergeordnete Inhalte werden visuell abgeschnitten, wenn sie größer sind als das Panel.</li><li>Die Größe des Inhalts wird nicht durch die Grenzen des Panels in der von der „Orientation“-Eigenschaft angegebenen Richtung beschränkt; bildlauffähige Inhalte werden daher über die Panelgrenzen hinaus gestreckt und weisen keine Bildlaufleisten auf. Sie müssen die Höhe (oder Breite) des untergeordneten Inhalts explizit auf die Bildlaufleisten beschränken, damit die Bildlaufleisten angezeigt werden.</li>
 [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) |<li>Die Elemente werden in Zeilen oder Spalten angeordnet, die automatisch auf eine neue Zeile oder Spalte umgebrochen werden, wenn der „MaximumRowsOrColumns“-Wert erreicht ist.</li><li>Ob die Elemente in Zeilen oder Spalten angeordnet werden, hängt von der „Orientation“-Eigenschaft ab.</li><li>Mithilfe der angefügten Eigenschaften „VariableSizedWrapGrid.RowSpan“ und „VariableSizedWrapGrid.ColumnSpan“ können sich die Elemente über mehrere Spalten und Zeilen erstrecken.</li><li>Streckungswerte für „HorizontalAlignment“/„VerticalAlignment“ werden ignoriert. Die Größe der Elemente wird gemäß den Eigenschaften „ItemHeight“ und „ItemWidth“ angepasst. Wenn diese Eigenschaften nicht festgelegt werden, wird das Element in der ersten Zelle an seinen Inhalt angepasst, und alle anderen Zellen erben diese Größe.</li><li>Untergeordnete Inhalte werden visuell abgeschnitten, wenn sie größer sind als das Panel.</li><li>Die Größe von Inhalten wird durch die Grenzen des Panels beschränkt, für bildlauffähige Inhalte werden daher bei Bedarf Bildlaufleisten angezeigt.</li>
 
-Ausführliche Informationen und Beispiele für diese Panels finden Sie unter [Layoutpanels](layout-panels.md). Weitere Informationen finden Sie auch im [Beispiel für reaktionsfähige Designtechniken](http://go.microsoft.com/fwlink/p/?LinkId=620024).
+Ausführliche Informationen und Beispiele für diese Panels finden Sie unter [Layoutpanels](layout-panels.md). Weitere Informationen finden Sie auch im [Beispiel für reaktionsfähige Designtechniken](https://go.microsoft.com/fwlink/p/?LinkId=620024).
 
 Mit Layoutpanels können Sie die Benutzeroberfläche als logische Steuerelementgruppen strukturieren. Wenn Sie diese mit den entsprechenden Eigenschaftseinstellungen verwenden, erhalten Sie Unterstützung für die automatische Größenanpassung, die Neupositionierung und die Neuformatierung von UI-Elementen. Die meisten Benutzeroberflächenlayouts müssen jedoch weiter bearbeitet werden, wenn erhebliche Änderungen an der Fenstergröße vorgenommen werden. Hierzu können Sie visuelle Zustände verwenden.
 
@@ -254,13 +254,13 @@ In diesem Beispiel wird veranschaulicht, wie die angefügte [**„RelativePanel.
 
 ### <a name="custom-state-triggers"></a>Benutzerdefinierte Zustandsauslöser
 
-Sie können die [**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx)-Klasse erweitern, um benutzerdefinierte Auslöser für eine Vielzahl von Szenarien zu erstellen. Sie können z.B. ein „StateTrigger“-Element erstellen, um die verschiedenen Zustände basierend auf dem Eingabetyp auszulösen, und dann die Ränder um ein Steuerelement herum vergrößern, wenn der Eingabetyp „Toucheingabe“ ist. Alternativ können Sie ein „StateTrigger“-Element erstellen, um unterschiedliche Zustände auf der Grundlage der Gerätefamilie anzuwenden, in der die App ausgeführt wird. Beispiele zum Erstellen von benutzerdefinierten Auslösern und zum Verwenden der Auslöser, um optimale UI-Ergebnisse in einer einzelnen XAML-Ansicht zu erzielen, finden Sie im [Beispiel für Zustandsauslöser](http://go.microsoft.com/fwlink/p/?LinkId=620025).
+Sie können die [**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx)-Klasse erweitern, um benutzerdefinierte Auslöser für eine Vielzahl von Szenarien zu erstellen. Sie können z.B. ein „StateTrigger“-Element erstellen, um die verschiedenen Zustände basierend auf dem Eingabetyp auszulösen, und dann die Ränder um ein Steuerelement herum vergrößern, wenn der Eingabetyp „Toucheingabe“ ist. Alternativ können Sie ein „StateTrigger“-Element erstellen, um unterschiedliche Zustände auf der Grundlage der Gerätefamilie anzuwenden, in der die App ausgeführt wird. Beispiele zum Erstellen von benutzerdefinierten Auslösern und zum Verwenden der Auslöser, um optimale UI-Ergebnisse in einer einzelnen XAML-Ansicht zu erzielen, finden Sie im [Beispiel für Zustandsauslöser](https://go.microsoft.com/fwlink/p/?LinkId=620025).
 
 ### <a name="visual-states-and-styles"></a>Visuelle Zustände und Stile
 
 Sie können Stilressourcen in visuellen Zuständen verwenden, um eine Reihe von Eigenschaftsänderungen auf mehrere Steuerelemente anzuwenden. Weitere Informationen zum Verwenden von Stilen finden Sie unter [Formatieren von Steuerelementen](../controls-and-patterns/xaml-styles.md).
 
-In diesem vereinfachten XAML-Markup aus dem Beispiel für Zustandsauslöser wird eine Stilressource auf ein Button-Element angewendet, um die Größe und die Ränder für die Maus- oder Toucheingabe anzupassen. Den vollständigen Code und die Definition des benutzerdefinierten Zustandsauslösers finden Sie im [Beispiel für Zustandsauslöser](http://go.microsoft.com/fwlink/p/?LinkId=620025).
+In diesem vereinfachten XAML-Markup aus dem Beispiel für Zustandsauslöser wird eine Stilressource auf ein Button-Element angewendet, um die Größe und die Ränder für die Maus- oder Toucheingabe anzupassen. Den vollständigen Code und die Definition des benutzerdefinierten Zustandsauslösers finden Sie im [Beispiel für Zustandsauslöser](https://go.microsoft.com/fwlink/p/?LinkId=620025).
 
 ```xaml
 <Page ... >
@@ -389,7 +389,7 @@ else
 }
 ```
 
-Sie können auch unterschiedliche Kriterien verwenden, um zu bestimmen, zur welcher Seite navigiert werden soll. Weitere Beispiele finden Sie im Beispiel [Mehrere Ansichten für maßgeschneiderte Inhalte](http://go.microsoft.com/fwlink/p/?LinkId=620636), in dem die [**GetIntegratedDisplaySize**](https://msdn.microsoft.com/library/windows/apps/xaml/dn904185.aspx)-Funktion verwendet wird, um die physische Größe einer integrierten Anzeige zu überprüfen.
+Sie können auch unterschiedliche Kriterien verwenden, um zu bestimmen, zur welcher Seite navigiert werden soll. Weitere Beispiele finden Sie im Beispiel [Mehrere Ansichten für maßgeschneiderte Inhalte](https://go.microsoft.com/fwlink/p/?LinkId=620636), in dem die [**GetIntegratedDisplaySize**](https://msdn.microsoft.com/library/windows/apps/xaml/dn904185.aspx)-Funktion verwendet wird, um die physische Größe einer integrierten Anzeige zu überprüfen.
 
 ## <a name="related-topics"></a>Verwandte Themen
 - [Tutorial: Erstellen von adaptiven Layouts](../basics/xaml-basics-adaptive-layout.md)

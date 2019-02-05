@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 3ee38abfb28aad8d6a3ce073a947580b3df29593
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: df03c6f10f106868213fe812b2f303d7675c567b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942594"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050127"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Tests mit dem Emulator für Microsoft Windows10Mobile
 
@@ -64,7 +64,7 @@ Wenn Sie den Microsoft-Emulator für Windows10Mobile deinstallieren, wird automa
 
 ### <a name="running"></a>Running
 
-Wählen Sie zum Ausführen einer app im Emulator einfach einen emulierten Gerät **Ausführen** Dropdown-Menü in Visual Studio.
+Wählen Sie zum Ausführen einer app im Emulator **Ausführen** Dropdown-Menü in Visual Studio einfach einen emulierten Gerät.
 
 ![Verfügbare Emulatoren mit Auflösung, Größe und Arbeitsspeicher](images/em-list.png)
 
@@ -237,7 +237,7 @@ Zahlungs-Apps können auch mithilfe des Terminalsimulators von MasterCard ([http
 -   Aktivieren Sie unterhalb des Skript-Editor-Fensters das Kontrollkästchen für den **MasterCard**-Listener, und starten Sie den Simulator von MasterCard.
 -   Mithilfe dieses Tools können Sie Befehle generieren, die dann über das NFC-Tool an Ihre im Emulator ausgeführte Anwendung weitergeleitet werden.
 
-Weitere Informationen zur HCE-Unterstützung sowie zur Entwicklung von HCE-Apps in Windows10Mobile finden Sie im [Blog des NFC-Teams von Microsoft](http://go.microsoft.com/fwlink/?LinkId=534749).
+Weitere Informationen zur HCE-Unterstützung sowie zur Entwicklung von HCE-Apps in Windows10Mobile finden Sie im [Blog des NFC-Teams von Microsoft](https://go.microsoft.com/fwlink/?LinkId=534749).
 
 ### <a name="how-to-create-scripts-for-hce-testing"></a>So wird's gemacht: Erstellen von Skripts für HCE-Tests
 
@@ -452,7 +452,7 @@ Die Registerkarte **SD-Karte** simuliert mithilfe eines Ordner auf dem Entwicklu
         -   Wenn Sie während des Synchronisierungsvorgangs auf **Synchronisierung abbrechen** klicken, wird die Karte ausgeworfen, und die Ergebnisse des Synchronisierungsvorgangs sind unvollständig.
     -   Die Schaltfläche **Eject SD card** wird wieder zu **Insert SD card**.
 
-> **Hinweis:** da SD-Karte, die vom Smartphone verwendete mit dem FAT32-Dateisystem formatiert ist, beträgt die maximale Größe 32GB.
+> **Hinweis:** da SD-Karte vom Smartphone verwendete mit dem FAT32-Dateisystem formatiert ist, 32GB beträgt die maximale Größe.
 
 Die Geschwindigkeit von Lese- und Schreibvorgängen wird für die simulierte SD-Karte realistisch gedrosselt. Der Zugriff auf eine SD-Karte dauert länger als der Zugriff auf die Festplatte des Computers.
 
@@ -625,13 +625,13 @@ In bestimmten Situationen, etwa beim Aktualisieren, um einen neuen Windows 10-Fl
 
 Führen Sie zum Beheben dieses Problems an einer Eingabeaufforderung mit Administratorrechten den Befehl „Netcfg -d“ aus: `C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`. Starten Sie den Computer nach Ausführung des Befehls neu, um den Wiederherstellungsvorgang abzuschließen.
 
-**Hinweis:** dieser Befehl löscht alle Netzwerkgeräte, nicht nur die mit dem Emulator verknüpften. Beim Neustart des Computers werden alle Hardwarenetzwerkgeräte automatisch erkannt.
+**Hinweis:** dieser Befehl löscht alle Netzwerkgeräte, nicht nur für Menschen mit dem Emulator verknüpften. Beim Neustart des Computers werden alle Hardwarenetzwerkgeräte automatisch erkannt.
  
 ### <a name="unable-to-launch-the-emulators"></a>Die Emulatoren können nicht gestartet werden.
 
 Der Microsoft-Emulator enthält „XDECleanup.exe“ – ein Tool, das alle VMs, differenzierenden Datenträger und emulatorspezifischen Netzwerkswitches löscht. Dieses Tool ist bereits in den Binärdateien (XDE) des Emulators enthalten. Verwenden Sie dieses Tool zum Bereinigen von Emulator-VMs, wenn diese einen fehlerhaften Zustand aufweisen. Führen Sie das Tool über eine Eingabeaufforderung mit Administratorrechten aus:`C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`
 
-> **Hinweis:** XDECleanup.exe löscht alle emulatorspezifischen Hyper-V-VMs sowie alle VM-Prüfpunkte und gespeicherten Zustände.
+> **Hinweis:** XDECleanup.exe löscht alle emulatorspezifischen Hyper-V-VMs und auch alle VM-Prüfpunkte und gespeicherten Zustände.
 
 ### <a name="uninstall-windows-10-for-mobile-image"></a>Deinstallieren des Windows10Mobile-Image
 
@@ -656,7 +656,7 @@ So deaktivieren sie die Hardwarbeschleunigung:
 
 ## <a name="support-resources"></a>Supportressourcen
 
-Antworten und Problemlösungen für die Windows10-Tools finden Sie im [Forum für Windows10-Tools](http://go.microsoft.com/fwlink/?LinkId=534765). Eine Liste mit allen Foren für Windows10-Entwickler finden Sie [hier](http://go.microsoft.com/fwlink/?LinkId=535000).
+Antworten und Problemlösungen für die Windows10-Tools finden Sie im [Forum für Windows10-Tools](https://go.microsoft.com/fwlink/?LinkId=534765). Eine Liste mit allen Foren für Windows10-Entwickler finden Sie [hier](https://go.microsoft.com/fwlink/?LinkId=535000).
 
 ## <a name="related-topics"></a>Verwandte Themen
 

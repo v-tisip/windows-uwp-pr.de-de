@@ -6,17 +6,17 @@ ms.date: 10/02/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 114524294a5b77165167601c1479b6c3894bb29b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7e108d603a623e3b9e41d7ced3c0fafc80f006b8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937821"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050007"
 ---
 # <a name="view-app-identity-details"></a>Anzeigen von Details zur App-Identität
 
 
-Sie können Details zur eindeutigen Identität zugewiesen für Ihre app vom Microsoft Store auf **App-Identität** Seiten anzeigen. Eintrag auf dieser Seite können Sie auch einen Link zu Ihrer app Store abrufen.
+Sie können Details zur eindeutigen Identität zu Ihrer app im Microsoft Store auf Seiten **App-Identität** zugewiesen wurde anzeigen. Eintrag auf dieser Seite können Sie auch einen Link zu Ihrer app Store abrufen.
 
 Um diese Informationen zu suchen, navigieren Sie zu einer Ihrer Apps und erweitern im linken Navigationsmenü **App-Verwaltung**. Wählen Sie **App-Identität** aus, um diese Details anzuzeigen.
 
@@ -46,7 +46,7 @@ Die folgenden zusätzlichen Werte beziehen sich auf die Paketfamilie der App, we
 
 Der direkte Link zu Ihrer App-Seite kann geteilt werden, um Kunden das Auffinden der App im Store zu erleichtern. Dieser Link hat das Format **`https://www.microsoft.com/store/apps/<your app's Store ID>`**. Wenn ein Kunde auf diesen Link klickt, wird die webbasierte Eintragsseite für Ihre App geöffnet. Auf Windows-Geräten wird die Store-App auch ebenfalls Ihren App-Eintrag starten und anzeigen.
 
-Die **Store-ID** Ihrer App wird in diesem Abschnitt auch angezeigt. Diese Store-ID kann dazu verwendet werden, [Store-Badges zu generieren](http://go.microsoft.com/fwlink/p/?LinkId=534236) oder Ihre App anderweitig zu identifizieren.
+Die **Store-ID** Ihrer App wird in diesem Abschnitt auch angezeigt. Diese Store-ID kann dazu verwendet werden, [Store-Badges zu generieren](https://go.microsoft.com/fwlink/p/?LinkId=534236) oder Ihre App anderweitig zu identifizieren.
 
 Das **Store-Protokolllink** kann verwendet werden, um Ihre App im Store direkt und ohne einen neuen Browser zu öffnen, als ob Sie es innerhalb der App verknüpfen. Weitere Informationen finden Sie unter [Erstellen eines Links zu Ihrer App](link-to-your-app.md).
 

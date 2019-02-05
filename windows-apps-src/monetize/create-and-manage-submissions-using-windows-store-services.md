@@ -6,12 +6,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API
 ms.localizationpriority: medium
-ms.openlocfilehash: 2122c259e78ce96c4553dd676c0c1ed78e4e7123
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 82e5ba10b8f0480f4d996840df26817e324111d8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922800"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049467"
 ---
 # <a name="create-and-manage-submissions"></a>Erstellen und Verwalten von Übermittlungen
 
@@ -27,10 +27,10 @@ Die folgenden Schritte beschreiben den gesamten Prozess der Verwendung der Micro
 <span id="not_supported" />
 
 > [!IMPORTANT]
-> Wenn Sie diese API zum Erstellen einer Übermittlung für eine app, eine Flight-Paket oder ein Add-on verwenden, achten Sie darauf, dass Sie Sie weitere Änderungen an der Übermittlung ausschließlich mithilfe der API und nicht im Partner Center. Wenn Sie Partner Center verwenden, um eine Übermittlung zu ändern, die Sie ursprünglich mithilfe der API erstellt haben, wird nicht mehr ändern, oder übernehmen die Übermittlung mithilfe der API werden. In einigen Fällen kann der Fehlerstatus der Übermittlung belassen werden, mit dem die Übermittlung nicht fortgesetzt werden kann. In diesem Fall müssen Sie die Übermittlung löschen und eine neue Übermittlung erstellen.
+> Wenn Sie diese API zum Erstellen einer Übermittlung für eine app, eine Flight-Paket oder ein Add-on verwenden, achten Sie darauf, dass Sie Sie weitere Änderungen an der Übermittlung ausschließlich mithilfe der API und nicht im Partner Center. Wenn Sie Partner Center verwenden, um eine Übermittlung zu ändern, die Sie ursprünglich mithilfe der API erstellt haben, werden Sie nicht mehr in der Lage zu ändern oder übernehmen die Übermittlung mithilfe der API. In einigen Fällen kann der Fehlerstatus der Übermittlung belassen werden, mit dem die Übermittlung nicht fortgesetzt werden kann. In diesem Fall müssen Sie die Übermittlung löschen und eine neue Übermittlung erstellen.
 
 > [!IMPORTANT]
-> Sie können mit dieser API weder Übermittlungen für [Volumeneinkäufe über den Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen](../publish/organizational-licensing.md) veröffentlichen noch Übermittlungen für [Branchenanwendungen](../publish/distribute-lob-apps-to-enterprises.md) direkt an Unternehmen. In beiden Fällen müssen Sie verwenden die Übermittlung im Partner Center zu veröffentlichen.
+> Sie können mit dieser API weder Übermittlungen für [Volumeneinkäufe über den Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen](../publish/organizational-licensing.md) veröffentlichen noch Übermittlungen für [Branchenanwendungen](../publish/distribute-lob-apps-to-enterprises.md) direkt an Unternehmen. Beide Szenarios, müssen Sie verwenden die Übermittlung im Partner Center zu veröffentlichen.
 
 > [!NOTE]
 > Diese API kann nicht mit Apps oder Add-Ons verwendet werden, die obligatorische App-Updates und über den Store verwaltete Add-Ons verwenden. Bei Verwendung der Microsoft Store-Übermittlungs-API mit einer App oder einem Add-On, das eines dieser Features verwendet, gibt die API den Fehlercode409 zurück. In diesem Fall müssen Sie die Partner Center verwenden, um die Übermittlungen für die app bzw. das Add-on zu verwalten.
@@ -41,13 +41,13 @@ Die folgenden Schritte beschreiben den gesamten Prozess der Verwendung der Micro
 
 Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllt haben, bevor Sie mit dem Schreiben von Code zum Aufrufen der Microsoft Store-Übermittlungs-API beginnen:
 
-* Sie (bzw. Ihre Organisation) müssen über ein Azure AD-Verzeichnis und die Berechtigung [Globaler Administrator](http://go.microsoft.com/fwlink/?LinkId=746654) für das Verzeichnis verfügen. Wenn Sie bereits mit Office 365oder anderen Unternehmensdiensten von Microsoft arbeiten, verfügen Sie schon über ein Azure AD-Verzeichnis. Andernfalls können Sie [ein neues Azure AD im Partner Center erstellen](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) , für die ohne zusätzliche Kosten.
+* Sie (bzw. Ihre Organisation) müssen über ein Azure AD-Verzeichnis und die Berechtigung [Globaler Administrator](https://go.microsoft.com/fwlink/?LinkId=746654) für das Verzeichnis verfügen. Wenn Sie bereits mit Office 365oder anderen Unternehmensdiensten von Microsoft arbeiten, verfügen Sie schon über ein Azure AD-Verzeichnis. Andernfalls können Sie [ein neues Azure AD im Partner Center erstellen](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) , für ohne zusätzliche Kosten.
 
-* Sie müssen [eine Azure AD-Anwendung mit Ihrem Partner Center-Konto verknüpfen](#associate-an-azure-ad-application-with-your-windows-partner-center-account) und Ihre Mandanten-ID, Client-ID und Schlüssel abrufen. Sie benötigen diese Werte, um ein Azure AD-Zugriffstoken abzurufen, das Sie in Aufrufen von der Microsoft Store-Übermittlungs-API verwenden.
+* Sie müssen [eine Azure AD-Anwendung mit Ihrem Partner Center-Konto zuordnen](#associate-an-azure-ad-application-with-your-windows-partner-center-account) und Ihre Mandanten-ID, Client-ID und Schlüssel abrufen. Sie benötigen diese Werte, um ein Azure AD-Zugriffstoken abzurufen, das Sie in Aufrufen von der Microsoft Store-Übermittlungs-API verwenden.
 
 * Bereiten Sie Ihre App für die Verwendung mit der Microsoft Store-Übermittlungs-API vor:
 
-  * Wenn Ihre app im Partner Center noch nicht vorhanden ist, müssen Sie [Ihre app durch reservieren den Namen im Partner Center erstellen](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name). Sie können die Microsoft Store-Übermittlungs-API zum Erstellen einer app im Partner Center verwenden. Arbeit in Partner Center, um ihn zu erstellen, und klicken Sie dann nach, die Sie können mithilfe der API für die app zugreifen und Übermittlungen programmgesteuert erstellen. Sie können jedoch mithilfe der API Add-Ons und Flight-Pakete programmgesteuert erstellen, bevor Sie Übermittlungen für sie erstellen.
+  * Wenn Ihre app im Partner Center noch nicht vorhanden ist, müssen Sie [Ihre app durch reservieren den Namen im Partner Center erstellen](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name). Sie können die Microsoft Store-Übermittlungs-API zum Erstellen einer app im Partner Center verwenden. Sie müssen funktionieren, im Partner Center, um ihn zu erstellen, und dann nach, die Sie können mithilfe der API auf die app zugreifen und Übermittlungen programmgesteuert erstellen. Sie können jedoch mithilfe der API Add-Ons und Flight-Pakete programmgesteuert erstellen, bevor Sie Übermittlungen für sie erstellen.
 
   * Bevor Sie eine Übermittlung für eine bestimmte app mit dieser API erstellen können, müssen Sie zunächst [eine Übermittlung für die app im Partner Center erstellen](https://msdn.microsoft.com/windows/uwp/publish/app-submissions), einschließlich den [Altersfreigabe](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) -Fragebogen beantworten. Danach können Sie neue Übermittlungen für diese App mithilfe der API programmgesteuert erstellen. Sie müssen keine Add-On-Übermittlung oder Flight-Paketübermittlung vor der Verwendung der API für diese Arten von Übermittlungen erstellen.
 
@@ -68,7 +68,7 @@ Bevor Sie die Microsoft Store-Übermittlungs-API verwenden können, müssen Sie 
 
 1.  Im Partner Center, [Partner Center-Konto Ihrer Organisation mit Azure AD-Verzeichnis Ihrer Organisation zuordnen](../publish/associate-azure-ad-with-partner-center.md).
 
-2.  Als Nächstes auf der Seite für den **Benutzer** im Abschnitt **kontoeinstellungen** des Partner Center, [die Azure AD-Anwendung hinzufügen](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) , die die app darstellt oder Dienst, die Sie verwenden, um Übermittlungen für Ihr Partner Center-Konto zugreifen. Weisen Sie dieser Anwendung die Rolle **Verwalter** zu. Wenn die Anwendung nicht vorhanden ist, noch in Azure AD-Verzeichnis, können Sie eine [Erstellen Sie ein neues Azure AD-Anwendung im Partner Center](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account).  
+2.  Als Nächstes aus der Seite " **Benutzer** " im Abschnitt **kontoeinstellungen** Partner Center, [die Azure AD-Anwendung hinzufügen](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) , die die app darstellt oder Dienst, die Sie verwenden, um Übermittlungen für Ihr Partner Center-Konto zugreifen. Weisen Sie dieser Anwendung die Rolle **Verwalter** zu. Wenn die Anwendung nicht vorhanden ist, noch in Azure AD-Verzeichnis, Sie können [Erstellen Sie ein neues Azure AD-Anwendung im Partner Center](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account).  
 
 3.  Wechseln Sie zurück zur Seite **Benutzer**, klicken Sie auf den Namen der Azure AD-Anwendung, um die Anwendungseinstellungen aufzurufen, und kopieren Sie die Werte unter **Mandanten-ID** und **Client-ID**.
 

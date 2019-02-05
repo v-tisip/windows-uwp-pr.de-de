@@ -1,25 +1,25 @@
 ---
 Description: Distribute a packaged desktop application (Desktop Bridge)
 Search.Product: eADQiWindows 10XVcnh
-title: Veröffentlichen Sie Ihre verpackte desktop-Anwendung auf den Microsoft Store oder das querladen es auf einem oder mehreren Geräten.
+title: Veröffentlichen Sie Ihre verpackte desktop-Anwendung auf den Microsoft Store oder querladen es auf einem oder mehreren Geräten.
 ms.date: 05/18/2018
 ms.topic: article
 keywords: windows10, UWP
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
-ms.openlocfilehash: 9fe216b70b7c10f254c0e3b7b18275a72d46215c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 8968864a0ff4bcf9e27f75a44a0a500736bb54b8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928770"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049188"
 ---
 # <a name="distribute-a-packaged-desktop-application"></a>Verteilen einer verpackten desktop-Anwendungs
 
-Veröffentlichen Sie Ihre verpackte desktop-Anwendung auf den Microsoft Store oder das querladen es auf einem oder mehreren Geräten.  
+Veröffentlichen Sie Ihre verpackte desktop-Anwendung auf den Microsoft Store oder querladen es auf einem oder mehreren Geräten.  
 
 > [!NOTE]
-> Haben Sie einen Plan für wie Benutzer auf Ihre verpackte Anwendung übertragen werden kann? Schauen Sie sich den Abschnitt [Umstellung von Benutzern auf Ihre verpackte App](#transition-users) dieses Handbuchs an, um eine Vorstellung davon zu bekommen, bevor Sie Ihre App verteilen.
+> Haben Sie einen Plan, wie Sie Benutzer Übergang auf die verpackte Anwendung ermöglichen können? Schauen Sie sich den Abschnitt [Umstellung von Benutzern auf Ihre verpackte App](#transition-users) dieses Handbuchs an, um eine Vorstellung davon zu bekommen, bevor Sie Ihre App verteilen.
 
 ## <a name="distribute-your-application-by-publishing-it-to-the-microsoft-store"></a>Verteilen Sie Ihre Anwendung, indem sie an den Microsoft Store veröffentlichen.
 
@@ -38,15 +38,15 @@ Sie müssen Ihre Anwendung zu signieren, bevor Sie sie an den Store übermitteln
 
 ## <a name="distribute-your-application-without-placing-it-onto-the-microsoft-store"></a>Verteilen Sie Ihre Anwendung, ohne sie auf dem Microsoft Store
 
-Wenn Sie die Anwendung stattdessen ohne den Store verteilen möchten, können Sie apps auf einem oder mehreren Geräten manuell verteilen.
+Wenn Sie lieber Ihre Anwendung verteilen veröffentlichen, ohne den Store verwenden, können Sie apps auf einem oder mehreren Geräten manuell verteilen.
 
 Dies eignet sich ggf., wenn Sie eine bessere Kontrolle über die Verteilung haben oder sich nicht mit dem Microsoft Store-Zertifizierungsprozess auseinandersetzen möchten.
 
-Um Ihre Anwendung auf anderen Geräten zu verteilen, ohne sie im Store müssen Sie ein Zertifikat, Signieren Sie Ihre Anwendung das Zertifikat, und klicken Sie dann den querladen mit Ihrer Anwendung auf diesen Geräten.
+Um Ihre Anwendung auf anderen Geräten ohne sie im Store zu verteilen, müssen Sie ein Zertifikat benötigen, Signieren Ihre Anwendung mithilfe von das Zertifikat, und klicken Sie dann den querladen Ihrer Anwendung auf diesen Geräten.
 
 Sie können [ein Zertifikat erstellen](../packaging/create-certificate-package-signing.md) oder eines von einem beliebten Anbieter wie z.B. [Verisign](https://www.verisign.com/) erhalten.
 
-Wenn die Anwendung auf Geräten zu verteilen, auf denen Windows 10 S ausgeführt werden soll, kann die Anwendung von Microsoft Store signiert werden, daher müssen Sie die Store-Übermittlung durchlaufen, bevor Sie Ihre Anwendung auf diesen Geräte vertreiben können.
+Wenn die Anwendung auf Geräte zu verteilen, auf denen Windows 10 S ausgeführt werden soll, kann die Anwendung vom Microsoft Store signiert werden, daher müssen Sie die Store-Übermittlung durchlaufen, bevor Sie Ihre Anwendung auf diesen Geräte vertreiben können.
 
 Wenn Sie ein Zertifikat zu erstellen, müssen Sie es im Zertifikatspeicher **Vertrauenswürdiger Stamm** oder **Vertrauenswürdige Personen** von jedem Gerät installieren, auf dem Ihre App ausgeführt wird. Wenn Sie ein Zertifikat von einem beliebten Anbieter erhalten, müssen Sie auf anderen Systemen neben Ihrer App nichts weiteres installieren.  
 
@@ -75,9 +75,9 @@ Bevor Sie Ihre App verteilen, sollten Sie das Hinzufügen einiger Erweiterungen 
 
 Eine vollständige Liste der Erweiterungen und die Richtlinien für deren Verwendung finden Sie unter [Umstellung von Benutzern auf Ihre App](desktop-to-uwp-extensions.md#transition-users-to-your-app).
 
-Erwägen Sie außerdem das Hinzufügen von Code zu Ihrer verpackten Anwendung, die diese Aufgaben erledigt:
+Erwägen Sie außerdem das Hinzufügen von Code zu Ihrer verpackten Anwendung, die folgenden Aufgaben erledigt:
 
-* Migrieren von Benutzerdaten, die mit der desktop-Anwendung auf den entsprechenden Ordnerspeicherorten Ihrer verpackten App verknüpft ist.
+* Migrieren von Benutzerdaten, die Ihre desktop-Anwendung zu den entsprechenden Ordnerspeicherorten Ihrer verpackten App zugeordnet.
 * Bereitstellung der Option für Benutzer, die Desktopversion Ihrer App zu deinstallieren
 
 Erfahren wir mehr über diese einzelnen Aufgaben. Wir beginnen mit der Migration von Benutzerdaten.
@@ -175,7 +175,7 @@ private void RemoveDesktopApp()
 
 **Finden Sie Antworten auf Ihre Fragen**
 
-Haben Sie Fragen? Fragen Sie uns auf Stack Overflow. Unser Team überwacht diese [Tags](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Fragen Sie uns [hier](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+Haben Sie Fragen? Fragen Sie uns auf Stack Overflow. Unser Team überwacht diese [Tags](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Fragen Sie uns [hier](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
 Wenn beim Veröffentlichen Ihrer Anwendung an den Store Probleme auftreten, enthält dieser [Blogbeitrag](https://blogs.msdn.microsoft.com/appconsult/2017/09/25/preparing-a-desktop-bridge-application-for-the-store-submission/) einige hilfreiche Tipps.
 

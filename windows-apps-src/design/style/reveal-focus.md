@@ -9,12 +9,12 @@ pm-contact: chphilip
 design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
-ms.openlocfilehash: 88dc22a11f88bbf0945340729722ea434345b205
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 15c0ff77d511e531bcb8b20b21f3c52a8c753b7a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037352"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049115"
 ---
 # <a name="reveal-focus"></a>Reveal-Fokus
 
@@ -163,7 +163,7 @@ Wenn Sie nur den Schein ohne die primäre oder sekundäre Fokusanzeige verwenden
 
 ## <a name="use-your-own-focus-visuals"></a>Verwenden Sie Ihre eigenen visuellen Fokuselemente
 
-Eine weitere Möglichkeit zum Anpassen von Reveal-Focus ist können die System-Fokusanzeigen deaktivieren, indem Sie eigene visuelle Zustände verwenden. Weitere Informationen finden Sie unter [Beispiel für visuelle Fokuselemente](http://go.microsoft.com/fwlink/p/?LinkID=619895).
+Eine weitere Möglichkeit zum Anpassen von Reveal-Focus ist können die System-Fokusanzeigen deaktivieren, indem Sie eigene visuelle Zustände verwenden. Weitere Informationen finden Sie unter [Beispiel für visuelle Fokuselemente](https://go.microsoft.com/fwlink/p/?LinkID=619895).
 
 
 ## <a name="reveal-focus-and-the-fluent-design-system"></a>Reveal-Focus und das Fluent Design-System
@@ -175,7 +175,7 @@ Reveal-Focus ist eine Komponente des Fluent Design-Systems, die Lichteffekte in 
 - [Reveal-Highlight](https://docs.microsoft.com/windows/uwp/design/style/reveal)
 - [Entwerfen für Xbox und Fernsehgeräte](/windows/uwp/design/devices/designing-for-tv)
 - [Interaktionen von Gamepad und Fernbedienung](https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions)
-- [Beispiel für visuelle Fokuselemente](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+- [Beispiel für visuelle Fokuselemente](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 - [Kompositionseffekte](https://msdn.microsoft.com/windows/uwp/graphics/composition-effects)
 - [Wissenschaft im System: Fluent Design und Tiefe](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
 - [Wissenschaft im System: Fluent Design und Licht](https://medium.com/microsoft-design/the-science-in-the-system-fluent-design-and-light-94a17e0b3a4f)

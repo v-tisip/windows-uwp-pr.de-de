@@ -8,12 +8,12 @@ keywords: Gerät, Eingabe, Interaktion
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: de67a61b4d5982675d32e0446b67d7cf70051923
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 127c01321c0341e7125e8c6da955c789c4c65f2f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936365"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049907"
 ---
 #  <a name="device-primer-for-universal-windows-platform-uwp-apps"></a>Einführung der Geräte für UWP-Apps (Universelle Windows-Plattform)
 
@@ -129,7 +129,7 @@ Typische Gerätefunktionen
 
 Smartphones sind mittlerweile die am häufigsten genutzten Geräte und bieten auch bei begrenzter Bildschirmfläche und eingeschränkten Eingabeverfahren viele Möglichkeiten. Smartphones sind in zahlreichen verschiedenen Größen verfügbar. Größere Handys werden als Phablets bezeichnet. App-Benutzeroberflächen auf Phablets ähneln den Benutzeroberflächen auf Smartphones, aber die größere Bildschirmfläche von Phablets ermöglicht einige wichtige Änderungen bei der Nutzung von Inhalten.
 
-Mit Continuum für Smartphones, einer neuen Funktion für kompatible Windows 10 mobile Geräte, können Benutzer ihre Smartphones an einen Bildschirm anschließen und sogar Maus und Tastatur verwenden, damit ihr Gerät wie einen Laptop. (Weitere Informationen finden Sie im [Artikel zu Continuum für Smartphones](http://go.microsoft.com/fwlink/p/?LinkID=699431).)
+Mit Continuum für Smartphones, einer neuen Funktion für kompatible Windows 10 mobile Geräte, können Benutzer ihre Smartphones an einen Bildschirm anschließen und sogar Maus und Tastatur verwenden, damit ihr Gerät wie einen Laptop. (Weitere Informationen finden Sie im [Artikel zu Continuum für Smartphones](https://go.microsoft.com/fwlink/p/?LinkID=699431).)
 
 Bildschirmgrößen
 -   4 bis 5 Zoll bei Smartphones
@@ -184,7 +184,7 @@ Hinweise zur Benutzeroberfläche
 -   Im angedockten Modus oder Füllmodus zeigt das System die Skype-Randleiste an und verkleinert die App horizontal.
 -   Die Zurück-Schaltfläche des Systems ist optional. Wenn ein App-Entwickler diese anzeigen möchte, wird sie in der App-Titelleiste angezeigt.
 
-Eingabemöglichkeiten
+Eingaben
 -   Toucheingabe
 -   Stift
 -   Spracheingabe

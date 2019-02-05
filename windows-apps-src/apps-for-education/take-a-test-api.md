@@ -6,16 +6,16 @@ ms.date: 08/08/2018
 ms.topic: article
 keywords: Windows 10, Uwp, education
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f308e42e1dbb1d3654d3fc557a9d5e29ef6f6b0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bee8a04e3b4d57caf7da3e21f2be3c789d83be90
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933128"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049367"
 ---
 # <a name="take-a-test-javascript-api"></a>JavaScript-API „Prüfung”
 
-[Prüfung](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) ist eine Browser-basierte UWP-app, die gesperrte onlinebewertungen für wichtige Prüfungen rendert, gerendert wird, können Lehrer, auf den Prüfungsinhalt konzentrieren anstatt auf eine sichere testumgebung zu bieten. Um dies zu erreichen, wird eine JavaScript-API verwendet, die von jeder Web-Anwendung genutzt werden kann. Die API „Prüfung“ unterstützt den [Browser-API-Standard SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) zur Durchführung wichtiger allgemeiner Kernprüfungen.
+[Prüfung](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) ist eine Browser-basierte UWP-app, die gesperrte onlinebewertungen für wichtige Prüfungen rendert, rendert die Dozenten auf den Prüfungsinhalt konzentrieren, wodurch Content kann anstatt auf eine sichere testumgebung zu bieten. Um dies zu erreichen, wird eine JavaScript-API verwendet, die von jeder Web-Anwendung genutzt werden kann. Die API „Prüfung“ unterstützt den [Browser-API-Standard SBAC](https://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) zur Durchführung wichtiger allgemeiner Kernprüfungen.
 
 Weitere Informationen zur App selbst finden Sie unter [Technische Referenz zur App „Prüfung“](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). Hilfe zur Problembehandlung finden Sie unter [Problembehandlung bei Microsoft Prüfung mithilfe der Ereignisanzeige](troubleshooting.md).
 

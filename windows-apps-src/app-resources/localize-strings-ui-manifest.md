@@ -8,12 +8,12 @@ ms.date: 11/01/2017
 ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: 6740e6ce35277fa7f7f088c312f8b9ee1f5281c3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 321f8efc1475bc153102f3f8157cd2d094b37077
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923969"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049052"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Lokalisieren von Zeichenfolgen in der Benutzeroberfläche und im App-Paketmanifest
 Weitere Informationen zu einer Werterhöhung Ihrer App durch Lokalisierung finden Sie unter [Globalisierung und Lokalisierung](../design/globalizing/globalizing-portal.md).
@@ -88,13 +88,13 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("Farewell");
 
 Sie können diesen Code in einer Klassenbibliothek (Universal Windows) oder in einem [Windows Runtime Library (Universal Windows)](../winrt-components/index.md)-Projekt verwenden. Zur Laufzeit werden die Ressourcen der App geladen, die die Bibliothek hostet. Wir empfehlen, dass eine Bibliothek Ressourcen aus der App lädt, die sie hostet, da die App wahrscheinlich einen höheren Lokalisierungsgrad aufweist. Wenn eine Bibliothek Ressourcen bereitstellen muss, sollte sie es der App, die sie hostet, ermöglichen, diese Ressourcen als Eingabe zu ersetzen.
 
-Wenn Sie ein Ressourcennamen aufgeteilt ist (es enthält "." Zeichen), dann wird mit ersetzen Punkte mit Schrägstrich ("/") für Zeichen im Namen Ressource. Eigenschaften-IDs enthalten z. B. Punkte. Daher müssen Sie diese Substition erforderlich ist, um eine dieser vom Code geladen werden.
+Wenn Sie ein Ressourcennamen aufgeteilt ist (es enthält "." Zeichen), dann wird mit ersetzen Punkte mit Schrägstrich ("/") für den Ressourcennamen Zeichen. Eigenschaften-IDs enthalten z. B. Punkte. Daher müssen Sie diese Substition erforderlich ist, um diese vom Code geladen werden.
 
 ```csharp
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <data name="Fare.Well" ...> ...
 ```
 
-Im Zweifelsfall können Sie [MakePri.exe](makepri-exe-command-options.md) für Ihre app PRI-Datei zu sichern. Jede Ressource `uri` wird in der Dump-Datei angezeigt.
+Im Zweifelsfall können Sie [MakePri.exe](makepri-exe-command-options.md) Ihrer app PRI-Datei ausgeben. Jede Ressource `uri` wird in der Dump-Datei angezeigt.
 
 ```xml
 <ResourceMapSubtree name="Fare"><NamedResource name="Well" uri="ms-resource://<GUID>/Resources/Fare/Well">...
@@ -116,7 +116,7 @@ Im Zweifelsfall können Sie [MakePri.exe](makepri-exe-command-options.md) für I
 ## <a name="localize-the-string-resources"></a>Lokalisieren der Zeichenfolgenressourcen
 1. Erstellen Sie eine Kopie der Ressourcendatei (.resw) für eine andere Sprache.
     1. Erstellen Sie unter „Strings” einen neuen Unterordner, und nennen Sie ihn „de-DE” für Deutsch (Deutschland).
-   <br>**Hinweis:** für den Namen des Ordners können Sie alle [BCP-47-Sprachtag](http://go.microsoft.com/fwlink/p/?linkid=227302)verwenden. Details zum Sprachqualifizierer und eine Liste häufiger Sprachtags finden Sie unter [Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung und anderen](tailor-resources-lang-scale-contrast.md).
+   <br>**Hinweis:** für den Namen des Ordners können Sie alle [BCP-47-Sprachtag](https://go.microsoft.com/fwlink/p/?linkid=227302)verwenden. Details zum Sprachqualifizierer und eine Liste häufiger Sprachtags finden Sie unter [Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung und anderen](tailor-resources-lang-scale-contrast.md).
    2. Erstellen Sie im Ordner `Strings/de-DE` eine Kopie von `Strings/en-US/Resources.resw`.
 2. Übersetzen Sie die Zeichenfolgen.
     1. Öffnen Sie `Strings/de-DE/Resources.resw`, und übersetzen Sie die Werte in der Spalte „Value”. Sie müssen die Kommentare nicht übersetzen.
@@ -177,7 +177,7 @@ Wenn es sich bei einem Ressourcendateinamen aufgeteilt ist (es enthält "." Zeic
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Err.Msgs");
 ```
 
-Im Zweifelsfall können Sie [MakePri.exe](makepri-exe-command-options.md) für Ihre app PRI-Datei zu sichern. Jede Ressource `uri` wird in der Dump-Datei angezeigt.
+Im Zweifelsfall können Sie [MakePri.exe](makepri-exe-command-options.md) Ihrer app PRI-Datei ausgeben. Jede Ressource `uri` wird in der Dump-Datei angezeigt.
 
 ```xml
 <ResourceMapSubtree name="Err.Msgs"><NamedResource name="MismatchedPasswords" uri="ms-resource://<GUID>/Err.Msgs/MismatchedPasswords">...
@@ -264,20 +264,20 @@ var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCur
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("exampleResourceName");
 ```
 
-Für eine Windows-Runtime Library (Universal Windows), wenn der Standardnamespace aufgeteilt ist (es enthält "." Zeichen), verwenden Sie dann in der Name der Ressourcenzuordnung Punkte.
+Für eine Windows-Runtime Library (Universal Windows), wenn der Standardnamespace aufgeteilt ist (es enthält "." Zeichen), dann Punkte in der Name der Ressourcenzuordnung verwenden.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Contoso.Control/Resources");
 ```
 
-Sie müssen dies für eine Klassenbibliothek (Universal Windows). Im Zweifelsfall können Sie [MakePri.exe](makepri-exe-command-options.md) Ausgeben von der Komponente oder der Bibliothek PRI-Datei. Jede Ressource `uri` wird in der Dump-Datei angezeigt.
+Sie müssen nicht für eine Klassenbibliothek (Universal Windows) dazu. Im Zweifelsfall können Sie [MakePri.exe](makepri-exe-command-options.md) verwenden, die Komponente oder der Bibliothek PRI-Datei ausgeben. Jede Ressource `uri` wird in der Dump-Datei angezeigt.
 
 ```xml
 <NamedResource name="exampleResourceName" uri="ms-resource://Contoso.Control/Contoso.Control/ReswFileName/exampleResourceName">...
 ```
 
 ## <a name="loading-strings-from-other-packages"></a>Laden von Zeichenfolgen aus anderen Paketen
-Die Ressourcen für eine app-Pakets verwaltet und über des Pakets zugegriffen werden besitzen, auf der obersten Ebene[**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) , die von der aktuellen[**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)zugegriffen werden kann. In jedem Paket können Komponenten ihre OwnResourceMapsubtrees besitzen, die Sie über [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live)zugreifen können.
+Die Ressourcen für ein app-Paket verwaltet und über des Pakets zugegriffen werden besitzen auf oberster Ebene[**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) , die von der aktuellen[**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)zugegriffen werden kann. In jedem Paket können Komponenten ihrer OwnResourceMapsubtrees, besitzen, die Sie über [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live)zugreifen können.
 
 Ein Frameworkpaket kann auf seine eigenen Ressourcen über einen absolute Ressourcenbezeichner-URI zugreifen. Weitere Informationen finden Sie unter [URI-Schemas](uri-schemes.md).
 
@@ -291,6 +291,6 @@ Ein Frameworkpaket kann auf seine eigenen Ressourcen über einen absolute Ressou
 * [x:Uid-Direktive](../xaml-platform/x-uid-directive.md)
 * [Angefügte Eigenschaften](../xaml-platform/attached-properties-overview.md)
 * [Lokalisierbare Manifestelemente](/uwp/schemas/appxpackage/uapmanifestschema/localizable-manifest-items-win10?branch=live)
-* [BCP-47-Sprachtag](http://go.microsoft.com/fwlink/p/?linkid=227302)
+* [BCP-47-Sprachtag](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung und anderen](tailor-resources-lang-scale-contrast.md)
 * [Laden von Zeichenfolgenressourcen](https://msdn.microsoft.com/library/windows/apps/xaml/hh965323)

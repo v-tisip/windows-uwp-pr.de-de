@@ -1,17 +1,17 @@
 ---
-description: Wir beschreiben das Programmierkonzept von Ereignissen in einer Windows-Runtime-app bei Verwendung von c#, Visual Basic oder für VisualC++-komponentenerweiterungen (C++ / CX) als Programmiersprache und XAML-Code für die UI-Definition.
+description: Wir beschreiben das Programmierkonzept von Ereignissen in einer Windows-Runtime-app, bei Verwendung von c#, Visual Basic oder für VisualC++-komponentenerweiterungen (C++ / CX) als Programmiersprache und XAML-Code für die UI-Definition.
 title: Übersicht über Ereignisse und Routingereignisse
 ms.assetid: 34C219E8-3EFB-45BC-8BBD-6FD937698832
 ms.date: 07/12/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: cf84846fc34a7b93f168abc1dfa31e9f743be209
-ms.sourcegitcommit: 444fd387c55618f9afdac115264c85b14fd8b826
+ms.openlocfilehash: 33814efca80bd4ad6348f730242d2edab1edda97
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "8999923"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050197"
 ---
 # <a name="events-and-routed-events-overview"></a>Übersicht über Ereignisse und Routingereignisse
 
@@ -19,7 +19,7 @@ ms.locfileid: "8999923"
 - [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)
 - [**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809)
 
-Wir beschreiben das Programmierkonzept von Ereignissen in einer Windows-Runtime-app bei Verwendung von c#, Visual Basic oder für VisualC++-komponentenerweiterungen (C++ / CX) als Programmiersprache und XAML-Code für die UI-Definition. Sie können im Rahmen der Deklarationen für UI-Elemente Handler für Ereignisse in XAML zuweisen. Alternativ können Sie Handler im Code hinzufügen. Die Windows-Runtime unterstützt *Routingereignisse*: Bestimmte Eingabeereignisse und Datenereignisse können von anderen Objekten behandelt werden als dem Objekt, von dem das Ereignis ausgelöst wurde. Routingereignisse sind hilfreich, wenn Sie Steuerelementvorlagen definieren oder Seiten oder Layoutcontainer verwenden.
+Wir beschreiben das Programmierkonzept von Ereignissen in einer Windows-Runtime-app, bei Verwendung von c#, Visual Basic oder für VisualC++-komponentenerweiterungen (C++ / CX) als Programmiersprache und XAML-Code für die UI-Definition. Sie können im Rahmen der Deklarationen für UI-Elemente Handler für Ereignisse in XAML zuweisen. Alternativ können Sie Handler im Code hinzufügen. Die Windows-Runtime unterstützt *Routingereignisse*: Bestimmte Eingabeereignisse und Datenereignisse können von anderen Objekten behandelt werden als dem Objekt, von dem das Ereignis ausgelöst wurde. Routingereignisse sind hilfreich, wenn Sie Steuerelementvorlagen definieren oder Seiten oder Layoutcontainer verwenden.
 
 ## <a name="events-as-a-programming-concept"></a>Ereignisse als Programmierkonzept
 
@@ -27,7 +27,7 @@ Grundsätzlich sind Ereigniskonzepte bei der Programmierung einer Windows-Runtim
 
 Wenn Sie C#, Visual Basic oder C++/CX als Programmiersprache verwenden, wird die UI im Markup (XAML) definiert. In der XAML-Markupsyntax ähneln einige der Prinzipien, nach denen UI-Ereignisse zwischen Markupelementen und Laufzeitcodeentitäten verbunden werden, denen anderer Webtechnologien (z.B. ASP.NET oder HTML5).
 
-**Hinweis:** der Code, der die Laufzeitlogik für eine mit XAML definierte UI bereitstellt wird häufig als *Code-Behind* oder Code-Behind-Datei bezeichnet. In den Projektmappenansichten von Microsoft Visual Studio wird diese Beziehung grafisch dargestellt. Dabei ist die CodeBehind-Datei eine abhängige und geschachtelte Datei zu der XAML-Seite, auf die sie sich bezieht.
+**Hinweis:** der Code, der die Laufzeitlogik für eine XAML-definierte UI bereitstellt, wird häufig als *Code-Behind* oder Code-Behind-Datei bezeichnet. In den Projektmappenansichten von Microsoft Visual Studio wird diese Beziehung grafisch dargestellt. Dabei ist die CodeBehind-Datei eine abhängige und geschachtelte Datei zu der XAML-Seite, auf die sie sich bezieht.
 
 ## <a name="buttonclick-an-introduction-to-events-and-xaml"></a>Button.Click: Einführung in Ereignisse und XAML
 
@@ -147,7 +147,7 @@ Private Sub textBlock1_PointerEntered(ByVal sender As Object, ByVal e As Pointer
 End Sub
 ```
 
-**Hinweis:** Visual Studio und die zugehörige XAML-Entwurfsoberfläche in der Regel instanzbehandlung Instanz Behandlung anstelle des Schlüsselworts **behandelt** . Das Erstellen der Ereignishandlerverknüpfung in XAML ist Teil eines typischen Designer-Entwickler-Workflows, und die **Handles**-Schlüsselworttechnik ist mit dem Verknüpfen der Ereignishandler in XAML nicht kompatibel.
+**Hinweis:** Visual Studio und die zugehörige XAML-Entwurfsoberfläche in der Regel instanzbehandlung Instanz-Behandlung anstatt das Schlüsselwort **behandelt** . Das Erstellen der Ereignishandlerverknüpfung in XAML ist Teil eines typischen Designer-Entwickler-Workflows, und die **Handles**-Schlüsselworttechnik ist mit dem Verknüpfen der Ereignishandler in XAML nicht kompatibel.
 
 In C++ / CX verwenden Sie auch die **+=** Syntax, es gibt jedoch Unterschiede zum Allgemeinen C#-Format:
 
@@ -277,7 +277,7 @@ Das Bestimmen, ob und wo auf der UI ein Element für die Maus-, Touch und Stifte
 - Der [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992)-Eigenschaftenwert des Elements ist [**Visible**](https://msdn.microsoft.com/library/windows/apps/br209006).
 - Der Wert der Eigenschaft **Background** oder **Fill** ist nicht **null**. Ein Wert **null** für [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) führt zu Transparenz und Unsichtbarkeit von Treffertests. (Wenn Sie ein Element transparent machen und zugleich Treffertests für das Element ermöglichen möchten, verwenden Sie einen [**Transparent**](https://msdn.microsoft.com/library/windows/apps/hh748061)-Pinsel anstelle von **null**.)
 
-**Hinweis:** **Hintergrund** und **Füllen Sie** sind nicht durch [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911), und stattdessen durch verschiedene abgeleitete Klassen wie [**Steuerelement**](https://msdn.microsoft.com/library/windows/apps/br209390) und [**Form**](/uwp/api/Windows.UI.Xaml.Shapes.Shape)definiert sind. Die von Ihnen für Vorder- und Hintergrundeigenschaften verwendeten Implikationen von Pinseln sind jedoch für Treffertests und Eingabeereignisse identisch. Dabei ist es unerheblich, welche Unterklasse die Eigenschaften implementiert.
+**Hinweis:** **Hintergrund** **Ausfüllen** nicht von [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)definiert und werden stattdessen durch verschiedene abgeleitete Klassen wie [**Steuerelement**](https://msdn.microsoft.com/library/windows/apps/br209390) und [**Form**](/uwp/api/Windows.UI.Xaml.Shapes.Shape)definiert. Die von Ihnen für Vorder- und Hintergrundeigenschaften verwendeten Implikationen von Pinseln sind jedoch für Treffertests und Eingabeereignisse identisch. Dabei ist es unerheblich, welche Unterklasse die Eigenschaften implementiert.
 
 - Wenn das Element ein Steuerelement ist, muss dessen Wert für die Eigenschaft [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419) **true** sein.
 - Das Element muss im Layout über reale Dimensionen verfügen. Ein Element, bei dem [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) und [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) 0 sind, kann keine Eingabeereignisse auslösen.
@@ -300,7 +300,7 @@ Beim Definieren von benutzerdefinierten Ereignissen hängen die Vorgehensweise b
     - Für den Ereignishandler empfiehlt sich die Verwendung von [**System.EventHandler<TEventArgs>**](https://msdn.microsoft.com/library/windows/apps/xaml/db0etb8x.aspx), da die Übersetzung in den generischen Windows-Runtime-Ereignisdelegaten [**EventHandler<T>**](https://msdn.microsoft.com/library/windows/apps/br206577)integriert ist.
     - Basieren Sie Ihre Ereignisdatenklasse nicht auf [**System.EventArgs**](https://msdn.microsoft.com/library/windows/apps/xaml/system.eventargs.aspx), da dann keine Übersetzung in die Windows-Runtime erfolgt. Verwenden Sie eine vorhandene Ereignisdatenklasse oder gar keine Basisklasse.
     - Wenn Sie benutzerdefinierte Accessoren verwenden, lesen Sie [Benutzerdefinierte Ereignisse und Ereignis-Accessoren in Windows-Runtime-Komponenten](https://msdn.microsoft.com/library/windows/apps/xaml/hh972883.aspx).
-    - Wenn Ihnen das .NET-Standardereignismuster nicht bekannt ist, lesen Sie unter [Definieren von Ereignissen für benutzerdefinierte Silverlight-Klassen](http://msdn.microsoft.com/library/dd833067.aspx). Dieser Inhalt wurde zwar für MicrosoftSilverlight verfasst, stellt aber dennoch einen hilfreichen Überblick über den Code und die Konzepte für das .NET-Standardereignismuster dar.
+    - Wenn Ihnen das .NET-Standardereignismuster nicht bekannt ist, lesen Sie unter [Definieren von Ereignissen für benutzerdefinierte Silverlight-Klassen](https://msdn.microsoft.com/library/dd833067.aspx). Dieser Inhalt wurde zwar für MicrosoftSilverlight verfasst, stellt aber dennoch einen hilfreichen Überblick über den Code und die Konzepte für das .NET-Standardereignismuster dar.
 - Für C++/CX lesen Sie [Ereignisse (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh755799.aspx).
     - Verwenden Sie auch für Ihre eigenen Verwendungen von benutzerdefinierten Ereignissen benannte Verweise. Verwenden Sie nicht Lambda für benutzerdefinierte Ereignisse, da dadurch u.U. ein Zirkelverweis erstellt wird.
 
@@ -313,6 +313,6 @@ Das Definieren eines benutzerdefinierten Ereignisses erfolgt in der Regel im Rah
 * [Übersicht über XAML](xaml-overview.md)
 * [Schnellstart: Fingereingabe](https://msdn.microsoft.com/library/windows/apps/xaml/hh465387)
 * [Tastaturinteraktionen](https://msdn.microsoft.com/library/windows/apps/mt185607)
-* [.NET-Ereignisse und -Delegate](http://go.microsoft.com/fwlink/p/?linkid=214364)
+* [.NET-Ereignisse und -Delegate](https://go.microsoft.com/fwlink/p/?linkid=214364)
 * [Erstellen von Komponenten für die Windows-Runtime](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
 * [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399)

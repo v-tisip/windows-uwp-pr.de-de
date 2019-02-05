@@ -6,12 +6,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, AdControl, Anzeigensteuerelement, XAML, .NET, exemplarische Vorgehensweise
 ms.localizationpriority: medium
-ms.openlocfilehash: 161718bb88d7588db345f3de26de2a955ca6620e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 8784de7025a2e9efa8e9e02be14c94579730a1dd
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920408"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050187"
 ---
 # <a name="adcontrol-in-xaml-and-net"></a>„AdControl“ in XAML und .NET
 
@@ -19,11 +19,11 @@ ms.locfileid: "8920408"
 In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie die [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol)-Klasse nutzen können, um Werbebanner in einer Universellen Windows-Plattform-, XAML-App für Windows 10 anzuzeigen, die in C++ implementiert wurden.
 
 > [!NOTE]
-> Das Microsoft Advertising-SDK unterstützt auch XAML-Apps, die mit C++ implementiert werden. Ein vollständiges Beispielprojekt finden Sie unter den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).
+> Das Microsoft Advertising-SDK unterstützt auch XAML-Apps, die mit C++ implementiert werden. Ein vollständiges Beispielprojekt finden Sie unter den [Anzeigenbeispielen auf GitHub](https://aka.ms/githubads).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-* Installieren Sie das [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) mit Visual Studio2015 oder einer neueren Version von Visual Studio. Installationsanweisungen finden Sie in [diesem Artikel](install-the-microsoft-advertising-libraries.md).
+* Installieren Sie das [Microsoft Advertising-SDK](https://aka.ms/ads-sdk-uwp) mit Visual Studio2015 oder einer neueren Version von Visual Studio. Installationsanweisungen finden Sie in [diesem Artikel](install-the-microsoft-advertising-libraries.md).
 
 ## <a name="integrate-a-banner-ad-into-your-app"></a>Banneranzeige in Ihrer App integrieren
 
@@ -124,9 +124,9 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie die [AdCon
 
 1. Stellen Sie sicher, dass die Verwendung von Werbebannern in Ihrer App unseren [Richtlinien für das Anzeigen von Werbebannern](ui-and-user-experience-guidelines.md#guidelines-for-banner-ads) entspricht.
 
-2.  Im Partner Center wechseln Sie zu der Seite [In-app-anzeigen](../publish/in-app-ads.md) und [Erstellen Sie eine anzeigeneinheit](set-up-ad-units-in-your-app.md#live-ad-units). Geben Sie als Typ für die Anzeigeneinheit **Banner** an. Notieren Sie die Anzeigeneinheits-ID und die Anwendungs-ID.
+2.  Wechseln Sie zu der Seite [In-app-anzeigen](../publish/in-app-ads.md) und [Erstellen Sie eine anzeigeneinheit](set-up-ad-units-in-your-app.md#live-ad-units), im Partner Center. Geben Sie als Typ für die Anzeigeneinheit **Banner** an. Notieren Sie die Anzeigeneinheits-ID und die Anwendungs-ID.
     > [!NOTE]
-    > Die Anwendungs-IDs für Test-Anzeigeneinheiten und Live-UWP-Anzeigeneinheiten besitzen unterschiedliche Formate. Testanwendungs-ID sind GUIDs. Wenn Sie eine live-UWP-anzeigeneinheit im Partner Center erstellen, entspricht die Anwendungs-ID-Wert für die anzeigeneinheit immer die Store-ID für Ihre app (der ein Beispiel für Store-ID-Wert ist 9nblggh4r315).).
+    > Die Anwendungs-IDs für Test-Anzeigeneinheiten und Live-UWP-Anzeigeneinheiten besitzen unterschiedliche Formate. Testanwendungs-ID sind GUIDs. Wenn Sie eine live-UWP-anzeigeneinheit im Partner Center erstellen, entspricht der Anwendung-ID-Wert für die anzeigeneinheit immer die Store-ID für Ihre app (der ein Beispiel für Store-ID-Wert ist 9nblggh4r315).).
 
 3. Sie können optional die Anzeigenvermittlung für **AdControl** durch Konfigurieren der [Vermittlungseinstellungen](../publish/in-app-ads.md#mediation) auf der Seite [In-App-Anzeigen](../publish/in-app-ads.md) aktivieren. Mit der Anzeigenvermittlung können Sie Ihre Anzeigenumsätze maximieren und Werbefunktionen optimal nutzen, indem Sie Anzeigen aus mehreren Anzeigennetzwerken anzeigen, einschließlich Anzeigen aus anderen kostenpflichtigen Anzeigennetzwerken wie Taboola und Smaato sowie Anzeigen zu Werbekampagnen für Microsoft-Apps.
 
@@ -149,5 +149,5 @@ Sie können mehrere **AdControl** Objekte in einer einzelnen App nutzen (z.B. je
 
 * [Richtlinien für Banneranzeigen](ui-and-user-experience-guidelines.md#guidelines-for-banner-ads)
 * [Exemplarische Vorgehensweise zur Fehlerbehandlung in XAML/C#](error-handling-in-xamlc-walkthrough.md).
-* [Anzeigenbeispiele auf GitHub](http://aka.ms/githubads)
+* [Anzeigenbeispiele auf GitHub](https://aka.ms/githubads)
 * [Einrichten von Anzeigeneinheiten für die App](set-up-ad-units-in-your-app.md)

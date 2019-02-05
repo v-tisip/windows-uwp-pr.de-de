@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: Windows 10, UWP, Anzeigen, Werbung, Bekannte Probleme, Problembehandlung
 ms.localizationpriority: medium
-ms.openlocfilehash: 3df88af638886e6bbda9b2f2f2065809da319532
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 029d595c41301e62f74c9b08b633bb22bfb12786
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939378"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049178"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>Bekannte Probleme und Informationen zur Problembehandlung von Anzeigen in Apps
 
@@ -46,9 +46,9 @@ Es gibt viele Gründe, warum möglicherweise keine Anzeigen angezeigt werden, ei
 
 * Wenn Sie in der letzten halben Stunde eine neue Anzeigeneinheiten-ID erstellt haben, wird eine Anzeige möglicherweise erst angezeigt, wenn der Server neue Daten durch das System propagiert hat. Vorhandene IDs, die zuvor bereits Anzeigen angezeigt haben, sollten Anzeigen sofort anzeigen.
 
-Wenn Sie in der App Testanzeigen sehen können, funktioniert Ihr Code und kann Anzeigen anzeigen. Bei Problemen wenden Sie sich an den [Produktsupport](https://developer.microsoft.com/en-us/windows/support). Wählen Sie auf dieser Seite **kontaktieren Sie uns**.
+Wenn Sie in der App Testanzeigen sehen können, funktioniert Ihr Code und kann Anzeigen anzeigen. Bei Problemen wenden Sie sich an den [Produktsupport](https://developer.microsoft.com/en-us/windows/support). Wählen Sie auf dieser Seite **wenden Sie sich an uns**.
 
-Sie können auch im [Forum](http://go.microsoft.com/fwlink/p/?LinkId=401266) eine Frage stellen.
+Sie können auch im [Forum](https://go.microsoft.com/fwlink/p/?LinkId=401266) eine Frage stellen.
 
 ## <a name="test-ads-are-showing-in-your-app-instead-of-live-ads"></a>In Ihrer App werden Testanzeigen anstelle von Liveanzeigen angezeigt.
 
@@ -58,7 +58,7 @@ Testanzeigen können angezeigt werden, auch wenn Sie Liveanzeigen erwarten. Dies
 
 * Quergeladene Apps oder im Emulator ausgeführte Apps zeigen keine Liveanzeigen an.
 
-Wenn eine liveanzeigeneinheit testanzeigen bereitstellt, wird, zeigt Status der Anzeigeeinheit **aktiv und testanzeigen bereitstellend** im Partner Center. Dies gilt zurzeit nicht für Telefon-Apps.
+Wenn eine liveanzeigeneinheit testanzeigen bereitstellt, wird zeigt Status der Anzeigeeinheit **aktiv und testanzeigen bereitstellend** im Partner Center. Dies gilt zurzeit nicht für Telefon-Apps.
 
 
 <span id="reference_errors"/>
@@ -91,7 +91,7 @@ Die Festlegung von Rahmeneigenschaften, die **AdControl** von seiner übergeordn
 
 ## <a name="more-information"></a>Weitere Informationen
 
-Weitere Informationen zu den neuesten bekannten Problemen im Zusammenhang mit den Microsoft Advertising-SDKs finden Sie im [Forum](http://go.microsoft.com/fwlink/p/?LinkId=401266). Dort können Sie auch Fragen veröffentlichen.
+Weitere Informationen zu den neuesten bekannten Problemen im Zusammenhang mit den Microsoft Advertising-SDKs finden Sie im [Forum](https://go.microsoft.com/fwlink/p/?LinkId=401266). Dort können Sie auch Fragen veröffentlichen.
 
  
 

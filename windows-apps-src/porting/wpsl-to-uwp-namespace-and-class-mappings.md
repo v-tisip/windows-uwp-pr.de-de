@@ -1,24 +1,24 @@
 ---
-description: Dieses Thema enthält eine umfassende Zuordnung der WindowsPhone Silverlight-APIs zu ihren Entsprechungen für die universelle Windows-Plattform (UWP).
+description: Dieses Thema enthält eine umfassende Zuordnung der WindowsPhone Silverlight-APIs in die entsprechenden universelle Windows-Plattform (UWP).
 title: WindowsPhone Silverlight zu UWP – Namespace- und klassenzuordnungen
 ms.assetid: 33f06706-4790-48f3-a2e4-ebef9ddb61a4
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0072aa814e0bcb22806cad764b5f365770961ac3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9acd42f57117fb01eef4ba8f87d35664be21cf32
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926210"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048820"
 ---
 # <a name="windowsphone-silverlight-to-uwp-api-mappings"></a>WindowsPhone Silverlight zu UWP-API – Zuordnungen
 
 
-Dieses Thema enthält eine umfassende Zuordnung der WindowsPhone Silverlight-APIs zu ihren Entsprechungen für die universelle Windows-Plattform (UWP). Im Allgemeinen erfolgt keine 1: 1-Zuordnung von Funktionen, jedoch gilt: Jede Plattform kann ggf. mehr oder weniger Funktionalität bieten als ihr Gegenstück in einem Namespace oder einer Klasse.
+Dieses Thema enthält eine umfassende Zuordnung der WindowsPhone Silverlight-APIs in die entsprechenden universelle Windows-Plattform (UWP). Im Allgemeinen erfolgt keine 1: 1-Zuordnung von Funktionen, jedoch gilt: Jede Plattform kann ggf. mehr oder weniger Funktionalität bieten als ihr Gegenstück in einem Namespace oder einer Klasse.
 
-Die Zuordnungstabelle hilft Ihnen, wenn Sie in einer UWP-Projekt arbeiten und Sie sind Quellcode aus einem WindowsPhone Silverlight-Projekt wiederverwenden. Zwischen den beiden Plattformen gibt es Unterschiede bei den Namen von Namespaces und Klassen (einschließlich UI-Steuerelemente). In vielen Fällen ist es einfach: Sie ändern z.B. einen Namespacenamen, und der Code wird kompiliert Manchmal wird neben dem Namespacenamen auch der Name einer Klasse oder API geändert In anderen Fällen ist die Zuordnung etwas schwieriger, und in seltenen Fällen muss der Ansatz geändert werden.
+Die Zuordnungstabelle hilft Ihnen, wenn Sie in einem UWP-Projekt arbeiten und Sie sind Quellcode aus einem WindowsPhone Silverlight-Projekt wiederverwenden. Zwischen den beiden Plattformen gibt es Unterschiede bei den Namen von Namespaces und Klassen (einschließlich UI-Steuerelemente). In vielen Fällen ist es einfach: Sie ändern z.B. einen Namespacenamen, und der Code wird kompiliert Manchmal wird neben dem Namespacenamen auch der Name einer Klasse oder API geändert In anderen Fällen ist die Zuordnung etwas schwieriger, und in seltenen Fällen muss der Ansatz geändert werden.
 
 **So verwenden Sie die Tabelle:** Suchen Sie zunächst nach den Namen der Klasse, die Sie verwenden. Klassen werden aufgelistet, wenn es sich um eine kompliziertere Zuordnung als eine Änderung des Namespacenamens handelt. Wenn Ihre Klasse nicht aufgeführt ist, handelt es sich bei der Zuordnung nur um eine Namespaceänderung. Wenn Sie den Namespacenamen Ihrer Klasse finden, finden Sie auch den entsprechenden Namen des UWP-Namespaces. Ihre Klasse ist in diesem Namespace enthalten. Wenn der Namespace nicht aufgeführt ist, hat sich dessen Name nicht geändert.
 
@@ -28,7 +28,7 @@ Darüber hinaus in einer Windows 10-app, profitieren Sie von .NET Native, die ei
 | WindowsPhone Silverlight | Windows-Runtime |
 | ------------------------- | --------------- |
 | Werbung | |
-| **Microsoft.Advertising.Mobile.UI.AdControl**-Klasse | [AdControl](http://msdn.microsoft.com/library/advertising-windows-sdk-api-reference-adcontrol.aspx)-Klasse |
+| **Microsoft.Advertising.Mobile.UI.AdControl**-Klasse | [AdControl](https://msdn.microsoft.com/library/advertising-windows-sdk-api-reference-adcontrol.aspx)-Klasse |
 | Alarme, Erinnerungen und Hintergrund-Agents | |
 | **Microsoft.Phone.BackgroundAgent**-Klasse | [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) Klasse |
 | **Microsoft.Phone.Scheduler** Namespace | [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/br224847) Namespace |
@@ -52,11 +52,11 @@ Darüber hinaus in einer Windows 10-app, profitieren Sie von .NET Native, die ei
 | (SWT = **System.Windows.Threading**) <br/> **SWT.DispatcherTimer** Klasse | [**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250) Klasse |
 | Blend für Visual Studio | |
 | (MEDC = **Microsoft.Expression.Drawing.Core**) <br/> **MEDC.GeometryHelper** Klasse | Kein direktes Äquivalent |
-| **Microsoft.Expression.Interactivity** Namespace | [Microsoft.Xaml.Interactivity](http://go.microsoft.com/fwlink/p/?LinkId=328776) Namespace |
-| **Microsoft.Expression.Interactivity.Core** Namespace | [Microsoft.Xaml.Interactions.Core](http://go.microsoft.com/fwlink/p/?LinkId=328773) Namespace |
+| **Microsoft.Expression.Interactivity** Namespace | [Microsoft.Xaml.Interactivity](https://go.microsoft.com/fwlink/p/?LinkId=328776) Namespace |
+| **Microsoft.Expression.Interactivity.Core** Namespace | [Microsoft.Xaml.Interactions.Core](https://go.microsoft.com/fwlink/p/?LinkId=328773) Namespace |
 | (MEIC = **Microsoft.Expression.Interactivity.Core**) <br/> **MEIC.ExtendedVisualStateManager** Klasse | Kein direktes Äquivalent |
 | **Microsoft.Expression.Interactivity.Input** Namespace | Keine direkte Entsprechung |
-| **Microsoft.Expression.Interactivity.Media** Namespace | [Microsoft.Xaml.Interactions.Media](http://go.microsoft.com/fwlink/p/?LinkId=328775) Namespace |
+| **Microsoft.Expression.Interactivity.Media** Namespace | [Microsoft.Xaml.Interactions.Media](https://go.microsoft.com/fwlink/p/?LinkId=328775) Namespace |
 | **Microsoft.Expression.Shapes** Namespace | Kein direktes Äquivalent |
 | (MI = **Microsoft.Internal**) <br/> **MI.IManagedFrameworkInternalHelper** Schnittstelle | Kein direktes Äquivalent |
 | Kontakt- und Kalenderdaten | |
@@ -109,7 +109,7 @@ Darüber hinaus in einer Windows 10-app, profitieren Sie von .NET Native, die ei
 | **Microsoft.Devices.Camera**, **Microsoft.Devices.PhotoCamera** Klassen | [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) Klasse. Auch [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030)-Klasse (nur Windows). |
 | **Microsoft.Devices.CameraButtons** Klasse | [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557) Klasse |
 | **Microsoft.Devices.CameraVideoBrushExtensions** Klasse | [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278) Klasse |
-| **Microsoft.Devices.Environment** Klasse | Keine direkte Entsprechung Um dieses Problem zu umgehen, verwenden Sie die bedingte Kompilierung und definieren Sie ein benutzerdefiniertes Symbol. Unter Umständen können Sie das Problem auch mit der [IsAttached](http://msdn.microsoft.com/library/e299w87h.aspx) Eigenschaft umgehen. |
+| **Microsoft.Devices.Environment** Klasse | Keine direkte Entsprechung Um dieses Problem zu umgehen, verwenden Sie die bedingte Kompilierung und definieren Sie ein benutzerdefiniertes Symbol. Unter Umständen können Sie das Problem auch mit der [IsAttached](https://msdn.microsoft.com/library/e299w87h.aspx) Eigenschaft umgehen. |
 | **Microsoft.Devices.MediaHistory** Klasse | Keine direkte Entsprechung |
 | **Microsoft.Devices.VibrateController** Klasse | [**VibrationDevice**](https://msdn.microsoft.com/library/windows/apps/jj207230) Klasse |
 | **Microsoft.Devices.Radio.FMRadio** Klasse | Keine direkte Entsprechung |
@@ -121,7 +121,7 @@ Darüber hinaus in einer Windows 10-app, profitieren Sie von .NET Native, die ei
 | (ST = **System.Threading**) <br/> **ST.Thread.CurrentCulture** Eigenschaft | (SG = **System.Globalization**) <br/> **S.CultureInfo.CurrentCulture** Eigenschaft |
 | (ST = **System.Threading**) <br/> **ST.Thread.CurrentUICulture** Eigenschaft | (SG = **System.Globalization**) <br/> **S.CultureInfo.CurrentUICulture** Eigenschaft |
 | Grafiken und Animationen | |
-| **Microsoft.Xna.Framework.\*** Namespaces, [XNA Framework Class Library](http://go.microsoft.com/fwlink/p/?LinkId=263769), [Content Pipeline Class Library](http://go.microsoft.com/fwlink/p/?LinkId=263770) | Keine direkte Entsprechung Verwenden Sie im Allgemeinen [Microsoft DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) mit C++. Siehe [Entwickeln von Spielen](https://msdn.microsoft.com/library/windows/apps/hh452744) und [Interoperabilität von DirectX und XAML](https://msdn.microsoft.com/library/windows/apps/hh825871). |
+| **Microsoft.Xna.Framework.\*** Namespaces, [XNA Framework Class Library](https://go.microsoft.com/fwlink/p/?LinkId=263769), [Content Pipeline Class Library](https://go.microsoft.com/fwlink/p/?LinkId=263770) | Keine direkte Entsprechung Verwenden Sie im Allgemeinen [Microsoft DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) mit C++. Siehe [Entwickeln von Spielen](https://msdn.microsoft.com/library/windows/apps/hh452744) und [Interoperabilität von DirectX und XAML](https://msdn.microsoft.com/library/windows/apps/hh825871). |
 | **Microsoft.Xna.Framework.Audio.Microphone** Klasse | [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) Klasse |
 | **Microsoft.Xna.Framework.Audio.SoundEffect** Klasse | [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) Klasse |
 | **Microsoft.Xna.Framework.GamerServices** Namespace | (WPS = **Windows.Phone.System**) <br/> [**WPS.UserProfile.GameServices.Core**](https://msdn.microsoft.com/library/windows/apps/jj207609) Namespace |

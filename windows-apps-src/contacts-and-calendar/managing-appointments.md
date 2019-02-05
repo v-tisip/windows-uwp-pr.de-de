@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Termine, Kalender
 ms.localizationpriority: medium
-ms.openlocfilehash: 805383d243008f839b04c98906edd3beb52d581a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ece137fafc2fdcca7ce41839aa4614456973cf40
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938780"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049517"
 ---
 # <a name="manage-appointments"></a>Verwalten von Terminen
 
@@ -565,11 +565,11 @@ private async void ShowAppointmentDetails-Click(object sender, RoutedEventArgs e
 
 ## <a name="summary-and-next-steps"></a>Zusammenfassung und nächste Schritte
 
-Sie verfügen nun über Grundkenntnisse zur Terminverwaltung. Laden Sie die [Beispiele für universelle Windows-Apps](http://go.microsoft.com/fwlink/p/?linkid=619979) von GitHub herunter, um sich weitere Terminverwaltungsbeispiele anzusehen.
+Sie verfügen nun über Grundkenntnisse zur Terminverwaltung. Laden Sie die [Beispiele für universelle Windows-Apps](https://go.microsoft.com/fwlink/p/?linkid=619979) von GitHub herunter, um sich weitere Terminverwaltungsbeispiele anzusehen.
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Beispiel zur Termin-API](http://go.microsoft.com/fwlink/p/?linkid=309836)
+* [Beispiel zur Termin-API](https://go.microsoft.com/fwlink/p/?linkid=309836)
  
 
  

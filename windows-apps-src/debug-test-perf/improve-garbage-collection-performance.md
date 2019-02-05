@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d3940f519706fba6d795d60344cbd83337ae482
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6f22b893d0c55cb9220e0894527836a0bb5e750b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931095"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049857"
 ---
 # <a name="improve-garbage-collection-performance"></a>Verbessern der Leistung bei der Garbage Collection
 
 
 In C# und Visual Basic geschriebene UWP-Apps profitieren von der automatischen Arbeitsspeicherverwaltung des .NET Garbage Collectors. Dieser Abschnitt bietet einen Überblick über das Verhalten des .NETGarbage Collectors sowie über die bewährten Methoden zur Leistungssteigerung für den Garbage Collector in UWP-Apps. Weitere Informationen zur Funktionsweise des .NETGarbage Collectors sowie zu Debugging- und Leistungsanalysetools für den Garbage Collector finden Sie unter [Garbage Collection](https://msdn.microsoft.com/library/windows/apps/xaml/0xy59wtx.aspx).
 
-**Hinweis:** Notwendigkeit, in das Standardverhalten des Garbage Collector eingreifen zu müssen, ist ein starkes Indiz für allgemeine Speicherprobleme mit Ihrer app. Weitere Informationen finden Sie unter [Speichernutzungstool beim Debuggen in Visual Studio 2015](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx). Dieses Thema betrifft ausschließlich C# und Visual Basic.
+**Hinweis:** Notwendigkeit, in das Standardverhalten des Garbage Collector eingreifen zu müssen, ist ein starkes Indiz für allgemeine Speicherprobleme mit Ihrer app. Weitere Informationen finden Sie unter [Speichernutzungstool beim Debuggen in Visual Studio 2015](https://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx). Dieses Thema betrifft ausschließlich C# und Visual Basic.
 
  
 
@@ -42,7 +42,7 @@ Lösen Sie eine Garbage Collection nur aus, nachdem Sie die Leistung Ihrer App e
 
 Rufen Sie zum Auslösen der Garbage Collection einer Generation [**GC.Collect(n)**](https://msdn.microsoft.com/library/windows/apps/xaml/y46kxc5e.aspx) auf, wobei „n“ für die Generation steht, die Sie erfassen möchten (0, 1 oder 2).
 
-**Hinweis:** es wird empfohlen, dass Sie eine Garbagecollection in Ihrer app erzwingen, da der Garbage Collector viele Heuristiken verwendet, um zu bestimmen, den besten Zeitpunkt für eine Collection, und die Erzwingung einer Collection somit häufig eine unnötige Belastung der CPU in vielen Fällen ist. Falls Ihre App allerdings eine große Anzahl von Objekten enthält, die nicht mehr verwendet werden, und Sie den entsprechenden Arbeitsspeicher wieder für das System freigeben möchten, ist die Erzwingung einer Garbage Collection unter Umständen dennoch angemessen. So können Sie beispielsweise in einem Spiel eine Bereinigung am Ende einer Ladesequenz auslösen, um vor Spielbeginn Arbeitsspeicher freizugeben.
+**Hinweis:** es wird empfohlen, eine Garbagecollection in Ihrer app erzwingen, da der Garbage Collector viele Heuristik um den besten Zeitpunkt für eine Collection zu ermitteln und die Erzwingung einer Collection somit häufig eine unnötige Belastung der CPU in vielen Fällen ist. Falls Ihre App allerdings eine große Anzahl von Objekten enthält, die nicht mehr verwendet werden, und Sie den entsprechenden Arbeitsspeicher wieder für das System freigeben möchten, ist die Erzwingung einer Garbage Collection unter Umständen dennoch angemessen. So können Sie beispielsweise in einem Spiel eine Bereinigung am Ende einer Ladesequenz auslösen, um vor Spielbeginn Arbeitsspeicher freizugeben.
  
 Damit Sie nicht versehentlich zu viele Garbage Collections auslösen, können Sie [**GCCollectionMode**](https://msdn.microsoft.com/library/windows/apps/xaml/bb495757.aspx) auf **Optimized** festlegen. Dadurch wird der Garbage Collector angewiesen, nur dann eine Garbage Collection zu starten, wenn eine ausreichend hohe Produktivität dies rechtfertigt.
 

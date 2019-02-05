@@ -1,30 +1,30 @@
 ---
 ms.assetid: DA495F9D-49B8-45A6-BBE0-27F0C804D240
-title: Verwalten Ihrer Kontoeinstellungen und Profilinformationen
+title: Verwalten von Kontoeinstellungen und Profilinformationen
 description: Sie können anzeigen und aktualisieren Ihre entwicklerkontoeinstellungen und Profilinformationen im Abschnitt mit Kontoeinstellungen der Partner Center.
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Dev Center, Kontoeinstellungen, Profil, Konto-Profil, Entwicklerkonto, Entwicklerkontoeinstellungen
 ms.localizationpriority: medium
-ms.openlocfilehash: c4f7bd6d7aa085c3d5066d3b486583c5b3f37182
-ms.sourcegitcommit: b66c5ccbf519b99a432c83c890436a044fc891df
+ms.openlocfilehash: 25e18956900a873c22ec95858e72f02e74aa7370
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "8992604"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049337"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Verwalten Ihrer Kontoeinstellungen und Profilinformationen
 
 Sie können anzeigen und aktualisieren Ihre entwicklerkontoeinstellungen und Profilinformationen im Abschnitt **kontoeinstellungen** des [Partner Center](https://partner.microsoft.com/dashboard). 
 
 > [!NOTE]
-> Benachrichtigungseinstellungen (z. B. welche Benachrichtigungen Sie empfangen und erhalten) können im **Message Center** verwaltet werden (die Sie zugreifen können, durch die Auswahl der Nachrichtensymbol im oberen Bereich der Partner Center).
+> Benachrichtigungseinstellungen (z. B. welche Benachrichtigungen Sie empfangen und erhalten) können im **Nachrichtencenter** verwaltet werden (die Sie zugreifen können, indem Sie auf das Nachrichtensymbol im oberen Bereich der Partner Center).
 
 ## <a name="account-settings"></a>Kontoeinstellungen
 
-Um Ihre kontoeinstellungen zu sehen, klicken Sie auf das Zahnradsymbol in der oberen rechten Ecke des Partner Center aus, und wählen Sie dann die **entwicklereinstellungen**. Hier finden Sie Informationen zu Ihrem Konto sowie Links zu anderen Seiten, in denen Sie Informationen anzeigen und verschiedene Konto bezogene Aufgaben ausführen können.
+Um Ihre kontoeinstellungen anzuzeigen, klicken Sie auf das Zahnradsymbol in der oberen rechten Ecke des Partner Center, und wählen Sie dann **entwicklereinstellungen**. Hier finden Sie Informationen zu Ihrem Konto sowie Links zu anderen Seiten, in denen Sie Informationen anzeigen und verschiedene Konto bezogene Aufgaben ausführen können.
 
-Der Abschnitt **Kontodetails** gibt Aufschluss über Status und Art des Kontos. Sie können auch Ihre Verkäufer-ID und der Informationen für andere Herausgeber-ID hier anzeigen. Diese Werte werden von Microsoft zur eindeutigen Identifizierung Ihres Entwicklerkontos zugewiesen und können nicht bearbeitet werden.
+Der Abschnitt **Kontodetails** gibt Aufschluss über Status und Art des Kontos. Sie können auch Ihre Verkäufer-ID und der Informationen für andere Herausgeber-ID hier sehen. Diese Werte werden von Microsoft zur eindeutigen Identifizierung Ihres Entwicklerkontos zugewiesen und können nicht bearbeitet werden.
 
 > [!NOTE]
 > Identitätsdetails für Apps finden Sie auf der [App-Identitätsseite](view-app-identity-details.md) der jeweiligen App.
@@ -44,13 +44,13 @@ Wenn Sie Ihren Herausgeber-Anzeigenamen ändern, müssen wir Ihr Konto erneut ü
 
 Hier sind einige andere Elemente, die Sie im Abschnitt **Kontoeinstellungen** finden.
 
-- **Überprüfungsstatus**: Wenn Ihr Konto durchgeführt wird, die Überprüfung zu verarbeiten (z. B. beim ersten Anmelden oder nachdem Sie Ihre Kontaktinformationen erheblich aktualisieren), können Sie hier der Überprüfungsstatus überprüfen.
+- **Überprüfungsstatus**: Wenn Ihr Konto durchgeführt wird die Überprüfung verarbeiten (z. B. beim ersten Anmelden oder nachdem Sie Ihre Kontaktinformationen erheblich aktualisieren), können Sie hier der Überprüfungsstatus überprüfen.
 - **Auszahlungskonto** und **Steuerprofil**: Hier wird das [Einrichten Ihres Auszahlungskontos und Ihrer Steuerformulare](setting-up-your-payout-account-and-tax-forms.md) vorgenommen. Dieser Schritt muss ausgeführt werden, bevor Sie Zahlungen für Apps oder Add-Ons verlangen können.
 - **Enterprise-Zuordnungen**: Nehmen Sie Einladungen von Unternehmen an, die möchten, dass Sie Apps für die exklusive Nutzung veröffentlichen. Weitere Informationen dazu finden Sie unter [Verteilen von branchenspezifischen Apps an Unternehmen](distribute-lob-apps-to-enterprises.md).
-- **Benutzer**: Hinzufügen von Benutzern zu Ihrem Konto, und weisen Sie diesen Rollen und Berechtigungen. Weitere Informationen finden Sie unter [Verwalten von Kontobenutzern](manage-account-users.md).
+- **Benutzer**: Hinzufügen von Benutzern zu Ihrem Konto und diesen Rollen und Berechtigungen zuweisen. Weitere Informationen finden Sie unter [Verwalten von Kontobenutzern](manage-account-users.md).
 - **Mandanten**: Verwalten Sie Ihre Azure AD-mandantenzuordnungen. Weitere Informationen finden Sie unter [Zuordnen von Azure AD mit Ihrem Partner Center-Konto](associate-azure-ad-with-dev-center.md).
 - **Programme**: Zeigen Sie Detail zu den Programmen an, an denen Sie teilnehmen und erfahren Sie mehr über andere Programme, die von Interesse sein könnten.
 - **Verträge**: Zeigen Sie die Verträge an, die Ihr Konto angenommen hat.
-- **Dev-Geräte**: anzeigen und Verwalten von [Windows Phone 8.x-Geräte, die Sie zu Testzwecken entsperrt haben](http://go.microsoft.com/fwlink/p/?LinkId=533897) und [für die Entwicklung aktivierten Xbox One-Konsolen](../xbox-apps/devkit-activation.md). 
+- **Dev-Geräte**: anzeigen und Verwalten von [Windows Phone 8.x-Geräte, die Sie zu Testzwecken entsperrt haben](https://go.microsoft.com/fwlink/p/?LinkId=533897) und [für die Entwicklung aktivierten Xbox One-Konsolen](../xbox-apps/devkit-activation.md). 
 
 

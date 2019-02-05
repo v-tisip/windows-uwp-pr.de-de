@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows10, UWP, Beispielcode, Codebeispiele
 ms.assetid: 393c5a81-ee14-45e7-acd7-495e5d916909
 ms.localizationpriority: medium
-ms.openlocfilehash: 64eb0d13db1fbcf49d9da28e57eb85ff84823bf1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4cdf38a4bd77c4f6affb813c9e1de68463c43100
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946295"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049717"
 ---
 # <a name="get-uwp-app-samples"></a>Beispiele für UWP-Apps abrufen
 
@@ -28,7 +28,7 @@ Die ZIP-Datei enthält stets die neuesten Beispiele. Sie benötigen zum Herunter
 
 
 > [!NOTE]
-> Für das Öffnen, Erstellen und Ausführen der UWP-Beispiele sind Visual Studio2015 oder höher und das Windows SDK erforderlich. Eine kostenlose Kopie von Visual Studio Community mit Unterstützung für die Erstellung von UWP-Apps erhalten Sie [hier](http://go.microsoft.com/fwlink/p/?LinkID=280676 "Downloads für Windows-Entwicklungstools").  
+> Für das Öffnen, Erstellen und Ausführen der UWP-Beispiele sind Visual Studio2015 oder höher und das Windows SDK erforderlich. Eine kostenlose Kopie von Visual Studio Community mit Unterstützung für die Erstellung von UWP-Apps erhalten Sie [hier](https://go.microsoft.com/fwlink/p/?LinkID=280676 "Downloads für Windows-Entwicklungstools").  
 >
 > Zudem sollten Sie sicherstellen, dass nicht nur einzelne Beispiele, sondern das gesamte Archiv entpackt wurde. Alle Beispiele erfordern den Archivordner „SharedContent“. Die Beispiele für UWP-Features verfügen über verknüpfte Dateien in Visual Studio, um das Duplizieren gemeinsam verwendeter Dateien zu vermeiden, z.B. von Beispieldateien für Vorlagen und Bildressourcen. Diese gemeinsamen Dateien werden im Ordner „SharedContent“ im Stammverzeichnis des Repositorys gespeichert. Der Verweis in den Projektdateien erfolgt über Links.
 

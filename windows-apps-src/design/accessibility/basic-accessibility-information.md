@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e7526ec4f32f641f152709e6968f3dc442c2a06
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 8320b2b4abb5e49bbf589b360cc9cc2e0e033f79
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934555"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050330"
 ---
 # <a name="expose-basic-accessibility-information"></a>Verfügbarmachen von grundlegenden Informationen zur Barrierefreiheit  
 
@@ -141,7 +141,7 @@ Eines der Tools, das Sie zum Testen der Barrierefreiheit verwenden können, hei�
 <span id="ACCESSIBLE_NAMES_FROM_DYNAMIC_DATA"/>
 
 ## <a name="accessible-names-from-dynamic-data"></a>Namen zur Verwendung durch Bildschirmleseprogramme aus dynamischen Daten  
-Windows unterstützt viele Steuerelemente, mit denen durch ein als *Datenbindung* bezeichnetes Feature Werte aus einer zugeordneten Datenquelle angezeigt werden können. Wenn Sie Listen mit Datenelementen auffüllen, müssen Sie nach dem Auffüllen der anfänglichen Liste möglicherweise eine Technik verwenden, die Namen zur Verwendung durch Screenreader-Software für datengebundene Listenelemente festlegt. Weitere Informationen finden Sie unter „Szenario4“ im [XAML-Beispiel für Barrierefreiheit](http://go.microsoft.com/fwlink/p/?linkid=238570).
+Windows unterstützt viele Steuerelemente, mit denen durch ein als *Datenbindung* bezeichnetes Feature Werte aus einer zugeordneten Datenquelle angezeigt werden können. Wenn Sie Listen mit Datenelementen auffüllen, müssen Sie nach dem Auffüllen der anfänglichen Liste möglicherweise eine Technik verwenden, die Namen zur Verwendung durch Screenreader-Software für datengebundene Listenelemente festlegt. Weitere Informationen finden Sie unter „Szenario4“ im [XAML-Beispiel für Barrierefreiheit](https://go.microsoft.com/fwlink/p/?linkid=238570).
 
 <span id="Accessible_names_and_localization"/>
 <span id="accessible_names_and_localization"/>
@@ -157,5 +157,5 @@ Beachten Sie, dass angefügte Eigenschaften, z.B. die [**AutomationProperties**]
 ## <a name="related-topics"></a>Verwandte Themen  
 * [Barrierefreiheit](accessibility.md)
 * [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)
-* [XAML-Beispiel für Barrierefreiheit](http://go.microsoft.com/fwlink/p/?linkid=238570)
+* [XAML-Beispiel für Barrierefreiheit](https://go.microsoft.com/fwlink/p/?linkid=238570)
 * [Barrierefreiheitstests](accessibility-testing.md)

@@ -8,12 +8,12 @@ keywords: Windows Ink, Windows-Freihandeingabe, DirectInk, InkPresenter, InkCanv
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 07ed74af3ebe558c6a82cd799cb6aa1efa035e46
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
+ms.openlocfilehash: 9bdd122f438cc9584b5e1eff2236c625adea9c2b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980378"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048983"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a>Erkennen von Windows Ink-Strichen als Text und Formen
 
@@ -208,7 +208,7 @@ private async void RecognizeStrokes_Click(object sender, RoutedEventArgs e)
         }
     }
 ```
-6. Im Folgenden wird die Funktion zum Zeichnen eines TextBlock-Elements im Erkennungszeichenbereich beschrieben. Wir verwenden das umgebende Rechteck der zugehörigen Freihandstriche auf dem Freihandeingabe-Zeichenbereich an, um die Position und den Schriftgrad des TextBlock-Elements festlegen.
+6. Im Folgenden wird die Funktion zum Zeichnen eines TextBlock-Elements im Erkennungszeichenbereich beschrieben. Wir verwenden das umgebende Rechteck der zugehörigen Freihandstriche auf dem Freihandeingabe-Zeichenbereich, um die Position und den Schriftgrad des TextBlock-Elements festlegen.
 ```csharp
 /// <summary>
 /// Draw ink recognition text string on the recognitionCanvas.
@@ -383,7 +383,7 @@ In diesem Beispiel wird die Erkennung durch den Benutzer initiiert, wenn er nach
 
     Jedes Objekt [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) enthält eine Reihe von Text Kandidaten. Das oberste Element in dieser Liste wird vom Erkennungsmodul als beste Übereinstimmung betrachtet, gefolgt von den verbleibenden Kandidaten in absteigender Reihenfolge.
 
-    Wir jede [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) durchlaufen und die Liste der Kandidaten zu kompilieren. Anschließend werden die Kandidaten angezeigt und [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) werden gelöscht, (die [**InkCanvas-Steuerelement**](https://msdn.microsoft.com/library/windows/apps/dn858535)auch deaktiviert).
+    Wir jeden [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) durchlaufen und die Liste der Kandidaten zu kompilieren. Anschließend werden die Kandidaten angezeigt und [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) deaktiviert ist (die [**InkCanvas-Steuerelement**](https://msdn.microsoft.com/library/windows/apps/dn858535)auch deaktiviert).
 
     ```csharp
     string str = "Recognition result\n";
@@ -475,7 +475,7 @@ Im Abschnitt der Eigenschaften [**InkRecognizer.Name**](https://msdn.microsoft.c
 
 Ihre App kann den Satz der installierten Schrifterkennungsmodule abfragen und eines davon verwenden, oder der Benutzer wählt die bevorzugte Sprache aus.
 
-**Hinweis:**  Benutzer können eine Liste der installierten Sprachen anzeigen, indem Sie auf **Einstellungen –&gt; Zeit & Sprache**. Die installierten Sprachen werden unter **Sprachen** aufgeführt.
+**Hinweis:**  Benutzer sehen eine Liste der installierten Sprachen auf **Einstellungen –&gt; Zeit & Sprache**. Die installierten Sprachen werden unter **Sprachen** aufgeführt.
 
 So installieren Sie ein neues Sprachpaket und aktivieren die Schrifterkennung für die Sprache
 
@@ -862,9 +862,9 @@ In diesem Beispiel werden die gleichen Einstellungen für Benutzeroberfläche un
 * [Beispiel für Freihandschrifterkennung (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)
 
 **Andere Beispiele**
-* [Einfaches Freihandbeispiel (C#/C++)](http://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [Komplexes Freihandbeispiel (C++)](http://go.microsoft.com/fwlink/p/?LinkID=620314)
-* [Freihandbeispiel (JavaScript)](http://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [Einfaches Freihandbeispiel (C#/C++)](https://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [Komplexes Freihandbeispiel (C++)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Freihandbeispiel (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [Lernprogramm „Erste Schritte:” Unterstützen von Freihandeingaben in Ihrer UWP-App](https://aka.ms/appsample-ink)
 * [Malbuchbeispiel](https://aka.ms/cpubsample-coloringbook)
 * [Familiennotizbeispiel](https://aka.ms/cpubsample-familynotessample)

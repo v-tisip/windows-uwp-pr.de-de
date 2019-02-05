@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: ae8daa6141eadaac699fc49b8ec4796f1dde5c91
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3527cae294f2268b2457b9fe9a6593cf1b539ee8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923814"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050147"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>Erstellen eines UWP-Spiels in JavaScript
 
@@ -26,11 +26,11 @@ ms.locfileid: "8923814"
 
 Veröffentlichen einer app auf der Microsoft Store bedeutet, dass Sie können freigeben (oder verkaufen!) mit Millionen von Menschen auf vielen verschiedenen Geräten.  
 
-Um Ihre app im Microsoft Store zu veröffentlichen, die sie als eine UWP (universelle Windows-Plattform)-app geschrieben werden muss. UWP ist jedoch extrem flexibel und unterstützt eine Vielzahl von Sprachen und Frameworks. Dieses Beispiel ist ein einfaches Spiel, das in JavaScript geschrieben ist und mehrere CreateJS-Bibliotheken nutzt. Es veranschaulicht, wie Sprites gezeichnet werden, eine Spielschleife erstellt wird, Tastatur und Maus unterstützt werden und die Anpassung an verschiedene Bildschirmgrößen erfolgt.
+Um Ihre app an den Microsoft Store veröffentlichen müssen sie als UWP (universelle Windows-Plattform)-app geschrieben werden. UWP ist jedoch extrem flexibel und unterstützt eine Vielzahl von Sprachen und Frameworks. Dieses Beispiel ist ein einfaches Spiel, das in JavaScript geschrieben ist und mehrere CreateJS-Bibliotheken nutzt. Es veranschaulicht, wie Sprites gezeichnet werden, eine Spielschleife erstellt wird, Tastatur und Maus unterstützt werden und die Anpassung an verschiedene Bildschirmgrößen erfolgt.
 
 Dieses Projekt wurde mit JavaScript unter Verwendung von Visual Studio erstellt. Mit einigen geringfügigen Änderungen kann es auch auf einer Website gehostet oder an andere Plattformen angepasst werden. 
 
-**Hinweis:** Dies ist kein Spiel abgeschlossen (oder gutes!); Dieses Skript dient zu zeigen, wie mit JavaScript und das dritte von Drittanbietern Bibliothek stellen eine app im Microsoft Store veröffentlichen.
+**Hinweis:** Dies ist kein Spiel abgeschlossen (oder gutes!); Dieses Skript dient zu zeigen, wie mit JavaScript und eine dritte Partei Bibliothek stellen eine app im Microsoft Store veröffentlichen.
 
 
 ## <a name="requirements"></a>Anforderungen
@@ -38,9 +38,9 @@ Dieses Projekt wurde mit JavaScript unter Verwendung von Visual Studio erstellt.
 Um dieses Projekt auszuprobieren, benötigen Sie Folgendes:
 
 * Einen Windows-Computer (oder einen virtuellen Computer) mit der aktuellen Version von Windows10.
-* Eine Kopie von Visual Studio. Die kostenlose Visual Studio Community Edition kann von der [Visual Studio-Homepage](http://visualstudio.com) heruntergeladen werden.
+* Eine Kopie von Visual Studio. Die kostenlose Visual Studio Community Edition kann von der [Visual Studio-Homepage](https://visualstudio.com) heruntergeladen werden.
 
-Dieses Projekt verwendet das CreateJS-JavaScript-Framework. Bei CreateJS handelt es sich um einen kostenlosen Satz von Tools mit MIT-Lizenz, welche die Erstellung Sprite-basierter Spiele erleichtern sollen. Die CreateJS-Bibliotheken sind bereits im Projekt vorhanden (suchen Sie nach *js/easeljs-0.8.2.min.js* und *js/preloadjs-0.6.2.min.js* in der Projektmappen-Explorer-Ansicht). Weitere Informationen zu CreateJS finden Sie unter der [CreateJS-Startseite](http://www.createjs.com).
+Dieses Projekt verwendet das CreateJS-JavaScript-Framework. Bei CreateJS handelt es sich um einen kostenlosen Satz von Tools mit MIT-Lizenz, welche die Erstellung Sprite-basierter Spiele erleichtern sollen. Die CreateJS-Bibliotheken sind bereits im Projekt vorhanden (suchen Sie nach *js/easeljs-0.8.2.min.js* und *js/preloadjs-0.6.2.min.js* in der Projektmappen-Explorer-Ansicht). Weitere Informationen zu CreateJS finden Sie unter der [CreateJS-Startseite](https://www.createjs.com).
 
 
 ## <a name="getting-started"></a>Erste Schritte
@@ -61,7 +61,7 @@ Nachdem die Projektmappe in Visual Studio geladen wurde, sehen Sie mehrere Datei
 
 Jetzt können Sie das Spiel ausführen!
 
-Drücken Sie **F5** zum Ausführen der App. Ein Fenster geöffnet werden, und unseren vertrauten Dinosaurier in einer (idyllischen Wenn auch kargen) Landschaft sollte angezeigt werden. Wir werden jetzt die App untersuchen, einige wichtige Teile erklären und währenddessen den Rest der Features entsperren.
+Drücken Sie **F5** zum Ausführen der App. Ein Fenster geöffnet, und unseren vertrauten Dinosaurier in einer (idyllischen Wenn auch kargen) Landschaft sollte angezeigt werden. Wir werden jetzt die App untersuchen, einige wichtige Teile erklären und währenddessen den Rest der Features entsperren.
 
 ![Ein ganz normaler Dinosaurier mit einer Ninja-Katze auf seinem Rücken](images/JS2D_3.png)
 
@@ -69,7 +69,7 @@ Drücken Sie **F5** zum Ausführen der App. Ein Fenster geöffnet werden, und un
 
 ## <a name="walkthough"></a>Exemplarische Vorgehensweise
 
-Wenn Sie das Spiel mit F5 gestartet haben, wundern Sie sich vielleicht, was gerade passiert. Und die Antwort ist "nicht viel", da ein Großteil des Codes derzeit auskommentiert ist. Bisher alles, was Sie sehen, ist der Dinosaurier und unwirksame darauf, die LEERTASTE zu drücken. 
+Wenn Sie das Spiel mit F5 gestartet haben, wundern Sie sich vielleicht, was gerade passiert. Und die Antwort lautet "nicht viel", da ein Großteil des Codes derzeit auskommentiert ist. Bisher alles, was Sie sehen, ist der Dinosaurier und unwirksame darauf, die LEERTASTE zu drücken. 
 
 ### <a name="1-setting-the-stage"></a>1. Festlegen der Phase
 
@@ -134,7 +134,7 @@ Suchen Sie den folgenden Code, und entfernen Sie die Kommentare (\\) aus der Zei
     ];
 ```
 
-JavaScript benötigt etwas Hilfe, wenn es darum geht, Ressourcen wie Bilder zu laden, weshalb wir ein Feature der CreateJS-Bibliothek verwenden, das Bilder vorab laden kann und [LoadQueue](http://www.createjs.com/docs/preloadjs/classes/LoadQueue.html) heißt. Wir wissen nicht, wie lange es dauert, die Bilder zu laden, weshalb wir LoadQueue verwenden, um dies auszuprobieren. Sobald die Bilder verfügbar sind, wird die Warteschlange uns mitteilen, dass sie bereit sind. Zu diesem Zweck erstellen wir zuerst ein neues Objekt, das all unsere Bilder enthält, und erstellen dann ein LoadQueue-Objekt. Sie sehen im Code unten, wie dieses eingerichtet ist, um eine Funktion namens **loadingComplete()** aufzurufen, wenn alles bereit ist.
+JavaScript benötigt etwas Hilfe, wenn es darum geht, Ressourcen wie Bilder zu laden, weshalb wir ein Feature der CreateJS-Bibliothek verwenden, das Bilder vorab laden kann und [LoadQueue](https://www.createjs.com/docs/preloadjs/classes/LoadQueue.html) heißt. Wir wissen nicht, wie lange es dauert, die Bilder zu laden, weshalb wir LoadQueue verwenden, um dies auszuprobieren. Sobald die Bilder verfügbar sind, wird die Warteschlange uns mitteilen, dass sie bereit sind. Zu diesem Zweck erstellen wir zuerst ein neues Objekt, das all unsere Bilder enthält, und erstellen dann ein LoadQueue-Objekt. Sie sehen im Code unten, wie dieses eingerichtet ist, um eine Funktion namens **loadingComplete()** aufzurufen, wenn alles bereit ist.
 
 ```
     // Now we create a special queue, and finally a handler that is
@@ -162,9 +162,9 @@ Führen Sie die App erneut aus (durch Drücken von F5), und Sie werden sehen, da
 
 ### <a name="3-moving-the-clouds"></a>3. Bewegen der Wolken
 
-Jetzt werden wir die Wolken bewegen. Das Geheimnis für das Bewegen der Wolken – und aller anderen Elemente – ist, eine [Ticker](http://www.createjs.com/docs/easeljs/classes/Ticker.html)-Funktion einzurichten, die wiederholt mehrmals pro Sekunde aufgerufen wird. Jedes Mal, wenn diese Funktion aufgerufen wird, wird die Grafik an einem etwas anderen Ort neu gezeichnet.
+Jetzt werden wir die Wolken bewegen. Das Geheimnis für das Bewegen der Wolken – und aller anderen Elemente – ist, eine [Ticker](https://www.createjs.com/docs/easeljs/classes/Ticker.html)-Funktion einzurichten, die wiederholt mehrmals pro Sekunde aufgerufen wird. Jedes Mal, wenn diese Funktion aufgerufen wird, wird die Grafik an einem etwas anderen Ort neu gezeichnet.
 
-<p data-height="500" data-theme-id="23761" data-slug-hash="vxZVRK" data-default-tab="result" data-user="MicrosoftEdgeDocumentation" data-embed-version="2" data-pen-title="CreateJS - Animating clouds" data-preview="true" data-editable="true" class="codepen">Sehen Sie sich den Pen <a href="https://codepen.io/MicrosoftEdgeDocumentation/pen/vxZVRK/">CreateJS – Animieren von Wolken</a> von Microsoft Edge Docs (<a href="http://codepen.io/MicrosoftEdgeDocumentation">@MicrosoftEdgeDocumentation</a>) auf <a href="http://codepen.io">CodePen</a> an.</p>
+<p data-height="500" data-theme-id="23761" data-slug-hash="vxZVRK" data-default-tab="result" data-user="MicrosoftEdgeDocumentation" data-embed-version="2" data-pen-title="CreateJS - Animating clouds" data-preview="true" data-editable="true" class="codepen">Sehen Sie sich den Pen <a href="https://codepen.io/MicrosoftEdgeDocumentation/pen/vxZVRK/">CreateJS – Animieren von Wolken</a> von Microsoft Edge Docs (<a href="https://codepen.io/MicrosoftEdgeDocumentation">@MicrosoftEdgeDocumentation</a>) auf <a href="https://codepen.io">CodePen</a> an.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
  
 Der Code dazu ist bereits in der Datei **main.js** vorhanden, die von der CreateJS-Bibliothek EaselJS bereitgestellt wird. Es sieht ungefähr so aus:
@@ -217,7 +217,7 @@ Ein Spiel, mit dem Sie nicht interagieren können, ist kein Spiel. Wir müssen d
 
 Wir haben jetzt zwei Funktionen, die aufgerufen werden, wenn der Spieler eine Taste drückt oder mit der Maus klickt. Beide Ereignisse rufen **userDidSomething()** auf, eine Funktion, welche die Gamestate-Variable untersucht, um zu entscheiden, was das Spiel derzeit ausführt und was daher als Nächstes passieren muss.
 
-Gamestate ist ein Entwurfsmuster, das häufig in Spielen verwendet wird. Alles, was passiert, erfolgt in der **gameLoop()**-Funktion, die vom Ticker-Timer aufgerufen wird. Die gameLoop()-Funktion verfolgt, ob das Spiel gespielt wird, das Spiel gerade vorbei ist, das Spiel jetzt begonnen werden kann oder einen anderen vom Autor definierten Zustand hat, und verwendet eine Variable. Diese Zustandsvariable wird in einer Switch-Anweisung getestet und definiert, welche anderen Funktionen aufgerufen werden. Wenn der Zustand auf „Wiedergabe“ festgelegt ist, werden die Funktionen, welche den Dinosaurier springen lassen und die Fässer verschieben, aufgerufen. Wenn der Dinosaurier getötet wird, wird die Gamestate-Variable auf den Zustand „Spiel beendet“ gesetzt und die Meldung „Game over!“ wird angezeigt. Wenn Sie an Spielentwurfsmustern interessiert sind, ist das Buch [Game Programming Patterns](http://gameprogrammingpatterns.com/) sehr hilfreich.
+Gamestate ist ein Entwurfsmuster, das häufig in Spielen verwendet wird. Alles, was passiert, erfolgt in der **gameLoop()**-Funktion, die vom Ticker-Timer aufgerufen wird. Die gameLoop()-Funktion verfolgt, ob das Spiel gespielt wird, das Spiel gerade vorbei ist, das Spiel jetzt begonnen werden kann oder einen anderen vom Autor definierten Zustand hat, und verwendet eine Variable. Diese Zustandsvariable wird in einer Switch-Anweisung getestet und definiert, welche anderen Funktionen aufgerufen werden. Wenn der Zustand auf „Wiedergabe“ festgelegt ist, werden die Funktionen, welche den Dinosaurier springen lassen und die Fässer verschieben, aufgerufen. Wenn der Dinosaurier getötet wird, wird die Gamestate-Variable auf den Zustand „Spiel beendet“ gesetzt und die Meldung „Game over!“ wird angezeigt. Wenn Sie an Spielentwurfsmustern interessiert sind, ist das Buch [Game Programming Patterns](https://gameprogrammingpatterns.com/) sehr hilfreich.
 
 Führen Sie die App erneut aus, anschließend können Sie mit dem Spiel beginnen. Drücken Sie die Leertaste (oder klicken mit der Maus oder tippen auf den Bildschirm), damit etwas passiert. 
 
@@ -265,13 +265,13 @@ Dazu müssen Sie einige Schritte durchführen.
 2. Verwenden Sie die [Prüfliste für App-Übermittlung](https://msdn.microsoft.com/windows/uwp/publish/app-submissions).
 3. Die App muss zur [Zertifizierung](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process) eingereicht werden.
 
-Weitere Informationen finden Sie in der [Veröffentlichung Ihrer UWP-app](https://developer.microsoft.com/en-us/store/publish-apps).
+Weitere Informationen finden Sie in [Ihrer UWP-app veröffentlichen](https://developer.microsoft.com/en-us/store/publish-apps).
 
 ## <a name="suggestions-for-other-features"></a>Vorschläge für andere Features.
 
 Was jetzt? Hier sind einige Vorschläge für Features, die Sie zu Ihrer (hoffentlich bald) preisgekrönten App hinzufügen können.
 
-1. Soundeffekte Die CreateJS-Bibliothek bietet Audiounterstützung mit einer Bibliothek namens [SoundJS](http://www.createjs.com/soundjs).
+1. Soundeffekte Die CreateJS-Bibliothek bietet Audiounterstützung mit einer Bibliothek namens [SoundJS](https://www.createjs.com/soundjs).
 2. Gamepad-Unterstützung. Es gibt eine [verfügbare API](https://gamedevelopment.tutsplus.com/tutorials/using-the-html5-gamepad-api-to-add-controller-support-to-browser-games--cms-21345).
 3. Erstellen Sie ein viel, viel besseres Spiel! Dieser Teil ist Ihre Aufgabe, aber es gibt zahlreiche Ressourcen online. 
 
