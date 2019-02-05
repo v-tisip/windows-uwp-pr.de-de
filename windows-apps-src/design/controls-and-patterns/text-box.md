@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a0c36430c6dd993c86ae1833631e55e1a8bdca4c
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 7075df3d5c3de0dd7d756432400dfe934651c5b4
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050320"
+ms.locfileid: "9058762"
 ---
 # <a name="text-box"></a>Textfeld
 
@@ -146,7 +146,7 @@ Das Textfeld sieht nach dem Hinzufügen von Text folgendermaßen aus.
 
 ### <a name="format-the-text-display"></a>Formatieren der Textanzeige
 
-Verwenden Sie die [TextAlignment]()-Eigenschaft, um Text innerhalb eines Textfelds auszurichten. Verwenden Sie zum Ausrichten des Textfelds innerhalb des Seitenlayouts die Eigenschaften [HorizontalAlignment](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) und [VerticalAlignment](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx).
+Verwenden Sie die [TextAlignment](/uwp/api/windows.ui.xaml.controls.textbox.textalignment)-Eigenschaft, um Text innerhalb eines Textfelds auszurichten. Verwenden Sie zum Ausrichten des Textfelds innerhalb des Seitenlayouts die Eigenschaften [HorizontalAlignment](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) und [VerticalAlignment](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx).
 
 Obwohl das TextBox-Element nur unformatierten Text unterstützt, können Sie zur Anpassung an das Branding Ihrer App festlegen, wie der Text im Textfeld angezeigt wird. Sie können Standardeigenschaften von [Steuerelementen](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.aspx), z.B. [FontFamily](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.fontfamily.aspx), [FontSize](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.fontsize.aspx), [FontStyle](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.fontstyle.aspx), [Background](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.background.aspx), [Foreground](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.foreground.aspx) und [CharacterSpacing](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.characterspacing.aspx), festlegen, um das Erscheinungsbild des Texts zu ändern. Diese Eigenschaften beeinflussen nur die lokale Anzeige des Texts im Textfeld. Wenn Sie den Text kopieren und z.B. in ein Rich-Text-Steuerelement einfügen, wird daher keine Formatierung angewendet.
 
