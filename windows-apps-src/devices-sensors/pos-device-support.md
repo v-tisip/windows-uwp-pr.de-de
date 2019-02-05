@@ -5,12 +5,12 @@ ms.date: 06/13/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 74753c2c91912969342d2989ed76900e8386f292
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 5154593065ce40c5ac67a4873d58b2aac913d1f8
+ms.sourcegitcommit: f01e7abae23b91bbaa007055942e93587c0ec137
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050933"
+ms.locfileid: "9059012"
 ---
 # <a name="supported-point-of-service-peripherals"></a>Unterstützte Point of Service-Peripheriegeräte
 
@@ -61,13 +61,15 @@ ms.locfileid: "9050933"
 | Socket Mobile | SocketScan S740                | 2D         | Bluetooth    | Handheld     | Serial Port Profile (SPP) |
 | Socket Mobile | SocketScan S800                | 1D         | Bluetooth    | Handheld     | Serial Port Profile (SPP) |
 | Socket Mobile | SocketScan S850                | 2D         | Bluetooth    | Handheld     | Serial Port Profile (SPP) |
+| Zebra         | DS2208²                        | 2D         | USB          | Handheld     | HID POS-Scanner           |
 | Zebra         | DS2278                         | 2D         | USB          | Handheld     | HID POS-Scanner           |
-| Zebra         | DS8108²                        | 2D         | USB          | Handheld     | HID POS-Scanner           |
+| Zebra         | DS8108³                        | 2D         | USB          | Handheld     | HID POS-Scanner           |
 |
 
 
 ¹ Upgradable 2D Barcodes über Honeywell unterstützen <br/>
-² Firmware mindestens 016 (2018.01.18) erforderlich. Upgrade mit Zebra [123Scan](https://www.zebra.com/123Scan). 
+² mindestens Firmware 009 (2018.07.09) erforderlich. Upgrade mit Zebra [123Scan](http://www.zebra.com/123Scan).<br/>
+³ Firmware mindestens 016 (2018.01.18) erforderlich. Upgrade mit Zebra [123Scan](http://www.zebra.com/123Scan). 
 
 
 <hr>
