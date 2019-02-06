@@ -6,12 +6,12 @@ ms.date: 07/13/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 920ff8e295959ad6ea66cdb3b673217ff19b89e2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 212ef252e7d123ebf457a6584f77addb04fdfb2c
+ms.sourcegitcommit: a5f5bd724e65ce4a62d28dfd9080afb127886d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943151"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9059991"
 ---
 # <a name="storyboarded-animations"></a>Storyboardanimationen
 
@@ -149,7 +149,7 @@ Weitere Informationen zu [**Duration**](https://msdn.microsoft.com/library/windo
 
 ### <a name="fromtoby-are-nullable"></a>From/To/By akzeptieren NULL-Werte
 
-Es wurde bereits erwähnt, dass Sie **From**, **To** oder **By** weglassen können und so aktuelle nicht animierte Werte als Ersatzwerte für einen fehlenden Wert verwenden können. **From**, **To** oder **By**-Eigenschaften einer Animation sind möglicherweise von einem anderen Typ, als Sie vermuten. Der Typ der [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx)-Eigenschaft lautet beispielsweise nicht [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Stattdessen gilt [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx) für **Double**. Der Standardwert lautet **null**, nicht0. Anhand dieses **null**-Werts kann das Animationssystem unterscheiden, dass Sie keinen spezifischen Wert für eine **From**-, **To**- oder **By**-Eigenschaft festgelegt haben. Für VisualC++-komponentenerweiterungen (C++ / CX) ist eine Art **Nullable** [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864) stattdessen verwendet.
+Es wurde bereits erwähnt, dass Sie **From**, **To** oder **By** weglassen können und so aktuelle nicht animierte Werte als Ersatzwerte für einen fehlenden Wert verwenden können. **From**, **To** oder **By**-Eigenschaften einer Animation sind möglicherweise von einem anderen Typ, als Sie vermuten. Der Typ der [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx)-Eigenschaft lautet beispielsweise nicht [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Stattdessen gilt [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx) für **Double**. Der Standardwert lautet **null**, nicht0. Anhand dieses **null**-Werts kann das Animationssystem unterscheiden, dass Sie keinen spezifischen Wert für eine **From**-, **To**- oder **By**-Eigenschaft festgelegt haben. Für VisualC++-komponentenerweiterungen (C++ / CX) ist einen Typ **Nullable** [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864) stattdessen verwendet.
 
 ### <a name="other-properties-of-an-animation"></a>Andere Eigenschaften einer Animation
 
@@ -265,7 +265,8 @@ Die erforderliche Aktivierung abhängiger Animationen durch den App-Entwickler i
 Als App-Entwickler können Sie sich auch für die Anwendung einer App-weiten Einstellung entscheiden, mit der abhängige Animationen immer deaktiviert werden – auch Animationen, für die **EnableDependentAnimation** auf **true** festgelegt ist. Informationen finden Sie unter [**Timeline.AllowDependentAnimations**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.allowdependentanimations).
 
 > [!TIP]
-> Wenn Sie visuelle Zustände für ein Steuerelement mithilfe von Visual Studio zusammensetzen, wird im Designer eine Warnung angezeigt, falls Sie versuchen, eine abhängige Animation auf eine Eigenschaft für einen visuellen Zustand anzuwenden.
+> Wenn Sie im Animation in Blend für Visual Studio 2017, verwenden Wenn Sie versuchen, eine abhängige Animation auf eine Eigenschaft visuellen Zustand anzuwenden, werden im Designer Warnungen angezeigt. Warnungen werden nicht in der Buildausgabe oder Fehler-Liste angezeigt. Wenn Sie XAML-Code manuell bearbeiten, wird im Designer eine Warnung nicht angezeigt. Zur Laufzeit beim Debuggen, wird den Ausgabebereich Debugausgabe eine Warnung angezeigt, die die Animation ist nicht unabhängig und übersprungen.
+
 
 ## <a name="starting-and-controlling-an-animation"></a>Starten und Steuern einer Animation
 
