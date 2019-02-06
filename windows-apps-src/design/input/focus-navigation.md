@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7dd7ca5ed7694ba5f114d913580e7e3a233537ae
-ms.sourcegitcommit: 8e0fa6e2cdd5d7456a4c8a10fd9f2501b346294f
+ms.openlocfilehash: a699ef00b3f377656940e66e6d35bfcba1cc5762
+ms.sourcegitcommit: 888a4679fa45637b1cc35f62843727ce44322e57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "9041048"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9059701"
 ---
 # <a name="focus-navigation-for-keyboard-gamepad-remote-control-and-accessibility-tools"></a>Fokusnavigation für Tastatur, Gamepad, Fernbedienung und Bedienungshilfen
 
@@ -425,7 +425,7 @@ Nicht zeigerorientierte Eingabetypen wie Tastatur, Gamepad, Fernbedienung und Be
 
 In diesem Abschnitt wird erläutert, wie Sie eine bevorzugte Navigationsstrategie angeben und die Fokusnavigation in Ihrer Anwendung durch eine Reihe von Navigationsstrategieeigenschaften optimieren, die alle fokusbasierten, nicht zeigerorientierten Eingabetypen unterstützen.
 
-Allgemeinere Informationen zum Erstellen von Apps und Erfahrungen für Xbox/TV finden Sie unter [Tastaturinteraktion](keyboard-interactions.md) und [Entwerfen für Xbox und Fernsehgeräte](../devices/designing-for-tv.md#xy-focus-navigation-and-interaction).
+Weitere allgemeine Informationen zum Erstellen von apps und Erfahrungen für Xbox/TV finden Sie unter [Tastaturinteraktion](keyboard-interactions.md) [Entwerfen für Xbox und Fernsehgeräte](../devices/designing-for-tv.md)und [Gamepad und Fernbedienung Interaktionen](gamepad-and-remote-interactions.md).
 
 ### <a name="navigation-strategies"></a>Navigationsstrategien
 

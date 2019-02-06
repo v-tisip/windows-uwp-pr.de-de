@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, UI, Navigation
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cc879ba89dc3c70ebc08d948b25f31bc30a3c6e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ec5ba9d893a622e256030601cca204abab35045f
+ms.sourcegitcommit: 888a4679fa45637b1cc35f62843727ce44322e57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926455"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9059711"
 ---
 # <a name="ui-navigation-controller"></a>Benutzeroberflächen-Navigationscontroller
 
@@ -35,7 +35,7 @@ Da die Anzahl und Vielzahl der von jedem Typ von Eingabegeräten unterstützten 
 
 Navigationsgeräte müssen alle Navigationsbefehle im _erforderlichen Satz_ unterstützen. Dies sind die Richtungsbefehle (nach oben, unten, links und rechts), Ansicht, Menü, Akzeptieren und Abbrechen.
 
-Die Richtungsbefehle sind für die primäre [XY-Fokusnavigation](../design/devices/designing-for-tv.md#xy-focus-navigation-and-interaction) zwischen einzelnen Benutzeroberflächenelementen vorgesehen. Die Ansichts- und Menübefehle dienen zum Anzeigen von (kurzzeitigen oder modalen) Informationen zum Gameplay und zum Wechseln zwischen Gameplay und Menü. Die Befehle „Akzeptieren“ und „Abbrechen“ sind für zustimmende (Ja) und ablehnende (Nein) Antworten vorgesehen.
+Die Richtungsbefehle sind für die primäre [XY-Fokusnavigation](../design/input/gamepad-and-remote-interactions.md#xy-focus-navigation-and-interaction) zwischen einzelnen Benutzeroberflächenelementen vorgesehen. Die Ansichts- und Menübefehle dienen zum Anzeigen von (kurzzeitigen oder modalen) Informationen zum Gameplay und zum Wechseln zwischen Gameplay und Menü. Die Befehle „Akzeptieren“ und „Abbrechen“ sind für zustimmende (Ja) und ablehnende (Nein) Antworten vorgesehen.
 
 In der folgenden Tabelle werden diese Befehle und ihre beabsichtigte Nutzung mit Beispielen zusammengefasst.
 | Befehl | Beabsichtigte Nutzung

@@ -6,14 +6,14 @@ ms.date: 3/7/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 7c5d2c1b112b96dc86d1dfef3015f9b52f43cb83
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: cc0af4cba5d4d14c862724cd199c9e6ab221a24d
+ms.sourcegitcommit: 888a4679fa45637b1cc35f62843727ce44322e57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942421"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9059721"
 ---
-# <a name="the-fluent-design-system-for-windows-app-creators"></a>Fluent Design System für Windows-app-creators
+# <a name="the-fluent-design-system-for-windows-app-creators"></a>Das Fluent Design System für Windows-app-creators
 
 ![Fluent Design-header](images/fluentdesign-app-header.jpg)
 
@@ -40,7 +40,7 @@ Durch das Einbeziehen von Elementen der physischen Welt erschließt sich ein Flu
 
 ![Fluent Design-logo](images/fluentdesign_header.png)
 
-Unseren Designrichtlinien wird erläutert, wie Fluent-Entwurfsprinzipien auf apps anwenden. Welche Art von apps? Obwohl viele unserer Richtlinien auf jeder Plattform angewendet werden können, haben wir UWP (die universelle Windows-Plattform) zur Unterstützung der Fluent Design.
+Unseren Designrichtlinien wird erläutert, wie apps Fluent-Entwurfsprinzipien zuweisen. Welche Art von apps? Während viele unserer Richtlinien auf jeder Plattform angewendet werden können, haben wir Windows-Plattform (die Universal) zur Unterstützung der Fluent Design.
 
 Fluent Design-Features sind in UWP integriert. Einige dieser Funktionen – wie effektive Pixel und das universelle Eingabesystem – arbeiten automatisch. Sie müssen keinen zusätzlichen Code schreiben, um sie zu nutzen. Andere Funktionen, wie z. B. Acryl, sind optional. Sie nehmen sie in Ihre Anwendung auf, indem Sie Code schreiben.
 
@@ -48,11 +48,11 @@ Fluent Design-Features sind in UWP integriert. Einige dieser Funktionen – wie 
 
 <!-- To apply Fluent Design to your app, follow our guidelines and use UWP (Universal Windows Platform) you can use UWP UI features combined with best practices for creating apps that perform beautifully on all types of Windows-powered devices. -->
 
-Zusätzlich zur designanleitungen veranschaulichen unserer Fluent Design-Artikel auch Sie Code schreiben, der Ihre Entwürfe auftreten können. UWP verwendet XAML eine Markup-basierte Sprache, die zum Erstellen von Benutzeroberflächen erleichtert. Beispiel:
+Zusätzlich zu designanleitungen zeigen unserer Fluent Design-Artikel auch Ihnen, wie Sie Code schreiben, der Ihre Entwürfe passieren erheblich vereinfacht. UWP verwendet XAML, eine Markup-basierte Sprache, die leichter Benutzeroberflächen erstellen kann. Beispiel:
 
 ```xaml
 <Grid BorderBrush="Blue" BorderThickness="4">
-    <TextBox Text="Design with XAML" Margin="20" Padding="24,16"/>
+    <TextBox Text="Design with XAML" Margin="20" Padding="16,24"/>
 </Grid>
 ```
 

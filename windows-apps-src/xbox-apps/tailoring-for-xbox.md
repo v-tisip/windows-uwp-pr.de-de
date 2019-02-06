@@ -5,12 +5,12 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 400d80018201c8ae048cb4a5d326fa560b9cdd5c
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: e273b1b3bb84929005cfbe4a205397fa298ea1c8
+ms.sourcegitcommit: 888a4679fa45637b1cc35f62843727ce44322e57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981394"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9059731"
 ---
 # <a name="xbox-best-practices"></a>Bewährte Methoden für Xbox
 
@@ -22,11 +22,11 @@ Standardmäßig können UWP-Apps auf Xbox One ohne zusätzlichen Aufwand von Ihr
 
 ### <a name="do-turn-off-mouse-mode"></a>*Empfohlen:* Deaktivieren des Mausmodus
 
-Xbox-Benutzer lieben ihren Controller. Deaktivieren Sie zur Optimierung der Controller-Eingabe den Mausmodus [Deaktivieren des Mausmodus](how-to-disable-mouse-mode.md) und ermöglichen Sie die direktionale Navigation (auch als [XY-Fokus](../design/devices/designing-for-tv.md#xy-focus-navigation-and-interaction) bezeichnet). Achten Sie auf fokustrapping und nicht zugängliche Benutzeroberfläche.
+Xbox-Benutzer lieben ihren Controller. Optimieren für Controller Eingabe, [den mausmodus zu deaktivieren](how-to-disable-mouse-mode.md) , und aktivieren direktionale Navigation (auch bekannt als [XY-Fokusnavigation und Interaktion](../design/input/gamepad-and-remote-interactions.md#xy-focus-navigation-and-interaction)). Achten Sie auf fokustrapping und nicht zugängliche Benutzeroberfläche.
 
 ### <a name="do-draw-a-focus-rectangle-that-is-appropriate-for-a-10-foot-experience"></a>*Empfohlen:* Ziehen Sie ein Fokusrechteck, das für einen Abstand von 3m geeignet ist
 
-Die meisten Xbox-Nutzer sitzen im Wohnzimmer am Fernseher. Denken Sie also daran, dass das Standard-Fokusrechteck aus 3m Entfernung schwer zu erkennen ist. Um sicherzustellen, dass das UI-Element mit dem Eingabefokus jederzeit deutlich für die Nutzer sichtbar ist, befolgen Sie die Richtlinien zur [Fokusanzeige](../design/devices/designing-for-tv.md#focus-visual). In XAML erhalten Sie dieses Verhalten automatisch, wenn Ihre App auf Xbox ausgeführt wird, aber für HTML-Apps ist eine benutzerdefinierte CSS-Formatvorlage erforderlich.
+Die meisten Xbox-Nutzer sitzen im Wohnzimmer am Fernseher. Denken Sie also daran, dass das Standard-Fokusrechteck aus 3m Entfernung schwer zu erkennen ist. Um sicherzustellen, dass das UI-Element mit dem Eingabefokus jederzeit deutlich für die Nutzer sichtbar ist, befolgen Sie die Richtlinien zur [Fokusanzeige](../design/input/gamepad-and-remote-interactions.md#focus-visual). In XAML erhalten Sie dieses Verhalten automatisch, wenn Ihre App auf Xbox ausgeführt wird, aber für HTML-Apps ist eine benutzerdefinierte CSS-Formatvorlage erforderlich.
 
 ### <a name="do-integrate-with-the-systemmediatransportcontrols-class"></a>*Empfohlen:* Integration in die SystemMediaTransportControls-Klasse
 
@@ -43,7 +43,7 @@ Viele Fernseher schneiden das Bild an den Bildschirmrändern ab. Daher sollte de
 
 ### <a name="consider-use-tv-safe-colors"></a>*Beachten:* Verwenden von fernsehsicheren Farben
 
-Fernsehgeräte gehen mit hohen Farbintensitäten nicht so gut wie Computermonitore um. Vermeiden Sie in Ihren Apps Farben mit hoher Intensität, damit die Benutzer keine merkwürdigen Bandeffekte und keine verwaschenen Bilder sehen. Beachten Sie auch, dass Unterschiede zwischen Fernsehern dazu führen können, dass Farben, die auf *Ihrem* Fernseher gut aussehen, für Ihre Benutzer völlig anders aussehen können. Lesen Sie [Farben](../design/devices/designing-for-tv.md#colors) , um zu verstehen, wie Sie Ihre app für alle toll aussieht.
+Fernsehgeräte gehen mit hohen Farbintensitäten nicht so gut wie Computermonitore um. Vermeiden Sie in Ihren Apps Farben mit hoher Intensität, damit die Benutzer keine merkwürdigen Bandeffekte und keine verwaschenen Bilder sehen. Beachten Sie auch, dass Unterschiede zwischen Fernsehern dazu führen können, dass Farben, die auf *Ihrem* Fernseher gut aussehen, für Ihre Benutzer völlig anders aussehen können. Lesen Sie [Farben](../design/devices/designing-for-tv.md#colors) , um zu verstehen, wie Ihre App für alle toll aussieht!
 
 ### <a name="remember-you-can-disable-scaling"></a>*Denken Sie daran:* Die Skalierung kann deaktiviert werden.
 
@@ -68,7 +68,7 @@ Die folgenden Gespräche auf [Channel 9](https://channel9.msdn.com/) sind eine h
 Das **App-Entwicklung auf Xbox** -Ereignis ist ein hervorragender Ausgangspunkt für Entwickler zum Erstellen von apps auf Xbox.
 
 * [Sehen Sie sich die aufgezeichneten Sitzungen](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#WatchNow)
-* [Lesen Sie die Blogbeiträge](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#BlogSeries)
+* [Die Blogbeiträge](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#BlogSeries)
 
 ## <a name="see-also"></a>Weitere Informationen:
 
