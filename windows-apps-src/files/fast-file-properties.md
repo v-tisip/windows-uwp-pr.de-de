@@ -1,16 +1,16 @@
 ---
 title: Schneller Zugriff auf Dateieigenschaften in UWP
 description: Stellen Sie schnell eine Liste von Dateien und ihren Eigenschaften über eine Bibliothek in einer UWP-App zusammen.
-ms.date: 03/22/2018
+ms.date: 02/06/2019
 ms.topic: article
 keywords: Windows10, Uwp, Datei, Eigenschaften
 ms.localizationpriority: medium
-ms.openlocfilehash: 772abd3696850be202593c582e6338a04de38537
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5ae884ca5424f50a7a835bc55602b5aa7c54096d
+ms.sourcegitcommit: b79cc7e0eac414ac2275517a7f56d1f9a817d112
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926535"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9060054"
 ---
 # <a name="fast-access-to-file-properties-in-uwp"></a>Schneller Zugriff auf Dateieigenschaften in UWP 
 
@@ -19,7 +19,7 @@ Erfahren Sie, wie Sie schnell eine Liste von Dateien und ihren Eigenschaften aus
 Voraussetzungen 
 - **Asynchrone Programmierung für universelle Windows-Plattform (UWP) apps**  erfahren Sie, wie zum Schreiben von asynchronen apps in c# oder Visual Basic finden Sie unter [aufrufen asynchroner APIs in c# oder Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).     Informationen zum Schreiben von asynchronen Apps in C++ finden Sie unter [Asynchrone Programmierung in C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps). 
 - **Zugriffsberechtigungen für Bibliotheken**  Der Code in diesen Beispielen erfordert die **PicturesLibrary** -Funktion, aber Ihr Dateispeicherort erfordern einen anderen Zugriffstyp oder keinen überhaupt. Weitere Informationen finden Sie unter [Berechtigungen für den Dateizugriff](https://docs.microsoft.com/windows/uwp/files/file-access-permissions). 
-- **Einfache dateiauflistung**  Dieses Beispiel verwendet [QueryOptions](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.QueryOptions) einige erweiterte aufzählungseigenschaften gesetzt. Um mehr darüber zu erfahren, wie Sie eine einfache Liste von Dateien für ein kleineres Verzeichnis erhalten, lesen Sie [Aufzählen und Abfragen von Dateien und Ordnern](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders). 
+- **Einfache dateiauflistung**  Diesem Beispiel wird mit [QueryOptions](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.QueryOptions) einige erweiterte aufzählungseigenschaften gesetzt. Um mehr darüber zu erfahren, wie Sie eine einfache Liste von Dateien für ein kleineres Verzeichnis erhalten, lesen Sie [Aufzählen und Abfragen von Dateien und Ordnern](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders). 
 
 ## <a name="usage"></a>Verwendung  
 Viele Apps müssen die Eigenschaften einer Gruppe von Dateien auflisten, müssen aber nicht immer direkt mit den Dateien interagieren. Zum Beispiel, eine Musikanwendung spielt immer nur eine Datei ab (Öffnen), aber sie benötigt die Eigenschaften aller Dateien in einem Ordner, so dass die Anwendung die Song-Warteschlange anzeigen kann. So kann der Benutzer eine gültige Datei zum Abspielen auswählen. 
@@ -118,6 +118,5 @@ Apps können den Benutzer mittels [StorageLibrary.RequestAddFolderAsync](https:/
 [QueryOptions-API-Referenz](https://docs.microsoft.com/uwp/api/windows.storage.search.queryoptions)  
 [Aufzählen und Abfragen von Dateien und Ordnern](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders)  
 [Berechtigungen für den Dateizugriff](https://docs.microsoft.com/windows/uwp/files/file-access-permissions)  
-[Exemplarische Vorgehensweise zum schnellen Zugriff auf Eigenschaften](https://blogs.msdn.microsoft.com/adamdwilson/2017/12/20/fast-file-enumeration-with-partially-initialized-storagefiles/)
  
  

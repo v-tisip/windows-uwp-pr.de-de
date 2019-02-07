@@ -1,20 +1,21 @@
 ---
-description: Die xBind-Markuperweiterung mit der Funktionen im Markup verwendet werden.
+description: Die xBind-Markuperweiterung mit der Funktionen in Markup verwendet werden.
 title: Funktionen in x:Bind
-ms.date: 04/26/2018
+ms.date: 02/06/2019
 ms.topic: article
 keywords: Windows 10, Uwp, xBind
 ms.localizationpriority: medium
-ms.openlocfilehash: 38573bf4602c88d2e04d4bf29b39191045eddec8
-ms.sourcegitcommit: 58783d1ea22e632b9c50dcfbaa1cc57686bcdd8e
+ms.openlocfilehash: b85777c254c36cc7bf5b156569c7cef267a6c567
+ms.sourcegitcommit: b79cc7e0eac414ac2275517a7f56d1f9a817d112
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "9024217"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9060034"
 ---
 # <a name="functions-in-xbind"></a>Funktionen in x:Bind
 
-**Hinweis:** allgemeine Informationen zur Verwendung von Daten Bindung in Ihrer app mit **{X: Bind}** (und für einen vollständigen Vergleich zwischen **{X: Bind}** "und" **{Binding}**) finden Sie unter [der Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
+> [!NOTE]
+> Allgemeine Informationen zur Verwendung der Datenbindung in Ihrer app mit **{X: Bind}** (sowie einen vollständigen Vergleich zwischen **{X: Bind}** und **{Binding}**) finden Sie unter [Datenbindung im Detail](data-binding-in-depth.md).
 
 Ab Windows10, Version 1607, unterstützt **{x: Bind}** die Verwendung einer Funktion als blattbildenden Schrittdes Bindungspfades. Dadurch wird Folgendes ermöglicht:
 
@@ -54,7 +55,7 @@ class ColorEntry
 
 ## <a name="xaml-attribute-usage"></a>XAML-Attributsyntax
 
-``` syntax
+```xaml
 <object property="{x:Bind pathToFunction.FunctionName(functionParameter1, functionParameter2, ...), bindingProperties}" ... />
 ```
 
@@ -75,6 +76,7 @@ Statische Funktionen können mithilfe der XMLNamespace:ClassName.MethodName-Synt
     </StackPanel>
 </Page>
 ```
+
 ```csharp
 namespace MyNamespace
 {
@@ -86,6 +88,7 @@ namespace MyNamespace
 ```
 
 Sie können auch Systemfunktionen direkt im Markup verwenden, um einfache Szenarien wie das Datum formatieren, Formatieren von Text, Text Konkatinierungen usw., z. B. auszuführen:
+
 ```xaml
 <Page 
      xmlns:sys="using:System"
@@ -105,9 +108,9 @@ Für die zu bindende Funktion müssen folgende Voraussetzungen gelten:
 - Die Argumenttypen müssen den übergebenen Daten entsprechen. Es werden keine einschränkenden Konvertierungen durchgeführt
 - Der Rückgabetyp der Funktion muss mit dem Typ der Eigenschaft übereinstimmen, für die die Bindung verwendet wird
 
-Beginnen mit dem nächsten wichtigen Update für Windows 10, wird das Bindungsmodul Benachrichtigungen ausgelöst wird, mit den Namen der Funktion reagieren und Bindungen nach Bedarf neu ausgewertet. Beispiel: 
+Das Bindungsmodul reagiert auf Änderung der Eigenschaft Benachrichtigungen mit den Namen der Funktion ausgelöst und Bindungen erneut nach Bedarf auswerten. Beispiel:
 
-```XAML
+```xaml
 <DataTemplate x:DataType="local:Person">
    <StackPanel>
       <TextBlock Text="{x:Bind FullName}" />
@@ -115,6 +118,7 @@ Beginnen mit dem nächsten wichtigen Update für Windows 10, wird das Bindungsmo
    </StackPanel>
 </DataTemplate>
 ```
+
 ```csharp
 public class Person:INotifyPropertyChanged
 {
@@ -148,7 +152,7 @@ public class Person:INotifyPropertyChanged
     public string FullName
     {
         get { return this.fullName; }
-        set 
+        set
         {
             this.fullName = value;
             this.OnPropertyChanged ();
@@ -160,7 +164,7 @@ public class Person:INotifyPropertyChanged
 ```
 
 > [!TIP]
-> Sie können Funktionen in X: Bind verwenden, erreichen Sie die gleichen Szenarien wie was über den Konverter und MultiBinding in WPF unterstützt wurde.
+> Sie können Funktionen in X: Bind um zu erreichen die gleichen Szenarien wie was über Konverter und MultiBinding in WPF unterstützt wurde.
 
 ## <a name="function-arguments"></a>Funktionsargumente
 
@@ -174,7 +178,8 @@ Mehrere Argumente können durch Komma (,) voneinander getrennt angegeben werden
 
 ### <a name="two-way-function-bindings"></a>Bidirektionale Funktionsbindung
 
-In einem Szenario mit bidirektionaler Bindung muss eine zweite Funktion für die umgekehrte Bindungsrichtung angegeben werden. Dies erfolgt mithilfe der **BindBack** Binding-Eigenschaft. In der folgenden Beispiel wird die Funktion muss ein Argument, das den Wert ist, die das Modell übernommen werden muss übernehmen.
+In einem Szenario mit bidirektionaler Bindung muss eine zweite Funktion für die umgekehrte Bindungsrichtung angegeben werden. Dies erfolgt mithilfe der **BindBack** Bindung-Eigenschaft. In dem Beispiel unten haben die Funktion zu ergreifende Maßnahme ein Argument, das den Wert, der das Modell übernommen werden muss.
+
 ```xaml
 <TextBlock Text="{x:Bind a.MyFunc(b), BindBack=a.MyFunc2, Mode=TwoWay}" />
 ```

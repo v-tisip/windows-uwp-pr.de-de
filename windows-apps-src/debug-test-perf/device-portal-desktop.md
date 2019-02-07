@@ -2,20 +2,18 @@
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Geräteportal für Windows-Desktop
 description: Hier erfahren Sie, wie das Windows Device Portal die Diagnose und Automatisierung auf dem Windows-Desktop öffnet.
-ms.date: 03/15/2018
+ms.date: 2/6/2019
 ms.topic: article
 keywords: Windows 10, Uwp, geräteportal
 ms.localizationpriority: medium
-ms.openlocfilehash: 1be8dfd11e68dc8e6382f98e08e6c23f2a4d6be6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3dcf35a1bd43930e616edc6d1e7180c9cea31560
+ms.sourcegitcommit: b79cc7e0eac414ac2275517a7f56d1f9a817d112
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938830"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9060044"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Geräteportal für Windows-Desktop
-
-
 
 Im Windows-Geräteportal können Sie Diagnoseinformationen anzeigen und über HTTP aus dem Browserfenster mit Ihrem Desktop interagieren. Sie haben im Geräteportal folgende Möglichkeiten:
 - Anzeigen und Bearbeiten einer Liste laufender Prozesse
@@ -77,6 +75,7 @@ Das Geräteportal auf dem Windows-Desktop bietet die Standardseiten. Ausführlic
 - Entwurf
 
 ## <a name="more-device-portal-options"></a>Weitere Optionen für das Geräteportal
+
 ### <a name="registry-based-configuration-for-device-portal"></a>Registrierungsbasierte Konfiguration für das Geräteportal
 
 Wenn Sie Portnummern für Geräteportal auswählen möchten (z. B. 80 und 443), können Sie die folgenden Registrierungsschlüssel festlegen:
@@ -105,6 +104,30 @@ Unter dem gleichen regkey-Pfad können Sie auch die Authentifizierungsanforderun
 - `-Debug <various options for authentication, port selection, and tracing level>`
     - Führen Sie eine eigenständige Version des Geräteportals mit einer bestimmten Konfiguration und sichtbaren Debug-Meldungen aus. Dies ist besonders nützlich für die Erstellung eines [gepackten Plugins](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-plugin). 
     - Lesen Sie den [Artikel im MSDN Magazine](https://msdn.microsoft.com/en-us/magazine/mt826332.aspx) mit Details darüber, wie Sie es als „System” ausführen können, um Ihr gepacktes Plugin vollständig zu testen.
+
+## <a name="common-errors-and-issues"></a>Häufige Fehler und Probleme
+
+Im folgenden sind einige häufige Fehler, die auftreten können, wenn Sie Device Portal einrichten.
+
+### <a name="windowsupdatesearch-returns-invalid-number-of-updates-0x800f0950-cbseinvalidwindowsupdatecount"></a>WindowsUpdateSearch gibt ungültige Anzahl von Updates (0x800f0950 CBS_E_INVALID_WINDOWS_UPDATE_COUNT)
+
+Sie können diesen Fehler erhalten, bei dem Versuch, die Entwickler-Pakete auf einem Pre-Release-Build von Windows 10 zu installieren. Diese Features bei Bedarf (FoD)-Pakete auf Windows Update gehostet werden, und Herunterladen auf pre-Release-Builds erfordert, dass Sie in Test-flighting deaktivieren. Wenn die Installation nicht in Paketen für die richtigen Build und Ring Kombination deaktiviert ist, kann die Nutzlast nicht herunterladen. Überprüfen Sie Folgendes:
+
+1. Navigieren Sie zu **Einstellungen > Update & Sicherheit > Windows-Insider-Programm** , und stellen Sie sicher, dass der **Windows-Insider-Konto** -Abschnitt der richtigen Kontoinformationen hat. Wenn Sie diesen Abschnitt, wählen Sie die **Windows-Insider-Konto verknüpfen**nicht angezeigt wird, Ihre e-Mail-Konto hinzufügen, und stellen Sie sicher, dass es unter der Überschrift **Windows-Insider-Konto** angezeigt wird (Sie müssen möglicherweise **Windows-Insider-Konto verknüpfen** ein zweites Mal zum Auswählen tatsächlich verknüpfen Sie neu hinzugefügte-Konto).
+ 
+2. Unter **welche Art von Inhalt Sie empfangen möchten?**, stellen Sie sicher, **aktiven Entwicklung von Windows** aktiviert ist.
+ 
+3. Unter **welche Tempo möchten Sie neue Builds zu erhalten?**, stellen Sie sicher, dass **Windows Insider Fast** ausgewählt ist.
+ 
+4. Sie sollten jetzt die FOD-Dateien installieren können. Wenn Sie bestätigt haben, dass Sie verwenden Windows-Insider-Fast und weiterhin kann nicht die FOD-Dateien zu installieren, geben Sie Feedback und die Protokolldateien unter **C:\Windows\Logs\CBS**anhängen.
+
+### <a name="sc-startservice-openservice-failed-1060-the-specified-service-does-not-exist-as-an-installed-service"></a>[SC] Methode: OpenService FAILED 1060: der angegebene Dienst ist nicht als installierter Dienst vorhanden
+
+Sie können diesen Fehler erhalten, wenn die Entwickler-Pakete installiert sind. Ohne den Entwickler-Paketen besteht kein Web Management Service. Versuchen Sie erneut, die Entwickler-Pakete zu installieren.
+
+### <a name="cbs-cannot-start-download-because-the-system-is-on-metered-network-cbsemeterednetwork"></a>CBS kann nicht Download gestartet werden, da das System in getakteten Netzwerk (CBS_E_METERED_NETWORK) ist
+
+Sie können diesen Fehler erhalten, wenn Sie sich auf eine getaktete Verbindung zum Internet befinden. Sie wird nicht die Entwickler-Pakete für eine getaktete Verbindung herunterladen können.
 
 ## <a name="see-also"></a>Weitere Informationen:
 
