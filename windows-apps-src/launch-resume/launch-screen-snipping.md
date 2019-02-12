@@ -1,47 +1,48 @@
 ---
 title: Ausschnitt & Skizze starten
-description: In diesem Thema wird das ms-Screenclip und ms-Screensketch URI-Schemas. Ihre app kann diese URI-Schemas zum Starten der app Ausschnitt & Skizze oder öffnen Sie einen neuen Ausschnitt verwenden.
+description: Dieses Thema beschreibt die ms-Screenclip und ms-Screensketch-URI-Schemas. Ihre app kann diese URI-Schemas zum Starten der Ausschnitt & Skizze app oder einen neuen Ausschnitt Öffnen verwenden.
 ms.date: 8/1/2017
 ms.topic: article
 keywords: Windows 10, Uwp, Uri, Ausschneiden, Skizze
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 07c095e661327ba1b64c4ba897937c8e3e905140
-ms.sourcegitcommit: d705a79d037baa764790d3d8daa9321ed0ac9ebc
+ms.openlocfilehash: 2bddea1dd2b5f21a145bde789f1ad760bb5e556a
+ms.sourcegitcommit: b126940932935ebd2965ea68078798fb6e876b23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "8992190"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "9065987"
 ---
 # <a name="launch-screen-snipping"></a>Ausschnitt & Skizze starten
 
-Die **ms-Screenclip:** und **ms-Screensketch:** URI-Schemas können Sie initiieren snipping oder Screenshots bearbeiten.
+Die **ms-Screenclip:** und **ms-Screensketch:** URI-Schemas ermöglicht es Ihnen, snipping oder Bearbeiten von Screenshots zu initiieren.
 
 ## <a name="open-a-new-snip-from-your-app"></a>Öffnen Sie einen neuen Ausschnitt aus Ihrer app
 
-Die **ms-Screenclip:** URI kann Ihre app automatisch öffnen, und starten Sie einen neuen Ausschnitt. Die resultierende Ausschnitt wird in die Zwischenablage des Benutzers kopiert, jedoch nicht automatisch zurück an die öffnen-app übergeben wird.
+Die **ms-Screenclip:** URI kann Ihre app automatisch öffnen, und starten einen neuen Ausschnitt. Der resultierende Ausschnitt wird in die Zwischenablage des Benutzers kopiert, jedoch nicht automatisch zurück an die öffnen-app übergeben wird.
 
 **ms-Screenclip:** hat die folgenden Parameter:
 
 | Parameter | Typ | Erforderlich | Beschreibung |
 | --- | --- | --- | --- |
-| Quelle | string | Nein | Eine formfreie Zeichenfolge an der Quelle, die den URI gestartet. |
-| delayInSeconds | int | nein | Eine ganze Zahl von 1 bis zu 30. Gibt die Verzögerung in vollständige Sekunden zwischen dem URI-Aufruf und wann snipping beginnt. |
+| Quelle | string | Nein | Eine formfreie Zeichenfolge an, dass die Quelle, die den URI gestartet. |
+| delayInSeconds | int | nein | Eine ganze Zahl von 1 bis 30. Gibt die Verzögerung in vollständige Sekunden zwischen dem URI-Aufruf und wann snipping beginnt. |
+| callbackformat | string | Nein | Dieser Parameter ist nicht verfügbar. |
 
-## <a name="launching-the-snip--sketch-app"></a>Starten die Ausschneiden und Sketch-App
+## <a name="launching-the-snip--sketch-app"></a>Starten der Ausschnitt & Skizze-App
 
-Die **ms-Screensketch:** URI können Sie programmgesteuert Starten der app Ausschnitt & Skizze, und öffnen Sie ein bestimmtes Bild in der app für Anmerkung.
+Die **ms-Screensketch:** URI können Sie programmgesteuert Starten der Ausschnitt & Skizze-app, und öffnen Sie ein bestimmtes Bild in der app für Anmerkung.
 
 **ms-Screensketch:** hat die folgenden Parameter:
 
 | Parameter | Typ | Erforderlich | Beschreibung |
 | --- | --- | --- | --- |
-| sharedAccessToken | string | Nein | Ein Token, identifizieren die Datei in der Ausschnitt und Sketch-app zu öffnen. Aus [SharedStorageAccessManager.AddFile](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.addfile)abgerufen werden. Wenn dieser Parameter nicht angegeben ist, wird die app ohne Öffnen der Datei gestartet werden. |
-| secondarySharedAccessToken | string | Nein | Eine Zeichenfolge, die eine JSON-Datei mit Metadaten zu den Ausschnitt identifiziert. Die Metadaten können ein **ClipPoints** -Feld, mit der ein Array von x, y-Koordinaten bzw. ein [UserActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity)enthalten. |
-| Quelle | string | Nein | Eine formfreie Zeichenfolge an der Quelle, die den URI gestartet. |
+| sharedAccessToken | string | Nein | Ein Token, identifizieren die Datei in der Ausschnitt & Skizze app zu öffnen. Aus [SharedStorageAccessManager.AddFile](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.addfile)abgerufen werden. Wenn dieser Parameter ausgelassen wird, wird die app ohne Öffnen der Datei gestartet werden. |
+| secondarySharedAccessToken | string | Nein | Eine Zeichenfolge, die eine JSON-Datei mit Metadaten zu den Ausschnitt identifiziert. Die Metadaten können ein **ClipPoints** Feld ein Array von x, y-Koordinaten und/oder ein [UserActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity)enthalten. |
+| Quelle | string | Nein | Eine formfreie Zeichenfolge an, dass die Quelle, die den URI gestartet. |
 | isTemporary | bool | nein | Wenn auf True festgelegt, Bildschirmskizzen versucht, die Datei zu löschen, nachdem sie geöffnet. |
 
-Das folgende Beispiel ruft die [LaunchUriAsync](https://docs.microsoft.com/uwp/api/Windows.System.Launcher#Windows_System_Launcher_LaunchUriAsync_Windows_Foundation_Uri_) -Methode, um ein Bild an Ausschnitt & Skizze aus der Benutzer die app zu senden.
+Das folgende Beispiel ruft die [LaunchUriAsync](https://docs.microsoft.com/uwp/api/Windows.System.Launcher#Windows_System_Launcher_LaunchUriAsync_Windows_Foundation_Uri_) -Methode, um ein Bild an Ausschnitt & Skizze aus des Benutzers app zu senden.
 
 ```csharp
 
@@ -49,7 +50,7 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-screenske
 
 ```
 
-Im folgenden Beispiel wird veranschaulicht, wie eine Datei, die von der **SecondarySharedAccessToken** -Parameter für **ms-Screensketch** angegebenen enthalten kann:
+Das folgende Beispiel veranschaulicht, wie eine Datei, die durch den **SecondarySharedAccessToken** -Parameter des **ms-Screensketch** angegebenen enthalten kann:
 
 ```json
 {
