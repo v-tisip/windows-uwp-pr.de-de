@@ -5,12 +5,12 @@ ms.date: 11/30/2018
 ms.topic: article
 keywords: Windows 10, UWP, SQLite, Datenbank
 ms.localizationpriority: medium
-ms.openlocfilehash: 3780423b0c2fc2bbe1ebc81054e13997d5ebde7f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 552de1ccb8f8e69a4ad716e54557ae0b5cd3a3f4
+ms.sourcegitcommit: 9af94470480ef67438f6fd189edab47395fb77e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934595"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "9075143"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a>Verwenden einer SQLite-Datenbank in einer UWP-App
 Sie können SQLite verwenden, um Daten in einer einfachen Datenbank auf dem Gerät des Benutzers zu speichern und abzurufen. Dieser Leitfaden zeigt Ihnen wie.
@@ -83,7 +83,7 @@ Es gibt eine Reihe von Vorteilen, um die Mindestversion Ihres UWP-Projekts auf d
 
 Zunächst einmal können Sie .NET Standard 2.0-Bibliotheken anstelle von regulären Klassenbibliotheken verwenden. Das bedeutet, dass Sie Ihren Datenzugriffscode mit jeder anderen .NET-basierten Anwendung wie WPF, Windows Forms, Android, iOS oder ASP.NET teilen können.
 
-Zweitens hat Ihre App keine Paket-SQLite-Bibliotheken. Stattdessen kann Ihre App die Version von SQLite verwenden, die mit Windows installiert wird. Das hilft Ihnen in mehrfacher Hinsicht.
+Zweitens hat Ihre app keinen SQLite-Bibliotheken zu verpacken. Stattdessen kann Ihre App die Version von SQLite verwenden, die mit Windows installiert wird. Das hilft Ihnen in mehrfacher Hinsicht.
 
 :heavy_check_mark: Reduziert die Größe Ihrer App, da Sie die SQLite-Binärdatei nicht herunterladen und dann als Teil Ihrer App verpacken müssen.
 

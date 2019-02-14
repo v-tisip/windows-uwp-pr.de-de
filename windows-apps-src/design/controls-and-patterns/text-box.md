@@ -11,23 +11,20 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7075df3d5c3de0dd7d756432400dfe934651c5b4
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.openlocfilehash: 212b5843a302c8210cd01dd0ab4017eda016098a
+ms.sourcegitcommit: 9af94470480ef67438f6fd189edab47395fb77e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058762"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "9075123"
 ---
 # <a name="text-box"></a>Textfeld
-
- 
 
 Mit dem TextBox-Steuerelement können Benutzer Text in eine App eingeben. Es wird üblicherweise verwendet, um eine einzelne Textzeile einzugeben, kann jedoch auch so konfiguriert werden, dass eine mehrzeilige Texteingabe möglich ist. Der Text wird auf dem Bildschirm in einem einfachen, einheitlichen Klartext angezeigt.
 
 TextBox bietet eine Reihe von Features, mit denen die Texteingabe vereinfacht werden kann. Es enthält ein bekanntes integriertes Kontextmenü, das das Kopieren und Einfügen von Text unterstützt. Über die Schaltfläche „Alles löschen” können Benutzer den gesamten eingegebenen Text schnell löschen. Es bietet außerdem eine integrierte Rechtschreibprüfung, die standardmäßig aktiviert ist.
 
 > **Wichtige APIs**: [TextBox-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx), [Text-Eigenschaft](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx)
-
 
 ## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
@@ -86,6 +83,18 @@ Dieser XAML-Code führt zu folgendem Textfeld.
 
 Üblicherweise wird ein Textfeld verwendet, um die Dateneingabe in ein Formular zu ermöglichen, wobei die [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx)-Eigenschaft dazu dient, die vollständige Textzeichenfolge aus dem Textfeld abzurufen. Zum Zugriff auf die Text-Eigenschaft nutzen Sie in der Regel ein Ereignis wie etwa eine Schaltfläche, Sie können jedoch auch ein [TextChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanged.aspx)- oder [TextChanging](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanging.aspx)-Ereignis verwenden, wenn bei einer Textänderung eine Aktion ausgeführt werden muss.
 
+Dieses Beispiel zeigt, wie Sie abrufen und Festlegen des aktuellen Inhalts eines Textfelds.
+
+```xaml
+<TextBox name="SampleTextBox" Text="Sample Text"/>
+```
+
+```csharp
+string sampleText = SampleTextBox.Text;
+...
+SampleTextBox.Text = "Sample text retrieved";
+```
+
 Sie können dem Textfeld eine [Header](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.header.aspx)-Eigenschaft (oder eine Beschriftung) und eine [PlaceholderText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.placeholdertext.aspx)-Eigenschaft (oder ein Wasserzeichen) hinzufügen, um Benutzern einen Hinweis bezüglich des Verwendungszwecks zu geben. Um das Erscheinungsbild der Überschrift anzupassen, können Sie anstelle der Header-Eigenschaft die [HeaderTemplate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.headertemplate.aspx)-Eigenschaft festlegen. *Informationen zum Design finden Sie unter „Richtlinien für Beschriftungen“*.
 
 Sie können die Anzahl der Zeichen, die der Benutzer eingeben darf, beschränken, indem Sie die [MaxLength](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.maxlength.aspx)-Eigenschaft festlegen. MaxLength beschränkt jedoch nicht die Länge des eingefügten Texts. Verwenden Sie das [Paste](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.paste.aspx)-Ereignis, um eingefügten Text zu bearbeiten, wenn dies für Ihre App von Bedeutung ist.
@@ -97,6 +106,7 @@ Das Textfeld besitzt eine „Alles löschen”-Schaltfläche („X”), die ange
 Die „Alles löschen”-Schaltfläche wird nur für bearbeitbare, einzeilige Textfelder angezeigt, die Text enthalten und den Fokus besitzen.
 
 In den folgenden Fällen wird die „Alles löschen”-Schaltfläche nicht angezeigt:
+
 - **IsReadOnly** hat den Wert **true**.
 - **AcceptsReturn** hat den Wert **true**.
 - **TextWrap** hat einen anderen Wert als **NoWrap**.
@@ -111,10 +121,10 @@ Ein schreibgeschütztes Textfeld sieht genauso aus wie ein Textfeld zum Lesen/Sc
 Ein Benutzer kann Text auswählen und kopieren.
 IsEnabled
 
-
 ### <a name="enable-multi-line-input"></a>Aktivieren der mehrzeiligen Texteingabe
 
 Es gibt zwei Eigenschaften, mit denen Sie steuern können, ob das TextBox-Element Text auf mehr als einer Zeile anzeigt. Sie legen üblicherweise beide Eigenschaften fest, um ein mehrzeiliges Textfeld zu erzeugen.
+
 - Damit das Textfeld Zeilenwechsel- oder Zeilenumbruchzeichen zulässt und anzeigt, legen Sie die [AcceptsReturn](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.acceptsreturn.aspx)-Eigenschaft auf **true** fest.
 - Um Textumbrüche zu ermöglichen, legen Sie die [TextWrapping](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textwrapping.aspx)-Eigenschaft auf **Wrap** fest. Dies bewirkt, dass der Text umbrochen wird, sobald der Rand des Textfelds erreicht ist – unabhängig von Zeilentrennzeichen.
 
@@ -244,46 +254,45 @@ Weitere Informationen und Beispiele finden Sie unter [Verwenden des Eingabeumfan
 
 ## <a name="recommendations"></a>Empfehlungen
 
--   Verwenden Sie eine Beschriftung oder Platzhaltertext, wenn der Zweck des Textfelds nicht eindeutig ist. Eine Beschriftung ist sichtbar, unabhängig davon, ob das Texteingabefeld über einen Wert verfügt. Platzhaltertext wird im Texteingabefeld angezeigt und wird erst ausgeblendet, wenn der Benutzer einen Wert eingibt.
--   Verleihen Sie dem Textfeld eine entsprechende Breite für den Bereich der Werte, die eingegeben werden können. Die Wortlänge variiert zwischen den einzelnen Sprachen. Sie sollten also die Lokalisierung berücksichtigen, wenn Ihre App global verwendet werden soll.
--   Ein Texteingabefeld ist normalerweise einzeilig (`TextWrap = "NoWrap"`). Wenn Benutzer eine lange Zeichenfolge eingeben oder bearbeiten müssen, sollten Sie ein mehrzeiliges Texteingabefeld festlegen (`TextWrap = "Wrap"`).
--   Im Allgemeinen wird ein Texteingabefeld für bearbeitbaren Text verwendet. Sie können ein Texteingabefeld jedoch auch als schreibgeschützt festlegen, sodass der Feldinhalt gelesen, ausgewählt und kopiert, jedoch nicht bearbeitet werden kann.
--   Um eine unübersichtliche Darstellung in einer Ansicht zu vermeiden, können Sie festlegen, dass ein Teil der Texteingabefelder nur angezeigt wird, wenn ein entsprechendes Kontrollkästchen aktiviert wird. Sie können den Aktivierungszustand eines Texteingabefelds auch an ein Steuerelement binden, z.B. an ein Kontrollkästchen.
--   Legen Sie das gewünschte Verhalten eines Texteingabefelds fest, wenn dieses einen Wert enthält, und ein Benutzer auf das Feld tippt. Als Standardverhalten empfiehlt es sich, dass der Wert bearbeitet werden kann und nicht ersetzt wird. Der Einfügepunkt wird zwischen den Wörtern platziert, und es wird keine Auswahl getroffen. Wenn „Ersetzen“ der am häufigsten verwendete Anwendungsfall für ein bestimmtes Texteingabefeld ist, können Sie den gesamten Text im Feld auswählen, wenn das Steuerelement den Fokus erhält. Durch die Benutzereingabe wird die Auswahl entfernt.
+- Verwenden Sie eine Beschriftung oder Platzhaltertext, wenn der Zweck des Textfelds nicht eindeutig ist. Eine Beschriftung ist sichtbar, unabhängig davon, ob das Texteingabefeld über einen Wert verfügt. Platzhaltertext wird im Texteingabefeld angezeigt und wird erst ausgeblendet, wenn der Benutzer einen Wert eingibt.
+- Verleihen Sie dem Textfeld eine entsprechende Breite für den Bereich der Werte, die eingegeben werden können. Die Wortlänge variiert zwischen den einzelnen Sprachen. Sie sollten also die Lokalisierung berücksichtigen, wenn Ihre App global verwendet werden soll.
+- Ein Texteingabefeld ist normalerweise einzeilig (`TextWrap = "NoWrap"`). Wenn Benutzer eine lange Zeichenfolge eingeben oder bearbeiten müssen, sollten Sie ein mehrzeiliges Texteingabefeld festlegen (`TextWrap = "Wrap"`).
+- Im Allgemeinen wird ein Texteingabefeld für bearbeitbaren Text verwendet. Sie können ein Texteingabefeld jedoch auch als schreibgeschützt festlegen, sodass der Feldinhalt gelesen, ausgewählt und kopiert, jedoch nicht bearbeitet werden kann.
+- Um eine unübersichtliche Darstellung in einer Ansicht zu vermeiden, können Sie festlegen, dass ein Teil der Texteingabefelder nur angezeigt wird, wenn ein entsprechendes Kontrollkästchen aktiviert wird. Sie können den Aktivierungszustand eines Texteingabefelds auch an ein Steuerelement binden, z.B. an ein Kontrollkästchen.
+- Legen Sie das gewünschte Verhalten eines Texteingabefelds fest, wenn dieses einen Wert enthält, und ein Benutzer auf das Feld tippt. Als Standardverhalten empfiehlt es sich, dass der Wert bearbeitet werden kann und nicht ersetzt wird. Der Einfügepunkt wird zwischen den Wörtern platziert, und es wird keine Auswahl getroffen. Wenn „Ersetzen“ der am häufigsten verwendete Anwendungsfall für ein bestimmtes Texteingabefeld ist, können Sie den gesamten Text im Feld auswählen, wenn das Steuerelement den Fokus erhält. Durch die Benutzereingabe wird die Auswahl entfernt.
 
-**Einzeilige Eingabefelder**
+### <a name="single-line-input-boxes"></a>Einzeilige Eingabefelder
 
--   Verwenden Sie mehrere einzeilige Textfelder, um viele kleine Textinformationsteile zu erfassen. Wenn die Textfelder ähnliche Merkmale aufweisen, gruppieren Sie diese.
+- Verwenden Sie mehrere einzeilige Textfelder, um viele kleine Textinformationsteile zu erfassen. Wenn die Textfelder ähnliche Merkmale aufweisen, gruppieren Sie diese.
 
--   Legen Sie die Größe der einzeiligen Textfelder etwas breiter fest als die längste erwartete Eingabe. Dadurch wird das Steuerelement zu breit, und es wird in zwei Steuerelemente aufgeteilt. Beispielsweise können Sie eine einzelne Adresseingebe in „Adresszeile1” und „Adresszeile2” aufteilen.
--   Legen Sie eine maximale Länge für die Zeichen fest, die eingegeben werden können. Wenn die zugrunde liegende Datenquelle keine lange Eingabezeichenfolge zulässt, beschränken Sie die Eingabe, und verwenden Sie ein Popupfenster zur Bestätigung, um die Benutzer bei Erreichen der Beschränkung zu benachrichtigen.
--   Verwenden Sie einzeilige Texteingabesteuerelemente, um kleinere Textmengen der Benutzer zu erfassen.
+- Legen Sie die Größe der einzeiligen Textfelder etwas breiter fest als die längste erwartete Eingabe. Dadurch wird das Steuerelement zu breit, und es wird in zwei Steuerelemente aufgeteilt. Beispielsweise können Sie eine einzelne Adresseingebe in „Adresszeile1” und „Adresszeile2” aufteilen.
+- Legen Sie eine maximale Länge für die Zeichen fest, die eingegeben werden können. Wenn die zugrunde liegende Datenquelle keine lange Eingabezeichenfolge zulässt, beschränken Sie die Eingabe, und verwenden Sie ein Popupfenster zur Bestätigung, um die Benutzer bei Erreichen der Beschränkung zu benachrichtigen.
+- Verwenden Sie einzeilige Texteingabesteuerelemente, um kleinere Textmengen der Benutzer zu erfassen.
 
     Das folgende Beispiel zeigt ein einzeiliges Textfeld zur Erfassung der Antwort auf eine Sicherheitsfrage. Da eine kurze Antwort erwartet wird, ist an dieser Stelle ein einzeiliges Textfeld angemessen.
 
     ![Grundlegende Dateneingabe](images/guidelines_and_checklist_for_singleline_text_input_type_text.png)
 
--   Verwenden Sie eine Gruppe von kurzen einzeiligen Texteingabesteuerelementen fester Größe, um Daten mit einem bestimmten Format einzugeben.
+- Verwenden Sie eine Gruppe von kurzen einzeiligen Texteingabesteuerelementen fester Größe, um Daten mit einem bestimmten Format einzugeben.
 
     ![Formatierte Dateneingabe](images/textinput_example_productkey.png)
 
--   Verwenden Sie ein einzeiliges, nicht eingeschränktes Texteingabesteuerelement, um Zeichenfolgen einzugeben oder zu bearbeiten, in Kombination mit einer Befehlsschaltfläche, über die die Benutzer gültige Werte auswählen können.
+- Verwenden Sie ein einzeiliges, nicht eingeschränktes Texteingabesteuerelement, um Zeichenfolgen einzugeben oder zu bearbeiten, in Kombination mit einer Befehlsschaltfläche, über die die Benutzer gültige Werte auswählen können.
 
     ![Unterstützte Dateneingabe](images/textinput_example_assisted.png)
 
+### <a name="multi-line-text-input-controls"></a>Mehrzeilige Texteingabesteuerelemente
 
-**Mehrzeilige Texteingabesteuerelemente**
-
--   Wenn Sie ein Rich-Text-Feld erstellen, stellen Sie Stilschaltflächen bereit, und implementieren Sie die zugehörigen Aktionen.
--   Verwenden Sie eine Schriftart, die mit dem Stil der App konsistent ist.
--   Legen Sie die Höhe des Textsteuerelements so fest, dass genügend Platz für typische Einträge vorhanden ist.
--   Verwenden Sie für die Erfassung von langen Textabschnitten mit einer maximalen Zeichen- oder Wörteranzahl ein Nur-Text-Feld, und stellen Sie einen Live-Zähler bereit, der dem Benutzer anzeigt, wie viele Zeichen bzw. Wörter bis zum Erreichen der Grenze verbleiben. Den Zähler müssen Sie selbst erstellen. Platzieren Sie ihn unter dem Textfeld, und aktualisieren Sie ihn dynamisch, während der Benutzer die einzelnen Zeichen oder Wörter eingibt.
+- Wenn Sie ein Rich-Text-Feld erstellen, stellen Sie Stilschaltflächen bereit, und implementieren Sie die zugehörigen Aktionen.
+- Verwenden Sie eine Schriftart, die mit dem Stil der App konsistent ist.
+- Legen Sie die Höhe des Textsteuerelements so fest, dass genügend Platz für typische Einträge vorhanden ist.
+- Verwenden Sie für die Erfassung von langen Textabschnitten mit einer maximalen Zeichen- oder Wörteranzahl ein Nur-Text-Feld, und stellen Sie einen Live-Zähler bereit, der dem Benutzer anzeigt, wie viele Zeichen bzw. Wörter bis zum Erreichen der Grenze verbleiben. Den Zähler müssen Sie selbst erstellen. Platzieren Sie ihn unter dem Textfeld, und aktualisieren Sie ihn dynamisch, während der Benutzer die einzelnen Zeichen oder Wörter eingibt.
 
     ![Langer Textabschnitt](images/guidelines_and_checklist_for_multiline_text_input_text_limits.png)
 
--   Die Höhe der Texteingabesteuerelemente sollte sich während der Benutzereingabe nicht verändern.
--   Verwenden Sie kein mehrzeiliges Textfeld, wenn die Benutzer nur eine Zeile benötigen.
--   Verwenden Sie kein Rich-Text-Steuerelement, wenn ein Nur-Text-Steuerelement ausreicht.
+- Die Höhe der Texteingabesteuerelemente sollte sich während der Benutzereingabe nicht verändern.
+- Verwenden Sie kein mehrzeiliges Textfeld, wenn die Benutzer nur eine Zeile benötigen.
+- Verwenden Sie kein Rich-Text-Steuerelement, wenn ein Nur-Text-Steuerelement ausreicht.
 
 ## <a name="get-the-sample-code"></a>Beispielcode herunterladen
 
