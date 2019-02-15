@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f4e0b2a2370acd3571b48eecdf13e44cadc3879c
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: dd4b8c137d65339701b40027bb3230162e2c2456
+ms.sourcegitcommit: fde2d41ef4b5658785723359a8c4b856beae8f95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050473"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "9079208"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -158,12 +158,16 @@ int main()
 
 ## <a name="post-binary-data-over-http"></a>POST binären Daten über HTTP
 
-Die [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis) folgenden Codebeispiel wird veranschaulicht, senden eine kleine Menge von Binärdaten mit POST-Anforderung, mit der [HttpBufferContent](/uwp/api/windows.web.http.httpbuffercontent) -Klasse. Aufrufen von **Abrufen** (siehe Codebeispiel unten) ist für einen UI-Thread. Die korrekten Verfahren, das Sie in diesem Fall verwenden, finden Sie unter [Parallelität und asynchrone Vorgänge mit C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency).
+Die [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis) folgenden Codebeispiel wird veranschaulicht die Verwendung von Formulardaten und POST-Anforderung eine kleine Menge von Binärdaten als Dateiupload für einem Webserver zu senden. Der Code verwendet die [**HttpBufferContent**](/uwp/api/windows.web.http.httpbuffercontent) -Klasse zur Darstellung der binären Daten, und die [**HttpMultipartFormDataContent**](/uwp/api/windows.web.http.httpmultipartformdatacontent) -Klasse, um die Multipart Formulardaten darzustellen.
+
+> [!NOTE]
+> Aufrufen von **Abrufen** (siehe Codebeispiel unten) ist für einen UI-Thread. Die korrekten Verfahren, das Sie in diesem Fall verwenden, finden Sie unter [Parallelität und asynchrone Vorgänge mit C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency).
 
 ```cppwinrt
 // pch.h
 #pragma once
 #include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Security.Cryptography.h>
 #include <winrt/Windows.Storage.Streams.h>
 #include <winrt/Windows.Web.Http.Headers.h>
 
@@ -171,7 +175,6 @@ Die [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis) folgenden Codebeispiel wird v
 #include "pch.h"
 #include <iostream>
 #include <sstream>
-#include <winrt/Windows.Security.Cryptography.h>
 using namespace winrt;
 using namespace Windows::Foundation;
 using namespace Windows::Storage::Streams;
@@ -180,18 +183,31 @@ int main()
 {
     init_apartment();
 
-    // Create an HttpClient object.
     Windows::Web::Http::HttpClient httpClient;
 
-    Uri requestUri{ L"http://www.contoso.com/post" };
+    Uri requestUri{ L"https://www.contoso.com/post" };
+
+    Windows::Web::Http::HttpMultipartFormDataContent postContent;
+    Windows::Web::Http::Headers::HttpContentDispositionHeaderValue disposition{ L"form-data" };
+    postContent.Headers().ContentDisposition(disposition);
+    // The 'name' directive contains the name of the form field representing the data.
+    disposition.Name(L"fileForUpload");
+    // Here, the 'filename' directive is used to indicate to the server a file name
+    // to use to save the uploaded data.
+    disposition.FileName(L"file.dat");
 
     auto buffer{
-    Windows::Security::Cryptography::CryptographicBuffer::ConvertStringToBinary(
-        L"A sentence of text by way of sample data",
-        Windows::Security::Cryptography::BinaryStringEncoding::Utf8)
+        Windows::Security::Cryptography::CryptographicBuffer::ConvertStringToBinary(
+            L"A sentence of text to encode into binary to serve as sample data.",
+            Windows::Security::Cryptography::BinaryStringEncoding::Utf8
+        )
     };
-    Windows::Web::Http::HttpBufferContent postContent{ buffer };
-    postContent.Headers().Append(L"Content-Type", L"image/jpeg");
+    Windows::Web::Http::HttpBufferContent binaryContent{ buffer };
+    // You can use the 'image/jpeg' content type to represent any binary data;
+    // it's not necessarily an image file.
+    binaryContent.Headers().Append(L"Content-Type", L"image/jpeg");
+
+    postContent.Add(binaryContent); // Add the binary data content as a part of the form data content.
 
     // Send the POST request asynchronously, and retrieve the response as a string.
     Windows::Web::Http::HttpResponseMessage httpResponseMessage;
@@ -212,9 +228,9 @@ int main()
 }
 ```
 
-Um den Inhalt einer Binärdatei zu veröffentlichen, müssen Sie eine [HttpStreamContent](/uwp/api/windows.web.http.httpstreamcontent) -Objekts, mit einfacher. Erstellen Sie eine und als Argument an den Konstruktor übergibt, den von einem Aufruf von [StorageFile.OpenReadAsync](/uwp/api/windows.storage.storagefile.openreadasync)zurückgegebenen Wert. Diese Methode gibt einen Stream für die Daten innerhalb der Binärdatei.
+Um den Inhalt einer Binärdatei (statt die expliziten binären Daten, die oben verwendete) zu veröffentlichen, müssen Sie eine [HttpStreamContent](/uwp/api/windows.web.http.httpstreamcontent) -Objekts, mit einfacher. Erstellen Sie eine und als Argument an den Konstruktor übergibt, den von einem Aufruf von [StorageFile.OpenReadAsync](/uwp/api/windows.storage.storagefile.openreadasync)zurückgegebenen Wert. Diese Methode gibt einen Stream für die Daten innerhalb der Binärdatei.
 
-Auch, wenn Sie eine große Dateien (größer als ca. 10 MB) hochladen, empfohlen dann die Verwendung der Windows-Runtime APIs [Hintergrund zu übertragen](/uwp/api/windows.networking.backgroundtransfer) .
+Auch wenn Sie hochladen, dann wir, die empfehlen eine große Datei (größer als ca. 10 MB), verwenden Sie die Windows-Runtime- [Hintergrundübertragung](/uwp/api/windows.networking.backgroundtransfer) APIs.
 
 ## <a name="exceptions-in-windowswebhttp"></a>Ausnahmen in „Windows.Web.Http“
 
