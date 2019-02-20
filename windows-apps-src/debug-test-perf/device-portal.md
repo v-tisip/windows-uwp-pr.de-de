@@ -2,38 +2,38 @@
 ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
 title: Übersicht über das Windows Device Portal
 description: Hier erfahren Sie, wie Sie mit dem Windows Device Portal Ihr Gerät per Remotezugriff über ein Netzwerk oder eine USB-Verbindung konfigurieren und verwalten.
-ms.date: 12/12/2017
+ms.date: 2/19/2019
 ms.topic: article
 keywords: Windows 10, Uwp, geräteportal
 ms.localizationpriority: medium
-ms.openlocfilehash: 2bffdb31e9001bd0b2abe873780ef507c2073b46
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 372524b5a5f002e68c02a8f298703cb7ef99bfdf
+ms.sourcegitcommit: a32f656253acc1e8b150919e73c886a59e65756a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946698"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "9083718"
 ---
 # <a name="windows-device-portal-overview"></a>Übersicht über das Windows Device Portal
 
-Mit dem Windows Device Portal können Sie Ihr Gerät per Remotezugriff über ein Netzwerk oder eine USB-Verbindung konfigurieren und verwalten. Darüber hinaus erweiterte Diagnosetools Behebung von und die Leistung Ihrer Windows-Gerät in Echtzeit anzeigen.
+Mit dem Windows Device Portal können Sie Ihr Gerät per Remotezugriff über ein Netzwerk oder eine USB-Verbindung konfigurieren und verwalten. Zudem erweiterte Diagnosetools Behebung von und die Leistung Ihrer Windows-Gerät in Echtzeit anzeigen.
 
-Windows Device Portal ist ein Webserver auf Ihrem Gerät, das Sie über einen Webbrowser auf einem PC herstellen können. Wenn Ihr Gerät über einen Webbrowser verfügt, können Sie auch lokal mit dem Browser auf dem Gerät verbinden.
+Windows Device Portal ist ein Webserver auf Ihrem Gerät, das Sie über einen Webbrowser auf einem PC herstellen können. Wenn Ihr Gerät über einen Webbrowser verfügt, können Sie auch lokal mit dem Browser auf dem Gerät eine Verbindung herstellen.
 
-Windows Device Portal ist für jede Gerätefamilie verfügbar, aber die Features und die Einrichtung variieren je nach Anforderungen des Geräts. Dieser Artikel enthält eine allgemeine Beschreibung des Device Portals und Links zu Artikeln mit ausführlicheren Informationen für jede Gerätefamilie.
+Windows Device Portal ist für jede Gerätefamilie verfügbar, aber die Features und die Einrichtung variieren basierend auf jedem Gerät Anforderungen. Dieser Artikel enthält eine allgemeine Beschreibung des Device Portals und Links zu Artikeln mit ausführlicheren Informationen für jede Gerätefamilie.
 
-Die Funktionalität des Windows Device Portal wird mit [REST-APIs](device-portal-api-core.md) implementiert, die Sie direkt mit den Zugriff auf Daten und die programmatische Steuerung des Geräts verwenden können.
+Die Funktionalität des Windows Device Portal wird mit [REST-APIs](device-portal-api-core.md) implementiert, mit denen Sie direkt mit den Zugriff auf Daten und die programmatische Steuerung des Geräts.
 
 ## <a name="setup"></a>Setup
 
 Für jedes Gerät gelten spezielle Anweisungen zum Herstellen der Verbindung mit dem Device Portal, diese allgemeinen Schritte sind jedoch für jedes Gerät erforderlich:
 1. Aktivieren Sie den Entwicklermodus und Device Portal auf Ihrem Gerät (in den Einstellungen konfiguriert).
 2. Verbinden Sie das Gerät und den PC über ein lokales Netzwerk oder mit USB.
-3. Navigieren Sie im Browser zu der Seite für das Geräteportal. Diese Tabelle zeigt die Ports und Protokolle, die von jeder Gerätefamilie verwendet.
+3. Navigieren Sie im Browser zu der Seite für das Geräteportal. In der folgenden Tabelle sind die Ports und Protokolle, die von jeder Gerätefamilie verwendet.
 
 Gerätefamilie | Standardmäßig aktiviert? | HTTP | HTTPS | USB
 --------------|----------------|------|-------|----
 HoloLens | Ja, im Entwicklermodus | 80 (Standard) | 443 (Standard) | http://127.0.0.1:10080
-IoT | Ja, im Entwicklermodus | 8080 | Über Registrierungsschlüssel aktivieren | Nicht verfügbar
+IoT | Ja, im Entwicklermodus | 8080 | Über Registrierungsschlüssel aktivieren | n.v.
 Xbox | Im Entwicklermodus aktivieren | Deaktiviert | 11443 | Nicht verfügbar
 Desktop| Im Entwicklermodus aktivieren | 50080\* | 50043\* | Nicht verfügbar
 Telefon | Im Entwicklermodus aktivieren | 80| 443 | http://127.0.0.1:10080
@@ -52,54 +52,81 @@ Gerätespezifische Anweisungen zum Einrichten finden Sie in folgenden Artikeln:
 ### <a name="toolbar-and-navigation"></a>Symbolleiste und Navigation
 
 Die Symbolleiste am oberen Rand der Seite ermöglicht den Zugriff auf häufig verwendete Funktionen.
-- **Power**: Energieoptionen zugreifen.
+- **Power**: Zugriff auf ein/aus-Optionen.
   - **Herunterfahren**: Schaltet das Gerät aus.
   - **Neu starten**: Schaltet das Gerät aus und wieder ein.
 - **Hilfe**: Öffnet die Hilfeseite.
 
 Verwenden Sie die Links im Navigationsbereich am linken Rand der Seite, um zu den verfügbaren Verwaltungs- und Überwachungstools für Ihr Gerät zu navigieren.
 
-Tools, die für alle gerätefamilien verwendet werden, werden hier beschrieben. Je nach Gerät sind möglicherweise andere Optionen verfügbar. Weitere Informationen finden Sie unter der entsprechenden Seite für die Art des Geräts.
+Tools, die für alle gerätefamilien verwendet werden, werden hier beschrieben. Je nach Gerät sind möglicherweise andere Optionen verfügbar. Weitere Informationen finden Sie unter der entsprechenden Seite für den Typ Ihres Geräts.
 
 ### <a name="apps-manager"></a>App-Manager
 
-Die Apps-Manager bietet Installations-/Deinstallations- und Verwaltungsfunktionen für app-Pakete und gebündelt, auf dem Hostgerät.
+Der Apps-Manager bietet Installations-/Deinstallations- und Verwaltungsfunktionen für app-Pakete und gebündelt, auf dem Hostgerät.
 
-![Device Portal Apps-Manager-Seite](images/device-portal/wdp-apps.png)
+![Seite "Device Portal Apps-Manager"](images/device-portal/WDP_AppsManager2.png)
 
-- **Installierte apps**: Verwenden Sie im Dropdown-Menü zu entfernen, oder Starten von apps, die auf dem Gerät installiert sind. Installieren Sie eine neue app, indem Sie auf **Hinzufügen**. Dies initiiert die Installation UX verpackten apps aus dem lokalen Bereitstellung, Netzwerk oder Web hostet, und registrieren lose Dateien von Netzwerkfreigaben.
-- **Ausführen von apps**: Abrufen von Informationen über die apps, die derzeit ausgeführt werden, und schließen sie nach Bedarf.
+* **Bereitstellen von apps**: Bereitstellen von verpackten apps aus lokalen Netzwerk oder web-Hosts und registrieren lose Dateien aus Netzwerkfreigaben.
+* **Installierte apps**: Verwenden Sie im Dropdown-Menü zu entfernen, oder Starten von apps, die auf dem Gerät installiert sind.
+* **Ausführen von apps**: Abrufen von Informationen über die apps, die derzeit ausgeführt werden, und schließen Sie sie nach Bedarf.
 
-#### <a name="install-an-app"></a>Installieren einer App
+#### <a name="install-sideload-an-app"></a>Installieren Sie (querladen) einer app
+
+Sie können querladen von apps während der Entwicklung mit Windows Device Portal:
 
 1.  Wenn Sie ein App-Paket erstellt haben, können Sie es per Remotezugriff auf Ihrem Gerät installieren. Nachdem Sie es in Visual Studio erstellt haben, wird ein Ausgabeordner generiert.
+
   ![App-Installation](images/device-portal/iot-installapp0.png)
-2.  Klicken Sie im Abschnitt für das Device Portal Apps-Manager klicken Sie auf **Hinzufügen** , und wählen Sie **aus dem lokalen Speicher-app-Paket installieren**.
-3.  Klicken Sie auf **Durchsuchen** , und suchen Sie das app-Paket.
-3.  Klicken Sie auf **Durchsuchen** und suchen Sie die Zertifikatdatei (_CER_) (nicht auf allen Geräten erforderlich.)
-4.  Überprüfen Sie die entsprechenden Felder, wenn Sie das optionale installieren möchten oder frameworkpakete zusammen mit der app-Installation. Wenn mehrere vorhanden sind, fügen Sie jede einzeln hinzu.     
-5.  Klicken Sie auf **Weiter** um auf den nächsten Schritt und **Installieren** zu verschieben, um die Installation zu initiieren. 
+
+2. Navigieren Sie im Windows Device Portal auf der Seite " **App-Manager** ".
+
+3. Wählen Sie im Abschnitt **Bereitstellen apps** **Lokalen Speicher**.
+
+4. Wählen Sie unter, **Wählen Sie das Anwendungspaket**die **Datei auswählen** , und suchen Sie das app-Paket, das Sie querladen möchten.
+
+5. Wählen Sie unter, **Wählen Sie die Zertifikatdatei (CER) verwendet, um app-Paket zu signieren**die **Datei auswählen** , und suchen Sie das Zertifikat, das app-Paket zugeordnet.
+
+6. Überprüfen Sie die entsprechenden Felder, wenn Sie das optionale installieren möchten oder frameworkpakete zusammen mit der app-Installation, und wählen Sie **Weiter** um sie auszuwählen.
+
+7. Wählen Sie **Installieren** , um die Installation zu initiieren.
+
+8. Wenn das Gerät Windows 10 im S Modus ausgeführt wird, und es ist das erste Mal, die das Zertifikat auf dem Gerät installiert wurde, starten Sie das Gerät neu.
+
+#### <a name="install-a-certificate"></a>Installieren eines Zertifikats
+
+Alternativ können Sie installieren Sie das Zertifikat über Windows Device Portal, und installieren Sie die app auf andere Weise:
+
+1. Navigieren Sie im Windows Device Portal auf der Seite " **App-Manager** ".
+
+2. Wählen Sie im Abschnitt **Bereitstellen apps** **Zertifikat installieren**.
+
+3. Wählen Sie unter, **Wählen Sie die Zertifikatdatei (CER) verwendet, um ein app-Paket zu signieren**die **Datei auswählen** , und suchen Sie das Zertifikat für das app-Paket, das Sie querladen möchten.
+
+4. Wählen Sie **Installieren** , um die Installation zu initiieren.
+
+5. Wenn das Gerät Windows 10 im S Modus ausgeführt wird, und es ist das erste Mal, die das Zertifikat auf dem Gerät installiert wurde, starten Sie das Gerät neu.
 
 #### <a name="uninstall-an-app"></a>Deinstallieren einer App
 1.  Stellen Sie sicher, dass die App nicht ausgeführt wird. 
-2.  Wenn dies der Fall, wechseln Sie zum **Ausführen von apps** , und schließen Sie es. Wenn Sie versuchen, deinstallieren, während die app ausgeführt wird, verursacht dies Probleme, wenn Sie versuchen, die app neu zu installieren. 
+2.  Wenn dies der Fall, wechseln Sie zum **Ausführen von apps** , und schließen sie. Wenn Sie versuchen, deinstallieren, während die app ausgeführt wird, verursacht dies Probleme, wenn Sie versuchen, die app zu installieren. 
 3.  Wählen Sie die app aus der Dropdownliste aus, und klicken Sie auf **Entfernen**.
 
 ### <a name="running-processes"></a>Laufende Prozesse
 
-Diese Seite enthält Informationen zu auf dem Hostgerät derzeit ausgeführten Prozesse. Diese umfassen Apps und Systemprozesse. Auf manchen Plattformen (Desktop, IoT und HoloLens) können Sie Prozesse beenden.
+Diese Seite zeigt im Detail auf dem Hostgerät derzeit ausgeführten Prozesse. Diese umfassen Apps und Systemprozesse. Auf manchen Plattformen (Desktop, IoT und HoloLens) können Sie Prozesse beenden.
 
 ![Device Portal ausgeführt verarbeitet Seite](images/device-portal/mob-device-portal-processes.png)
 
 ### <a name="file-explorer"></a>Datei-Explorer
 
-Auf dieser Seite können Sie anzeigen und Bearbeiten von Dateien, die alle quergeladenen apps gespeichert wurden. Finden Sie die [Verwendung von App-Datei-Explorer](https://blogs.windows.com/buildingapps/2016/06/08/using-the-app-file-explorer-to-see-your-app-data/) Blogbeitrag Weitere Informationen zu den Datei-Explorer und wie sie zu verwenden. 
+Auf dieser Seite können Sie anzeigen und Bearbeiten von Dateien, die von allen quergeladenen apps gespeichert. Finden Sie die [die App Datei-Explorer](https://blogs.windows.com/buildingapps/2016/06/08/using-the-app-file-explorer-to-see-your-app-data/) Blogbeitrag Weitere Informationen zu den Datei-Explorer und wie sie zu verwenden. 
 
 ![Device Portal-Datei-Explorer-Seite](images/device-portal/mob-device-portal-AppFileExplorer.png)
 
 ### <a name="performance"></a>Leistung
 
-Die Seite "Performance" zeigt echtzeitgraphen mit Informationen zur Systemdiagnose z. B. Stromverbrauch, Bildfrequenz und CPU laden.
+Die Seite "Performance" zeigt echtzeitgraphen mit Informationen zur Systemdiagnose z. B. Stromverbrauch, Bildfrequenz an, und Laden Sie die CPU.
 
 Die folgenden Metriken sind verfügbar:
 - **CPU**: Prozent des gesamten verfügbaren CPU-Auslastung
@@ -109,13 +136,13 @@ Die folgenden Metriken sind verfügbar:
 - **GPU**: engine Prozent des gesamten verfügbaren GPU-Nutzung
 
 
-![Device Portal-Leistung Seite](images/device-portal/mob-device-portal-perf.png)
+![Seite "Device Portal-Leistung"](images/device-portal/mob-device-portal-perf.png)
 
 ### <a name="event-tracing-for-windows-etw-logging"></a>Event Tracing for Windows (ETW)-Protokollierung
 
-Die ETW-Protokollierung Seite verwaltet die Echtzeit Event Tracing for Windows (ETW) Informationen auf dem Gerät.
+Die ETW-Protokollierung Seite verwaltet Event Tracing for Windows (ETW) Echtzeitinformationen auf dem Gerät.
 
-![Device Portal ETW-Protokollierung Seite](images/device-portal/mob-device-portal-etw.png)
+![Seite des Geräte-Portal ETW-Protokollierung](images/device-portal/mob-device-portal-etw.png)
 
 Aktivieren Sie **Anbieter ausblenden**, um nur die Liste der Ereignisse anzuzeigen.
 - **Registrierte Anbieter**: Wählen Sie die Ereignisanbieter und die Ablaufverfolgungsebene aus. Die Ablaufverfolgungsebene aus ist einer der folgenden Werte:
@@ -129,22 +156,22 @@ Aktivieren Sie **Anbieter ausblenden**, um nur die Liste der Ereignisse anzuzeig
 - **Benutzerdefinierte Anbieter**: Wählen Sie einen benutzerdefinierten ETW-Anbieter und die Ablaufverfolgungsebene aus. Identifizieren Sie den Anbieter anhand seiner GUID. Schließen Sie keine Klammern in die GUID.
 - **Aktiviert Anbieter**: Dies Listet die aktivierten Anbieter. Wählen Sie einen Anbieter aus der Dropdownliste aus, und klicken oder tippen Sie auf **Deaktivieren**, um die Ablaufverfolgung zu beenden. Klicken oder tippen Sie auf **Beenden**, um sämtliche Ablaufverfolgung anzuhalten.
 - **Anbieterverlauf**: Zeigt die ETW-Anbieter, die während der aktuellen Sitzung aktiviert wurden. Klicken oder tippen Sie auf **Aktivieren**, um einen Anbieter zu aktivieren, der deaktiviert war. Klicken oder tippen Sie auf **Löschen**, um den Verlauf zu löschen.
-- **Filter / Ereignisse**: Abschnitt **Ereignisse** listet ETW-Ereignisse der ausgewählten Anbieter in Tabellenform. Die Tabelle wird in Echtzeit aktualisiert. Verwenden Sie das Menü " **Filter** ", um Einrichten benutzerdefinierter Filter für die Ereignisse angezeigt werden sollen. Klicken Sie auf die Schaltfläche " **Löschen** ", um alle ETW-Ereignisse aus der Tabelle zu löschen. Hierdurch werden keine Anbieter deaktiviert. Klicken Sie auf **in Datei speichern** , um die derzeit erfassten ETW-Ereignisse in eine lokale CSV-Datei zu exportieren.
+- **Filter / Ereignisse**: Abschnitt **Ereignisse** listet ETW-Ereignisse der ausgewählten Anbieter in Tabellenform. Die Tabelle wird in Echtzeit aktualisiert. Verwenden Sie das Menü " **Filter** ", um benutzerdefinierte Filter einzurichten für die Ereignisse angezeigt werden sollen. Klicken Sie auf die Schaltfläche " **Löschen** ", um alle ETW-Ereignisse aus der Tabelle zu löschen. Hierdurch werden keine Anbieter deaktiviert. Klicken Sie auf **in Datei speichern** , um die derzeit erfassten ETW-Ereignisse in eine lokale CSV-Datei zu exportieren.
 
 Weitere Informationen zur Verwendung von ETW-Protokollierung finden Sie unter im Blogbeitrag [Verwenden Device Portal Debugprotokolle anzeigen](https://blogs.windows.com/buildingapps/2016/06/10/using-device-portal-to-view-debug-logs-for-uwp/) . 
 
 ### <a name="performance-tracing"></a>Leistungsüberwachung
 
-Die Leistung Tracing Seite können Sie für die Ansicht die Spuren [Windows Performance Recorder (WPR)](https://msdn.microsoft.com/library/hh448205.aspx) aus dem Hostgerät.
+Die Seite "Performance Tracing" können Sie für Ansicht die Spuren [Windows Performance Recorder (WPR)](https://msdn.microsoft.com/library/hh448205.aspx) aus dem Hostgerät.
 
-![Device Portal Leistung Tracing-Seite](images/device-portal/mob-device-portal-perf-tracing.png)
+![Device Portal Seite "Performance Tracing"](images/device-portal/mob-device-portal-perf-tracing.png)
 
 - **Verfügbare Profile**: Wählen Sie in der Dropdownliste das WPR-Profil aus, und klicken oder tippen Sie auf **Starten**, um die Ablaufverfolgung zu starten.
 - **Benutzerdefinierte Profile**: Klicken oder tippen Sie auf **Durchsuchen**, um ein WPR-Profil vom PC auszuwählen. Klicken oder tippen Sie auf **Hochladen und starten**, um die Ablaufverfolgung zu starten.
 
-Klicken Sie auf **Beenden**, um die Ablaufverfolgung zu beenden. Auf dieser Seite bleiben, bis die Datei (. ETL) heruntergeladen hat.
+Klicken Sie auf **Beenden**, um die Ablaufverfolgung zu beenden. Auf dieser Seite bleiben, bis der Ablaufverfolgungsdatei (. ETL) heruntergeladen wurde.
 
-Erfasst. ETL-Dateien können für die in der [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/desktop/hh448170.aspx)Analyse geöffnet werden.
+Erfasst. ETL-Dateien können für die Analyse im [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/desktop/hh448170.aspx)geöffnet werden.
 
 ### <a name="device-manager"></a>Geräte-Manager
 
@@ -154,8 +181,8 @@ Die Geräte-Manager-Seite listet alle Peripheriegeräte, die an das Gerät anges
 
 ### <a name="networking"></a>Networking
 
-Die Seite "Netzwerk" verwaltet die Netzwerkverbindungen auf dem Gerät. Es sei denn, Sie Device Portal über USB verbunden sind, wird das Ändern dieser Einstellungen wahrscheinlich Sie Device Portal trennen.
-- **Verfügbare Netzwerke**: Zeigt die auf dem Gerät verfügbaren WLAN-Netzwerke. Durch Klicken oder Tippen auf ein Netzwerk können Sie eine Verbindung mit ihm herstellen und ggf. ein Kennwort eingeben. Das Geräteportal unterstützt noch keine Unternehmensauthentifizierung. Die Dropdownliste **Profile** können auch versuchen, auf die WLAN-Profile bekannt, dass das Gerät eine Verbindung herstellen.
+Der Seite "Netzwerk" verwaltet die Netzwerkverbindungen auf dem Gerät. Es sei denn, Sie Device Portal über USB verbunden sind, wird das Ändern dieser Einstellungen wahrscheinlich Sie Device Portal trennen.
+- **Verfügbare Netzwerke**: Zeigt die auf dem Gerät verfügbaren WLAN-Netzwerke. Durch Klicken oder Tippen auf ein Netzwerk können Sie eine Verbindung mit ihm herstellen und ggf. ein Kennwort eingeben. Geräteportal unterstützt noch keine Unternehmensauthentifizierung. Sie können auch die Dropdownliste **Profile** verwenden, versucht, auf die WLAN-Profile bekannt, dass das Gerät eine Verbindung herstellen.
 - **IP-Konfiguration**: Zeigt Adressinformationen zu den einzelnen des Hosts des Geräts Netzwerk-Ports.
 
 ![Device Portal Networking-Seite](images/device-portal/mob-device-portal-network.png)
