@@ -5,12 +5,12 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a8f217322d6d10b91ebc82c3434c88e9d11128f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c94d27e87853b570268e3a39fe941c817b3eda6a
+ms.sourcegitcommit: eaee5a45d5eace64c69e67691e5330b466cc74c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930167"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "9083259"
 ---
 # <a name="getting-started-with-uwp-app-development-on-xbox-one"></a>Erste Schritte bei der Entwicklung von UWP-Apps auf Xbox One
 
@@ -31,15 +31,15 @@ Bevor Sie beginnen, müssen Sie die folgenden Schritte ausführen:
 
 1.  Installieren Sie Visual Studio 2015 Update 3 oder Visual Studio 2017.
 
-    Wenn Sie Visual Studio 2015 Update 3 installieren, stellen Sie sicher, dass Sie **benutzerdefinierte** Installation auswählen und aktivieren Sie das Kontrollkästchen für die **Universelle Windows-App-Entwicklungstools** – es nicht Teil der Standardinstallation ist. Achten Sie als C++-Entwickler darauf, **Benutzerdefinierte Installation** auszuwählen. Wählen Sie **C++** aus.
+    Wenn Sie Visual Studio 2015 Update 3 installieren, stellen Sie sicher, dass Sie **benutzerdefinierte** Installation auswählen, und aktivieren Sie das Kontrollkästchen **Entwicklungstools für universelle Windows App** – es nicht Teil der Standardinstallation ist. Achten Sie als C++-Entwickler darauf, **Benutzerdefinierte Installation** auszuwählen. Wählen Sie **C++** aus.
 
-    Wenn Sie Visual Studio2017 erneut installieren, stellen Sie sicher, dass Sie die Arbeitsauslastung **Entwicklung für die universelle Windows-Plattform** auswählen. Wenn Sie C++-Entwickler im Bereich " **Zusammenfassung** " auf der rechten Seite sind in der **Entwicklung von universellen Windows-Plattform**, stellen Sie sicher, dass Sie das Kontrollkästchen für die **universelle Windows-Plattform C++-Tools** aktivieren. Es ist nicht Teil der Standardinstallation.
+    Wenn Sie Visual Studio2017 erneut installieren, stellen Sie sicher, dass Sie die Arbeitsauslastung **Entwicklung für die universelle Windows-Plattform** auswählen. Wenn Sie C++-Entwickler im Bereich " **Zusammenfassung** " auf der rechten Seite sind in der **Entwicklung von universellen Windows-Plattform**, stellen Sie sicher, dass Sie die Kontrollkästchen für die **universelle Windows-Plattform C++-Tools** . Es ist nicht Teil der Standardinstallation.
 
     Weitere Informationen finden Sie unter [der UWP auf Xbox-Entwicklungsumgebung einrichten](development-environment-setup.md).
 
 2.  Installieren Sie das neueste [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk).
 
-3.  Aktivieren des Entwicklermodus für Ihren Entwicklungs-PC (**Einstellungen / Update und Sicherheit / für Entwickler bzw. Entwicklerfeatures / Entwicklermodus**).
+3.  Aktivieren Sie den Entwicklermodus für Ihren Entwicklungs-PC (**Einstellungen / Update & Sicherheit / für Entwickler bzw. Entwicklerfeatures / Entwicklermodus**).
 
 Nachdem Ihr Entwicklungs-PC nun bereit ist, können Sie sich dieses Video ansehen oder weiterlesen, um zu erfahren, wie Sie Ihre Xbox One für die Entwicklung einrichten und darauf eine UWP-App erstellen und bereitstellen.
 </br>
@@ -48,9 +48,9 @@ Nachdem Ihr Entwicklungs-PC nun bereit ist, können Sie sich dieses Video ansehe
 
 ## <a name="setting-up-your-xbox-one-console"></a>Einrichten Ihrer Xbox One-Konsole
 
-1.  Aktivieren Sie den Entwicklermodus auf der Xbox One. Herunterladen Sie die app, erhalten Sie den Aktivierungscode, und geben sie dann auf der Seite [Verwalten von Xbox One-Konsolen](https://partner.microsoft.com/xboxactivate) im Partner Center-Konto. Weitere Informationen finden Sie unter [Aktivierung des Xbox One-Entwicklermodus](devkit-activation.md). 
+1.  Aktivieren Sie den Entwicklermodus auf der Xbox One. Herunterladen Sie die app, erhalten Sie den Aktivierungscode, und geben sie dann in der Seite " **Verwalten von Xbox One-Konsolen** " in Ihrem Partner Center-app-Entwicklerkonto an. Weitere Informationen finden Sie unter [Aktivierung des Xbox One-Entwicklermodus](devkit-activation.md). 
 
-2.  Öffnen Sie die **DEVMODE-Aktivierungs** -app, und wählen Sie **wechseln und neu starten**. Herzlichen Glückwunsch! Ihre Xbox One befindet sich nun im Entwicklermodus.
+2.  Öffnen Sie die **DEVMODE-Aktivierungs** -app zu, und wählen Sie **wechseln und neu starten**. Herzlichen Glückwunsch! Ihre Xbox One befindet sich nun im Entwicklermodus.
   
   > [!NOTE]
   > Ihre Einzelhandelsspiele und -Apps werden im Entwicklermodus nicht ausgeführt, die von Ihnen erstellten Apps oder Spiele werden jedoch ausgeführt. Wechseln Sie zurück in den Einzelhandelsmodus, um Ihre Lieblingsspiele und -Apps auszuführen.
@@ -60,19 +60,19 @@ Nachdem Ihr Entwicklungs-PC nun bereit ist, können Sie sich dieses Video ansehe
 
 ## <a name="creating-your-first-project-in-visual-studio"></a>Erstellen Ihres ersten Projekts in Visual Studio
 
-Ausführlichere Informationen finden Sie in der [Einrichten Ihrer UWP-Entwicklungsumgebung auf Xbox](development-environment-setup.md).
+Ausführlichere Informationen finden Sie unter [der UWP auf Xbox-Entwicklungsumgebung einrichten](development-environment-setup.md).
 
-1.  **Für c#**: Erstellen eines neuen universellen Windows-Projekts, und klicken Sie im **Projektmappen-Explorer**mit der Maustaste des Projekts, und wählen Sie **Eigenschaften**. Wählen Sie die Registerkarte " **Debuggen** ", ändern Sie **Zielgerät** auf **Remotecomputer**zu, geben Sie die IP-Adresse oder den Hostnamen der Xbox One-Konsole in das Feld **Remotecomputer** und wählen Sie in der ** **universell (unverschlüsseltes Protokoll)** Authentifizierungsmodus** Dropdown-Liste.   
+1.  **Für c#**: Erstellen eines neuen universellen Windows-Projekts, und klicken Sie im **Projektmappen-Explorer**mit der Maustaste des Projekts, und wählen Sie **Eigenschaften**. Wählen Sie die Registerkarte " **Debuggen** ", ändern Sie **Zielgerät** auf **Remotecomputer**, geben Sie die IP-Adresse oder den Hostnamen der Xbox One-Konsole in das Feld **Remotecomputer** und wählen Sie in der ** **universell (unverschlüsseltes Protokoll)** Authentifizierungsmodus** Dropdown-Liste.   
 
     Die IP-Adresse Ihrer Xbox One finden Sie, indem Sie Dev Home auf der Konsole starten (die große Kachel auf der rechten Seite der Startseite) und in der oberen linken Ecke suchen. Weitere Informationen zu Dev Home finden Sie unter [Einführung in Xbox One-Tools](introduction-to-xbox-tools.md).  
 
-2.  **Für C++ und HTML/Javascript-Projekte**: Sie folgen einen ähnlichen Pfad C#-Projekten, aber in den Projekteigenschaften wechseln Sie auf der Registerkarte " **Debuggen** ", und wählen Sie in den Debugger so öffnen Sie die Dropdown-Liste, geben Sie die IP-Adresse oder den Hostnamen der **Remotecomputer** die die Konsole in den **Computernamen ein** Feld und wählen **universell (unverschlüsseltes Protokoll)** in das Feld **Art der Authentifizierung** .
+2.  **Für C++ und HTML/Javascript-Projekte**: Sie folgen einen ähnlichen Pfad zu C#-Projekten, aber in den Projekteigenschaften wechseln Sie auf der Registerkarte " **Debuggen** ", und wählen Sie in den Debugger so öffnen Sie die Dropdown-Liste, geben Sie die IP-Adresse oder den Hostnamen der **Remotecomputer** die die Konsole in das Namensfeld **Computer** , und wählen **universell (unverschlüsseltes Protokoll)** im Feld **Authentifizierungstyp** .
 
-3. Wählen Sie links neben die grüne Wiedergabeschaltfläche in der oberen Menüleiste **X64** aus.
+3. Wählen Sie auf der linken Seite der die grüne Wiedergabeschaltfläche in der oberen Menüleiste **X64** aus.
    
 4.  Wenn Sie F5 drücken, wird Ihre App erstellt, und die Bereitstellung auf der Xbox One wird gestartet.
   
-5.  Wenn Sie diesen Vorgang zum ersten Mal durchführen, fordert Visual Studio Sie zur Eingabe einer PIN für Ihre Xbox One auf. Sie erhalten eine PIN von Dev Home auf Ihrer Xbox One starten und die **Visual Studio-Pin anzeigen** Schaltfläche auswählen.
+5.  Wenn Sie diesen Vorgang zum ersten Mal durchführen, fordert Visual Studio Sie zur Eingabe einer PIN für Ihre Xbox One auf. Sie erhalten eine PIN von Dev Home auf Ihrer Xbox One starten und die Schaltfläche " **Visual Studio-Pin anzeigen** " auswählen.
   
 6.  Nach der Kopplung wird die Bereitstellung der App gestartet. Beim ersten Mal kann diese Bereitstellung ein wenig langsam sein (da alle Tools auf Ihre Xbox kopiert werden müssen). Wenn dieser Vorgang jedoch länger als wenige Minuten dauert, ist wahrscheinlich ein Problem aufgetreten. Stellen Sie sicher, dass Sie alle oben genannten Schritte ausgeführt haben – haben Sie den **Authentifizierungsmodus** auf **Universell** festgelegt? Vergewissern Sie sich außerdem, dass Sie eine drahtgebundene Netzwerkverbindung mit der Xbox One verwenden.  
 
