@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
-ms.openlocfilehash: e6d36c368672675f503359735de8717df1be8b57
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: dbd2c6c9f5e3cf2200f9b260687f05718178868a
+ms.sourcegitcommit: 4dd9f76bd7f0ebdb42d78eab472d33a979dce60d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050653"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "9082883"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>Erstellen eines UWP-Spiels in MonoGame-2D
 
@@ -67,6 +67,7 @@ Nachdem Sie das Projekt erstellt haben, öffnen Sie die **Game1.cs**-Datei aus d
 **protected override void UnloadContent()** – Mit dieser Methode wird Inhalt entfernt, der nicht aus dem Inhalts-Manager stammt. Diese Methode wird hier nicht verwendet.
 
 **Protected Override void Update (GameTime GameTime)** Diese Methode wird einmal bei jedem Zyklus der spielschleife aufgerufen. Hier wird der Status der im Spiel verwendeten Objekte oder Variablen aktualisiert. Dies betrifft auch Position, Geschwindigkeit oder Farbe eines Objekts. Dies ist auch hier Benutzereingaben behandelt. Kurz gesagt, behandelt diese Methode alle Teile der Spiellogik mit Ausnahme des Zeichnens von Objekten auf den Bildschirm.
+
 **protected override void Draw(GameTime gameTime)** – Hier werden Objekte auf den Bildschirm gezeichnet. Dabei wird die Position verwendet, die von der Update-Methode angegeben wurde.
 
 ## <a name="draw-a-sprite"></a>Zeichnen eines Sprite
@@ -254,7 +255,7 @@ Die **Update** SpriteClass-Methode wird in der **Update**-Methode von Game1.cs a
 Die **Draw** -Methode wird in der **Draw**-Methode von Game1.cs aufgerufen. Mit ihr wird das Sprite im Fenster des Spiels gezeichnet.
 
 ## <a name="user-input-and-animation"></a>Benutzereingaben und Animation
-Wir haben die SpriteClass erstellt und nutzen diese nun, um zwei neue Spielobjekte zu erstellen: zunächst einen Avatar, den der Spieler mit den Pfeiltasten und der LEERTASTE steuern kann. Das zweite Objekt ist ein Hindernis, dem der Spieler ausweichen muss.
+Wir haben die SpriteClass erstellt und nutzen diese nun, um zwei neue Spielobjekte zu erstellen: zunächst einen Avatar, den der Spieler mit den Pfeiltasten und der LEERTASTE steuern kann. Die zweite ist ein Objekt, das der Spieler ausweichen muss.
 
 ### <a name="1-get-the-textures"></a>1. Herunterladen von Texturen
 Für den Avatar des Spielers verwenden wir die Ninja-Katze von Microsoft, die auf einem riesigen Tyrannosaurus Rex reitet. [Klicken Sie hier, um das Bild herunterzuladen](https://github.com/Microsoft/Windows-appsample-get-started-mg2d/blob/master/MonoGame2D/Content/ninja-cat-dino.png).
@@ -565,7 +566,7 @@ if (!gameStarted)
 
 Zunächst erstellen wir zwei Zeichenfolgen, eine für jede zu zeichnende Textzeile. Als Nächstes messen wird die Breite und Höhe jeder Zeile beim Drucken mit der **SpriteFont.MeasureString(String)**-Methode. Dadurch können wir die Größe als **Vector2**-Objekt mit der **X**-Eigenschaft für die Breite und der **Y**-Eigenschaft für die Höhe angeben.
 
-Zuletzt zeichnen wir die einzelnen Zeilen. Wenn Sie den Text horizontal zentrieren möchten, legen Sie den **X**-Wert des Positionsvektors auf den gleichen Wert wie **screenWidth / 2 - textSize.X / 2** fest.
+Zuletzt zeichnen wir die einzelnen Zeilen. Wenn Sie den Text Horizontal zentrieren möchten, stellen wir den **X** -Wert des positionsvektors gleich **ScreenWidth / 2 - textSize.X / 2**.
 
 **Aufgabe:** Was müssen Sie tun, damit der obige Text vertikal und horizontal zentriert wird?
 
@@ -576,7 +577,12 @@ Starten Sie das Spiel. Sehen Sie den Begrüßungsbildschirm? Wird die Punktezahl
 ## <a name="collision-detection"></a>Erkennung von Kollisionen
 Nun haben wir einen Brokkoli, der den Spieler verfolgt. Außerdem gibt es eine Punktzahl, die sich immer dann erhöht, wenn der Spieler ausweicht. Aber im Moment gibt es noch keinen Weg, das Spiel auch zu verlieren. Wir müssen wissen, ob das Dino-Sprite und das Brokkoli-Sprite kollidieren, und falls sie dies tun, muss das Spiel als beendet erklärt werden.
 
-### <a name="1-rectangular-collision"></a>1. Rechteckige Kollision
+### <a name="1-get-the-textures"></a>1. Herunterladen von Texturen
+Das letzte Bild, die wir benötigen, ist eine für "game Over". [Klicken Sie hier, um das Bild herunterzuladen](https://github.com/Microsoft/Windows-appsample-get-started-mg2d/blob/master/MonoGame2D/Content/game-over.png).
+
+Genauso wie fügen vor dem mit dem grünen Rechteck Ninja-Katze und das brokkoli-Bilder, Sie dieses Bilds hinzu **Content.mgcb** über die **MonoGame-Pipeline**, benennen sie "Spiel-over.png".
+
+### <a name="2-rectangular-collision"></a>2. rechteckige Kollision
 Beim Erkennen von Kollisionen in einem Spiel werden Objekte oft vereinfacht, damit die nötigen Berechnungen nicht allzu kompliziert werden. Wir behandeln sowohl den Avatar des Spielers als auch das Brokkoli-Hindernis als Rechtecke, um eine Kollision dieser Objekte erkennen zu können.
 
 Öffnen Sie **SpriteClass.cs**, und fügen Sie eine neue Klassenvariable hinzu:
@@ -602,7 +608,7 @@ public bool RectangleCollision(SpriteClass otherSprite)
 
 Diese Methode bestimmt, ob zwei rechteckige Objekte kollidiert sind. Der Algorithmus funktioniert, indem Sie testen, um festzustellen, ob eine Lücke zwischen den Seiten der Rechtecke vorhanden ist. Wenn es eine Lücke gibt, ist keine Kollision erfolgt – wenn keine Lücke vorhanden ist, muss eine Kollision vorliegen.
 
-### <a name="2-load-new-textures"></a>2. Laden neuer Texturen
+### <a name="3-load-new-textures"></a>3. Laden Sie neuer Texturen
 
 Öffnen Sie dann **Game1.cs**, und fügen Sie zwei neue Klassenvariablen hinzu: eine zum Speichern der Sprite-Textur für das Spielende und einen booleschen Wert, mit dem Zustand des Spiels überwacht wird:
 
@@ -623,7 +629,7 @@ Laden Sie schließlich die Textur in der **LoadContent**-Methode in **gameOverTe
 gameOverTexture = Content.Load<Texture2D>("game-over");
 ```
 
-### <a name="3-implement-game-over-logic"></a>3. Implementieren der Logik für das Spielende
+### <a name="4-implement-game-over-logic"></a>4. "" Spiellogik implementieren
 Fügen Sie der **Update**-Methode direkt nach dem Aufruf der **KeyboardHandler**-Methode diesen Code hinzu:
 
 ```CSharp
@@ -647,7 +653,7 @@ if (dino.RectangleCollision(broccoli)) gameOver = true;
 
 Dadurch wird die **RectangleCollision**-Methode aufgerufen, die wir in **SpriteClass** erstellt haben, und das Spiel als „beendet“ markiert, wenn der Wert „true“ zurückgegeben wird.
 
-### <a name="4-add-user-input-for-resetting-the-game"></a>4. Hinzufügen von Benutzereingaben für das Zurücksetzen des Spiels
+### <a name="5-add-user-input-for-resetting-the-game"></a>5. Hinzufügen von Benutzereingaben für das Zurücksetzen des Spiels
 Fügen Sie diesen Code für die Methode **KeyboardHandler** , damit der Benutzer das Spiel zurücksetzen, wenn sie die EINGABETASTE drücken:
 
 ```CSharp
@@ -658,7 +664,7 @@ if (gameOver && state.IsKeyDown(Keys.Enter))
 }
 ```
 
-### <a name="5-draw-game-over-splash-and-text"></a>5. Zeichnen des „Spielende“-Splash und -Textes
+### <a name="6-draw-game-over-splash-and-text"></a>6. Zeichnen Spielende Splash und-Textes
 Abschließend fügen Sie der Draw-Methode direkt nach dem ersten Aufruf von **spriteBatch.Draw** (dies sollte der Aufruf sein, mit dem die Gras-Textur gezeichnet wird) diesen Code hinzu.
 
 ```CSharp
