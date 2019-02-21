@@ -6,12 +6,12 @@ ms.date: 1/8/2019
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 92cfb1318f176e7d8adb8052c119a006389f49e5
-ms.sourcegitcommit: 158467c576c5924e1822d397bd449fc8251bf92f
+ms.openlocfilehash: 5a1f9d853e41642ca5f8027d42b49fcbc3122a66
+ms.sourcegitcommit: 6ba110be80bc343a1aecaf4361edcdb70278c0a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "8996075"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "9086658"
 ---
 # <a name="launch-the-windows-settings-app"></a>Starten der Windows-Einstellungs-App
 
@@ -95,7 +95,7 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 | Apps für Websites | ms-settings:appsforwebsites |
 | Standard-Apps | ms-settings:defaultapps |
 | Optionale Funktionen verwalten | ms-settings:optionalfeatures |
-| Offlinekarten | ms-settings:maps<br/>MS-Settings: Maps-Downloadmaps (Download Maps) |
+| Offlinekarten | ms-settings:maps<br/>MS-Settings: Maps-Downloadmaps (Maps Download) |
 | Startup-Apps | ms-settings:startupapps |
 | Videowiedergabe | ms-settings:videoplayback |
 
@@ -103,13 +103,13 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 
 |Seite „Einstellungen“| URI |
 |-------------|-----|
-| Berechtigungen und-Verlauf | ms-settings:cortana-permissions |
+| Berechtigungen & Verlauf | ms-settings:cortana-permissions |
 | Weitere Details | ms-settings:cortana-moredetails |
 | Cortana für meine Geräte | ms-settings:cortana-notifications |
 | Sprechen mit Cortana | ms-settings:cortana-language<br/>MS-Settings: Cortana<br/>MS-Settings: Cortana-Talktocortana |
 
 > [!NOTE] 
-> In diesem Abschnitt "Einstellungen" auf dem Desktop wird Suche aufgerufen, wenn der PC, Regionen gesetzt ist, in denen Cortana ist derzeit nicht verfügbar oder Cortana deaktiviert wurde. Cortana-spezifische Seiten (Cortana für meine Geräte), und sich für Cortana werden in diesem Fall nicht aufgeführt. 
+> In diesem Abschnitt Einstellungen auf dem Desktop wird Suche aufgerufen werden, wenn der PC, Regionen gesetzt ist, in denen Cortana ist derzeit nicht verfügbar oder Cortana deaktiviert wurde. Cortana-spezifische Seiten (Cortana für meine Geräte) und sprechen Sie mit Cortana werden in diesem Fall nicht aufgeführt. 
 
 ## <a name="devices"></a>Geräte
 
@@ -136,7 +136,7 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 | Audio | ms-settings:easeofaccess-audio |
 | Untertitel | ms-settings:easeofaccess-closedcaptioning |
 | Farbe Filter | MS-Settings: Easeofaccess-Colorfilter |
-| Cursor & Zeiger Größe | MS-Settings: Easeofaccess-Cursorandpointersize |
+| Cursor & Zeigergröße | MS-Settings: Easeofaccess-Cursorandpointersize |
 | Anzeige | ms-settings:easeofaccess-display |
 | Augensteuerung | ms-settings:easeofaccess-eyecontrol |
 | Schriftarten | ms-settings:fonts |
@@ -212,7 +212,7 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 
 |Seite „Einstellungen“| URI |
 |-------------|-----|
-| Ihr Smartphone | ms-settings:mobile-devices<br/>MS-Settings: Mobile-Geräte-Addphone<br/>MS-Settings: Mobile-Geräte-Addphone-Direct (öffnet **Ihren Phone** -app) |
+| Ihr Smartphone | ms-settings:mobile-devices<br/>MS-Settings: Mobile-Geräte-Addphone<br/>MS-Settings: Mobile-Geräte-Addphone-Direct (öffnet **Ihr Smartphone** -app) |
 
 ## <a name="privacy"></a>Privatsphäre
 
@@ -288,7 +288,7 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 | Remotedesktop | Einstellungen „Remotedesktop” |
 | Telefon | MS-Settings: Telefon (**veraltet in Windows 10, Version 1809 und höher**) |
 | Ein/Aus und Standbymodus | ms-settings:powersleep |
-| Sounds | ms-settings:sounds |
+| Sound | MS-Settings: Sound |
 | Speicher | ms-settings:storagesense |
 | Speicheroptimierung | ms-settings:storagepolicies |
 
@@ -315,7 +315,7 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 | Wiederherstellung | ms-settings:recovery |
 | Problembehandlung | ms-settings:troubleshoot |
 | Windows-Sicherheit | ms-settings:windowsdefender |
-| Windows-Insider-Programm | ms-settings:windowsinsider (nur verfügbar, wenn der Benutzer bei WIP registriert ist)<br/>MS-Settings: Windowsinsider-Option |
+| Windows-Insider-Programm | ms-settings:windowsinsider (nur verfügbar, wenn der Benutzer bei WIP registriert ist)<br/>MS-Settings: windowsinsider verfügbar-Option |
 | Windows Update | ms-settings:windowsupdate<br>ms-settings:windowsupdate-action |
 | Windows Update-Advanced options | ms-settings:windowsupdate-options |
 | Windows Update-Restart options | ms-settings:windowsupdate-restartoptions |
