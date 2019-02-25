@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: Windows10, Uwp, Spiele, Entwickeln von Spielen
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b11f927eca82e2c068f0210022893905b1503db
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: c0113f039ccd2d2df0c155b77295afef194018ce
+ms.sourcegitcommit: f7b8112a99097c7c8a76b028aef436d1a5c68cdb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049967"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "9099460"
 ---
 # <a name="windows-10-game-development-guide"></a>Handbuch zur Entwicklung von Spielen unter Windows10
 
@@ -1512,21 +1512,6 @@ Entwickeln Sie Windows-Spiele für den weltweiten Markt, und erfahren Sie mehr �
     <tr>
         <td>Überwinden sprachlicher, kultureller und technologischer Barrieren</td>
         <td><a href="https://www.microsoft.com/Language/Default.aspx">Onlineressource für Sprachkonventionen und Microsoft-Standardterminologie</a></td>
-    </tr>
-</table>
-
-### <a name="security"></a>Sicherheit
-
-Erstellen einer Umgebung, in der Spieler spielen und fair konkurrieren. Ein Spiel, das mit TruePlay registriert wird, wird in einem geschützten Prozess ausgeführt, das eine Klasse von häufigen Angriffen verringert. Das Überwachungssystem der Spiele hilft Ihnen, allgemeine Täuschungsszenarien zu ermitteln. 
-
-<table>
-    <colgroup>
-    <col width="50%" />
-    <col width="50%" />
-    </colgroup>
-    <tr>
-        <td>Tools zur Bekämpfung von Täuschungen innerhalb von PC-Spielen</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/mt808781">TruePlay</a></td>
     </tr>
 </table>
 
