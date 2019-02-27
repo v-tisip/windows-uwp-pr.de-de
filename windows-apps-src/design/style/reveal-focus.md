@@ -2,19 +2,19 @@
 description: Reveal-Focus sind Lichteffekte, die den Rahmen des fokussierbaren Elementes animieren, wenn der Benutzer den Fokus des Gamepad oder Tastatur darauf lenken.
 title: Reveal-Fokus
 template: detail.hbs
-ms.date: 03/1/2018
+ms.date: 03/01/2018
 ms.topic: article
 keywords: Windows10, UWP
 pm-contact: chphilip
 design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
-ms.openlocfilehash: 15c0ff77d511e531bcb8b20b21f3c52a8c753b7a
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 7bcceb8d44b6d92cab05a9c077531b3fe1b05c79
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049115"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9115967"
 ---
 # <a name="reveal-focus"></a>Reveal-Fokus
 

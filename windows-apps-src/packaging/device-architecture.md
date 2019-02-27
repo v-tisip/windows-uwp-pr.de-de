@@ -1,16 +1,16 @@
 ---
-title: App-Paketarchitektur
+title: App-Paketarchitekturen
 description: Hier erfahren Sie mehr über die Prozessorarchitekturen, die beim Erstellen des UWP-App-Pakets verwendet werden sollten.
-ms.date: 7/13/2017
+ms.date: 07/13/2017
 ms.topic: article
 keywords: Windows10, Uwp, Verpacken, Architektur, Paket-Konfiguration
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ce92f4da57b99638f393125d3aed11a4bd91bb6
-ms.sourcegitcommit: 62bc4936ca8ddf1fea03d43a4ede5d14a5755165
+ms.openlocfilehash: 338dac1d43e08257fa00b51c0c311a090f3d95c0
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "8991596"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116109"
 ---
 # <a name="app-package-architectures"></a>App-Paketarchitektur
 
@@ -44,7 +44,7 @@ Diese Konfiguration wird weniger häufig als x86 verwendet. Sie sollten wissen, 
 Die Windows10 on ARM-Konfiguration umfasst Desktop-PCs, mobile Geräte und einige IoT Core-Geräte (Rasperry Pi 2, Raspberry Pi 3 und DragonBoard). Windows10 on ARM-Desktop-PCs sind eine neue Funktion in die Windows-Produktfamilie. Wenn Sie UWP-App-Entwickler sind, sollten Sie ARM-Pakete für den Store für diese PCs übermitteln.
 
 >[!NOTE]
-> Um Ihrer UWP-Anwendung für die ARM64 nativ Zielplattform zu erstellen, müssen Sie Visual Studio 2017 Version 15.9 oder höher verfügen. Weitere Informationen finden Sie in [diesem Blogbeitrag](https://blogs.windows.com/buildingapps/2018/11/15/official-support-for-windows-10-on-arm-development).
+> Um Ihrer UWP-Anwendung für die ARM64 nativ Zielplattform zu erstellen, müssen Sie Visual Studio 2017 Version 15.9 oder höher verfügen. Weitere Informationen finden Sie [in diesem Blogbeitrag](https://blogs.windows.com/buildingapps/2018/11/15/official-support-for-windows-10-on-arm-development).
 
 Weitere Informationen finden Sie unter [Windows 10 auf ARM](../porting/apps-on-arm.md). Sehen Sie sich diesen //Build-Talk an, um eine Demo zu [Windows10 on ARM](https://channel9.msdn.com/Events/Build/2017/P4171) zu sehen und mehr zu erfahren.
 

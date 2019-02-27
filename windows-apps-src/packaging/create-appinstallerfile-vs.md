@@ -1,20 +1,20 @@
 ---
 title: Erstellen einer App-Installer-Datei mit Visual Studio
 description: Hier erfahren Sie, wie Sie Visual Studio verwenden, um automatische Updates mithilfe der .appinstaller-Datei zu aktivieren.
-ms.date: 5/2/2018
+ms.date: 05/02/2018
 ms.topic: article
 keywords: windows 10, uwp, app-installer, AppInstaller, querladen
 ms.localizationpriority: medium
-ms.openlocfilehash: b547394657fc992474ac0ef9e79719e3ab8f31e1
-ms.sourcegitcommit: 58783d1ea22e632b9c50dcfbaa1cc57686bcdd8e
+ms.openlocfilehash: 3aa7622fe408fcbc1f8da4c0fe0c6b8d54dd2cd6
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "9024227"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9115774"
 ---
 # <a name="create-an-app-installer-file-with-visual-studio"></a>Erstellen einer App-Installer-Datei mit Visual Studio
 
-Ab Windows 10, Version 1803 und Visual Studio 2017, Update 15.7, quergeladenen apps können konfiguriert werden zum Empfangen von automatischen Updates, die mit einer `.appinstaller` Datei. Visual Studio unterstützt das Aktivieren dieser Updates.
+Ab Windows 10, Version 1803 und Visual Studio 2017, Update 15.7, quergeladenen apps können so konfiguriert werden Empfang von Automatische Updates mithilfe einer `.appinstaller` Datei. Visual Studio unterstützt das Aktivieren dieser Updates.
 
 ## <a name="app-installer-file-location"></a>Speicherort der App-Installer-Datei
 Die `.appinstaller`-Datei in kann an einem freigegebenen Speicherort wie einem HTTP-Endpunkt oder einem freigegebenen UNC-Ordner gehostet werden, und enthält den Pfad zum Suchen der zu installierenden App-Pakete. Benutzer installieren die App vom freigegebenen Speicherort und aktivieren regelmäßige Überprüfungen auf neue Updates. 
@@ -30,7 +30,7 @@ Sie können die `TargetPlatformMinVersion`-Eigenschaft entweder beim Erstellen d
 
 ### <a name="create-packages"></a>Erstellen von Paketen
 
-Um eine app über querladen zu verteilen, müssen Sie Erstellen einer app-Paket (.appx/.msix) oder app-Bündel (.appxbundle/.msixbundle) und in einem freigegebenen Speicherort veröffentlichen.
+Um eine app über querladen zu verteilen, müssen Sie Erstellen einer app-Paket (.appx/.msix) oder app-Bündel (.appxbundle/.msixbundle) und es an einem freigegebenen Speicherort veröffentlichen.
 
 Verwenden Sie dazu den Assistenten **App-Pakete erstellen** in Visual Studio mit den folgenden Schritten.
 

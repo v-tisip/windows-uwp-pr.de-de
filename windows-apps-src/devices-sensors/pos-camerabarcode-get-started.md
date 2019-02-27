@@ -1,16 +1,16 @@
 ---
 title: Erste Schrittemit dem Kamera-Strichcodescanner
 description: Umgang mit dem Kamera-Strichcodescanner
-ms.date: 05/1/2018
+ms.date: 05/02/2018
 ms.topic: article
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
-ms.openlocfilehash: b49ba463e39d09b915ce3925f94ae7d9f11a9a47
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 66dc3d9e12f6ef73e5461b8fe0064f21a0848c7e
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932606"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116432"
 ---
 # <a name="getting-started-with-a-camera-barcode-scanner"></a>Erste Schrittemit dem Kamera-Strichcodescanner
 ## <a name="step-1-add-capability-declarations-to-your-app-manifest"></a>Schritt 1: Hinzufügen von Funktionsdeklarationen zum App-Manifest
@@ -85,7 +85,7 @@ Eine Kameravorschau ist für den Benutzer notwendig, um die Kamera auf Barcodes 
 > [!TIP]
 > Unter See [Hosting-Vorschau](pos-camerabarcode-hosting-preview.md) erfahren Sie, wie Sie die Vorschau für Kamera-Strichcodescanner in Ihrer Anwendung hosten.
 
-## <a name="step-8-initiate-scan"></a>Schritt 8: Initialisieren Überprüfung 
+## <a name="step-8-initiate-scan"></a>Schritt 8: Initialisieren scan 
 Sie können den Überprüfungsvorgang initiieren, indem Sie [**StartSoftwareTriggerAsync**](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.startsoftwaretriggerasync#Windows_Devices_PointOfService_ClaimedBarcodeScanner_StartSoftwareTriggerAsync) aufrufen.  
 Je nach Wert des [**IsDisabledOnDataReceived**](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isdisabledondatareceived#Windows_Devices_PointOfService_ClaimedBarcodeScanner_IsDisabledOnDataReceived) kann der Scanner nur einen Strichcode scannen und diesen beenden oder kontinuierlich bis zum Aufruf von [**StopSoftwareTriggerAsync**](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.stopsoftwaretriggerasync#Windows_Devices_PointOfService_ClaimedBarcodeScanner_StopSoftwareTriggerAsync) scannen.
 

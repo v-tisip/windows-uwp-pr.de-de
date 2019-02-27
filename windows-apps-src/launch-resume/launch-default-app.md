@@ -6,12 +6,12 @@ ms.date: 06/26/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 143aa8310cdfe9dd5f0be29bf07f03c23293a647
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6c5c8b99ec3646d1eebbb922557f97c9e9304ed4
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919035"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116462"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>Starten der Standard-App für einen URI
 
@@ -46,7 +46,7 @@ In diesem Thema werden einige der folgenden URI-Schemas beschrieben, die in Wind
 <br>
 Der folgende URI öffnet beispielsweise den Standardbrowser und zeigt die Bing-Website an.
 
-`http://bing.com`
+`https://bing.com`
 
 Sie können außerdem benutzerdefinierte URI-Schemas starten. Wenn zum Behandeln dieses URI keine App installiert ist, können Sie dem Benutzer die Installation einer App empfehlen. Weitere Informationen erhalten Sie unter [Empfehlen einer App, wenn keine App zur Behandlung des URI verfügbar ist](#recommend-an-app-if-one-is-not-available-to-handle-the-uri).
 
@@ -206,7 +206,7 @@ Weitere Informationen finden Sie unter [Starten der Kontakte-App](launch-people-
 
 ### <a name="photos-app-uri-scheme"></a>URI-Schema für die Fotos-App
 
-Sie können das URI-Schema **ms-Fotos:** zum Starten der Fotos-App verwenden, um ein Bild anzuzeigen oder ein Video zu bearbeiten. Zum Beispiel:  
+Sie können das URI-Schema **ms-Fotos:** zum Starten der Fotos-App verwenden, um ein Bild anzuzeigen oder ein Video zu bearbeiten. Beispiel:  
 So zeigen Sie ein Bild an: `ms-photos:viewer?fileName=c:\users\userName\Pictures\image.jpg`  
 Alternativ können Sie so ein Video bearbeiten: `ms-photos:videoedit?InputToken=123abc&Action=Trim&StartTime=01:02:03`  
 
@@ -238,10 +238,10 @@ Sie können das URI-Schema **ms-windows-store:** zum [Starten der UWP-App](launc
 
 Weitere Informationen finden Sie unter [Starten der UWP-App](launch-store-app.md).
 
-### <a name="weather-app-uri-scheme"></a>URI-Schema der Wetter-app
+### <a name="weather-app-uri-scheme"></a>URI-Schema für Wetter-app
 
 Verwenden der **Msnweather:** zum Starten der Wetter-app-URI-Schema.
 
 | URI-Schema | Ergebnisse |
 |------------|---------|
-| Msnweather://Forecast?LA= \[latitude\] & lo = \ [Longitude\] | Startet die Wetter-app in die Planung Seite basierend auf einen geografischen Standort-Koordinaten.<br>`latitude` bezieht sich auf die Position Latitude.<br> `longitude` bezieht sich auf die Länge der Position.<br> |
+| Msnweather://Forecast?LA= \[latitude\]&lo=\[longitude\] | Startet die Wetter-app in die Planung Seite basierend auf einen geografischen Standort-Koordinaten.<br>`latitude` bezieht sich auf der Breitengrad des Speicherorts.<br> `longitude` bezieht sich auf die Länge der Position.<br> |

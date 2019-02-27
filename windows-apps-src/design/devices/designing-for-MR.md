@@ -6,19 +6,19 @@ label: Designing for Mixed Reality
 template: detail.hbs
 isNew: true
 keywords: Mixed Reality, Hololens, Erweiterte Realität, anvisieren, Stimme, Controller
-ms.date: 2/5/2018
+ms.date: 02/05/2018
 ms.topic: article
 pm-contact: chigy
 design-contact: jeffarn
 dev-contact: ''
 doc-status: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: e6aebac45dc32933f55d917c0b1153cba952d819
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b988859422a80b31d94a133e36631b078ac7c14e
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932563"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116212"
 ---
 # <a name="designing-for-mixed-reality"></a>Design für Mixed Reality
 
@@ -84,7 +84,7 @@ Mehrere neuartige Eingabemethoden wurden speziell für den Einsatz mit Mixed Rea
 * [Klick-Gerät](https://developer.microsoft.com/windows/mixed-reality/hardware_accessories) (nur HoloLens)
 * [Motion-Controller](https://developer.microsoft.com/windows/mixed-reality/motion_controllers) (nur Mixed Reality-Geräte, siehe oben)
 
-Diese Controller lassen die Interaktion mit virtuellen Objekten natürlich und präzise erscheinen. Einige der Interaktionen erhalten Sie kostenlos. Beispielsweise wählen-Geste von HoloLens, oder klicken Sie auf die Motion-Controller-Windows-Taste oder der Trigger wird die Eingabe Antwort, die, in diesem Fall erwartet und ohne Programmierung ihrerseits, generiert.
+Diese Controller lassen die Interaktion mit virtuellen Objekten natürlich und präzise erscheinen. Einige der Interaktionen erhalten Sie kostenlos. Beispielsweise wählen-Geste von HoloLens, oder klicken Sie auf die Motion-Controller-Windows-Taste oder der Trigger wird die Eingabe Antwort, die Sie, erneut erwarten würden und ohne Programmierung ihrerseits generiert.
 
 Manchmal werden Sie trotzdem Code hinzufügen wollen, um die Vorteile der zusätzlichen Informationen und Eingaben zu nutzen. Mit den Motion Controllern können z. B. Objekte präzise manipuliert werden, wenn Sie Code schreiben, der deren Position und Tastendruck berücksichtigt.
 

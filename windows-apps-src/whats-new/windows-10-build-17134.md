@@ -2,15 +2,15 @@
 title: Neues in Windows10 für Entwickler, Tools und Features
 description: Windows10, Build17134, und neue Entwicklertools stellen Werkzeuge, Features und Umgebungen zur Verfügung, die durch die neue universelle Windows-Plattform unterstützt werden.
 keywords: Neuigkeiten, was neu ist, Aktualisierung, Updates, Features, neu, Windows 10, neueste, Entwickler, 17134
-ms.date: 4/10/2018
+ms.date: 04/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 570e9c463175475db15bd15adbb6b9b88cb9ff39
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 7d880b2167e718b1ff66aa349c32329e6c19e5b5
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9046280"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116482"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>Neuigkeiten für Entwickler in Windows10, Build 17134
 

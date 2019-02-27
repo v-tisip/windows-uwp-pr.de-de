@@ -1,24 +1,24 @@
 ---
 title: Bauen Sie Ihre App mit Diensten, Erweiterungen und Paketen aus
 description: Beschreibt, wie Sie eine Hintergrundaufgabe erstellen, die ausgeführt wird, wenn Ihre universelle Windows-Plattform (UWP)-Store-app aktualisiert wird.
-ms.date: 05/7/2018
+ms.date: 05/07/2018
 ms.topic: article
 keywords: Windows10, UWP, erweitern, aufschlüsseln, App-Dienst, Paket, Erweiterung
 ms.localizationpriority: medium
-ms.openlocfilehash: fd14ce6248f7017160a0c6b222e31ba55e9d2977
-ms.sourcegitcommit: f35480718452a8d95b1862581449a038b63184de
+ms.openlocfilehash: 47ab6491d09775bf86f0f484fc96d85bd07f53a4
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "9015098"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116182"
 ---
 # <a name="extend-your-app-with-services-extensions-and-packages"></a>Bauen Sie Ihre App mit Diensten, Erweiterungen und Paketen aus
 
-Es gibt viele Technologien in Windows 10 zum Erweitern und aufschlüsseln Ihrer app. In der folgenden Tabelle sollte können Sie ermitteln, welche Technologie Sie je nach Anforderungen verwenden sollten. Anschließend finden Sie eine kurze Beschreibung der jeweiligen Szenarien und Technologien.
+Es gibt viele Technologien in Windows 10 zum Erweitern und Ihre app aufschlüsseln. In der folgenden Tabelle sollte können Sie ermitteln, welche Technologie Sie je nach Anforderungen verwenden sollten. Anschließend finden Sie eine kurze Beschreibung der jeweiligen Szenarien und Technologien.
 
 | Szenario                           | Ressourcenpaket   | Bestandspaket      | Optionales Paket   | Flat-Bundle        | App-Erweiterung      | App-Dienst        | Streaming-Installation  |
 |------------------------------------|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|
-| Drittanbieter-Plug-ins            |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |
+| Drittanbieter-Code-Plugins            |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |
 | In-Process Code-Plugins              |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |
 | UX-Ressourcen (Zeichenfolgen/Images)         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: |                    | :heavy_check_mark: |
 | On-Demand Inhalte <br/> (z. B. zusätzliche Spielstufen) |      |                    | :heavy_check_mark: |                    | :heavy_check_mark: |                    | :heavy_check_mark: |
@@ -61,7 +61,7 @@ Stellt Funktionen zur Verkürzung der Zeit bereit, die benötigt wird, um die Ap
 
 **Reduzieren des Speicherbedarfs auf dem Datenträger** Reduziert die Größe einer App, indem nur notwendige Apps oder Ressourcen einbezogen werden.
 
-**Optimieren Verpackung** Optimiert, die den Prozess zur Verpackung großer oder komplexer apps.
+**Optimieren Verpackung** Optimiert, den den Prozess zur Verpackung großer oder komplexer apps.
 
 **Reduzierung der Veröffentlichungszeit** Minimiert den Zeitaufwand für die Veröffentlichung Ihrer App im Store, auf einer lokalen Freigabe oder auf dem Webserver.
 
@@ -71,7 +71,7 @@ Stellt Funktionen zur Verkürzung der Zeit bereit, die benötigt wird, um die Ap
 
 Bei Ressourcenpaketen handelt es sich um an die Ressource gebundene Pakete, die Ihrer App eine Anpassung an zahlreiche Bildschirmgrößen und Systemsprachen ermöglichen. Das Ressourcenpaket zielt auf die Benutzersprache, die Systemskalierung sowie die DirectX-Funktionen ab und erlaubt der App dadurch eine Anpassung an zahlreiche Nutzerszenarien. Obwohl ein App-Paket mehrere Ressourcen enthalten kann, wird das Betriebssystem nur die für das Gerät des Benutzers notwendigen Ressourcen herunterladen. Dies spart Bandbreite und Festplattenspeicher.
 
-**Bestandspaket** Bestandspakete sind eine allgemeine, zentralisierte Quelle ausführbarer oder nicht ausführbarer Dateien für die Verwendung von Ihrer app. Dies sind in der Regel keine Codedateien oder sprachspezifische Dateien. Es kann sich beispielsweise um eine Sammlung von Bildern in einem Bestandspaket und von Videos in einem anderen Bestandspaket handeln, die beide von der App verwendet werden. Wenn Ihre app mehrere Architekturen und Sprachen unterstützt, könnten diese Assets im architekturpaket oder ressourcenpaket enthalten sein, aber das bedeutet auch, dass die Assets mehrfach in den verschiedenen architekturpaketen dupliziert werden unter Berücksichtigung Speicherplatz. Wenn Bestandspakete verwendet werden, müssen sie nur einmal im gesamten App-Paket enthalten sein. Weitere Informationen finden Sie unter [Einführung in Bestandspakete](../packaging/asset-packages.md).
+**Bestandspaket** Bestandspakete sind eine allgemeine, zentralisierte Quelle ausführbarer oder nicht ausführbarer Dateien für die Verwendung von Ihrer app. Dies sind in der Regel keine Codedateien oder sprachspezifische Dateien. Es kann sich beispielsweise um eine Sammlung von Bildern in einem Bestandspaket und von Videos in einem anderen Bestandspaket handeln, die beide von der App verwendet werden. Wenn Ihre app mehrere Architekturen und Sprachen unterstützt, könnten diese Assets im architekturpaket oder ressourcenpaket enthalten sein, aber das bedeutet auch, dass die Assets mehrfach in den verschiedenen architekturpaketen dupliziert werden Teilnahme an Speicherplatz auf dem Datenträger. Wenn Bestandspakete verwendet werden, müssen sie nur einmal im gesamten App-Paket enthalten sein. Weitere Informationen finden Sie unter [Einführung in Bestandspakete](../packaging/asset-packages.md).
 
 **Optionales Paket**
 

@@ -2,16 +2,16 @@
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
 title: Geräteportal für HoloLens
 description: Hier erfahren Sie, wie Sie mit dem Windows Device Portal für HoloLens Ihr HoloLens-Gerät per Fernzugriff konfigurieren und verwalten können.
-ms.date: 1/3/2019
+ms.date: 01/3/2019
 ms.topic: article
 keywords: Windows 10, Uwp, geräteportal
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d02f9eac43687974ed76ef25e53f654783956a9
-ms.sourcegitcommit: 62bc4936ca8ddf1fea03d43a4ede5d14a5755165
+ms.openlocfilehash: 2561f18e2ac054c8b378b0c7c0a9689bebcc4140
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "8991616"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116089"
 ---
 # <a name="device-portal-for-hololens"></a>Geräteportal für HoloLens
 
@@ -34,7 +34,7 @@ ms.locfileid: "8991616"
 #### <a name="connect-over-wi-fi"></a>Herstellen einer WLAN-Verbindung 
 
 1. Verbinden Sie die HoloLens mit dem WLAN.
-2. Suchen Sie nach IP-Adresse des Geräts. Suchen Sie die IP-Adresse auf dem Gerät unter **Einstellungen > Netzwerk und Internet > Wi-Fi > Hardware-Eigenschaften**. Sie können auch fragen „Hey Cortana, wie lautet meine IP-Adresse?“
+2. Suchen Sie nach IP-Adresse des Geräts. Suchen Sie die IP-Adresse auf dem Gerät unter **Einstellungen > Netzwerk & > Wi-Fi > Hardware Interneteigenschaften**. Sie können auch fragen „Hey Cortana, wie lautet meine IP-Adresse?“
 
 3. Rufen Sie in einem Webbrowser auf dem PC „“ auf. `https://<YOUR_HOLOLENS_IP_ADDRESS>`
     - Im Browser wird die folgende Meldung angezeigt: „Es besteht ein Problem mit dem Sicherheitszertifikat der Website.“ Der Grund dafür ist, dass das für das Geräteportal ausgestellte Zertifikat ein Testzertifikat ist. Sie können diesen Zertifikatfehler vorerst ignorieren und fortfahren.
@@ -46,7 +46,7 @@ ms.locfileid: "8991616"
 3. Rufen Sie in einem Webbrowser auf dem PC „`http://127.0.0.1:10080`“ auf.
 
 > [!IMPORTANT]
-> Wenn Ihr PC das Gerät nicht finden kann, versuchen Sie es mit realen Netzwerk-IP-Adresse des HoloLens-Gerät anstelle von `http://127.0.0.1:10080`.
+> Wenn Ihr PC das Gerät nicht finden kann, versuchen Sie es mit der tatsächlichen Netzwerk IP-Adresse der HoloLens-Gerät, statt `http://127.0.0.1:10080`.
 
 #### <a name="connect-to-an-emulator"></a>Herstellen einer Verbindung mit einem Emulator 
 

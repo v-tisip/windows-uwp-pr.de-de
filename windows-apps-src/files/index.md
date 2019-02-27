@@ -1,17 +1,11 @@
 ---
 ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
-title: Dateien, Ordner und Bibliotheken
-description: Erhalten Sie Informationen zum Lesen und Schreiben von App-Einstellungen, zur Datei- und Ordnerauswahl und zu speziellen Speicherorten im Sandkasten, z.B. die Video-/Musikbibliothek.
+title: 'Dateien, Ordner und Bibliotheken'
+description: 'Erhalten Sie Informationen zum Lesen und Schreiben von App-Einstellungen, zur Datei- und Ordnerauswahl und zu speziellen Speicherorten im Sandkasten, z.B. die Video-/Musikbibliothek.'
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows10, UWP
+keywords: 'Windows10, UWP'
 ms.localizationpriority: medium
-ms.openlocfilehash: 517302b7db1e7b65ca7a181a8c766ce1e71737ac
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044544"
 ---
  # <a name="files-folders-and-libraries"></a>Dateien, Ordner und Bibliotheken
 
@@ -22,6 +16,7 @@ Verwenden Sie die APIs im [Windows.Storage](https://msdn.microsoft.com/library/w
 |-------|--------------|
 | [Aufzählen und Abfragen von Dateien und Ordnern](quickstart-listing-files-and-folders.md) | Greifen Sie auf Dateien und Ordner zu, die sich in einem Ordner, in einer Bibliothek, auf einem Gerät oder an einer Netzwerkadresse befinden. Sie können auch durch Erstellen von Datei- und Ordnerabfragen Dateien und Ordner an bestimmten Speicherorten abrufen. |
 | [Erstellen, Schreiben und Lesen einer Datei](quickstart-reading-and-writing-files.md) | Lesen und Schreiben Sie eine Datei mithilfe eines [StorageFile](https://msdn.microsoft.com/library/windows/apps/br227171)-Objekts. |
+| [Bewährte Methoden für das Schreiben von Dateien](best-practices-for-writing-to-files.md) | Hier erfahren Sie bewährte Methoden für die Verwendung von verschiedenen Datei Schreiben von Methoden der Klassen [FileIO](https://docs.microsoft.com/uwp/api/windows.storage.fileio) und [PathIO](https://docs.microsoft.com/uwp/api/windows.storage.pathio) . |
 | [Abrufen von Dateieigenschaften](quickstart-getting-file-properties.md) | Es werden Eigenschaften – oberste Ebene, grundlegend und erweitert – für eine Datei abgerufen, die durch ein [StorageFile](https://msdn.microsoft.com/library/windows/apps/br227171)-Objekt dargestellt wird. |
 | [Öffnen von Dateien und Ordnern mit einer Auswahl](quickstart-using-file-and-folder-pickers.md) | Greifen Sie auf Dateien und Ordner zu, indem Sie Benutzern die Interaktion mit einer Auswahl ermöglichen. Sie können über [FolderPicker](https://msdn.microsoft.com/library/windows/apps/br207881) auf einen Ordner zugreifen. |
 | [Speichern einer Datei mit einer Auswahl](quickstart-save-a-file-with-a-picker.md) | Mithilfe von [FileSavePicker](https://msdn.microsoft.com/library/windows/apps/br207871) können Benutzer den Namen und Speicherort zum Speichern einer Datei durch die App angeben. |

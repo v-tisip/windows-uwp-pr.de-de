@@ -1,17 +1,17 @@
 ---
 ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
 description: Verwenden Sie diese Methode in der Microsoft Store-Einkaufs-API, um einem bestimmten Benutzer eine kostenlose App oder ein kostenloses Add-On zu gewähren.
-title: Gewähren kostenloser Produkte
-ms.date: 03/16/2018
+title: Gewähren von kostenlosen Produkten
+ms.date: 03/19/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Einkaufs-API, Produkte gewähren
 ms.localizationpriority: medium
-ms.openlocfilehash: 75edbe720e2e4483432d3d865650e5d7e7a24b40
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 957958891b1052be4ac9ae65d90f97ff8a44ef36
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929795"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116362"
 ---
 # <a name="grant-free-products"></a>Gewähren kostenloser Produkte
 
@@ -42,7 +42,7 @@ Weitere Informationen finden Sie unter [Verwalten von Produktansprüchen aus ein
 
 | Header         | Typ   | Beschreibung                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Autorisierung  | String | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;.                           |
+| Autorisierung  | zeichenfolge | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;.                           |
 | Host           | string | Muss auf den Wert **purchase.mp.microsoft.com** festgelegt werden.                                            |
 | Inhaltslänge | number | Die Länge des Anforderungstexts.                                                                       |
 | Inhaltstyp   | string | Gibt den Anforderungs- und Antworttyp an. Derzeit wird als einziger Wert **application/json** unterstützt. |
@@ -52,13 +52,13 @@ Weitere Informationen finden Sie unter [Verwalten von Produktansprüchen aus ein
 
 | Parameter      | Typ   | Beschreibung        | Erforderlich |
 |----------------|--------|---------------------|----------|
-| availabilityId | String | Die Verfügbarkeits-ID des Produkts, das aus dem Microsoft Store-Katalog gewährt werden soll.         | Ja      |
-| b2bKey         | String | Der [Microsoft Store-ID-Schlüssel](view-and-grant-products-from-a-service.md#step-4), der die Identität des Benutzers darstellt, dem Sie ein kostenloses Produkt gewähren möchten.    | Ja      |
+| availabilityId | string | Die Verfügbarkeits-ID des Produkts, das aus dem Microsoft Store-Katalog gewährt werden soll.         | Ja      |
+| b2bKey         | string | Der [Microsoft Store-ID-Schlüssel](view-and-grant-products-from-a-service.md#step-4), der die Identität des Benutzers darstellt, dem Sie ein kostenloses Produkt gewähren möchten.    | Ja      |
 | devOfferId     | string | Eine vom Entwickler angegebene Angebotskennung, die nach dem Kauf im Auflistungselement angezeigt wird.        |
 | language       | string | Die Sprache des Benutzers.  | Ja      |
-| market         | string | Der Markt des Benutzers.       | Ja      |
+| market         | String | Der Markt des Benutzers.       | Ja      |
 | orderId        | guid   | Eine für den Auftrag generierte GUID. Dieser Wert muss für den Benutzer eindeutig sein, aber nicht auftragsübergreifend.    | Ja      |
-| Produkt-ID      | string | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für das [Produkt](in-app-purchases-and-trials.md#products-skus-and-availabilities) aus dem MicrosoftStore-Katalog. Ein Beispiel für eine Store-ID für ein Produkt ist 9NBLGGH42CFD. | Ja      |
+| Produkt-ID      | Zeichenfolge | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für das [Produkt](in-app-purchases-and-trials.md#products-skus-and-availabilities) aus dem MicrosoftStore-Katalog. Ein Beispiel für eine Store-ID für ein Produkt ist 9NBLGGH42CFD. | Ja      |
 | quantity       | int    | Die Kaufmenge. Derzeit wird als einziger Wert 1 unterstützt. Ohne Angabe wird standardmäßig der Wert1 verwendet.   | Nein       |
 | skuId          | string | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für die [Produkt-SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) aus dem MicrosoftStore-Katalog. Ein Beispiel für eine Store-ID für eine SKU ist 0010.     | Ja      |
 
@@ -95,16 +95,16 @@ Content-Type: application/json
 | friendlyName              | string                      | Der Anzeigename für den Auftrag. Für Aufträge über die Microsoft Store-Einkaufs-API nicht relevant. | Ja      |
 | isPIRequired              | boolean                     | Gibt an, ob für die Bestellung ein Zahlungsmittel (Payment Instrument, PI) erforderlich ist.  | Ja      |
 | language                  | string                      | Die Sprach-ID für den Auftrag (z. B. „de“).       | Ja      |
-| market                    | string                      | Die Markt-ID für den Auftrag (z. B. „DEU“).  | Ja      |
+| market                    | String                      | Die Markt-ID für den Auftrag (z. B. „DEU“).  | Ja      |
 | orderId                   | string                      | Eine ID, die den Auftrag für einen bestimmten Benutzer identifiziert.                | Ja      |
 | orderLineItems            | list&lt;OrderLineItemV6&gt; | Die Liste mit den Auftragspositionen. In der Regel gibt es 1 Position pro Auftrag.       | Ja      |
 | orderState                | string                      | Der Zustand des Auftrags. Gültige Zustände sind **Editing**, **CheckingOut**, **Pending**, **Purchased**, **Refunded**, **ChargedBack** und **Cancelled**. | Ja      |
 | orderValidityEndTime      | string                      | Der Zeitpunkt, bis zu dem der Preis des Auftrags vor der Übermittlung gültig ist. Für kostenlose Apps nicht relevant.      | Ja      |
 | orderValidityStartTime    | string                      | Der Zeitpunkt, ab dem der Preis des Auftrags vor der Übermittlung gültig ist. Für kostenlose Apps nicht relevant.          | Ja      |
 | purchaser                 | IdentityV6                  | Ein Objekt, das die Identität des Käufers beschreibt.       | Ja      |
-| totalAmount               | decimal                     | Der Gesamtkaufbetrag aller im Auftrag enthaltenen Artikel (inklusive Steuern).       | Ja      |
-| totalAmountBeforeTax      | decimal                     | Der Gesamtkaufbetrag aller im Auftrag enthaltenen Artikel (vor Steuern).      | Ja      |
-| totalChargedToCsvTopOffPI | decimal                     | Bei Verwendung eines separaten Zahlungsmittels und eines gespeicherten Werts (CSV) der für CSV in Rechnung gestellte Betrag.            | Ja      |
+| totalAmount               | Dezimalzahl                     | Der Gesamtkaufbetrag aller im Auftrag enthaltenen Artikel (inklusive Steuern).       | Ja      |
+| totalAmountBeforeTax      | Dezimalzahl                     | Der Gesamtkaufbetrag aller im Auftrag enthaltenen Artikel (vor Steuern).      | Ja      |
+| totalChargedToCsvTopOffPI | Dezimalzahl                     | Bei Verwendung eines separaten Zahlungsmittels und eines gespeicherten Werts (CSV) der für CSV in Rechnung gestellte Betrag.            | Ja      |
 | totalTaxAmount            | decimal                     | Die Gesamtsteuerbetrag für alle Positionen.    | Ja      |
 
 
@@ -125,7 +125,7 @@ Das OrderLineItemV6-Objekt enthält die folgenden Parameter.
 | billingState            | string         | Der Abrechnungszustand des Auftrags. Dieser wird bei Beendigung auf **Charged** festgelegt.                                   | Nein       |
 | campaignId              | string         | Die Kampagnen-ID für diesen Auftrag.                                                                              | Nein       |
 | currencyCode            | string         | Der verwendete Währungscode für die Preisdetails.                                                                    | Ja      |
-| description             | string         | Eine lokalisierte Beschreibung der Position.                                                                    | Ja      |
+| description             | String         | Eine lokalisierte Beschreibung der Position.                                                                    | Ja      |
 | devofferId              | string         | Die Auftrags-ID für diesen Auftrag, sofern vorhanden.                                                           | Nein       |
 | fulfillmentDate         | datetimeoffset | Das Erfüllungsdatum.                                                                           | Nein       |
 | fulfillmentState        | string         | Der Erfüllungszustand dieses Artikels. Dieser wird bei Beendigung auf **Fulfilled** festgelegt.                      | Nein       |
@@ -133,11 +133,11 @@ Das OrderLineItemV6-Objekt enthält die folgenden Parameter.
 | isTaxIncluded           | boolean        | Gibt an, ob in den Preisdetails des Artikels Steuern enthalten sind.                                        | Ja      |
 | legacyBillingOrderId    | string         | Die alte Abrechnungs-ID.                                                                                       | Nein       |
 | lineItemId              | string         | Die Positions-ID für den Artikel in diesem Auftrag.                                                                 | Ja      |
-| listPrice               | decimal        | Der Listenpreis des Artikels in diesem Auftrag.                                                                    | Ja      |
-| Produkt-ID               | string         | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für das [Produkt](in-app-purchases-and-trials.md#products-skus-and-availabilities), das die Position im Microsoft Store-Katalog darstellt. Ein Beispiel für die Store-ID eines Produkts ist 9NBLGGH42CFD.   | Ja      |
+| listPrice               | Dezimalzahl        | Der Listenpreis des Artikels in diesem Auftrag.                                                                    | Ja      |
+| Produkt-ID               | Zeichenfolge         | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für das [Produkt](in-app-purchases-and-trials.md#products-skus-and-availabilities), das die Position im Microsoft Store-Katalog darstellt. Ein Beispiel für die Store-ID eines Produkts ist 9NBLGGH42CFD.   | Ja      |
 | Produkttyp             | string         | Die Art des Produkts. Die unterstützten Werte sind **Durable**, **Application** und **UnmanagedConsumable**. | Ja      |
 | quantity                | int            | Die Menge des bestellten Artikels.                                                                            | Ja      |
-| retailPrice             | decimal        | Der Einzelhandelspreis des bestellten Artikels.                                                                        | Ja      |
+| retailPrice             | Dezimalzahl        | Der Einzelhandelspreis des bestellten Artikels.                                                                        | Ja      |
 | revenueRecognitionState | string         | Der Zustand der Umsatzrealisierung.                                                                               | Ja      |
 | skuId                   | String         | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für die [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) der Position im Microsoft Store-Katalog. Ein Beispiel für die Store-ID einer SKU ist 0010.                                                                   | Ja      |
 | taxAmount               | decimal        | Der Steuerbetrag für die Position.                                                                            | Ja      |

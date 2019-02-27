@@ -5,17 +5,17 @@ ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
 template: detail.hbs
 op-migration-status: ready
-ms.date: 7/16/2018
+ms.date: 07/16/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 4eb31ed1f802b8827c124958438ceb6c5902aee1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bba6d42e6ce494c0655c6b6c60db91c1e2e006e8
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944686"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116242"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Navigationsdesigngrundlagen für UWP-Apps
 
@@ -55,7 +55,7 @@ Beginnen wir mit den Grundprinzipien eines guten Navigationsdesigns:
 
 ### <a name="consistency"></a>Konsistenz
 
-Die Navigation sollte den Erwartungen der Benutzer entsprechen. Verwenden [Standardsteuerelemente](#use-the-right-controls) , dass der Benutzer mit vertraut sind und die folgenden Standardkonventionen für Symbole, nehmen Position und Stil Navigation vorhersehbar und intuitiv für Benutzer.
+Die Navigation sollte den Erwartungen der Benutzer entsprechen. [Standardsteuerelemente](#use-the-right-controls) , dass der Benutzer mit vertraut sind und die folgenden Standardkonventionen für Symbole verwenden, nehmen Position und Formatierungen Navigation vorhersehbar und intuitiv für Benutzer.
 
 ![Bild mit Seitenkomponenten](images/nav/page-components.svg)
 
@@ -117,7 +117,7 @@ Nun, da Sie mit den allgemeinen Navigationsprinzipien vertraut sind, überlegen 
 
         - Die Seiten können in beliebiger Reihenfolge angezeigt werden.
         - Die Seiten sind deutlich voneinander abgegrenzt und verfügen nicht über eine offensichtliche Beziehung zwischen über- und untergeordneten Elementen.
-        - Es gibt weniger als 8 Seiten in der Gruppe. <br>
+        - Es gibt weniger als 8 Seiten in der Gruppe ein. <br>
         (Wenn eine Gruppe mehr Seiten enthält, wird es für Benutzer möglicherweise schwierig, zu verstehen, inwiefern sich die Seiten unterscheiden oder welche Position sie zurzeit in der Gruppe haben. Wenn Sie davon ausgehen, dass dies kein Problem für Ihre App ist, machen Sie aus den Seiten Peers. Ziehen Sie andernfalls eine hierarchische Struktur in Betracht, um die Seiten in zwei oder mehr kleinere Gruppen zu unterteilen.)
 
     :::column-end:::
@@ -184,14 +184,14 @@ Sobald Sie sich für eine Seitenstruktur entschieden haben, müssen Sie entschei
         
         Use top navigation when:
 
-        - Möchten Sie alle Navigationsoptionen auf dem Bildschirm anzuzeigen.
+        - Alle Navigationsoptionen auf dem Bildschirm angezeigt werden sollen.
         - Sie möchten mehr Platz für den Inhalt Ihrer app.
-        - Symbole können nicht die Navigationskategorien beschreiben.
+        - Symbole können nicht Ihre Navigationskategorien beschreiben.
         
         Verwendung Registerkarten, wenn:
 
-        - Navigation auf der Seite und Verlauf Zustand beibehalten werden soll.
-        - Sie erwarten, dass Benutzer zwischen Registerkarten häufig zu wechseln.
+        - Verlauf und Seite Navigationszustand beibehalten werden soll.
+        - Sie erwarten, dass Benutzer häufig Registerkarten wechseln.
 
 :::row-end:::
 

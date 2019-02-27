@@ -5,12 +5,12 @@ ms.date: 07/16/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 5182981483069d42339ad71a5347dc9c6c36ed58
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.openlocfilehash: 733ce75942a05482ade88c1510e788f1cbd515d4
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058741"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9115947"
 ---
 # <a name="using-lights-in-windows-ui"></a>Verwendung von Licht in Windows-Benutzeroberfläche
 
@@ -22,7 +22,7 @@ Die Windows.UI.Composition-APIs können Sie in Echtzeit Animationen und Effekte 
 Kompositionsbeleuchtung können Sie die Benutzeroberfläche interessanter, indem zugelassen wird, erstellen:
 
 - Die Transformation von einem hellen unabhängig von anderen Objekte in der Szene immersive Szenarien wie Musik Wiedergabe Szenen ermöglichen.
-- Die Möglichkeit, ein Objekt mit einer koppeln, sodass sie zusammen verschoben unabhängig vom Rest der Szene Szenarien wie Fluent- [Reveal-](/design/style/reveal) Highlight ermöglichen.
+- Die Möglichkeit, ein Objekt mit einer koppeln, sodass sie zusammen verschoben unabhängig vom Rest der Szene Szenarien wie Fluent- [Reveal-](/windows/uwp/design/style/reveal) Highlight ermöglichen.
 - Transformation und die gesamte Szene als eine Gruppe für Materialien und Tiefe zu erzeugen.
 
 Kompositionsbeleuchtung unterstützt drei wichtige Konzepte: **Light**, **Ziele**und **SceneLightingEffect**.
@@ -74,7 +74,7 @@ Konzept | Details
 **Umgebungslicht** | Hinzufügen einer nicht-Umgebungslicht Ihrer Szene wird deaktiviert, wenn alle vorhandenen Licht.  Elemente nicht durch eine nicht-Umgebungslicht Zielgruppe werden schwarz angezeigt.  Um umgebenden visuelle Elemente, die nicht vom Licht auf natürliche Weise als Ziel zu beleuchten, verwenden Sie ein Umgebungslicht in Verbindung mit anderen Lichter.
 **Anzahl von Lichtern** | Sie können zwei nicht-ambient Komposition anzeigen in beliebiger Kombination verwenden, auf der Benutzeroberfläche. Umgebungslicht Licht sind nicht eingeschränkt. Volltonfarben, sind Punkt und entfernte Licht.
 **Lebensdauer** | CompositionLight treten Prozesslebensdauer-Bedingungen (Beispiel: der Garbage Collector kann das Lichtobjekt wiederverwenden, bevor sie verwendet wird).  Es wird empfohlen, einen Verweis auf die Lichtquellen durch Hinzufügen von Lichtquellen als Mitglied der Anwendung Lebensdauer verwalten zu halten.
-**Transformationen** | Licht müssen sich bei einem Knoten über UI platziert werden, die Effekte wie [perspektivische Transformationen](/design/layout/3-d-perspective-effects) in der visuellen Struktur verwendet wird, ordnungsgemäß gezeichnet werden.
+**Transformationen** | Licht müssen sich bei einem Knoten über UI platziert werden, die Effekte wie [perspektivische Transformationen](/windows/uwp/design/layout/3-d-perspective-effects) in der visuellen Struktur verwendet wird, ordnungsgemäß gezeichnet werden.
 **Ziele und Koordinatenraum** | CoordinateSpace ist den Platz in dem alle die Lichter-Eigenschaften festgelegt werden müssen. CompositionLight.Targets muss innerhalb der CoordinateSpace-Struktur.
 
 ## <a name="lighting-properties"></a>Beleuchtungseigenschaften

@@ -2,16 +2,16 @@
 title: Erstellen und Verwenden eines App-Diensts
 description: Hier erfahren Sie, wie Sie eine App für die Universelle Windows-Plattform (UWP) erstellen, die Dienste für andere UWP-Apps bereitstellen kann, und wie Sie diese Dienste nutzen.
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
-keywords: App-zu-app-Kommunikation, prozessübergreifende Kommunikation, IPC, Hintergrund Kommunikation, app zu app-app-Dienst
-ms.date: 1/16/2019
+keywords: App-zu-app-Kommunikation, prozessübergreifende Kommunikation, IPC-Nachrichten, Hintergrund Kommunikation, app zu app-app-Dienst
+ms.date: 01/16/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5239bff53bb0e5383bce28b4d781a0ab6a41c3af
-ms.sourcegitcommit: cfdc854fede8e586202523cdb59d3d0a2f5b4b36
+ms.openlocfilehash: 96ecad8494ad82dc4927b3675ad322f07a8ca7f3
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "9013959"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116392"
 ---
 # <a name="create-and-consume-an-app-service"></a>Erstellen und Verwenden eines App-Diensts
 
@@ -25,12 +25,12 @@ Den Code für einen App-Dienst finden Sie unter [Beispiel-Apps für die Universe
 
 In dieser Anleitung erstellen wir der Einfachheit halber alles in einer Projektmappe.
 
-1. Erstellen Sie in Visual Studio 2015 oder höher ein neues UWP-app-Projekt, und nennen Sie sie **"AppServiceProvider"**.
-    1. Wählen Sie die **Datei > neue > Projekt...** 
-    2. Wählen Sie im Dialogfeld " **Neues Projekt** " **installiert > Visual C#-> leere App (Universal Windows)**. Dies ist die App, die den App-Dienst für andere UWP-Apps verfügbar macht.
-    3. Geben Sie dem Projekt **"AppServiceProvider"**, wählen Sie einen Speicherort für sie, und klicken Sie auf **OK**.
+1. Erstellen Sie in Visual Studio 2015 oder höher ein neues UWP-app-Projekt, und nennen Sie es **"AppServiceProvider"**.
+    1. Wählen Sie die **Datei > neues > Projekt...** 
+    2. Wählen Sie im Dialogfeld **Neues Projekt** **installiert > Visual C#-> leere App (Universal Windows)**. Dies ist die App, die den App-Dienst für andere UWP-Apps verfügbar macht.
+    3. Nennen Sie das Projekt **"AppServiceProvider"**, wählen Sie einen Speicherort für sie, und klicken Sie auf **OK**.
 
-2. Wenn Sie gefragt werden, wählen eine **Ziel-** und **Mindestversion** für das Projekt, wählen Sie mindestens **10.0.14393**. Wenn Sie das neuen Attribut **"supportsmultipleinstances"** verwenden möchten, Sie müssen werden mithilfe von Visual Studio 2017 und Ziel **10.0.15063** (**Windows 10 Creators Update**) oder höher.
+2. Wenn Sie gefragt werden, wählen eine **Ziel-** und **Mindestversion** für das Projekt, wählen Sie mindestens **10.0.14393**. Wenn Sie das neuen Attribut **"supportsmultipleinstances"** verwenden möchten, müssen werden verwenden Sie Visual Studio 2017 und Ziel **10.0.15063** (**Windows 10 Creators Update**) oder höher.
 
 <span id="appxmanifest"/>
 
@@ -38,9 +38,9 @@ In dieser Anleitung erstellen wir der Einfachheit halber alles in einer Projektm
 
 Öffnen Sie im Projekt **"AppServiceProvider"** die Datei **"Package.appxmanifest"** in einem Text-Editor: 
 
-1. Maustaste darauf im **Projektmappen-Explorer**. 
-2. Wählen Sie **Öffnen mit**. 
-3. Wählen Sie den **XML (Text) Editor**. 
+1. Klicken Sie darauf in der **Projektmappen-Explorer**aus. 
+2. Wählen Sie **mit öffnen**. 
+3. Wählen Sie **XML (Text) Editor**. 
 
 Fügen Sie die folgenden `AppService` Erweiterung innerhalb der `<Application>` Element. Durch dieses Beispiel wird der `com.microsoft.inventory`-Dienst angekündigt, und die App wird als App-Dienstanbieter identifiziert. Der eigentliche Dienst wird als Hintergrundaufgabe implementiert. Das Projekt, das den App-Dienst bereitstellt, macht den Dienst für andere Apps verfügbar. Wir empfehlen, einen umgekehrten Domänennamen für den Dienstnamen zu verwenden.
 
@@ -75,16 +75,16 @@ Die `SupportsMultipleInstances` -Attribut gibt an, dass es sich bei jedem Aufruf
 
 ## <a name="create-the-app-service"></a>Erstellen des App-Diensts
 
-1.  Ein App-Dienst kann als Hintergrundaufgabe implementiert werden. Dadurch kann eine Vordergrund-App einen App-Dienst in einer anderen App aufrufen. Um ein app-Dienst als Hintergrundaufgabe zu erstellen, fügen Sie ein neues Komponente für Windows-Runtime-Projekt der Projektmappe (**Datei &gt; hinzufügen &gt; neues Projekt**) mit dem Namen **"myappservice"**. Wählen Sie im Dialogfeld " **Neues Projekt hinzufügen** " **installiert > Visual C#-> Komponente für Windows-Runtime (Universal Windows)**.
-2.  Fügen Sie im Projekt **"AppServiceProvider"** einen Projekt-zu-Projekt-Verweis auf das neue **Projekt "myappservice"** hinzu (klicken Sie im **Projektmappen-Explorer**mit der Maustaste auf das **"AppServiceProvider"** Projekt > **Hinzufügen**  >  ** Verweisen auf** > **Projekte** > **Lösung**, wählen Sie **"myappservice"** > **OK**). Dieser Schritt ist unerlässlich, da der App-Dienst ohne das Hinzufügen der Referenz keine Laufzeit damit verbindet.
-3.  Fügen Sie die folgenden Anweisungen zur **Verwendung** im Projekt **"myappservice"** am Anfang von **"Class1.cs"**:
+1.  Ein App-Dienst kann als Hintergrundaufgabe implementiert werden. Dadurch kann eine Vordergrund-App einen App-Dienst in einer anderen App aufrufen. Um ein app-Dienst als Hintergrundaufgabe zu erstellen, fügen Sie ein neues Komponente für Windows-Runtime-Projekt der Projektmappe (**Datei &gt; hinzufügen &gt; neues Projekt**) mit dem Namen **"myappservice"**. Wählen Sie im Dialogfeld **Neues Projekt hinzufügen** **installiert > Visual C#-> Komponente für Windows-Runtime (Universal Windows)**.
+2.  Fügen Sie im Projekt **"AppServiceProvider"** einen Projekt-zu-Projekt-Verweis auf das neue **Projekt "myappservice"** hinzu (klicken Sie im **Projektmappen-Explorer**mit der Maustaste auf die **"AppServiceProvider"** Projekt > **Hinzufügen**  >  ** Verweisen auf** > **Projekte** > -**Lösung**, wählen Sie **"myappservice"** > **OK**). Dieser Schritt ist unerlässlich, da der App-Dienst ohne das Hinzufügen der Referenz keine Laufzeit damit verbindet.
+3.  Fügen Sie im Projekt **"myappservice"** am Anfang **"Class1.cs"** die folgende Anweisung **verwenden** hinzu:
     ```cs
     using Windows.ApplicationModel.AppService;
     using Windows.ApplicationModel.Background;
     using Windows.Foundation.Collections;
     ```
 
-4.  Benennen Sie **"Class1.cs"** in **Inventory.cs**, und Ersetzen Sie den Stubcode für **Class1** durch eine neue hintergrundaufgabenklasse **mit dem Namen**:
+4.  Benennen Sie **"Class1.cs"** in **Inventory.cs**, und Ersetzen Sie den Stub-Code für **Class1** durch eine neue hintergrundaufgabenklasse **mit dem Namen**:
 
     ```cs
     public sealed class Inventory : IBackgroundTask
@@ -130,7 +130,7 @@ Die `SupportsMultipleInstances` -Attribut gibt an, dass es sich bei jedem Aufruf
 
     Die Lebensdauer des App-Diensts hängt vom Aufrufer ab:
 
-    * Wenn der Aufrufer im Vordergrund ausgeführt wird, ist die app-Dienst-Lebensdauer des Aufrufers.
+    * Wenn der Aufrufer im Vordergrund ausgeführt wird, ist die Lebensdauer der app-Dienst des Aufrufers.
     * Wenn der Aufrufer im Hintergrund ist, erhält der app-Dienst nach 30 Sekunden ausgeführt. Das Entfernen einer Verzögerung stellt ein Mal zusätzlich 5Sekunden bereit.
 
     **OnTaskCanceled** wird aufgerufen, wenn die Aufgabe abgebrochen wird. Die Aufgabe wird abgebrochen, wenn die Client-app gibt den [AppServiceConnection](https://msdn.microsoft.com/library/windows/apps/dn921704)frei, die Client-app angehalten wird, das Betriebssystem heruntergefahren oder in den Ruhemodus geht oder das Betriebssystem nicht Ressourcen zum Ausführen der Aufgabe genügend.
@@ -204,7 +204,7 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
 
 Beachten Sie, dass **OnRequestReceived** **Async** ist, da wir eine awaitable [SendResponseAsync](https://msdn.microsoft.com/library/windows/apps/dn921722) in diesem Beispiel Methodenaufruf.
 
-Damit der Dienst **asynchronen** Methoden im **OnRequestReceived** -Handler verwenden kann, wird eine Verzögerung entnommen. Dadurch wird sichergestellt, dass der Aufruf von **OnRequestReceived** erst abgeschlossen wird, wenn die Nachricht verarbeitet wurde.  [SendResponseAsync](https://msdn.microsoft.com/library/windows/apps/dn921722) sendet das Ergebnis an den Aufrufer. **SendResponseAsync** signalisiert nicht den Abschluss des Aufrufs. [SendMessageAsync](https://msdn.microsoft.com/library/windows/apps/dn921712) wird durch den Abschluss der Verzögerung signalisiert, dass **OnRequestReceived** abgeschlossen wurde. Der Aufruf von **SendResponseAsync** ist in einem Versuch/final-Block eingeschlossen, da die Verzögerung abgeschlossen werden muss, auch wenn **SendResponseAsync** eine Ausnahme auslöst.
+Eine Verzögerung entnommen, damit der Dienst **Async** -Methoden im **OnRequestReceived** -Handler verwenden kann. Dadurch wird sichergestellt, dass der Aufruf von **OnRequestReceived** erst abgeschlossen wird, wenn die Nachricht verarbeitet wurde.  [SendResponseAsync](https://msdn.microsoft.com/library/windows/apps/dn921722) sendet das Ergebnis an den Aufrufer. **SendResponseAsync** signalisiert nicht den Abschluss des Aufrufs. [SendMessageAsync](https://msdn.microsoft.com/library/windows/apps/dn921712) wird durch den Abschluss der Verzögerung signalisiert, dass **OnRequestReceived** abgeschlossen wurde. Der Aufruf von **SendResponseAsync** ist in einem Versuch/final-Block eingeschlossen, da die Verzögerung abgeschlossen werden muss, auch wenn **SendResponseAsync** eine Ausnahme auslöst.
 
 App-Dienste verwenden [ValueSet](https://msdn.microsoft.com/library/windows/apps/dn636131) Objekte zum Austauschen von Informationen. Die Größe der Daten, die übergeben werden können, ist nur durch die Systemressourcen begrenzt. Es gibt keine vordefinierten Schlüssel zur Verwendung in Ihrem **ValueSet**. Sie müssen bestimmen, welche Schlüsselwerte Sie zum Definieren des Protokolls für Ihren App-Dienst verwenden. Dieses Protokoll muss beim Schreiben des Aufrufers berücksichtigt werden. In diesem Beispiel haben wir einen Schlüssel namens `Command` ausgewählt, dessen Wert angibt, ob der App-Dienst den Namen des Bestandselements oder seinen Preis bereitstellen soll. Der Index des Bestandsnamens wird unter dem Schlüssel `ID` gespeichert. Der Rückgabewert wird unter dem Schlüssel `Result` gespeichert.
 
@@ -214,9 +214,9 @@ Der Aufruf von [SendResponseAsync](https://msdn.microsoft.com/library/windows/ap
 
 ## <a name="deploy-the-service-app-and-get-the-package-family-name"></a>Bereitstellen der Dienstanbieter-App und Abrufen des Paketfamiliennamens
 
-Die app-Dienstanbieter muss bereitgestellt werden, bevor Sie sie von einem Client aus aufrufen können. Sie können durch die Auswahl **Erstellen > bereitstellen Lösung** in Visual Studio bereitstellen.
+Der app-Dienstanbieter muss bereitgestellt werden, bevor Sie sie von einem Client aus aufrufen können. Sie können durch die Auswahl **Erstellen > bereitstellen Lösung** in Visual Studio bereitstellen.
 
-Sie benötigen auch den paketfamiliennamen des app-Dienstanbieters, um sie aufrufen. Sie erhalten sie durch Öffnen des Projekts **"AppServiceProvider"** **Datei "Package.appxmanifest** " in der Entwurfsansicht (Doppelklicken Sie im **Projektmappen-Explorer**). Wählen Sie die Registerkarte " **Verpacken** ", kopieren Sie den Wert neben **-paketfamiliennamen ein,** und fügen Sie sie an einer beliebigen Stelle wie beispielsweise Editor für den Moment.
+Sie benötigen auch den paketfamiliennamen des app-Dienstanbieters, um sie aufrufen. Sie erhalten sie durch Öffnen des Projekts **"AppServiceProvider"** **Datei "Package.appxmanifest** " in der Entwurfsansicht (Doppelklicken sie im **Projektmappen-Explorer**). Wählen Sie die Registerkarte " **Verpacken** ", kopieren Sie den Wert neben **-paketfamiliennamen ein,** und fügen Sie ihn an einer beliebigen Stelle wie beispielsweise Editor für den Moment.
 
 ## <a name="write-a-client-to-call-the-app-service"></a>Schreiben eines Clients zum Aufrufen des App-Diensts
 
@@ -227,7 +227,7 @@ Sie benötigen auch den paketfamiliennamen des app-Dienstanbieters, um sie aufru
     using Windows.ApplicationModel.AppService;
     ```
 
-3.  Fügen Sie ein Textfeld **TextBox** und eine Schaltfläche, um **"MainPage.xaml"** genannt.
+3.  Fügen Sie ein Textfeld namens **Textfeld** und eine Schaltfläche, um **"MainPage.xaml"** hinzu.
 
 4.  Fügen Sie eine Schaltfläche click-Ereignishandler für die Schaltfläche **Button_Click**aufgerufen und Signatur des schaltflächenhandlers das Schlüsselwort **Async** hinzugefügt.
 
@@ -298,51 +298,51 @@ Sie benötigen auch den paketfamiliennamen des app-Dienstanbieters, um sie aufru
     Ersetzen Sie den Paketfamiliennamen in der Zeile `this.inventoryService.PackageFamilyName = "Replace with the package family name";` durch den Paketfamiliennamen des **AppServiceProvider**-Projekts, das Sie in [Bereitstellen der Dienstanbieter-App und Abrufen des Paketfamiliennamens](#deploy-the-service-app-and-get-the-package-family-name) erhalten haben.
 
     > [!NOTE]
-    > Achten Sie darauf, dass Sie in das String-Literal, anstatt sie in einer Variablen einfügen. Es wird nicht funktionieren, wenn Sie eine Variable verwenden.
+    > Achten Sie darauf, dass Sie in das Zeichenfolgenliteral, anstatt sie in einer Variablen einfügen. Es wird nicht funktionieren, wenn Sie eine Variable verwenden.
 
     Der Code richtet zunächst eine Verbindung mit dem App-Dienst ein. Die Verbindung bleibt offen, bis Sie `this.inventoryService` verwerfen. Name des app-Dienst muss übereinstimmen die `AppService` des Elements `Name` -Attribut, das Sie die **Datei "Package.appxmanifest** " des Projekts **"AppServiceProvider"** hinzugefügt. In diesem Beispiel ist dies `<uap3:AppService Name="com.microsoft.inventory"/>`.
 
-    Ein [ValueSet](https://msdn.microsoft.com/library/windows/apps/dn636131) mit dem Namen `message` wird erstellt, um den Befehl angeben, die wir an der app-Dienst senden möchten. Der Beispiel-App-Dienst erwartet einen Befehl, der angibt, welche der beiden Aktionen ausgeführt werden soll. Wir erhalten den Index aus dem Textfeld in der Client-app, und rufen Sie dann den Dienst mit den `Item` Befehl aus, um die Beschreibung des Elements zu erhalten. Anschließend wird der Aufruf mit dem Befehl `Price` ausgeführt, um den Preis des Artikels zu erhalten. Der Text der Schaltfläche wird auf das Ergebnis festgelegt.
+    Eine [ValueSet](https://msdn.microsoft.com/library/windows/apps/dn636131) mit dem Namen `message` wird erstellt, um den Befehl angeben, die wir an der app-Dienst senden möchten. Der Beispiel-App-Dienst erwartet einen Befehl, der angibt, welche der beiden Aktionen ausgeführt werden soll. Wir den Index aus dem Textfeld in der Client-app, und rufen Sie dann den Dienst mit den `Item` Befehl aus, um die Beschreibung des Elements zu erhalten. Anschließend wird der Aufruf mit dem Befehl `Price` ausgeführt, um den Preis des Artikels zu erhalten. Der Text der Schaltfläche wird auf das Ergebnis festgelegt.
 
     Da [AppServiceResponseStatus](https://msdn.microsoft.com/library/windows/apps/dn921724) nur angibt, ob das Betriebssystem den Aufruf mit dem App-Dienst verknüpfen konnte, muss der Schlüssel `Status` im [ValueSet](https://msdn.microsoft.com/library/windows/apps/dn636131) geprüft werden, den wir vom App-Dienst erhalten, um sicherzustellen, dass die Anforderung erfüllt werden konnte.
 
-6. Das Projekt **"ClientApp"** als Startprojekt festlegen (mit der rechten Maustaste im **Projektmappen-Explorer**- > **als Startprojekt festlegen**), und führen Sie die Lösung. Geben Sie 1 in das Textfeld ein, und klicken Sie auf die Schaltfläche. Der Dienst sollte „Stuhl: Preis = 88,99“ zurückgeben.
+6. Das Projekt **"ClientApp"** als Startprojekt festlegen (mit der rechten Maustaste im **Projektmappen-Explorer**- > **als Startprojekt festlegen**), und führen Sie die Projektmappe. Geben Sie 1 in das Textfeld ein, und klicken Sie auf die Schaltfläche. Der Dienst sollte „Stuhl: Preis = 88,99“ zurückgeben.
 
     ![Beispiel-App, die Stuhlpreis = 88,99 anzeigt](images/appserviceclientapp.png)
 
 Wenn der Aufruf des app-Diensts ein Fehler auftritt, überprüfen Sie in das Projekt **"ClientApp"** Folgendes:
 
 1.  Stellen Sie sicher, dass der paketfamilienname, der der bestandsdienstverbindung zugewiesen den paketfamiliennamen der app **"AppServiceProvider"** übereinstimmt. Finden Sie unter der Zeile in **Button\_Click** mit `this.inventoryService.PackageFamilyName = "...";`.
-2.  In **Button\_Click**stellen Sie sicher, dass der Name der app-Dienst, der der bestandsdienstverbindung zugewiesen ist den Namen des app-Diensts in der **"AppServiceProvider"** **Datei "Package.appxmanifest** " entspricht. Weitere Informationen finden Sie unter `this.inventoryService.AppServiceName = "com.microsoft.inventory";`.
+2.  In **Button\_Click**stellen Sie sicher, dass der app-Dienstname, der der bestandsdienstverbindung zugewiesen ist auf den Namen des app-Diensts in der **"AppServiceProvider"** **Datei "Package.appxmanifest** " entspricht. Weitere Informationen finden Sie unter `this.inventoryService.AppServiceName = "com.microsoft.inventory";`.
 3.  Stellen Sie sicher, dass die app **"AppServiceProvider"** bereitgestellt wurde. (Im **Projektmappen-Explorer**mit der rechten Maustaste der Projektmappe, und wählen Sie die **Projektmappe bereitstellen**).
 
 ## <a name="debug-the-app-service"></a>Debuggen des App-Diensts
 
 1.  Stellen Sie vor dem Debuggen sicher, dass die Projektmappe bereitgestellt wurde. Die App Dienstanbieter-App muss bereitgestellt werden, bevor der Dienst aufgerufen werden kann. (Klicken Sie in Visual Studio auf **Erstellen &gt; Projektmappe bereitstellen**.)
 2.  Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste in des Projekts **"AppServiceProvider"** , und wählen Sie **Eigenschaften**. Ändern Sie auf der Registerkarte **Debuggen** die **Startaktion** in **Eigenen Code zunächst nicht starten, sondern debuggen**. (Hinweis: wenn Sie nicht C++ zum Implementieren Ihres App-Dienstanbieters verwenden, müssen Sie auf der Registerkarte **Debuggen** die Option **Anwendung starten** auf **Nein** ändern).
-3.  Legen Sie im Projekt **"myappservice"** in der Datei **Inventory.cs** einen Haltepunkt im **OnRequestReceived**.
+3.  Legen Sie im Projekt **"myappservice"** in der Datei **Inventory.cs** einen Haltepunkt in **OnRequestReceived**.
 4.  Legen Sie das Projekt **"AppServiceProvider"** Startprojekt aus, und drücken **F5**.
-5.  Starten Sie **"ClientApp"** über das Startmenü (nicht über Visual Studio).
+5.  Starten Sie **"ClientApp"** über das Menü "Start" (nicht über Visual Studio).
 6.  Geben Sie 1 in das Textfeld ein, und klicken Sie auf die Schaltfläche. Der Debugger stoppt im App-Dienstaufruf am Haltepunkt in Ihrem App-Dienst.
 
 ## <a name="debug-the-client"></a>Debuggen des Clients
 
 1.  Folgen Sie zum Debuggen des Clients, der den App-Dienst aufruft, den Anweisungen im vorherigen Schritt.
-2.  Starten Sie **"ClientApp"** über das Startmenü.
-3.  Fügen Sie den Debugger an den Prozess **ClientApp.exe** (nicht der Prozess " **ApplicationFrameHost.exe** "). (Klicken Sie in Visual Studio auf **Debuggen &gt; An den Prozess anhängen**.)
-4.  Legen Sie im Projekt **"ClientApp"** einen Haltepunkt in **Button\_Click**.
-5.  Die Haltepunkte in der Client und der app-Dienst werden jetzt erreicht werden, wenn Sie geben Sie 1 in das Textfeld von **"ClientApp"** , und klicken Sie auf die Schaltfläche.
+2.  Starten Sie **"ClientApp"** über das Menü "Start".
+3.  Hängen Sie den Debugger an den Prozess **ClientApp.exe** (nicht der Prozess " **ApplicationFrameHost.exe** "). (Klicken Sie in Visual Studio auf **Debuggen &gt; An den Prozess anhängen**.)
+4.  Legen Sie im Projekt **"ClientApp"** einen Haltepunkt im **Button\_Click**fest.
+5.  Die Haltepunkte in den nachstehenden Client- und den app-Dienst werden jetzt erreicht werden, wenn Sie geben Sie 1 in das Textfeld von **"ClientApp"** , und klicken Sie auf die Schaltfläche.
 
 ## <a name="general-app-service-troubleshooting"></a>Allgemeine Problembehandlung von App-Diensten
 
-Wenn nach einem app-Dienst herstellen einer Verbindung mit den Status **AppUnavailable** auftritt, überprüfen Sie Folgendes:
+Wenn Sie einen Status **AppUnavailable** nach einem app-Dienst herstellen einer Verbindung mit auftreten, überprüfen Sie Folgendes:
 
 - Stellen Sie sicher, dass das App-Dienstanbieterprojekt und das App-Dienstprojekt bereitgestellt sind. Beide müssen bereitgestellt werden, bevor der Client ausgeführt werden kann, da andernfalls der Client keine Verbindung zulassen kann. Sie können von Visual Studio aus mithilfe von **Erstellen** > **Projektmappe bereitstellen** bereitstellen.
 - Klicken Sie im **Projektmappen-Explorer**sicher, dass Ihr app-dienstanbieterprojekt einen Projekt-zu-Projekt-Verweis auf das Projekt hat, das den app-Dienst implementiert.
-- Überprüfen Sie, ob die `<Extensions>` Eintrag, und die untergeordneten Elemente der Datei **"Package.appxmanifest"** in der app-dienstanbieterprojekts wie oben [Hinzufügen einer app-diensterweiterung zu "Package.appxmanifest"](#appxmanifest)angegeben hinzugefügt wurde.
-- Stellen Sie sicher, dass die [AppServiceConnection.AppServiceName](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appservice.appserviceconnection.appservicename) -Zeichenfolge in Ihrem Client, der die app-Dienstanbieter aufruft entspricht der `<uap3:AppService Name="..." />` in der app-dienstanbieterprojekt der **Datei "Package.appxmanifest** " angegeben.
+- Überprüfen Sie, ob die `<Extensions>` Eintrag, und die untergeordneten Elemente der Datei **"Package.appxmanifest"** der app-dienstanbieterprojekts wie oben [Hinzufügen einer app-diensterweiterung zu "Package.appxmanifest"](#appxmanifest)angegeben, gehören hinzugefügt worden.
+- Stellen Sie sicher, dass die [AppServiceConnection.AppServiceName](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appservice.appserviceconnection.appservicename) -Zeichenfolge in Ihrem Client, der den app-Dienstanbieter aufruft entspricht der `<uap3:AppService Name="..." />` in der app-dienstanbieterprojekt der **Datei "Package.appxmanifest** " angegeben.
 - Stellen Sie sicher, dass die [AppServiceConnection.PackageFamilyName](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appservice.appserviceconnection.packagefamilyname) der paketfamilienname, der die app-dienstanbieterkomponente wie oben angegeben [Hinzufügen eine app-diensterweiterung zu "Package.appxmanifest"](#appxmanifest) entspricht
-- Für Out-of-Proc app-Diensten wie in diesem Beispiel wird, überprüfen Sie, dass die `EntryPoint` Angabe in der `<uap:Extension ...>` Element der Ihr app-dienstanbieterprojekt der **Datei "Package.appxmanifest** " entspricht den Namespace und Klassennamen der öffentliche Klasse, die implementiert [IBackgroundTask](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask) in Ihrem app-Dienst-Projekt.
+- Für Out-of-Proc app-Dienste wie in diesem Beispiel wird, überprüfen Sie, dass die `EntryPoint` Angabe in der `<uap:Extension ...>` Element der Ihr app-dienstanbieterprojekt der **Datei "Package.appxmanifest** " entspricht den Namespace und Klassennamen der öffentliche Klasse, die Ihre app-Dienstprojekt implementiert [IBackgroundTask](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask) .
 
 ### <a name="troubleshoot-debugging"></a>Problembehandlung beim Debuggen
 
@@ -356,9 +356,9 @@ Wenn der Debugger nicht an Haltepunkten in Ihrem App-Dienstanbieter oder App-Die
 Dieses Beispiel ist eine Einführung in das Erstellen eines App-Diensts, das als Hintergrundaufgabe ausgeführt wird, und Aufrufen des Diensts in einer anderen App. Die wichtigsten Punkte zu beachten sind:
 
 * Erstellen Sie eine Hintergrundaufgabe zum Hosten des app-Diensts.
-* Hinzufügen der `windows.appService` Erweiterung für die **Datei "Package.appxmanifest** " des app-Dienstanbieters.
-* Erhalten Sie den paketfamiliennamen des app-Dienstanbieters, damit wir von der Client-app herstellen können.
-* Fügen Sie einen Projekt-zu-Projekt-Verweis von der app-dienstanbieterprojekt auf das app-Dienst-Projekt hinzu.
+* Hinzufügen der `windows.appService` Erweiterung des app-Dienstanbieters **Datei "Package.appxmanifest** ".
+* Erhalten Sie den paketfamiliennamen des app-Dienstanbieters, sodass wir von der Client-app herstellen können.
+* Fügen Sie einen Projekt-zu-Projekt-Verweis aus der app-dienstanbieterprojekt auf das app-Dienst-Projekt hinzu.
 * Verwenden Sie [Windows.ApplicationModel.AppService.AppServiceConnection](https://msdn.microsoft.com/library/windows/apps/dn921704) zum Aufrufen des Diensts.
 
 ## <a name="full-code-for-myappservice"></a>Vollständiger Code für „MyAppService”
