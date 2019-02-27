@@ -1,17 +1,11 @@
 ---
-description: Hier erfahren Sie, wie Sie eine UWP-app entwickeln.
+description: 'Hier erfahren Sie, wie Sie eine UWP-app zu entwickeln.'
 title: Entwickeln von UWP-Apps
 layout: LandingPage
-keywords: Uwp-app-Entwicklung threading Async Plattform Übersicht über die Portal entwickeln Entwickler
-ms.date: 3/29/2018
+keywords: Uwp-app-Entwicklung threading Async Plattform Übersicht über Portal entwickeln Entwickler
+ms.date: 03/29/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 615a5a0762cfa55d7b8be7ce392e02ee1802ded2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926376"
 ---
 <div> 
 <h1>Entwickeln von UWP-Apps</h1>
@@ -26,7 +20,7 @@ ms.locfileid: "8926376"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage" style="background-color: #f2f2f2">                 
-                            <img src="http://docs.microsoft.com//media/hubs/windows/win_developer-uwp.svg" alt=" "/>
+                            <img src="https://docs.microsoft.com//media/hubs/windows/win_developer-uwp.svg" alt=" "/>
                         </div>
                     </div>
                     <div class="cardText">
@@ -45,12 +39,12 @@ ms.locfileid: "8926376"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage" style="background-color: #f2f2f2">                
-                            <img src="http://docs.microsoft.com/media/illustrations/teams-fast-track.svg" alt=" " />
+                            <img src="https://docs.microsoft.com/media/illustrations/teams-fast-track.svg" alt=" " />
                         </div>
                     </div>                
                     <div class="cardText">
                         <h3>Portierungsleitfaden</h3>
-                        <p>Portieren Sie Ihre vorhandenen Windows Forms-, WPF-, Android oder iOS-app auf UWP. </p>
+                        <p>Schalten Sie Ihre vorhandenen Windows Forms-, WPF-, Android oder iOS-app zu UWP. </p>
                     </div>
                 </div>
             </div>
@@ -69,7 +63,7 @@ ms.locfileid: "8926376"
                 <div class="card">
                     <div class="cardText">
                         <h3>Windows UWP-Namespaces</h3>
-                        <p>Klassen, Strukturen, Schnittstellen, Methoden, Eigenschaften und Ereignisse, die die Windows-Runtime, sortiert nach Namespace bilden.</p>
+                        <p>Die Klassen, Strukturen, Schnittstellen, Methoden, Eigenschaften und Ereignisse, die die Windows-Runtime, sortiert nach Namespace bilden.</p>
                     </div>
                 </div>
             </div>
@@ -264,12 +258,12 @@ ms.locfileid: "8926376"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage" style="background-color: #f2f2f2">                 
-                            <img src="http://docs.microsoft.com/media/illustrations/sql-database-develop.svg" alt=" "/>
+                            <img src="https://docs.microsoft.com/media/illustrations/sql-database-develop.svg" alt=" "/>
                         </div>
                     </div>
                     <div class="cardText">
                         <h3>Beispiele</h3>
-                        <p> Hier erfahren Sie, wie Sie großartige apps für Windows zu erstellen, indem Sie in diesen Beispielen experimentieren. Diese Beispiele zeigen Ihnen, wie Features funktionieren, und Sie Schnelleinstieg in die Entwicklung eigener UWP-apps unterstützen.</p>
+                        <p> Erfahren Sie, wie Sie großartige apps für Windows zu entwerfen, indem Sie mit diesen Beispielen experimentieren. Diese Beispiele zeigen Ihnen, wie Features funktionieren, und helfen Sie Schnelleinstieg in die Entwicklung eigener UWP-apps.</p>
                     </div>
                 </div>
             </div>
@@ -283,12 +277,12 @@ ms.locfileid: "8926376"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage" style="background-color: #f2f2f2">                
-                            <img src="http://docs.microsoft.com/media/illustrations/sql-get-started-download.svg" alt=" " />
+                            <img src="https://docs.microsoft.com/media/illustrations/sql-get-started-download.svg" alt=" " />
                         </div>
                     </div>                
                     <div class="cardText">
                         <h3>Entwicklungstools</h3>
-                        <p>Abrufen von Visual Studio 2017, Windows 10-SDKS und andere Entwicklungstools.</p>
+                        <p>Abrufen von Visual Studio 2017, Windows 10 SDK und andere Entwicklungstools.</p>
                     </div>
                 </div>
             </div>

@@ -2,15 +2,15 @@
 title: Was ist neu in Windows-Dokumentation im Juli 2018 – Entwicklung von UWP-apps
 description: Neue Features, Videos, Beispiele und entwicklerleitfäden wurden in der Windows 10-Entwicklerdokumentation für Juli 2018 hinzugefügt.
 keywords: Neues in, Update, Features, Anleitungen für Entwickler, Windows 10, Juli
-ms.date: 7/11/2018
+ms.date: 07/11/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 83d890983cfe32aaf1204b21552a7d72d89d9675
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 22a3a9614a4488791a36f81a3d4dedac572111b4
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049637"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9115877"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a><span data-ttu-id="1c50d-104">Neuigkeiten in der Windows-Entwicklerdokumentation im Juli 2018</span><span class="sxs-lookup"><span data-stu-id="1c50d-104">What's New in the Windows Developer Docs in July 2018</span></span>
 

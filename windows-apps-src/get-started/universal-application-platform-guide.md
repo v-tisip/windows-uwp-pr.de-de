@@ -2,16 +2,16 @@
 title: Was ist eine Universelle Windows-Plattform (UWP)-App?
 description: Erfahren Sie mehr über Apps für die Universelle Windows-Plattform (UWP), die auf einer Vielzahl von Geräten unter Windows 10 ausgeführt werden können.
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
-ms.date: 5/7/2018
+ms.date: 05/07/2018
 ms.topic: article
 keywords: Windows 10, UWP, universal
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d6609d73090d7d981d992bef4ca8ce6be3cc20a
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: a4fb5020eafb838074b8dec43b8a5d07596ab7a0
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044554"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116312"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a><span data-ttu-id="d0333-104">Was ist eine Universelle Windows-Plattform (UWP)-App?</span><span class="sxs-lookup"><span data-stu-id="d0333-104">What's a Universal Windows Platform (UWP) app?</span></span>
 
