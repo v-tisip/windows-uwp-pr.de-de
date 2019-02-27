@@ -1,16 +1,16 @@
 ---
 title: PointOfService-Geräts beanspruchen und aktivieren Modell
-description: Erfahren Sie mehr über die PointOfService-Anspruch und Modell aktivieren
+description: Erfahren Sie mehr über PointOfService Anspruch und Modell aktivieren
 ms.date: 06/19/2018
 ms.topic: article
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
-ms.openlocfilehash: 7169848084b587793ba1537ea3d6ad78d31892d5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0e7d60c0b612a8067ac4c225dff9da5da428f1a1
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924946"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117650"
 ---
 # <a name="point-of-service-device-claim-and-enable-model"></a>POS-Gerät beanspruchen und aktivieren Modell
 
@@ -19,9 +19,9 @@ ms.locfileid: "8924946"
 Nachdem Sie erfolgreich ein PointOfService-Geräteobjekt erfolgreich erstellt haben, müssen Sie es mithilfe der entsprechenden Beanspruchungsmethode für den Gerätetyp beanspruchen, bevor Sie das Gerät für die Ein- und Ausgabe verwenden können.  Die Beanspruchung gewährt der Anwendung einen exklusiven Zugriff auf viele Funktionen des Geräts, um sicherzustellen, dass eine Anwendung die Verwendung des Geräts durch eine andere Anwendung nicht beeinträchtigt.  Es kann jeweils nur eine Anwendung die exklusive Verwendung eines PointOfService-Geräts beanspruchen. 
 
 > [!Note]
-> Die Aktion Anspruch stellt eine exklusive Sperre auf einem Gerät, aber nicht in den betriebsbereiten Zustand versetzt.  Weitere Informationen finden Sie in der [Gerät für die e/a-Vorgänge zu aktivieren](#Enable-device-for-I/O-operations) .
+> Die Aktion Anspruch legt eine exklusive Sperre auf einem Gerät, aber nicht in den betriebsbereiten Zustand versetzt.  Weitere Informationen finden Sie unter [Aktivieren Geräts für die e/a-Vorgänge](#enable-device-for-io-operations) .
 
-### <a name="apis-used-to-claim--release"></a>APIs verwendet, um beanspruchen / release
+### <a name="apis-used-to-claim--release"></a>APIs verwendet, um beanspruchen / freigeben
 
 |Gerät|Anspruch | Version | 
 |-|:-|:-|
@@ -34,7 +34,7 @@ Nachdem Sie erfolgreich ein PointOfService-Geräteobjekt erfolgreich erstellt ha
 
 ## <a name="enable-device-for-io-operations"></a>Aktivieren des Geräts für die e/a-Vorgänge
 
-Die Aktion Anspruch einfach stellt einen exklusiven Zugriff auf das Gerät, aber nicht in den betriebsbereiten Zustand versetzt.  Um Ereignisse empfangen oder keine Ausgabevorgänge ausführen, müssen Sie das Gerät mit **EnableAsync**aktivieren.  Im Gegensatz dazu können Sie **DisableAsync** beenden Überwachen von Ereignissen über das verwendete Gerät oder eine Ausgabe aufrufen.  Sie können auch **IsEnabled** verwenden, um den Zustand des Geräts zu ermitteln.
+Die Aktion Anspruch einfach stellt einen exklusiven Zugriff auf das Gerät, aber nicht in den betriebsbereiten Zustand versetzt.  Um Ereignisse empfangen oder keine Ausgabevorgänge ausführen, müssen Sie das Gerät die **EnableAsync**aktivieren.  Im Gegensatz dazu können Sie **DisableAsync** , reagiert auf Ereignisse vom Gerät oder eine Ausgabe aufrufen.  Sie können auch **IsEnabled** verwenden, um den Zustand des Geräts zu ermitteln.
 
 ### <a name="apis-used-enable--disable"></a>Verwendete APIs aktivieren / deaktivieren
 
@@ -47,9 +47,9 @@ Die Aktion Anspruch einfach stellt einen exklusiven Zugriff auf das Gerät, aber
 |ClaimedPosPrinter | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.disableasyc) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.isenabled) |
 |
 
-¹ Zeilenanzeige erfordert keine explizit aktivieren, das Gerät für die e/a-Vorgänge.  Aktivieren von wird automatisch durch die PointOfService-LineDisplay-APIs die e/a ausführen ausgeführt.
+¹ Zeilenanzeige ist nicht explizit aktivieren, das Gerät für die e/a-Vorgänge erforderlich.  Aktivieren der wird automatisch durch die PointOfService-LineDisplay-APIs die e/a ausführen ausgeführt.
 
-## <a name="code-sample-claim-and-enable"></a>Beispiel: beanspruchen und aktivieren
+## <a name="code-sample-claim-and-enable"></a>Codebeispiel: beanspruchen und aktivieren
 
 Im folgenden Beispiel ist gezeigt, wie Sie ein Strichcodescanner-Gerät beanspruchen, nachdem Sie erfolgreich ein Strichcodescanner-Objekt erstellt haben.
 
@@ -107,7 +107,7 @@ Der erste Schritt ist einen Ereignishandler erstellen, die auf das Ereignis **Re
     }
 ```
 
-Registrieren Sie den Ereignishandler im Zusammenhang mit dem-Gerät
+Anschließend registrieren Sie den Ereignishandler im Zusammenhang mit dem-Gerät
 
 ```Csharp
     BarcodeScanner barcodeScanner = await BarcodeScanner.FromIdAsync(DeviceId);

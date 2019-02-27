@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 4de36ba8c87c764ff1280e2c886d1ff8692b3246
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 7b8bb652c3d8b978d631da2e529662a455310458
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9046034"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117850"
 ---
 # <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a>Portieren von Windows-Runtime 8.x-XAML und -UI zu UWP
 
@@ -86,7 +86,7 @@ Sie müssen Ihren Code ändern, die mit Charms integriert, aber Sie müssen eini
 
 ## <a name="controls-and-control-styles-and-templates"></a>Steuerelemente und Steuerelementstile/-vorlagen
 
-Eine universellen 8.1-app auf Windows 10 wird das 8.1 aussehen und Verhalten in Bezug auf die Steuerelemente beibehalten. Wenn Sie diese app in eine Windows 10-app portieren, sind aber einige Unterschiede beim Aussehen und Verhalten zu beachten. Die Architektur und das Design von Steuerelementen ist für Windows 10-apps im Wesentlichen unverändert, damit die Änderungen hauptsächlich um [Design-Sprache](#design-language-in-windows-10), Vereinfachung und Verbesserung der benutzerfreundlichkeit werden.
+Eine universellen 8.1-app auf Windows 10 wird das 8.1 aussehen und Verhalten in Bezug auf die Steuerelemente beibehalten. Wenn Sie diese app in eine Windows 10-app portieren, sind aber einige Unterschiede beim Aussehen und Verhalten zu beachten. Die Architektur und das Design von Steuerelementen ist für Windows 10-apps im Wesentlichen unverändert, damit die Änderungen hauptsächlich um die Design-Sprache, Vereinfachung und Verwendbarkeit Verbesserungen sind.
 
 **Hinweis:**  der PointerOver-Ansichtszustand ist in benutzerdefinierten Stile/Vorlagen in Windows 10-apps und Windows-Runtime 8.x-apps, nicht jedoch in Windows Phone Store-apps relevant. Aus diesem Grund (und die aufgrund der Systemressourcenschlüssel, die für Windows 10-apps unterstützt werden), wird empfohlen, dass Sie erneut die benutzerdefinierten Stile/Vorlagen aus Ihrer Windows-Runtime 8.x-apps verwenden, wenn Sie Ihre app zu Windows 10 portieren.
 Wenn Sie, dass möchten Ihre benutzerdefinierten Stile/Vorlagen die aktuelle Gruppe der Ansichtszustände, und sind gelten vorgenommene leistungsverbesserungen für den standardmäßigen Stilen/Vorlagen, und klicken Sie dann eine Kopie der neuen Windows 10-Standardvorlage bearbeiten und erneut anwenden Ihrer Anpassungen darauf. Ein Beispiel für eine Leistungsverbesserung besteht darin, dass alle **Border**-Elemente, die ein **ContentPresenter**- Element oder Panel-Element bisher eingeschlossen haben, entfernt wurden. Der Rahmen wird jetzt von einem untergeordneten Element gerendert.
@@ -122,7 +122,7 @@ Weitere Informationen zu Steuerelementen für UWP-Apps finden Sie unter [Steuere
 
 ##  <a name="design-language-in-windows10"></a>Design-Sprache in Windows 10
 
-Es gibt einige kleine, aber wichtige Unterschiede bei der entwurfssprache universellen 8.1-apps und Windows 10-apps. Alle Details finden Sie unter [Design](https://dev.windows.com/design). Trotz der Änderungen bei der Entwurfssprache gelten nach wie vor dieselben Designprinzipien: Gestalten Sie Ihre App mit Liebe zum Detail, versuchen Sie aber, alles möglichst einfach zu halten, indem Sie sich auf den Inhalt, nicht auf das Chrom konzentrieren, visuelle Elemente weitgehend reduzieren und für die digitale Welt authentisch bleiben. Nutzen Sie insbesondere bei der Typografie eine visuelle Hierarchie. Entwerfen Sie Ihre App basierend auf einem Raster, und erwecken Sie Ihre Benutzeroberflächen mit flüssigen Animationen zum Leben.
+Es gibt einige kleine, aber wichtige Unterschiede bei der entwurfssprache universellen 8.1-apps und Windows 10-apps. Alle Details finden Sie unter [Design](https://developer.microsoft.com/en-us/windows/apps/design). Trotz der Änderungen bei der Entwurfssprache gelten nach wie vor dieselben Designprinzipien: Gestalten Sie Ihre App mit Liebe zum Detail, versuchen Sie aber, alles möglichst einfach zu halten, indem Sie sich auf den Inhalt, nicht auf das Chrom konzentrieren, visuelle Elemente weitgehend reduzieren und für die digitale Welt authentisch bleiben. Nutzen Sie insbesondere bei der Typografie eine visuelle Hierarchie. Entwerfen Sie Ihre App basierend auf einem Raster, und erwecken Sie Ihre Benutzeroberflächen mit flüssigen Animationen zum Leben.
 
 ## <a name="effective-pixels-viewing-distance-and-scale-factors"></a>Effektive Pixel, Abstand zum Bildschirm und Skalierungsfaktoren
 
@@ -247,7 +247,7 @@ Die Design-Sprache wird für Windows 10 wurde weiterentwickelt, und daher haben 
 
 In anderen Fällen werden die Ressourcenschlüssel nicht mehr unterstützt. Der XAML-Markup-Editor in Visual Studio hebt Verweise auf Ressourcenschlüssel hervor, die nicht aufgelöst werden können. Der XAML-Markup-Editor unterstreicht z.B. einen Verweis auf den Stilschlüssel `ListViewItemTextBlockStyle` mit einer roten Wellenlinie. Wird dieser Fehler nicht behoben, wird die App sofort beendet, wenn Sie versuchen, sie im Emulator oder auf dem Gerät bereitzustellen. Daher ist es wichtig, die Richtigkeit des XAML-Markups sicherzustellen. Sie werden feststellen, dass sich solche Fehler mit Visual Studio hervorragend abfangen lassen.
 
-Für weiterhin unterstützte Schlüssel bedeuten Änderungen der Entwurfssprache, dass sich die Eigenschaften geändert haben, die von einigen Stilen festgelegt werden. Beispielsweise `TitleTextBlockStyle` legt **FontSize** auf 14.667px in einer Windows-Runtime 8.x-app und 18.14px in einer Windows Phone Store-app. Aber das gleiche Format legt **FontSize** auf einem viel größeren 24 in einer Windows 10-app. Überprüfen Sie Ihre Entwürfe und Layouts, und verwenden Sie die passenden Stile an den richtigen Stellen. Weitere Informationen finden Sie unter [Richtlinien für Schriftarten](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) und [Entwerfen von UWP-Apps](https://dev.windows.com/design).
+Für weiterhin unterstützte Schlüssel bedeuten Änderungen der Entwurfssprache, dass sich die Eigenschaften geändert haben, die von einigen Stilen festgelegt werden. Beispielsweise `TitleTextBlockStyle` legt **FontSize** auf 14.667px in einer Windows-Runtime 8.x-app und 18.14px in einer Windows Phone Store-app. Aber das gleiche Format legt **FontSize** auf einem viel größeren 24 in einer Windows 10-app. Überprüfen Sie Ihre Entwürfe und Layouts, und verwenden Sie die passenden Stile an den richtigen Stellen. Weitere Informationen finden Sie unter [Richtlinien für Schriftarten](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) und [Entwerfen von UWP-Apps](https://developer.microsoft.com/en-us/windows/apps/design).
 
 Im Anschluss finden Sie die vollständige Liste der nicht mehr unterstützten Schlüssel.
 

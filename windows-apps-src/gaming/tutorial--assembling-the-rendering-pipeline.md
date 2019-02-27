@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Rendern
 ms.localizationpriority: medium
-ms.openlocfilehash: 6724aedf898706dd4c5bf728616c918d64b2fb32
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4c16f1fbb55374b1d04c9fc9f5f7eae72ad19b00
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931295"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117780"
 ---
 # <a name="rendering-framework-i-intro-to-rendering"></a>Rendering-Framework I: Einführung in das Rendering
 
@@ -71,10 +71,10 @@ void App::Initialize(
 
 ## <a name="display-the-graphics-by-rendering-the-frame"></a>Anzeigen die Grafiken: Rendern des Frames
 
-Die Spieleszene muss gerendert werden, wenn das Spiel gestartet wird. Die Anweisungen für das Rendern beginnen in der [__GameMain::Run__](#gameamainrun-method)-Methode, wie unten dargestellt.
+Die Spieleszene muss gerendert werden, wenn das Spiel gestartet wird. Die Anweisungen für das Rendern beginnen in der [__GameMain::Run__](#gamemainrun-method)-Methode, wie unten dargestellt.
 
 Der einfache Fluss ist:
-1. __Aktualisieren__
+1. __Update__
 2. __Rendern__
 3. __Darstellen__
 
@@ -130,7 +130,7 @@ Weitere Informationen über das Aktualisieren der Spielzustände finden Sie im A
 
 Das Rendern wird durch Aufrufen der [__GameRenderer::Render__](#gamerendererrender-method)-Methode im __GameMain::Run__ implementiert.
 
-Wenn [Stereorendering](#stereo-rendering) aktiviert ist, gibt es zwei Renderingdurchgänge: einen für das rechte Auge und einen für das linke Auge. In jedem Renderingdurchgang binden wir das Renderziel und die [Tiefenschablonen-Ansicht](#depth-stencil-view) für das Gerät. Wir löschen danach die Tiefenschablonen-Ansicht.
+Wenn [Stereorendering](#stereo-rendering) aktiviert ist, gibt es zwei Renderingdurchgänge: einen für das rechte Auge und einen für das linke Auge. In jedem Renderingdurchgang binden wir das Renderziel und die Tiefenschablonen-Ansicht für das Gerät. Wir löschen danach die Tiefenschablonen-Ansicht.
 
 > [!Note]
 > Stereorendering kann mit anderen Methoden wie z.B. einem einzigen Stereo-Durchlauf mit Vertex-Instanzerstellung oder Geometry-Shader erzielt werden. Die beiden Renderingdurchgangs-Methoden sind langsamer, aber einfacher zum Stereo-Rendering.
@@ -146,7 +146,7 @@ In diesem Beispielspiel verwendet der Renderer ein Standard-Vertex-Layout für a
 
 Legen Sie den Direct3D-Kontext fest, um ein Eingabevertex-Layout zu verwenden. Eingabevertex-Objekte beschreiben das Streamen der Vertexpufferdaten in die [Renderingpipeline](#rendering-pipeline). 
 
-Als Nächstes legen wir den Direct3D-Kontext mithilfe der [Konstantenpuffer](#constant-buffers) fest, die zuvor definiert wurden und vom [Vertex-Shader](#vertex-shaders-and-pixel-shaders) der Pipeline-Phase und dem [Pixel-Shader](#vertex-shaders-and-pixel-shaders) der Pipeline-Phase verwendet werden. 
+Als Nächstes legen wir den Direct3D-Kontext mithilfe der Konstantenpuffer fest, die zuvor definiert wurden und vom [Vertex-Shader](#vertex-shaders-and-pixel-shaders) der Pipeline-Phase und dem [Pixel-Shader](#vertex-shaders-and-pixel-shaders) der Pipeline-Phase verwendet werden. 
 
 > [!Note]
 > Weitere Informationen zur Definition der Konstantenpuffer finden Sie unter [Rendering-Framework II: Spiel-Rendering](tutorial-game-rendering.md).
@@ -338,11 +338,11 @@ Beim Rendern der Szene durchlaufen Sie alle Objekte, die gerendert werden müsse
 * Der __m\_constantBufferChangesEveryPrim__ enthält Parameter für jedes Objekt.  Beinhaltet das Objekt für die globale Transformationsmatrix sowie die grundlegenden Eigenschaften wie Farbe und Glanzlichterexponenten für die Berechnung der Beleuchtung.
 * Legen Sie den Direct3D-Kontext für das Eingabevertex-Layout für die Gitterobjektdaten fest, das in die Eingabeassemblerphase (IA)-Phase der [Renderingpipeline](#rendering-pipeline) gestreamt werden soll
 * Legen Sie den Direct3D-Kontext für den [Indexpuffer](#index-buffer) in der IA-Phase fest. Geben Sie die Grundtyp-Informationen an: Typ, Datenreihenfolge.
-* Übermitteln Sie einen Draw-Aufruf zum Zeichnen des indizierten, nicht instanziierten Grundtyps. Die __GameObject::Render__-Methode aktualisiert den [Grundtypkonstantenpuffer](#constant-buffer-or-shader-constant-buffer) mit den spezifischen Daten eines Grundtyps. Dadurch erfolgt ein __DrawIndexed__-Aufruf für den Kontext, um die Geometrie jedes Grundtyps zu zeichnen. Durch diesen Draw-Aufruf werden Befehle und Daten in die Warteschlange der GPU eingereiht (entsprechend der Parametrisierung durch die Konstantenpufferdaten). Jeder Draw-Aufruf führt einmal den [Vertexshader](#vertex-shaders-and-pixel-shaders) für jeden Vertex und anschließend einmal den [Pixelshader](#vertex-shaders-and-pixel-shaders) für jedes Pixel der einzelnen Dreiecke im Grundtyp aus. Die Texturen sind Teil des Zustands, den der Pixelshader für das Rendering verwendet.
+* Übermitteln Sie einen Draw-Aufruf zum Zeichnen des indizierten, nicht instanziierten Grundtyps. Die __GameObject::Render__-Methode aktualisiert den [Grundtypkonstantenpuffer](#constant-buffer-or-shader-constant-buffer) mit den spezifischen Daten eines Grundtyps. Dadurch erfolgt ein __DrawIndexed__-Aufruf für den Kontext, um die Geometrie jedes Grundtyps zu zeichnen. Durch diesen Draw-Aufruf werden Befehle und Daten in die Warteschlange der GPU eingereiht (entsprechend der Parametrisierung durch die Konstantenpufferdaten). Jeder Draw-Aufruf führt einmal den Vertexshader für jeden Vertex und anschließend einmal den [Pixelshader](#vertex-shaders-and-pixel-shaders) für jedes Pixel der einzelnen Dreiecke im Grundtyp aus. Die Texturen sind Teil des Zustands, den der Pixelshader für das Rendering verwendet.
 
 Gründe für die Verwendung mehrerer Konstantenpuffer:
     * Im Spiel werden mehrere Konstantenpuffer verwendet; diese müssen aber nur einmal pro Grundtyp aktualisiert werden. Sie können sich die Konstantenpuffer als Eingabe für die für jeden Grundtyp ausgeführten Shader vorstellen. Einige Daten sind statisch (__m\_constantBufferNeverChanges__), einige Daten (etwa die Position der Kamera) sind innerhalb eines Frames konstant (__m\_constantBufferChangesEveryFrame__), und einige Daten wie Farbe und Texturen gelten speziell für den Grundtyp (__m\_constantBufferChangesEveryPrim__).
-    * Der [Spielrenderer](#renderer) teilt diese Eingaben in verschiedene Konstantenpuffer auf, um die von CPU und GPU verwendete Speicherbandbreite zu optimieren. Durch diesen Ansatz lässt sich auch die Datenmenge minimieren, die von der GPU nachverfolgt werden muss. Die GPU verfügt über eine große Befehlswarteschlange und dieser Befehl bei jedem Aufruf von __Draw__ zusammen mit den dazugehörigen Daten in die Warteschlange eingereiht wird. Wenn das Spiel den Grundtypkonstantenpuffer aktualisiert und den nächsten __Draw__-Befehl ausgibt, fügt der Grafiktreiber diesen Befehl und die dazugehörigen Daten der Warteschlange hinzu. Zeichnet das Spiel 100Grundtypen, kann die Warteschlange 100Kopien der Konstantenpufferdaten enthalten. Um die an die GPU gesendete Datenmenge zu minimieren, wird im Spiel ein separater Grundtypkonstantenpuffer verwendet, der nur die Aktualisierungen für jeden Grundtyp enthält.
+    * Der Spielrenderer teilt diese Eingaben in verschiedene Konstantenpuffer auf, um die von CPU und GPU verwendete Speicherbandbreite zu optimieren. Durch diesen Ansatz lässt sich auch die Datenmenge minimieren, die von der GPU nachverfolgt werden muss. Die GPU verfügt über eine große Befehlswarteschlange und dieser Befehl bei jedem Aufruf von __Draw__ zusammen mit den dazugehörigen Daten in die Warteschlange eingereiht wird. Wenn das Spiel den Grundtypkonstantenpuffer aktualisiert und den nächsten __Draw__-Befehl ausgibt, fügt der Grafiktreiber diesen Befehl und die dazugehörigen Daten der Warteschlange hinzu. Zeichnet das Spiel 100Grundtypen, kann die Warteschlange 100Kopien der Konstantenpufferdaten enthalten. Um die an die GPU gesendete Datenmenge zu minimieren, wird im Spiel ein separater Grundtypkonstantenpuffer verwendet, der nur die Aktualisierungen für jeden Grundtyp enthält.
 
 #### <a name="gameobjectrender-method"></a>GameObject::Render-Methode
 
@@ -626,7 +626,7 @@ Jede Grafikkarte implementiert eine gewisse DirectX-Funktion, abhängig von den 
 
 Mit der Featureebene können Sie bei der Erstellung eines Geräts versuchen, ein Gerät für die Featureebene zu erstellen, die Sie anfordern möchten. Wenn die Geräteerstellung funktioniert, ist die Featureebene vorhanden, andernfalls wird die Featureebene von der Hardware nicht unterstützt. Sie können entweder versuchen, ein Gerät auf einer niedrigeren Featureebene neu zu erstellen oder Sie können die Anwendung beenden. Beispielsweise muss die Featureebene 12\_0 Direct3D11.3 oder Direct3D12 und Shadermodell 5.1 ausführen. Weitere Informationen finden Sie unter [Direct3D-Featureebenen: Übersicht über jede Featureebene](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx#Overview).
 
-Mithilfe von featureebenen, können Sie eine Anwendung für Direct3D9 oder Microsoft Direct3D10, Direct3D11 entwickeln und führen Sie diese auf 9, 10 oder 11 Hardware (mit einigen Ausnahmen). Weitere Informationen finden Sie unter [Direct3D-Featureebenen](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx).
+Mithilfe von featureebenen, können Sie eine Anwendung für Direct3D9, Microsoft Direct3D10 oder Direct3D11 entwickeln und diese auf 9, 10 oder 11 Hardware (mit einigen Ausnahmen) ausführen. Weitere Informationen finden Sie unter [Direct3D-Featureebenen](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx).
 
 ### <a name="stereo-rendering"></a>Stereorendering
 

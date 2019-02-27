@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows10, UWP
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 ms.localizationpriority: medium
-ms.openlocfilehash: 008dce5ffc3824d49830bc368a3eaa9d55b7d229
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2d4739442414b02358f3afea8967b0fc404ff7f9
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8948022"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117820"
 ---
 # <a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Windows-Apps-Konzeptzuordnung für Android- und iOS-Entwickler
 
@@ -43,7 +43,7 @@ Siehe auch die Portierungsinformationen in [Wechsel von iOS zu UWP](ios-to-uwp-r
 <td align="left"><strong>Entwurfssprache.</strong><br><br>Eine Reihe von Konventionen für das Aussehen und Verhalten von Apps auf der Plattform.</td>
 <td align="left">Die Richtlinien von <strong>Material Design für Android</strong> bieten eine visuelle Sprache für Android-Designer und -Entwickler.</td>
 <td align="left">Die <strong>Richtlinien für Eingabegeräte</strong> bieten Empfehlungen für iOS-Designer und -Entwickler.</td>
-<td align="left">Der Artikel zum <a href="https://dev.windows.com/design"><strong>Entwerfen einer UWP-App-Benutzeroberfläche für Windows</strong></a> zeigt Ihnen, wie Sie eine App erstellen, die auf allen Windows 10-Geräten fantastisch aussieht. Dort finden Sie Grundlagen zum Benutzeroberflächenentwurf, Techniken für reaktionsfähiges Design und eine umfassende Liste ausführlicher Richtlinien.<br/></td>
+<td align="left">Der Artikel zum <a href="https://developer.microsoft.com/en-us/windows/apps/design"><strong>Entwerfen einer UWP-App-Benutzeroberfläche für Windows</strong></a> zeigt Ihnen, wie Sie eine App erstellen, die auf allen Windows 10-Geräten fantastisch aussieht. Dort finden Sie Grundlagen zum Benutzeroberflächenentwurf, Techniken für reaktionsfähiges Design und eine umfassende Liste ausführlicher Richtlinien.<br/></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Markupsprache für die Benutzeroberfläche.</strong> <br><br>Eine Markupsprache, mit der die Benutzeroberfläche und ihre Komponenten gerendert und beschrieben werden. Jede Plattform bietet einen Editor für die visuelle Bearbeitung und Markupbearbeitung.<br/></td>

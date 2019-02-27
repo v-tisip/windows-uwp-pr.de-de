@@ -1,16 +1,16 @@
 ---
 title: Problembehandlung bei der Installation der App-Installer-Datei
 description: Allgemeine Probleme beim Querladen von Anwendungen mit der App-Installer-Datei.
-ms.date: 5/2/2018
+ms.date: 05/02/2018
 ms.topic: article
 keywords: windows 10, uwp, app-installer, AppInstaller, querladen
 ms.localizationpriority: medium
-ms.openlocfilehash: d4c3aa690dd45a50e6f33d664fbc6cc4503e93f8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f74a7bbfdfd5abe6a32c0ca3d81000e6f2d4758d
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937738"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116142"
 ---
 # <a name="troubleshoot-installation-issues-with-the-app-installer-file"></a>Problembehandlung bei der Installation der App-Installer-Datei
 
@@ -72,7 +72,7 @@ Wenn die App-Installer-App die App nicht installieren kann, helfen diese Schritt
 
 ### <a name="verify-app-package-file-installation"></a>Überprüfen Sie die Installation der app-Paket
 
-- Laden Sie die app-Paket-Datei in einen lokalen Ordner, und versuchen Sie sie mithilfe des [Add-AppxPackage](https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=win10-ps) -PowerShell-Befehl installieren.
+- Herunterladen der app-Paketdatei in einen lokalen Ordner, und versuchen Sie es mit dem [Add-AppxPackage](https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=win10-ps) -PowerShell-Befehl installieren.
 
 - Laden Sie die `.appinstaller`-Datei in einen lokalen Ordner herunter und versuchen Sie sie mithilfe des `Add-AppxPackage -Appinstaller`-PowerShell-Befehls zu installieren.
 

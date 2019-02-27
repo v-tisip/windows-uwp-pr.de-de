@@ -5,12 +5,12 @@ keywords: Gehostete Web-App, HWA, REST-API, Einzelseiten-App, SPA
 ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f60eb37d7bff1187e282f5af2207c6df92f4ec24
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.openlocfilehash: 4c76f0da8c3ac1d50ccd2d328dd321df9aa9bd3e
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114576"
+ms.locfileid: "9117720"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>Erstellen einer Web-App mit einer einzelnen Seite mit REST API-Backend
 
@@ -40,7 +40,7 @@ Wenn Sie den Azure-Teil beenden (oder verschieben) möchten, überspringen Sie e
 
 Zunächst erstellen wir eine einfache Speicherspiel-API, um unsere Arbeitsspeicherspiele-Web-App anzutreiben. Wir verwenden [Swagger](https://swagger.io/), um unsere API zu definieren und Gerüst-Code und eine Web-Benutzeroberfläche für das manuelle Testen zu generieren.
 
-Wenn Sie diesen Abschnittüberspringen und direkt zu [Teil II: Erstellen einer Einzelseiten-Web-Anwendung](#part-ii-build-a-single-page-web-appl) fortfahren möchten, gelangen Sie hier zum [fertigen Code für Teil I](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/backend). Folgen Sie den Anweisungen der *Infodatei*, um den Code lokal auszuführen, oder finden Sie weitere Informationen unter *5. Ihren API-Dienst in Azure hosten und CORS* aktivieren, um ihn in Azure auszuführen.
+Wenn Sie diesen Abschnittüberspringen und direkt zu [Teil II: Erstellen einer Einzelseiten-Web-Anwendung](#part-ii-build-a-single-page-web-application) fortfahren möchten, gelangen Sie hier zum [fertigen Code für Teil I](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/backend). Folgen Sie den Anweisungen der *Infodatei*, um den Code lokal auszuführen, oder finden Sie weitere Informationen unter *5. Ihren API-Dienst in Azure hosten und CORS* aktivieren, um ihn in Azure auszuführen.
 
 ### <a name="game-overview"></a>Spielübersicht
 

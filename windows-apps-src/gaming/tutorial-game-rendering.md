@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Rendern
 ms.localizationpriority: medium
-ms.openlocfilehash: f73665e60513e4f8465be3dbe69f792af285a8e1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 108e9bf21b0552ac7f88721bf4b1ee72ca2a5e2c
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934645"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117750"
 ---
 # <a name="rendering-framework-ii-game-rendering"></a>Rendering-Framework II: Spiel-Rendering
 
@@ -42,7 +42,7 @@ Hier einige Konzepte, die Sie verwenden können, um den Renderer für Ihr Spiel 
     * Durch die Verwendung mehrerer Konstantenpuffer für unterschiedliche Häufigkeiten kann die Menge an Daten reduziert werden, die pro Frame an die GPU gesendet werden müssen. In diesem Beispiel werden die Konstanten basierend auf der Häufigkeit, mit der sie aktualisiert werden müssen, auf verschiedene Puffer verteilt. Dies ist die empfohlene Methode für die Direct3D-Programmierung. 
     * In diesem Beispielspiel sind 4 Konstantenpuffer definiert.
         1. __m\_constantBufferNeverChanges__ enthält die Beleuchtungsparameter. Es wird einmal in der Methode __FinalizeCreateGameDeviceResources__ festgelegt und ändert sich nie wieder.
-        2. __m\_constantBufferChangeOnResize__ enthält die Projektionsmatrix. Die Projektionsmatrix hängt von der Größe und dem Seitenverhältnis des Fensters ab. Sie wird in [__CreateWindowSizeDependentResources__](#createwindowsizedependentresources-method) festgelegt und aktualisiert, nachdem Ressourcen in die Methode [__FinalizeCreateGameDeviceResources__](#finalizecreategamedeviceresources-method) geladen wurden. Beim Rendern in 3D wird sie auch zweimal pro Frame geändert.
+        2. __m\_constantBufferChangeOnResize__ enthält die Projektionsmatrix. Die Projektionsmatrix hängt von der Größe und dem Seitenverhältnis des Fensters ab. Sie wird in [__CreateWindowSizeDependentResources__](#createwindowsizedependentresource-method) festgelegt und aktualisiert, nachdem Ressourcen in die Methode [__FinalizeCreateGameDeviceResources__](#finalizecreategamedeviceresources-method) geladen wurden. Beim Rendern in 3D wird sie auch zweimal pro Frame geändert.
         3. __m\_constantBufferChangesEveryFrame__ enthält die Ansichtsmatrix. Diese Matrix hängt von der Kameraposition und der Blickrichtung (der Projektionsnormalen) ab und ändert sich einmal pro Frame in __Render__-Methode. Dies wurde in __Rendering-Framework I: Einführung in das Rendering__ in Verbindung mit der Methode [__GameRenderer::Render__](tutorial--assembling-the-rendering-pipeline.md#gamerendererrender-method) bereits erläutert.
         4. __m\_constantBufferChangesEveryPrim__ enthält die Modellmatrix und die Materialeigenschaften jedes Grundtyps. Die Modellmatrix transformiert Scheitelpunkte aus lokalen Koordinaten in globale Koordinaten. Diese Konstanten gelten speziell für die einzelnen Grundtypen und werden für jeden Draw-Aufruf aktualisiert. Dies wurde in __Rendering-Framework I: Einführung in das Rendering__ unter [Rendern der Grundtypen](tutorial--assembling-the-rendering-pipeline.md#primitive-rendering) bereits erläutert.
 * Shaderressourcenobjekte, die Texturen für die Grundtypen enthalten, werden in dieser Klasse ebenfalls definiert.
@@ -158,7 +158,7 @@ GameRenderer::GameRenderer(const std::shared_ptr<DX::DeviceResources>& deviceRes
 Im Spielbeispiel (und in der Vorlage __DirectX 11-App (Universal Windows)__ von Visual Studio) wird das Erstellen und Laden von Spielressourcen mithilfe dieser beiden Methoden implementiert, die vom __GameRenderer__-Konstruktor aufgerufen werden. :
 
 * [__CreateDeviceDependentResources__](#createdevicedependentresources-method)
-* [__CreateWindowSizeDependentResources__](#createwindowsizedependentresources-method)
+* [__CreateWindowSizeDependentResources__](#createwindowsizedependentresource-method)
 
 ## <a name="createdevicedependentresources-method"></a>CreateDeviceDependentResources-Methode
 
@@ -590,7 +590,7 @@ Fenstergrößenressourcen werden auf folgende Weise aktualisiert:
 
 Für dieses Spielbeispiel sind mehrere Methodenaufrufe mit der Methode [__FinalizeCreateGameDeviceResources__](#finalizecreategamedeviceresources-method) identisch. Eine Erläuterung des Codes finden Sie im vorherigen Abschnitt.
 
-Die Anpassungen für die HUD- und Overlay-Fenstergröße des Spiels werden unter [Hinzufügen einer Benutzerschnittstelle](#tutorial--adding-a-user-interface) behandelt.
+Die Anpassungen für die HUD- und Overlay-Fenstergröße des Spiels werden unter [Hinzufügen einer Benutzerschnittstelle](tutorial--adding-a-user-interface.md) behandelt.
 
 ```cpp
 // Initializes view parameters when the window size changes.

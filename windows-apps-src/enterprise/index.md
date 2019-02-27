@@ -4,32 +4,12 @@ description: Diese Roadmap enthält eine Übersicht über wichtige Unternehmensf
 title: Enterprise
 ms.date: 08/30/2018
 ms.topic: article
-keywords: Windows10, UWP
+keywords: 'Windows10, UWP'
 ms.localizationpriority: medium
-ms.openlocfilehash: a2d5db17be1367deea66ff2762d0350931e1861e
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058581"
 ---
 # <a name="enterprise"></a>Enterprise
 
-Dieser Artikel enthält eine Übersicht über wichtige Unternehmensfeatures durch die universelle Windows-Plattform (UWP) für Windows 10-apps bereitgestellt.
-
-## <a name="whats-new-and-recent-for-enterprise-applications"></a>Was ist neu und unternehmensanwendungen kürzlich verwendet
-
-> [!div class="checklist"]
-> * [Windows Template Studio](#template-studio)
-> * [Erstellen von Benutzeroberflächen, die Desktop-Stil-Steuerelemente](#desktop-style-UI)
-> * [Steuerelemente zur Unterstützung von Enterprise-Szenarien](#enterprise)
-> * [Windows-UI-Bibliothek](#UI-library)
-> * [UWP-Steuerelemente in Desktopanwendungen](#xaml-islands)
-> * [.NET Standard 2.0](#standard)
-> * [SQL Server-Konnektivität](#sql-server)
-> * [MSIX-Bereitstellung](#MSIX)
-
-Ein Video, das einige dieser Features ausführlich veranschaulicht, finden Sie [Schnell erstellen LOB Applications mit UWP und Visual Studio](https://channel9.msdn.com/Events/Build/2018/BRK3502).
+Dieser Artikel enthält eine Übersicht über wichtige Unternehmensfeatures durch die universelle Windows-Plattform (UWP) für Windows 10-apps bereitgestellt. Ein Video, das einige dieser Features ausführlich veranschaulicht, finden Sie [Schnell erstellen LOB Applications mit UWP und Visual Studio](https://channel9.msdn.com/Events/Build/2018/BRK3502).
 
 <a id="template-studio" />
 

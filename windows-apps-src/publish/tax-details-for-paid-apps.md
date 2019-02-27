@@ -1,17 +1,17 @@
 ---
 Description: To understand your tax considerations for price selection, payout implications, and tax responsibility, see your countries/regions of distribution in the tables below.
-title: Steuerinformationen
+title: Steuerdetails
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
 ms.date: 01/31/2019
 ms.topic: article
 keywords: Windows10, UWP, Steuern, App-Steuern, Steuergesetze, E-Commerce-Erweiterung, Steuersatz
 ms.localizationpriority: medium
-ms.openlocfilehash: cf57fa923297b8e4a57d7c5ca4668868bfae7038
-ms.sourcegitcommit: b9ee49402db7a8999cade1c5cf7f7b6ac4d783db
+ms.openlocfilehash: e5ada027b835e852d1db728ef124a798540abdf7
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "9042490"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117760"
 ---
 # <a name="tax-details-for-windows-appgame-developers-and-azure-marketplace-publishers"></a>Steuerinformationen Sie für Entwickler von Windows-app-Spiel und Azure Marketplace-Herausgeber
 
@@ -223,7 +223,7 @@ Um Ihre steuerlichen Aspekte bei der preisfestlegung verstehen und steuerliche V
 | Slowenien                         | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70% des festgelegten Preises abzgl. 22% Steuer | Microsoft          |
 | Salomonen                  | Der festgelegte Preis ist der endgültige Verkaufspreis und beinhaltet alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Somalia                          | Der festgelegte Preis ist der endgültige Verkaufspreis und beinhaltet alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
-| Südafrika                     | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions) | 70% des festgelegten Preises                 | Entwickler          |
+| Südafrika                     | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions-for-windows-appgame-developers) | 70% des festgelegten Preises                 | Entwickler          |
 | Spanien                            | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70% des festgelegten Preises abzgl. 21% Steuer | Microsoft          |
 | Sri Lanka                        | Der festgelegte Preis ist der endgültige Verkaufspreis und beinhaltet alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Suriname                         | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
@@ -257,7 +257,7 @@ Um Ihre steuerlichen Aspekte bei der preisfestlegung verstehen und steuerliche V
 | Vanuatu                          | Der festgelegte Preis ist der endgültige Verkaufspreis und beinhaltet alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Vatikanstadt                     | Der festgelegte Preis ist der endgültige Verkaufspreis und beinhaltet alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Venezuela                        | Der festgelegte Preis ist der endgültige Verkaufspreis und beinhaltet alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
-| Vietnam                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions) | 70% des festgelegten Preises                 | Entwickler          |
+| Vietnam                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions-for-windows-appgame-developers) | 70% des festgelegten Preises                 | Entwickler          |
 | Wallis und Futuna                | Der festgelegte Preis ist der endgültige Verkaufspreis und beinhaltet alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Jemen                            | Der festgelegte Preis ist der endgültige Verkaufspreis und beinhaltet alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Sambia                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
