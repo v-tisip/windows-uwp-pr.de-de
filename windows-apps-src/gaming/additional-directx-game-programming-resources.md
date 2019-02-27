@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Programmierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c69d317f920e5b829eb5dea796b7930cc387203
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 84d5068c2f474af22d789dea6428f911087f9ff0
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044321"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114446"
 ---
 # <a name="game-programming-resources"></a>Ressourcen für die Spieleprogrammierung
 
@@ -34,15 +34,15 @@ Weitere Informationen zur Spieleprogrammierung unter Windows finden Sie in den f
 ## <a name="blogs"></a>Blogs
 
 
--   [Spiele für Windows und das DirectX SDK]( http://go.microsoft.com/fwlink/p/?LinkID=288873)
--   [Entwicklerblog für DirectX]( http://go.microsoft.com/fwlink/p/?LinkID=288874)
--   [Shawn Hargreaves Blog]( http://go.microsoft.com/fwlink/p/?LinkID=288872) (Infos zu XNA-Spielen).
+-   [Spiele für Windows und das DirectX SDK]( https://go.microsoft.com/fwlink/p/?LinkID=288873)
+-   [Entwicklerblog für DirectX]( https://go.microsoft.com/fwlink/p/?LinkID=288874)
+-   [Shawn Hargreaves Blog]( https://go.microsoft.com/fwlink/p/?LinkID=288872) (Infos zu XNA-Spielen).
 
 ## <a name="toolkits"></a>Toolkits
 
 
--   [DirectX-Toolkit](  http://go.microsoft.com/fwlink/p/?LinkID=248929)
--   [DirectXTex-Texturverarbeitungsbibliothek](  http://go.microsoft.com/fwlink/p/?LinkID=248926)
+-   [DirectX-Toolkit](  https://go.microsoft.com/fwlink/p/?LinkID=248929)
+-   [DirectXTex-Texturverarbeitungsbibliothek](  https://go.microsoft.com/fwlink/p/?LinkID=248926)
 -   Microsoft Visual Studio-[Grafikdiagnose](https://msdn.microsoft.com/library/windows/apps/hh873207.aspx)
 -   [Win2D](https://github.com/Microsoft/Win2D) –Einfach zu verwendende Windows-Runtime-API für 2D-Grafikrendering im unmittelbaren Modus mit GPU-Beschleunigung.
 -   [ANGLE für Microsoft Store](https://go.microsoft.com/fwlink/p/?linkid=618387) - Ausführung von OpenGL ES-Inhalten unter Windows, indem OpenGL ES-API-Aufrufe in DirectX 11-API-Aufrufe übersetzen.

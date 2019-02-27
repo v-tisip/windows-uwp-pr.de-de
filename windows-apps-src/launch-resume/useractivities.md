@@ -5,12 +5,12 @@ keywords: benutzeraktivität, benutzeraktivitäten, zeitachse, cortana aufgaben 
 ms.date: 04/27/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e1c2a3da3711bbc5335a9c44a4b280e3934adac
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 2756231b067176da66c6dbcedf7a1452d5d109f4
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046200"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114546"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>Benutzeraktivitäten geräteübergreifend fortsetzen
 
@@ -34,7 +34,7 @@ Wenn Sie mit einer **UserActivity** interagieren, indem Sie [UserActivity.Create
 
 1. Der [ActivationUri](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activationuri#Windows_ApplicationModel_UserActivities_UserActivity_ActivationUri) wird verwendet, um die Anwendung in einem bestimmten Kontext fortzusetzen. Normalerweise wird dieser Link in Form eines Protokollhandlers für ein Schema (z.B. "my-App://page2?action=edit") oder eines App-URI-Handlers (z. B. http://constoso.com/page2?action=edit) angezeigt.
 2. [VisualElements](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.visualelements) stellt eine Klasse bereit, die es dem Benutzer ermöglicht, eine Aktivität visuell mit einem Titel, einer Beschreibung oder Adaptive Karten-Elementen zu identifizieren.
-3. In [Content](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.content#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_Content) können Sie Metadaten für die Aktivität speichern, die zum Gruppieren und Abrufen von Aktivitäten in einem bestimmten Kontext verwendet werden können. Häufig handelt es sich hierbei um [http://schema.org](https://schema.org)-Daten.
+3. In [Content](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.content#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_Content) können Sie Metadaten für die Aktivität speichern, die zum Gruppieren und Abrufen von Aktivitäten in einem bestimmten Kontext verwendet werden können. Häufig handelt es sich hierbei um [https://schema.org](https://schema.org)-Daten.
 
 So fügen Sie Ihrer App eine **UserActivity** hinzu:
 

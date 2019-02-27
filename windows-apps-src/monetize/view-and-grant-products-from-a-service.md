@@ -6,12 +6,12 @@ ms.date: 08/01/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Sammlungs-API, Microsoft Store-Einkaufs-API, Produkte anzeigen, Produkte gewähren
 ms.localizationpriority: medium
-ms.openlocfilehash: a749550c1dc644c4a9fb3f91530503adf192246e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 0bf85a73cb35044b4be2282c9a13c1e65b836a92
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050260"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114506"
 ---
 # <a name="manage-product-entitlements-from-a-service"></a>Verwalten von Produktansprüchen aus einem Dienst
 
@@ -253,5 +253,5 @@ Hier ein Beispiel für einen decodierten Satz von Microsoft Store-ID-Schlüssela
 * [Ändern des Abrechnungszustands eines Abonnements für einen Benutzer](change-the-billing-state-of-a-subscription-for-a-user.md)
 * [Verlängern eines Microsoft Store-ID-Schlüssels](renew-a-windows-store-id-key.md)
 * [Integrieren von Anwendungen in Azure Active Directory](https://go.microsoft.com/fwlink/?LinkId=722502)
-* [Grundlegendes zum AzureActiveDirectory-Anwendungsmanifest]( http://go.microsoft.com/fwlink/?LinkId=722500)
+* [Grundlegendes zum AzureActiveDirectory-Anwendungsmanifest]( https://go.microsoft.com/fwlink/?LinkId=722500)
 * [Unterstützte Token- und Anspruchstypen](https://go.microsoft.com/fwlink/?LinkId=722501)

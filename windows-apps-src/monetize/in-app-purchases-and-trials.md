@@ -6,12 +6,12 @@ ms.date: 05/09/2018
 ms.topic: article
 keywords: windows10, uwp, In-app-käufe, IAPs-add-ons, Testversionen, verbrauchbar, dauerhaft, abonnement
 ms.localizationpriority: medium
-ms.openlocfilehash: 9891205d4fdc8110cb727fb5caabbff6c5f4f948
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5a8bad5207c5907beb91e5664b4bc7e140ab036b
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945992"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114676"
 ---
 # <a name="in-app-purchases-and-trials"></a>In-App-Käufe und Testversionen
 
@@ -19,7 +19,7 @@ Das Windows SDK enthält APIs, mit denen Sie die folgenden Features implementier
 
 * **In-App-Käufe**&nbsp;&nbsp;Unabhängig davon, ob Ihre App kostenlos oder kostenpflichtig ist, können Sie Inhalte oder neue App-Funktionen (wie das Freischalten des nächsten Levels eines Spiels) direkt in der App verkaufen.
 
-* **Testfunktionen**&nbsp;&nbsp;, wenn Sie [Ihre app als eine kostenlose Testversion im Partner Center zu konfigurieren](../publish/set-app-pricing-and-availability.md#free-trial), Sie motivieren, können Ihre Kunden zum Kauf der Vollversion Ihrer App, indem Sie einige Features den Testzeitraum einschränken oder ausschließen. Außerdem können Sie Features wie Banner oder Wasserzeichen aktivieren, die nur in der Testversion angezeigt werden, bevor ein Kunde Ihre App kauft.
+* **Testfunktionen**&nbsp;&nbsp;Wenn Sie [Ihre app als eine kostenlose Testversion im Partner Center zu konfigurieren](../publish/set-app-pricing-and-availability.md#free-trial), Sie motivieren, können Ihre Kunden zum Kauf der Vollversion Ihrer App durch einige Features den Testzeitraum einschränken oder ausschließen. Außerdem können Sie Features wie Banner oder Wasserzeichen aktivieren, die nur in der Testversion angezeigt werden, bevor ein Kunde Ihre App kauft.
 
 Dieser Artikel enthält eine Übersicht darüber, wie In-App-Käufe und Testversionen in UWP-Apps funktionieren.
 
@@ -29,12 +29,12 @@ Dieser Artikel enthält eine Übersicht darüber, wie In-App-Käufe und Testvers
 
 Je nachdem, für welche Version von Windows10 Ihre App ausgelegt ist, können Sie mithilfe zweier verschiedener Namespaces Ihren UWP-Apps In-App-Käufe und Testversionen hinzufügen. Obwohl die APIs in diesen Namespaces den gleichen Ziele dienen, sind sie unterschiedlich gestaltet, und der Code ist zwischen den beiden APIs nicht kompatibel.
 
-* **[Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)**&nbsp;&nbsp;Ab Windows10 Version1607 können mithilfe der API in diesem Namespace In-App-Käufe und Testversionen in den Apps implementiert werden. Es wird empfohlen, die Member in diesem Namespace zu verwenden, wenn Ihr App-Projekt auf **Windows 10 Anniversary Edition (10.0; Build 14393)** oder höher in Visual Studio ausgerichtet ist. Dieser Namespace unterstützt die neuesten Add-on-Typen, z. B. die Store-verwaltete Endverbraucher-Add-Ons und wurde entwickelt, um die Kompatibilität mit künftigen Arten von Produkten und Features von Partner Center und dem Store unterstützt werden. Weitere Informationen zu diesem Namespace finden Sie in diesem Artikel im Abschnitt [In-App-Käufe und Testversionen mit dem Windows.Services.Store-Namespace](#api_intro).
+* **[Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)**&nbsp;&nbsp;Ab Windows10 Version1607 können mithilfe der API in diesem Namespace In-App-Käufe und Testversionen in den Apps implementiert werden. Es wird empfohlen, die Member in diesem Namespace zu verwenden, wenn Ihr App-Projekt auf **Windows 10 Anniversary Edition (10.0; Build 14393)** oder höher in Visual Studio ausgerichtet ist. Dieser Namespace unterstützt die neuesten Add-on-Typen, wie Store verwaltete konsumierbare Add-ons, und wurde entwickelt, um die Kompatibilität mit künftigen Arten von Produkten und Features von Partner Center und dem Store unterstützt werden. Weitere Informationen zu diesem Namespace finden Sie in diesem Artikel im Abschnitt [In-App-Käufe und Testversionen mit dem Windows.Services.Store-Namespace](#api_intro).
 
 * **[Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)**&nbsp;&nbsp;Alle Versionen von Windows10 unterstützen in diesem Namespace zudem eine ältere API für In-App-Käufe und Testversionen. Informationen zum **Windows.ApplicationModel.Store**-Namespace finden Sie unter [In-App-Käufe und Testversionen mit dem Windows.ApplicationModel.Store-Namespace](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
 > [!IMPORTANT]
-> Der The **Windows.ApplicationModel.Store**-Namespace wird nicht mehr mit neuen Funktionen aktualisiert, daher wird empfohlen, dass Sie stattdessen den **Windows.Services.Store**-Namespace falls möglich für Ihre App verwenden. Der **Windows.ApplicationModel.Store** -Namespace wird nicht unterstützt, in der Windows-desktopanwendungen, die die [Desktop-Brücke](https://developer.microsoft.com/windows/bridges/desktop) verwenden oder in apps oder Spiele, die eine Sandbox-Entwicklung in Partner Center verwenden (z. B. Dies ist der Fall für alle, die von Spielen integriert mit Xbox Live).
+> Der The **Windows.ApplicationModel.Store**-Namespace wird nicht mehr mit neuen Funktionen aktualisiert, daher wird empfohlen, dass Sie stattdessen den **Windows.Services.Store**-Namespace falls möglich für Ihre App verwenden. Der **Windows.ApplicationModel.Store** -Namespace wird nicht unterstützt, in der Windows-desktopanwendungen, die die [Desktop-Brücke](https://developer.microsoft.com/windows/bridges/desktop) verwenden oder in apps oder Spiele, die eine Sandbox-Entwicklung im Partner Center verwenden (z. B. Dies ist der Fall für alle, die von Spielen integriert mit Xbox Live).
 
 <span id="concepts" />
 
@@ -50,7 +50,7 @@ Für UWP-Apps können die folgenden Arten von Add-Ons angeboten werden.
 
 | Add-On-Typ |  Beschreibung  |
 |---------|-------------------|
-| Gebrauchsgut  |  Ein Add-on, das für die Lebensdauer beibehalten wird, Sie [Geben Sie im Partner Center](../publish/enter-iap-properties.md). <p/><p/>Standardmäßig laufen Gebrauchsgut-Add-Ons nie ab, in diesem Fall können sie nur einmal gekauft werden. Wenn Sie eine bestimmte Dauer für das Add-On angeben, kann der Benutzer das Add-On erneut kaufen, nachdem es abgelaufen ist. |
+| Gebrauchsgut  |  Ein Add-on, das für die Lebensdauer, Sie [Geben Sie im Partner Center beibehalten](../publish/enter-iap-properties.md). <p/><p/>Standardmäßig laufen Gebrauchsgut-Add-Ons nie ab, in diesem Fall können sie nur einmal gekauft werden. Wenn Sie eine bestimmte Dauer für das Add-On angeben, kann der Benutzer das Add-On erneut kaufen, nachdem es abgelaufen ist. |
 | Vom Entwickler verwaltetes Endverbraucher-Add-On  |  Ein Add-On, das erworben, verwendet (konsumiert) und anschließend erneut gekauft werden kann. Sie sind dafür verantwortlich, das Guthaben des Benutzers an Elementen, die das Add-On darstellen, nachzuverfolgen.<p/><p/>Wenn der Benutzer Elemente verwendet, die mit dem Add-On verknüpft sind, sind Sie dafür verantwortlich, das Guthaben des Benutzers zu verwalten und den Kauf des Add-Ons als erfüllt an den Store zu melden, nachdem der Benutzer alle Elemente verwendet hat. Der Benutzer kann das Add-On erst dann erneut kaufen, nachdem Ihre App den vorherigen Kauf des Add-Ons als erfüllt gemeldet hat. <p/><p/>Wenn beispielsweise das Add-On 100 Münzen in einem Spiel darstellt und der Benutzer 10 Münzen nutzt, muss die App oder der Dienst den neuen Restbetrag von 90 Münzen für den Benutzer verwalten. Nachdem der Benutzer alle 100 Münzen genutzt hat, muss die App das Add-On als erfüllt melden, und danach kann der Benutzer das Add-On für 100 Münzen erneut kaufen.    |
 | Vom Store verwaltetes Endverbraucher-Add-On  |  Ein Add-On, das gekauft, verwendet und jederzeit erneut gekauft werden kann. Der Store verfolgt das Guthaben des Benutzers an Elementen, die das Add-On darstellen.<p/><p/>Wenn der Benutzer Elemente verwendet, die mit dem Add-On verknüpft sind, sind Sie dafür verantwortlich, diese Elemente als erfüllt an den Store zu melden, und der Store aktualisiert das Konto des Benutzers. Der Benutzer kann das Add-On beliebig oft kaufen (er muss die Elemente nicht zuerst verwenden). Ihre App kann das aktuelle Guthaben für den Benutzer jederzeit abfragen. <p/><p/> Wenn das Add-On beispielsweise eine anfängliche Menge von 100 Münzen in einem Spiel darstellt und der Benutzer 50 Münzen nutzt, meldet die App dem Store, dass 50 Einheiten des Add-Ons verwendet wurden, und der Store aktualisiert den Restbetrag. Wenn der Benutzer dann Ihr Add-on erneut kauft, um 100 weitere Münzen zu erhalten, hat er jetzt 150 Münzen insgesamt. <p/><p/>**Hinweis**&nbsp;&nbsp;Um vom Store verwaltete Endverbraucher-Add-Ons verwenden zu können, muss Ihre App für **Windows 10 Anniversary Edition (10.0; Build 14393)** oder höher in Visual Studio ausgerichtet sein. Zudem muss der **Windows.Services.Store**-Namespace anstatt von **Windows.ApplicationModel.Store**-Namespace verwendet werden.  |
 | Abonnement | Ein dauerhaftes Add-On, das dem Kunden in regelmäßigen Abständen in Rechnung gestellt wird, damit das Add-On weiterhin verwendet werden kann. Der Kunde kann das Abonnement jederzeit kündigen, um weitere Gebühren zu vermeiden. <p/><p/>**Hinweis**&nbsp;&nbsp;Um Abonnement-Add-Ons verwenden zu können, muss Ihre App in Visual Studio für **Windows 10 Anniversary Edition (10.0; Build 14393)** oder höher entwickelt worden sein. Zudem muss der Namespace **Windows.Services.Store** statt dem Namespace **Windows.ApplicationModel.Store** verwendet werden.  |
@@ -158,7 +158,7 @@ So schränken Sie mit dem **Windows.Services.Store**-Namespace Features in einer
 
 Wenn Ihre App APIs im **Windows.Services.Store**-Namespace zum Implementieren von In-App-Käufe und Testfunktionen verwendet, müssen Sie Ihre App im Store veröffentlichen und die App auf Ihrem Entwicklungsgerät herunterladen, um seine Lizenz für Tests zu verwenden. Gehen Sie folgendermaßen vor, um Ihren Code zu testen:
 
-1. Wenn Ihre app noch nicht veröffentlicht und im Store ist, stellen Sie sicher, dass Ihre app im Partner Center [Übermitteln Ihrer app](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) [Zertifizierungskit für Windows-Apps](https://developer.microsoft.com/windows/develop/app-certification-kit) Mindestanforderungen erfüllt, und stellen Sie sicher, dass Ihre app den Zertifizierungsprozess bestanden hat. Optional können Sie [die App so konfigurieren, daher sie während der Tests im Store nicht auffindbar](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) ist. Bitte beachten Sie die ordnungsgemäße Konfiguration des [Flight-Pakete](../publish/package-flights.md). Falsch konfigurierte Paket, die Pakete sind möglicherweise nicht heruntergeladen werden.
+1. Wenn Ihre app noch nicht veröffentlicht und im Store ist, stellen Sie sicher, dass Ihre app die minimale [Zertifizierungskit für Windows-Apps](https://developer.microsoft.com/windows/develop/app-certification-kit) , [übermitteln Sie Ihre app](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) im Partner Center erfüllt, und stellen Sie sicher, dass Ihre app den Zertifizierungsprozess bestanden hat. Optional können Sie [die App so konfigurieren, daher sie während der Tests im Store nicht auffindbar](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) ist. Bitte beachten Sie die korrekte Konfiguration des [Flight-Pakete](../publish/package-flights.md). Falsch konfigurierte Paket, die Pakete sind möglicherweise nicht heruntergeladen werden.
 
 2. Stellen Sie anschließend sicher, dass die folgenden Schritte durchgeführt wurden:
 
@@ -166,7 +166,7 @@ Wenn Ihre App APIs im **Windows.Services.Store**-Namespace zum Implementieren vo
     * Wenn Ihre app ein Add-on, das Kunden kaufen können, [Erstellen Sie eine Add-on-Übermittlung für Ihre app im Partner Center](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions)bietet.
     * Wenn Sie einige Features in einer Testversion Ihrer App, [Konfigurieren Sie Ihre app als eine kostenlose Testversion im Partner Center](../publish/set-app-pricing-and-availability.md#free-trial)einschränken oder ausschließen möchten.
 
-3. Öffnen Sie Ihr Projekt in Visual Studio, klicken Sie auf das **Menü „Projekt“**, zeigen Sie auf **Store**, und klicken Sie dann auf **App mit Store verknüpfen**. Führen Sie die Schritte im Assistenten für das app-Projekt mit der app im Partner Center-Konto verknüpfen, die Sie zum Testen verwenden möchten.
+3. Öffnen Sie Ihr Projekt in Visual Studio, klicken Sie auf das **Menü „Projekt“**, zeigen Sie auf **Store**, und klicken Sie dann auf **App mit Store verknüpfen**. Führen Sie die Schritte im Assistenten, um das app-Projekt mit der app im Partner Center-Konto zu verknüpfen, die Sie zum Testen verwenden möchten.
     > [!NOTE]
     > Wenn Sie das Projekt nicht mit einer App im Store verknüpfen, legen die [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Methoden die **ExtendedError**-Eigenschaften ihrer Rückgabewerte auf den Fehlercodewert 0x803F6107 fest. Dieser Wert gibt an, dass die App im Store nicht bekannt ist.
 4. Falls noch nicht geschehen, installieren Sie die App aus dem im vorherigen Schritt angegebenen Store, führen Sie die App einmal aus, und schließen Sie dann diese App. Damit wird sichergestellt, dass auf dem Gerät für die Entwicklung eine gültige Lizenz für die App installiert wird.
@@ -175,7 +175,7 @@ Wenn Ihre App APIs im **Windows.Services.Store**-Namespace zum Implementieren vo
     > [!NOTE]
     > Nachdem Sie diese Schritte ausgeführt haben, können Sie mit dem Aktualisieren des App-Codes fortfahren und dann das aktualisierte Projekt auf dem Entwicklungscomputer debuggen, ohne neue App-Pakete an den Store zu übermitteln. Sie müssen die Store-Version Ihrer App nur einmal auf den Entwicklungscomputer herunterladen, um die lokale Lizenz zu erhalten, die zum Testen verwendet wird. Sie übermitteln neue App-Pakete erst an den Store, nachdem Sie die Tests abgeschlossen haben und Ihren Kunden App-Features zur Verfügung stellen möchten, die sich auf In-App-Käufe oder Testversionen beziehen.
 
-Wenn Ihre App den **Windows.ApplicationModel.Store**-Namespace verwendet, können Sie die [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766)-Klasse in Ihrer App nutzen, um Lizenzinformationen während der Tests vor dem Übermitteln an den Store simulieren zu können. Weitere Informationen finden Sie unter [Erste Schrittemit den Klassen CurrentApp und CurrentAppSimulator] (in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#get-started-with-the-currentapp-and-currentappsimulator-classes).  
+Wenn Ihre App den **Windows.ApplicationModel.Store**-Namespace verwendet, können Sie die [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766)-Klasse in Ihrer App nutzen, um Lizenzinformationen während der Tests vor dem Übermitteln an den Store simulieren zu können. Weitere Informationen finden Sie in der [Erste Schritte mit den Klassen CurrentApp und CurrentAppSimulator](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#get-started-with-the-currentapp-and-currentappsimulator-classes).  
 
 > [!NOTE]
 > Der **Windows.Services.Store**-Namespace stellt keine Klasse bereit, mit der Sie während der Tests Lizenzinformationen simulieren können. Wenn den **Windows.Services.Store**-Namespace zum Implementieren von In-App-Käufe oder Testversionen verwendet, müssen Sie Ihre App im Store wie oben beschrieben veröffentlichen und die App auf Ihrem Entwicklungsgerät herunterladen, um seine Lizenz für Tests zu verwenden.
@@ -259,7 +259,7 @@ Für Produkte mit SKUs und Verfügbarkeiten haben die SKUs und Verfügbarkeiten 
 Wenn Sie ein Add-on für Ihre Kunden im Kontext Ihrer App zur Verfügung stellen möchten, müssen Sie [Geben Sie eine eindeutige Produkt-ID](../publish/set-your-add-on-product-id.md#product-id) für Ihr Add-on Wenn Sie im Partner Center [Erstellen Ihrer Add-on-Übermittlung](../publish/add-on-submissions.md) . Sie können diese Produkt-ID verwenden, um in Ihrem Code auf das Add-On zu verweisen. Die Szenarien, in denen Sie die Produkt-ID verwenden können, hängen jedoch davon ab, welchen Namespace Sie für In-App-Käufe in Ihrer App verwenden.
 
 > [!NOTE]
-> Die Produkt-ID, die Sie im Partner Center Geben Sie für ein Add-on unterscheidet sich von der des [Store-ID](#store-ids). Die Store-ID wird von Partner Center generiert.
+> Die Produkt-ID, die Sie im Partner Center für ein Add-on eingeben unterscheidet sich von der des [Store-ID](#store-ids)ab. Die Store-ID wird von Partner Center generiert.
 
 ### <a name="apps-that-use-the-windowsservicesstore-namespace"></a>Apps, die den Windows.Services.Store-Namespace verwenden
 

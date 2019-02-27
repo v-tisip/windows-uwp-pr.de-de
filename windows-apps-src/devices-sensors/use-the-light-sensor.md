@@ -6,12 +6,12 @@ ms.date: 06/06/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 47092c128fe3a3855d7e32706451545b357c39c4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7aeb60d67f0cdee77772797816e45fdd9bdc41b4
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928826"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114536"
 ---
 # <a name="use-the-light-sensor"></a>Verwenden des Lichtsensors
 
@@ -31,7 +31,7 @@ Der Umgebungslichtsensor ist einer von vielen Sensoren, mit denen Apps auf Verä
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Sie sollten mit Extensible Application Markup Language (XAML), Microsoft für VisualC++ c# und Ereignissen vertraut sein.
+Sie sollten mit Extensible Application Markup Language (XAML), Microsoft für VisualC++- und Ereignissen vertraut sein.
 
 Das verwendete Gerät oder der Emulator muss einen Umgebungslichtsensor unterstützen.
 
@@ -63,7 +63,7 @@ Dieser Abschnitt ist in zwei Unterabschnitte unterteilt: Der erste Unterabschnit
     using Windows.UI.Core; // Required to access the core dispatcher object
     using Windows.Devices.Sensors; // Required to access the sensor platform and the ALS
 
-    // The Blank Page item template is documented at http://go.microsoft.com/fwlink/p/?linkid=234238
+    // The Blank Page item template is documented at https://go.microsoft.com/fwlink/p/?linkid=234238
 
     namespace App1
     {

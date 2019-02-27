@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a7f080a3de18ec0acc8fe68d8f0282d92f46125
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: eb0d48cee4fe6698ec371c882c913affa5af7729
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050993"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114566"
 ---
 # <a name="composition-brushes"></a>Kompositionspinsel
 Alles, was von einer UWP-Anwendung auf dem Bildschirm sichtbar wird angezeigt, da es mit einem Pinsel gezeichnet wurde. Pinsel können Sie Benutzer Objekte der Benutzeroberfläche (UI) mit Inhalt, angefangen bei einfachen, einfarbige Farben zu Bildern oder Zeichnungen für komplexe Effekte Kette zeichnen. In diesem Thema werden die Begriffe zum Zeichnen mit CompositionBrush.
@@ -191,7 +191,7 @@ CompositionSurfaceBrush _videoBrush;
 _mediaPlayer = new MediaPlayer();
 
 // Get a source from a URI. This could also be from a file via a picker or a stream
-var source = MediaSource.CreateFromUri(new Uri("http://go.microsoft.com/fwlink/?LinkID=809007&clcid=0x409"));
+var source = MediaSource.CreateFromUri(new Uri("https://go.microsoft.com/fwlink/?LinkID=809007&clcid=0x409"));
 var item = new MediaPlaybackItem(source);
 _mediaPlayer.Source = item;
 _mediaPlayer.IsLoopingEnabled = true;

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: 3527cae294f2268b2457b9fe9a6593cf1b539ee8
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 4d10dbf52f0ed01d46f9e5cba83cd14d48bfc88d
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050147"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114556"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>Erstellen eines UWP-Spiels in JavaScript
 
@@ -88,7 +88,7 @@ Jetzt ist ein guter Zeitpunkt zum Öffnen von **main.js**.
 
 ### <a name="2-loading-the-bitmaps"></a>2. Laden der Bitmaps
 
-EaselJS bietet verschiedene Arten von Grafikobjekten. Wir können einfache Formen (z.B. das blaue Rechteck für den Himmel) oder Bitmaps (z.B. die Wolken, die wir hinzufügen möchten), Textobjekte und Sprites erstellen. Sprites verwenden ein (SpriteSheet) [http://createjs.com/docs/easeljs/classes/SpriteSheet.html]: eine einzelne Bitmap, die mehrere Bilder enthält. Beispielsweise verwenden wir dieses SpriteSheet zum Speichern des anderen Frames der Dinosaurier-Animation:
+EaselJS bietet verschiedene Arten von Grafikobjekten. Wir können einfache Formen (z.B. das blaue Rechteck für den Himmel) oder Bitmaps (z.B. die Wolken, die wir hinzufügen möchten), Textobjekte und Sprites erstellen. Sprites verwenden ein (SpriteSheet) [https://createjs.com/docs/easeljs/classes/SpriteSheet.html]: eine einzelne Bitmap, die mehrere Bilder enthält. Beispielsweise verwenden wir dieses SpriteSheet zum Speichern des anderen Frames der Dinosaurier-Animation:
 
 ![Sprite-Blatt für laufenden Dino](images/JS2D_4.png)
 

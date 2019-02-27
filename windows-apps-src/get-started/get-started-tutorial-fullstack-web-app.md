@@ -5,12 +5,12 @@ keywords: Gehostete Web-App, HWA, REST-API, Einzelseiten-App, SPA
 ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: fa606da245c3506c8b4125edeb1edfc47f6aab0d
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: f60eb37d7bff1187e282f5af2207c6df92f4ec24
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049547"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114576"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>Erstellen einer Web-App mit einer einzelnen Seite mit REST API-Backend
 
@@ -209,7 +209,7 @@ Damit ist es Zeit, den Server auszuführen! Richten wir nun Visual Studio Code f
 ]
 ```
 
-Drücken Sie nun F5, und öffnen Sie Ihren Browser zu [http://localhost:8000](https://localhost:8000). Die Seite sollte zur Swagger-Benutzeroberfläche unserer Speicherspiel-API geöffnet werden, und von dort aus können Sie die Details und die Eingabefelder für die einzelnen Methoden erweitern. Sie können sogar versuchen, die APIs aufzurufen. Deren Antworten werden jedoch nur Pseudo-Daten enthalten (bereitgestellt durch das [Swagmock](https://www.npmjs.com/package/swagmock)-Modul). Es ist Zeit, unsere Spiellogik hinzuzufügen, um diese APIs real zu machen.
+Drücken Sie nun F5, und öffnen Sie Ihren Browser zu [https://localhost:8000](https://localhost:8000). Die Seite sollte zur Swagger-Benutzeroberfläche unserer Speicherspiel-API geöffnet werden, und von dort aus können Sie die Details und die Eingabefelder für die einzelnen Methoden erweitern. Sie können sogar versuchen, die APIs aufzurufen. Deren Antworten werden jedoch nur Pseudo-Daten enthalten (bereitgestellt durch das [Swagmock](https://www.npmjs.com/package/swagmock)-Modul). Es ist Zeit, unsere Spiellogik hinzuzufügen, um diese APIs real zu machen.
 
 ### <a name="3-set-up-your-route-handlers"></a>3. Richten Sie Ihre Routen-Handler ein.
 
@@ -235,7 +235,7 @@ Diese Ebene unseres Programms stellt die Speicherkarten selbst dar und bietet de
 
 Der Einfachheit halber speichern wir unser Spielbrett in einer globalen Variable (`global.board`) auf dem Serverknoten. Aber realistisch gesehen würden Sie Cloud-Speicher (z.B. Google [Cloud-Datenspeicher](https://cloud.google.com/datastore/) oder Azure [DocumentDB](https://azure.microsoft.com/en-us/services/documentdb/)) verwenden, um die Funktion in eine geeignete Speicherspiel-API-Dienst zu verwandeln, der gleichzeitig mehrere Spiele und Spieler unterstützt.
 
-Stellen Sie sicher, dass Sie alle Änderungen in VS-Code gespeichert haben. Führen Sie den Server erneut aus (F5 in VS-Code oder `npm start` von Shell, und navigieren Sie dann zu [http://localhost:8000](https://localhost:8000)), um die Spiele-APIs zu testen.
+Stellen Sie sicher, dass Sie alle Änderungen in VS-Code gespeichert haben. Führen Sie den Server erneut aus (F5 in VS-Code oder `npm start` von Shell, und navigieren Sie dann zu [https://localhost:8000](https://localhost:8000)), um die Spiele-APIs zu testen.
 
 Jedes Mal beim Drücken der **Probieren Sie es aus!** Schaltfläche auf einem der **/Spiele**-, **/erraten**-, oder **/ neue** Vorgänge, überprüfen Sie den resultieRendern **Antworttext** und **Antwortcode** unten, um sicherzustellen, dass alles wie erwartet funktioniert.
 
@@ -333,7 +333,7 @@ Beginnen wir mit der Erstellung des Node.js-Projekts mithilfe von Express.
     npm start
     ```
 
-5. Zeigen Sie Ihre Anwendung an, indem Sie zu [http://localhost:3000/](https://localhost:3000/) wechseln.
+5. Zeigen Sie Ihre Anwendung an, indem Sie zu [https://localhost:3000/](https://localhost:3000/) wechseln.
 
     ![Screenshot von http://localhost:3000/-Ansichten](./images/express.png)
 
@@ -620,7 +620,7 @@ Herzlichen Glückwunsch! Sie haben die Web-App erfolgreich erstellt! Testen wir 
 
 1. Öffnen Sie eine Eingabeaufforderung im Arbeitsspeicherverzeichnis, und geben Sie den folgenden Befehl ein: `npm start`
 
-2. Rufen Sie in Ihrem Browser [http://localhost:3000/](https://localhost:3000/) auf und spielen Sie ein Spiel!
+2. Rufen Sie in Ihrem Browser [https://localhost:3000/](https://localhost:3000/) auf und spielen Sie ein Spiel!
 
 3. Wenn Fehler auftreten, können Sie die Node.js-Debugtools von Visual Studio Code durch Drücken von F5 auf der Tastatur und Eingeben von `Node.js` verwenden. Weitere Informationen zum Debuggen in Visual Studio Code finden Sie in diesem [Artikel](https://code.visualstudio.com/docs/editor/debugging#_launch-configurations). 
 

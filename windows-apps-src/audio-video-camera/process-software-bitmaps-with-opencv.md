@@ -6,12 +6,12 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: Windows10, UWP, Opencv, softwarebitmap
 ms.localizationpriority: medium
-ms.openlocfilehash: ccc3f22d0485faa0df01828f1a6f807d2a1ce555
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 9ce41a495297870f512f0694e4f2b63eedebbc37
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046899"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114596"
 ---
 # <a name="process-bitmaps-with-opencv"></a>Prozess-Bitmaps mit OpenCV
 
@@ -20,7 +20,7 @@ In diesem Artikel wird erläutert, wie Sie die **[SoftwareBitmap](https://docs.m
 Die Beispiele in diesem Artikel erläutern das Erstellen eines systemeigenen der Komponente für Windows-Runtime, die von einer UWP-App, einschließlich Apps, die mit C# erstellt werden, verwendet werden kann. Diese Helferkomponente stellt eine einzelne Methode bereit, **Weichzeichner**, die die Weichzeichner-Verarbeitungsfunktion von OpenCVs verwenden. Die Komponente implementiert private Methoden, die einen Zeiger auf den zugrunde liegenden Bilddatenpuffer abruft, der direkt von der OpenCV-Bibliothek verwendet werden kann. Dies vereinfacht das Erweitern der Helferkomponente, um andere OpenCV Verarbeitungsfeatures zu implementieren. 
 
 * Eine Einführung in die Verwendung von **SoftwareBitmap** finden Sie im Artikel [Erstellen, Bearbeiten und Speichern von Bitmapbildern](imaging.md). 
-* Informationen zum Verwenden der OpenCV-Bibliothek finden Sie unter [http://opencv.org](https://opencv.org).
+* Informationen zum Verwenden der OpenCV-Bibliothek finden Sie unter [https://opencv.org](https://opencv.org).
 * Zur Verwendung der in diesem Artikel verwendeten OpenCV Helper-Komponente mit **[MediaFrameReader](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader)** zum Implementieren der Echtzeit-Image-Verarbeitung von Frames von einer Kamera, lesen Sie [Verwenden von OpenCV mit MediaFrameReader](use-opencv-with-mediaframereader.md).
 * Ein vollständiges Codebeispiel mit unterschiedlichen implementierten Effekten finden Sie unter [Kamera-Frames + OpenCV – Beispiel](https://go.microsoft.com/fwlink/?linkid=854003) im GitHub-Repository für Beispiele für die Universelle Windows-Plattform.
 

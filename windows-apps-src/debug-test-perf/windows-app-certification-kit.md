@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, Uwp, app-Zertifizierung
 ms.localizationpriority: medium
-ms.openlocfilehash: e3c8729a6d2ac828f3d7b257681d64f4c7834587
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: b480e96621e143e283a2556bdbef394aaf7dbc07
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048870"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114466"
 ---
 # <a name="windows-app-certification-kit"></a>Zertifizierungskit für Windows-Apps
 
@@ -24,13 +24,13 @@ Zum Abrufen von Ihrer app, die [Windows-Zertifizierung](https://msdn.microsoft.c
 Voraussetzungen für das Testen einer universellen Windows-App:
 
 -   Sie müssen installieren und Ausführen von Windows 10.
--   Sie müssen [Zertifizierungskit für Windows-App-Version 10]( http://go.microsoft.com/fwlink/p/?LinkID=309666), installieren, die im Windows Software Development Kit (SDK) für Windows 10 enthalten ist.
+-   Sie müssen [Zertifizierungskit für Windows-App-Version 10]( https://go.microsoft.com/fwlink/p/?LinkID=309666), installieren, die im Windows Software Development Kit (SDK) für Windows 10 enthalten ist.
 -   Sie müssen [Ihr Gerät für die Entwicklung aktivieren](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).
 -   Sie müssen die zu testende Windows-App auf Ihrem Computer bereitstellen.
 
 **Hinweis zu direkten Upgrades**
 
-Beim Installieren einer neueren Version des [Zertifizierungskits für Windows-Apps]( http://go.microsoft.com/fwlink/p/?LinkID=309666) werden alle vorherigen Versionen des Kits ersetzt, die auf dem Computer installiert sind.
+Beim Installieren einer neueren Version des [Zertifizierungskits für Windows-Apps]( https://go.microsoft.com/fwlink/p/?LinkID=309666) werden alle vorherigen Versionen des Kits ersetzt, die auf dem Computer installiert sind.
 
 ## <a name="validate-your-windows-app-using-the-windows-app-certification-kit-interactively"></a>Interaktive Überprüfung der Windows-App mit dem Zertifizierungskit für Windows-Apps
 
